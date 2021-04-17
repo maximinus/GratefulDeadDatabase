@@ -67,3 +67,5 @@ Control.ca-bundle
 Control.system-ca-bundle 
 GitHub.sublime-settings 
 
+# hide passwords etc by not putting them in git
+secret.py

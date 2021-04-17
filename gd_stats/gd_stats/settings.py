@@ -59,6 +59,8 @@ DATABASES = {
 # Application definition
 
 INSTALLED_APPS = [
+    'people.apps.PeopleConfig',
+    'songs.apps.SongsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

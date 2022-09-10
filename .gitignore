@@ -10,6 +10,9 @@ export_presets.cfg
 # Environments 
 venv/
 
+# Pycharm settings
+.idea/
+
 # Don't add raw sound files
 *.wav
 

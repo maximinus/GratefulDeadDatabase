@@ -10,3 +10,6 @@ export_presets.cfg
 # Environments 
 venv/
 
+# Don't add raw sound files
+*.wav
+

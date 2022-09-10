@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/audio_display/AudioDisplay.gd" type="Script" id=1]
+[ext_resource path="res://scenes/set_time/SetTime.tscn" type="PackedScene" id=2]
+[ext_resource path="res://gfx/icons/zoom_out.png" type="Texture" id=3]
+[ext_resource path="res://gfx/icons/zoom_in.png" type="Texture" id=4]
+[ext_resource path="res://gfx/icons/play.png" type="Texture" id=5]
+[ext_resource path="res://fonts/arial.tres" type="DynamicFont" id=6]
+[ext_resource path="res://gfx/icons/stop.png" type="Texture" id=7]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 6 )
+
+[node name="AudioDisplay" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 640, 400 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 0, 300 )
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_top = 304.0
+margin_right = 1024.0
+margin_bottom = 472.0
+mouse_filter = 1
+custom_constants/margin_right = 16
+custom_constants/margin_top = 8
+custom_constants/margin_left = 16
+custom_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 1008.0
+margin_bottom = 160.0
+custom_constants/separation = 8
+
+[node name="HScrollBar" type="HScrollBar" parent="MarginContainer/VBoxContainer"]
+margin_right = 992.0
+margin_bottom = 12.0
+max_value = 1024.0
+page = 500.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 20.0
+margin_right = 992.0
+margin_bottom = 68.0
+custom_constants/separation = 8
+alignment = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 48.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+icon = ExtResource( 5 )
+icon_align = 1
+
+[node name="Stop" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 56.0
+margin_right = 104.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+disabled = true
+icon = ExtResource( 7 )
+icon_align = 1
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 112.0
+margin_right = 880.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+
+[node name="ZoomIn" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 888.0
+margin_right = 936.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+icon = ExtResource( 4 )
+icon_align = 1
+
+[node name="ZoomOut" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 944.0
+margin_right = 992.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+icon = ExtResource( 3 )
+icon_align = 1
+
+[node name="SetTime" parent="MarginContainer/VBoxContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 76.0
+margin_right = 992.0
+margin_bottom = 110.0
+
+[node name="SetTime2" parent="MarginContainer/VBoxContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 118.0
+margin_right = 992.0
+margin_bottom = 152.0
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HScrollBar" to="." method="_on_HScrollBar_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Stop" to="." method="_on_Stop_pressed"]

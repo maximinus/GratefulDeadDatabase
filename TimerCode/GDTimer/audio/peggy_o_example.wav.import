@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/peggy_o_example.wav-3c2e18adc020153504082daa46dd75e6.sample"
+
+[deps]
+
+source_file="res://audio/peggy_o_example.wav"
+dest_files=[ "res://.import/peggy_o_example.wav-3c2e18adc020153504082daa46dd75e6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

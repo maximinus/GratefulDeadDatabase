@@ -16,3 +16,5 @@ venv/
 # Don't add raw sound files
 *.wav
 
+# don't add raw csv
+jerrybase.csv

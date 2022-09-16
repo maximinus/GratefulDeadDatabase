@@ -64,6 +64,66 @@ class GdShow:
             for song in all_sets.songs:
                 print(f'    {song}')
 
+    def get_ordered(self):
+        # return a list of [set_number, song_name] for all songs
+        new_order = []
+        set_index = 1
+        for single_set in self.sets:
+            for song in single_set.songs:
+                new_order.append([set_index, song.name])
+            set_index += 1
+        return new_order
+
+    def songs_from_csv_clean(self, csv_clean, all_songs):
+        # csv_clean is a list of [set_index, song_name]
+        # use all_songs to get the appropriate conversion
+        all_new_sets = []
+        new_set = []
+        set_index = 1
+        for i in csv_clean:
+            if i[0] != set_index:
+                set_index += 1
+                all_new_sets.append(new_set)
+                new_set = []
+            # find the song
+            found = False
+            for j in all_songs:
+                if i[1] == j[1]:
+                    # found it
+                    new_set.append(PlayedSong({':uuid':'N/A', ':name': i[1], ':segued': False}))
+                    found = True
+                    break
+            if not found:
+                print(f'No song {i[1]} in csv data')
+                raise ValueError
+        self.sets = all_new_sets
+
+    def check_drums_space(self, cvs_clean):
+        # Is there a drums > space in the cvs_data and only a drums in the yml?
+        space = False
+        for i in range(len(cvs_clean)):
+            if cvs_clean[i][1] == 'Drums':
+                if cvs_clean[i + 1][1] == 'Space':
+                    space = True
+                else:
+                    # not on this drums, and we ignore a second one and do manually
+                    return False
+        if not space:
+            return False
+        # also a drums in csv?
+        for i in self.sets:
+            for j in range(len(i.songs)):
+                if i.songs[j].name == 'Drums':
+                    # next is space?
+                    if i.songs[j + 1].name == 'Space':
+                        # yes, do nothing
+                        return False
+                    # no, we need to insert a space. Seque is auto both ways
+                    i.songs[j].sequed = True
+                    i.songs.insert(j + 1, PlayedSong({':uuid':'N/A', ':name': 'Space', ':segued': True}))
+                    print('  Inserted space into show')
+                    return True
+
 
 def extract_songs():
     with open(SONGS, 'r') as file:

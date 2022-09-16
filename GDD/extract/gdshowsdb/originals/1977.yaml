@@ -449,13 +449,13 @@
       :name: New Minglewood Blues
       :segued: false
     - :uuid: 3a3fd539-f14b-4706-878c-422db5ec9b57
-      :name: Ramble On Rose
+      :name: Row Jimmy
       :segued: false
     - :uuid: b906ce92-2333-45ff-ab4a-a0590e2411a4
       :name: Me And My Uncle
       :segued: false
     - :uuid: 9ad18925-0a4f-4faf-9f3d-15eaa9890247
-      :name: Row Jimmy
+      :name: Ramble On Rose
       :segued: false
     - :uuid: 888c1dc8-80f8-4266-ad81-3f64ed9bbd64
       :name: It's All Over Now
@@ -537,7 +537,7 @@
       :name: Ship Of Fools
       :segued: false
     - :uuid: a245b774-ab55-4f37-a8d4-1f9bb2e18b56
-      :name: Estimated Prophet
+      :name: El Paso
       :segued: false
     - :uuid: 898289c5-3369-4b87-80ec-6e79c2262317
       :name: Brown Eyed Women
@@ -624,10 +624,7 @@
       :segued: false
     - :uuid: 951e9f8b-cd3e-4683-bfaa-bd0241c563e9
       :name: Dancing In The Street
-      :segued: true
-    - :uuid: 951e9f8b-cd3e-4683-bfaa-bd0241c563e9
-      :name: Drums
-      :segued: true
+      :segued: false
     - :uuid: fef83657-c8a3-41c1-b2a4-1591bb98ae1f
       :name: Eyes Of The World
       :segued: false
@@ -770,7 +767,7 @@
       :name: Goin' Down The Road Feeling Bad
       :segued: true
     - :uuid: 3db8c21d-3bc2-4033-afb8-956a73c2f1c3
-      :name: Not Fade Away Jam
+      :name: Not Fade Away
       :segued: true    
     - :uuid: 7934bda9-6889-4bfd-b871-29586ef4217b
       :name: Drums
@@ -1003,14 +1000,8 @@
     - :uuid: 8f6ff334-73fc-4177-ad46-a18b0825f207
       :name: Eyes Of The World
       :segued: false
-    - :uuid: 8f6ff334-73fc-4177-ad46-a18b0825f207
-      :name: Space
-      :segued: false
     - :uuid: 6ef4b9cb-4d4f-4016-a635-6cc5ba241f3a
       :name: Wharf Rat
-      :segued: false
-    - :uuid: 6ef4b9cb-4d4f-4016-a635-6cc5ba241f3a
-      :name: Drums
       :segued: false
     - :uuid: 05ed47b3-de5b-4905-938d-1786dc69e3c1
       :name: Not Fade Away
@@ -1648,7 +1639,7 @@
       :name: Passenger
       :segued: false
     - :uuid: f6b8cdfc-1d40-4b6b-b852-e88c084e7e41
-      :name: Funiculi Finicula
+      :name: Funiculi Funicula
       :segued: false
     - :uuid: dd15a21c-ea0d-462a-b9a8-d699bc3fc7cb
       :name: Brown Eyed Women
@@ -2297,9 +2288,6 @@
     - :uuid: c71a5564-e8c3-4d97-85c9-572b76419d82
       :name: Terrapin Station
       :segued: true
-    - :uuid: c71a5564-e8c3-4d97-85c9-572b76419d82
-      :name: Drums
-      :segued: true
     - :uuid: d308cb3f-1800-415b-9175-5d69abc43b8a
       :name: Not Fade Away
       :segued: true
@@ -2391,9 +2379,6 @@
     - :uuid: 922f949f-fda6-4051-9e88-35042c2d4315
       :name: Franklin's Tower
       :segued: true
-    - :uuid: 922f949f-fda6-4051-9e88-35042c2d4315
-      :name: Space
-      :segued: true
     - :uuid: d3afe8eb-be68-4816-8153-bb449cd8c201
       :name: China Doll
       :segued: true
@@ -2433,7 +2418,7 @@
       :name: Peggy O
       :segued: false
     - :uuid: 67255a9d-ebac-44f3-9c33-0bab59037a34
-      :name: Funiculi Finicula
+      :name: Funiculi Funicula
       :segued: false
     - :uuid: f5536337-92c6-4174-8d03-d0fc61a192b3
       :name: El Paso
@@ -2608,7 +2593,7 @@
       :name: Samson And Delilah
       :segued: false
     - :uuid: 6d18817e-293b-48b3-835b-f3c99705a464
-      :name: Funiculi Finicula
+      :name: Funiculi Funicula
       :segued: false
     - :uuid: 18c94b4f-0e88-44fa-883b-cfbe80b16131
       :name: Help On The Way
@@ -2983,7 +2968,7 @@
       :name: Fire On The Mountain
       :segued: false
     - :uuid: fc413f74-05f7-45b1-b24c-fb8dfc28e815
-      :name: Funiculi Finicula
+      :name: Funiculi Funicula
       :segued: false
     - :uuid: 94f393f9-e709-45cd-ad72-55ad35d3ef93
       :name: Playing In The Band
@@ -3282,10 +3267,7 @@
       :segued: false
     - :uuid: b67d15cf-7d0b-4551-9ad0-a3f2d88873d1
       :name: Eyes Of The World
-      :segued: true
-    - :uuid: b67d15cf-7d0b-4551-9ad0-a3f2d88873d1
-      :name: Drums
-      :segued: true
+      :segued: false
     - :uuid: c4f40b3f-dccd-4c8b-80d8-23af2db74fae
       :name: Not Fade Away
       :segued: false
@@ -3733,6 +3715,12 @@
       :segued: false
     - :uuid: 89568eb4-5bfc-493c-9254-93e3741349f6
       :name: Sugar Magnolia
+      :segued: false
+    - :uuid: 11709b04-813e-4ef8-b507-e267189abebf
+      :name: Drums
+      :segued: false
+    - :uuid: beaaa066-0aa3-4384-ad9f-761e89e91cc3
+      :name: Sunshine Daydream
       :segued: false
   - :uuid: f6d0638b-f24b-4447-97b4-9572dbcf79d5
     :songs:
@@ -4426,7 +4414,7 @@
       :name: Tennessee Jed
       :segued: false
     - :uuid: bfad6167-8c99-4168-85bd-1387587c1345
-      :name: Funiculi Finicula
+      :name: Funiculi Funicula
       :segued: false
     - :uuid: 9a47e45a-ac66-492f-8063-78a212de6096
       :name: Me And My Uncle

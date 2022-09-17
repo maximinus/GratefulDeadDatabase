@@ -134,8 +134,33 @@ def get_matched_song_from_yml(song_name):
     raise ValueError
 
 
+def solve_song_mismatch(last, yml_clean, csv_clean, i):
+    # ask the user what to do
+    # maybe prefer manual, because speed was not too slow and easier to spot mistakes
+    print(f'       {last}')
+    print(f'Error: Y: {yml_clean[i][1]} : C: {csv_clean[i][1]}')
+    print('Solve by:')
+    print('  1: Yaml is correct')
+    print('  2: Csv is correct')
+    answer = -1
+    while answer < 0:
+        answer = input('> ')
+        try:
+            answer = int(answer)
+            if answer < 1 or answer > 2:
+                print('* Error')
+                answer = -1
+        except ValueError:
+            answer = -1
+            print('* Error')
+    if answer == 1:
+        pass
+    if answer == 2:
+        pass
+
+
 def show_len_mismatch(yml_clean, csv_clean):
-    # go through the list and show where they do not match
+    # go through the list and show where they do not m1atch
     max_length = min(len(yml_clean), len(csv_clean))
     # we've already checked the songs exist, so just find the mismatch
     last = 'Start : Start'
@@ -144,6 +169,7 @@ def show_len_mismatch(yml_clean, csv_clean):
         songs = get_matched_song_from_yml(yml_clean[i][1])
         if songs[1] != csv_clean[i][1]:
             # the match is not correct
+            # solve_song_mismatch(last, yml_clean, csv_clean, i)
             print(f'       {last}')
             print(f'Error: Y: {yml_clean[i][1]} : C: {csv_clean[i][1]}')
             raise ValueError
@@ -212,7 +238,7 @@ def fix_yaml_show(yml_show, csv_show):
 
 if __name__ == '__main__':
     matched_shows = []
-    for i in [1977, 1995]:
+    for i in [1977, 1994, 1995]:
         matched_shows.extend(compare_shows(i))
 
     # put into lists of [set_index, name]

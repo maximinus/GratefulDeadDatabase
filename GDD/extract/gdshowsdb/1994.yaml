@@ -177,12 +177,6 @@
     - :uuid: d30d58dc-adeb-4777-b7fb-340e773bc432
       :name: Uncle John's Band
       :segued: false
-    - :uuid: 6d332296-a93d-4e5c-ad73-c52f95228b8a
-      :name: Supplication Jam
-      :segued: false
-    - :uuid: 275e938d-78e0-4efa-8370-1aa4dd537bc1
-      :name: Uncle John's Band
-      :segued: false
     - :uuid: 2d346a2c-3229-45e4-bd19-94fe253b3558
       :name: Corrina
       :segued: false
@@ -603,9 +597,6 @@
       :segued: false
     - :uuid: 58bd0a02-1f38-4919-80ad-c0d668813142
       :name: He's Gone
-      :segued: false
-    - :uuid: ca495116-3f51-4a42-94af-826021956f8d
-      :name: Jam
       :segued: false
     - :uuid: 89eff6b9-19e4-4a64-b063-ffba85316c4a
       :name: Drums
@@ -1139,7 +1130,7 @@
       :name: Drums
       :segued: false
     - :uuid: 34c1c496-9a3f-4bb1-84c9-0c221ef6557e
-      :name: Jam
+      :name: Space
       :segued: false
     - :uuid: 2b90db04-8596-4ad5-909b-78597a51216c
       :name: The Other One
@@ -1649,9 +1640,6 @@
     - :uuid: d795df96-93bd-476f-8fd2-b97e847a287f
       :name: Man Smart (Woman Smarter)
       :segued: false
-    - :uuid: 5e596d79-3a7b-41c4-a13c-e575356d7bde
-      :name: Man Smart (Woman Smarter)
-      :segued: false
     - :uuid: b95023dc-b3c1-423e-938e-003d9c4dcaff
       :name: Crazy Fingers
       :segued: false
@@ -1991,9 +1979,6 @@
       :name: I Want To Tell You
       :segued: false
     - :uuid: 01c6e775-8ae5-4443-887e-5020100c4675
-      :name: Man Smart (Woman Smarter)
-      :segued: false
-    - :uuid: d23bf699-3baf-45df-8d35-b994eacced75
       :name: Man Smart (Woman Smarter)
       :segued: false
     - :uuid: c0e53154-66fa-4d61-b8c3-214e4604018f
@@ -2530,9 +2515,6 @@
     - :uuid: b637c0b9-f24c-4e23-a7c6-2d20e1268b3f
       :name: Man Smart (Woman Smarter)
       :segued: false
-    - :uuid: 065aac09-da3d-4813-92d6-05b963b2aa08
-      :name: Man Smart (Woman Smarter)
-      :segued: false
     - :uuid: 7691cbf9-a6e7-4ba8-9436-c2339c7ec32d
       :name: If The Shoe Fits
       :segued: false
@@ -2614,7 +2596,7 @@
       :name: Drums
       :segued: false
     - :uuid: 078b9ed6-fe7d-4ec3-b1be-2cbc51f19bfa
-      :name: Jam
+      :name: Space
       :segued: false
     - :uuid: 61de5965-05b5-4a4b-8ab4-da08ffe1e4ba
       :name: The Other One
@@ -2705,9 +2687,6 @@
       :segued: false
     - :uuid: b6af3830-1985-4fe6-a5a5-21347be35435
       :name: Sugar Magnolia
-      :segued: false
-    - :uuid: 3096737b-9953-4709-9f73-9ee62f8dd6a5
-      :name: Sunshine Daydream
       :segued: false
   - :uuid: 1475e248-aa14-47fb-8e4e-a9cf279cafa3
     :songs:
@@ -3266,9 +3245,6 @@
       :segued: false
   - :uuid: 6e888072-9ecc-45d9-a252-73d1a8ba8968
     :songs:
-    - :uuid: 08d07e6c-2065-4a61-a73f-779e9d7a5a92
-      :name: It's All Over Now
-      :segued: false
     - :uuid: b3c348e4-630d-47b6-b89f-b6acf2a57df5
       :name: It's All Over Now, Baby Blue
       :segued: false
@@ -3392,14 +3368,8 @@
     - :uuid: f5c13f21-3ddf-4e55-b778-634948f46dd7
       :name: Corrina
       :segued: false
-    - :uuid: 37849cb5-8b31-4b70-a4fe-55b496e3860e
-      :name: Jam
-      :segued: false
     - :uuid: 03073b2a-dadb-4f7e-aa9a-5266a63ebbec
       :name: Uncle John's Band
-      :segued: false
-    - :uuid: 95a17e0e-bc3c-4123-b2e6-613c0aae4b7c
-      :name: Jam
       :segued: false
     - :uuid: e1fd84d7-c647-4c6c-a563-15dc57636467
       :name: Drums
@@ -3607,9 +3577,6 @@
     - :uuid: eb0e7631-0d4e-4f94-8473-9a97fefa58d8
       :name: Terrapin Station
       :segued: true
-    - :uuid: 34be9fb3-27e2-4886-9f81-57aebefb43ea
-      :name: Jam
-      :segued: true
     - :uuid: b96ba09f-2711-4a57-bcda-ce73a61a2820
       :name: Drums
       :segued: true
@@ -3757,9 +3724,6 @@
       :name: Cassidy
       :segued: false
     - :uuid: 97cfddaa-31a9-4294-aac6-99ab069328a9
-      :name: Goin' Down The Road Feeling Bad
-      :segued: false
-    - :uuid: 7a12f592-d097-4555-b20c-a6ebf4f8147e
       :name: Goin' Down The Road Feeling Bad
       :segued: false
     - :uuid: 2059dac3-7685-4dbb-8b8f-7e7022279163
@@ -4167,9 +4131,6 @@
     - :uuid: e450e68f-1607-4fea-8bf3-4af3c684c098
       :name: Man Smart (Woman Smarter)
       :segued: false
-    - :uuid: 013789dc-509e-4c8f-8be9-275f56671a63
-      :name: Man Smart (Woman Smarter)
-      :segued: false
     - :uuid: 1017439e-99ba-4aee-b387-429159f5048f
       :name: Samba In The Rain
       :segued: false
@@ -4187,9 +4148,6 @@
       :segued: false
     - :uuid: 30b4df9e-ae15-4df2-a075-5eb29099ef95
       :name: Sugar Magnolia
-      :segued: false
-    - :uuid: 01370463-0421-49e8-b567-5381b6d27951
-      :name: Sunshine Daydream
       :segued: false
   - :uuid: c4f59fb7-1f62-4544-ad8a-3ab30bfcd030
     :songs:
@@ -4260,9 +4218,6 @@
       :segued: false
   - :uuid: 148f1796-6d1d-4deb-b319-75683c870006
     :songs:
-    - :uuid: 5f7e4281-bd6a-4bcf-9d4b-f8765fb06784
-      :name: It's All Over Now
-      :segued: false
     - :uuid: 696bef67-8a3e-4e27-9c9a-c343d334f295
       :name: It's All Over Now, Baby Blue
       :segued: false
@@ -4436,9 +4391,6 @@
       :name: Eyes Of The World
       :segued: false
     - :uuid: 1bf13fab-e21a-401f-9989-924d8b9cb2e0
-      :name: Man Smart (Woman Smarter)
-      :segued: false
-    - :uuid: 3fb61990-525d-4384-b929-21c9c0ae111f
       :name: Man Smart (Woman Smarter)
       :segued: false
     - :uuid: ea2f0121-91fc-433c-bef4-504e04ce675d
@@ -4873,6 +4825,73 @@
     - :uuid: ea91f4d3-a63f-4d10-8670-97a846e6a98d
       :name: It's All Over Now, Baby Blue
       :segued: false
+1994/12/09:
+  :uuid: f28b660a-7d19-4fff-86f6-a4fed3b644ea
+  :venue: Oakland Coliseum Arena
+  :city: Oakland
+  :state: CA
+  :country: US
+  :sets:
+  - :uuid: 3ae65cd4-3a78-42bc-a935-d3021be014e6
+    :songs:
+    - :uuid: d9614897-3c02-44a3-a98b-63209834017b
+      :name: Feel Like A Stranger
+      :segued: false
+    - :uuid: 16315fff-b813-4d87-b94b-3928dc8f4695
+      :name: Stagger Lee
+      :segued: false
+    - :uuid: fc9c3a17-25ea-4cd2-ad1d-56d31f6c44ba
+      :name: The Same Thing
+      :segued: false
+    - :uuid: 97756626-d9bb-49ae-a20a-969ce7b1b10f
+      :name: Loose Lucy
+      :segued: false
+    - :uuid: b86d3786-66fe-4c71-acf9-5590e111f796
+      :name: El Paso
+      :segued: false
+    - :uuid: d3221544-1ce6-4663-9e08-7e6515acf12f
+      :name: Broken Arrow
+      :segued: false
+    - :uuid: 981bcdbc-63e7-45f0-9b9e-ece5ee8a563b
+      :name: Ramble On Rose
+      :segued: false
+    - :uuid: 981bcdbc-63e7-45f0-9b9e-ece5ee8a563b
+      :name: The Music Never Stopped
+      :segued: false
+  - :uuid: 783c9cb1-f693-467e-8404-3800a36af15a
+    :songs:
+    - :uuid: 24d6f66d-aed6-4861-aac6-da190b803c03
+      :name: Scarlet Begonias
+      :segued: false
+    - :uuid: a6863c55-f514-4e39-9e50-a23bd545cb5a
+      :name: Fire On The Mountain
+      :segued: false
+    - :uuid: d6eaeecf-2859-4e82-a121-1893acf37d45
+      :name: Way To Go Home
+      :segued: false
+    - :uuid: fbe3e785-8774-43bd-b51f-e6830dc925ba
+      :name: Truckin'
+      :segued: false
+    - :uuid: 74e2838c-6d74-4447-8a2f-acf0264aea92
+      :name: That Would Be Something
+      :segued: false
+    - :uuid: 717f1e80-a7b4-40e8-83b8-83199ace88bf
+      :name: He's Gone
+      :segued: false
+    - :uuid: edc2b49a-23ba-4516-a89a-5297b2758454
+      :name: Drums
+      :segued: false
+    - :uuid: 3078f513-a211-41ff-a510-532364cc0b4f
+      :name: Space
+      :segued: false
+    - :uuid: 1f98a659-145f-46b9-b450-b21f4891d891
+      :name: Box Of Rain
+      :segued: false
+  - :uuid: 422bc207-698b-43bb-89e4-0c2ce0ac575a
+    :songs:
+    - :uuid: ea91f4d3-a63f-4d10-8670-97a846e6a98d
+      :name: Johnny B. Goode
+      :segued: false
 1994/12/11:
   :uuid: b66973bc-4cc7-4043-b78b-cc672edf19db
   :venue: Oakland Coliseum Arena
@@ -5188,6 +5207,9 @@
     - :uuid: b5fbf392-8d78-4cbe-a12b-5e23956c58e1
       :name: Space
       :segued: false
+    - :uuid: b5fbf392-8d78-4cbe-a12b-5e23956c58e1
+      :name: Spanish Jam
+      :segued: false
     - :uuid: 12e0db3d-dec1-4900-bf1a-8d72dbb6fa3e
       :name: The Last Time
       :segued: false
@@ -5199,9 +5221,6 @@
       :segued: false
   - :uuid: 2a8deac0-d033-4186-96d3-c58971bce5f5
     :songs:
-    - :uuid: 4140d291-d68b-4066-a598-8f9e000bb114
-      :name: It's All Over Now
-      :segued: false
     - :uuid: 70475b05-ebfb-4c24-ab35-4787670dc2f4
       :name: It's All Over Now, Baby Blue
       :segued: false
@@ -5253,9 +5272,6 @@
       :name: Nobody's Fault But Mine
       :segued: false
     - :uuid: 65874f5a-60d2-4ad8-a99c-6c2c3246871f
-      :name: Man Smart (Woman Smarter)
-      :segued: false
-    - :uuid: 19d63b19-d01e-49fd-9b34-b3a071477f90
       :name: Man Smart (Woman Smarter)
       :segued: false
     - :uuid: b4b35b5e-c417-480e-9c4f-ff9d7568faa0

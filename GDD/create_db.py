@@ -4,6 +4,9 @@ from peewee import *
 db = SqliteDatabase('database/grateful_dead.db')
 
 
+# TODO: What exactly is backref? From Key to Model or the opposite?
+
+
 class BaseModel(Model):
     class Meta:
         database = db
@@ -23,8 +26,9 @@ class Venue(BaseModel):
 
 class Show(BaseModel):
     venue = ForeignKeyField(Venue, backref='shows')
-    date = DateTimeField()
-    # possible >1 show per date
+    date = DateField()
+    start_time = TimeField()
+    # possible >1 show per date, and start time could be null
     start_index = IntegerField()
 
 
@@ -45,6 +49,17 @@ class PlayedSong(BaseModel):
     song = ForeignKeyField(Song, backref='versions')
     show_set = ForeignKeyField(ShowSet, backref='songs')
     index = IntegerField()
+    # no pause between songs; pause=0 seconds - Jerrybase is 5
+    transitions = BooleanField()
+
+
+class Musician(BaseModel):
+    name = ForeignKeyField(Song)
+
+
+class GuestArtist(BaseModel):
+    song = ForeignKeyField(PlayedSong, backref='songs')
+    musician = ForeignKeyField(Musician)
 
 
 class Weather(BaseModel):
@@ -63,4 +78,4 @@ class Weather(BaseModel):
 
 if __name__ == '__main__':
     db.connect()
-    db.create_tables([Venue, Show, ShowSet, Song, PlayedSong, Weather])
+    db.create_tables([Venue, Show, ShowSet, Song, PlayedSong, Musician, GuestArtist, Weather])

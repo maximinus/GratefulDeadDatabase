@@ -9,6 +9,8 @@ JB_DATA = f'{DATA_FOLDER}/jerrybase_copy.csv'
 
 class JBSong:
     def __init__(self, row):
+        # row comes in as a list
+        self.original = row
         # as YYYY-MM-DD
         self.event_date = row[1]
         self.song_name = row[6]
@@ -17,8 +19,33 @@ class JBSong:
         self.set_name = row[4]
         self.set_sequence_number = int(row[5])
 
-    #def __repr__(self):
-    #    return self.song_name
+    def resequence(self):
+        # build the original row with new data
+        # used for creating the original csv for a diff
+        self.original[1] = self.event_date
+        self.original[5] = str(self.set_sequence_number)
+        self.original[6] = self.song_name
+        self.original[7] = self.song_id
+        self.original[8] = str(self.sequence_number)
+        return ','.join(self.original)
+
+    def as_json(self):
+        data = {'original':self.original,
+                'event_date':self.event_date,
+                'song_name':self.song_name,
+                'song_id':self.song_id,
+                'sequence_number':self.sequence_number,
+                'set_name':self.set_name,
+                'set_sequence_number':self.set_sequence_number}
+        return data
+
+    @staticmethod
+    def from_json(self, data):
+        original = data.original
+        return JBSong(original)
+
+    def __repr__(self):
+        return f'<JBSong: {self.song_name}>'
 
 
 class JBShow:
@@ -28,8 +55,8 @@ class JBShow:
         self.text_date = show_date
         self.songs = songs
 
-    #def __repr__(self):
-    #    return self.text_date
+    def __repr__(self):
+        return f'<JBShow: {self.text_date}>'
 
 
 class CompleteShow:
@@ -70,7 +97,7 @@ class CompleteShow:
         return(new_order)
 
 
-def extract_data():
+def extract_data() -> list:
     songs = []
     with open(JB_DATA, 'r') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
@@ -111,8 +138,19 @@ def sort_into_shows():
     return all_shows
 
 
-if __name__ == '__main__':
-    gd_shows = sort_into_shows()
-    for i in gd_shows:
+def store_as_json():
+    # TODO: Really needed? manual was quite fast
+    # easier with json for machine editing
+    # a JBSong() (we get a list from extract_data()) can rebuild a row
+    all_data = extract_data()
+    as_json = [x.as_json() for x in all_data]
+    for i in as_json:
         print(i)
-    print(len(gd_shows))
+
+
+if __name__ == '__main__':
+    store_as_json()
+    #gd_shows = sort_into_shows()
+    #for i in gd_shows:
+    #    print(i)
+    #print(len(gd_shows))

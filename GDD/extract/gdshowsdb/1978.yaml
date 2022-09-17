@@ -317,6 +317,12 @@
     - :uuid: 65ca5061-896a-4baa-bc2b-70dcca5350d5
       :name: Playing In The Band
       :segued: false
+    - :uuid: 65ca5061-896a-4baa-bc2b-70dcca5350d5
+      :name: Drums
+      :segued: false
+    - :uuid: 65ca5061-896a-4baa-bc2b-70dcca5350d5
+      :name: Space
+      :segued: false
     - :uuid: 744c849c-4515-4f29-8170-da0866279f49
       :name: Saint Stephen
       :segued: false
@@ -648,6 +654,9 @@
     - :uuid: 91aa9f5d-9bc6-4edd-b14a-e0152071269a
       :name: Passenger
       :segued: false
+    - :uuid: 91aa9f5d-9bc6-4edd-b14a-e0152071269a
+      :name: Space
+      :segued: false
     - :uuid: 6ce7a32e-25c7-4146-a31a-ce9278bbb1b1
       :name: Estimated Prophet
       :segued: false
@@ -909,9 +918,6 @@
     - :uuid: c812d7aa-01a3-4307-97fc-2c1dc70d071b
       :name: Sugaree
       :segued: false
-    - :uuid: ead36e0d-ab9b-4601-98a7-a1db549def22
-      :name: The Music Never Stopped
-      :segued: false
   - :uuid: c77730c7-0a4a-49ae-92c8-a66cbc2e0add
     :songs:
     - :uuid: f0100a5c-a2ee-4785-a5d8-6720608c12f5
@@ -925,6 +931,9 @@
       :segued: false
     - :uuid: 0f37e587-e07f-4c2d-9efe-2ba4d1c52d40
       :name: He's Gone
+      :segued: false
+    - :uuid: 0f37e587-e07f-4c2d-9efe-2ba4d1c52d40
+      :name: Drums
       :segued: false
     - :uuid: ea034341-eebc-42b6-83ee-5650402db728
       :name: The Other One
@@ -1526,7 +1535,7 @@
       :name: Mexicali Blues
       :segued: false
     - :uuid: e367f175-26df-4bcc-9e33-5d0ff8d91f1e
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: 13ce7fab-6eb3-4da9-8474-650131fa9776
       :name: Row Jimmy
@@ -1937,7 +1946,7 @@
       :name: Ramble On Rose
       :segued: false
     - :uuid: 0d6d764f-5aef-4a36-adb7-6d21b11f113d
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: 6a7a5ce4-1db5-4792-b7a6-d4470b5457a5
       :name: Passenger
@@ -1967,6 +1976,9 @@
       :segued: false
     - :uuid: c59e4fb3-2ae4-4b67-af92-75255dfefac0
       :name: Drums
+      :segued: false
+    - :uuid: c59e4fb3-2ae4-4b67-af92-75255dfefac0
+      :name: Jam
       :segued: false
     - :uuid: b1fdb5ca-fa6f-4805-87e2-913570d1c9df
       :name: Stella Blue
@@ -2284,7 +2296,7 @@
       :name: Dire Wolf
       :segued: false
     - :uuid: e2b183e7-10eb-4b60-ba65-0a0beeca528d
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: 8a43b86f-5030-49f5-b54e-4b2ef26c24bb
       :name: Mexicali Blues
@@ -2721,6 +2733,9 @@
     - :uuid: c1bf303d-edcd-47a5-97db-d4ff25de3f92
       :name: Passenger
       :segued: false
+    - :uuid: c1bf303d-edcd-47a5-97db-d4ff25de3f92
+      :name: Brown Eyed Women
+      :segued: false
     - :uuid: 4e15600f-0d4b-44a1-8589-d90b849bffdc
       :name: The Music Never Stopped
       :segued: false
@@ -3006,11 +3021,14 @@
     - :uuid: ad307732-3cf5-4b10-b0ee-3b90c0a3137c
       :name: Playing In The Band
       :segued: false
-    - :uuid: f759be2e-e634-4896-9b54-29af7c14ddec
-      :name: Estimated Prophet
-      :segued: false
     - :uuid: 13680b22-ca41-4098-9205-ca6b9ce45ecb
       :name: Drums
+      :segued: false
+    - :uuid: 13680b22-ca41-4098-9205-ca6b9ce45ecb
+      :name: Space
+      :segued: false
+    - :uuid: f759be2e-e634-4896-9b54-29af7c14ddec
+      :name: Estimated Prophet
       :segued: false
     - :uuid: 92c013af-e44c-4c1e-a53a-433179b0bd7e
       :name: The Other One
@@ -3434,6 +3452,9 @@
       :name: Drums
       :segued: false
     - :uuid: af9feb4f-ef29-4b08-908a-6c3b3b545d74
+      :name: Ollin Arageed
+      :segued: false
+    - :uuid: af9feb4f-ef29-4b08-908a-6c3b3b545d74
       :name: Not Fade Away
       :segued: false
     - :uuid: 2902ecbe-f809-439c-8e4a-4ab61469e397
@@ -3533,7 +3554,7 @@
   - :uuid: bdeac43f-970d-40d2-b0c5-f77b16333841
     :songs:
     - :uuid: e9e81228-0223-49e9-af87-319b1ef5dac6
-      :name: Ollin Arrageed
+      :name: Ollin Arageed
       :segued: true
     - :uuid: 539029b0-5aaa-4787-96fb-e48f266c24ca
       :name: Not Fade Away
@@ -3600,7 +3621,7 @@
   - :uuid: 2e247896-8ec2-4528-95e3-21cdb86cda8e
     :songs:
     - :uuid: dd594f2d-31db-4b6d-be0d-abdfc7161c72
-      :name: Ollin Arrageed
+      :name: Ollin Arageed
       :segued: false
     - :uuid: f4702071-471a-44ff-9698-b98713bc4579
       :name: The Promised Land
@@ -3681,7 +3702,7 @@
       :name: Deal
       :segued: false
     - :uuid: 7b4f504b-ed78-4f74-a21f-a8c100902da0
-      :name: Ollin Arrageed
+      :name: Ollin Arageed
       :segued: false
     - :uuid: 2d1ea6f9-f6c8-4881-a767-21dc5b374a12
       :name: Fire On The Mountain
@@ -3842,6 +3863,12 @@
     - :uuid: 5bcad52a-bd81-4c64-8312-66905863216b
       :name: Drums
       :segued: false
+    - :uuid: 5bcad52a-bd81-4c64-8312-66905863216b
+      :name: Space
+      :segued: false
+    - :uuid: 5bcad52a-bd81-4c64-8312-66905863216b
+      :name: Mind Left Body Jam
+      :segued: false
     - :uuid: 09712c47-2ef8-4e3f-8224-7f4d22ba8588
       :name: Wharf Rat
       :segued: false
@@ -3933,7 +3960,7 @@
   - :uuid: e1c12aba-239b-47f4-876b-75d94e47e314
     :songs:
     - :uuid: dc109ea5-d5f6-4846-8089-ef0adb2fd345
-      :name: Ollin Arrageed
+      :name: Ollin Arageed
       :segued: false
     - :uuid: 9b15c1fc-3566-47af-9f56-1140b7c33ebe
       :name: The Promised Land
@@ -3976,6 +4003,9 @@
     - :uuid: c8d5ff27-15cc-4e2e-98fc-40715ed1606e
       :name: Drums
       :segued: false
+    - :uuid: c8d5ff27-15cc-4e2e-98fc-40715ed1606e
+      :name: Space
+      :segued: false
     - :uuid: 29f7a6fb-89ef-4c1f-833c-a9d2c4e68f4c
       :name: Got My Mojo Workin
       :segued: false
@@ -4003,7 +4033,7 @@
   - :uuid: a554872c-c99d-4fa4-bd35-77a04b60108f
     :songs:
     - :uuid: 068874d5-bef7-4de8-b5c5-a1d1dc573043
-      :name: Ollin Arrageed
+      :name: Ollin Arageed
       :segued: true
     - :uuid: e6a2e4db-81c7-4896-8ca8-3a05cceec939
       :name: Deal
@@ -4048,9 +4078,6 @@
       :segued: true
     - :uuid: 4262b958-5e8c-4201-8b2b-d84179b95030
       :name: Not Fade Away
-      :segued: true
-    - :uuid: a4a1130d-cf92-438b-83c7-3659bf720c6c
-      :name: Caution (Do Not Stop On Tracks) Jam
       :segued: true
     - :uuid: 75480309-0e2a-42de-b4af-7d7244fd5759
       :name: Goin' Down The Road Feeling Bad
@@ -4296,46 +4323,7 @@
     - :uuid: a7e55221-6f83-47a1-94d7-2e6defb3368e
       :name: U.S. Blues
       :segued: false
-1978/11/17/0:
-  :uuid: afa3f9cc-d455-47a8-84b3-8dc6014aaf93
-  :venue: Loyola College
-  :city: Chicago
-  :state: IL
-  :country: US
-  :sets:
-  - :uuid: 9a6e4d73-f43a-4f91-bd9d-968f499cb4b0
-    :songs:
-    - :uuid: 15218ec6-83a1-4578-803b-851767dcd875
-      :name: Winin' Boy Blues
-      :segued: false
-    - :uuid: fa232cde-7793-49b5-8a5b-84edac2f76cf
-      :name: Tom Dooley
-      :segued: false
-    - :uuid: 82065deb-364b-4ec8-b500-90d01c61d8de
-      :name: This Time Forever
-      :segued: false
-    - :uuid: f0af0070-ee1a-418a-956d-8bf19c28c49b
-      :name: Deep Elem Blues
-      :segued: false
-    - :uuid: 9ef86b14-abc5-4881-8971-3aea8e0d42c3
-      :name: KC Moan
-      :segued: false
-    - :uuid: 8891b8a5-69fb-4701-8a80-101d76e5df0d
-      :name: Knockin' On Heaven's Door
-      :segued: false
-    - :uuid: d40b93dc-9a7a-417a-8ef9-69b2febd02e1
-      :name: Big Boy Pete
-      :segued: false
-    - :uuid: 49da5a8f-33f7-4ffb-8a59-1b5163e22cf7
-      :name: Jack A Roe
-      :segued: false
-    - :uuid: c76ef06b-0848-476c-bcff-0cd309984ff4
-      :name: Dark Hollow
-      :segued: false
-    - :uuid: dbe14935-10da-4cf9-9264-b2999e8f141f
-      :name: Oh Boy
-      :segued: false
-1978/11/17/1:
+1978/11/17:
   :uuid: de682e19-a075-436d-9fb4-b5e33a4e52e0
   :venue: Uptown Theatre
   :city: Chicago
@@ -4458,11 +4446,14 @@
     - :uuid: d30d571c-7a4c-477e-b58a-1b709b7e68e4
       :name: He's Gone
       :segued: true
+    - :uuid: d30d571c-7a4c-477e-b58a-1b709b7e68e4
+      :name: The Other One
+      :segued: true
     - :uuid: ed7f85b1-135a-4bcf-b0cb-994138f10dbb
       :name: Drums
       :segued: true
     - :uuid: f5bf7216-cc3b-455d-915b-28da1290d905
-      :name: Space
+      :name: Ollin Arageed
       :segued: true    
     - :uuid: d0310f94-efaf-4191-80cb-40603af4233a
       :name: Wharf Rat
@@ -4525,6 +4516,9 @@
     - :uuid: d2166090-9c68-49fe-b254-6ed7040b47b0
       :name: Drums
       :segued: false
+    - :uuid: 858c4922-5df5-4a48-b93f-a4064a894cd3
+      :name: Jam
+      :segued: false
     - :uuid: 63b65b7b-0ca8-4ff7-83c4-7d20d6dcb15f
       :name: Jack A Roe
       :segued: false
@@ -4533,9 +4527,6 @@
       :segued: false
     - :uuid: cfec2fa8-8a83-4ffb-b064-d6209ca0a3e6
       :name: Shakedown Street
-      :segued: false
-    - :uuid: 5832a68b-72a7-4d37-b1ea-0132ba3c413f
-      :name: Drums
       :segued: false
     - :uuid: 8bb7ac96-68b3-4310-8d53-8f34dd079d7f
       :name: If I Had The World To Give
@@ -4679,6 +4670,9 @@
       :name: Drums
       :segued: false
     - :uuid: 1018b7ab-8269-4009-8de7-a0738c2844ba
+      :name: Ollin Arageed
+      :segued: false
+    - :uuid: 1018b7ab-8269-4009-8de7-a0738c2844ba
       :name: Shakedown Street
       :segued: false
     - :uuid: 3837cee7-b7b5-40d0-abe1-a6f85b49b621
@@ -4751,11 +4745,11 @@
     - :uuid: 12769baf-ff47-4be1-9ea6-4a4f6ed6d24d
       :name: Shakedown Street
       :segued: false
-    - :uuid: 1b0ebbe9-da82-4734-adf6-0b65368de3bb
-      :name: Ollin Arrageed
-      :segued: false
     - :uuid: 6b1e7977-4a9d-45c5-9db9-4c04512f70ed
       :name: Drums
+      :segued: false
+    - :uuid: 1b0ebbe9-da82-4734-adf6-0b65368de3bb
+      :name: Ollin Arageed
       :segued: false
     - :uuid: 531c8726-118a-47b6-ac07-aae8978f205a
       :name: Fire On The Mountain
@@ -5128,6 +5122,9 @@
     - :uuid: 1f56f3ec-e1d7-4c03-979a-ff0150ab7cf6
       :name: Drums
       :segued: false
+    - :uuid: 1f56f3ec-e1d7-4c03-979a-ff0150ab7cf6
+      :name: Space
+      :segued: false
     - :uuid: 5db1bf3a-e92c-4175-b35e-038057252b64
       :name: Shakedown Street
       :segued: false
@@ -5454,7 +5451,7 @@
       :name: Sugaree
       :segued: false
     - :uuid: 87091dcb-d7d1-4752-a232-9825c5f23ad7
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: db302377-e2da-4383-a329-e8dbf3d0afba
       :name: Beat It On Down The Line
@@ -5592,7 +5589,7 @@
       :name: Drums
       :segued: true
     - :uuid: 9d70b13d-a7a1-4007-bc53-7a9a702f1c08
-      :name: Ollin Arrageed
+      :name: Ollin Arageed
       :segued: true
     - :uuid: 12c5e77e-6411-412b-9881-c04f49a60907
       :name: Space

@@ -1,5 +1,4 @@
 import json
-import sys
 from enum import Enum
 
 from gdshowsdb_yaml_extract import extract_year
@@ -238,7 +237,8 @@ def fix_yaml_show(yml_show, csv_show):
 
 if __name__ == '__main__':
     matched_shows = []
-    for i in [1977, 1994, 1995]:
+    years = [1977, 1978, 1994, 1995]
+    for i in years:
         matched_shows.extend(compare_shows(i))
 
     # put into lists of [set_index, name]

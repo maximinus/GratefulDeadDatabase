@@ -573,8 +573,11 @@
     - :uuid: 2f63247f-e9f5-410c-8315-ea76259bdd44
       :name: Drums
       :segued: false
+    - :uuid: 2f63247f-e9f5-410c-8315-ea76259bdd44
+      :name: Space
+      :segued: false
     - :uuid: b1c2c3b0-059b-448c-a642-9e01a7de38ae
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: ca0cfce3-a62b-4685-b109-54c55c4f42b3
       :name: Casey Jones
@@ -938,9 +941,6 @@
     - :uuid: b05f856c-edc1-4d44-b24f-6fd7a738c6e9
       :name: Fire On The Mountain
       :segued: false
-    - :uuid: 4b2e9166-f403-4843-a4bc-be6ed86dffbc
-      :name: From The Heart Of Me
-      :segued: false
     - :uuid: 08777eee-6f0b-4bb7-9dbd-e09dcf0c6d4f
       :name: Estimated Prophet
       :segued: true
@@ -1155,11 +1155,14 @@
     - :uuid: b764c285-7a39-4ae1-a4b3-d7fea2736d29
       :name: Stagger Lee
       :segued: false
-    - :uuid: 0a790287-2e49-4aa2-bfd7-405d96bfc15a
-      :name: I Need A Miracle
-      :segued: true
-    - :uuid: 524e4b2f-1df2-445d-92f1-2c58db4f3d89
-      :name: Bertha
+    - :uuid: b764c285-7a39-4ae1-a4b3-d7fea2736d29
+      :name: Cassidy
+      :segued: false
+    - :uuid: b764c285-7a39-4ae1-a4b3-d7fea2736d29
+      :name: Peggy O
+      :segued: false
+    - :uuid: b764c285-7a39-4ae1-a4b3-d7fea2736d29
+      :name: The Music Never Stopped
       :segued: false
   - :uuid: 7f8c092e-8c3b-4bb3-a91e-84475ad2ab59
     :songs:
@@ -1179,8 +1182,19 @@
       :name: Black Peter
       :segued: false
     - :uuid: 783f4f5f-c24b-4d79-8510-d9654aa09979
+      :name: I Need A Miracle
+      :segued: false
+    - :uuid: 783f4f5f-c24b-4d79-8510-d9654aa09979
+      :name: Bertha
+      :segued: false
+    - :uuid: 783f4f5f-c24b-4d79-8510-d9654aa09979
       :name: Good Lovin'
-      :segued: false  
+      :segued: false
+  - :uuid: f90925db-3f8f-48bf-b9c8-aff0e46e857d
+    :songs:
+    - :uuid: 75d5f516-128a-41a3-9fa5-837f2bb13fc9
+      :name: U.S. Blues
+      :segued: false
 1979/02/09:
   :uuid: b47ba542-79bc-408a-a68d-edf78bd6161b
   :venue: Soldiers & Sailors Memorial Hall
@@ -1484,6 +1498,9 @@
     - :uuid: c96f5759-9a89-4aef-bdb8-7154b8774e3a
       :name: Drums
       :segued: false
+    - :uuid: c96f5759-9a89-4aef-bdb8-7154b8774e3a
+      :name: Space
+      :segued: false
     - :uuid: aba56560-6103-455d-852e-8c5048a777f7
       :name: The Wheel
       :segued: false
@@ -1491,7 +1508,7 @@
       :name: Shakedown Street
       :segued: false
     - :uuid: bf613e15-3982-48b6-aa0a-f100ec30f2cf
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: 67822d19-73e0-421b-b2f2-bb707c4a0141
       :name: Sugar Magnolia
@@ -2567,7 +2584,7 @@
       :name: Drums
       :segued: true
     - :uuid: 22778ba8-5202-42d7-ad15-e8f57ced47c4
-      :name: Ollin Arrageed
+      :name: Ollin Arageed
       :segued: true
     - :uuid: 46b89caf-a570-42b0-b330-aaa0d3426e2d
       :name: Space
@@ -2841,11 +2858,11 @@
     - :uuid: 944fcf18-f5a4-4580-8ffa-8660ac71f634
       :name: Peggy O
       :segued: false
-    - :uuid: 97e44669-d348-4f29-a9ce-35b4f1200262
-      :name: New Minglewood Blues
-      :segued: false
     - :uuid: b9b61724-4ff7-4ad0-a6b0-a4e61a9f3321
       :name: Easy To Love You
+      :segued: false
+    - :uuid: 97e44669-d348-4f29-a9ce-35b4f1200262
+      :name: New Minglewood Blues
       :segued: false
     - :uuid: 04dd04fb-485e-43a0-8fa1-8b636ec3a489
       :name: Althea
@@ -4395,7 +4412,7 @@
       :name: The Promised Land
       :segued: false
     - :uuid: a335979c-fd25-41ee-a578-0b6aaff622d0
-      :name: They Love Each Other
+      :name: Candyman
       :segued: false
     - :uuid: 27b631dd-a144-46f4-8b42-2d9cafb8c28f
       :name: Mama Tried
@@ -4404,13 +4421,13 @@
       :name: Mexicali Blues
       :segued: false
     - :uuid: ea52c641-dfe1-46bd-824d-4abb60bdd8b0
-      :name: Althea
-      :segued: false
-    - :uuid: 54af30d7-2aa4-4178-b909-3e2938225ae9
-      :name: Easy To Love You
+      :name: They Love Each Other
       :segued: false
     - :uuid: dba6e227-4a39-4613-b01f-13fdcca86b00
       :name: New Minglewood Blues
+      :segued: false
+    - :uuid: 54af30d7-2aa4-4178-b909-3e2938225ae9
+      :name: Easy To Love You
       :segued: false
     - :uuid: 6f4390b7-3275-4de3-90fb-5cdea3bf5e5d
       :name: Brown Eyed Women
@@ -4440,9 +4457,6 @@
       :segued: false
     - :uuid: d9c30b70-433e-4f33-8859-9f00a6a6137f
       :name: Drums
-      :segued: false
-    - :uuid: eb5c925a-abd9-4a38-977e-87731cf69469
-      :name: Not Fade Away
       :segued: false
     - :uuid: 533a3c76-15cf-4773-b3ae-78ae8ad10322
       :name: Black Peter

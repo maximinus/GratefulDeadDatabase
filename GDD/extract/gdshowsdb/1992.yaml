@@ -574,7 +574,7 @@
       :name: Althea
       :segued: false
     - :uuid: 3191374f-e5c0-4dfb-aaa6-37b7daaed139
-      :name: It's All Over Now, Baby Blue
+      :name: It's All Over Now
       :segued: false
     - :uuid: dfdb2cc5-833c-417d-91a8-ba8c5d64db2d
       :name: So Many Roads
@@ -661,7 +661,7 @@
       :name: Corrina
       :segued: false
     - :uuid: 88e99162-a1e2-47e6-bef9-040535ba7e62
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: 460f3c72-f2b4-48fa-a5ab-db7da92d078a
       :name: Drums
@@ -914,7 +914,7 @@
       :name: Corrina
       :segued: false
     - :uuid: 77b7a2f6-85b9-4305-ae33-22841f580eb3
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: d0ddb044-2efe-4a34-9a2e-dff4a0c7727a
       :name: Uncle John's Band
@@ -1491,7 +1491,7 @@
       :name: Loser
       :segued: false
     - :uuid: 4d036cba-30cc-44a1-b8ba-447f4ab6d01c
-      :name: It's All Over Now, Baby Blue
+      :name: It's All Over Now
       :segued: false
     - :uuid: fc1f590d-18b1-44cf-9f85-93d7cba0b721
       :name: Foolish Heart
@@ -2322,7 +2322,7 @@
       :name: Jack A Roe
       :segued: false
     - :uuid: dc1f2eb3-d480-4ba7-91c0-75612cc99a40
-      :name: It's All Over Now, Baby Blue
+      :name: It's All Over Now
       :segued: false
     - :uuid: 49674123-4d4e-4573-a765-17ed25fd0387
       :name: Deal
@@ -3010,7 +3010,7 @@
       :name: Jack A Roe
       :segued: false
     - :uuid: 6e1b3e9e-8c81-4429-a276-98db8ef3bed1
-      :name: It's All Over Now, Baby Blue
+      :name: It's All Over Now
       :segued: false
     - :uuid: 2504f6b9-ddde-4b27-8426-4e0ae9393579
       :name: So Many Roads
@@ -3228,7 +3228,7 @@
       :name: Uncle John's Band
       :segued: false
     - :uuid: 113576f8-1ce5-40c9-88b9-da77c9eb60d2
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: 4bf33891-4ad2-4f9c-9055-fb99024b995c
       :name: Drums
@@ -3391,7 +3391,7 @@
       :name: Mississippi Half Step Uptown Toodeloo
       :segued: false
     - :uuid: 95cf01d2-540d-44df-b54b-c6bd187218e3
-      :name: It's All Over Now, Baby Blue
+      :name: It's All Over Now
       :segued: false
     - :uuid: f2ffc95e-35be-4880-ba41-ec0685f80dd2
       :name: West L.A. Fadeaway
@@ -3546,7 +3546,7 @@
       :name: Uncle John's Band
       :segued: true
     - :uuid: 999ebf60-cb16-4d2d-b0ae-801c0533e6db
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: true
     - :uuid: 60d63748-ea2b-4567-b960-aca6718665f6
       :name: Drums

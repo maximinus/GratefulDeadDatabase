@@ -9,6 +9,18 @@ class BaseModel(Model):
         database = db
 
 
+class City(BaseModel):
+    name = CharField()
+
+
+class State(BaseModel):
+    name = CharField()
+
+
+class Country(BaseModel):
+    name = CharField()
+
+
 class Venue(BaseModel):
     name = CharField()
     latitude = FloatField()
@@ -16,9 +28,9 @@ class Venue(BaseModel):
     festival_name = CharField(null=True)
     # for unique names "Big Nigs" for example
     alternate_name = CharField(null=True)
-    city_name = CharField(null=True)
-    state_name = CharField(null=True)
-    country_name = CharField(null=True)
+    city = ForeignKeyField(City, backref='venues')
+    state = ForeignKeyField(State, backref='states')
+    country = ForeignKeyField(Country, backref='countries')
 
 
 class Show(BaseModel):
@@ -34,6 +46,11 @@ class ShowSet(BaseModel):
     index = IntegerField()
 
 
+class Musician(BaseModel):
+    name = CharField()
+    notes = TextField(null=True)
+
+
 class Song(BaseModel):
     full_name = CharField(null=True)
     common_name = CharField()
@@ -42,21 +59,27 @@ class Song(BaseModel):
     cover = BooleanField()
 
 
+class SongWriter(BaseModel):
+    # somebody wrote a song. Who what song, what did they write?
+    musician = ForeignKeyField(Musician, backref='songs')
+    song = ForeignKeyField(Song, backref='writers')
+    lyrics = BooleanField()
+    music = BooleanField()
+
+
 class PlayedSong(BaseModel):
     song = ForeignKeyField(Song, backref='versions')
     show_set = ForeignKeyField(ShowSet, backref='songs')
     index = IntegerField()
     # no pause between songs; pause=0 seconds - Jerrybase is 5
     transitions = BooleanField()
-
-
-class Musician(BaseModel):
-    name = ForeignKeyField(Song)
+    notes = TextField(null=True)
 
 
 class GuestArtist(BaseModel):
     song = ForeignKeyField(PlayedSong, backref='guests')
     musician = ForeignKeyField(Musician, backref='appearences')
+    notes = TextField(null=True)
 
 
 class Weather(BaseModel):
@@ -76,4 +99,6 @@ class Weather(BaseModel):
 
 if __name__ == '__main__':
     db.connect()
-    db.create_tables([Venue, Show, ShowSet, Song, PlayedSong, Musician, GuestArtist, Weather])
+    db.create_tables([Venue, Show, ShowSet, Musician, Song, SongWriter, PlayedSong, GuestArtist, Weather])
+    db.commit()
+    print('Created all tables')

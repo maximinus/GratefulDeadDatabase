@@ -241,19 +241,12 @@ if __name__ == '__main__':
     for i in years:
         matched_shows.extend(compare_shows(i))
 
-    # put into lists of [set_index, name]
-    # parse lists side by side to check they match
-
     # WRITE THE RESULTS TO THE YAML
     # The DB will come after the yaml is complete
-    #   -- else we risk never using it
 
     # can also .print() all of these
     # Note matched_shows[0][1] is a CompleteShow object (from cvs)
     #      matched_shows[0][0] is a GdShow object (from yaml)
-
-    # Errors found:
-    #   Man Smart on 1995/03/24 not named correctly in Jerrybase
 
     final_yml = []
     for i in matched_shows:
@@ -262,3 +255,10 @@ if __name__ == '__main__':
 
     # The output is a list of GDShow objects
     print(f'Total shows: {len(final_yml)}')
+
+    # get all venues
+    venues = list(set([x.venue_name for x in final_yml]))
+    venues.sort()
+    for i in venues:
+        print(i)
+    print(len(venues))

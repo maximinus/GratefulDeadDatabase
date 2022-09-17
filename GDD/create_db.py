@@ -4,9 +4,6 @@ from peewee import *
 db = SqliteDatabase('database/grateful_dead.db')
 
 
-# TODO: What exactly is backref? From Key to Model or the opposite?
-
-
 class BaseModel(Model):
     class Meta:
         database = db
@@ -16,18 +13,18 @@ class Venue(BaseModel):
     name = CharField()
     latitude = FloatField()
     longitude = FloatField()
-    festival_name = CharField()
+    festival_name = CharField(null=True)
     # for unique names "Big Nigs" for example
-    alternate_name = CharField()
-    city_name = CharField()
-    state_name = CharField()
-    country_name = CharField()
+    alternate_name = CharField(null=True)
+    city_name = CharField(null=True)
+    state_name = CharField(null=True)
+    country_name = CharField(null=True)
 
 
 class Show(BaseModel):
     venue = ForeignKeyField(Venue, backref='shows')
     date = DateField()
-    start_time = TimeField()
+    start_time = TimeField(null=True)
     # possible >1 show per date, and start time could be null
     start_index = IntegerField()
 
@@ -38,9 +35,9 @@ class ShowSet(BaseModel):
 
 
 class Song(BaseModel):
-    full_name = CharField()
+    full_name = CharField(null=True)
     common_name = CharField()
-    short_name = CharField()
+    short_name = CharField(null=True)
     char4_name = CharField()
     cover = BooleanField()
 
@@ -58,22 +55,23 @@ class Musician(BaseModel):
 
 
 class GuestArtist(BaseModel):
-    song = ForeignKeyField(PlayedSong, backref='songs')
-    musician = ForeignKeyField(Musician)
+    song = ForeignKeyField(PlayedSong, backref='guests')
+    musician = ForeignKeyField(Musician, backref='appearences')
 
 
 class Weather(BaseModel):
-    show = ForeignKeyField(Show, backref='weather')
+    show = ForeignKeyField(Show, backref='all_weather')
     # in celcius
-    temperature = FloatField()
+    temperature = FloatField(null=True)
+    feels_like = FloatField(null=True)
     # in atm, so very close to 1
-    pressure = FloatField()
+    pressure = FloatField(null=True)
     # what measure?
-    percipitation = FloatField()
+    precipitation = FloatField(null=True)
     # m/s
-    wind_velocity = FloatField()
+    wind_velocity = FloatField(null=True)
     # float 0-360, 0 is north, 90 is east etc
-    wind_direction = FloatField()
+    wind_direction = FloatField(null=True)
 
 
 if __name__ == '__main__':

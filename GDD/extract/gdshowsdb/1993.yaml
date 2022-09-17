@@ -102,7 +102,7 @@
       :name: Corrina
       :segued: false
     - :uuid: ebd9f53b-124e-4602-9852-d52c8b44244f
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: ae8604ef-7dcc-4712-b0d9-1dbc28ba05fd
       :name: Uncle John's Band
@@ -352,6 +352,9 @@
   - :uuid: 29a9ed81-e211-4167-a0ea-6a1e3a88f940
     :songs:
     - :uuid: 91982664-f28b-4c78-8841-9c6e8c29fc81
+      :name: Drums
+      :segued: false
+    - :uuid: 91982664-f28b-4c78-8841-9c6e8c29fc81
       :name: Iko Iko
       :segued: false
     - :uuid: d8fa4289-9cde-455e-ae01-68f6ccebf8fd
@@ -365,6 +368,9 @@
       :segued: false
     - :uuid: b0f9f95e-f99e-42e5-a2cb-911cade309d7
       :name: Drums
+      :segued: false
+    - :uuid: b0f9f95e-f99e-42e5-a2cb-911cade309d7
+      :name: Space
       :segued: false
     - :uuid: 01cd106c-6006-478a-9b4a-5a54f6b0f946
       :name: The Other One
@@ -493,6 +499,9 @@
       :segued: false
     - :uuid: e2fc61f7-7a85-49ea-9d1b-4c75f77fb6c6
       :name: Corrina
+      :segued: false
+    - :uuid: e2fc61f7-7a85-49ea-9d1b-4c75f77fb6c6
+      :name: Mind Left Body Jam
       :segued: false
     - :uuid: 42254fd4-bc3f-4aa6-9b47-39cab52f8a98
       :name: Drums
@@ -758,6 +767,12 @@
       :segued: false
     - :uuid: 4d15d87f-6b53-461a-a51b-743fd6d58496
       :name: Drums
+      :segued: false
+    - :uuid: 4d15d87f-6b53-461a-a51b-743fd6d58496
+      :name: Space
+      :segued: false
+    - :uuid: 4d15d87f-6b53-461a-a51b-743fd6d58496
+      :name: Handsome Cabin Boy Jam
       :segued: false
     - :uuid: 4549366f-4710-4c16-8e09-1e5f8844c72d
       :name: The Other One
@@ -1995,11 +2010,11 @@
     - :uuid: 37a46f71-e5b6-4df9-8a38-2b5d2c6b7bc5
       :name: Loser
       :segued: false
-    - :uuid: b92ecbbd-30fa-445b-8955-ba2d65d98fca
-      :name: Just Like Tom Thumb's Blues
-      :segued: false
     - :uuid: cec2cd08-d782-471e-b9ed-3643fc1e0344
       :name: It's All Over Now
+      :segued: false
+    - :uuid: b92ecbbd-30fa-445b-8955-ba2d65d98fca
+      :name: Just Like Tom Thumb's Blues
       :segued: false
     - :uuid: 5637fb97-490f-49c0-b7a5-8a8d90101131
       :name: Bird Song
@@ -2712,13 +2727,6 @@
     - :uuid: dc38e534-1ef8-429c-b918-33985f1eb87f
       :name: I Fought The Law
       :segued: false
-1993/06/17:
-  :uuid: c23d4f71-c69e-4a10-b63a-f38182efc43e
-  :venue: Soldier Field
-  :city: Chicago
-  :state: IL
-  :country: US
-  :sets: []
 1993/06/18:
   :uuid: 6031ce62-b929-47a4-a9f4-01b1d3884f68
   :venue: Soldier Field
@@ -3461,6 +3469,9 @@
       :name: Broken Arrow
       :segued: false
     - :uuid: f7b520c5-6254-4e0d-98d4-355123d6d906
+      :name: Eternity
+      :segued: false
+    - :uuid: f7b520c5-6254-4e0d-98d4-355123d6d906
       :name: Loose Lucy
       :segued: false
     - :uuid: 03c05549-78b1-4e0c-a552-9e8a7d5b8b2c
@@ -3549,6 +3560,9 @@
       :segued: false
     - :uuid: d9d23349-601f-47d4-8844-35267c344a83
       :name: I Need A Miracle
+      :segued: false
+    - :uuid: 694cb78f-f12d-4580-b2b5-265a6f9c1217
+      :name: Standing On The Moon
       :segued: false
     - :uuid: 694cb78f-f12d-4580-b2b5-265a6f9c1217
       :name: Black Peter
@@ -4583,8 +4597,11 @@
     - :uuid: 3b5bef96-6833-406b-b2a7-e9e8cc6812e6
       :name: Drums
       :segued: false
+    - :uuid: 3b5bef96-6833-406b-b2a7-e9e8cc6812e6
+      :name: Space
+      :segued: false
     - :uuid: b93ef54a-fb95-41ff-88e2-1240633f924e
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: bcb9092e-0784-410a-aaeb-99905291d945
       :name: Stella Blue
@@ -4812,9 +4829,6 @@
     :songs:
     - :uuid: 2ce9da2b-9613-4d8e-aa4e-e110e1a2a530
       :name: Hell In A Bucket
-      :segued: false
-    - :uuid: f0c8832f-1228-4837-8827-59fb8192eaa5
-      :name: Sugaree
       :segued: false
     - :uuid: 9b66e124-9a84-44de-8781-7c2c12051f03
       :name: Loser

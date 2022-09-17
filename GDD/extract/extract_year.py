@@ -237,7 +237,7 @@ def fix_yaml_show(yml_show, csv_show):
 
 if __name__ == '__main__':
     matched_shows = []
-    years = [1977, 1978, 1994, 1995]
+    years = [1977, 1978, 1993, 1994, 1995]
     for i in years:
         matched_shows.extend(compare_shows(i))
 

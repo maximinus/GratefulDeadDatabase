@@ -235,10 +235,33 @@ def fix_yaml_show(yml_show, csv_show):
     return yml_show
 
 
+def output_json_venues(final_yml):
+    # get all venues
+    show_venues = {}
+    for i in final_yml:
+        if i.venue_name in show_venues:
+            show_venues[i.venue_name].append(i.text_date)
+        else:
+            show_venues[i.venue_name] = [i.text_date]
+    venues_sorted = dict(sorted(show_venues.items()))
+    print('[')
+    for k, v in venues_sorted.items():
+        dates = '", "'.join(v)
+        print(f'    "{k}": {{')
+        print(f'        "dates": ["{dates}"],')
+        print(f'        "latitude": Null,')
+        print(f'        "longitude": Null,')
+        print(f'        "city": Null,')
+        print(f'        "state": Null,')
+        print(f'        "country": Null,')
+        print(f'    }},')
+    print(']')
+
+
 if __name__ == '__main__':
     matched_shows = []
-    # years = [1977, 1978, 1979, 1992, 1993, 1994, 1995]
-    years = [1977, 1978]
+    # years = [1977, 1978, 1979, 1980, 1992, 1993, 1994, 1995]
+    years = [1991]
     for i in years:
         matched_shows.extend(compare_shows(i))
 
@@ -256,10 +279,3 @@ if __name__ == '__main__':
 
     # The output is a list of GDShow objects
     print(f'Total shows: {len(final_yml)}')
-
-    # get all venues
-    venues = list(set([x.venue_name for x in final_yml]))
-    venues.sort()
-    for i in venues:
-        print(i)
-    print(len(venues))

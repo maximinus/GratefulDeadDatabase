@@ -1053,6 +1053,9 @@
     - :uuid: ccf85266-f2f2-4581-95fe-c3d2e65eb834
       :name: He's Gone
       :segued: false
+    - :uuid: ccf85266-f2f2-4581-95fe-c3d2e65eb834
+      :name: Caution (Do Not Stop On Tracks) Jam
+      :segued: false
     - :uuid: c4e6752a-ced5-4720-8862-35cc5431148d
       :name: Drums
       :segued: false
@@ -1934,6 +1937,24 @@
   - :uuid: cb86c7e2-ead4-480d-b809-2c2f1728825a
     :songs:
     - :uuid: eb689902-2cba-448e-bcd9-d822c9c46f34
+      :name: Alabama Getaway
+      :segued: false
+    - :uuid: eb689902-2cba-448e-bcd9-d822c9c46f34
+      :name: The Promised Land
+      :segued: false
+    - :uuid: eb689902-2cba-448e-bcd9-d822c9c46f34
+      :name: Friend Of The Devil
+      :segued: false
+    - :uuid: eb689902-2cba-448e-bcd9-d822c9c46f34
+      :name: El Paso
+      :segued: false
+    - :uuid: eb689902-2cba-448e-bcd9-d822c9c46f34
+      :name: Brown Eyed Women
+      :segued: false
+    - :uuid: eb689902-2cba-448e-bcd9-d822c9c46f34
+      :name: Me And My Uncle
+      :segued: false
+    - :uuid: eb689902-2cba-448e-bcd9-d822c9c46f34
       :name: Big River
       :segued: false
     - :uuid: a3c0798c-7c75-4016-9c78-28b18f466f51
@@ -2422,13 +2443,13 @@
   - :uuid: 7125d4af-904a-46dd-a7a8-8d9eaab5ee5b
     :songs:
     - :uuid: 5d7bd79a-682c-43fa-b5bc-263836cc3e1a
+      :name: C.C. Rider
+      :segued: false      
+    - :uuid: 5d7bd79a-682c-43fa-b5bc-263836cc3e1a
       :name: China Cat Sunflower
       :segued: false
     - :uuid: d4196758-0453-4b9f-869d-eb849f01463f
       :name: I Know You Rider
-      :segued: false
-    - :uuid: 054b64c6-a4d8-4d33-ae34-72faf8e3bbc6
-      :name: C.C. Rider
       :segued: false
     - :uuid: c5647429-db7a-48b9-80fc-8f51c5c541ae
       :name: Ship Of Fools
@@ -3499,7 +3520,7 @@
       :name: Ramble On Rose
       :segued: false
     - :uuid: 7467c5ce-39a6-44ae-82db-9d18d251b4be
-      :name: Supplication
+      :name: Supplication Jam
       :segued: false
     - :uuid: 3b84f428-3207-477a-afd6-fc59f50462e2
       :name: Estimated Prophet
@@ -4219,6 +4240,9 @@
     - :uuid: a0b13597-a8b8-4610-b605-4dc706d2ce61
       :name: Drums
       :segued: true
+    - :uuid: a0b13597-a8b8-4610-b605-4dc706d2ce61
+      :name: Space
+      :segued: true
     - :uuid: c5a996f6-b455-4a26-b435-ebd9f4479bfd
       :name: Comes A Time
       :segued: true
@@ -4236,6 +4260,9 @@
       :segued: true
     - :uuid: 72ce52c2-7e53-4162-a1ac-fb74a759d7fc
       :name: Drums
+      :segued: true
+    - :uuid: 72ce52c2-7e53-4162-a1ac-fb74a759d7fc
+      :name: Space
       :segued: true
     - :uuid: 31a68efe-91b5-4a0d-882a-df0eecd66465
       :name: Stella Blue
@@ -4742,6 +4769,9 @@
     - :uuid: 133cbbbc-9b2e-49b7-b17a-2fd7cbc63b78
       :name: Brown Eyed Women
       :segued: false
+    - :uuid: 133cbbbc-9b2e-49b7-b17a-2fd7cbc63b78
+      :name: Looks Like Rain
+      :segued: false
     - :uuid: 92250d3f-e09c-4ef4-ae00-e869beab8913
       :name: Tennessee Jed
       :segued: false
@@ -4770,6 +4800,9 @@
       :segued: false
     - :uuid: c7f0b752-c542-41fa-a606-08ced04dc902
       :name: Drums
+      :segued: false
+    - :uuid: c7f0b752-c542-41fa-a606-08ced04dc902
+      :name: Space
       :segued: false
     - :uuid: 4cd7ad7e-fbb2-4a92-ae2e-abcee10ba7c1
       :name: Not Fade Away
@@ -5646,14 +5679,14 @@
     - :uuid: 417d2c68-ab3a-4cef-9d30-9951545c1a5d
       :name: I've Been All Around This World
       :segued: false
-    - :uuid: 8d19862c-b8d4-4d03-bae5-c11769fb7e68
-      :name: El Paso
+    - :uuid: e39c0104-473c-4c77-b889-a5a1bace2ef3
+      :name: Monkey And The Engineer
       :segued: false
     - :uuid: e5912f6f-736c-496a-9dde-cf47e377c051
       :name: To Lay Me Down
       :segued: false
-    - :uuid: e39c0104-473c-4c77-b889-a5a1bace2ef3
-      :name: Monkey And The Engineer
+    - :uuid: 8d19862c-b8d4-4d03-bae5-c11769fb7e68
+      :name: El Paso
       :segued: false
     - :uuid: 2874375e-3cec-4c9c-b0a3-52bd348bdb4a
       :name: Bird Song
@@ -6541,14 +6574,17 @@
     - :uuid: 330c3238-8aa8-4221-9938-a59b5ec616b4
       :name: Monkey And The Engineer
       :segued: false
-    - :uuid: 7e77c8d8-0318-49d8-890d-54c9098e6654
-      :name: Bird Song
+    - :uuid: d5733aa1-1321-4628-8a26-5c8f9c64f828
+      :name: Jack A Roe
       :segued: false
     - :uuid: d5733aa1-1321-4628-8a26-5c8f9c64f828
       :name: Cassidy
       :segued: false
+    - :uuid: 7e77c8d8-0318-49d8-890d-54c9098e6654
+      :name: Bird Song
+      :segued: false
     - :uuid: 640a64ce-1261-41cf-9b5e-f2d189851e79
-      :name: China Doll
+      :name: Oh Babe It Ain't No Lie
       :segued: false
     - :uuid: f8b19f7e-5585-479c-80ba-e9e2b22e4dd5
       :name: Ripple

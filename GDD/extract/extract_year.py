@@ -239,29 +239,33 @@ def output_json_venues(final_yml):
     # get all venues
     show_venues = {}
     for i in final_yml:
-        if i.venue_name in show_venues:
-            show_venues[i.venue_name].append(i.text_date)
+        full_name = i.full_location
+        if full_name in show_venues:
+            show_venues[full_name].append(i.text_date)
         else:
-            show_venues[i.venue_name] = [i.text_date]
+            show_venues[full_name] = [i.text_date]
     venues_sorted = dict(sorted(show_venues.items()))
     print('[')
     for k, v in venues_sorted.items():
+        venue_name = k.split(',')[0]
         dates = '", "'.join(v)
-        print(f'    "{k}": {{')
+        print(f'    {{')
+        print(f'        "name": "{k}",')
+        print(f'        "venue_name": "{venue_name}",')
         print(f'        "dates": ["{dates}"],')
-        print(f'        "latitude": Null,')
-        print(f'        "longitude": Null,')
-        print(f'        "city": Null,')
-        print(f'        "state": Null,')
-        print(f'        "country": Null,')
+        print(f'        "latitude": "",')
+        print(f'        "longitude": "",')
+        print(f'        "city": "",')
+        print(f'        "state": "",')
+        print(f'        "country": ""')
         print(f'    }},')
     print(']')
 
 
 if __name__ == '__main__':
     matched_shows = []
-    # years = [1977, 1978, 1979, 1980, 1992, 1993, 1994, 1995]
-    years = [1991]
+    # years = [1977, 1978, 1979, 1980, 1991, 1992, 1993, 1994, 1995]
+    years = [1977, 1978]
     for i in years:
         matched_shows.extend(compare_shows(i))
 
@@ -279,3 +283,5 @@ if __name__ == '__main__':
 
     # The output is a list of GDShow objects
     print(f'Total shows: {len(final_yml)}')
+
+    output_json_venues(final_yml)

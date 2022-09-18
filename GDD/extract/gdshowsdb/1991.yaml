@@ -448,7 +448,7 @@
       :name: Fire On The Mountain
       :segued: true
     - :uuid: 4726a908-83c1-4a0d-ad7c-b037cc5f1fcc
-      :name: Stir It Up
+      :name: Stir It Up Jam
       :segued: true
     - :uuid: 835aeb5f-2f9b-44f3-a369-95d2582e188c
       :name: Drums
@@ -999,7 +999,7 @@
       :name: Dark Star
       :segued: false
     - :uuid: 78085c27-c0e3-4ff7-852b-569c3da38bf7
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: 403dfa94-c78f-4046-a3e0-27477ab0ef33
       :name: Black Peter
@@ -1199,6 +1199,9 @@
     - :uuid: d7e23255-1bb8-4815-9205-df15a4448023
       :name: Terrapin Station
       :segued: false
+    - :uuid: d7e23255-1bb8-4815-9205-df15a4448023
+      :name: Stir It Up Jam
+      :segued: false
     - :uuid: 0036d048-7c3f-4de5-9fdc-29d28d66625a
       :name: Drums
       :segued: false
@@ -1281,7 +1284,7 @@
   - :uuid: 86391846-38ef-4837-85c2-c03f23a54c3e
     :songs:
     - :uuid: f99b5741-72f6-4a62-b5ba-cdb2376df149
-      :name: It's All Over Now
+      :name: It's All Over Now, Baby Blue
       :segued: false
 1991/04/08:
   :uuid: ae8b9040-9d44-4f3d-8dc3-a0269c015cf9
@@ -1582,7 +1585,7 @@
       :name: Jack A Roe
       :segued: false
     - :uuid: 229ff3d3-3154-4c11-8777-119e4cec0841
-      :name: It's All Over Now, Baby Blue
+      :name: It's All Over Now
       :segued: false
     - :uuid: d95f4d06-8d65-422f-bc87-c412680a6bfa
       :name: Tennessee Jed
@@ -1844,7 +1847,7 @@
   - :uuid: da643881-6a68-4f1e-a743-88e3117d9539
     :songs:
     - :uuid: 264e03db-f910-4787-900f-40b3ed42df97
-      :name: It's All Over Now
+      :name: It's All Over Now, Baby Blue
       :segued: false
 1991/05/11:
   :uuid: 2cb34847-89db-4970-ae41-42cb19fdad42
@@ -2302,7 +2305,7 @@
       :name: Space
       :segued: false
     - :uuid: da862c90-968c-4d8f-9e44-bb9ef230c7d0
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: 6999ef19-06da-4ad0-a839-1d62f131ad5b
       :name: The Wheel
@@ -2453,7 +2456,7 @@
   - :uuid: f83016ef-602c-4198-9c24-67489d86c20c
     :songs:
     - :uuid: df80a296-4b92-487c-af50-be6f32103cec
-      :name: It's All Over Now
+      :name: It's All Over Now, Baby Blue
       :segued: false
 1991/06/16:
   :uuid: 2a2e371e-5352-45a5-bcd9-9fd3e21159ac
@@ -2540,6 +2543,9 @@
     - :uuid: 666ccf75-af2f-48af-92e5-f2ffbc8092f8
       :name: Brown Eyed Women
       :segued: false
+    - :uuid: 666ccf75-af2f-48af-92e5-f2ffbc8092f8
+      :name: Dark Star Jam
+      :segued: false
     - :uuid: 89764477-17ce-4e3e-adfc-8779d21c059b
       :name: When I Paint My Masterpiece
       :segued: false
@@ -2560,6 +2566,9 @@
     - :uuid: ea519c8b-505a-4fa5-8c81-4c39e3acd46e
       :name: Ship Of Fools
       :segued: false
+    - :uuid: 666ccf75-af2f-48af-92e5-f2ffbc8092f8
+      :name: Dark Star Jam
+      :segued: false
     - :uuid: ec43f16a-9933-4aef-9227-00c3b5c07afc
       :name: Truckin'
       :segued: false
@@ -2568,6 +2577,9 @@
       :segued: false
     - :uuid: e97f02f4-86c0-4225-9a83-ba507bf73ed1
       :name: Uncle John's Band
+      :segued: false
+    - :uuid: 666ccf75-af2f-48af-92e5-f2ffbc8092f8
+      :name: Dark Star Jam
       :segued: false
     - :uuid: 2f7c31fc-3c65-423d-b103-c28fab91d205
       :name: Drums
@@ -2579,7 +2591,7 @@
       :name: China Doll
       :segued: false
     - :uuid: ddcc0b43-00d3-4de1-b159-db5e1b4f3d61
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: e6020876-df3b-4d59-9692-cd4129634abe
       :name: Sugar Magnolia
@@ -2922,7 +2934,7 @@
   - :uuid: 4cf40a62-487f-42bd-a64f-d09430d47817
     :songs:
     - :uuid: 885d94d2-f193-4206-8589-e59097b8045b
-      :name: It's All Over Now
+      :name: It's All Over Now, Baby Blue
       :segued: false
 1991/06/28:
   :uuid: eddae89d-1223-410f-9e05-6f4f1491ebe9
@@ -3249,7 +3261,7 @@
       :name: Space
       :segued: true
     - :uuid: 948a4638-1813-4445-95a7-20e3f3324cf9
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: true
     - :uuid: c6700582-7501-483f-b3ac-18b058ea366b
       :name: Standing On The Moon
@@ -3327,7 +3339,7 @@
   - :uuid: 8da76f94-ce3d-407f-a3e8-fedbf0627aef
     :songs:
     - :uuid: 6bd57b64-3c06-4d09-bef6-44e41223bd4d
-      :name: It's All Over Now
+      :name: It's All Over Now, Baby Blue
       :segued: false
 1991/08/18:
   :uuid: e12ab1ef-360f-46a4-b992-7c21444e2b79
@@ -3596,7 +3608,7 @@
       :name: Space
       :segued: false
     - :uuid: 590922aa-d86c-4f5f-9472-8659a8493977
-      :name: Dark Star
+      :name: Dark Star Jam
       :segued: false
     - :uuid: 273c56fe-0150-4fc1-b19b-bbe877399870
       :name: All Along The Watchtower
@@ -3658,6 +3670,9 @@
       :segued: false
     - :uuid: d22082f8-0fda-4254-84b6-72c84a2d54a3
       :name: Saint Of Circumstance
+      :segued: false
+    - :uuid: d22082f8-0fda-4254-84b6-72c84a2d54a3
+      :name: Dark Star Jam
       :segued: false
     - :uuid: 1f2df398-6235-4f6b-8de8-b41e78bc425e
       :name: Drums
@@ -3724,7 +3739,7 @@
       :name: New Speedway Boogie
       :segued: false
     - :uuid: 9fb2b900-530d-429c-ac62-e475c8569192
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: 810fe387-1625-438c-a0c9-b596181ef415
       :name: Uncle John's Band
@@ -3811,7 +3826,7 @@
   - :uuid: 729d576b-d7a7-4252-abf5-5540fbde0794
     :songs:
     - :uuid: 9d6f2696-0c8d-4358-935d-f9ed1399c0a8
-      :name: It's All Over Now
+      :name: It's All Over Now, Baby Blue
       :segued: false
 1991/09/12:
   :uuid: db9b13b1-ea1d-4344-b62a-13da15f102ff
@@ -4118,7 +4133,7 @@
       :name: Loser
       :segued: false
     - :uuid: 47b010d0-a8fb-4a23-801a-d45ea975e5c8
-      :name: It's All Over Now, Baby Blue
+      :name: It's All Over Now
       :segued: false
     - :uuid: 9c43f04f-fe2c-4104-a4e3-8264d1908696
       :name: Brown Eyed Women
@@ -4353,7 +4368,7 @@
   - :uuid: 10f7fa3a-0623-44bd-a9b2-e44bebe43779
     :songs:
     - :uuid: 51efeb6d-6ee3-4f1f-8ace-3bd8aa18f713
-      :name: It's All Over Now
+      :name: It's All Over Now, Baby Blue
       :segued: false
 1991/09/22:
   :uuid: 3f8ae7b3-68e7-4eb4-85f5-bc23f34788a6
@@ -4444,7 +4459,7 @@
       :name: Althea
       :segued: false
     - :uuid: 6423fb94-6d5e-468c-8ef0-b77134b82f71
-      :name: It's All Over Now, Baby Blue
+      :name: It's All Over Now
       :segued: false
     - :uuid: 5270b9c9-282f-4dcd-b2d5-2ea096ea501e
       :name: High Time
@@ -4561,7 +4576,7 @@
       :name: That Would Be Something
       :segued: true
     - :uuid: c4fa8f6c-0f21-4e53-873c-b82effbc4754
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: true
     - :uuid: 72fa3ced-15b1-4660-aad2-bf75a9bc4f35
       :name: China Doll
@@ -4680,6 +4695,8 @@
     - :uuid: 206e8be3-c1c3-44b1-8738-bbe7d32cdf3b
       :name: Touch Of Grey
       :segued: false
+  - :uuid: 6e660c6a-4378-43e2-854c-085f5965965b
+    :songs:
     - :uuid: b47c0802-56fc-4a28-8c87-a759c58bf407
       :name: China Cat Sunflower
       :segued: false
@@ -4695,11 +4712,6 @@
     - :uuid: 1c6919d1-f1f8-4023-bf18-fa1613e0a0dc
       :name: Iko Iko
       :segued: false
-    - :uuid: 2a1a0886-7263-4fca-b7c6-a619bd76e50d
-      :name: Hey Bo Diddley
-      :segued: false
-  - :uuid: 5199d03c-31f9-4bef-a40d-437219a2bef5
-    :songs:
     - :uuid: 5734466a-01a7-41c3-893e-98ae9b6e8325
       :name: Mona
       :segued: false
@@ -4812,7 +4824,7 @@
       :name: Brown Eyed Women
       :segued: false
     - :uuid: e842a7e4-0154-4a77-8cfc-58bd831019b9
-      :name: It's All Over Now, Baby Blue
+      :name: It's All Over Now
       :segued: false
     - :uuid: 29ed0e1f-23f6-45f2-9924-f8f6baff3cef
       :name: Tennessee Jed
@@ -5048,7 +5060,7 @@
   - :uuid: 862fb879-faf1-4a69-83bf-0c79d25b08ee
     :songs:
     - :uuid: 7bdafc0d-58ba-4d3a-83df-b64dba645783
-      :name: It's All Over Now
+      :name: It's All Over Now, Baby Blue
       :segued: false
 1991/12/28:
   :uuid: 2232991d-78f4-4bc9-aa3b-85b8864956ab
@@ -5178,9 +5190,6 @@
       :segued: false
     - :uuid: 15a31936-7fa4-4d8a-a85b-78519dd5ef15
       :name: Saint Of Circumstance
-      :segued: true
-    - :uuid: 1bf54067-a51c-4cad-b8cc-1476e6e83a1b
-      :name: Dear Prudence Jam
       :segued: true
     - :uuid: ced6fcfe-1f49-4c61-957f-539b076989a2
       :name: Drums

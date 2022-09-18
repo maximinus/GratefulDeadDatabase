@@ -46,6 +46,10 @@ class GdShow:
         self.country = details[':country']
         self.sets = self.get_sets(details[':sets'])
 
+    @property
+    def full_location(self):
+        return f'{self.venue_name}, {self.city}, {self.state}'
+
     def convert_date(self, given_date):
         date_info = [int(x) for x in given_date.split('/')]
         # now as array we have YYYY, MM, DD

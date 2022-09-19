@@ -58,6 +58,9 @@
     - :uuid: 801053be-d693-4baa-9e76-794075171d5d
       :name: Drums
       :segued: true
+    - :uuid: 2e2397f5-39f2-4af5-a497-3638dd3da7f1
+      :name: Let It Grow
+      :segued: true
     - :uuid: 3bf088ed-de22-447d-b511-8dfc87f777ff
       :name: It Must Have Been The Roses
       :segued: false
@@ -222,6 +225,9 @@
     - :uuid: 1fa20b29-8de5-4f80-b248-42529b29e521
       :name: Drums
       :segued: true
+    - :uuid: 22e478c9-c8db-440d-b0bf-99f410a098b2
+      :name: Let It Grow
+      :segued: false
     - :uuid: 1960e6cf-b6be-4cf7-a104-b670a89c4a6f
       :name: Brown Eyed Women
       :segued: false
@@ -318,9 +324,12 @@
       :segued: false
     - :uuid: 3da73802-5c85-4eb6-83f4-f1c7107ad5d7
       :name: Let It Grow
-      :segued: false
+      :segued: true
     - :uuid: 9b8d0d66-fead-42f3-baa5-06acdca81161
       :name: Drums
+      :segued: true
+    - :uuid: 3da73802-5c85-4eb6-83f4-f1c7107ad5d7
+      :name: Let It Grow
       :segued: false
     - :uuid: 370f8643-197e-44ef-8d81-1870bce3b885
       :name: Friend Of The Devil
@@ -477,9 +486,12 @@
       :segued: false
     - :uuid: aadb5e56-5e62-4fda-b3a6-be8da09e87a9
       :name: Let It Grow
-      :segued: false
+      :segued: true
     - :uuid: 6b3a4af8-2e29-4c01-a61b-940e32675fdd
       :name: Drums
+      :segued: true
+    - :uuid: aadb5e56-5e62-4fda-b3a6-be8da09e87a9
+      :name: Let It Grow
       :segued: false
     - :uuid: 99de7e09-5f87-40ed-a26a-b4c9d959c047
       :name: Wharf Rat
@@ -633,6 +645,9 @@
     - :uuid: 4105276e-adb6-4a70-aacc-72340e1698c3
       :name: Not Fade Away
       :segued: true
+    - :uuid: 4105276e-adb6-4a70-aacc-72340e1698c3
+      :name: Drums
+      :segued: true
     - :uuid: 69ad6262-54eb-4ad2-b8b6-76515e8caa46
       :name: Stella Blue
       :segued: false
@@ -692,6 +707,12 @@
     - :uuid: f1fb115b-3894-4223-9d26-da216d408aaa
       :name: Row Jimmy
       :segued: false
+    - :uuid: f1fb115b-3894-4223-9d26-da216d408aaa
+      :name: The Music Never Stopped
+      :segued: false
+    - :uuid: f1fb115b-3894-4223-9d26-da216d408aaa
+      :name: Scarlet Begonias
+      :segued: false
     - :uuid: 26be9727-7ee2-4c30-84d6-1ad795ab90da
       :name: The Promised Land
       :segued: false
@@ -711,6 +732,9 @@
       :segued: false
     - :uuid: 412b5be8-ab0e-41b7-801b-717f9fbd6cec
       :name: Samson And Delilah
+      :segued: false
+    - :uuid: 412b5be8-ab0e-41b7-801b-717f9fbd6cec
+      :name: Ship Of Fools
       :segued: false
     - :uuid: 055b5593-adda-4a76-b1cc-ea332aa3f324
       :name: Lazy Lightnin'
@@ -953,9 +977,7 @@
     - :uuid: 77301fc2-264f-4884-bec9-778d3c680d29
       :name: Franklin's Tower
       :segued: false
-    - :uuid: f296234e-d522-4be2-8077-d841dd411a70
-      :name: It Must Have Been The Roses
-      :segued: false
+
     - :uuid: 180fbe4d-8c60-4c41-b781-f7d6f09fa5b0
       :name: Dancing In The Street
       :segued: false
@@ -965,9 +987,9 @@
     - :uuid: f7ba3bf1-f56b-4972-a904-d558b232f53d
       :name: Around And Around
       :segued: false
-    - :uuid: 7d513f74-9076-45ac-80d9-b4695668b3d0
+    - :uuid: f296234e-d522-4be2-8077-d841dd411a70
       :name: It Must Have Been The Roses
-      :segued: false    
+      :segued: false
   - :uuid: c51ff143-cbe5-49bb-87cc-c74ec7c0fc00
     :songs:
     - :uuid: 2e12d81a-2557-4404-8fcf-8ed8e95e7dbd
@@ -1392,10 +1414,13 @@
       :name: Eyes Of The World
       :segued: true
     - :uuid: 92cc4bca-8752-4ef0-a4c4-a4e3c8fbd981
-      :name: Drums
+      :name: Happiness Is Drumming
       :segued: false
     - :uuid: e8593605-089b-424b-8672-d1b134d59c0f
       :name: Wharf Rat
+      :segued: true
+    - :uuid: e8593605-089b-424b-8672-d1b134d59c0f
+      :name: Drums
       :segued: true
     - :uuid: 688ad9c0-0b94-48db-a547-4b80d0e2dc7f
       :name: Dancing In The Street
@@ -2279,10 +2304,16 @@
       :segued: false
     - :uuid: 02053831-4062-40d4-b8a4-52e010bc215a
       :name: Help On The Way
-      :segued: false
+      :segued: true
     - :uuid: b9804e73-15f6-4d95-8ff5-f325fa5f1bc9
       :name: Slipknot!
-      :segued: false
+      :segued: true
+    - :uuid: b9804e73-15f6-4d95-8ff5-f325fa5f1bc9
+      :name: Drums
+      :segued: true
+    - :uuid: b9804e73-15f6-4d95-8ff5-f325fa5f1bc9
+      :name: Slipknot!
+      :segued: true
     - :uuid: d4ed8eb8-874e-4c7d-8150-738202927f6b
       :name: Franklin's Tower
       :segued: false
@@ -2586,9 +2617,6 @@
     - :uuid: a1a2e886-0bb4-4649-aa5f-d531bcebb6cc
       :name: Saint Stephen
       :segued: true
-    - :uuid: 20509e69-1d60-4b39-80d4-08127f53aa63
-      :name: Jam
-      :segued: false
     - :uuid: 0a787507-c18f-420c-a7e7-462a74991d7e
       :name: Not Fade Away
       :segued: true
@@ -2815,6 +2843,9 @@
     - :uuid: 915d74f7-9019-4563-9006-246a7dfb6f16
       :name: Playing In The Band
       :segued: true
+    - :uuid: 915d74f7-9019-4563-9006-246a7dfb6f16
+      :name: Drums
+      :segued: true
     - :uuid: a7bfc84e-7cf9-47ec-8d34-228f634ccd18
       :name: The Wheel
       :segued: true
@@ -2976,7 +3007,13 @@
       :segued: false
     - :uuid: 00ab31d0-c53f-401c-a2f8-a270ef23d1d7
       :name: The Wheel
-      :segued: false
+      :segued: true
+    - :uuid: 00ab31d0-c53f-401c-a2f8-a270ef23d1d7
+      :name: Space
+      :segued: true
+    - :uuid: 00ab31d0-c53f-401c-a2f8-a270ef23d1d7
+      :name: Drums
+      :segued: true
     - :uuid: 4d0b66bf-8c51-40ec-8515-dd87fe8a1d16
       :name: The Other One
       :segued: false
@@ -3207,6 +3244,9 @@
       :segued: true
     - :uuid: 7f7bc8e7-cfa4-40b9-a1ea-f30abf3a4928
       :name: Slipknot!
+      :segued: true
+    - :uuid: e24ad017-6a07-41bf-8960-6bfe1a5f8280
+      :name: Drums
       :segued: true
     - :uuid: e24ad017-6a07-41bf-8960-6bfe1a5f8280
       :name: Not Fade Away

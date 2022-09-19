@@ -264,13 +264,20 @@ def output_json_venues(final_yml):
 
 if __name__ == '__main__':
     matched_shows = []
-    # years = [1977, 1978, 1979, 1980, 1991, 1992, 1993, 1994, 1995]
-    years = [1977, 1978]
+    # years = [x+1900 for x in [77, 78, 79, 80, 91, 92, 93, 94, 95]]
+    years = [1990]
     for i in years:
         matched_shows.extend(compare_shows(i))
 
     # WRITE THE RESULTS TO THE YAML
     # The DB will come after the yaml is complete
+
+    # THE WHOLE POINT OF USING THE DATABASE
+    # is so that we don't need to faff with all this data stuff
+    # So once the set-lists are in:
+    #   A: Put in a DB
+    #   B: Export to and from some text format
+    #   C: Work out how to migrate as simply as possible
 
     # can also .print() all of these
     # Note matched_shows[0][1] is a CompleteShow object (from cvs)
@@ -283,5 +290,4 @@ if __name__ == '__main__':
 
     # The output is a list of GDShow objects
     print(f'Total shows: {len(final_yml)}')
-
-    output_json_venues(final_yml)
+    #output_json_venues(final_yml)

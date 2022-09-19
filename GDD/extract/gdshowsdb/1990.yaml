@@ -165,6 +165,9 @@
   - :uuid: c8eecbc1-0342-4786-abfe-d4302171eb48
     :songs:
     - :uuid: 383e63a2-ec35-4a02-823b-2ffffeb54f89
+      :name: Drums
+      :segued: false
+    - :uuid: 383e63a2-ec35-4a02-823b-2ffffeb54f89
       :name: Iko Iko
       :segued: false
     - :uuid: 9d342732-310e-42ae-9712-4d7eb4f0bd89
@@ -181,6 +184,9 @@
       :segued: false
     - :uuid: c4225168-fe85-43cb-90cb-a9c35a31ea07
       :name: Drums
+      :segued: false
+    - :uuid: c4225168-fe85-43cb-90cb-a9c35a31ea07
+      :name: Space
       :segued: false
     - :uuid: e61788f7-0871-4981-adc4-81894936fb00
       :name: The Other One
@@ -245,9 +251,6 @@
       :segued: true
     - :uuid: d23f9f9d-bdc7-4ce5-9ab0-e73306576d84
       :name: Uncle John's Band
-      :segued: true
-    - :uuid: f2642e19-82b6-4db7-a739-04c436540a0b
-      :name: Jam
       :segued: true
     - :uuid: 4bd8336f-a62a-46ab-a4f8-04e45ae192a7
       :name: Drums
@@ -532,9 +535,6 @@
     - :uuid: 922ffe85-11db-4274-9eb6-7d6ea0c673a1
       :name: Playing In The Band
       :segued: false
-    - :uuid: 0dd311c4-a503-4fc8-854a-7b697b801ce5
-      :name: Jam
-      :segued: false
     - :uuid: 5dd384d6-5460-4c1b-9540-051f7c336585
       :name: Eyes Of The World
       :segued: false
@@ -694,7 +694,7 @@
       :name: Dear Mr. Fantasy
       :segued: true
     - :uuid: e0c7ae2d-b0b4-4b98-b3e2-b898d182a16e
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: true
     - :uuid: a14a3b9a-6bec-49e8-8483-bb7209ec7ad6
       :name: Sugar Magnolia
@@ -714,7 +714,7 @@
   - :uuid: 0eecaf59-87b7-43d9-b437-4f51c737f451
     :songs:
     - :uuid: bfcf3ac4-2a22-41a9-8bc1-8485d787fad9
-      :name: Never Trust A Woman
+      :name: Let The Good Times Roll
       :segued: false
     - :uuid: d9334664-86da-41ef-b9d1-1a60e10f5191
       :name: Help On The Way
@@ -750,6 +750,9 @@
       :segued: false
     - :uuid: c7785fe3-8385-45d4-bd52-883bbadd5425
       :name: Terrapin Station
+      :segued: false
+    - :uuid: c7785fe3-8385-45d4-bd52-883bbadd5425
+      :name: Mind Left Body Jam
       :segued: false
     - :uuid: 4b4d9f7d-ad8e-4e6c-9672-225361662c63
       :name: Drums
@@ -1172,7 +1175,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 6b183bd3-7da7-4576-aff9-6519c2211a27
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: bb7b0ece-ee0d-4839-b255-c17446af69d4
       :name: Truckin'
@@ -1335,7 +1338,7 @@
   - :uuid: 2809d7c2-780f-4d22-ac70-4e321d11d209
     :songs:
     - :uuid: c2ca09ef-ad04-45be-ba33-e6be4f324e3b
-      :name: Never Trust A Woman
+      :name: Let The Good Times Roll
       :segued: false
     - :uuid: 23ea4aac-0ff0-44de-bda7-01162a216d20
       :name: The Race Is On
@@ -1601,7 +1604,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 7169ca1f-9357-4e9f-b832-e09f3b9943a8
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 25be1968-5a5c-4260-a648-425d04e6ad42
       :name: All Along The Watchtower
@@ -2383,7 +2386,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: a26ba0de-cd40-4b34-9106-5952364b7c7a
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: e258db27-abb1-4288-b44a-b86e2df41856
       :name: Touch Of Grey
@@ -3297,14 +3300,17 @@
     - :uuid: 77d199bd-09a9-4641-95ef-eca07ca9010b
       :name: He's Gone
       :segued: false
-    - :uuid: 476e5925-19f0-452e-b0ab-cd73cfa386ae
-      :name: Jam
-      :segued: false
     - :uuid: dd1d05a5-4f89-40ce-a706-0551e2ec58f2
       :name: Drums
       :segued: false
+    - :uuid: dd1d05a5-4f89-40ce-a706-0551e2ec58f2
+      :name: Space
+      :segued: false
     - :uuid: cd7a64d1-7720-4b9e-bea1-ed96171d1358
       :name: Standing On The Moon
+      :segued: false
+    - :uuid: dd1d05a5-4f89-40ce-a706-0551e2ec58f2
+      :name: Space
       :segued: false
     - :uuid: 38875710-585b-4fa3-b1da-ba095fbb6a1b
       :name: I Need A Miracle
@@ -3499,7 +3505,7 @@
       :name: Dark Star
       :segued: false
     - :uuid: d3061827-e5c3-4353-a6b1-e89459419bbc
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: a91c5f60-08e3-4e52-bf67-50f0274e3e56
       :name: Dark Star
@@ -4033,6 +4039,9 @@
     - :uuid: 009c9a3c-4829-41df-8bfe-4623130a72fe
       :name: Wang Dang Doodle
       :segued: false
+    - :uuid: 009c9a3c-4829-41df-8bfe-4623130a72fe
+      :name: Brown Eyed Women
+      :segued: false
     - :uuid: 55ec38a4-9425-4c32-867b-bcec388995ef
       :name: Queen Jane Approximately
       :segued: false
@@ -4498,7 +4507,7 @@
       :name: The Wheel
       :segued: true
     - :uuid: db6da0b4-8cbc-437d-85de-9a17a4777c51
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: true
     - :uuid: b563fe03-0b92-450c-b570-c37f3d7b6a5d
       :name: Goin' Down The Road Feeling Bad

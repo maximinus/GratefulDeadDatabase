@@ -5,12 +5,12 @@ Database and more for Grateful Dead shows
 At the moment there are several parts to this in development.
 
 GDD is a project to build a database of the Grateful Dead, giving:
-	* All shows and setlists
-	* Timings for all recorded songs
-	* A BPM measure for all songs
-	* A list of venues played at, with details and co-ordinates
-	* Weather information for every show
-	* A way of exploring this data
+  * All shows and setlists
+  * Timings for all recorded songs
+  * A BPM measure for all songs
+  * A list of venues played at, with details and co-ordinates
+  * Weather information for every show
+  * A way of exploring this data
 
 Data for the setlists was mined and scraped from many (archive.org, gdshowsdb, jerrybase.com, www.cs.cmu.edu setlists, setlist.fm) internet sources, merged and then individual errors were checked against the music.
 Timing data and BPM were done by the author.

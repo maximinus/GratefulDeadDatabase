@@ -2,8 +2,6 @@ import json
 import geopandas as gpd
 from shapely.geometry import Point, LineString
 import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
-from matplotlib.text import Text
 
 from gdshowsdb_yaml_extract import extract_year
 
@@ -99,7 +97,7 @@ def render_map(venues):
     usa_map.boundary.plot(ax=ax, alpha=0.4, color='black', linewidth=0.2, zorder=3)
 
     # draw the lines
-    geo_df.plot(ax=ax, legend=False, linewidth=2.0, zorder=4, color='blue')
+    geo_df.plot(ax=ax, legend=True, linewidth=2.0, zorder=4, color='blue')
 
     for i in geo_points:
         ng_data = {'geometry': i[1]}
@@ -123,11 +121,6 @@ def render_map(venues):
     ymin = min([x.lat for x in venues])
     ymax = max([x.lat for x in venues])
     d = scale_rect(xmin, xmax, ymin, ymax, 1.12)
-
-    custom_data = [Line2D([0], [0], marker='o', color='w', label='Boston Gardens\n14-05-77', markerfacecolor='g', markersize=15),
-                   Line2D([0], [0], marker='o', color='w', label='Barton Hall\n9-05-77', markerfacecolor='g', markersize=15),
-                   Line2D([0], [0], marker='o', color='w', label='Arizona Uni\n6-05-77', markerfacecolor='g', markersize=15)]
-    ax.legend(loc='lower left', fontsize=10, frameon=True, handles=custom_data)
 
     plt.xlim(d[0], d[1])
     plt.ylim(d[2], d[3])

@@ -40,9 +40,6 @@
     - :uuid: 58893c99-5501-4d15-8ed1-9ddf04397eba
       :name: Gimme Some Lovin'
       :segued: false
-    - :uuid: 72421f99-3b22-418e-94cf-8481b04a484d
-      :name: Jam
-      :segued: false
     - :uuid: 40014775-b9a6-40df-8f5d-0f8d47201cd8
       :name: Drums
       :segued: false
@@ -157,6 +154,9 @@
   - :uuid: e679d935-c9f5-48e2-9ad1-8a18e50d00fd
     :songs:
     - :uuid: 8e2eaad0-0460-46fe-b458-29b033dfd341
+      :name: Drums
+      :segued: true
+    - :uuid: 8e2eaad0-0460-46fe-b458-29b033dfd341
       :name: Iko Iko
       :segued: false
     - :uuid: f86ffe95-8e5a-49fe-8319-b9b4061cf1fc
@@ -167,6 +167,9 @@
       :segued: false
     - :uuid: 50912856-5154-403b-9ec0-b16d4cd1c94b
       :name: Drums
+      :segued: false
+    - :uuid: 50912856-5154-403b-9ec0-b16d4cd1c94b
+      :name: Space
       :segued: false
     - :uuid: c1077bd4-0a1e-43ef-88ff-d936ce74df06
       :name: The Wheel
@@ -376,7 +379,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 1a9a2c39-7c1f-471b-a90a-bc970a02e0ef
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
   - :uuid: 725acc44-33a2-4243-b1d9-9cb89efd2612
     :songs:
@@ -622,6 +625,12 @@
       :segued: false
   - :uuid: 5a964ece-dabf-4636-812f-b505ddaee0c7
     :songs:
+    - :uuid: 8e6042ea-52e7-4b2a-b724-05b71e9b4273
+      :name: Space
+      :segued: true
+    - :uuid: 8e6042ea-52e7-4b2a-b724-05b71e9b4273
+      :name: So What Jam
+      :segued: true
     - :uuid: 97f79e12-1b83-4d3a-9c7a-2c75625f3a71
       :name: Sugar Magnolia
       :segued: true
@@ -863,7 +872,7 @@
       :name: Dear Mr. Fantasy
       :segued: true
     - :uuid: a7516982-b224-413d-8f23-ba82dfde71e2
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: true
     - :uuid: 8429f78d-1408-4ad1-888d-2b4a7517cd73
       :name: All Along The Watchtower
@@ -1067,7 +1076,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 6691bc51-468b-42cb-8cdd-ff8cf9304126
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
   - :uuid: cc7e4762-6ec2-4ce1-880c-c6cf46ace793
     :songs:
@@ -1338,7 +1347,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 6cdd5665-44ef-4070-ab24-0491de398e78
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 97b45836-fe82-4127-823a-e3cb031228f3
       :name: Throwing Stones
@@ -1615,7 +1624,7 @@
       :name: Dear Mr. Fantasy
       :segued: true
     - :uuid: 52cc014a-f18f-42dd-afee-74a5e27ac83c
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: true
     - :uuid: 3fbf181f-a27b-4890-b585-ab99dfe8dbb8
       :name: Turn On Your Lovelight
@@ -1717,7 +1726,7 @@
       :name: West L.A. Fadeaway
       :segued: false
     - :uuid: 262ea5bf-dac2-463d-a095-42e0b122637c
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: 350827f5-d677-45f8-935e-2f21383134e0
       :name: Me And My Uncle
@@ -1758,7 +1767,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: afe5f3d5-2499-42a7-99a8-6480bb5291d7
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: f3edcbec-38d4-44e2-87ee-56a8b01720f4
       :name: Stella Blue
@@ -2389,7 +2398,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 05868796-2e4c-40bf-8a8f-eabb6f3876ab
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: b8e39bfe-57f0-4474-9867-1fd8fe39b1ec
       :name: Black Peter
@@ -2513,6 +2522,9 @@
       :segued: false
   - :uuid: 4bb40d35-f81e-457c-9d20-7991d74d128b
     :songs:
+    - :uuid: 329ba8dd-48aa-4b4d-a68d-91ac73aa4349
+      :name: Green Onions
+      :segued: false
     - :uuid: 329ba8dd-48aa-4b4d-a68d-91ac73aa4349
       :name: China Cat Sunflower
       :segued: false
@@ -2681,7 +2693,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: d49a25ff-ae0b-435c-9987-08d94882a6be
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
   - :uuid: 3ef5b84c-cb5d-4a3a-a70f-e65a4175247f
     :songs:
@@ -2714,9 +2726,6 @@
       :segued: false
     - :uuid: f3d8042d-6e80-402b-bfd2-2d1d9e410049
       :name: Never Trust A Woman
-      :segued: false
-    - :uuid: d65f3462-6cc2-4e58-8242-4e366754c82d
-      :name: Turn On Your Lovelight
       :segued: false
     - :uuid: 0386b982-76fb-4afd-8204-b5d7afbfbf74
       :name: Cassidy
@@ -3438,8 +3447,14 @@
     - :uuid: ab0a4e8c-18d9-4b7e-963c-fc47f0995f03
       :name: Uncle John's Band
       :segued: false
+    - :uuid: 8ad6902e-9549-4149-adc1-248990d4ae04
+      :name: Playing In The Band Reprise
+      :segued: false
     - :uuid: fa7fe675-ed75-4116-aa70-0adc5cdad8ac
       :name: Drums
+      :segued: false
+    - :uuid: 8ad6902e-9549-4149-adc1-248990d4ae04
+      :name: Space
       :segued: false
     - :uuid: 078f7d83-0167-4eed-9d57-f9d8dd4038a4
       :name: Gimme Some Lovin'
@@ -3585,7 +3600,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 20233574-93a8-4f4a-8c46-d366cf24f878
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: ce874113-b545-47d2-ad80-4d763cba1e0f
       :name: Turn On Your Lovelight
@@ -3613,14 +3628,14 @@
     - :uuid: 7e3ed430-1640-49d6-aeaf-0218185c2ebb
       :name: New Minglewood Blues
       :segued: false
+    - :uuid: 4f27e0cd-f04a-4cdb-b63c-3e3df88d9ccd
+      :name: Brown Eyed Women
+      :segued: false
     - :uuid: 7b41ad16-7b67-4ced-9d88-45ec7e00723b
       :name: Me And My Uncle
       :segued: false
     - :uuid: ca906c28-b6fe-4ca8-b93f-61347d07de5f
       :name: Big River
-      :segued: false
-    - :uuid: 4f27e0cd-f04a-4cdb-b63c-3e3df88d9ccd
-      :name: Brown Eyed Women
       :segued: false
     - :uuid: d99c8b91-2405-49be-b5a5-3ff193a0ac1b
       :name: Candyman
@@ -3686,14 +3701,14 @@
     - :uuid: ddde0486-4600-4733-8a8d-fb1510463b61
       :name: Little Red Rooster
       :segued: false
+    - :uuid: 5d28c5df-0870-4c42-b764-d8b4b009a4c0
+      :name: Peggy O
+      :segued: false
     - :uuid: 7bcc9501-917f-4917-a1bd-b2e05f5f95df
       :name: Stuck Inside A Mobile With The Memphis Blues Again
       :segued: false
     - :uuid: 63a6579a-cf60-400a-884b-b6b686ec5bbd
       :name: Tennessee Jed
-      :segued: false
-    - :uuid: 5d28c5df-0870-4c42-b764-d8b4b009a4c0
-      :name: Peggy O
       :segued: false
     - :uuid: aed2f579-afe5-4235-b916-b7f9b394e740
       :name: The Promised Land
@@ -3999,7 +4014,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 165460a1-6779-4c45-9f39-cc53e3e075f8
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 0ad5307c-0d6b-43f0-9117-9317463823f7
       :name: Sugar Magnolia
@@ -4267,7 +4282,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 4b6a4e84-543d-41d5-b476-9ba96849b30d
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 6b81c073-2806-42a9-a6ff-887883113160
       :name: Turn On Your Lovelight
@@ -4584,7 +4599,7 @@
       :name: Samson And Delilah
       :segued: false
     - :uuid: dd5f8fcb-da72-4a0e-8cf5-24033854651e
-      :name: Jam
+      :name: Space
       :segued: false
     - :uuid: 6c3e7636-3d43-44ff-af41-58eff34c5104
       :name: Estimated Prophet
@@ -4672,7 +4687,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 12feec6c-cd33-48de-8438-f74a065607fe
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
   - :uuid: 699b794f-d9fb-4690-8cdb-c95edf960254
     :songs:
@@ -4952,7 +4967,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: d645dfc2-fdba-42f7-ad81-7e9207f9ad3a
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 141b4708-7004-4c46-aa04-64218c830a6e
       :name: Turn On Your Lovelight
@@ -5220,7 +5235,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 566e7b67-8042-4456-8597-cd424ef56642
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 52a36297-7c9f-412d-8826-a10c9cf9f618
       :name: Black Muddy River

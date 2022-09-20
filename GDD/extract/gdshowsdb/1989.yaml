@@ -176,6 +176,9 @@
   - :uuid: 587d3a2c-20b3-49c6-936f-04311d3b4c16
     :songs:
     - :uuid: f2a83e9a-ddb6-4c3e-86db-8f5f8c3e3383
+      :name: Drums
+      :segued: false
+    - :uuid: f2a83e9a-ddb6-4c3e-86db-8f5f8c3e3383
       :name: Iko Iko
       :segued: false
     - :uuid: e0474f3c-4ddd-43a2-ab6d-93a5be56797e
@@ -189,6 +192,9 @@
       :segued: false
     - :uuid: ebaf58b1-f33d-4dd0-a6e2-a854bb97b346
       :name: Drums
+      :segued: false
+    - :uuid: ebaf58b1-f33d-4dd0-a6e2-a854bb97b346
+      :name: Space
       :segued: false
     - :uuid: 954076f6-8ecd-48fa-afac-182c990186f8
       :name: The Wheel
@@ -250,9 +256,6 @@
       :segued: false
     - :uuid: f8f96258-1636-4664-8273-e730afe096cb
       :name: Playing In The Band
-      :segued: false
-    - :uuid: 481fe085-9194-4f37-ac06-dd98a09b314a
-      :name: Jam
       :segued: false
     - :uuid: 6ab8522f-9e78-44e4-9f3b-5d1d570d57ef
       :name: Drums
@@ -742,7 +745,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 9a345794-d5e9-4392-afec-b92a87dc9edd
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 36f4b00e-ff09-40c8-9bed-c939a7e86adf
       :name: Around And Around
@@ -1031,7 +1034,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: ecf5b14b-bf58-4098-8033-6ab3b79181c3
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: e87f232f-1ae9-426f-a7c7-6c2913d4a245
       :name: I Need A Miracle
@@ -1308,7 +1311,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: b1179f51-62a0-4f82-b6b8-133f90f9b48c
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: b92e9276-749d-44e7-a6c3-43ab9e039363
       :name: Goin' Down The Road Feeling Bad
@@ -1610,14 +1613,17 @@
     - :uuid: aea22ba3-5a41-4e7e-8a99-5c757ca9781b
       :name: Brown Eyed Women
       :segued: false
-    - :uuid: 6fae8c84-6c93-4842-9e44-d7799ddcd0fd
-      :name: Blow Away
+    - :uuid: aea22ba3-5a41-4e7e-8a99-5c757ca9781b
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: 55278b5e-4be9-47c2-a414-0eead0362079
       :name: Stuck Inside A Mobile With The Memphis Blues Again
       :segued: false
     - :uuid: df8db82f-d884-4600-8072-337b9a7cc16f
       :name: Built To Last
+      :segued: false
+    - :uuid: 6fae8c84-6c93-4842-9e44-d7799ddcd0fd
+      :name: Blow Away
       :segued: false
     - :uuid: e44d84f8-3e03-4052-b84d-3ce735a0770b
       :name: One More Saturday Night
@@ -2170,7 +2176,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: adc59020-7bc7-42cd-9f85-16c7be60e0c0
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 74efbf8b-2ce4-4f81-934a-aadac2eaf11b
       :name: Sugar Magnolia
@@ -2228,7 +2234,7 @@
       :name: Ship Of Fools
       :segued: false
     - :uuid: e74fd291-719e-43cb-8f29-5969afe0b23e
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: 98a61f95-b359-45df-a8a7-e82a66a88c28
       :name: Terrapin Station
@@ -2800,7 +2806,7 @@
       :name: Dear Mr. Fantasy
       :segued: true
     - :uuid: 08cdc140-c1f0-4800-8221-1ec8dc7b384a
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 905a6042-daf1-4262-bb58-aa0d085c841d
       :name: Throwing Stones
@@ -3321,11 +3327,11 @@
     - :uuid: ecb994ba-1f25-4f71-b7d2-2ffd418c41f6
       :name: Jack A Roe
       :segued: false
-    - :uuid: 51cf96b6-7935-431a-8d5b-5daec6737b38
-      :name: We Can Run
-      :segued: false
     - :uuid: ece59028-dc92-4708-8702-2da5150a3da3
       :name: Stuck Inside A Mobile With The Memphis Blues Again
+      :segued: false
+    - :uuid: 51cf96b6-7935-431a-8d5b-5daec6737b38
+      :name: We Can Run
       :segued: false
     - :uuid: 9967d20b-72d1-44f4-a9e1-dad5922f0714
       :name: Bird Song
@@ -3349,10 +3355,13 @@
       :segued: false
     - :uuid: 811f0315-b97f-4e3e-93fc-49824a032a85
       :name: Terrapin Station
-      :segued: false
+      :segued: true
     - :uuid: 9ba8d0e9-30b5-41c4-9ad3-dcc54d3d8765
       :name: Drums
-      :segued: false
+      :segued: true
+    - :uuid: 9ba8d0e9-30b5-41c4-9ad3-dcc54d3d8765
+      :name: Space
+      :segued: true
     - :uuid: d59cad22-8813-4ef4-90bd-3aa606f0e104
       :name: I Need A Miracle
       :segued: false
@@ -3628,7 +3637,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 8b2ece37-626c-4428-bcec-aa8871130923
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 479b460d-993e-4e45-903e-fd3c104f5f5d
       :name: Throwing Stones
@@ -3940,19 +3949,19 @@
     :songs:
     - :uuid: 04036e35-ac5d-4019-bc4c-d068d033a989
       :name: Dark Star
-      :segued: false
+      :segued: true
     - :uuid: fb161c2d-450e-4017-974d-30d8d462b163
       :name: Playing In The Band
-      :segued: false
+      :segued: true
     - :uuid: 2b468e25-1893-459a-853d-d058e3925dbe
       :name: Uncle John's Band
-      :segued: false
-    - :uuid: b34045d5-556d-4772-82cc-f5485c42603d
-      :name: Playing In The Band
-      :segued: false
+      :segued: true
     - :uuid: 497e1a41-bca1-462f-8747-4893842da005
       :name: Drums
-      :segued: false
+      :segued: true
+    - :uuid: 497e1a41-bca1-462f-8747-4893842da005
+      :name: Space
+      :segued: true
     - :uuid: 27f3d224-d864-4912-8743-bedcffb9600c
       :name: I Will Take You Home
       :segued: false
@@ -4103,7 +4112,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: bb066078-ec3f-47c8-bab7-5cf5c6b07a84
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 049cdb90-4c76-4640-ae01-ad197c9391ca
       :name: Death Don't Have No Mercy
@@ -4170,7 +4179,7 @@
       :name: Truckin'
       :segued: true
     - :uuid: 86f93cfc-cf60-41c2-a7c8-111e24e3ca54
-      :name: The Other One
+      :name: The Other One Jam
       :segued: true
     - :uuid: 9a44ede2-f31a-4640-9b2c-ca959466c1d5
       :name: Drums
@@ -4513,9 +4522,6 @@
     - :uuid: ccc26a48-fa4c-441d-9afd-ef80ea4577ac
       :name: Terrapin Station
       :segued: true
-    - :uuid: 57d4a854-bc55-4e09-9f6c-dbc09107f915
-      :name: Jam
-      :segued: true
     - :uuid: 5ab54960-a312-4633-b233-6ac828c01ca7
       :name: Drums
       :segued: true
@@ -4663,7 +4669,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: d4df90a4-e4d4-4162-96de-f6ca7a6ad540
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: b70325da-eef4-4584-970c-d2f2546e1a26
       :name: Turn On Your Lovelight
@@ -4989,7 +4995,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 86081154-266d-4311-a9d2-0c08c536f8ba
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: f3e6ad16-430d-4166-955c-84c5610b5c7f
       :name: Goin' Down The Road Feeling Bad

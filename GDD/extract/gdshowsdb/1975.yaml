@@ -137,7 +137,7 @@
       :name: Drums
       :segued: true
     - :uuid: 9c721311-c150-4a24-8a7b-741cc51c2c95
-      :name: The Other One
+      :name: The Other One Jam
       :segued: false
     - :uuid: cfa668b1-510f-4d7c-a041-774e6df9a9bb
       :name: Sage And Spirit
@@ -186,9 +186,6 @@
       :segued: false
     - :uuid: 01a5be63-1605-4f45-82bc-5c71bcdf57b1
       :name: Truckin'
-      :segued: true
-    - :uuid: 53397141-0df7-42c3-9f92-391984e43f79
-      :name: The Eleven
       :segued: true
     - :uuid: bbb60a49-9707-45e9-9bd3-2a1edbf533ac
       :name: Drums

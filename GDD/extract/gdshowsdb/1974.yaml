@@ -426,10 +426,23 @@
       :name: The Promised Land
       :segued: false
     - :uuid: bb7e86a6-4ff6-4df6-bd17-e5affc7fa12e
+      :name: Sugaree
+      :segued: false
+    - :uuid: bb7e86a6-4ff6-4df6-bd17-e5affc7fa12e
+      :name: Mexicali Blues
+      :segued: false
+    - :uuid: bb7e86a6-4ff6-4df6-bd17-e5affc7fa12e
       :name: Tennessee Jed
       :segued: false
-  - :uuid: d6d8cd20-4094-4e68-80ca-98e4d22977a2
-    :songs:
+    - :uuid: bb7e86a6-4ff6-4df6-bd17-e5affc7fa12e
+      :name: Jack Straw
+      :segued: false
+    - :uuid: bb7e86a6-4ff6-4df6-bd17-e5affc7fa12e
+      :name: Brown Eyed Women
+      :segued: false
+    - :uuid: bb7e86a6-4ff6-4df6-bd17-e5affc7fa12e
+      :name: Beat It On Down The Line
+      :segued: false
     - :uuid: 89f5cc3d-da64-462a-b578-6b21414b9105
       :name: China Cat Sunflower
       :segued: false
@@ -520,6 +533,9 @@
       :name: Tennessee Jed
       :segued: false
     - :uuid: d2f316d4-1c73-4350-be61-e8677623fbee
+      :name: Mexicali Blues
+      :segued: false
+    - :uuid: e315461e-fb35-4e2f-833f-19639fe64e5c
       :name: Deal
       :segued: false
     - :uuid: e315461e-fb35-4e2f-833f-19639fe64e5c
@@ -1183,7 +1199,7 @@
       :name: The Other One
       :segued: false
     - :uuid: e0c51e5b-54ed-4e4c-b0f3-f15ba6418046
-      :name: It's A Sin
+      :name: It's A Sin Jam
       :segued: false
     - :uuid: e0b4f853-beea-4601-ae49-f740cd13fb7f
       :name: Stella Blue
@@ -1403,6 +1419,9 @@
   - :uuid: de88c668-8e61-45dc-9fab-71741ff4073c
     :songs:
     - :uuid: b582212b-0250-4022-a4b4-523b76de45ca
+      :name: Jam
+      :segued: true
+    - :uuid: b582212b-0250-4022-a4b4-523b76de45ca
       :name: Ship Of Fools
       :segued: false
     - :uuid: 2a37b9dd-d044-46ba-a8d2-c45eb8d0fe33
@@ -1606,15 +1625,6 @@
       :segued: true
     - :uuid: 09596bfc-bfa3-4ccb-974f-efc7d8a151f6
       :name: Let It Grow
-      :segued: true
-    - :uuid: 7aac2a4d-3c8d-44bd-83da-022a43b6e851
-      :name: Space
-      :segued: true
-    - :uuid: a1f1f32c-2b8d-4ad5-b9bc-d9a987c58620
-      :name: Mind Left Body Jam
-      :segued: true
-    - :uuid: 837ad3c6-c103-4949-b9e6-0b9b47184b3f
-      :name: Jam
       :segued: true
     - :uuid: 43d44025-4532-43be-a968-4ec2b40c613e
       :name: U.S. Blues
@@ -2302,10 +2312,7 @@
       :segued: true
     - :uuid: 8911fc02-9698-4c87-96db-8fc820ca6295
       :name: Let It Grow
-      :segued: true
-    - :uuid: 0684ebf4-3579-44ec-bd9e-b0378ea4c419
-      :name: Space
-      :segued: true    
+      :segued: true  
     - :uuid: e1dd20f1-dde5-4710-8854-ef1cc09d6aca
       :name: Wharf Rat
       :segued: true
@@ -2590,9 +2597,6 @@
     - :uuid: 6fae3c4a-bf31-44f2-80aa-8d09bfeca4d4
       :name: Peggy O
       :segued: false
-    - :uuid: a6f217c0-5216-404d-a1a1-e35d4e874df9
-      :name: Tennessee Jed
-      :segued: false
     - :uuid: f7766141-ec5e-479c-b5e6-1508c247e3a0
       :name: Black Throated Wind
       :segued: false
@@ -2604,9 +2608,6 @@
       :segued: false
     - :uuid: c3e6c70b-8ec4-40ef-9680-e7315c046873
       :name: Loser
-      :segued: false
-    - :uuid: 6fcf44b1-4bef-4e72-9155-dd55bc0167a0
-      :name: Black Peter
       :segued: false
     - :uuid: 235e0683-4a21-46e0-97d9-2a1a0f3e4522
       :name: Weather Report Suite Prelude
@@ -2796,6 +2797,9 @@
       :segued: false
     - :uuid: af3cc65b-9845-4fb9-a17e-fa1214855ad9
       :name: Truckin'
+      :segued: true
+    - :uuid: af3cc65b-9845-4fb9-a17e-fa1214855ad9
+      :name: Mind Left Body Jam
       :segued: true
     - :uuid: ae724e55-a5e2-4a30-bbcc-48665cd78730
       :name: Wharf Rat
@@ -3021,16 +3025,39 @@
       :name: Me And My Uncle
       :segued: false
     - :uuid: af339905-8232-4847-b035-735f5f91ed53
-      :name: Eyes Of The World
+      :name: Deal
       :segued: false
+    - :uuid: 38b46afa-c9fe-43fa-b83e-8213dd22c5c8
+      :name: The Race Is On
+      :segued: false
+    - :uuid: 38b46afa-c9fe-43fa-b83e-8213dd22c5c8
+      :name: Loose Lucy
+      :segued: false
+    - :uuid: 38b46afa-c9fe-43fa-b83e-8213dd22c5c8
+      :name: El Paso
+      :segued: false
+    - :uuid: 38b46afa-c9fe-43fa-b83e-8213dd22c5c8
+      :name: Eyes Of The World
+      :segued: true
     - :uuid: 38b46afa-c9fe-43fa-b83e-8213dd22c5c8
       :name: China Doll
       :segued: false
   - :uuid: 65e2ff8c-1972-4b9f-9c7d-b3a87828b697
     :songs:
     - :uuid: 9597a690-096b-46ff-8845-495e4ad2314a
+      :name: Seastones
+      :segued: true
+    - :uuid: 9597a690-096b-46ff-8845-495e4ad2314a
       :name: Playing In The Band
       :segued: false
+    - :uuid: 9597a690-096b-46ff-8845-495e4ad2314a
+      :name: Drums
+      :segued: false
+    - :uuid: 9597a690-096b-46ff-8845-495e4ad2314a
+      :name: Playing In The Band Reprise
+      :segued: false
+  - :uuid: 65e2ff8c-1972-4b9f-9c7d-b3a87828b697
+    :songs:
     - :uuid: a58e67c1-9f04-4f13-b4ea-271931d3fdd1
       :name: Row Jimmy
       :segued: false
@@ -3072,32 +3099,32 @@
     - :uuid: fa24663b-567d-409a-8481-b73cdb98636f
       :name: Jack Straw
       :segued: false
-    - :uuid: 89acb4ee-7d53-4301-abf4-881492886f02
-      :name: Tennessee Jed
-      :segued: false
-    - :uuid: a866604b-4372-496b-b244-a540aace4f80
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: efe4cd84-f4b3-48d0-97f8-07efc2a701f2
+    - :uuid: 6a180261-8503-41ab-9a90-1b902689de12
       :name: Deal
-      :segued: false
-    - :uuid: 75f4f08d-d424-49e8-a28b-b1d813d8ce76
-      :name: Me And Bobby Mcgee
-      :segued: false
-    - :uuid: c26ee37e-572b-405d-8221-d6c5e9f3ed7f
-      :name: It Must Have Been The Roses
       :segued: false
     - :uuid: 6a180261-8503-41ab-9a90-1b902689de12
       :name: Mexicali Blues
       :segued: false
-    - :uuid: 06abbdf4-22a3-4d60-9b99-23a27ab2ec72
-      :name: Row Jimmy
+    - :uuid: c26ee37e-572b-405d-8221-d6c5e9f3ed7f
+      :name: It Must Have Been The Roses
       :segued: false
     - :uuid: 163fb60d-f210-4a80-b747-b0a899e7d09d
       :name: Beat It On Down The Line
       :segued: false
     - :uuid: 2af3220b-26d6-4816-bf2f-4bd1e24f316d
-      :name: Ship Of Fools
+      :name: Scarlet Begonias
+      :segued: false
+    - :uuid: 2af3220b-26d6-4816-bf2f-4bd1e24f316d
+      :name: Me And Bobby Mcgee
+      :segued: false
+    - :uuid: 2af3220b-26d6-4816-bf2f-4bd1e24f316d
+      :name: Tennessee Jed
+      :segued: false
+    - :uuid: 2af3220b-26d6-4816-bf2f-4bd1e24f316d
+      :name: Cumberland Blues
+      :segued: false
+    - :uuid: 2af3220b-26d6-4816-bf2f-4bd1e24f316d
+      :name: Row Jimmy
       :segued: false
     - :uuid: 687bbcd7-3987-48a7-aa54-db19df67acfb
       :name: Playing In The Band
@@ -3117,7 +3144,7 @@
       :name: Big River
       :segued: false
     - :uuid: a06c26a8-85a5-4c4f-b90f-4b76c03f1b80
-      :name: Scarlet Begonias
+      :name: Ship Of Fools
       :segued: false
     - :uuid: ed08d1eb-be73-4fa8-b386-51cafad892d7
       :name: Truckin'
@@ -3398,15 +3425,6 @@
       :name: He's Gone
       :segued: true
     - :uuid: 2fad264a-6fd8-4b6b-bc93-47d519f149f6
-      :name: Truckin'
-      :segued: true
-    - :uuid: 8ceb5e4f-21a0-4458-93e9-6aa2fbadd5e5
-      :name: Caution (Do Not Stop On Tracks) Jam
-      :segued: true
-    - :uuid: 4a9c3d64-5996-4937-b917-e3f66c40c286
-      :name: Drums
-      :segued: true
-    - :uuid: ef238ad5-c76e-4653-a69a-336f6c596c2b
       :name: Truckin'
       :segued: true
     - :uuid: 6b9584aa-ff42-4522-a6d2-8f49ee7160bb

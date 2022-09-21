@@ -250,7 +250,7 @@
   - :uuid: acd0d26c-46a5-4f16-8142-8295bbd2e147
     :songs:
     - :uuid: 2a998594-44e1-43d1-a09a-0e146b04cfe5
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: 3b4bbd66-952e-400c-9109-94bd763d64ca
       :name: Jack Straw
@@ -343,6 +343,9 @@
   - :uuid: f14e4d6d-b568-48ae-9464-2ef21a26308f
     :songs:
     - :uuid: c6dacb6d-6597-4f32-8093-fef21d96fe83
+      :name: Drums
+      :segued: true
+    - :uuid: c6dacb6d-6597-4f32-8093-fef21d96fe83
       :name: Iko Iko
       :segued: false
     - :uuid: d9b58786-563c-433f-b1ae-b209c2ca58d8
@@ -353,6 +356,9 @@
       :segued: false
     - :uuid: 4cdfc3aa-4c46-4740-ba8c-c05f9621dce1
       :name: Drums
+      :segued: false
+    - :uuid: 4cdfc3aa-4c46-4740-ba8c-c05f9621dce1
+      :name: Space
       :segued: false
     - :uuid: a59b2bd0-06ad-496b-9a04-d3c8c44dcb64
       :name: Gimme Some Lovin'
@@ -763,6 +769,9 @@
       :name: Goin' Down The Road Feeling Bad
       :segued: false
     - :uuid: bec0a98f-14fc-4abf-8ebe-233651f1b0c2
+      :name: Playing In The Band Reprise
+      :segued: false
+    - :uuid: bec0a98f-14fc-4abf-8ebe-233651f1b0c2
       :name: Black Muddy River
       :segued: false
     - :uuid: f6faddda-7a27-4f0a-b863-94285ecedfef
@@ -1114,6 +1123,9 @@
       :segued: false
     - :uuid: 5e3d8e57-7b7c-4932-84c3-b5a56662852c
       :name: Truckin'
+      :segued: false
+    - :uuid: 5e3d8e57-7b7c-4932-84c3-b5a56662852c
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: a93c382c-1a8e-4e07-b0cf-a0d28ff9a477
       :name: Morning Dew
@@ -1680,9 +1692,6 @@
       :segued: false
   - :uuid: 81ff1bc0-3ca4-41d3-9a1b-85e9fcd50481
     :songs:
-    - :uuid: 1ce13edc-dee0-4c48-8606-0a48be96d71a
-      :name: Not Fade Away
-      :segued: false
     - :uuid: bf496aaf-7dac-4f6e-abf9-36fc90805566
       :name: Brokedown Palace
       :segued: false
@@ -2222,6 +2231,9 @@
   - :uuid: 15e50649-a672-474c-87cf-fa267aa08bcd
     :songs:
     - :uuid: 7fdd4718-d9d5-404c-b64a-2af454bbad44
+      :name: Space
+      :segued: true
+    - :uuid: 7fdd4718-d9d5-404c-b64a-2af454bbad44
       :name: Iko Iko
       :segued: false
     - :uuid: f85e2a07-078c-4678-b67e-c65a39b7208a
@@ -2564,6 +2576,9 @@
       :name: Candyman
       :segued: false
     - :uuid: 7645cc51-141a-4497-8d98-dacfa9911d9e
+      :name: Far From Me
+      :segued: true
+    - :uuid: 7645cc51-141a-4497-8d98-dacfa9911d9e
       :name: Mama Tried
       :segued: true
     - :uuid: 4b7ca58b-3f7b-47a4-9420-f7fb5f4a2d24
@@ -2879,7 +2894,7 @@
   - :uuid: fb30ef20-e759-4015-9185-d13467bc7442
     :songs:
     - :uuid: 03455f56-6f46-4807-a12d-033cef55f47f
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: 68e6a0ab-b697-44f2-9408-1f27d1aab398
       :name: Mississippi Half Step Uptown Toodeloo
@@ -3142,9 +3157,6 @@
     - :uuid: f98011d1-4ee2-4ffa-ba46-ffd722c04b23
       :name: Tons Of Steel
       :segued: false
-    - :uuid: b8e2ae87-44bb-4da5-a7ab-cd63e4bc6964
-      :name: Take A Step Back Tuning
-      :segued: false
     - :uuid: 36e7d4bc-9192-4bf0-809b-cdd6498b9927
       :name: Ramble On Rose
       :segued: false
@@ -3198,16 +3210,16 @@
       :name: Highway 61 Revisited
       :segued: false
     - :uuid: 7fa83ad5-da83-4619-a5ec-459edd5e2f9f
-      :name: John Brown
-      :segued: false
-    - :uuid: 5057f51f-7aa7-4a03-9354-5858688cf227
       :name: It's All Over Now, Baby Blue
       :segued: false
     - :uuid: 79006701-fc05-4ad7-89fc-b275f26e6791
       :name: Ballad Of A Thin Man
       :segued: false
     - :uuid: 9dbc4c53-2537-446c-8e65-858e5967e371
-      :name: The Wicked Messenger
+      :name: John Brown
+      :segued: false
+    - :uuid: 9dbc4c53-2537-446c-8e65-858e5967e371
+      :name: Wicked Messenger
       :segued: false
     - :uuid: 03b959c0-1337-4ad6-8482-4c920a0f6d20
       :name: Queen Jane Approximately
@@ -3256,9 +3268,6 @@
     - :uuid: 0a4cceab-0551-46cd-b57c-9ec9a78e42c1
       :name: Peggy O
       :segued: false
-    - :uuid: 34ff615b-ffe6-4aa4-b871-4a18fad455b6
-      :name: Addams Family Tuning
-      :segued: false
     - :uuid: 522127d4-27a2-48ac-93c6-445a3b3ce147
       :name: When I Paint My Masterpiece
       :segued: false
@@ -3303,9 +3312,6 @@
       :name: Maggie's Farm
       :segued: false
     - :uuid: 38232a0b-65d0-4e8e-8bce-c53a0b31759c
-      :name: Dead Man, Dead Man
-      :segued: false
-    - :uuid: 18f8c4a2-65a3-49a1-a19e-2508de11f4b8
       :name: Dead Man, Dead Man
       :segued: false
     - :uuid: bc03b95c-9866-46c4-8de0-9be0f67f7aac
@@ -3359,7 +3365,7 @@
   - :uuid: 4dd07689-efaa-4642-8620-a7ae8a59784b
     :songs:
     - :uuid: e89cdd04-4d18-4e8b-8284-d1d1b614e998
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: 6c15fb25-43cd-4116-8542-765e87b4fc3c
       :name: Jack Straw
@@ -3534,9 +3540,6 @@
       :name: Mr. Tambourine Man
       :segued: false
     - :uuid: 97bf0c31-b747-4f34-8493-c669e6bded1f
-      :name: Dead Man, Dead Man
-      :segued: false
-    - :uuid: 8921b9b2-3ffc-460a-aae8-bdd5374c3290
       :name: Dead Man, Dead Man
       :segued: false
     - :uuid: fc656f63-1e2a-44c3-8c4c-2882f11241fd
@@ -4971,9 +4974,6 @@
     - :uuid: ef5684e7-d501-49a4-babf-5c37d37dac31
       :name: Ramble On Rose
       :segued: false
-    - :uuid: 18ca2be7-14c6-4254-89ac-1b2ff80b9ad9
-      :name: Addams Family Tuning
-      :segued: false
     - :uuid: 3cd746b6-58c3-44ee-a731-fb6a238be8f2
       :name: Cassidy
       :segued: false
@@ -5000,8 +5000,8 @@
     - :uuid: 82c33d49-8c0e-44e1-b290-328bdf8fdd4e
       :name: Drums
       :segued: false
-    - :uuid: e1628af3-8072-4e92-a553-eb446f1b45ee
-      :name: Playing In The Band
+    - :uuid: 82c33d49-8c0e-44e1-b290-328bdf8fdd4e
+      :name: Space
       :segued: false
     - :uuid: c430cfb5-97a1-45f1-a71d-167ef2e4afb5
       :name: The Wheel
@@ -5187,11 +5187,11 @@
     - :uuid: 034d7f7f-a19d-468e-b4c0-30209178dcf1
       :name: Mexicali Blues
       :segued: false
-    - :uuid: 23b56245-2d69-4161-b7ea-6969acff0099
-      :name: Far From Me
-      :segued: false
     - :uuid: 9c2379fe-2d04-4a91-8601-73ca528b19ee
       :name: Row Jimmy
+      :segued: false
+    - :uuid: 23b56245-2d69-4161-b7ea-6969acff0099
+      :name: Far From Me
       :segued: false
     - :uuid: b56816a9-7c20-4a7e-be2a-c7a087266e97
       :name: Let It Grow
@@ -6060,6 +6060,9 @@
       :segued: false
     - :uuid: 8707879c-3435-413a-bf08-9d21b329ee20
       :name: Banana Boat Song (Day O)
+      :segued: false
+    - :uuid: 8707879c-3435-413a-bf08-9d21b329ee20
+      :name: Do You Wanna Dance
       :segued: false
     - :uuid: e274622b-9632-4d65-8b84-e633f3f1e00c
       :name: Knockin' On Heaven's Door

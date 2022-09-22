@@ -2,7 +2,7 @@ Order of things to do
 
 1: Finish all years shows
 *: Get the venue data for all 77/78 shows
-3: Get weather info for all shows
+3: Get weather info for all 77/78 shows
 4: Get song lengths for 77/78 shows
 5: Get BPM / Volume (?) for 77/78 shows
 

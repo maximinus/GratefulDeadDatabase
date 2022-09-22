@@ -264,8 +264,8 @@ def output_json_venues(final_yml):
 
 if __name__ == '__main__':
     matched_shows = []
-    #years = [x+1900 for x in [74, 75, 76, 77, 78, 79, 80, 87, 88, 89, 90, 91, 92, 93, 94, 95]]
-    years = [1973]
+    #years = [x+1900 for x in [73, 74, 75, 76, 77, 78, 79, 80, 87, 88, 89, 90, 91, 92, 93, 94, 95]]
+    years = [1986]
     for i in years:
         matched_shows.extend(compare_shows(i))
 

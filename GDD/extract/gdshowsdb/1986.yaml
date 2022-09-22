@@ -174,6 +174,9 @@
     - :uuid: 11b25ab0-5d65-4186-a92a-02da46516c61
       :name: Drums
       :segued: false
+    - :uuid: 11b25ab0-5d65-4186-a92a-02da46516c61
+      :name: Space
+      :segued: false
     - :uuid: 5878242f-a3cf-42c7-8890-e7e0f7e3cc1f
       :name: Truckin'
       :segued: false
@@ -488,7 +491,7 @@
       :name: Tons Of Steel
       :segued: false
     - :uuid: fb3b464f-ab30-4ad7-82bb-5418c81bc3ae
-      :name: Supplication
+      :name: Supplication Jam
       :segued: false
     - :uuid: 256d6be0-05d7-4456-b4d5-e43b6a0336ac
       :name: Let It Grow
@@ -502,7 +505,7 @@
       :name: Terrapin Station
       :segued: false
     - :uuid: 9c2de109-d288-46a5-ac2d-b4b6d6380755
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: 66518c8d-9f74-4379-b727-c85db220919b
       :name: Drums
@@ -750,7 +753,7 @@
       :name: Big Railroad Blues
       :segued: false
     - :uuid: f33eab4a-a7c4-4d98-9131-1c93028f39d0
-      :name: Supplication
+      :name: Supplication Jam
       :segued: false
     - :uuid: 76bedfab-68fd-4bc3-9ad0-759d3365c5f5
       :name: The Promised Land
@@ -832,9 +835,6 @@
       :segued: false
     - :uuid: 86b842d6-d8b0-4b77-a4c0-9535e44da066
       :name: I Need A Miracle
-      :segued: false
-    - :uuid: ae64183c-49eb-46c9-b692-f7c787e6520d
-      :name: Playing In The Band
       :segued: false
     - :uuid: 68c185d9-2bae-4746-b693-74f4d563978f
       :name: Drums
@@ -1077,7 +1077,7 @@
       :name: Bird Song
       :segued: false
     - :uuid: e7ab1d3e-82c6-486e-b621-d98811fe525b
-      :name: Supplication
+      :name: Supplication Jam
       :segued: false
     - :uuid: 3c4702ac-fc13-4da6-97b9-637d9e36c52a
       :name: Let It Grow
@@ -1260,13 +1260,22 @@
   - :uuid: a84e2796-f8ea-4498-893f-6fd21859204e
     :songs:
     - :uuid: fc3b9738-2a33-4721-b54a-3b5337ad3869
+      :name: Iko Iko
+      :segued: false
+    - :uuid: fc3b9738-2a33-4721-b54a-3b5337ad3869
+      :name: New Minglewood Blues
+      :segued: false
+    - :uuid: fc3b9738-2a33-4721-b54a-3b5337ad3869
+      :name: Peggy O
+      :segued: false
+    - :uuid: fc3b9738-2a33-4721-b54a-3b5337ad3869
       :name: Desolation Row
       :segued: false
     - :uuid: 9f68e5f6-d6f4-46f9-a67f-9a6cdd4eda1f
       :name: Mississippi Half Step Uptown Toodeloo
       :segued: false
     - :uuid: fc4a4e2b-3298-4ce5-bacb-5c3df146308b
-      :name: Supplication
+      :name: Supplication Jam
       :segued: false
     - :uuid: f03a0fdb-c371-4433-b09b-38e5044b91b4
       :name: Let It Grow
@@ -1622,9 +1631,6 @@
       :segued: true
     - :uuid: 4d71fd3e-b825-40ff-b5d8-0205f254aa63
       :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: 75927c00-2381-4236-8cd7-1da1b8ee2b29
-      :name: Jam
       :segued: true
     - :uuid: 24271f4e-2d46-48ed-bab1-61fcbdc2ac33
       :name: Drums
@@ -2168,6 +2174,9 @@
       :segued: false
     - :uuid: e3b02b75-44ee-49e6-bbb3-7ff5baa8b896
       :name: China Doll
+      :segued: false
+    - :uuid: e3b02b75-44ee-49e6-bbb3-7ff5baa8b896
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: fd2ce5f8-ef7f-4df1-be18-5b9c70a02c5d
       :name: Goin' Down The Road Feeling Bad
@@ -2838,9 +2847,6 @@
       :segued: false
     - :uuid: d3008e0b-8c3f-4079-a272-14baba4e8f11
       :name: Black Muddy River
-      :segued: false
-    - :uuid: f42c3e6b-b9c2-4b53-8731-0622bf750471
-      :name: Playing In The Band
       :segued: false
     - :uuid: b107c349-fb7b-4509-a691-fcfcfc9330d4
       :name: I Need A Miracle

@@ -806,13 +806,6 @@
     - :uuid: 1c312318-62a4-4bce-a337-5fb85454162c
       :name: One More Saturday Night
       :segued: false
-1972/04/04:
-  :uuid: 1bd263f7-ae2c-42d9-b507-c9d3391abd78
-  :venue: Winterland Arena
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
 1972/04/07:
   :uuid: 671c37f4-f837-4ac8-8668-2da0e6459a2b
   :venue: Wembley Empire Pool

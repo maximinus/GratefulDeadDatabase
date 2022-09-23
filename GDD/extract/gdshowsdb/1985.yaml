@@ -293,6 +293,9 @@
     - :uuid: b78c949d-29cf-4538-a38d-b7d896630d90
       :name: Smokestack Lightnin'
       :segued: false
+    - :uuid: b78c949d-29cf-4538-a38d-b7d896630d90
+      :name: Mind Left Body Jam
+      :segued: false
     - :uuid: b1b57e1c-7203-4f0d-8d6f-956b5d1ce6a5
       :name: Drums
       :segued: false
@@ -422,7 +425,7 @@
       :name: Drums
       :segued: false
     - :uuid: 8e0ddcc1-4803-4faf-9c4a-88284742b166
-      :name: Ollin Arrageed
+      :name: Ollin Arageed
       :segued: false
     - :uuid: 515f6728-9084-4e74-8d9f-075664304fc9
       :name: Man Smart (Woman Smarter)
@@ -590,64 +593,7 @@
   :city: Springfield
   :state: MA
   :country: US
-  :sets:
-  - :uuid: 5040ed0b-1975-4afd-8370-a453788114fe
-    :songs:
-    - :uuid: 948a2223-e5ec-4381-8155-ff119fe980f2
-      :name: Bertha
-      :segued: false
-    - :uuid: 1c2b5c4d-bc92-46a3-80f2-a3157ed76119
-      :name: The Promised Land
-      :segued: false
-    - :uuid: a1400bec-e635-457b-9b14-0a41bc3342a9
-      :name: Althea
-      :segued: false
-    - :uuid: db44ebb7-c048-435a-97a8-c90f2cf2e752
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: faf77440-ce7a-4787-affb-aaa58f01ed5f
-      :name: Mexicali Blues
-      :segued: false
-    - :uuid: add4831f-101f-4366-8507-447bee122ca9
-      :name: New Minglewood Blues
-      :segued: false
-    - :uuid: 97a8df1f-a144-45fe-9471-01660abe5bc3
-      :name: Deal
-      :segued: false
-  - :uuid: 8e0985dd-129a-4935-a292-13e5b416ac60
-    :songs:
-    - :uuid: 473761d8-1bb9-465f-b342-0d7aa3f2853b
-      :name: Samson And Delilah
-      :segued: false
-    - :uuid: 5fcdd68b-9415-4f07-984b-e32fe75ade7c
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: e7d9f902-ac07-487f-ae0b-991ffbc0f69c
-      :name: Man Smart (Woman Smarter)
-      :segued: false
-    - :uuid: db9560bf-86ed-462b-b9d6-284f09692392
-      :name: He's Gone
-      :segued: false
-    - :uuid: dc2a6456-fa3d-4263-9090-5c301088ac22
-      :name: Spoonful
-      :segued: false
-    - :uuid: 2487887e-b6b7-4abb-a013-d00b0e6504fd
-      :name: Drums
-      :segued: false
-    - :uuid: b9a2f239-267e-4f06-847b-753c3b615633
-      :name: Dear Mr. Fantasy
-      :segued: false
-    - :uuid: 58067b91-e117-41db-a7e5-c74afdb69f9c
-      :name: Throwing Stones
-      :segued: false
-    - :uuid: 758367dc-268f-4b89-8a3f-cdc4d503b799
-      :name: Not Fade Away
-      :segued: false
-  - :uuid: c3c6bcb2-54d4-4a7e-a40f-b29eee72fe99
-    :songs:
-    - :uuid: 01883783-6f63-48c1-8d04-60adfc101e12
-      :name: U.S. Blues
-      :segued: false
+  :sets: []
 1985/03/25:
   :uuid: 27abc565-8d69-4544-b6cb-8ac8708ec2ca
   :venue: Springfield Civic Center Arena
@@ -865,7 +811,7 @@
       :name: Friend Of The Devil
       :segued: false
     - :uuid: f18af1f2-0c3f-46bc-a4a6-c6742169bb32
-      :name: Supplication
+      :name: Supplication Jam
       :segued: false
     - :uuid: cc995020-707c-45e5-885f-95277839b40e
       :name: My Brother Esau
@@ -1591,14 +1537,8 @@
     - :uuid: 8f6c1832-049e-42ee-bd97-5676f15e9767
       :name: China Doll
       :segued: false
-    - :uuid: 21d85d22-fdf4-48a3-857a-e982b6200369
-      :name: Playing In The Band
-      :segued: false
     - :uuid: 7d762522-52b0-42d4-a7ed-457025291e21
       :name: Drums
-      :segued: false
-    - :uuid: 9b07413b-4310-44de-bf01-4f0084a53b02
-      :name: Playing In The Band
       :segued: false
     - :uuid: 5d81d27e-96cb-4f70-a405-64e3a10e29d6
       :name: Wharf Rat
@@ -2158,7 +2098,7 @@
       :name: Crazy Fingers
       :segued: false
     - :uuid: c8f6dc2a-2525-4a7d-bf06-25e0b88033e1
-      :name: Supplication
+      :name: Supplication Jam
       :segued: false
     - :uuid: 67fecd9a-3904-4776-82a5-b1510d1a4b1d
       :name: High Time
@@ -2938,6 +2878,9 @@
     - :uuid: 0e535029-ea56-4e26-8966-7a9228752fe5
       :name: The Other One
       :segued: false
+    - :uuid: 980c7bd2-72d9-4ed4-8d09-d1c13ffa32c6
+      :name: Cryptical Envelopment
+      :segued: false
     - :uuid: 95c7b78c-0887-4a88-9400-3b5f60a6cdd4
       :name: Eyes Of The World
       :segued: false
@@ -3155,7 +3098,7 @@
       :name: Dear Mr. Fantasy
       :segued: false
     - :uuid: 820f41db-7bc9-4d8f-8a5f-d2f3607062bc
-      :name: Hey Jude
+      :name: Hey Jude Reprise
       :segued: false
     - :uuid: 72d98b2f-679c-4376-86aa-20412a6601d6
       :name: Dear Mr. Fantasy
@@ -3378,9 +3321,6 @@
       :segued: false
   - :uuid: a984f261-fb07-420f-be96-4a0959c921c5
     :songs:
-    - :uuid: a5e467bc-fa3e-4dac-8a9f-c33020b22154
-      :name: Drums
-      :segued: false
     - :uuid: f13c0ad8-a7cf-4a02-b96b-d10557942eaf
       :name: Not Fade Away
       :segued: false
@@ -3744,6 +3684,9 @@
   - :uuid: a665e371-ab87-4aa2-b791-44be80ab1208
     :songs:
     - :uuid: 0b1c38c4-8208-440d-91e7-5ea2143e0031
+      :name: Space
+      :segued: true
+    - :uuid: 0b1c38c4-8208-440d-91e7-5ea2143e0031
       :name: Werewolves Of London
       :segued: false
     - :uuid: 76230cb6-3125-40b5-8251-9ca37b2c61ea
@@ -3780,6 +3723,9 @@
       :segued: false
     - :uuid: 2bd835e7-5a92-4341-b384-fbc96328bebe
       :name: Drums
+      :segued: false
+    - :uuid: 2bd835e7-5a92-4341-b384-fbc96328bebe
+      :name: Space
       :segued: false
     - :uuid: 2811a66e-2952-44ec-b6e3-0b2c6391930e
       :name: Dear Mr. Fantasy
@@ -4047,10 +3993,7 @@
       :name: Ship Of Fools
       :segued: false
     - :uuid: 76e4cbe4-2351-40a5-86e8-1a725165f71a
-      :name: Supplication
-      :segued: false
-    - :uuid: e9a325ac-998e-46a3-8e1f-e013300f7284
-      :name: Playing In The Band
+      :name: Supplication Jam
       :segued: false
     - :uuid: 47d770a0-838e-4f69-839b-29af7c382924
       :name: Don't Need Love
@@ -4262,7 +4205,7 @@
       :name: Uncle John's Band
       :segued: false
     - :uuid: fa9498aa-fb83-4159-b93f-f787b28de818
-      :name: Supplication
+      :name: Supplication Jam
       :segued: false
     - :uuid: a69c3633-7415-4920-9630-9c60305fb936
       :name: Drums
@@ -4705,19 +4648,22 @@
   - :uuid: 4fe68257-552d-4a80-bbd9-50b7bc795af1
     :songs:
     - :uuid: ac8e7910-06b8-4fa2-a3c4-3760ee3f200f
+      :name: Gimme Some Lovin'
+      :segued: false
+    - :uuid: ac8e7910-06b8-4fa2-a3c4-3760ee3f200f
       :name: Greatest Story Ever Told
       :segued: false
     - :uuid: 42da6225-2eba-4cf1-9ee8-428d2385fb99
       :name: West L.A. Fadeaway
       :segued: false
-    - :uuid: 4fcd6415-15b6-4ffb-94b3-0c5410304d1d
-      :name: Little Red Rooster
+    - :uuid: 9526b850-86c5-4870-840c-d71e7a8ec9d9
+      :name: My Brother Esau
       :segued: false
-    - :uuid: cfbfbd81-5f9f-4d50-9295-7ca6190c7a14
+    - :uuid: 9526b850-86c5-4870-840c-d71e7a8ec9d9
       :name: Stagger Lee
       :segued: false
     - :uuid: 9526b850-86c5-4870-840c-d71e7a8ec9d9
-      :name: My Brother Esau
+      :name: Little Red Rooster
       :segued: false
     - :uuid: 3212146b-2617-4b3c-b339-90c2a99d6904
       :name: Tennessee Jed

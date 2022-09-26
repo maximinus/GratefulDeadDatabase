@@ -416,6 +416,7 @@ function buildBeforeAfterSongs(song_title) {
 
     // Create a new array with only the first 5 items
     sbefore = sbefore.slice(0, TABLE_ENTRIES);
+    // add empty lines if we need to    
     while(sbefore.length <  TABLE_ENTRIES) {
         sbefore.push(['', '']);
     }
@@ -433,6 +434,7 @@ function buildBeforeAfterSongs(song_title) {
 
     // Create a new array with only the first 5 items
     safter = safter.slice(0, TABLE_ENTRIES);
+    // add empty lines if we need to
     while(safter.length <  TABLE_ENTRIES) {
         safter.push(['', '']);
     }
@@ -491,9 +493,6 @@ function popOutLongest() {
 };
 
 function popOutShortest() {
-    csong_data[song_title]
-
-
     // same as above function, just in reverse
     sorted_by_length.reverse();
     var table = document.getElementById('table-entry');

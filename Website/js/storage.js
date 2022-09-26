@@ -104,7 +104,6 @@ class Show {
         for(var i of this.sets) {
             console.log('SET:');
             for(var j of i.songs) {
-                // TODO: Why -1?
                 if(j.song in songs) {
                     console.log(songs[j.song]);
                 } else {

@@ -5,59 +5,7 @@
   :city: Davis
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 333a0428-b6a1-48ce-9393-1873777599ac
-    :songs:
-    - :uuid: 5a3c920f-7aa0-4afc-88b8-2fad0d8791dd
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: c1e435bd-b575-4e72-96b8-daa9b53bcde3
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 51bf99a4-d67d-43a4-b960-07a8af5b4e55
-      :name: Smokestack Lightnin'
-      :segued: true
-    - :uuid: 9ac49b75-0649-4c38-89ac-85c4a0e2cc9e
-      :name: Truckin'
-      :segued: false
-    - :uuid: 292dd399-1061-414e-9cec-ee5af9931e4e
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 187a1595-02fa-409d-b0a4-d947faa6672d
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 4a91c39d-75e5-43b8-9908-68090a0621f8
-      :name: Sugar Magnolia
-      :segued: false
-    - :uuid: 6d7f8095-767d-4027-9bda-b287d6577e12
-      :name: Black Peter
-      :segued: false
-    - :uuid: 033f980d-fe90-4bd4-8c8d-7293f1997594
-      :name: Around And Around
-      :segued: false
-    - :uuid: 33ce5e4e-c8d9-49f4-9a6d-8c8b8e71988d
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 271ef56f-94c3-47a0-8dbd-b2ed0cc86b33
-      :name: Casey Jones
-      :segued: false
-  - :uuid: a7c36378-f23b-42ef-8011-195a131746bc
-    :songs:
-    - :uuid: 87f5c30b-902a-4295-bb60-1bde847cb4e4
-      :name: The Other One
-      :segued: true
-    - :uuid: 5a9918a5-aedf-4fc7-94c3-b3eafd82a795
-      :name: Cosmic Charlie
-      :segued: false
-    - :uuid: 3a35d873-fefe-44d9-b705-29b7134a65de
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 821994ee-1c0c-4a44-b94d-58c0e23b8773
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: e1e6f2bd-b777-4ec6-89b8-9676305430b6
-      :name: Uncle John's Band
-      :segued: false    
+  :sets: []
 1971/01/22:
   :uuid: 1b014de0-7f3c-4926-8538-1d108eb1e756
   :venue: Lane Community College
@@ -467,86 +415,7 @@
   :city: Port Chester
   :state: NY
   :country: US
-  :sets:
-  - :uuid: d609bf69-ff66-493f-a1a3-a565fc244ae2
-    :songs:
-    - :uuid: 0436f90e-8785-4280-a023-267254851a56
-      :name: Uncle John's Band
-      :segued: false
-    - :uuid: a59b7f77-2022-4f0c-ba4a-5cc892efc105
-      :name: Loser
-      :segued: false
-    - :uuid: 4d3b8df1-9c37-4ecb-97d5-a5caa3e8ad5e
-      :name: Playing In The Band
-      :segued: false
-    - :uuid: 71afdeea-ef2a-4312-873a-7f32d02e071e
-      :name: Big Boss Man
-      :segued: false
-    - :uuid: 9a63d56c-efbb-430f-82ff-02215eca540c
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 2cf812cd-8708-4148-bbe6-8966c79010fa
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 87353ed6-7483-4306-9ed9-21279e65c472
-      :name: Me And Bobby Mcgee
-      :segued: false
-    - :uuid: c3b96780-0f06-4fb0-8051-1ee44a97a809
-      :name: Bertha
-      :segued: false
-    - :uuid: 6dd6a7a1-0ff7-45b6-97cd-fa2729e4026c
-      :name: Next Time You See Me
-      :segued: false
-    - :uuid: 2de1de4b-b655-4db5-8ed6-b76f773d5fc2
-      :name: Around And Around
-      :segued: false
-    - :uuid: ddb430e6-7d98-47fa-a262-5f1f72eb806a
-      :name: Morning Dew
-      :segued: false
-    - :uuid: 6b9aeee5-bce3-4566-a56e-ffbdad84ea23
-      :name: Sugar Magnolia
-      :segued: false
-    - :uuid: 6d461e61-a363-4c04-92db-5500542038ff
-      :name: Casey Jones
-      :segued: false
-  - :uuid: 2907cec7-0047-4567-8630-1e31fce8172f
-    :songs:
-    - :uuid: 99e5d7c8-a612-40f5-b75e-f0aa214831d0
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 28d5f8d7-0311-47da-8494-861c01ef97eb
-      :name: Bird Song
-      :segued: false
-    - :uuid: 7d5d4340-20d3-4302-b5a8-cb1ced061180
-      :name: Truckin'
-      :segued: false
-    - :uuid: b6de5bc8-a908-4e6b-9181-8f8eb584681e
-      :name: Drums
-      :segued: false
-    - :uuid: 86bbb660-8d63-4e1d-bb8c-6f22308e3374
-      :name: The Other One
-      :segued: false
-    - :uuid: 3321ec15-030f-4a5a-bdac-a50243ef0b73
-      :name: Wharf Rat
-      :segued: false
-    - :uuid: d0a1c232-0d92-4631-85e0-503a5fbe31ba
-      :name: Greatest Story Ever Told
-      :segued: false
-    - :uuid: ad7d4d5c-4666-4849-9c4b-01cd925ce7f6
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 93708f75-eebf-44ae-8b0a-fba4cf9352f5
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 3db7d446-11ce-4bf2-af5e-9dd37a7859a4
-      :name: Goin' Down The Road Feeling Bad
-      :segued: false
-    - :uuid: ce883d5c-87f5-47bb-919f-0e0b02a37287
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 32f3eb8d-21d2-4d54-89d7-a4d2064a4972
-      :name: Johnny B. Goode
-      :segued: false
+  :sets: []
 1971/02/24:
   :uuid: ba5d259c-e01b-41ff-8f8b-a0799fad4aa9
   :venue: Capitol Theater
@@ -699,14 +568,7 @@
     :songs:
     - :uuid: 585b9926-3664-4f8f-a657-8e1a1d8cece2
       :name: Good Lovin'
-      :segued: false    
-1971/03/05:
-  :uuid: 24002925-3d7a-4a9b-b8b4-fe1118949643
-  :venue: Fillmore West
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
+      :segued: false
 1971/03/13:
   :uuid: 29dbdd19-87bc-42d1-b77d-658b3579d178
   :venue: Jenison Field House
@@ -773,157 +635,28 @@
   :city: St. Louis
   :state: MO
   :country: US
-  :sets:
-  - :uuid: 4e04ea3e-b0dc-4f06-97d9-5f1050c0a97a
-    :songs:
-    - :uuid: 5ae269d2-1f7b-41bf-a6ab-7e97b95e1301
-      :name: Next Time You See Me
-      :segued: false
-    - :uuid: 7743859b-35c8-4d80-baa9-c66b90fb2cff
-      :name: Me And Bobby Mcgee
-      :segued: false
-    - :uuid: d7ed6c42-7066-48a3-8973-2b8c7216a7f5
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: fa533eed-70d4-4af1-a758-fd95f2bdb375
-      :name: The Other One
-      :segued: false    
+  :sets: []
 1971/03/18:
   :uuid: 893b24ee-5307-4109-a6d6-00ed4c13b978
   :venue: Fox Theatre
   :city: Atlanta
   :state: GA
   :country: US
-  :sets:
-  - :uuid: b0b06957-1a9d-4cd7-9b58-65dbe1998e5d
-    :songs:
-    - :uuid: 347fda83-a103-498e-a710-98cacac5227d
-      :name: Casey Jones
-      :segued: false
-    - :uuid: c6d6f17c-f4ab-493b-9e9a-aa05200fe456
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 2acd2b39-f046-4dd1-ae60-b360e3d8be49
-      :name: Big Boss Man
-      :segued: false
-    - :uuid: b14f5b26-2b6e-4455-b227-82dfec0e1be4
-      :name: Bertha
-      :segued: false
-    - :uuid: 4dd0921c-a6f8-414e-9059-8717289186eb
-      :name: Me And Bobby Mcgee
-      :segued: false
-    - :uuid: 157f6c12-596e-4358-9332-f1f05fcefbac
-      :name: Loser
-      :segued: false
-    - :uuid: bf7494bd-919a-4479-8d2a-bfd27aa6ca62
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 2b6e59b7-74ee-435c-b23a-cda330f788be
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 2f8e91b1-e844-4306-8f39-72e7ecbb9e17
-      :name: The Rub
-      :segued: false
-    - :uuid: 2d745ae4-dfbe-4649-88e0-765d5cc92f9c
-      :name: Playing In The Band
-      :segued: false
-    - :uuid: 6f660c95-d8fa-430a-89f7-cd22063a7cc9
-      :name: Cumberland Blues
-      :segued: false
-  - :uuid: 4fefd5c5-6dab-4941-ab83-4158bbb38f1e
-    :songs:
-    - :uuid: 19a9a518-868d-4189-8437-82047725a490
-      :name: Truckin'
-      :segued: true
-    - :uuid: f3d161bf-a574-4b15-bd21-091707ce78ad
-      :name: The Other One
-      :segued: true
-    - :uuid: 415e736d-a116-4d12-872e-47686d5c1ffd
-      :name: Drums
-      :segued: true
-    - :uuid: 09c48bc1-27da-4d18-8c14-387ca06603af
-      :name: The Other One
-      :segued: true
-    - :uuid: 4394c364-86a8-4648-b7c0-61a30edf55b6
-      :name: Wharf Rat
-      :segued: false
-    - :uuid: d3dd88de-18d7-496b-bf3d-5a948bd04801
-      :name: Sugar Magnolia
-      :segued: true
-    - :uuid: f082ccf3-2929-4d74-babe-363b13e0be22
-      :name: Johnny B. Goode
-      :segued: false
-    - :uuid: 44ab127b-c85f-4bcb-b94c-b5054f12a65f
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 9eab9e9c-c3d2-47c4-97b9-3b83c1b8eedc
-      :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: 383859ef-c2ce-45d2-8bb9-9910653cca57
-      :name: Caution (Do Not Stop On Tracks)
-      :segued: true
-    - :uuid: 27ca4001-f3aa-4904-abe2-6d4a78111d93
-      :name: Feedback
-      :segued: false
-    - :uuid: f20d8eb0-99aa-4a97-b7bd-094a15931241
-      :name: Uncle John's Band
-      :segued: false        
+  :sets: []      
 1971/03/20:
   :uuid: c39cbcdc-9f46-4d0a-8529-2e78f5b5360f
   :venue: Fieldhouse
   :city: Iowa City
   :state: IA
   :country: US
-  :sets:
-  - :uuid: ec50ef07-3da7-4e40-a736-60d29f3d7ed0
-    :songs:
-    - :uuid: c906ae30-8b81-4748-b4d3-f63d7af7837b
-      :name: Truckin'
-      :segued: false
-    - :uuid: 528c665d-5899-42da-8641-5be871fe7dfa
-      :name: Casey Jones
-      :segued: false
-  - :uuid: 737eb0eb-8f36-43e8-ad2e-af1883d611c7
-    :songs:
-    - :uuid: f0f34c86-1bfc-4589-a16c-1ec8f6402c03
-      :name: Sugar Magnolia
-      :segued: false
-    - :uuid: fb1990a5-6fe2-4925-8350-6affe489d2e2
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1971/03/21:
   :uuid: ef1dbd6a-8a2e-4397-aa65-238543304993
   :venue: Exposition Center
   :city: Milwaukee
   :state: WI
   :country: US
-  :sets:
-  - :uuid: bdc7c3b8-96fd-4754-a118-befc788e4b8f
-    :songs:
-    - :uuid: 5188734d-3a91-4539-8be6-3ff743ea4223
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: bea7a8d2-1bd0-42d4-bd7e-0cf6686dafb8
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: e9665074-da70-473c-81c3-3682ea928ca9
-      :name: Loser
-      :segued: false
-    - :uuid: fd600bb7-4c30-4baf-ae3f-6d5831a1d431
-      :name: Beat It On Down The Line
-      :segued: false
-    - :uuid: 918f5016-a7f5-4e67-8e2b-b454eb78f41d
-      :name: Me And Bobby Mcgee
-      :segued: false
-    - :uuid: b94629fe-cc66-4c13-b21a-e9fd123c2c84
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 63d91f7b-f1a9-49ae-b5ee-12ece9a9bfbb
-      :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: 42f93b1f-28dc-42f0-8fc5-35863438c1e9
-      :name: Truckin'
-      :segued: true    
+  :sets: []  
 1971/03/24:
   :uuid: 131c1cb7-efe9-4c29-a6a8-fd4621c76af8
   :venue: Winterland Arena
@@ -997,154 +730,14 @@
   :city: New York
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 27858271-6747-4fe7-b342-a94e95fc1827
-    :songs:
-    - :uuid: e15d364a-9adc-4c62-8696-c2a1e12c04ca
-      :name: Bertha
-      :segued: false
-    - :uuid: 8a2c51fe-d0df-4184-a324-19ce727fe3cb
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: ebeef947-6183-4db5-9f4c-51c505e7c959
-      :name: Next Time You See Me
-      :segued: false
-    - :uuid: 2243122e-d2bd-4bdb-93a0-4871ff601f96
-      :name: Morning Dew
-      :segued: false
-    - :uuid: 5d5e13cf-3109-48d2-a51a-585aad718b1a
-      :name: Playing In The Band
-      :segued: false
-    - :uuid: b19b5884-2e89-43c5-b23a-5f6ad47c7612
-      :name: Loser
-      :segued: false
-    - :uuid: c433ef22-a091-4851-a921-1e80ecfef547
-      :name: Easy Wind
-      :segued: false
-    - :uuid: 05252645-0391-4dfc-ad90-76c30aef6473
-      :name: Me And Bobby Mcgee
-      :segued: false
-    - :uuid: 2c1b11c3-0f55-44b6-a99e-dae13f35c8bf
-      :name: Greatest Story Ever Told
-      :segued: true
-    - :uuid: a746c05b-9b73-4365-b3ce-9c0415068038
-      :name: Johnny B. Goode
-      :segued: false
-  - :uuid: 98d35e37-f786-4543-92e4-4804b132ea4f
-    :songs:
-    - :uuid: 8032cb99-10b6-4029-963a-fcaa106ed358
-      :name: Truckin'
-      :segued: false
-    - :uuid: f82a4175-6f1d-4faa-ba01-9151a2bd5269
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 585836c4-8326-455b-9ccc-403e1a8fa995
-      :name: Deal
-      :segued: false
-    - :uuid: e68dd078-a20e-448e-be6b-55e1633fb5fd
-      :name: Sugar Magnolia
-      :segued: false
-    - :uuid: c155d071-dcf5-4621-9bb8-3656d7d36bb2
-      :name: Casey Jones
-      :segued: false
-    - :uuid: bbe92095-cc2b-4400-ab0c-dfad433362aa
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: a9fd373a-da84-4b7b-8303-8fe62b32d822
-      :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: 6d740c19-cd53-4405-8559-4e446c29a960
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: d6697772-e15f-49fc-be0c-b7eccefbbb3b
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: f9ab7489-5544-4fb7-b258-0156850ebc4a
-      :name: Uncle John's Band
-      :segued: false
+  :sets: []
 1971/04/05:
   :uuid: 7479a986-b19b-490e-8f16-29a3529319d2
   :venue: Manhattan Center
   :city: New York
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 1e276dfa-e0e1-4a8d-a3a8-941a14724221
-    :songs:
-    - :uuid: dd3808b3-3ca6-472d-8a5e-53a3c14db5ac
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: c86144bc-ff46-4383-b223-be585052d3b3
-      :name: Me And Bobby Mcgee
-      :segued: false
-    - :uuid: fa4864fb-25e6-4e68-8986-67158513a179
-      :name: The Rub
-      :segued: false
-    - :uuid: f437b810-ad51-4653-88f7-6a4598e08be3
-      :name: Loser
-      :segued: false
-    - :uuid: c274268a-ade3-4ce1-9404-0bd806fe1fb7
-      :name: Playing In The Band
-      :segued: false
-    - :uuid: 8005dbde-caf6-41c6-848e-e57b00060309
-      :name: Big Railroad Blues
-      :segued: false
-    - :uuid: 962816e3-43e8-42a9-98f0-1caea586177d
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 7c487c87-b53e-401e-a3b3-85be0da3eab1
-      :name: Big Boss Man
-      :segued: false
-    - :uuid: e94cbd62-98df-4078-b3dd-79d729e8b27f
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 90e9fddd-6ae1-466d-9c4b-fc818e5036d5
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 6e2ba35d-6b11-4f92-a443-7f74bc12ff41
-      :name: Casey Jones
-      :segued: false
-  - :uuid: f907b0c4-6c60-4a9f-8d26-e3e36d0e96fc
-    :songs:
-    - :uuid: 5c2d8f97-7ce1-4fc6-a85f-5c8b5c320276
-      :name: Truckin'
-      :segued: true
-    - :uuid: 30d46d45-16a4-4db9-a508-b0c67f237d15
-      :name: Drums
-      :segued: true
-    - :uuid: 6ff79350-e064-4534-b947-0c30815a8355
-      :name: The Other One
-      :segued: true
-    - :uuid: cdc84f98-4170-440e-bee5-dfae46c43f54
-      :name: Wharf Rat
-      :segued: false
-    - :uuid: 953e705d-9564-4e7d-8e8c-286c656d9ee4
-      :name: Sugar Magnolia
-      :segued: false
-    - :uuid: 3551c7f4-43aa-4680-b32c-3402ca29cecd
-      :name: I'm A King Bee
-      :segued: false
-    - :uuid: b9536f11-1ddb-43ac-8340-d57f0b5132c6
-      :name: Bertha
-      :segued: false
-    - :uuid: c10a8e47-c937-498d-9559-5d28087b32cc
-      :name: Deal
-      :segued: false
-    - :uuid: fb8f5429-c73d-4725-8a6b-03b8160c271b
-      :name: Sing Me Back Home
-      :segued: false
-    - :uuid: 8bd5fa25-0b98-4212-a7b0-a6ceefe10fec
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 04976845-3074-4d6b-8200-6e735f84c27e
-      :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: 2ec03767-785f-4bc6-ad41-e5b82ffd980e
-      :name: Jam
-      :segued: true
-    - :uuid: 76f6b131-195f-4be0-8cf5-722e3e53aa80
-      :name: Turn On Your Lovelight
-      :segued: false    
+  :sets: []
 1971/04/06:
   :uuid: fe80586e-f1cf-4e9e-92da-26a624d1f7eb
   :venue: Manhattan Center
@@ -1272,24 +865,39 @@
     - :uuid: 404a3d1f-b602-45f7-821f-6bd195a70fd9
       :name: Drums
       :segued: true
-    - :uuid: 1a3a0aad-2940-4d27-91af-1c9266f75b66
-      :name: Jam
-      :segued: true
     - :uuid: f47fa41b-6ee0-453f-b5d9-889ac3a069e7
       :name: Not Fade Away
       :segued: true
     - :uuid: 0d51cb54-1d0b-4e5a-b300-c6451ea01800
       :name: Goin' Down The Road Feeling Bad
       :segued: true
-    - :uuid: daf75246-c052-4098-8d93-383032f09ba7
-      :name: Jam
-      :segued: true
     - :uuid: 99b0a2ac-09bc-455f-b40e-10a7acf3f2ef
       :name: Not Fade Away
       :segued: true
     - :uuid: 3c0b7f85-77be-4959-a111-fead38083acc
       :name: Johnny B. Goode
-      :segued: false    
+      :segued: false
+1971/04/08:
+  :uuid: a9114beb-359d-4fca-bee2-9e5c822016d7
+  :venue: Boston Music Hall
+  :city: Boston
+  :state: PA
+  :country: US
+  :sets: []
+1971/04/10:
+  :uuid: a9114beb-359d-4fca-bee2-9e5c822016d7
+  :venue: East Hall, Franklin & Marshall College
+  :city: Lancaster
+  :state: PA
+  :country: US
+  :sets: []
+1971/04/12:
+  :uuid: a9114beb-359d-4fca-bee2-9e5c822016d7
+  :venue: Civic Arena
+  :city: Pittsburgh
+  :state: PA
+  :country: US
+  :sets: []
 1971/04/13:
   :uuid: a9114beb-359d-4fca-bee2-9e5c822016d7
   :venue: Catholic Youth Center
@@ -1588,9 +1196,6 @@
     - :uuid: 18850825-d1f3-46f0-8122-c0d526aef9a3
       :name: Goin' Down The Road Feeling Bad
       :segued: true
-    - :uuid: 171fb09c-230f-49e0-a5c9-0b882268bdca
-      :name: Jam
-      :segued: true
     - :uuid: 32760eb4-15b3-4ecc-9f9c-5aa5a31ae493
       :name: Turn On Your Lovelight
       :segued: false
@@ -1649,6 +1254,12 @@
       :segued: false
     - :uuid: 4a312123-5f0a-4616-990f-b9223724d2bf
       :name: Around And Around
+      :segued: false
+    - :uuid: 7a8ac7e1-7a8f-4e79-b97b-116b4b5cfcf6
+      :name: Good Lovin'
+      :segued: false
+    - :uuid: 7a8ac7e1-7a8f-4e79-b97b-116b4b5cfcf6
+      :name: Drums
       :segued: false
     - :uuid: 7a8ac7e1-7a8f-4e79-b97b-116b4b5cfcf6
       :name: Good Lovin'
@@ -1844,6 +1455,12 @@
     - :uuid: 8cee41a4-d14d-4c2e-851b-7c5e65eba92d
       :name: Good Lovin'
       :segued: false
+    - :uuid: 8cee41a4-d14d-4c2e-851b-7c5e65eba92d
+      :name: Drums
+      :segued: false
+    - :uuid: 8cee41a4-d14d-4c2e-851b-7c5e65eba92d
+      :name: Good Lovin'
+      :segued: false
     - :uuid: 64b6f9b0-44ae-40e6-ac45-b572c01c6fed
       :name: Me And My Uncle
       :segued: false
@@ -1929,6 +1546,12 @@
       :segued: false
     - :uuid: 7b91480b-ef29-4cde-9620-b320df176b4d
       :name: I Second That Emotion
+      :segued: false
+    - :uuid: 0b3e0d77-d5bb-42c6-940c-4002937cc6d2
+      :name: Good Lovin'
+      :segued: false
+    - :uuid: 0b3e0d77-d5bb-42c6-940c-4002937cc6d2
+      :name: Drums
       :segued: false
     - :uuid: 0b3e0d77-d5bb-42c6-940c-4002937cc6d2
       :name: Good Lovin'
@@ -2096,12 +1719,6 @@
     - :uuid: eb563ec5-7455-42ac-86b9-bd370e14ce5e
       :name: Riot In Cell Block
       :segued: false
-    - :uuid: 97ba53fa-9e66-4d64-8c9b-a3a80e066e42
-      :name: Good Vibrations
-      :segued: false
-    - :uuid: 35c0a1e8-ce63-4254-b795-d32f8cd4d1cd
-      :name: I Get Around
-      :segued: false
     - :uuid: 96b4cd93-fa8e-4f34-ba37-d40d6d3a6e88
       :name: Help Me Ronda
       :segued: false
@@ -2187,6 +1804,9 @@
       :segued: true
     - :uuid: 15e6e591-dcef-4539-a9e1-9fbdba53fd0e
       :name: The Other One
+      :segued: false
+    - :uuid: 15e6e591-dcef-4539-a9e1-9fbdba53fd0e
+      :name: Wharf Rat
       :segued: false
     - :uuid: 2bf6816f-c4a6-4db8-8c30-71dccb75e1ad
       :name: Sugar Magnolia
@@ -2318,136 +1938,14 @@
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 6020d6f8-cfc6-4e39-a2f7-a250ade1d8a0
-    :songs:
-    - :uuid: f1adb4a2-286b-4a41-9a07-12cc56ccf9b7
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 7b1fbf06-96e0-4716-85e0-f6b77b985774
-      :name: Me And Bobby Mcgee
-      :segued: false
-    - :uuid: cdd88c92-de9e-4b7d-bd75-8a668456f2bd
-      :name: It Hurts Me Too
-      :segued: false
-    - :uuid: 6589c38f-888b-42fd-a4f4-8099f3460f3f
-      :name: The Promised Land
-      :segued: false
-    - :uuid: 33d9c7fe-db70-4ccf-9405-7728c8551728
-      :name: Loser
-      :segued: false
-    - :uuid: 2a63db22-cdf3-4e14-96e2-ec1cae41d0dc
-      :name: Playing In The Band
-      :segued: false
-    - :uuid: f8c522e7-a22f-4b66-bbef-d5dcc5922f1d
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 157030e1-35d1-4142-867b-8682416b5ee3
-      :name: Truckin'
-      :segued: true
-    - :uuid: 58e030c7-2a84-46bc-bbdd-b98da7606a62
-      :name: Drums
-      :segued: true
-    - :uuid: c6043bab-9624-4369-856f-428e14c64dec
-      :name: The Other One
-      :segued: true
-    - :uuid: 60a603c7-014e-4655-a73e-4220470c226e
-      :name: Wharf Rat
-      :segued: false
-    - :uuid: 80e9c47b-6dc1-4183-b9db-6daf359b7174
-      :name: Sing Me Back Home
-      :segued: false
-    - :uuid: 9a43d3be-da3a-4ea4-bbcb-308507ffd59c
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: c8233d5e-7f01-4d83-b3f1-d7b4dcfaba61
-      :name: Sugar Magnolia
-      :segued: true
-    - :uuid: b4cb8bc6-f2ae-454e-8c53-08a9e80d8d4f
-      :name: Deal
-      :segued: false
-    - :uuid: 06ecb2d3-0a2a-46f3-ab98-c05235d28db1
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 5722c3be-f582-4c7a-b5d0-09da6912175a
-      :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: 5588a42b-4bc6-4e01-9512-61b33e9c0807
-      :name: Not Fade Away
-      :segued: false
+  :sets: []
 1971/05/30:
   :uuid: d0a7c784-44a8-40cc-ae7c-5ec734ea28f4
   :venue: Winterland Arena
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: f12f9ddd-ccd7-4526-b92c-8cbfa03907e6
-    :songs:
-    - :uuid: 1dfe7b29-cd3d-46b5-a9b7-3b92d074d1eb
-      :name: Bertha
-      :segued: false
-    - :uuid: 3e80f667-23c1-4981-8893-7a311194aec4
-      :name: Me And Bobby Mcgee
-      :segued: false
-    - :uuid: 790787de-ab6e-4bef-97ef-45ee226e69e2
-      :name: The Rub
-      :segued: false
-    - :uuid: 9aea903a-00e6-43f8-ad49-69b550145033
-      :name: Loser
-      :segued: false
-    - :uuid: dc29b5bd-afe1-4dcc-97d7-ee728660422b
-      :name: Playing In The Band
-      :segued: false
-    - :uuid: 1aabaf72-703e-454b-8cf7-da095ca26169
-      :name: Next Time You See Me
-      :segued: false
-    - :uuid: fbc72041-842a-4a83-8e38-46cff02d0967
-      :name: Morning Dew
-      :segued: false
-    - :uuid: b9187dcd-0f15-4d87-9500-0c8db4ad35fe
-      :name: The Promised Land
-      :segued: false
-    - :uuid: 4a0cafdd-9320-47e4-ae06-5e4b41da1e19
-      :name: Good Lovin'
-      :segued: false
-  - :uuid: c6ed807c-36f4-48a9-96f4-d2572dcfdc94
-    :songs:
-    - :uuid: 95dda5b4-0b38-4c52-8394-38448b062cc1
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 68d53bd3-cebf-4f2d-a2f8-002c424e1495
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: b60c7643-e6e6-4ace-a6d1-201dc058f4f3
-      :name: Sugar Magnolia
-      :segued: false
-    - :uuid: 134e16da-4b34-4a0f-885d-ca1bd84c4d9c
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 42c92bed-4a73-4c66-9592-ddbbe0b10c4f
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 452a0d8c-7e4b-4811-8f03-03e612ff31d8
-      :name: Deal
-      :segued: false
-    - :uuid: f2f6ba4a-e766-4037-987b-c638591ee1a1
-      :name: Truckin'
-      :segued: false
-    - :uuid: a8b63d2e-9c3b-4687-8587-3afae49f2b2c
-      :name: Turn On Your Lovelight
-      :segued: false
-    - :uuid: 08379e1c-97a5-4840-9a44-59bdf89589bd
-      :name: Uncle John's Band
-      :segued: false
-    - :uuid: 9405438d-d5c9-4e2d-8b93-ec89e41a8cd7
-      :name: Casey Jones
-      :segued: false
-  - :uuid: 1123a6f9-be2e-4c1b-b367-1e80cd013cea
-    :songs:
-    - :uuid: 6ada07be-8f40-41b7-a75e-52922151247b
-      :name: Johnny B. Goode
-      :segued: false
+  :sets: []
 1971/06/21:
   :uuid: 53a64d74-06a7-4259-9f08-5fecee6dd86e
   :venue: Chateau d'Herouville
@@ -2611,9 +2109,6 @@
     - :uuid: 98d94f03-e844-4dad-ab99-6b59c4dfa524
       :name: Goin' Down The Road Feeling Bad
       :segued: true
-    - :uuid: 7e562dc2-4cca-40e0-94d6-3c78b0498f55
-      :name: Jam
-      :segued: true
     - :uuid: 3ec4c42e-e270-4b3b-8265-dc644b2804dd
       :name: Not Fade Away
       :segued: false
@@ -2703,7 +2198,7 @@
       :name: Goin' Down The Road Feeling Bad
       :segued: false
     - :uuid: 77960204-5bfe-4b84-8ecf-28a581a36d7f
-      :name: Jam
+      :name: Darkness Jam
       :segued: false
     - :uuid: 502cd05d-1401-431d-9d75-ef3eb63215bc
       :name: Not Fade Away
@@ -2727,9 +2222,6 @@
     :songs:
     - :uuid: 3c2e29b4-c925-4112-bb9b-31dd30369adb
       :name: Truckin'
-      :segued: false
-    - :uuid: e7754937-3403-4545-8133-4c406e9e1528
-      :name: Yellow Dog Story
       :segued: false
     - :uuid: dc1294d3-0f78-433d-8832-1640f5a5bc6b
       :name: Bertha
@@ -2835,20 +2327,26 @@
     - :uuid: 7f63bf5e-d909-45c6-aa3b-96809ab26b2c
       :name: Loser
       :segued: false
+    - :uuid: 7f63bf5e-d909-45c6-aa3b-96809ab26b2c
+      :name: Big Boss Man
+      :segued: false
     - :uuid: 6690d1b1-c808-4e43-82a3-e681cf8c9a2c
       :name: Sugar Magnolia
       :segued: false
     - :uuid: 57526fc9-6ad6-4f95-8f63-66abe96c618a
       :name: Bird Song
       :segued: false
+    - :uuid: 7f63bf5e-d909-45c6-aa3b-96809ab26b2c
+      :name: Big Railroad Blues
+      :segued: false
+    - :uuid: 7f63bf5e-d909-45c6-aa3b-96809ab26b2c
+      :name: Good Lovin'
+      :segued: false
     - :uuid: 5368fac3-d0fb-44c5-b11b-d9eb8ad39101
       :name: Not Fade Away
       :segued: true
     - :uuid: af499165-ac2e-42b6-bea9-8b33eb7e6481
       :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: 79a1d124-9692-4339-911c-8ad34523dfbb
-      :name: Jam
       :segued: true
     - :uuid: b38fa488-7548-4f4a-b9c2-194092f375ea
       :name: Not Fade Away
@@ -3387,9 +2885,6 @@
       :segued: true
     - :uuid: 644d5158-fdf8-4f15-adfc-fd54a4675f76
       :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: 948fbd2a-a292-4f00-b799-f3c96bee3cbf
-      :name: Jam
       :segued: true
     - :uuid: 696e4414-763f-4991-a5f1-fbe2755e16f5
       :name: Not Fade Away

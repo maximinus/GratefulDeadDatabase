@@ -2,12 +2,14 @@ Order of things to do
 
 1: Finish all years shows
 *: Get the venue data for all 77/78 shows
-3: Get weather info for all 77/78 shows
-4: Get song lengths for 77/78 shows
-5: Get BPM / Volume (?) for 77/78 shows
+3: Get weather info for all 77/78 shows     # 6th October
+4: Get song lengths for 77/78 shows         # 31st October
+5: Get BPM / Volume (?) for 77/78 shows     # 31st October
 
-6: Make maps of tours
-7: Make pretty BPM comparisons
-8: Make pretty graphs
+6: Make maps of 77/78 tours                 # 7th November
+7: Make pretty BPM comparisons              # 15th November
+8: Make pretty graphs                       # 21st November
 
-9: Write article
+9: Make website                             # 12th December
+
+10: Write article                           # 20th December

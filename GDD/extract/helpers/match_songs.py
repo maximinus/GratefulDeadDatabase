@@ -44,7 +44,7 @@ def build_songs_json():
     match, unmatch, csv_unmatch = get_matched_songs(csv_songs, yml_songs)
 
     # dump all this
-    with open('output/matched_songs.json', 'w', encoding='utf-8') as f:
+    with open('../output/matched_songs.json', 'w', encoding='utf-8') as f:
         json.dump(match, f, ensure_ascii=False, indent=4)
     with open('output/unmatched_songs.json', 'w', encoding='utf-8') as f:
         json.dump(unmatch, f, ensure_ascii=False, indent=4)

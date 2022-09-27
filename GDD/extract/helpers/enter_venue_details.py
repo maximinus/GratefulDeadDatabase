@@ -73,7 +73,7 @@ def input_venue_details(venue):
 
 
 def edit_venue_data():
-    venues = get_json_data('output/all_venues.json')
+    venues = get_json_data('../output/all_venues.json')
     existing_data = get_json_data(output)
     existing_venues = [x['location_from_yaml'] for x in existing_data]
     new_data = []

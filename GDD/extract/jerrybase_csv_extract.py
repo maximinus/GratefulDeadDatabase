@@ -13,6 +13,8 @@ class JBSong:
         self.original = row
         # as YYYY-MM-DD
         self.event_date = row[1]
+        # gives us an int
+        self.show_number = int(row[2].split('-')[-1]) - 1
         self.song_name = row[6]
         self.song_id = row[7]
         self.sequence_number = int(row[8])
@@ -50,8 +52,11 @@ class JBSong:
 
 class JBShow:
     def __init__(self, show_date, songs):
-        times = [int(x) for x in show_date.split('-')]
+        # show_date is something like 1970-01-02:0
+        sh = show_date.split(':')
+        times = [int(x) for x in sh[0].split('-')]
         self.date = date(times[0], times[1], times[2])
+        self.show_number = int(sh[1])
         self.text_date = show_date
         self.songs = songs
 
@@ -128,10 +133,12 @@ def sort_into_shows():
     # sort into buckets
     shows = {}
     for i in songs:
-        if i.event_date in shows:
-            shows[i.event_date].append(i)
+        # add show number to form a string
+        show_entry = f'{i.event_date}:{i.show_number}'
+        if show_entry in shows:
+            shows[show_entry].append(i)
         else:
-            shows[i.event_date] = [i]
+            shows[show_entry] = [i]
     all_shows = []
     for key, value in shows.items():
         all_shows.append(JBShow(key, value))

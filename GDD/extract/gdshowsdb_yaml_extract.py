@@ -38,6 +38,7 @@ class GdSet:
 class GdShow:
     def __init__(self, show_date, details):
         self.date = self.convert_date(show_date)
+        self.show_number = self.get_show_number(show_date)
         self.text_date = show_date
         self.guid = details[':uuid']
         self.venue_name = details[':venue']
@@ -50,8 +51,17 @@ class GdShow:
     def full_location(self):
         return f'{self.venue_name}, {self.city}, {self.state}'
 
+    def get_show_number(self, given_date):
+        date_info = [int(x) for x in given_date.split('/')]
+        # Do we have YYYY/MM/DD/SHOW_NUMBER?
+        show_number = 0
+        if len(date_info) == 4:
+            show_number = int(date_info[3])
+        return show_number
+
     def convert_date(self, given_date):
         date_info = [int(x) for x in given_date.split('/')]
+        # sometimes we can have >1 show per day
         # now as array we have YYYY, MM, DD
         return date(date_info[0], date_info[1], date_info[2])
 

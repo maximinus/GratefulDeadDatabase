@@ -201,9 +201,6 @@
     - :uuid: 2e1052af-b132-4373-920e-41022beb6866
       :name: Throwing Stones
       :segued: false
-    - :uuid: 8e039200-4d8c-4d4f-a575-25b9a645a3ab
-      :name: Not Fade Away
-      :segued: false
     - :uuid: d23fd895-73ae-4ab4-8878-f55f5c2646dd
       :name: Wharf Rat
       :segued: false
@@ -741,13 +738,6 @@
     - :uuid: 60dadab5-ae7f-4a1a-ac35-d5f884f6f074
       :name: Touch Of Grey
       :segued: false
-1983/04/14:
-  :uuid: 5483940b-dda5-44f0-9b56-86d7b3c8ca3b
-  :venue: Greek Theatre
-  :city: Berkeley
-  :state: CA
-  :country: US
-  :sets: []
 1983/04/15:
   :uuid: ab53f1f9-92b5-464d-990b-057aac54fb5e
   :venue: Community War Memorial
@@ -798,6 +788,9 @@
     - :uuid: a86a465c-3e33-451a-ac66-83045696611c
       :name: He's Gone
       :segued: false
+    - :uuid: a86a465c-3e33-451a-ac66-83045696611c
+      :name: Bob Star
+      :segued: false
     - :uuid: f4202db7-47db-4cad-80c2-8f40ad052023
       :name: Drums
       :segued: false
@@ -845,14 +838,14 @@
     - :uuid: 34f09c70-8a61-469b-ba53-1e7c265879ca
       :name: Bird Song
       :segued: false
-    - :uuid: d8f145c0-12bc-4042-a4ce-81afc0390681
-      :name: Maybe You Know
+    - :uuid: a7482436-5754-42a5-8d25-2d482f66199d
+      :name: My Brother Esau
       :segued: false
     - :uuid: 436bbeef-6cfd-4d6b-9435-686fc24e3005
       :name: West L.A. Fadeaway
       :segued: false
-    - :uuid: a7482436-5754-42a5-8d25-2d482f66199d
-      :name: My Brother Esau
+    - :uuid: d8f145c0-12bc-4042-a4ce-81afc0390681
+      :name: Maybe You Know
       :segued: false
     - :uuid: 2d4227df-ed7a-4ca5-8cb5-d002603eb2a2
       :name: Looks Like Rain
@@ -882,6 +875,9 @@
       :segued: false
     - :uuid: 9148d873-514f-4d1a-8c54-1199ed53419c
       :name: Iko Iko
+      :segued: false
+    - :uuid: 9148d873-514f-4d1a-8c54-1199ed53419c
+      :name: Bob Star
       :segued: false
     - :uuid: 6890294f-9bc4-424f-8fd2-83e14e7b9815
       :name: The Other One
@@ -1138,7 +1134,7 @@
   - :uuid: aaec1e5b-54dd-43c8-b3f6-26de27f53f43
     :songs:
     - :uuid: 45685d14-6ff7-4523-be01-6c7d70217b40
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: 1ff459cf-0205-412c-961d-e3646890cc6d
       :name: Feel Like A Stranger
@@ -1482,9 +1478,6 @@
     - :uuid: 956764e9-3562-4e26-b0db-3ff9180576ad
       :name: Drums
       :segued: false
-    - :uuid: b15dbdf8-598f-455f-85d9-cc3f9f57fc56
-      :name: Spanish Jam
-      :segued: false
     - :uuid: 5d990164-c8ee-44e1-b4bc-ab335768052e
       :name: Throwing Stones
       :segued: false
@@ -1731,14 +1724,14 @@
     - :uuid: a2e75bff-7b15-4bb7-9d1c-0e8acefa38af
       :name: Peggy O
       :segued: false
-    - :uuid: 0c594d3a-cd5f-450f-9202-8ed4fb9c95bb
-      :name: Hell In A Bucket
+    - :uuid: 56e82ca7-c817-4a29-929b-018cee50860e
+      :name: My Brother Esau
       :segued: false
     - :uuid: 3bfe55bb-c8e0-44b5-a56d-1453598abc7d
       :name: Tennessee Jed
       :segued: false
-    - :uuid: 56e82ca7-c817-4a29-929b-018cee50860e
-      :name: My Brother Esau
+    - :uuid: 0c594d3a-cd5f-450f-9202-8ed4fb9c95bb
+      :name: Hell In A Bucket
       :segued: false
     - :uuid: b4cbe7a8-dc55-4787-8d7e-ca1b40095de8
       :name: West L.A. Fadeaway
@@ -1765,6 +1758,12 @@
       :segued: false
     - :uuid: 17218ab3-04f4-4586-a45d-578fc2eada9a
       :name: Drums
+      :segued: true
+    - :uuid: 17218ab3-04f4-4586-a45d-578fc2eada9a
+      :name: Space
+      :segued: true
+    - :uuid: 17218ab3-04f4-4586-a45d-578fc2eada9a
+      :name: Bob Star
       :segued: false
     - :uuid: 82426166-6139-4e86-9132-5b774b242008
       :name: The Other One
@@ -2695,73 +2694,7 @@
   :city: Eugene
   :state: OR
   :country: US
-  :sets:
-  - :uuid: 68cc0257-3459-4c3e-8c79-e620aa6ca4a4
-    :songs:
-    - :uuid: 09ad5d6f-6b11-4cfb-8514-7c708248de0f
-      :name: Alabama Getaway
-      :segued: false
-    - :uuid: c3d1510a-a1cf-43d4-8386-c9f9f0c740c9
-      :name: Greatest Story Ever Told
-      :segued: false
-    - :uuid: 43c97c9a-b856-4f03-a39f-08a260d9963e
-      :name: Dupree's Diamond Blues
-      :segued: false
-    - :uuid: 806267a7-4ac9-4e5f-93c2-0e0bdc589f7d
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: d46a1e6f-0744-4bb2-a585-109a70a1d662
-      :name: Mexicali Blues
-      :segued: false
-    - :uuid: db2178d3-d3f6-4929-b457-0a5444feb8b5
-      :name: West L.A. Fadeaway
-      :segued: false
-    - :uuid: 1d642009-7ff2-4c13-8311-f22f719b909d
-      :name: Hell In A Bucket
-      :segued: false
-    - :uuid: ef6c56b0-d9e4-4d26-8b59-f4f11285fece
-      :name: Althea
-      :segued: false
-    - :uuid: 596b5220-4a84-40ea-b8d5-66db26538a29
-      :name: Cassidy
-      :segued: false
-    - :uuid: d97ad0f4-2ad9-40f3-b970-e57375a30f27
-      :name: Don't Ease Me In
-      :segued: false
-  - :uuid: 109afb74-18d1-4f6e-8542-d8f1d64461a0
-    :songs:
-    - :uuid: 930cd435-6527-48e0-8286-68a6061fc1dd
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: ac7c09c0-5152-4b49-b984-1343a92fbc82
-      :name: Playing In The Band
-      :segued: false
-    - :uuid: e2f422f0-722b-4c05-a747-12a724150dd7
-      :name: China Doll
-      :segued: false
-    - :uuid: f217dfb8-3b4d-4977-a63b-82caa05f05df
-      :name: Drums
-      :segued: false
-    - :uuid: f522b2fb-9bf2-489e-ad19-b57a4d8c5a30
-      :name: Truckin'
-      :segued: false
-    - :uuid: bea870bb-801f-4108-87d7-37fd0ce3c7f5
-      :name: Stella Blue
-      :segued: false
-    - :uuid: 5e19732d-9121-4b81-a143-a0159f141d78
-      :name: Around And Around
-      :segued: false
-    - :uuid: d627587f-c394-4e4a-b4e6-cbca62c0949c
-      :name: Good Lovin'
-      :segued: false
-  - :uuid: 18798cc8-9948-4c3c-a5ab-7e9068594e36
-    :songs:
-    - :uuid: 2d6b6b93-7d77-48c6-915f-685fbe0848a7
-      :name: U.S. Blues
-      :segued: false
-    - :uuid: 2a51e3a1-0cf5-49c8-816d-62ee1276dd38
-      :name: (I Can't Get No) Satisfaction
-      :segued: false
+  :sets: []
 1983/08/31:
   :uuid: 2a7ed1bc-e047-4893-bbf8-2b7144d45b2c
   :venue: Silva Hall
@@ -3331,8 +3264,11 @@
       :name: Drums
       :segued: true
     - :uuid: b9df32c2-c864-470a-9527-aeb5d4dc0eec
+      :name: Spanish Jam
+      :segued: true
+    - :uuid: b9df32c2-c864-470a-9527-aeb5d4dc0eec
       :name: Space
-      :segued: true    
+      :segued: true
     - :uuid: ed55d24d-a358-467e-96f7-ffa1f4e0b663
       :name: The Wheel
       :segued: true
@@ -3482,7 +3418,7 @@
   - :uuid: ceb96656-b21c-4d80-a462-c272075e9783
     :songs:
     - :uuid: 4fa5202c-2f8c-4326-b91a-88ab1cb4eeb2
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: fae55a38-aede-439b-9edf-d4cdc047aa19
       :name: One More Saturday Night
@@ -4511,12 +4447,15 @@
       :segued: false
     - :uuid: 6c33808e-8275-4e48-808e-a251d1a2ebdc
       :name: Drums
-      :segued: false
+      :segued: true
+    - :uuid: 6c33808e-8275-4e48-808e-a251d1a2ebdc
+      :name: Space
+      :segued: true
+    - :uuid: 6c33808e-8275-4e48-808e-a251d1a2ebdc
+      :name: Mind Left Body Jam
+      :segued: true
     - :uuid: 20bc566e-4680-4575-915b-054b88b6f5e8
       :name: Truckin'
-      :segued: false
-    - :uuid: 3df1ca36-8e36-4ec3-816b-f2804fceabc2
-      :name: Mind Left Body Jam
       :segued: false
     - :uuid: 45f2a2f3-80f8-445a-bbfe-917670439d70
       :name: Wharf Rat

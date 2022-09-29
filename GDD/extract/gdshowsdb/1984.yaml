@@ -1533,13 +1533,6 @@
     - :uuid: 6b84cac6-72fd-4238-a822-e4fdd828aed0
       :name: Brokedown Palace
       :segued: false
-1984/06/08:
-  :uuid: fd6938ae-ad47-4564-88a0-133eb456e2c0
-  :venue: Cal Expo Amphitheatre
-  :city: Sacramento
-  :state: CA
-  :country: US
-  :sets: []
 1984/06/09:
   :uuid: 7bd2ae46-cd68-425e-9004-eac97a6df51b
   :venue: California Exposition Amphitheater
@@ -2003,7 +1996,10 @@
       :segued: false
     - :uuid: 6cab12bb-7f23-4a59-8fe3-3a05efa5e366
       :name: Truckin'
-      :segued: false
+      :segued: true
+    - :uuid: 6cab12bb-7f23-4a59-8fe3-3a05efa5e366
+      :name: Spoonful Jam
+      :segued: true
     - :uuid: 3b801edd-ec3a-4f63-b468-3613aec8dd2e
       :name: Black Peter
       :segued: false
@@ -2496,9 +2492,6 @@
       :segued: true
     - :uuid: e092742f-bbcd-4660-9a96-311afe3a56ca
       :name: Fire On The Mountain
-      :segued: true
-    - :uuid: ca9df3bb-fe4a-45ad-9f46-f70396c05ec9
-      :name: Jam
       :segued: true
     - :uuid: 08a8f0a8-8c89-4bd6-835e-2a973164b5d0
       :name: Don't Need Love
@@ -3488,7 +3481,7 @@
       :name: Drums
       :segued: false
     - :uuid: 76cd5816-56db-42bf-80d3-2854a86b95dd
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: 36a8433f-2743-4bba-a4b4-f42480d6b24d
       :name: Uncle John's Band
@@ -4112,9 +4105,6 @@
     - :uuid: 2230d469-c8e1-4276-9a11-cb2e3d0c6b00
       :name: Drums
       :segued: false
-    - :uuid: 35fede8d-a1bb-4895-98ec-fada071b319e
-      :name: Mind Left Body Jam
-      :segued: false
     - :uuid: fa89fa7b-0477-443a-a6a8-e3d05de2bf76
       :name: Morning Dew
       :segued: false
@@ -4189,7 +4179,7 @@
       :name: Drums
       :segued: false
     - :uuid: 4952f244-6fcf-48e6-b94a-b342e020a342
-      :name: Playing In The Band
+      :name: Playing In The Band Reprise
       :segued: false
     - :uuid: 6c72f074-9571-4a0b-acac-d2a6577574a6
       :name: Bertha
@@ -4287,11 +4277,11 @@
     - :uuid: 0b7668cb-46a5-4360-bd7a-716ce4cab805
       :name: Tons Of Steel
       :segued: false
-    - :uuid: 900902e9-0685-409f-aaac-4f6e8788615a
-      :name: Down In The Bottom
-      :segued: false
     - :uuid: a20a7383-e937-47e9-bb4f-ff1ae8fcb8a7
       :name: I Ain't Superstitous
+      :segued: false
+    - :uuid: 900902e9-0685-409f-aaac-4f6e8788615a
+      :name: Down In The Bottom
       :segued: false
     - :uuid: 551ff19e-b9c1-4572-8c82-fd449ad80d8d
       :name: Dupree's Diamond Blues

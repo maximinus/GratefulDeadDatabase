@@ -23,11 +23,40 @@ def get_cvs_song(song_title):
 
 
 def get_same_date(main_date, show_number, shows):
-    # TODO: Same date must also match set number
     for i in shows:
         if main_date == i.date:
             if show_number == i.show_number:
                 return i
+
+
+def clean_show_indexes(shows):
+    # collect all shows into buckets
+    buckets = {}
+    for show in shows:
+        if show.date in buckets:
+            buckets[show.date].append(show)
+        else:
+            buckets[show.date] = [show]
+    resulting_shows = []
+    # now scan the results
+    for key, value in buckets.items():
+        if len(value) == 1:
+            # only 1, so it is the first
+            value[0].show_number = 0
+            resulting_shows.append(value[0])
+        else:
+            # must be >1, right? current indexes must be unique, at least
+            indexes = list(set([x.show_number for x in value]))
+            if len(indexes) != len(value):
+                raise ValueError(f'Bad show indices: {[x.show_number for x in value]}')
+            # now sort them in order
+            value.sort(key=lambda x: x.show_number, reverse=False)
+            index = 0
+            for x in value:
+                x.show_number = index
+                resulting_shows.append(x)
+                index += 1
+    return resulting_shows
 
 
 def compare_shows(year):
@@ -38,6 +67,9 @@ def compare_shows(year):
     for i in all_csv:
         if i.date.year == year:
             csv_shows.append(i)
+
+    # for the csv shows, we need check the show indexes are correct, as they are often wrong
+    csv_shows = clean_show_indexes(csv_shows)
 
     # now match the shows. They should have the same date
     matched = []
@@ -268,7 +300,7 @@ if __name__ == '__main__':
     matched_shows = []
     years = [x+1900 for x in [71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]]
     # For 1970 and earlier, we have to solve double shows
-    #years = [1970]
+    years = [1971]
     for i in years:
         matched_shows.extend(compare_shows(i))
 

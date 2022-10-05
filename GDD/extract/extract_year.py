@@ -91,12 +91,12 @@ def compare_shows(year):
     if len(unmatched) != 0:
         print('Yaml shows not in CSV:')
         for i in unmatched:
-            print(f'  {i.date}')
+            print(f'  {i.date}:{i.show_number}')
 
     if len(csv_unmatched_shows) != 0:
         print('CSV shows not in Yaml:')
         for i in csv_unmatched_shows:
-            print(f'  {i.date}')
+            print(f'  {i.date}:{i.show_number}')
 
     return matched
 
@@ -300,7 +300,7 @@ if __name__ == '__main__':
     matched_shows = []
     years = [x+1900 for x in [71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]]
     # For 1970 and earlier, we have to solve double shows
-    years = [1971]
+    years = [1970]
     for i in years:
         matched_shows.extend(compare_shows(i))
 

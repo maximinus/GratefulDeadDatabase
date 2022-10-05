@@ -1,3 +1,9 @@
+1970/06/27
+    Sort out this mess
+
+1970/11/06 + 1970/11/07
+    How many shows for both nights? I have followed Jerrybase for this but I am not sure
+
 1971/03/05:
     Do we know anything about the Black Panthers show? (Not added to the DB)
 
@@ -9,6 +15,7 @@
 
 1978/11/17:
     First show that evening is an acoustic show. Not added; decide and add manually
+    Update: May now be detected with the new code. Check output, add manually if needed
 
 1978/12/17:
     Is it Space or Ollin Arageed?
@@ -26,6 +33,22 @@
     Two Soldiers or Handsome Cabin Boy jam? Went with the latter
 
 
+Add the following shows, for which no setlists exists:
+    1970-02-20
+    1970-02-22
+    1970-07-03
+    1970-08-28  Thee Club, Los Angeles, CA
+    1970-08-29  Thee Club, Los Angeles, CA
+    1970-09-25  Pasadena Civic Auditorium, Pasadena, CA
+    1970/11/09  Action House, Island Park, NY
+    1970/11/10  Action House, Island Park, NY
+    1970/11/13  46th Street Rock Palace, Brooklyn, NY
+    1970/11/14  46th Street Rock Palace, Brooklyn, NY
+    1970/12/22  Sacramento Memorial Auditorium, Sacramento, CA
+
+
 Check and compare Dark Star vs Dark Star Jam
 Check all jams mentioned in the CSV data
 Check all space NOT followed by drums
+In the early 70s, Jerrybase almost always gives Good Lovin > Drums > Good Lovin
+    Do all those Good Lovin's deserve a Drums?

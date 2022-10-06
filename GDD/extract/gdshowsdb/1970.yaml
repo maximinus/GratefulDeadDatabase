@@ -1329,6 +1329,12 @@
     :songs:
     - :uuid: 7341b74d-105b-412d-973a-f3ceebf1f3e7
       :name: Good Lovin'
+      :segued: true
+    - :uuid: 7341b74d-105b-412d-973a-f3ceebf1f3e7
+      :name: Drums
+      :segued: true
+    - :uuid: 7341b74d-105b-412d-973a-f3ceebf1f3e7
+      :name: Good Lovin'
       :segued: false
     - :uuid: 842fb026-844f-423f-8d32-6d09da65b185
       :name: Cryptical Envelopment
@@ -1437,50 +1443,7 @@
   :city: Alfred
   :state: NY
   :country: US
-  :sets:
-  - :uuid: cce5ee42-968b-41ef-b0ba-37263d671127
-    :songs:
-    - :uuid: 31b5bff4-1776-4bee-831e-47942a7df003
-      :name: The Race Is On
-      :segued: false
-    - :uuid: b15f4820-91a6-4b56-a915-10d657eca0a0
-      :name: Wake Up Little Susie
-      :segued: false
-    - :uuid: cfe17dfc-314b-4fb6-a0a9-275d158f26a9
-      :name: New Speedway Boogie
-      :segued: false
-    - :uuid: e8799de0-ff9b-4a28-a353-8d6b1df89dfc
-      :name: Cold Jordan
-      :segued: false
-    - :uuid: 36eb6bd1-d3a2-471b-bb01-5e6df86ac371
-      :name: Uncle John's Band
-      :segued: false
-  - :uuid: 59fcc0b8-efb0-4668-be58-e4b0b2d8c0c9
-    :songs:
-    - :uuid: 3a4c957f-00be-439c-86e3-6a25f3b94e37
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 902270a8-2618-41c6-88e6-e3413a38cc8c
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: b5e7d25c-adf9-4dd7-8149-74bee7c712ad
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: 9d0879b0-ef50-4330-9aef-07e54b02f53f
-      :name: Drums
-      :segued: false
-    - :uuid: 33b7362a-e3c1-4f1e-a4f0-7dc847a0ae01
-      :name: The Other One
-      :segued: false
-    - :uuid: 6b79ec65-bec6-4c15-bab5-0b9cdbf7acd7
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: 4fff5dbb-10ba-42f9-9ed8-23285b127812
-      :name: High Time
-      :segued: false
-    - :uuid: ee576135-555e-4786-95a8-10c5ac3a8a8c
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1970/05/02:
   :uuid: ee80c1fc-a816-434c-ae12-02178ea7130f
   :venue: Harpur College
@@ -1548,6 +1511,12 @@
       :segued: false
     - :uuid: 9d9341b5-a1ec-4969-84c9-a52b0828bf69
       :name: Good Lovin'
+      :segued: true
+    - :uuid: 9d9341b5-a1ec-4969-84c9-a52b0828bf69
+      :name: Drums
+      :segued: true
+    - :uuid: 9d9341b5-a1ec-4969-84c9-a52b0828bf69
+      :name: Good Lovin'
       :segued: false
     - :uuid: c86506dd-d35a-415c-9571-bb49d3d3ea0c
       :name: Cold Rain And Snow
@@ -1571,71 +1540,6 @@
       :segued: true
     - :uuid: b19edc1c-4376-4501-86a3-8e440bb25831
       :name: And We Bid You Good Night
-      :segued: false
-1970/05/03:
-  :uuid: c7fc2826-efaa-41aa-9dfb-007dae825aeb
-  :venue: Field House
-  :city: Middletown
-  :state: CT
-  :country: US
-  :sets:
-  - :uuid: 095036d8-0006-4eb4-8dda-a9d333a1154b
-    :songs:
-    - :uuid: 10abf0b5-476f-47f5-b015-895082c118ae
-      :name: Workin' Man Blues
-      :segued: false
-    - :uuid: 4b8d429e-b356-4b88-83ea-c482f4a192db
-      :name: I Don't Know You
-      :segued: false
-    - :uuid: fcbf3521-b682-495f-b815-d5884799da8f
-      :name: Last Lonely Eagle
-      :segued: false
-    - :uuid: 96efdad8-7cb1-4158-94dc-a39024305269
-      :name: Truck Drivin' Man
-      :segued: false
-    - :uuid: f3915d9f-89e0-4aac-abcf-fbca42d12129
-      :name: Fair Chance To Know
-      :segued: false
-  - :uuid: f73cbdb3-c28b-4adf-a7a0-e24e00e5e539
-    :songs:
-    - :uuid: 00eb42c0-7ae9-4092-8874-47db806b8f89
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: d9f8e730-6e41-41ee-b6a3-8f8ec57212bb
-      :name: New Speedway Boogie
-      :segued: false
-    - :uuid: 9c0579bd-3bb7-4f1e-b1b9-d0b7a86d537c
-      :name: Drums
-      :segued: false
-    - :uuid: 3f1d191f-6f28-4c60-9bdd-b84ebac75a46
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 4fb08b86-1c0c-4df7-9254-23cb29a2acb2
-      :name: Drums
-      :segued: false
-    - :uuid: 6f61c33e-8e36-49a4-8206-efdaeee04f2d
-      :name: Jam
-      :segued: false
-    - :uuid: f3e8e56f-c312-4a7f-9794-ba3df405c3ed
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 988bc82b-a730-4384-815e-dfa027ffb95e
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 0a1ff0a9-4933-4d42-bb91-7da673df042d
-      :name: Don't Ease Me In
-      :segued: false
-    - :uuid: 638736f4-66e0-4785-919e-3811d4e5ed23
-      :name: Turn On Your Lovelight
-      :segued: false
-    - :uuid: b1e2c2b5-66ef-4b7f-8657-0e74692584e7
-      :name: The Main Ten Jam
-      :segued: false
-    - :uuid: 3e76ccf3-18fb-4407-a54f-c8ea198c98bc
-      :name: Uncle John's Band
-      :segued: false
-    - :uuid: b7c33572-a7d4-4527-8c05-66075060639b
-      :name: Turn On Your Lovelight
       :segued: false
 1970/05/06:
   :uuid: 58955849-354d-4a00-8f7d-5937aab5e094
@@ -1663,13 +1567,6 @@
   :venue: Worcester Polytechnic Institute
   :city: Worcester
   :state: MA
-  :country: US
-  :sets: []
-1970/05/10:
-  :uuid: 5c40b2c4-8400-4830-b21f-9c7755ffea63
-  :venue: Atlanta Sports Arena
-  :city: Atlanta
-  :state: GA
   :country: US
   :sets: []
 1970/05/14:
@@ -1713,6 +1610,12 @@
     - :uuid: a893eac7-df75-43e2-8aaa-8536bcd35528
       :name: High Time
       :segued: false
+    - :uuid: 8758b460-b78d-42dd-9784-de8e4c83fb6a
+      :name: Good Lovin'
+      :segued: true
+    - :uuid: 8758b460-b78d-42dd-9784-de8e4c83fb6a
+      :name: Drums
+      :segued: true
     - :uuid: 8758b460-b78d-42dd-9784-de8e4c83fb6a
       :name: Good Lovin'
       :segued: false

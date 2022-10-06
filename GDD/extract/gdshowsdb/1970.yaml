@@ -585,6 +585,12 @@
       :segued: false
     - :uuid: 60cee59e-3815-4be8-867f-0fde85bd2a5e
       :name: Good Lovin'
+      :segued: true
+    - :uuid: 60cee59e-3815-4be8-867f-0fde85bd2a5e
+      :name: Drums
+      :segued: true
+    - :uuid: 60cee59e-3815-4be8-867f-0fde85bd2a5e
+      :name: Good Lovin'
       :segued: false
     - :uuid: 82946d9c-7e53-4b82-aada-94bff98f4eff
       :name: Me And My Uncle
@@ -616,24 +622,7 @@
   :city: St. Louis
   :state: MO
   :country: US
-  :sets:
-  - :uuid: a4838d71-a4ae-4b83-9092-e918591e8521
-    :songs:
-    - :uuid: c576d2f5-5604-49dc-b9d5-2394a80290dc
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: b2882699-c772-4112-8b54-fc5eed292fca
-      :name: Dark Star
-      :segued: false
-    - :uuid: eea27880-492a-441d-8516-8dc0ade1c0ed
-      :name: Saint Stephen
-      :segued: false
-    - :uuid: 9982148c-1a52-4066-bac6-2a3ce7e86c8e
-      :name: Mason's Children
-      :segued: false
-    - :uuid: 2e535021-7bae-463e-96fd-693ccc63f40b
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1970/02/04:
   :uuid: 5b39a5d5-23d2-47dd-88b6-6f33a7507a92
   :venue: Family Dog at the Great Highway
@@ -667,42 +656,7 @@
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 714a8214-82ad-45b8-bc44-a97f6a4c0fc5
-    :songs:
-    - :uuid: eba8fd1c-7d4e-4655-bdcf-dd32f1090e96
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 8ebdf015-a2a8-431d-9a92-6f6f8b9cd15b
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: e89462e4-0ba9-4eb7-a7f7-e504ed14855b
-      :name: The Race Is On
-      :segued: false
-    - :uuid: 5a780444-8e85-4154-af54-c47692fbefb5
-      :name: Big Boss Man
-      :segued: false
-    - :uuid: 9eece924-dea4-4db7-b28a-97e613c40fa6
-      :name: Black Peter
-      :segued: false
-    - :uuid: 87034b57-6d62-440f-9179-9b8cb7141267
-      :name: Mason's Children
-      :segued: false
-    - :uuid: 2be444fa-ca58-474f-a17a-2e20c5c48abd
-      :name: The Eleven
-      :segued: false
-    - :uuid: bba91e00-252c-4329-9119-5650c2609eb8
-      :name: Caution (Do Not Stop On Tracks)
-      :segued: false
-    - :uuid: 02b85c23-fb68-4c56-88bb-1247229ea6df
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 8b1bb909-a05d-4d23-8dbc-9c9a11435e9d
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: db1cb1d6-751e-466f-84b2-bcf3ab9c5e16
-      :name: Uncle John's Band
-      :segued: false
+  :sets: []
 1970/02/06:
   :uuid: aa13fdfd-c03c-4279-8b00-e70f4e90ed5e
   :venue: Fillmore West
@@ -736,6 +690,12 @@
     - :uuid: 2abdaf4a-2fa2-409d-b406-e56878cfec5e
       :name: Mama Tried
       :segued: false
+    - :uuid: ecc7d651-4c83-4ef3-9923-89f9e3074faa
+      :name: Good Lovin'
+      :segued: true
+    - :uuid: ecc7d651-4c83-4ef3-9923-89f9e3074faa
+      :name: Drums
+      :segued: true
     - :uuid: ecc7d651-4c83-4ef3-9923-89f9e3074faa
       :name: Good Lovin'
       :segued: false
@@ -792,6 +752,9 @@
       :segued: false
     - :uuid: f8d313ca-f5c5-42b9-993f-b3e4ee6055c5
       :name: Me And My Uncle
+      :segued: false
+    - :uuid: 6c0f11ab-d7e0-436e-b685-708d76fb8bae
+      :name: Hard To Handle
       :segued: false
     - :uuid: 6c0f11ab-d7e0-436e-b685-708d76fb8bae
       :name: Cold Rain And Snow
@@ -862,9 +825,6 @@
   :sets:
   - :uuid: 5ddd842f-789b-42a6-89ea-e5f90d1cf467
     :songs:
-    - :uuid: 30821664-8c7c-434c-8492-e9abbba9b109
-      :name: Black Peter
-      :segued: false
     - :uuid: 8575793b-64a3-4ae4-9bca-2e96f6c1b639
       :name: Cryptical Envelopment
       :segued: true
@@ -1152,118 +1112,14 @@
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: f5fa0b83-67b6-4953-adaf-346e68060541
-    :songs:
-    - :uuid: beef5b48-3eee-4a0f-b150-b934ead0006a
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: d17dec59-745e-4f32-a76f-89400e10296f
-      :name: Mama Tried
-      :segued: false
-    - :uuid: 7f2b35c4-5971-40de-990a-4290de6cea23
-      :name: Dancing In The Street
-      :segued: false
-    - :uuid: 1780ba5d-af0f-4d97-84a0-a10493e3940d
-      :name: Easy Wind
-      :segued: false
-    - :uuid: 24e408b4-f4a6-408d-9c7e-2ca3b3fd8807
-      :name: Black Peter
-      :segued: false
-    - :uuid: c96237c7-8ac4-4d59-8f29-34d17c853ba7
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 6cdea38a-1b68-4f31-9224-bf2543703348
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 292da75d-de4f-41e0-acc9-b8deb2f80c2a
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: dfbba91f-154a-4f9e-8100-d3fb7770d509
-      :name: High Time
-      :segued: false
-    - :uuid: 97b63b37-c74a-452f-93bc-866e4ee22507
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: c610654b-fa8a-45ff-9af1-9281dff5a03c
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 4ca766a9-dec7-4200-b13e-de752a759905
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: e246e5e6-011b-448e-8cfb-eab0eed8f6af
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: b5d22a81-7ce5-46cc-94ee-1a6300f227f2
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1970/02/28:
   :uuid: d27ed27e-16d6-4a21-92c5-097b7f7c6de2
   :venue: Family Dog at the Great Highway
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: d7cbcd36-ab9c-42b7-85b3-1104d8c71d9f
-    :songs:
-    - :uuid: 38d19ec1-4045-493f-b6ce-b0c346ae951f
-      :name: Turn On Your Lovelight
-      :segued: false
-    - :uuid: 2c082fb0-c0d4-4ca0-952f-32eaa556ba53
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 5a054f7a-01dc-4c8a-9a86-253d3230eb63
-      :name: Cumberland Blues
-      :segued: false
-  - :uuid: b9e253cb-2d82-4290-ae31-1a18c1589864
-    :songs:
-    - :uuid: d8fc3709-26f7-4bb4-8c52-6feff68dbc75
-      :name: Monkey And The Engineer
-      :segued: false
-    - :uuid: 7406f0d7-e499-4322-b498-fa7f1dd1c775
-      :name: Little Sadie
-      :segued: false
-  - :uuid: cfa341c4-61b5-4242-afc3-7c4eaa0e18c0
-    :songs:
-    - :uuid: 79441648-7ac9-45ce-a898-f55bd27a21e6
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 6cf37c27-180a-4f00-995b-24f8ba7e6651
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: c0dfa42a-dc92-448f-b6fc-eca6b08124d7
-      :name: High Time
-      :segued: false
-    - :uuid: 35da4f9a-2a12-4d2f-9853-16719217f6a3
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: f8f0642f-934e-47f3-bfd4-14b7ad0b8cc2
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 997ec539-9049-42d5-96a3-6ac649633371
-      :name: Big Boss Man
-      :segued: false
-    - :uuid: 5c73acbf-326e-4c43-8b80-e2e6a3ded206
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 3e2ca517-1601-4461-973f-fc6626864539
-      :name: Alligator
-      :segued: false
-    - :uuid: 4dbf4d71-3215-4982-a06b-7881ec457399
-      :name: Drums
-      :segued: false
-    - :uuid: 7ae7e893-db8f-4d11-87bb-b3b925ae4380
-      :name: The Other One
-      :segued: false
-    - :uuid: e156af6a-52b5-4631-aa8a-6943c24e3dcf
-      :name: Mason's Children
-      :segued: false
-    - :uuid: e2bfabc9-0784-4bd8-8d6e-8657f6f26717
-      :name: Turn On Your Lovelight
-      :segued: false
-    - :uuid: 589108d0-4484-42e2-9f41-2ad20d1b1899
-      :name: Uncle John's Band
-      :segued: false
+  :sets: []
 1970/03/01:
   :uuid: 3ede1651-4859-4c26-80fe-95b0cac556ba
   :venue: Family Dog at the Great Highway
@@ -1324,54 +1180,7 @@
   :city: Phoenix
   :state: AZ
   :country: US
-  :sets:
-  - :uuid: a3b29b9d-88c2-47f6-b81f-fbf7331885ee
-    :songs:
-    - :uuid: 26e0e292-ab61-411a-9ca2-e646ac627db6
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: f2aa7e68-24b7-4201-9789-5a43acc703d7
-      :name: Yellow Dog Story
-      :segued: false
-    - :uuid: 0a7e33b4-eced-4b2c-9cca-d05c4ee9d603
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: c89a2a22-cded-4aca-803c-2a700fbcc883
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 74ba55ea-6eca-4eff-aba5-374e4b3a2b6e
-      :name: High Time
-      :segued: false
-    - :uuid: a26ec227-470e-48bf-a475-ed447e337f06
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 86cab5e1-e7fb-48a1-9650-36774b9304d8
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: a069714c-59bc-49aa-8caa-0e44e3428533
-      :name: Monkey And The Engineer
-      :segued: false
-    - :uuid: eac10f24-1367-42dc-93f6-742733346da3
-      :name: I've Been All Around This World
-      :segued: false
-    - :uuid: 1006cda7-384e-41eb-9b7f-47173f6aa043
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 907432c7-7686-4154-9a34-b6211195a15e
-      :name: Black Peter
-      :segued: false
-    - :uuid: 1389496c-bb75-42ff-a604-588af98a0c35
-      :name: Katie Mae
-      :segued: false
-    - :uuid: 7ba5729c-dc6e-4b80-9011-7b68f10eabf5
-      :name: Wake Me Shake Me
-      :segued: false
-    - :uuid: f1d16265-f994-4241-8ade-6796c8e512a9
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 8402c1b3-7c11-4b49-99b4-b26980152a29
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1970/03/17:
   :uuid: 722fcdf2-47a6-4683-8baa-aff34442739d
   :venue: Kleinhans Music Hall
@@ -1403,181 +1212,21 @@
   :city: Port Chester
   :state: NY
   :country: US
-  :sets:
-  - :uuid: ec1464dd-5bea-499d-9bbf-d8be2b231d78
-    :songs:
-    - :uuid: 4573c27a-b625-48b5-a049-9e1000048652
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 2ffd6f59-139f-46cf-8c7c-64faaf6b524c
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: da431947-a975-4426-b515-b28f8e7c0651
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 23943704-d9bb-4648-a266-79a3cf2535fc
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 1eabadb2-4160-4357-a2d0-f2d3e3782431
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: e51de8b7-5591-47be-8b4c-c5e4b705bcca
-      :name: Deep Elem Blues
-      :segued: false
-    - :uuid: ccdc5bb0-669b-4dd4-b01f-f29cf83eb666
-      :name: Friend Of The Devil
-      :segued: false
-    - :uuid: ce7ba066-946f-4403-b756-b5b3cd0e1f19
-      :name: Don't Ease Me In
-      :segued: true
-    - :uuid: cf03e522-29d8-4241-9379-9d7079e67e7e
-      :name: Black Peter
-      :segued: false
-    - :uuid: 2baed0f6-2339-42c0-ae49-11b60100f641
-      :name: Uncle John's Band
-      :segued: false
-    - :uuid: 7088d50b-93b3-4ec0-967f-c1df85054d6b
-      :name: Katie Mae
-      :segued: true
-    - :uuid: e8e60e49-5100-4c7d-a233-c77465a18808
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: befec990-17ba-40dd-938f-40cb0feda944
-      :name: Drums
-      :segued: true
-    - :uuid: cf2eb04c-8491-46d7-ae64-123c5add9c4e
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 3b118e92-8ce0-415a-b751-c1663a50fd22
-      :name: Drums
-      :segued: true
-    - :uuid: 8fc4dbe7-47ac-4057-8aa7-5f36f545656b
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 98fb8d4c-d299-4ad8-90de-3c99ba61009b
-      :name: Viola Lee Blues
-      :segued: false
-    - :uuid: e5d94545-3bca-475b-b208-fc78c96df55a
-      :name: High Time
-      :segued: false
-    - :uuid: fd80668f-bccb-40c6-99d4-3045820b7aa2
-      :name: Turn On Your Lovelight
-      :segued: false
-  - :uuid: 594dfa5f-d0c9-4e47-a65c-5eb0ffe93de8
-    :songs:
-    - :uuid: 96fd9223-486d-4499-be04-6edf12550931
-      :name: And We Bid You Good Night
-      :segued: false
+  :sets: []
 1970/03/21/0:
   :uuid: cbb2448b-602f-4737-8192-3adf9ffe7f7b
   :venue: Capitol Theater
   :city: Port Chester
   :state: NY
   :country: US
-  :sets:
-  - :uuid: ff87ec80-2f70-4dec-8412-3299333e1281
-    :songs:
-    - :uuid: 26de3993-6fd1-4180-9795-510ce3b94970
-      :name: Walking The Dog
-      :segued: false
-    - :uuid: 1bd56ef2-4e4b-4001-b4ee-dd82d41f0caa
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 7c2f912c-50f0-4d8d-b7d9-df0218cde2fa
-      :name: Death Don't Have No Mercy
-      :segued: false
-    - :uuid: 41203735-8fbf-477e-8b51-17d061c8c43a
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: 5bac47ed-6002-4750-b41d-d5e047609cbb
-      :name: Drums
-      :segued: true
-    - :uuid: cafdc368-a6d3-47e0-b05f-d867a71ebed4
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 299c0583-ad80-4de5-8567-473e24f3e907
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 7e1e9efc-e3c6-4b84-8eef-3ef3c106fc8d
-      :name: Big Boss Man
-      :segued: false
-    - :uuid: cc64d98f-669b-45e4-afa6-ad074c476ffa
-      :name: He Was A Friend Of Mine
-      :segued: true
-    - :uuid: f35ba2c5-1a34-44b4-8da4-e44a01714c41
-      :name: Viola Lee Blues
-      :segued: true
-    - :uuid: a1daefd3-1384-44dc-8432-ced1f8d28f6e
-      :name: The Seven
-      :segued: false
-    - :uuid: d084e87e-fb4f-4ff9-b13b-0061fbca8dfc
-      :name: Cumberland Blues
-      :segued: false
+  :sets: []
 1970/03/21/1:
   :uuid: 3e2feff4-63c3-4ab3-8cd8-d0f7ad980ec7
   :venue: Capitol Theater
   :city: Port Chester
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 0710897b-cd15-438e-918e-0726e4517ffb
-    :songs:
-    - :uuid: 356f5847-4acc-42fd-be3b-2c298a582c9c
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 12c92c9b-d174-421f-af98-d91427e03fb0
-      :name: Dancing In The Street
-      :segued: false
-    - :uuid: c31b0e37-5e1e-4814-a598-411efbeefb7b
-      :name: Easy Wind
-      :segued: false
-    - :uuid: c8a0f720-1c2f-4244-87a0-f7c966ed9aae
-      :name: Friend Of The Devil
-      :segued: false
-    - :uuid: 11cd3012-35d3-496a-bf64-11b6273ae5cd
-      :name: Deep Elem Blues
-      :segued: false
-    - :uuid: 51e37eaa-ee6f-42c7-8e8c-513897fce040
-      :name: Don't Ease Me In
-      :segued: true
-    - :uuid: d8730b7c-16e5-44d9-b3a7-eb42a718d828
-      :name: Black Peter
-      :segued: false
-    - :uuid: e5d12577-fc35-4911-9ceb-114842f98d12
-      :name: Wake Up Little Susie
-      :segued: true
-    - :uuid: 0802a740-89a2-4824-aeb3-d3d6507066aa
-      :name: Uncle John's Band
-      :segued: false
-    - :uuid: fc8022af-4f19-454c-9510-0c0982d08163
-      :name: Katie Mae
-      :segued: false
-    - :uuid: a8aef8d8-3727-4f83-bcf3-58a7d3e3fd3e
-      :name: Cosmic Charlie
-      :segued: false
-    - :uuid: b0fcfb46-616d-4253-a2c6-e1c0e206feb6
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: e69ff071-2996-4971-8c7c-425adfcc4c59
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 6d212dfe-369e-470c-907e-9585494fa035
-      :name: Saint Stephen
-      :segued: false
-    - :uuid: c1ff7b32-08bf-4e18-8d3a-d49fa52bbeb4
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 0c37e110-b29d-47af-94f8-c377b0ebe89e
-      :name: In The Midnight Hour
-      :segued: false
-    - :uuid: 96e027c7-dec4-44dd-af9a-20440423cf99
-      :name: Turn On Your Lovelight
-      :segued: false
-  - :uuid: 25728e4c-7a91-40a0-80ed-4044c48d7c86
-    :songs:
-    - :uuid: 815eda23-f0f8-46a7-8bdd-b564e249c1ee
-      :name: And We Bid You Good Night
-      :segued: false
+  :sets: []
 1970/03/24:
   :uuid: 7151f2d1-d33e-45f1-84bd-b2a1a7a070af
   :venue: Pirates World

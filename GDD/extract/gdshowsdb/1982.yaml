@@ -775,7 +775,7 @@
   - :uuid: 10d655c5-a318-46b0-a6ae-818e2fce279e
     :songs:
     - :uuid: 5133c47e-474a-48f8-9f74-9d47fd5c3495
-      :name: Funiculi Funicula
+      :name: Funiculi Finicula
       :segued: false
     - :uuid: 184414eb-8cb0-4bc6-b47f-7ad7ac8f4d70
       :name: Playing In The Band
@@ -1220,13 +1220,13 @@
       :segued: false
     - :uuid: b32a241e-a12a-4202-9a2c-45abb9b64a85
       :name: Saint Of Circumstance
-      :segued: false
-    - :uuid: d88a613e-fe10-46b1-984c-6f19f8a64e2c
-      :name: Drums
-      :segued: false
+      :segued: true
     - :uuid: 06cc08f9-0b3f-4b6f-862e-2a39d63a436f
       :name: Spanish Jam
-      :segued: false
+      :segued: true
+    - :uuid: d88a613e-fe10-46b1-984c-6f19f8a64e2c
+      :name: Drums
+      :segued: true
     - :uuid: a0bcbb3d-bea1-44d1-a1e9-9b33bee30b3c
       :name: Uncle John's Band
       :segued: false
@@ -1683,13 +1683,6 @@
     - :uuid: 35f990d9-20ed-4d79-9ab6-fcb766384dbe
       :name: Johnny B. Goode
       :segued: false
-1982/06/27:
-  :uuid: 917ae487-ab56-4ee2-a434-56cd7d57cf6b
-  :venue: Red Rocks Amphitheatre
-  :city: Morrison
-  :state: CO
-  :country: US
-  :sets: []
 1982/07/17:
   :uuid: dddfab97-bd67-46f6-a4bc-02863f574f66
   :venue: County Fairgrounds
@@ -3250,64 +3243,7 @@
   :city: Landover`
   :state: MD
   :country: US
-  :sets:
-  - :uuid: 6c3da93d-e08d-4d95-a70b-8657fd7a6e7a
-    :songs:
-    - :uuid: 56a88673-cbe0-4dc2-99e4-673bcfe98ab9
-      :name: Playing In The Band
-      :segued: false
-    - :uuid: c02c54c3-ed5b-4608-a550-25fb988d6269
-      :name: Crazy Fingers
-      :segued: false
-    - :uuid: 2c55b44b-e9dc-47c2-8f3d-91c41fc89d81
-      :name: Little Red Rooster
-      :segued: false
-    - :uuid: 96ead479-3f27-474c-bca6-c33223ece730
-      :name: Dupree's Diamond Blues
-      :segued: false
-    - :uuid: f853d0cb-961b-4544-a31f-852ee59bb0a4
-      :name: Beat It On Down The Line
-      :segued: false
-    - :uuid: 34f5d69b-f7ad-4d63-8d0d-b130778583a4
-      :name: It Must Have Been The Roses
-      :segued: false
-    - :uuid: 9833fc6e-31bc-42a5-8cd3-1d8b5507d128
-      :name: Let It Grow
-      :segued: false
-    - :uuid: d8dcc4b1-1c36-47c8-8a00-f69a621b8eb0
-      :name: Keep Your Day Job
-      :segued: false
-  - :uuid: 8d2013e7-2a4b-447a-aba0-b74fdc963a79
-    :songs:
-    - :uuid: f5b7f9f0-ecad-4780-ac73-3325404ab553
-      :name: Shakedown Street
-      :segued: false
-    - :uuid: e58a6764-1be7-4f6a-81f3-9ac9b3c71365
-      :name: Lost Sailor
-      :segued: false
-    - :uuid: ac97bf09-72f4-427e-afc2-09f2a1c88fc6
-      :name: Saint Of Circumstance
-      :segued: false
-    - :uuid: cfe3baa3-b8ac-4cc0-9915-fd3fd74f952d
-      :name: Drums
-      :segued: false
-    - :uuid: 21f4e48f-8ce3-4f0a-9fed-a16b0f5472de
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: c59aad42-c289-431e-8b3f-1e3ce75ac829
-      :name: Stella Blue
-      :segued: false
-    - :uuid: 7219089f-22b0-461f-9b54-ff9a503246f1
-      :name: Around And Around
-      :segued: false
-    - :uuid: d484c2e5-5699-48b2-a7a1-447961df44e4
-      :name: Good Lovin'
-      :segued: false
-  - :uuid: 63b95fdd-765c-49df-a7c2-d2087d4127d3
-    :songs:
-    - :uuid: ae112d58-c3d4-4119-b24c-2792f978782e
-      :name: Touch Of Grey
-      :segued: false
+  :sets: []
 1982/09/17:
   :uuid: 650d6004-c98b-4b7a-9993-396102e5f801
   :venue: Cumberland County Civic Center

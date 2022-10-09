@@ -5,73 +5,7 @@
   :city: Chicago
   :state: IL
   :country: US
-  :sets:
-  - :uuid: 405cd63c-937d-4c60-96c9-6e76099d4fb6
-    :songs:
-    - :uuid: b98a8bf1-4b0e-4907-8ea0-e90f6061ea2b
-      :name: Feel Like A Stranger
-      :segued: false
-    - :uuid: 1d026853-2a30-4e28-8104-a508e4d118d0
-      :name: Althea
-      :segued: false
-    - :uuid: 2521843f-95c9-42c6-8925-d6c74be121cb
-      :name: Little Red Rooster
-      :segued: false
-    - :uuid: f4f50df5-db86-49ec-a439-57197167edf5
-      :name: Bird Song
-      :segued: false
-    - :uuid: 863bd319-d48f-4e9c-a6c9-338c0355a49e
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 476ac736-1841-4382-9d39-a32b506157ba
-      :name: Big River
-      :segued: false
-    - :uuid: 8aeb7fbe-04e9-438a-8a5a-7fcc9940dba8
-      :name: Tennessee Jed
-      :segued: false
-    - :uuid: 9355e750-4086-447b-bd9d-1895cd4550ad
-      :name: Passenger
-      :segued: false
-    - :uuid: 42f7bf93-18ab-407c-9536-296fc7277cbd
-      :name: Peggy O
-      :segued: false
-    - :uuid: 1b4e84d1-1f78-4be3-9d56-a5ce1185dab6
-      :name: The Music Never Stopped
-      :segued: false
-  - :uuid: c0ade862-7598-4f8f-892d-bf47d6ea6465
-    :songs:
-    - :uuid: 8c7cc569-1242-4af3-995e-d4db4d18be36
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 8d1ff90e-6af6-46b1-8d86-b04654b9a4bb
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: b90f1722-bdf0-4c85-b7d9-e04b34227f70
-      :name: Samson And Delilah
-      :segued: false
-    - :uuid: 14712315-a64d-4272-b588-6640f02c3c23
-      :name: He's Gone
-      :segued: false
-    - :uuid: 25396656-31db-4585-af90-55775472c030
-      :name: Drums
-      :segued: false
-    - :uuid: 305eccd7-d962-4cfb-b8a0-83b65d1e9029
-      :name: Truckin'
-      :segued: false
-    - :uuid: f4e2373d-8c1e-458a-a4e5-ae15b5399249
-      :name: Black Peter
-      :segued: false
-    - :uuid: 8e4ccb9e-74e1-4897-bf04-b19b79096322
-      :name: Goin' Down The Road Feeling Bad
-      :segued: false
-    - :uuid: c83c2a59-7fd9-421e-97b0-095aead752a3
-      :name: Johnny B. Goode
-      :segued: false
-  - :uuid: 6db1e8a9-2eaa-4c07-a8c2-2ee760bed323
-    :songs:
-    - :uuid: 9adc09e2-0a70-4cdb-9b60-a880a46d4e8a
-      :name: U.S. Blues
-      :segued: false
+  :sets: []
 1981/02/27:
   :uuid: 7275533e-b55f-447b-8718-ee90da07e910
   :venue: Uptown Theatre
@@ -145,79 +79,7 @@
   :city: Chicago
   :state: IL
   :country: US
-  :sets:
-  - :uuid: db0787a4-e392-4180-859a-e2e74d3b2128
-    :songs:
-    - :uuid: 82b784ed-6ec5-4868-885a-1a509973be78
-      :name: Jack Straw
-      :segued: false
-    - :uuid: 811202f0-f102-4fa6-9d08-2f37c6630648
-      :name: They Love Each Other
-      :segued: false
-    - :uuid: 65d5523f-3db6-4e81-a709-1a3b3b4912f5
-      :name: Mama Tried
-      :segued: false
-    - :uuid: b90b887a-a9e4-421c-968c-3596fe1e0faa
-      :name: Mexicali Blues
-      :segued: false
-    - :uuid: 6e41c036-0cb9-4f38-89d3-e00c6cef0e49
-      :name: Candyman
-      :segued: false
-    - :uuid: f581c223-8413-4189-93f2-11c913359774
-      :name: Little Red Rooster
-      :segued: false
-    - :uuid: a194aaab-a0e7-46c2-a2e0-ada3a967305d
-      :name: Big Railroad Blues
-      :segued: false
-    - :uuid: 469d2d5a-7722-44e5-a70a-1f26f01b7625
-      :name: Althea
-      :segued: false
-    - :uuid: d8ae8532-e373-4bf8-adca-f491f77eb030
-      :name: Let It Grow
-      :segued: false
-    - :uuid: 56c99223-70bf-4f60-b088-4548bd59288a
-      :name: Deal
-      :segued: false
-  - :uuid: 80e4cb67-4c7b-4968-ae2a-b31778f7cc58
-    :songs:
-    - :uuid: 19019bfa-a703-4390-8adf-8d42440c1848
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: 7b0e058f-c2a0-4aec-ac28-9ff4dfde8b5d
-      :name: Greatest Story Ever Told
-      :segued: false
-    - :uuid: 30a4aeb6-8e77-4a13-8533-feabcf81b87f
-      :name: Ship Of Fools
-      :segued: false
-    - :uuid: 54d22dfa-a8fd-4e59-86ef-a1dc370e3590
-      :name: Lost Sailor
-      :segued: false
-    - :uuid: fa0a3b63-1e3c-48f9-a6d3-114d26a38283
-      :name: Saint Of Circumstance
-      :segued: false
-    - :uuid: 57f7424e-5e5f-4ddd-8465-dd331675554a
-      :name: Terrapin Station
-      :segued: false
-    - :uuid: beaaebfa-c3be-40f7-9851-2c6227717f2d
-      :name: Drums
-      :segued: false
-    - :uuid: 2eee55a9-3987-47b2-bef4-363bf6636bc8
-      :name: The Other One
-      :segued: false
-    - :uuid: febb38b0-fae5-4feb-9ff9-ae8a70323402
-      :name: Stella Blue
-      :segued: false
-    - :uuid: 2f362475-0295-4dc6-ab93-1c721bd8d15b
-      :name: Around And Around
-      :segued: false
-    - :uuid: 311e83ce-a36b-467c-b559-1e1d1574f206
-      :name: Good Lovin'
-      :segued: false
-  - :uuid: 4b4cbd86-e7d9-4511-858e-0acdd9b04e56
-    :songs:
-    - :uuid: 4b125bbd-d366-4f8b-ac46-2e0464186b76
-      :name: One More Saturday Night
-      :segued: false
+  :sets: []
 1981/03/02:
   :uuid: 4f9711b2-d7b1-43e8-9a62-e3bc0ee9f9f9
   :venue: Cleveland Music Hall
@@ -817,76 +679,7 @@
   :city: Utica
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 73420861-3bd0-4a3e-b4bd-afd605a753a5
-    :songs:
-    - :uuid: 24740f77-6b2d-4537-ad7a-212c80d1f5c4
-      :name: Shakedown Street
-      :segued: false
-    - :uuid: 35684f73-00cd-4f73-a7c3-912d3b9b0411
-      :name: New Minglewood Blues
-      :segued: false
-    - :uuid: eca9f0af-e905-4408-8175-3c90a8785994
-      :name: They Love Each Other
-      :segued: false
-    - :uuid: f124be51-68c6-4b34-a9f3-905fa113b90c
-      :name: El Paso
-      :segued: false
-    - :uuid: d4c9b72d-5f06-44e4-b36a-799e665ae734
-      :name: Jack A Roe
-      :segued: false
-    - :uuid: eaa7a340-286a-4518-8275-3c52b0bca039
-      :name: Cassidy
-      :segued: false
-    - :uuid: 3326ab92-46c8-40f4-8e8d-b5676aa1f2ca
-      :name: High Time
-      :segued: false
-    - :uuid: a872eb1d-3d52-43d4-a7f1-60210c2a4d45
-      :name: Little Red Rooster
-      :segued: false
-    - :uuid: daaf29ba-d8e1-4886-8eb3-df41953c63ef
-      :name: Althea
-      :segued: false
-    - :uuid: c6e0f718-58b2-48f2-ad21-b5d05657a8ce
-      :name: The Music Never Stopped
-      :segued: false
-  - :uuid: 4779b785-4e30-45ea-a291-53b75c628208
-    :songs:
-    - :uuid: 102681b4-1d0a-44a1-b96b-81e4ac72ce96
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: 50271078-b450-4641-8ce7-09a6837d299a
-      :name: Samson And Delilah
-      :segued: false
-    - :uuid: 79259514-ef12-4d49-82ac-6b84f4e3d554
-      :name: It Must Have Been The Roses
-      :segued: false
-    - :uuid: 953a0db1-0bbb-4e08-833d-20fec7b4adbc
-      :name: Estimated Prophet
-      :segued: false
-    - :uuid: b6ea39bb-2c3e-4614-8437-6a2649e2be2f
-      :name: Eyes Of The World
-      :segued: false
-    - :uuid: b7186292-34b1-404b-8754-b8799e341695
-      :name: Drums
-      :segued: false
-    - :uuid: 76316c40-c507-4b21-ac68-b620ee171138
-      :name: Lost Sailor
-      :segued: false
-    - :uuid: 95429742-403a-40a0-aa6e-440463b8509e
-      :name: Saint Of Circumstance
-      :segued: false
-    - :uuid: 84347b38-7924-4a63-86ee-aa5a0f1b22e8
-      :name: Wharf Rat
-      :segued: false
-    - :uuid: c07d6971-5f96-41f9-a381-bb1930608ffa
-      :name: Sugar Magnolia
-      :segued: false
-  - :uuid: 1a8e4d9c-0d7f-4288-9b43-43e505c7cf2c
-    :songs:
-    - :uuid: 46e748a8-5468-4f18-8b49-9db296e30986
-      :name: Don't Ease Me In
-      :segued: false
+  :sets: []
 1981/03/14:
   :uuid: a29a0433-6436-422f-a12f-9ee17de05a3e
   :venue: Hartford Civic Center
@@ -1654,76 +1447,7 @@
   :city: Glens Falls
   :state: NY
   :country: US
-  :sets:
-  - :uuid: cfec0c32-6879-48bd-b4cf-541585aa2859
-    :songs:
-    - :uuid: 05768177-d7f8-4d37-9d72-56dcf63e1f4c
-      :name: Feel Like A Stranger
-      :segued: false
-    - :uuid: 45e2db59-88d8-4734-8a11-5a60af76cc05
-      :name: Peggy O
-      :segued: true
-    - :uuid: 6bf3270f-9031-4a9f-8979-25dbe950197f
-      :name: El Paso
-      :segued: false
-    - :uuid: 5da11444-4474-4bbe-b606-6256317bee5f
-      :name: Ramble On Rose
-      :segued: false
-    - :uuid: 405210fd-0de2-4943-9f1e-35447ec47478
-      :name: C.C. Rider
-      :segued: false
-    - :uuid: 15af6af3-e819-4f78-b886-c15b512d8795
-      :name: Althea
-      :segued: false
-    - :uuid: e2291dd8-4fd4-4822-b377-aa041a07e387
-      :name: Passenger
-      :segued: false
-    - :uuid: da6fcb5a-5b99-411e-80b7-ac9ef8b17de9
-      :name: Brown Eyed Women
-      :segued: false
-    - :uuid: 09ce93ca-cecc-44b7-8e33-d87ef18c063d
-      :name: The Music Never Stopped
-      :segued: true
-    - :uuid: 81f7728d-5e5d-4054-874f-a9fc97cfa6a5
-      :name: Don't Ease Me In
-      :segued: false
-  - :uuid: df870e77-3824-492c-b8c0-af781b3a90b8
-    :songs:
-    - :uuid: 11f3ae7b-3d70-4591-aad8-fc43ffbe2afe
-      :name: Scarlet Begonias
-      :segued: true
-    - :uuid: b64b02e7-0cf2-48a5-9a27-e6aa388f71e7
-      :name: Fire On The Mountain
-      :segued: false
-    - :uuid: fb17457a-f4db-4288-b078-f542af489500
-      :name: Estimated Prophet
-      :segued: true
-    - :uuid: f8f7b0ac-7aa4-41d9-891a-b3937d5feaad
-      :name: Eyes Of The World
-      :segued: true
-    - :uuid: 6a38c241-499f-4eef-8085-ce316cc998a2
-      :name: Drums
-      :segued: true
-    - :uuid: ac2e7e37-ea40-412f-8997-c74194056314
-      :name: Space
-      :segued: true    
-    - :uuid: a6ebfd88-5243-4297-9860-3e901c143d10
-      :name: Uncle John's Band
-      :segued: true
-    - :uuid: b6bfce5f-a583-4c58-bc97-7720d6071623
-      :name: Truckin'
-      :segued: true
-    - :uuid: 436b3a75-d273-4e82-adf6-7612b1045362
-      :name: Alabama Getaway
-      :segued: true
-    - :uuid: be43d8cf-bf85-4ce7-8acf-cf4a7a1be348
-      :name: Johnny B. Goode
-      :segued: false
-  - :uuid: ce74de9d-cf94-40ad-9550-e63ea502152d
-    :songs:
-    - :uuid: 83b12b7c-b5b5-44a6-b18b-c9f65cdebfbf
-      :name: U.S. Blues
-      :segued: false    
+  :sets: []    
 1981/05/06:
   :uuid: c011d52e-881f-4d6a-af4d-be1c118d28d6
   :venue: Nassau Veterans Memorial Coliseum
@@ -1879,12 +1603,12 @@
       :segued: false
     - :uuid: e99c4827-189a-4622-a94f-8232d6855c0b
       :name: Playing In The Band
-      :segued: false
+      :segued: true
     - :uuid: b0751997-90b6-4d83-9c19-6213b882fcc9
       :name: Drums
-      :segued: false
+      :segued: true
     - :uuid: cb0998ca-0b16-4c77-a185-01a2b57743e7
-      :name: Nobody's Fault But Mine Jam
+      :name: Space
       :segued: false
     - :uuid: e49ac787-234e-485f-a52c-3b4608a0ba77
       :name: Not Fade Away
@@ -1963,7 +1687,7 @@
       :name: Drums
       :segued: false
     - :uuid: 19f4e029-ac0c-4286-966c-d55d2402e16e
-      :name: Nobody's Fault But Mine Jam
+      :name: Space
       :segued: false
     - :uuid: 8e13a7b4-a64c-4859-a1cc-05e3be93a162
       :name: Truckin'
@@ -2380,130 +2104,7 @@
   :city: Syracuse
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 48641aa1-90fb-4ab5-9050-ad0d99d55d56
-    :songs:
-    - :uuid: f2353917-70e9-4d43-9957-63c5e552a230
-      :name: Alabama Getaway
-      :segued: false
-    - :uuid: 4035960b-851d-432c-afb9-324d2280ce5a
-      :name: The Promised Land
-      :segued: false
-    - :uuid: 15992378-c9f0-4ea5-8be8-5f345ed06b6a
-      :name: Peggy O
-      :segued: false
-    - :uuid: 54a2eeb5-41ed-4e54-b485-9d2169064e29
-      :name: Mama Tried
-      :segued: false
-    - :uuid: cd6aa8ae-d31d-4021-944c-08810dfdb865
-      :name: Mexicali Blues
-      :segued: false
-    - :uuid: 1090dfeb-b35c-4dc7-9980-4acf84bbc82c
-      :name: Candyman
-      :segued: false
-    - :uuid: d5e6524c-59b8-4495-87f7-27f1061baba3
-      :name: New Minglewood Blues
-      :segued: false
-    - :uuid: 9eec7dbc-8db7-49d9-9a8d-2634d196c884
-      :name: They Love Each Other
-      :segued: false
-    - :uuid: 318edd9e-8614-496d-bb52-12cb04584a2a
-      :name: Looks Like Rain
-      :segued: false
-    - :uuid: cd00796b-8ed4-4a57-b313-8e2ae43b9fc3
-      :name: Big Railroad Blues
-      :segued: false
-    - :uuid: 709e74c0-e9f6-45fe-a3c5-05c4fa5d9213
-      :name: Little Red Rooster
-      :segued: false
-    - :uuid: fad15ab7-1b0f-4599-b12d-b504c5912b6d
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 38da6159-415c-467b-9a0f-1850062a6bc7
-      :name: I Know You Rider
-      :segued: false
-  - :uuid: 81893e15-7dbb-4a40-8db4-158956f5078c
-    :songs:
-    - :uuid: 61d0e638-dc6c-4a05-a1ff-d63fa5cbe7d0
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: 520bca7a-5ddd-4401-a76c-6092e2776fbc
-      :name: Samson And Delilah
-      :segued: false
-    - :uuid: 5f14a620-9962-4cdd-bbdd-d0f09c0a2a8a
-      :name: Ship Of Fools
-      :segued: false
-    - :uuid: f1cf6815-2a70-4932-bb5b-851aa9edb303
-      :name: Estimated Prophet
-      :segued: false
-    - :uuid: 1079247a-8305-4d8e-a960-4de8d9aedc68
-      :name: He's Gone
-      :segued: false
-    - :uuid: 31e89aab-86e4-4156-8751-f509588fae1e
-      :name: The Other One
-      :segued: false
-    - :uuid: 0acb409d-53df-4c3f-8cc5-930916960dca
-      :name: Drums
-      :segued: false
-    - :uuid: 0d29aad2-1337-4c88-905a-39b0fe5d39c7
-      :name: Saint Of Circumstance
-      :segued: false
-    - :uuid: 30b0d244-b2c7-4006-bb2b-180d1d2d4c72
-      :name: Wharf Rat
-      :segued: false
-    - :uuid: 11e77e82-4cb5-4e12-9072-1e72e404ba40
-      :name: Sugar Magnolia
-      :segued: false
-  - :uuid: f14a2bf6-d889-4fc9-b826-0e276c16628c
-    :songs:
-    - :uuid: 6cf67619-aa29-484d-b720-eae9491bfb4e
-      :name: (I Can't Get No) Satisfaction
-      :segued: false
-1981/05/22:
-  :uuid: 350b0f3e-76e5-4377-9057-0f61e1bd11e7
-  :venue: Warfield Theater
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets:
-  - :uuid: 6f1baa16-f0ac-444f-8e84-53c26e29fd5f
-    :songs:
-    - :uuid: 63da22f2-b977-48e0-93f9-3ab072904e16
-      :name: Deep Elem Blues
-      :segued: false
-    - :uuid: 611c1046-7735-487a-9969-f80fe7be33b1
-      :name: The Race Is On
-      :segued: false
-    - :uuid: c95b75d3-d369-45dd-950a-2041d50d9b6b
-      :name: Friend Of The Devil
-      :segued: false
-    - :uuid: fa096610-6cd9-48a6-a1b8-04cb1224cc07
-      :name: Cassidy
-      :segued: false
-    - :uuid: 42d152a5-f4f7-4fd0-81d5-f66973ad2c2c
-      :name: To Lay Me Down
-      :segued: false
-    - :uuid: 6a41cd4e-f8db-4bbd-befe-9779a7239b21
-      :name: Monkey And The Engineer
-      :segued: false
-    - :uuid: 1eb0dd3d-d8bb-4f35-8e27-1ac1de3eef0b
-      :name: Oh Babe It Ain't No Lie
-      :segued: false
-    - :uuid: b604644f-e17a-42be-adb5-f379af0374c5
-      :name: On The Road Again
-      :segued: false
-    - :uuid: 8d3e3745-a7ae-4733-ba75-b03d36fefba6
-      :name: Bird Song
-      :segued: false
-    - :uuid: 8c774c51-f306-4b64-8c39-4c54433bcc5a
-      :name: Ripple
-      :segued: false
-    - :uuid: c734fb5f-e6d3-4b99-aab6-5b2f5e60e4c8
-      :name: Drums
-      :segued: false
-    - :uuid: e270c836-6e6d-4129-87cb-66a674bff377
-      :name: Oh Boy
-      :segued: false
+  :sets: []
 1981/07/02:
   :uuid: d29fe7e8-2134-4ce0-9427-4d74bdcd3442
   :venue: The Summit
@@ -3318,85 +2919,7 @@
   :city: Seattle
   :state: WA
   :country: US
-  :sets:
-  - :uuid: 4aa42cb0-9423-4722-9b2e-4a8a27cd506f
-    :songs:
-    - :uuid: 332a0b2a-7dfa-4548-b170-d28fafd2734d
-      :name: New Minglewood Blues
-      :segued: false
-    - :uuid: 80a49fd0-b10d-4e7a-82d7-20d0d7183bf9
-      :name: Sugaree
-      :segued: false
-    - :uuid: b36cd4b3-a089-4bb8-8c5f-76ca97285942
-      :name: On The Road Again
-      :segued: false
-    - :uuid: 14c97c99-a6f4-47f2-84e0-6eafb5a50ca2
-      :name: Peggy O
-      :segued: false
-    - :uuid: fd17c4a1-c525-49d8-9835-00e3c7cc72ec
-      :name: Beat It On Down The Line
-      :segued: false
-    - :uuid: a7914955-7ef5-4e41-b63b-e83c37a84024
-      :name: Brown Eyed Women
-      :segued: false
-    - :uuid: 30c9e1d5-55b7-422c-8e15-0228d04ad9c9
-      :name: Little Red Rooster
-      :segued: false
-    - :uuid: c1c3c540-45ca-4d16-8565-148028ae31f3
-      :name: Don't Ease Me In
-      :segued: false
-    - :uuid: 1adca47b-8292-4810-956f-6ddb1057a3ec
-      :name: Looks Like Rain
-      :segued: false
-    - :uuid: dc01bf2f-445c-4163-bed9-0e8937a384e8
-      :name: Bertha
-      :segued: false
-    - :uuid: 43063b08-a948-4e18-8db8-9e2443582813
-      :name: The Promised Land
-      :segued: false
-  - :uuid: 0723297f-4ad6-408f-a824-a63e315892cb
-    :songs:
-    - :uuid: 697d3650-de65-413d-adda-d4a9dbf2f2b5
-      :name: Might As Well
-      :segued: false
-    - :uuid: 9ce74020-a4dc-4508-9a38-10033b1fe2fc
-      :name: Samson And Delilah
-      :segued: false
-    - :uuid: c19b7361-1802-48e1-9510-5a0ba8862cda
-      :name: Ship Of Fools
-      :segued: false
-    - :uuid: 71777263-1a9f-443b-969f-feaba63e8afe
-      :name: Playing In The Band
-      :segued: false
-    - :uuid: 00f5a2f0-8270-46ef-96c8-3abe648f0a07
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: c92c2b9c-a942-48e5-964f-252cda75fdaf
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: ffa9950c-945b-470a-b92d-818af6cc482e
-      :name: Drums
-      :segued: false
-    - :uuid: f5450088-cc32-4bd5-9915-683af80e1f67
-      :name: Playing In The Band
-      :segued: false
-    - :uuid: 09615faa-e132-4820-91a4-2713a3d186ad
-      :name: Wharf Rat
-      :segued: false
-    - :uuid: 6bf06b37-53a6-45b0-a092-c6e1d41a7edb
-      :name: Goin' Down The Road Feeling Bad
-      :segued: false
-    - :uuid: 6d0ad48d-406c-42d0-9d08-97a0988f9004
-      :name: I Need A Miracle
-      :segued: false
-    - :uuid: 772f1ff1-3514-45a8-8dce-96043db18aad
-      :name: Johnny B. Goode
-      :segued: false
-  - :uuid: 8d5f2e87-b717-42d8-bf8f-73a2a6aad0df
-    :songs:
-    - :uuid: 25c7dd88-16d0-4b4a-8328-037e5b9b5923
-      :name: It's All Over Now, Baby Blue
-      :segued: false
+  :sets: []
 1981/08/15:
   :uuid: d70834cd-2509-4c80-a844-a6de12aa11ae
   :venue: Portland Memorial Coliseum
@@ -4585,82 +4108,7 @@
   :city: London
   :state: ''
   :country: UK
-  :sets:
-  - :uuid: 072d6fd5-f896-4afc-92cf-24bce14838d2
-    :songs:
-    - :uuid: 21dee725-7384-4b01-99d1-ccca1069bf7b
-      :name: Jam
-      :segued: false
-    - :uuid: 1a0b0e30-6ac9-4086-9343-fc395ed3a741
-      :name: Jack Straw
-      :segued: false
-    - :uuid: 48b8c9eb-9caa-4251-9b99-57136b862f6a
-      :name: Friend Of The Devil
-      :segued: true
-    - :uuid: 60a16d46-4876-45d4-9b20-32a6f140e9d0
-      :name: El Paso
-      :segued: false
-    - :uuid: 3c4eb434-710b-4d81-849b-6d4e5c286399
-      :name: Jack A Roe
-      :segued: false
-    - :uuid: d1651c5f-0246-41b7-a4d9-8062ce33452f
-      :name: Beat It On Down The Line
-      :segued: false
-    - :uuid: 647d4fb0-2f33-4a7e-85e4-293438ce7238
-      :name: Brown Eyed Women
-      :segued: false
-    - :uuid: 62273894-3de8-4cbd-88d8-247381140b25
-      :name: New Minglewood Blues
-      :segued: false
-    - :uuid: 4c23a177-49cb-4964-8b92-6061295ecfd5
-      :name: Row Jimmy
-      :segued: false
-    - :uuid: fd9fe44e-5d24-4031-b79b-993fae9bc896
-      :name: Let It Grow
-      :segued: true
-    - :uuid: 8696c865-b2cc-440c-ad3b-6e19fb33ce1b
-      :name: Deal
-      :segued: false
-  - :uuid: d428ee4a-3dec-4321-8fb9-77506c108f51
-    :songs:
-    - :uuid: 9a1f54c1-fcd7-47b7-ad99-6471113f46ad
-      :name: Cold Rain And Snow
-      :segued: true
-    - :uuid: 34486b92-ed41-47de-9ae4-89575a47ef4d
-      :name: Samson And Delilah
-      :segued: false
-    - :uuid: 4aa6b03e-2b38-40f6-a6ea-e5aebd013f06
-      :name: Scarlet Begonias
-      :segued: true
-    - :uuid: 48782346-d082-4d0f-9d90-e98cfb3a4815
-      :name: Fire On The Mountain
-      :segued: false
-    - :uuid: fc8f2e89-5987-43ec-9814-07bc9e473b84
-      :name: Lost Sailor
-      :segued: true
-    - :uuid: 2a19f33c-01a5-440a-94a4-2ca8daa5ea81
-      :name: Saint Of Circumstance
-      :segued: true
-    - :uuid: 22ddf2cd-fbba-4d83-94aa-5d65e263b93f
-      :name: Drums
-      :segued: true
-    - :uuid: 194cda3e-acd7-4702-a60e-79da09e0d5c0
-      :name: Space
-      :segued: true    
-    - :uuid: 2007e960-2c76-45ef-bce6-e91e02230168
-      :name: The Other One
-      :segued: true
-    - :uuid: 1a53f088-25fd-4932-9c0b-9977d709a8f8
-      :name: Wharf Rat
-      :segued: true
-    - :uuid: 06958ee1-d3c5-4752-a41b-aac452ad6d2f
-      :name: Sugar Magnolia
-      :segued: false
-  - :uuid: 9430895b-a2bf-4b08-9e93-d10257167866
-    :songs:
-    - :uuid: 4c74237a-ceec-4124-a2be-3a1034ccc185
-      :name: Don't Ease Me In
-      :segued: false
+  :sets: []
 1981/10/06:
   :uuid: 1e570d99-21ad-4898-b853-617214058b31
   :venue: Rainbow Theater
@@ -4746,76 +4194,7 @@
   :city: Copenhagen
   :state: ''
   :country: DK
-  :sets:
-  - :uuid: dfcd60a1-f7e1-4ffa-a3dc-b944d064d452
-    :songs:
-    - :uuid: 28a4e1da-16b9-414a-bea7-2fdcaf851214
-      :name: Feel Like A Stranger
-      :segued: false
-    - :uuid: 9e98fe12-f518-4a48-94af-34bcdcd80a8f
-      :name: They Love Each Other
-      :segued: true
-    - :uuid: 7d125f7e-9b40-41b0-bcd5-46da08e1e2c6
-      :name: C.C. Rider
-      :segued: false
-    - :uuid: dd83cfd4-645a-40f9-a9df-c454f11475ed
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 6ab5860a-6736-445a-a621-ad3cf7d8eecd
-      :name: Mama Tried
-      :segued: true
-    - :uuid: f481f475-7824-4d3c-9962-841fd921d8a2
-      :name: Mexicali Blues
-      :segued: false
-    - :uuid: 34303662-411e-4364-aa82-a61cb1d1aeda
-      :name: Althea
-      :segued: false
-    - :uuid: 16f58f59-5b93-4fa7-b361-201fecabadfa
-      :name: Cassidy
-      :segued: false
-    - :uuid: e0e2ab66-2ea9-461d-8074-9abfdc92b54a
-      :name: Loser
-      :segued: false
-    - :uuid: 2c865046-2055-42b9-a47d-b96f2135658d
-      :name: The Music Never Stopped
-      :segued: false
-  - :uuid: b17df425-e7df-4ec9-a0f2-1d45f96d1b07
-    :songs:
-    - :uuid: ede372b0-ef8a-4f2f-981a-62e30fcd94b9
-      :name: Scarlet Begonias
-      :segued: true
-    - :uuid: 3a381602-a9a1-4399-9cdb-ea020de453bd
-      :name: Fire On The Mountain
-      :segued: false
-    - :uuid: fdc049d4-6a33-413e-b546-b412cd3a074f
-      :name: Playing In The Band
-      :segued: true
-    - :uuid: 033e7ef5-da65-49b0-b65d-de4727d04284
-      :name: Terrapin Station
-      :segued: true
-    - :uuid: 1ef01a93-80cc-49ef-87a8-686701af754f
-      :name: Drums
-      :segued: true
-    - :uuid: 9c184c77-0c6e-4807-afee-b644c5d5dadf
-      :name: Space
-      :segued: true    
-    - :uuid: 867832c6-8e72-4807-9592-fc63d1e52122
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 28d94184-3c6d-489d-9ac0-933b7ca65697
-      :name: Black Peter
-      :segued: true
-    - :uuid: 01c698db-d962-4c03-9692-cffc29bdd644
-      :name: Around And Around
-      :segued: true
-    - :uuid: 39b2bfc0-d981-442f-b1c3-045854ad9c61
-      :name: Johnny B. Goode
-      :segued: false
-  - :uuid: 16addb31-6888-4f6e-8921-24b5ee4394c5
-    :songs:
-    - :uuid: e913c960-01c1-4dc8-a9a9-866e8ab14025
-      :name: U.S. Blues
-      :segued: false
+  :sets: []
 1981/10/10:
   :uuid: 613a64e1-5b69-4282-90da-e06fd48b4773
   :venue: Stadthalle IV
@@ -4895,35 +4274,6 @@
     - :uuid: 5c8e9879-cc0b-4a0a-b820-54d7dd20d14d
       :name: Casey Jones
       :segued: false
-1981/10/11:
-  :uuid: 5eefd88a-6e49-495f-b04d-110d57f707e0
-  :venue: Club Melk Weg
-  :city: ''
-  :state: ''
-  :country: ''
-  :sets:
-  - :uuid: 725da8d7-e1c3-402f-b553-b2fe6625e25a
-    :songs:
-    - :uuid: a0721279-229f-403c-97cd-32503907edc2
-      :name: Monkey And The Engineer
-      :segued: false
-    - :uuid: 4e853ceb-20a5-41fa-a5f8-6cf5d5f9ddef
-      :name: I've Been All Around This World
-      :segued: false
-    - :uuid: ce27a7c0-80e3-4f01-bf7e-79389cf66f9a
-      :name: Cassidy
-      :segued: false
-    - :uuid: ffbc0ae9-2270-470a-b044-732cbad60505
-      :name: On The Road Again
-      :segued: false
-    - :uuid: bc5e2a14-5c8b-475b-a1ae-ec8c2abeb175
-      :name: Bird Song
-      :segued: false
-  - :uuid: a5d8649e-3ea0-4fbf-a6f3-082d904edcd5
-    :songs:
-    - :uuid: ebbc5263-2065-4c6a-bffd-caeade244b29
-      :name: Oh Babe It Ain't No Lie
-      :segued: false
 1981/10/12:
   :uuid: fada2547-b3f2-45ca-9567-5322a3b110c1
   :venue: Olympiahalle
@@ -4991,6 +4341,9 @@
       :segued: false
     - :uuid: bc60bf08-3abb-430e-b239-ff07ad0a600f
       :name: Drums
+      :segued: false
+    - :uuid: 3278f426-c025-400b-9cfd-78bad5370ffc
+      :name: Not Fade Away
       :segued: false
     - :uuid: 3278f426-c025-400b-9cfd-78bad5370ffc
       :name: Stella Blue
@@ -5346,9 +4699,6 @@
     - :uuid: 2e571986-0e53-403d-9d4f-5173d9d3683e
       :name: Saint Of Circumstance
       :segued: true
-    - :uuid: 41a09502-74f0-406f-909e-fdb5b69f2d48
-      :name: Space
-      :segued: true    
     - :uuid: c853abc4-5f25-4399-9133-9f1468fdab95
       :name: Drums
       :segued: false
@@ -5427,10 +4777,13 @@
       :segued: false
     - :uuid: b2936a26-9c65-4c17-84ac-248bbed0c67f
       :name: He's Gone
-      :segued: false
+      :segued: true
+    - :uuid: b4682ef6-0d02-4aaa-91f5-e64d6ac452bc
+      :name: Mind Left Body Jam
+      :segued: true
     - :uuid: b4682ef6-0d02-4aaa-91f5-e64d6ac452bc
       :name: Drums
-      :segued: false
+      :segued: true
     - :uuid: 8a4cbd01-18a5-44a3-900c-974e213f6a04
       :name: Truckin'
       :segued: false

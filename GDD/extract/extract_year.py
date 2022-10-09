@@ -3,6 +3,7 @@ from enum import Enum
 
 from gdshowsdb_yaml_extract import extract_year
 from jerrybase_csv_extract import sort_into_shows, CompleteShow
+from create_json import create
 
 ALL_SONGS = []
 with open('output/matched_songs.json', 'r') as f:
@@ -298,30 +299,21 @@ def output_json_venues(final_yml):
 
 if __name__ == '__main__':
     matched_shows = []
-    years = [x+1900 for x in [71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]]
+    years = [x+1900 for x in [70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]]
     # For 1970 and earlier, we have to solve double shows
-    years = [1970]
+    years = [1976]
     for i in years:
         matched_shows.extend(compare_shows(i))
 
-    # WRITE THE RESULTS TO THE YAML
-    # The DB will come after the yaml is complete
-
-    # THE WHOLE POINT OF USING THE DATABASE
-    # is so that we don't need to faff with all this data stuff
-    # So once the set-lists are in:
-    #   A: Put in a DB
-    #   B: Export to and from some text format
-    #   C: Work out how to migrate as simply as possible
-
-    # can also .print() all of these
-    # Note matched_shows[0][1] is a CompleteShow object (from cvs)
-    #      matched_shows[0][0] is a GdShow object (from yaml)
+    # Note i[1] is a CompleteShow object (from cvs)
+    #      i[0] is a GdShow object (from yaml)
 
     final_yml = []
     for i in matched_shows:
-        print(f'Show: {i[0].text_date}')
+        #print(f'Show: {i[0].text_date}')
         final_yml.append(fix_yaml_show(i[0], i[1]))
+
+    create(final_yml)
 
     # The output is a list of GDShow objects
     print(f'Total shows: {len(final_yml)}')

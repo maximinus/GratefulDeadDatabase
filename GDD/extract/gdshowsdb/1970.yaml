@@ -1666,164 +1666,14 @@
   :city: New York
   :state: NY
   :country: US
-  :sets:
-  - :uuid: ccfa9784-9f55-4758-890a-9360efb155e6
-    :songs:
-    - :uuid: 3c6ba58c-a805-46e9-91d2-402d06a023e7
-      :name: Don't Ease Me In
-      :segued: false
-    - :uuid: c2c3b585-b9b6-4209-8cad-6d699f070dce
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 1b690a47-3d73-47ae-ac2b-b3c2088b5ee8
-      :name: The Rub
-      :segued: false
-    - :uuid: 60a6ec1c-8f87-4d33-8747-e4b4b0f97c0c
-      :name: Friend Of The Devil
-      :segued: false
-    - :uuid: 11ab1e86-876b-493a-8bab-201124a305f7
-      :name: Long Black Limousine
-      :segued: false
-    - :uuid: 0b37fba7-5773-48ab-9c7a-867ed752d67c
-      :name: Candyman
-      :segued: false
-    - :uuid: 62f17860-029c-494a-8ea5-996ff066b13c
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: a350c0d1-ee01-40a7-84b5-c40394de13e5
-      :name: New Speedway Boogie
-      :segued: false
-    - :uuid: 66794f75-317e-49b1-9121-3cfcd340b1b6
-      :name: Cold Jordan
-      :segued: false
-  - :uuid: 3465e9b9-3033-418f-b980-24eacec434bb
-    :songs:
-    - :uuid: 3d2bbb23-9cfe-4aa8-aad6-dafbe588bbb2
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 0156714c-9cdb-4cd3-966c-bcc1a0b16ece
-      :name: Easy Wind
-      :segued: false
-    - :uuid: 09fb0e85-cb0e-4e73-aa97-af0ce82ddd61
-      :name: Attics Of My Life
-      :segued: false
-    - :uuid: 73bd2a95-f231-4fc1-ba3e-919092420c91
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: fb6acbc6-1af5-42e6-899c-9e7102d485b9
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: 6ec806b7-2d43-4a7d-a7e7-5fc3d7e26159
-      :name: Drums
-      :segued: true
-    - :uuid: 75bca172-c24d-4e13-a967-67dff0a828b7
-      :name: The Other One
-      :segued: true
-    - :uuid: 1cc4f7c5-6f1b-4102-9ceb-6f68b7e90f33
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: 53bb0ffc-03e6-40aa-a4af-eacd8057b5b4
-      :name: Cosmic Charlie
-      :segued: false
-  - :uuid: cd20a34f-60b7-4ccc-80a1-5b9ac34cbb62
-    :songs:
-    - :uuid: 37232d8b-5b8d-45b2-a9f9-e7816a9c325c
-      :name: New Minglewood Blues
-      :segued: false
+  :sets: []
 1970/05/15/1:
   :uuid: 9cd8fcdf-42e6-4e96-bda4-15ff923b2d0a
   :venue: Fillmore East
   :city: New York
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 0f49bad7-aa15-4b7b-b89b-7c6eaf34159d
-    :songs:
-    - :uuid: 312d3332-8acd-476e-ba28-fb6e457b2fb7
-      :name: The Ballad Of Casey Jones
-      :segued: false
-    - :uuid: 237cbe70-7096-48c7-b636-554eb638bfdd
-      :name: Silver Threads And Golden Needle
-      :segued: false
-    - :uuid: 8242a44d-26b2-42be-90cb-31e1f0055d82
-      :name: Black Peter
-      :segued: false
-    - :uuid: bf215ed9-c132-478d-9d7c-1ac8b817655f
-      :name: Friend Of The Devil
-      :segued: false
-    - :uuid: 5d51a9c0-80a9-464a-acc9-9f56588a14fd
-      :name: Uncle John's Band
-      :segued: false
-    - :uuid: b9d7b3a4-db0c-44ce-a9e9-f541949993f3
-      :name: Candyman
-      :segued: false
-    - :uuid: 92c616c3-b4b6-4a54-8f55-74def619b3de
-      :name: She's Mine
-      :segued: false
-    - :uuid: d24b5dea-b7b8-4082-8fa4-e232242d4edb
-      :name: Katie Mae
-      :segued: false
-    - :uuid: 92ee4668-a31b-4e34-b5a1-0ae6f841c958
-      :name: I Hear A Voice Callin'
-      :segued: false
-  - :uuid: 1d78d425-db76-4c5f-b7b1-d58c84df611d
-    :songs:
-    - :uuid: 93150c23-5e69-4630-ab38-ed1234603759
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 2cf73163-e8d5-477c-a341-393ced41136a
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 942ed03e-a0a7-4456-a740-8971d15991a8
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: bfa9cd95-16ef-4d8d-9c39-fa745e6ecbb5
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 480c45d2-fb6a-4618-abfc-01b3dae505d4
-      :name: Beat It On Down The Line
-      :segued: false
-    - :uuid: de7f5b8a-5a39-4b4b-b067-bdbbeab158a5
-      :name: Morning Dew
-      :segued: false
-    - :uuid: 641bb6b9-3087-486c-8e12-6c966825840b
-      :name: Drums
-      :segued: true
-    - :uuid: 2947edf2-23c1-4eca-8cc1-67f558e89a68
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: 59104db3-2905-4edf-b83d-ba7b3f934cfb
-      :name: Drums
-      :segued: true
-    - :uuid: 17d0bf32-3754-4245-983a-1c970dfd1349
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 6cbc0470-39ff-466b-8a18-0bd68b4a2f01
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: e5ea22a5-6818-45b7-bc6a-43661dd619bc
-      :name: Next Time You See Me
-      :segued: false
-    - :uuid: c69cd707-1eb2-4c78-93b4-d7a0b4a70712
-      :name: Dark Star
-      :segued: true
-    - :uuid: a1f5dcb7-e2db-4bef-b841-805859495ea7
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: 9f3c18fb-b0bc-43a0-bfe0-3ddbeb4d3612
-      :name: Drums
-      :segued: true
-    - :uuid: c55dba70-7dd2-45d4-8195-73b79a4c9b49
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: bdccded1-fb56-4a17-8e50-7f9fbd33aeee
-      :name: Turn On Your Lovelight
-      :segued: false
-  - :uuid: 0aa9a44d-90d3-4b78-8c07-1076950a1880
-    :songs:
-    - :uuid: e3a0b45c-5d89-4717-bfb6-c4505e79d207
-      :name: Cold Jordan
-      :segued: false
+  :sets: []
 1970/05/16:
   :uuid: bbdcc3e5-b5bb-47c7-8405-910929fc216a
   :venue: Temple University
@@ -1916,6 +1766,9 @@
       :name: Friend Of The Devil
       :segued: false
     - :uuid: d6df4627-80f7-461c-a992-cca23ca24211
+      :name: Let Me In
+      :segued: false
+    - :uuid: d6df4627-80f7-461c-a992-cca23ca24211
       :name: Candyman
       :segued: false
     - :uuid: 9e2a7181-9b78-40cc-9da9-05b21e02664b
@@ -1929,9 +1782,6 @@
     - :uuid: 5b3cfa6c-8f26-4f1d-a1cd-0fc4986dadd1
       :name: Black Peter
       :segued: false
-    - :uuid: 7fc8795f-ba0f-4a36-b3e4-e52d2fe3e199
-      :name: Drums
-      :segued: true
     - :uuid: 79192a9c-82cb-49f1-82f3-d2ee57ca213b
       :name: Good Lovin'
       :segued: true
@@ -1973,79 +1823,7 @@
   :city: Port Chester
   :state: NY
   :country: US
-  :sets:
-  - :uuid: ac2b9088-18ec-47e4-b162-531687820f80
-    :songs:
-    - :uuid: 4ab9c5b4-4c86-47c1-8b32-99c227cfb54f
-      :name: Big Railroad Blues
-      :segued: false
-    - :uuid: 7c895df2-f368-4776-a48c-ad474fa16cf2
-      :name: Deep Elem Blues
-      :segued: false
-    - :uuid: 70cb5cef-49b4-43fd-b338-0d7bba9cd60a
-      :name: Monkey And The Engineer
-      :segued: false
-    - :uuid: 840509b5-929b-48e6-8f8d-b6e8f8c7f5aa
-      :name: The Rub
-      :segued: false
-    - :uuid: 1dcf459c-b747-4f68-b09d-bc439ba6fd5b
-      :name: Silver Threads And Golden Needle
-      :segued: false
-    - :uuid: de324c3e-eb83-4178-93ae-02bb4db1e3c0
-      :name: Friend Of The Devil
-      :segued: false
-    - :uuid: f494c446-0ef9-42cd-9a42-9e55d3017616
-      :name: Candyman
-      :segued: false
-    - :uuid: 769c8774-ff47-4196-a9df-847a227c4977
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: a4fc90d6-f8bf-4058-96dc-346a117beefe
-      :name: Cold Jordan
-      :segued: false
-  - :uuid: 03369e58-755e-49d7-8a49-a64165bf7dbe
-    :songs:
-    - :uuid: de770940-108e-45fb-b319-710e9f5b40ef
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 3f221150-1284-40c1-a78e-47243fd55950
-      :name: Easy Wind
-      :segued: false
-    - :uuid: 4b3eb499-df3d-4745-b698-48a01700d219
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 4e4abd23-af6c-41d4-83ec-918866d680b7
-      :name: Dark Star
-      :segued: true
-    - :uuid: c0f855a0-4f3c-419f-ac62-a1bf06f9e3de
-      :name: Attics Of My Life
-      :segued: true
-    - :uuid: d6e6f8d1-6503-431e-8758-3630e21da63d
-      :name: Dark Star
-      :segued: true
-    - :uuid: fbf78b0f-e2c1-4d44-b520-0d8302cf6aeb
-      :name: Sugar Magnolia
-      :segued: true
-    - :uuid: 4351a151-9895-4862-b4f6-7e9af6e7b15a
-      :name: Dark Star
-      :segued: true
-    - :uuid: f1099bd1-9c94-46c8-a200-614f7aee76f1
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: 86968d1d-3a83-47ec-afa4-13ab66d2c9bd
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 46fd8359-1162-402e-813f-3bb1581aadb1
-      :name: I Know You Rider
-      :segued: false
-  - :uuid: 86e50a6c-f3d5-44e7-87de-9c5f233dc9fa
-    :songs:
-    - :uuid: 75f5064c-4ec7-4503-a9cb-e71199362957
-      :name: Uncle John's Band
-      :segued: false
-    - :uuid: 28515a5d-a290-4aa0-af1a-dd0e06cb8c91
-      :name: Swing Low, Sweet Chariot
-      :segued: false
+  :sets: []
 1970/06/27/0:
   :uuid: b6b7af55-1d0c-4ce8-bc39-aeaf5661afe5
   :venue: Canadian National Exhibition Hall
@@ -2302,108 +2080,14 @@
   :city: Stony Brook
   :state: NY
   :country: US
-  :sets:
-  - :uuid: be5356d5-1b1c-4ff5-b1a8-91ee7647042b
-    :songs:
-    - :uuid: c3187dfc-7b42-4256-ba34-dc64bcab5c93
-      :name: Smokestack Lightnin'
-      :segued: false
-    - :uuid: 1e187860-a00b-4813-8f01-9204f2330374
-      :name: Beat It On Down The Line
-      :segued: false
-    - :uuid: 2ca65fb5-9d04-49ab-9fa9-b4253ae1ccb2
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 97db0155-2930-4e5e-9dfd-499fc186098a
-      :name: I Know You Rider
-      :segued: true
-    - :uuid: 1b7ece26-e2c7-4b02-878f-57c6eee91baf
-      :name: Friend Of The Devil
-      :segued: false
-    - :uuid: 615ea83d-0c29-4d8a-b37e-b28183dd0f05
-      :name: Truckin'
-      :segued: false
-    - :uuid: 8f5000fa-e2df-4d36-9cbf-a7d5b97612f8
-      :name: Candyman
-      :segued: false
-    - :uuid: 278dffde-668a-48b5-bc3f-ceebc734615c
-      :name: It Hurts Me Too
-      :segued: false
-    - :uuid: ca33c7ea-05c3-4f3c-bfd8-d86260f5d5e1
-      :name: Dancing In The Street
-      :segued: false
-    - :uuid: eed01840-8733-4c0f-94a3-e9f3db4e3a85
-      :name: Big Railroad Blues
-      :segued: false
-    - :uuid: 0b564967-7c3d-4f0c-89b9-6e26d0a8f7ae
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: 807064ca-3007-406d-ac11-bebece0fe696
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 0b9d7ba5-dc71-4be2-824b-78c173a79a21
-      :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: 56d6cd68-a235-4473-a607-4d59fc572eeb
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 6ec7e9cc-7366-441c-b8f9-33837dd01b46
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1970/10/30/1:
   :uuid: e0ae8d6c-ad35-4857-a013-6d3b5666690c
   :venue: SUNY Gym
   :city: Stony Brook
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 46a74be9-fcf6-4a5e-9741-928a7bf9333e
-    :songs:
-    - :uuid: ef758d58-00ee-4e53-9386-7f151d32af7b
-      :name: Smokestack Lightnin'
-      :segued: false
-    - :uuid: c40a49ac-bda7-477e-a875-7f1a2a088c35
-      :name: Beat It On Down The Line
-      :segued: false
-    - :uuid: 59e453eb-fef8-4047-b5b3-0ecb74825cbf
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 812944c0-b45c-426c-bae4-188a694201e1
-      :name: I Know You Rider
-      :segued: true
-    - :uuid: 51ad332d-fed9-49ab-8a96-891aef2b57ea
-      :name: Friend Of The Devil
-      :segued: false
-    - :uuid: bd787e19-7719-490a-bf1c-160ab75499ef
-      :name: Truckin'
-      :segued: false
-    - :uuid: 55851721-64ed-4535-914a-6b4cdbea5c3f
-      :name: Candyman
-      :segued: false
-    - :uuid: b03cbd7e-6c27-4c54-ac28-07cb98819072
-      :name: It Hurts Me Too
-      :segued: false
-    - :uuid: 8e8592c6-a015-496b-95eb-3407f306ef59
-      :name: Dancing In The Street
-      :segued: false
-    - :uuid: b691afab-6915-40f5-b510-56032378478d
-      :name: Big Railroad Blues
-      :segued: false
-    - :uuid: 8824d1a2-9d1b-4f76-9220-ee0587f4d23f
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: 034e1d94-df5a-412c-9fb4-64863b52c67a
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: e201a0af-b9a7-4537-82fe-21d4e3d596fc
-      :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: 3a0b2002-2072-41ae-8e26-fc1ff854c89e
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 73bf561c-82ac-49b2-bf16-4c3f952b0957
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1970/10/31/0:
   :uuid: c6cff1a7-69d1-4110-8b66-0d27af09102c
   :venue: University Gymnasium, State University of New York
@@ -2531,106 +2215,7 @@
   :city: Port Chester
   :state: NY
   :country: US
-  :sets:
-  - :uuid: b0a23b50-2e41-49e0-983a-13c13566ad71
-    :songs:
-    - :uuid: d5ea4271-1e69-4fd2-aad3-72270735ed99
-      :name: Don't Ease Me In
-      :segued: false
-    - :uuid: 23fdab01-e65b-411a-bcce-3d5701f7c01f
-      :name: Deep Elem Blues
-      :segued: false
-    - :uuid: 521cfd64-a48a-41f3-b39b-a44a332d61e0
-      :name: Dark Hollow
-      :segued: false
-    - :uuid: 6cf1c16a-4616-462d-93df-c9dbc1d2a274
-      :name: Friend Of The Devil
-      :segued: false
-    - :uuid: a5a394df-b46f-4f56-9c70-6b1acf0716c7
-      :name: The Rub
-      :segued: false
-    - :uuid: aee8f05e-d882-4c50-9cef-8c6cedf607c3
-      :name: Black Peter
-      :segued: false
-    - :uuid: 6d9f2ea3-23dd-443d-892e-7bac9c74731b
-      :name: El Paso
-      :segued: false
-    - :uuid: c11e3f0c-9d21-4b80-8bfb-fb076c661530
-      :name: Brokedown Palace
-      :segued: true
-    - :uuid: 1a388e52-fd94-4355-aeef-02e5ed834dfc
-      :name: Uncle John's Band
-      :segued: false
-  - :uuid: 94ffbf93-9005-4eae-a124-431253fd26a5
-    :songs:
-    - :uuid: a14177fb-d60d-4098-94f4-0b5fb70fee4f
-      :name: Casey Jones
-      :segued: false
-    - :uuid: d3888db3-c7ec-40fb-aea9-9243c0ecb537
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 5f8afce2-43be-453a-92f9-ab31b73d7922
-      :name: I'm A King Bee
-      :segued: false
-    - :uuid: 4cd17e47-6db6-4772-89e5-446e309abb9d
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 0db3f6cc-78fa-440f-a026-246004977b8a
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 716d04b0-e80b-469e-a4d5-ecf321f08e3e
-      :name: Truckin'
-      :segued: false
-    - :uuid: 46044790-4a02-4d6f-b500-2ad0a4a3e7c5
-      :name: Candyman
-      :segued: false
-    - :uuid: 88c819c0-df50-4230-a69d-38b84f4ad94b
-      :name: Sugar Magnolia
-      :segued: false
-    - :uuid: bc9614fb-0eb7-4370-98fc-8e50a565adbf
-      :name: Drums
-      :segued: true
-    - :uuid: 662cb8e0-7b6d-402f-b919-d225e6641ffa
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: 8a175425-4bff-4598-9526-6d7f196dfe01
-      :name: Drums
-      :segued: true
-    - :uuid: 8eb21225-6b89-41dc-a38c-773492c1f8ea
-      :name: Playing In The Band
-      :segued: true
-    - :uuid: 011abfb9-dc7e-423d-bf1d-ff2d2ce73a0b
-      :name: Drums
-      :segued: true
-    - :uuid: 4b924a14-6ecd-40f4-91c8-ab981f71d979
-      :name: Good Lovin'
-      :segued: false
-  - :uuid: 94ffbf93-9005-4eae-a124-431253fd26a5
-    :songs: 
-    - :uuid: 298d2200-9d8a-4bba-9f50-0f1338348602
-      :name: Alligator
-      :segued: true
-    - :uuid: 984a3783-3572-4813-81b6-60f41c93a21b
-      :name: Jam
-      :segued: true
-    - :uuid: a2494fc5-fe97-4dbf-8cfd-80a93200c1e4
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 65fdf048-84c8-4d21-9fc6-2d0a114aa3e4
-      :name: Goin' Down The Road Feeling Bad
-      :segued: true
-    - :uuid: e4079ea9-0552-4100-b223-2dfbb9a5a664
-      :name: Mountain Jam
-      :segued: true
-    - :uuid: 58a8b51f-48c0-4e4f-b26a-34efc199300c
-      :name: Not Fade Away
-      :segued: true
-    - :uuid: 6bb35535-6d2e-45f0-be2f-6da6c4d0cabf
-      :name: Caution (Do Not Stop On Tracks)
-      :segued: true
-    - :uuid: 5df3f4ad-ad9c-497f-a06a-843db7427c23
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1970/11/07:
   :uuid: 887df428-a0f3-42c5-b2db-1ea931f26b24
   :venue: Capitol Theater
@@ -2716,9 +2301,6 @@
     - :uuid: 5a191086-4a1d-4b76-b848-1067ef753ced
       :name: I'm A King Bee
       :segued: false
-    - :uuid: f7817395-0822-48b3-8b63-4427f8fdbb1e
-      :name: Drums
-      :segued: true
     - :uuid: a3e070f7-48ed-435c-b87d-45ec925bdbf6
       :name: Good Lovin'
       :segued: false
@@ -2735,134 +2317,14 @@
   :city: Brooklyn
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 7e63ed8d-874f-4a91-a8d5-03504b3722fd
-    :songs:
-    - :uuid: 2c3984c5-75cb-4733-ad58-e1cbf513df80
-      :name: Casey Jones
-      :segued: false
-    - :uuid: e6849f14-e580-4b57-b1c2-25a5f642dc25
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 0a78035e-5252-49a0-bfd2-6655b852e38d
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: ae1737ec-7279-4d50-a1f4-e565e2958b1f
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: d25b3458-58c8-498b-8598-1181c0b5f3f4
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 44c9ef49-9032-41ec-bd81-2efdf3d57e6e
-      :name: Big Railroad Blues
-      :segued: false
-    - :uuid: 0a148cdc-18f5-4abe-9353-d50bf312b273
-      :name: Mama Tried
-      :segued: false
-    - :uuid: dcfb9da8-d359-44fa-84bf-b58ff7e8bbd1
-      :name: It Hurts Me Too
-      :segued: false
-    - :uuid: 15822297-7238-4beb-a886-5997ea77ca73
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: 9062d489-1c20-4828-9c66-db1c1d8af430
-      :name: Drums
-      :segued: false
-    - :uuid: 951dd4a6-d087-4114-a29c-203632a53989
-      :name: The Other One
-      :segued: false
-    - :uuid: b9f284ce-7399-4d68-b1f4-7a5d39a6d5ee
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: b0c0512a-614b-4adf-a52b-145f85f3f012
-      :name: Sugar Magnolia
-      :segued: false
-    - :uuid: a1c2df08-97cc-43c2-aef2-854b6959b781
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 44726a70-6cc4-4cc9-8375-805b65a87b20
-      :name: Truckin'
-      :segued: false
-  - :uuid: 5bfb0c98-df28-4b73-bccd-2f244d93aec0
-    :songs:
-    - :uuid: 5b980b99-f023-4aff-b6c9-be0df7feab48
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 4211b99c-781a-4cc8-ab25-625af496c741
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 6ff66987-ca45-439e-87ed-19ad1aa28990
-      :name: Goin' Down The Road Feeling Bad
-      :segued: false
-    - :uuid: 509b681c-a4e6-4315-bfc5-14126be2a64d
-      :name: John's Other
-      :segued: false
-    - :uuid: 9ceec61d-8bd7-4fe3-8767-4329f13ba33b
-      :name: Uncle Sam Blues
-      :segued: false
-    - :uuid: 415c982e-2c52-4168-b903-0d01dc730aff
-      :name: Around And Around
-      :segued: false
-    - :uuid: 779b78da-04d3-4780-9a7c-460b73a79d6c
-      :name: Ode For Billie Dean
-      :segued: false
-    - :uuid: 5e503640-77ec-4f16-ae02-bd891bd73ef1
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 3552a30f-71f2-4158-aecf-d9b33d81ad88
-      :name: Who Do You Love?
-      :segued: false
-    - :uuid: ebd42794-50de-44c4-891e-2c8d256f708f
-      :name: Drums
-      :segued: false
-    - :uuid: 857f33d0-870f-4252-abf8-3c845b1a462e
-      :name: Jam
-      :segued: false
-    - :uuid: d42bdac9-c72c-4521-852b-52806777b23b
-      :name: Come Back Baby
-      :segued: false
+  :sets: []
 1970/11/12:
   :uuid: f98a60c0-fc14-450f-a41d-0794699cff41
   :venue: 46th Street Rock Palace
   :city: Brooklyn
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 32d213ff-19d9-44a1-9959-f5a740dd397b
-    :songs:
-    - :uuid: 7cfd8e71-955d-47c0-904f-d4c051e9133d
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: f5cd5b4b-ee0a-4ec2-8d5a-4244c30ef139
-      :name: Truckin'
-      :segued: false
-    - :uuid: aaf2aa6a-21b6-44b5-89ac-1196f06091e1
-      :name: New Minglewood Blues
-      :segued: false
-    - :uuid: 09b6ea58-f1ff-4521-bf70-b48ab16333de
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 534cf705-6c92-411a-9c00-66eb57b03630
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 5cbe38fd-aab5-4171-bbe6-d708d2ab16e3
-      :name: Sugar Magnolia
-      :segued: false
-    - :uuid: fc792f82-ca1d-4af1-b3a0-7ae60b293b28
-      :name: Candyman
-      :segued: false
-    - :uuid: 19091ee1-a19d-46bf-901d-c9e08ca2ab2b
-      :name: New Orleans
-      :segued: false
-    - :uuid: 99518e0c-5031-4427-81d5-7d97bac5fbf1
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 29be50c0-cf48-460d-b231-7053ce91d472
-      :name: Brokedown Palace
-      :segued: false
-    - :uuid: f6cdcce0-9156-4009-8b23-c872c1816b4b
-      :name: Not Fade Away
-      :segued: false
+  :sets: []
 1970/11/16:
   :uuid: 7606cece-d1a0-46bf-83de-da3f32f04477
   :venue: Fillmore East
@@ -2897,60 +2359,7 @@
   :city: New York
   :state: NY
   :country: US
-  :sets:
-  - :uuid: a1e3bd30-436b-4774-85cf-70ac9a76de25
-    :songs:
-    - :uuid: e624d68d-f33d-443d-a24a-275826947510
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 2e8a7b9f-0e50-4339-a79f-84df44b98964
-      :name: Friend Of The Devil
-      :segued: false
-    - :uuid: 9bdbefcd-3c81-432f-b43e-5f306e3442db
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: bb983e17-7b29-4f16-9870-0d2c04938414
-      :name: I'm A King Bee
-      :segued: false
-    - :uuid: bd06f019-3f70-476e-b34f-4c6574f86f30
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: b307f564-bc24-4915-a66f-1054f4a8b911
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 01b4e1ed-08ec-44eb-a3d4-c1b70ea6126c
-      :name: Mama Tried
-      :segued: false
-    - :uuid: d78bd894-8c7d-485d-8c01-68776f15e572
-      :name: Truckin'
-      :segued: false
-    - :uuid: c79ca84f-0279-4d05-a5c4-fe24d08f2424
-      :name: Drums
-      :segued: false
-    - :uuid: 9f5d1d36-87c1-4089-a94e-a3a7a66a8213
-      :name: The Other One
-      :segued: false
-    - :uuid: 2431095e-007e-41ed-89ca-31c4f9e44b4e
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: eb93e50f-e2a9-487d-9515-1b60c2e16dad
-      :name: Big Railroad Blues
-      :segued: false
-    - :uuid: 6d33e2b1-2aeb-4526-ab70-6e3b03acb22e
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: ce78e54e-ea64-4b19-821b-fd99e3ca7cf6
-      :name: Goin' Down The Road Feeling Bad
-      :segued: false
-    - :uuid: d558e2bd-dfc7-4257-b3b5-65db96560d2e
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 615f9dd9-d5b7-4c18-ad1c-4bd0adb9a7b8
-      :name: Uncle John's Band
-      :segued: false
-    - :uuid: ba5f65eb-24d6-45a8-b5ab-185d81f4dd75
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1970/11/27:
   :uuid: 63ac3285-dee1-4578-a936-2c9d73c8e5f3
   :venue: The Syndrome

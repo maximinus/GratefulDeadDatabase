@@ -1,12 +1,5 @@
 ---
-1968/01/14:
-  :uuid: a5289930-8875-4d41-8760-a0af193aedac
-  :venue: Bakersfield Memorial Auditorium
-  :city: Bakersfield
-  :state: CA
-  :country: US
-  :sets: []
-1968/01/16:
+1968/01/17:
   :uuid: f3ca30cc-2bde-4bbb-aaec-f2d82601c3ec
   :venue: Carousel Ballroom
   :city: San Francisco
@@ -73,20 +66,6 @@
   :state: CA
   :country: US
   :sets: []
-1968/01/22:
-  :uuid: 364c1f00-b6c1-47e3-b2f9-ae2302d79f33
-  :venue: Eagles Auditorium
-  :city: Seattle
-  :state: WA
-  :country: US
-  :sets: []
-1968/01/23:
-  :uuid: 6570a1e1-3eea-43c8-a30c-31af5e3fc29b
-  :venue: Eagles Auditorium
-  :city: Seattle
-  :state: WA
-  :country: US
-  :sets: []
 1968/01/26:
   :uuid: 61c2d049-e08c-4e81-bb9d-7094d325a5d0
   :venue: Eagles Auditorium
@@ -99,13 +78,6 @@
   :venue: Eagles Auditorium
   :city: Seattle
   :state: WA
-  :country: US
-  :sets: []
-1968/01/29:
-  :uuid: 8d9e5f00-e50e-49a0-bbe4-0973c08024ce
-  :venue: Portland State College
-  :city: Portland
-  :state: OR
   :country: US
   :sets: []
 1968/01/30:
@@ -126,13 +98,6 @@
   :uuid: a2ed27b6-bf53-489d-ab0d-d9b956e34a8a
   :venue: Crystal Ballroom
   :city: Portland
-  :state: OR
-  :country: US
-  :sets: []
-1968/02/04:
-  :uuid: b6e8b6f2-2f59-4175-8729-118c95df9d31
-  :venue: South Oregon College Gym
-  :city: Ashland
   :state: OR
   :country: US
   :sets: []
@@ -194,13 +159,6 @@
     - :uuid: c8c4bcb5-9c33-4928-aa78-4f29c8d6411f
       :name: In The Midnight Hour
       :segued: false
-1969/02/15:
-  :uuid: fae07860-6984-4729-a3b1-21752bd66c01
-  :venue: San Quentin State Prison
-  :city: San Quentin
-  :state: CA
-  :country: US
-  :sets: []
 1968/02/17:
   :uuid: f28ec4c8-5752-4e3b-b190-8ca5a954078d
   :venue: Selland Arena
@@ -308,13 +266,6 @@
     - :uuid: 01c1c425-b2e8-44ac-b04a-4e53ddac69ac
       :name: Feedback
       :segued: false
-1968/03/01:
-  :uuid: 8b8548cf-8f72-4798-80a8-5f8ad7a609df
-  :venue: 1300 Boulevard Way
-  :city: Walnut Creek
-  :state: CA
-  :country: US
-  :sets: []
 1968/03/02:
   :uuid: ccdb9216-7c50-4ff9-9bd4-aeeebfcffe3e
   :venue: 1300 Boulevard Way
@@ -329,23 +280,9 @@
   :state: CA
   :country: US
   :sets: []
-1968/03/07:
-  :uuid: f7aace4a-2e3a-49bc-a9b3-e709a4129fd6
-  :venue: San Quentin State Prison
-  :city: San Quentin
-  :state: CA
-  :country: US
-  :sets: []
-1968/03/09/0:
-  :uuid: 66282770-8884-4639-bcac-516afb6950e6
-  :venue: Melodyland Theatre
-  :city: Anaheim
-  :state: CA
-  :country: US
-  :sets: []
-1968/03/09/1:
-  :uuid: 28d0b941-56fe-4098-896e-34ad704d3179
-  :venue: Melodyland Theatre
+1968/03/08:
+  :uuid: 11824844-ab3e-4890-afdb-e7e49774037a
+  :venue: Melodyland Theater
   :city: Anaheim
   :state: CA
   :country: US
@@ -357,7 +294,7 @@
   :state: CA
   :country: US
   :sets: []
-1968/03/15:
+1968/03/16:
   :uuid: 220d6e7a-01b9-4205-87dc-8508b9aaa32d
   :venue: Carousel Ballroom
   :city: San Francisco
@@ -428,50 +365,6 @@
   :state: CA
   :country: US
   :sets: []
-1968/03/22:
-  :uuid: 1e8c7ec4-7fb4-4f5e-9b94-2dcd255ca732
-  :venue: State Fair Coliseum
-  :city: Detroit
-  :state: MI
-  :country: US
-  :sets: []
-1968/03/23:
-  :uuid: 387670fd-cd76-4696-b631-df15b30d4dec
-  :venue: State Fair Coliseum
-  :city: Detroit
-  :state: MI
-  :country: US
-  :sets: []
-1968/03/26:
-  :uuid: 89acf864-0b80-49c4-97a3-01d324a62917
-  :venue: Carousel Ballroom
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets:
-  - :uuid: 8ca62111-3785-438d-97d9-7c3e468eaf47
-    :songs:
-    - :uuid: 4d1bb1d3-740b-4fbf-ba6d-ffdfc6ef27c5
-      :name: Morning Dew
-      :segued: false
-    - :uuid: df6c6e9f-07b4-4406-be86-8046aa62a2b4
-      :name: Turn On Your Lovelight
-      :segued: false
-    - :uuid: 3684e0dc-0c51-4026-b7f8-d7b02d1d796d
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: cf2c30fc-3ab4-4f0c-83a0-416249072ba9
-      :name: The Other One
-      :segued: false
-    - :uuid: 6099ac80-d27a-42d2-84e9-9e8b06152546
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: b4395910-d2ba-48ea-9195-f2c7007b769f
-      :name: New Potato Caboose
-      :segued: false
-    - :uuid: d1a65c61-2dac-4aec-9296-ab94ccc052b4
-      :name: Born Cross Eyed
-      :segued: false
 1968/03/29:
   :uuid: abf95adf-ab59-4b9d-9fc8-a51b86a8ecc3
   :venue: Carousel Ballroom
@@ -500,46 +393,11 @@
   :state: CA
   :country: US
   :sets: []
-1968/04/19:
-  :uuid: 6e6df4bb-eb39-4946-866d-ab4ab3f83cb2
-  :venue: Thee Image
-  :city: Miami
-  :state: FL
-  :country: US
-  :sets: []
-1968/04/20:
-  :uuid: 1393a92a-5283-44cd-bb15-135e99858716
-  :venue: Thee Image
-  :city: Miami
-  :state: FL
-  :country: US
-  :sets: []
 1968/04/21:
   :uuid: 6e7799f8-faeb-451b-a509-672158e82dd2
   :venue: Thee Image
   :city: Miami
   :state: FL
-  :country: US
-  :sets: []
-1968/04/26:
-  :uuid: 5c92a7fe-8d17-42f6-90bc-b349e20839b7
-  :venue: Electric Factory
-  :city: Philadelphia
-  :state: PA
-  :country: US
-  :sets: []
-1968/04/27:
-  :uuid: 1b30cdd7-c0a9-4306-a73f-c245cb6e5a37
-  :venue: Electric Factory
-  :city: Philadelphia
-  :state: PA
-  :country: US
-  :sets: []
-1968/04/28:
-  :uuid: 791796e2-944c-4126-ac63-6963492339b8
-  :venue: Electric Factory
-  :city: Philadelphia
-  :state: PA
   :country: US
   :sets: []
 1968/05/03:
@@ -568,53 +426,11 @@
   :state: NY
   :country: US
   :sets: []
-1968/05/07/0:
-  :uuid: bd8fe189-2345-4d59-a283-49924a224b8c
-  :venue: Electric Circus
-  :city: New York
-  :state: NY
-  :country: US
-  :sets: []
-1968/05/07/1:
-  :uuid: e5ae83f1-00c1-4cad-8db2-10b08875c812
-  :venue: Electric Circus
-  :city: New York
-  :state: NY
-  :country: US
-  :sets: []
-1968/05/08/0:
-  :uuid: 4354d1af-7d3e-4e2c-b1b2-2e4560a8215e
-  :venue: Electric Circus
-  :city: New York
-  :state: NY
-  :country: US
-  :sets: []
-1968/05/08/1:
-  :uuid: 2212e933-0fdd-444b-97e1-fbcc36029af8
-  :venue: Electric Circus
-  :city: New York
-  :state: NY
-  :country: US
-  :sets: []
 1968/05/09/0:
   :uuid: 1aa9cc9f-42fb-4d7f-a71c-382492e427b3
   :venue: Electric Circus
   :city: New York
   :state: NY
-  :country: US
-  :sets: []
-1968/05/09/1:
-  :uuid: 1632ab49-b641-4c42-a789-a544a9610792
-  :venue: Electric Circus
-  :city: New York
-  :state: NY
-  :country: US
-  :sets: []
-1968/05/11:
-  :uuid: 7692a038-5a2e-48d8-b5a9-6f5e6b765b9f
-  :venue: The Dome
-  :city: Virginia Beach
-  :state: VA
   :country: US
   :sets: []
 1968/05/17:
@@ -631,52 +447,6 @@
   :state: CA
   :country: US
   :sets: []
-1968/05/18/1:
-  :uuid: bbd21a75-36db-498a-a687-016c729ec086
-  :venue: Shrine Exhibition Hall
-  :city: Los Angeles
-  :state: CA
-  :country: US
-  :sets: []
-1968/05/23:
-  :uuid: 7fee3706-a6f4-4f8e-b38d-b7323f269259
-  :venue: National Guard Armory
-  :city: St. Louis
-  :state: MO
-  :country: US
-  :sets:
-  - :uuid: c983a961-3bcd-4814-a78c-9243a2f13df2
-    :songs:
-    - :uuid: 12f61f7e-313f-4af8-99b3-36e1cc634a59
-      :name: Turn On Your Lovelight
-      :segued: false
-    - :uuid: 65d9e809-9f6e-4b81-a7f7-4c3d5d710aba
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: 43ff6c6f-63e4-40d0-8c02-51a953767f7e
-      :name: The Other One
-      :segued: false
-    - :uuid: bd564b2a-05c8-47e5-b33d-f816c9bbc644
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: 68e826c7-188e-4e55-88d3-96e6157a9f35
-      :name: Dark Star
-      :segued: false
-    - :uuid: bd3998b8-d6ac-4c56-9d76-f0838b3a39e8
-      :name: Saint Stephen
-      :segued: false
-    - :uuid: 637fe2cd-33f1-4458-b8ec-47b60056b1eb
-      :name: The Eleven
-      :segued: false
-    - :uuid: 9d9834f5-4e76-4028-a163-3253b6fdf7c9
-      :name: Caution (Do Not Stop On Tracks)
-      :segued: false
-    - :uuid: 0a7f6312-51c8-4eb4-98d5-f2d0cccd5bdc
-      :name: Feedback
-      :segued: false
-    - :uuid: f34b1a2d-0eb5-40f5-91a1-269d916ae040
-      :name: And We Bid You Good Night
-      :segued: false
 1968/05/24:
   :uuid: 3d1c4fe6-dc27-4ee0-9f27-b83b5f217199
   :venue: National Guard Armory
@@ -691,43 +461,8 @@
   :state: MO
   :country: US
   :sets: []
-1968/05/30:
-  :uuid: 6874b663-2f33-4d71-97eb-795ee9c0db2a
-  :venue: Carousel Ballroom
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/05/31:
-  :uuid: 0c851139-b537-4450-a59d-cb851b4fb87f
-  :venue: Carousel Ballroom
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/06/01:
-  :uuid: 6ae5725c-8c74-4a5e-9fef-65a4f689ea6d
-  :venue: Carousel Ballroom
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
 1968/06/07:
   :uuid: 495133c2-e960-4a25-81aa-f617fcbda0e7
-  :venue: Carousel Ballroom
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/06/08:
-  :uuid: fc6f99fd-5d77-41c5-b25b-b2dd0042c7b5
-  :venue: Carousel Ballroom
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/06/09:
-  :uuid: e5d5f542-f486-4efe-8016-265284947085
   :venue: Carousel Ballroom
   :city: San Francisco
   :state: CA
@@ -806,59 +541,10 @@
   :state: NY
   :country: US
   :sets: []
-1968/06/15/1:
-  :uuid: 3691d24a-e9a4-4cec-b822-953d83ddd1d7
-  :venue: Fillmore East
-  :city: New York
-  :state: NY
-  :country: US
-  :sets: []
 1968/06/19:
   :uuid: 6f288121-df7a-4f30-a1ce-11d119126136
   :venue: Carousel Ballroom
   :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/06/22:
-  :uuid: 03a5dfe3-0ceb-43cb-861d-86c7607a3b97
-  :venue: Phoenix Travelodge Theater
-  :city: Phoenix
-  :state: AZ
-  :country: US
-  :sets: []
-1968/07/11:
-  :uuid: 0606bd8e-5b2a-4c11-8e1a-93e3125abb18
-  :venue: Shrine Exhibition Hall
-  :city: Los Angeles
-  :state: CA
-  :country: US
-  :sets: []
-1968/07/12:
-  :uuid: e748bc31-b229-4d34-9cc6-68013c95bd1c
-  :venue: King's Beach Bowl
-  :city: Lake Tahoe
-  :state: CA
-  :country: US
-  :sets: []
-1968/07/13:
-  :uuid: 7a08d153-446c-4e8c-8b3f-e049bb8b3e84
-  :venue: King's Beach Bowl
-  :city: Lake Tahoe
-  :state: CA
-  :country: US
-  :sets: []
-1968/08/02:
-  :uuid: ff61f8a9-9c65-40f6-ad4b-8a9c3e9636eb
-  :venue: The Hippodrome
-  :city: San Diego
-  :state: CA
-  :country: US
-  :sets: []
-1968/08/03:
-  :uuid: fe400f38-7d12-45b2-b4e4-fb1c77129ca6
-  :venue: The Hippodrome
-  :city: San Diego
   :state: CA
   :country: US
   :sets: []
@@ -869,27 +555,6 @@
   :state: CA
   :country: US
   :sets: []
-1968/08/19:
-  :uuid: 3083d340-2ef7-48a5-a6c5-5c2126f4a9d9
-  :venue: Fillmore West
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets:
-  - :uuid: f9e90223-6a18-4815-abf4-b14a90c9d36b
-    :songs:
-    - :uuid: 3b3e21a8-81df-471c-a540-205326f00427
-      :name: Dark Star
-      :segued: false
-    - :uuid: 56e94d82-5fd0-4ef4-9723-bee59fd76a8f
-      :name: Saint Stephen
-      :segued: false
-    - :uuid: 825ea935-5375-4086-b6ed-796925edabc6
-      :name: The Eleven
-      :segued: false
-    - :uuid: 1f8beb17-2233-4030-a275-96412da579db
-      :name: Death Don't Have No Mercy
-      :segued: false
 1968/08/20:
   :uuid: 44197673-2d1d-492c-9d73-c791b08bcf6c
   :venue: Fillmore West
@@ -989,6 +654,13 @@
     - :uuid: 61bd51c5-2fc4-43c1-9ac3-0a629954bcc0
       :name: And We Bid You Good Night
       :segued: false
+1968/08/22:
+  :uuid: 226711c3-d40e-4608-a0e6-fa6e35c0c188
+  :venue: Fillmore West
+  :city: San Francisco
+  :state: CA
+  :country: US
+  :sets: []
 1968/08/23:
   :uuid: 37e6fc9e-e13a-4fe0-ae84-ce0b1b1c2237
   :venue: Shrine Exhibition Hall
@@ -1003,37 +675,9 @@
   :state: CA
   :country: US
   :sets: []
-1968/08/28:
-  :uuid: c2fcf750-2d87-49f7-9d25-a431e62ab93e
-  :venue: Avalon Ballroom
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/08/30:
-  :uuid: c73eddb2-b1b2-4ffd-bb9b-64df7e0d5acf
-  :venue: Fillmore West
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/08/31:
-  :uuid: f59b9c23-02ba-4e9f-8c27-706d47c9338d
-  :venue: Fillmore West
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/09/01/0:
+1968/09/01:
   :uuid: c551221a-3bd2-4fc9-ad1d-40615cb0a701
   :venue: Palace Of Fine Arts
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/09/01/1:
-  :uuid: 02ab7891-20c3-449f-a235-33db14d60810
-  :venue: Fillmore West
   :city: San Francisco
   :state: CA
   :country: US
@@ -1059,34 +703,6 @@
   :state: CA
   :country: US
   :sets: []
-1968/10/05:
-  :uuid: d931d470-9fd1-4774-9289-ec6b7c999fd3
-  :venue: Sacramento Memorial Auditorium
-  :city: Sacramento
-  :state: CA
-  :country: US
-  :sets: []
-1968/10/08:
-  :uuid: 0c47e9ec-4fd4-496c-bbeb-06ed4c885bff
-  :venue: The Matrix
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/10/09:
-  :uuid: 56cba4e2-f320-48e3-9ef4-c9fa24182ee6
-  :venue: The Matrix
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/10/10:
-  :uuid: b511e84d-5c28-45b4-813f-7a06683bbfa7
-  :venue: The Matrix
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
 1968/10/11:
   :uuid: 0172a5a0-29ab-46d2-a412-d5d7af86f3f6
   :venue: Avalon Ballroom
@@ -1108,76 +724,10 @@
   :state: CA
   :country: US
   :sets: []
-1968/10/18:
-  :uuid: 46b2f925-cf6a-4cc9-8564-dab5cf4543f1
-  :venue: The Bank
-  :city: Torrance
-  :state: CA
-  :country: US
-  :sets: []
 1968/10/20:
   :uuid: 3278d598-67b0-40da-a7da-e79d0b559af0
   :venue: Greek Theatre
   :city: Berkeley
-  :state: CA
-  :country: US
-  :sets: []
-1968/10/29:
-  :uuid: e85e6138-72cd-4093-a3c3-be0e9215baa5
-  :venue: The Matrix
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets:
-  - :uuid: ab712432-b592-4b94-8e99-5ccb3e65e5de
-    :songs:
-    - :uuid: e8da86c5-7c13-403a-8806-43e694c2d119
-      :name: Dark Star Jam
-      :segued: false
-    - :uuid: 51951f63-614c-40d5-a1e2-695835ce4c28
-      :name: Death Letter Blues
-      :segued: false
-    - :uuid: e259d942-dfe7-4c60-86bb-0527c51486fc
-      :name: The Other One
-      :segued: false
-    - :uuid: d889a86a-2742-49f4-ada5-03916328d834
-      :name: Turn On Your Lovelight
-      :segued: false
-    - :uuid: 20c713b4-b076-4b48-bc3d-77f2ba176a0b
-      :name: Jam
-      :segued: false
-    - :uuid: 4098ac22-f6af-4b66-b8af-fdecb74ea680
-      :name: The Eleven
-      :segued: false
-    - :uuid: 773660f5-ffc2-477c-9800-54c1f2891878
-      :name: Death Don't Have No Mercy
-      :segued: false
-    - :uuid: f76a2dfe-ab21-4f8a-8519-7817cf85b31a
-      :name: Jam
-      :segued: false
-    - :uuid: 4ae0be2b-6ea4-47f1-8846-aaf7d271dc3b
-      :name: Jam
-      :segued: false
-    - :uuid: 7fe7b368-d362-44c6-9224-c8d46cd8295d
-      :name: Prisoner Blues
-      :segued: false
-    - :uuid: 13696020-fb3a-458a-82d4-9db9091e8aaf
-      :name: Jam
-      :segued: false
-    - :uuid: 1ead4df4-6d60-49a5-9e0e-803b24e0bc5a
-      :name: Dark Star Jam
-      :segued: false
-1968/10/30:
-  :uuid: 2d24feea-265e-457d-959b-4c6dd17e5ee3
-  :venue: The Matrix
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/10/31:
-  :uuid: 2abd97a6-2166-44ee-8ff4-570bd5086a0a
-  :venue: The Matrix
-  :city: San Francisco
   :state: CA
   :country: US
   :sets: []
@@ -1188,34 +738,6 @@
   :state: CA
   :country: US
   :sets: []
-1968/11/04:
-  :uuid: 0c1d70a8-45ae-43e3-8800-828dfd9cc260
-  :venue: Longshoreman's Hall
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/11/07:
-  :uuid: 9d36fbf0-2efc-4eb0-b7dc-1ed57e427181
-  :venue: Fillmore West
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/11/08:
-  :uuid: 845c77ea-587b-46bf-b107-a199a2fe33be
-  :venue: Fillmore West
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/11/09:
-  :uuid: e7f72492-5e09-4026-8f37-aad0209746fc
-  :venue: Fillmore West
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
 1968/11/10:
   :uuid: 8f3afee7-9810-4423-aad8-c327e865f48a
   :venue: Fillmore West
@@ -1223,38 +745,17 @@
   :state: CA
   :country: US
   :sets: []
-1968/11/17/0:
-  :uuid: 3a0ef00f-8697-4891-8c46-9d56c2d18334
-  :venue: Eagle's Auditorium
-  :city: Seattle
-  :state: WA
-  :country: US
-  :sets: []
-1968/11/17/1:
-  :uuid: b9c002eb-a97d-4d7c-92d2-c9aa94bd0a36
-  :venue: Eagle's Auditorium
-  :city: Seattle
-  :state: WA
+1968/11/15:
+  :uuid: 8f3afee7-9810-4423-aad8-c327e865f48a
+  :venue: Gill Coliseum, Oregon State University
+  :city: Corvallis
+  :state: OR
   :country: US
   :sets: []
 1968/11/22:
   :uuid: 1fe2ac3d-6f71-4f5a-99b1-09cc7202432f
   :venue: Veterans Hall
   :city: Columbus
-  :state: OH
-  :country: US
-  :sets: []
-1968/11/23:
-  :uuid: 04786fcf-cb4c-490f-aaef-10f0deb17b87
-  :venue: Memorial Auditorium
-  :city: Athens
-  :state: OH
-  :country: US
-  :sets: []
-1968/11/24:
-  :uuid: 60bff1a6-d694-45fa-adba-8d81909179ba
-  :venue: Hyde Park Teen Center
-  :city: Cincinnati
   :state: OH
   :country: US
   :sets: []
@@ -1265,11 +766,18 @@
   :state: IL
   :country: US
   :sets: []
-1968/11/28:
-  :uuid: 93b4e18a-c25b-49a5-a2f8-cc92831ba1c5
-  :venue: The Kinetic Playground
-  :city: Chicago
-  :state: IL
+1968/11/29:
+  :uuid: b1d7577d-527a-444d-ba36-8750469e72f5
+  :venue: Hyde Park Teen Center
+  :city: Cincinnati
+  :state: OH
+  :country: US
+  :sets: []
+1968/11/30:
+  :uuid: b1d7577d-527a-444d-ba36-8750469e72f5
+  :venue: Hyde Park Teen Center
+  :city: Cincinnati
+  :state: OH
   :country: US
   :sets: []
 1968/12/01:
@@ -1277,13 +785,6 @@
   :venue: Grande Ballroom
   :city: Detroit
   :state: MI
-  :country: US
-  :sets: []
-1968/12/06:
-  :uuid: 7bcf3fa5-9344-466c-90cd-a8b1a3c53ca6
-  :venue: The Spectrum
-  :city: Philadelphia
-  :state: PA
   :country: US
   :sets: []
 1968/12/07:
@@ -1300,20 +801,6 @@
   :state: CA
   :country: US
   :sets: []
-1968/12/14:
-  :uuid: 562e466e-e691-4c5c-9cd8-f3b5fbfdf784
-  :venue: The Bank
-  :city: Torrance
-  :state: CA
-  :country: US
-  :sets: []
-1968/12/16:
-  :uuid: 055969e3-5312-4c1b-b81a-5352f4fa121a
-  :venue: The Matrix
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
 1968/12/20:
   :uuid: 53c6d2ed-3cc9-46a0-8334-f75b6afb3a23
   :venue: Shrine Exhibition Hall
@@ -1325,20 +812,6 @@
   :uuid: 7d40f8fe-2a97-4b4a-95b4-a0a17ded9131
   :venue: Shrine Exhibition Hall
   :city: Los Angeles
-  :state: CA
-  :country: US
-  :sets: []
-1968/12/23:
-  :uuid: f1f4dec9-e2b9-4323-b1fc-aadacac668e1
-  :venue: The Matrix
-  :city: San Francisco
-  :state: CA
-  :country: US
-  :sets: []
-1968/12/24:
-  :uuid: 1bb9229d-eaf3-4252-853d-a54db4b3a4bb
-  :venue: The Matrix
-  :city: San Francisco
   :state: CA
   :country: US
   :sets: []

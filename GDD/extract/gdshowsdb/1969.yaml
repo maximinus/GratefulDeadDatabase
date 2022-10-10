@@ -1205,21 +1205,9 @@
     - :uuid: 24257fc4-054e-46a7-bd01-39180f011836
       :name: The Eleven
       :segued: true
-    - :uuid: 116f1e7b-0f85-4c17-ae8c-65f00d1403e2
-      :name: Turn On Your Lovelight
-      :segued: true
-    - :uuid: b91499ea-f6e3-42fa-9812-920fc2bb930f
-      :name: Drums
-      :segued: true
     - :uuid: c95ebbd1-06a1-4212-910e-870eb6edd2c1
       :name: Turn On Your Lovelight
       :segued: true
-    - :uuid: 5f505f97-ca27-4762-88b9-4be6d2edeb4d
-      :name: Drums
-      :segued: true
-    - :uuid: b025cf28-389c-434b-9513-520af6bbe61f
-      :name: Turn On Your Lovelight
-      :segued: false
   - :uuid: b3bf003b-43ea-4d3e-a525-a0e46a78268d
     :songs:
     - :uuid: 360284f2-cf55-4339-8e25-b6a52340f969
@@ -1274,9 +1262,6 @@
       :segued: true
     - :uuid: 8b9fa2a3-db50-4beb-8aa9-01fe6476a0e5
       :name: Mountains Of The Moon
-      :segued: true
-    - :uuid: e7f1d5c6-a5a6-45b2-a70e-f103a06dbda7
-      :name: Jam
       :segued: true
     - :uuid: c89ba39d-05b8-4cc4-a62e-31d81c79fb7a
       :name: Dark Star
@@ -1384,24 +1369,7 @@
   :city: Chicago
   :state: IL
   :country: US
-  :sets:
-  - :uuid: ed910f78-ac59-4f2d-ad14-2023a83794f1
-    :songs:
-    - :uuid: 8838cc6f-8d06-4880-b76c-8b09dc1fb9e5
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 945c2195-c476-428c-840d-8963b5586645
-      :name: Doin' That Rag
-      :segued: false
-    - :uuid: 4333276a-0312-4c24-b1e9-4c88d7de7c41
-      :name: Good Morning Little Schoolgirl
-      :segued: false
-    - :uuid: f60e5c2c-0e7d-4669-b761-d0bba87fd8fb
-      :name: Morning Dew
-      :segued: false
-    - :uuid: e230d68a-cd51-4f48-965c-5b878ab0f2ed
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/04/26:
   :uuid: a0aed680-f537-426c-a628-065580f82559
   :venue: Electric Theater
@@ -1473,9 +1441,6 @@
       :segued: false
   - :uuid: e078b348-df67-47d7-a7bc-484f928463f0
     :songs:
-    - :uuid: 11651df7-b17b-46a8-a911-16e7d82e53cc
-      :name: Drums
-      :segued: true
     - :uuid: f3841726-36e1-4bfd-97bb-9e5994001177
       :name: Viola Lee Blues
       :segued: true
@@ -1511,9 +1476,6 @@
       :segued: true
     - :uuid: 5c7938e2-0389-41a0-98c5-0ad734d72efc
       :name: Me And My Uncle
-      :segued: true
-    - :uuid: 32120ac7-5457-485d-955a-95782a5f4268
-      :name: Jam
       :segued: true
     - :uuid: 577a5865-99da-4a18-896e-1e369aab7471
       :name: Sittin' On Top Of The World
@@ -1585,30 +1547,7 @@
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 11a99c8f-5e0a-40b2-bc2d-2f6328916f1f
-    :songs:
-    - :uuid: e095ff75-2eaf-4f35-8123-9eb782e71eba
-      :name: He Was A Friend Of Mine
-      :segued: false
-    - :uuid: a8aabe96-adc5-4259-bb30-94e36195a1aa
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: 80ee652c-d3ea-4931-9432-5eabf7f2283a
-      :name: Drums
-      :segued: true
-    - :uuid: 48e7ddb9-b6f2-4150-b997-9e2eda47c9b8
-      :name: The Other One
-      :segued: true
-    - :uuid: a870b3eb-9188-4aa2-8472-3543248f9025
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: 108d55ba-b103-4891-b133-8d1fbe02a36a
-      :name: Doin' That Rag
-      :segued: false
-    - :uuid: 0d6c769d-1320-415d-a6fe-81c7d975ef46
-      :name: Me And My Uncle
-      :segued: false
+  :sets: []
 1969/05/09:
   :uuid: ef7eaba5-ddf2-4fc1-8c7d-3362eeca30a0
   :venue: Hall Of Flowers
@@ -1731,9 +1670,6 @@
     - :uuid: d783b517-3866-4c93-809f-968a1de7310e
       :name: China Cat Sunflower
       :segued: true
-    - :uuid: 94bc286a-9853-4db3-ad40-ff00cfaa2733
-      :name: Jam
-      :segued: true
     - :uuid: f626cfb8-907c-44c8-97a1-e01fd428313e
       :name: The Eleven
       :segued: true
@@ -1761,69 +1697,14 @@
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 2e5d26f1-5bfc-4a5c-b2ab-f7a253603deb
-    :songs:
-    - :uuid: ae446f7a-260e-49ba-bd58-cfe9b12c93ed
-      :name: Smokestack Lightnin'
-      :segued: false
-    - :uuid: d2c1bdd6-cbff-4886-ae0c-3d955cae990f
-      :name: The Other One
-      :segued: true
-    - :uuid: f0094eb5-a278-4948-b8f6-62cfa132ee34
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/05/29:
   :uuid: 228d45da-8ba4-47fb-a521-77fedf4b889b
   :venue: Robertson Gym
   :city: Santa Barbara
   :state: CA
   :country: US
-  :sets:
-  - :uuid: fbba4c8c-5bfc-4146-8b4d-2a816068b16e
-    :songs:
-    - :uuid: 21723a09-8308-4aa0-8c9f-b00ca0e7d836
-      :name: Morning Dew
-      :segued: false
-    - :uuid: 77bd5d9f-fcb2-4e8c-9fdf-4d1f0762b8bf
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: e9da9c73-7205-4105-a604-f14e4f71f55e
-      :name: Drums
-      :segued: true
-    - :uuid: b3157e7e-dd30-47aa-8386-2e3c385c6d2e
-      :name: The Other One
-      :segued: true
-    - :uuid: 609d20f8-2078-4037-b497-6a38105aeb4b
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: 6f92e5d9-54ca-4b6e-be66-3d29027111c6
-      :name: Good Morning Little Schoolgirl
-      :segued: true
-    - :uuid: 24b201ca-16a3-4dc3-9603-3b0b1622ca3e
-      :name: Me And My Uncle
-      :segued: true
-    - :uuid: 3ed7f214-19e7-4476-ba68-edad4022bfaf
-      :name: Alligator
-      :segued: true
-    - :uuid: 69fb6b86-c5bf-4498-b183-511f6d07fbc3
-      :name: Drums
-      :segued: true
-    - :uuid: 434fd846-2150-4b0e-b785-4e3d70d52daf
-      :name: Jam
-      :segued: true
-    - :uuid: 339311ca-c8ce-4832-b6ac-8448206f186a
-      :name: Drums
-      :segued: true
-    - :uuid: 7a6f31f2-d024-4716-a92c-7864b0342156
-      :name: Jam
-      :segued: true
-    - :uuid: 96d92d80-bbcf-45b7-a4ea-650152d33abd
-      :name: Drums
-      :segued: true
-    - :uuid: 730f3ff8-858b-444b-ba0e-c6434c0742d4
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/05/30:
   :uuid: 077e195f-4826-40f1-9437-1e5119eaa348
   :venue: Springer's Inn
@@ -1968,9 +1849,6 @@
     - :uuid: 59d2ffb8-40b1-40d6-8e72-267f1f53a480
       :name: China Cat Sunflower
       :segued: true
-    - :uuid: a9a7a8fa-54f6-4f67-860a-7d32b8b0a691
-      :name: Jam
-      :segued: true
     - :uuid: a2f7d7bb-132b-47e8-8c1e-b035d93afc21
       :name: Sittin' On Top Of The World
       :segued: true
@@ -2005,7 +1883,7 @@
       :name: Me And My Uncle
       :segued: false
     - :uuid: 3895fe3b-9fcd-47eb-bde4-b96af961f0b0
-      :name: Checkin' Up
+      :name: Checkin’ Up On My Baby
       :segued: false
     - :uuid: 9c800283-6bf7-455a-a0e4-0864aea230a5
       :name: Beat It On Down The Line
@@ -2132,9 +2010,6 @@
     - :uuid: 88931d7d-1e24-4913-a793-d5d20b1749a1
       :name: China Cat Sunflower
       :segued: true
-    - :uuid: ae4026db-93b1-41d1-982d-3d8f03142e41
-      :name: Jam
-      :segued: true
     - :uuid: 7d3d8953-53d7-4a67-bc39-8c5fd9b0b7f0
       :name: Morning Dew
       :segued: false
@@ -2209,137 +2084,21 @@
   :city: New York
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 471ebe38-3302-42e7-bef8-a6b71e3a0fea
-    :songs:
-    - :uuid: d941ea68-9827-434b-8204-f82a2b9dc8d2
-      :name: Green Green Grass Of Home
-      :segued: false
-    - :uuid: e4594fd5-a39e-4730-9027-e8e3f4fc6d51
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 7d9236d8-9f8e-4ca4-86c2-6c61f1712064
-      :name: High Time
-      :segued: false
-    - :uuid: 3d17a8ce-e0bd-4a2c-9eb0-70b4ecd38af7
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: ec528771-c782-4d1c-92b1-0eb85371766e
-      :name: Jam
-      :segued: true
-    - :uuid: d89c0d2d-c413-42b2-a732-763268e29ea2
-      :name: Morning Dew
-      :segued: true
-    - :uuid: ee41f668-efed-4c55-a209-c3231ab8b7d5
-      :name: Alligator
-      :segued: true
-    - :uuid: 1c2978e6-b955-4d08-a0eb-a9d6c70bd21e
-      :name: Drums
-      :segued: true
-    - :uuid: 4f42e182-6615-4002-981c-0f2309602396
-      :name: Jam
-      :segued: true
-    - :uuid: d9fa6d8f-7d8b-4fbe-8ca5-fb871bc826b8
-      :name: The Other One
-      :segued: true
-    - :uuid: 641f525b-1db7-4794-8843-5c73da2c102d
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: d550cb45-ab4c-4b32-968c-abc38e8ecf73
-      :name: Ol' Slewfoot
-      :segued: false
-  - :uuid: 7ba983d6-ad37-4737-a1a0-da08fc0e72a3
-    :songs:
-    - :uuid: 67b9024b-2616-4f37-bc2a-295cc75c413f
-      :name: Cosmic Charlie
-      :segued: false
+  :sets: []
 1969/06/21/1:
   :uuid: d9252570-0cc6-4c3d-92f9-777046e9a0da
   :venue: Fillmore East
   :city: New York
   :state: NY
   :country: US
-  :sets:
-  - :uuid: 15fdf7c5-17ac-4617-9346-a5290013e8eb
-    :songs:
-    - :uuid: f869c15c-5bc3-4200-9ff5-2b7cdbbcbd45
-      :name: Old, Old House
-      :segued: false
-    - :uuid: 90fee55e-cab1-451a-b302-ac379bac6b97
-      :name: Sittin' On Top Of The World
-      :segued: false
-    - :uuid: 66d32f4b-ded5-43ab-ba40-5e17857b721e
-      :name: I'm A King Bee
-      :segued: false
-    - :uuid: 4b1988d8-fc45-4dd6-b99b-a6c173ec9f10
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 2a4988fa-e048-4f07-97d6-0b5c4432fa12
-      :name: Mama Tried
-      :segued: false
-    - :uuid: a98b19ad-abfa-4b1c-986c-e260f94d7eb5
-      :name: High Time
-      :segued: false
-    - :uuid: d99a5ddf-8415-4145-b442-2a3ef44c02b4
-      :name: Dupree's Diamond Blues
-      :segued: false
-    - :uuid: 9d57eaf7-3e52-45d0-bc4d-1053b6dad564
-      :name: Dark Star
-      :segued: true
-    - :uuid: 2e64d3cd-9452-4244-8106-0433bdb0ec0a
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: 478245aa-a7f0-489c-94af-25e565ba85c1
-      :name: The Eleven
-      :segued: true
-    - :uuid: 5f1e9cd3-2cb8-4175-a3a2-e71d84650880
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/06/22:
   :uuid: 3161cd48-63ce-414d-bda5-b4e8577b5837
   :venue: Central Park
   :city: New York
   :state: NY
   :country: US
-  :sets:
-  - :uuid: bb0be889-0b3c-4f1c-b912-9d282805b3b0
-    :songs:
-    - :uuid: 853e13c9-2628-46da-a7ba-99f1bc3aa640
-      :name: Dancing In The Street
-      :segued: false
-    - :uuid: 6b8064fb-2f64-4e4e-9758-7b815f04976c
-      :name: Jam
-      :segued: true
-    - :uuid: efb08720-653a-452a-811f-77a3d48bd5df
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 7cfabd74-0f26-44bd-a690-be383756bdc2
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 5445b3d2-5eb2-40fa-aa7c-53e14c427888
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 4274b7bf-edfd-4700-bd34-4d5af3841664
-      :name: Sittin' On Top Of The World
-      :segued: false
-    - :uuid: 22d72bb1-c052-4304-b29a-903163310711
-      :name: Silver Threads And Golden Needle
-      :segued: false
-    - :uuid: 9217c2cd-db0e-4c9f-9375-a28b7ad2bcdc
-      :name: Dark Star
-      :segued: true
-    - :uuid: 17f7e357-c692-44f4-b9d0-77dfd1c6921e
-      :name: The Other One
-      :segued: true
-    - :uuid: fb69e6d8-489f-4631-9ce1-e3d7115d3481
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: 79ff3269-9036-427a-93de-10b893f54872
-      :name: It's A Sin
-      :segued: false
-    - :uuid: f2ad50e0-5321-488b-b453-13c0704cfbca
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/06/27:
   :uuid: 03be3df7-382d-44a2-87b4-df9839eb6749
   :venue: Veterans Auditorium
@@ -2620,99 +2379,14 @@
   :city: Toronto
   :state: ''
   :country: CA
-  :sets:
-  - :uuid: e05d6dbf-da9b-411c-854b-377759b2e7f3
-    :songs:
-    - :uuid: 81e40f61-5d85-4c5e-a0ed-00edb11bb69e
-      :name: Green Green Grass Of Home
-      :segued: true
-    - :uuid: 0c3e1b98-aedb-4ab0-bbd0-0f9f7b801151
-      :name: El Paso
-      :segued: true
-    - :uuid: 65f17253-a600-4348-9890-a6ec2f637c4c
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: 8485eede-ed09-4c2f-969f-6e49c0afe0eb
-      :name: Drums
-      :segued: true
-    - :uuid: 0f276322-f5b6-444e-a5c3-c0c6510ef5f1
-      :name: The Other One
-      :segued: true
-    - :uuid: 5638bd45-beda-4d64-bd9d-d9010882e638
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: 8553678e-1e75-4b2e-84c8-68c1867a224a
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 931f7eec-7223-493b-949f-dee484851e7e
-      :name: Morning Dew
-      :segued: false
+  :sets: []
 1969/07/11:
   :uuid: c659b664-e687-497a-95eb-933b85009762
   :venue: NY State Pavilion
   :city: Queens
   :state: NY
   :country: US
-  :sets:
-  - :uuid: bb600a0c-290d-4378-9f1b-d01f4572e4cc
-    :songs:
-    - :uuid: 9766c1e8-3767-4115-a64e-1621cd6bd703
-      :name: The Story Of A Brick
-      :segued: false
-    - :uuid: 56904a5f-d063-4fae-bc96-df283c5250d6
-      :name: Dupree's Diamond Blues
-      :segued: false
-    - :uuid: c370d407-6f09-4552-a2f5-d631a8c8cb08
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 336540c9-1e65-4c1b-a916-a06943e2cdc8
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: fb520844-4af7-408e-9276-33a097baa73a
-      :name: Silver Threads And Golden Needle
-      :segued: false
-    - :uuid: b75d8bf0-92df-4294-93e5-7a84bf6d1383
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 5dda1eb0-a30b-4e1d-a4d9-8d48ac5fbe95
-      :name: Sittin' On Top Of The World
-      :segued: false
-    - :uuid: 9ba0e470-4b94-4359-b1f3-a698055d3a0c
-      :name: Big Boss Man
-      :segued: false
-    - :uuid: e67278e9-ad39-4e9d-959c-f2f711a94aa0
-      :name: Mama Tried
-      :segued: false
-    - :uuid: 62bbf454-c778-4752-8d80-2bda231b472b
-      :name: High Time
-      :segued: false
-    - :uuid: cc6b3c1e-1090-44df-8af8-d7bb397ccb84
-      :name: Drums
-      :segued: false
-    - :uuid: a28bb885-20e4-4248-b579-6614ef985fec
-      :name: Alligator
-      :segued: false
-    - :uuid: 999e0ed4-d1c2-44d9-9adc-b8b2d9a98179
-      :name: Drums
-      :segued: true
-    - :uuid: c5e71386-f954-4e0b-89c5-f42ec4879fc0
-      :name: Jam
-      :segued: false
-    - :uuid: 3794dc92-95bc-474a-a669-2d49fafb8e7a
-      :name: And We Bid You Good Night Jam
-      :segued: false
-    - :uuid: dd516fff-416a-449b-b92c-76290e9ce4f1
-      :name: Jam
-      :segued: false
-    - :uuid: 2630055b-5c23-4c88-977d-5da68dfebe4f
-      :name: The Other One
-      :segued: false
-    - :uuid: 416a96c4-a580-4a5b-9007-d9a882ade7aa
-      :name: Death Don't Have No Mercy
-      :segued: false
-    - :uuid: db6b2eb7-98f9-48a2-97a8-b1118e129f81
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/07/12:
   :uuid: 0f1d0012-fe55-4d6c-be91-1cf5c91305d1
   :venue: NY State Pavilion
@@ -2736,9 +2410,6 @@
       :segued: false
     - :uuid: bc92ab46-50da-4486-ab4a-d0a637dd3d14
       :name: China Cat Sunflower
-      :segued: false
-    - :uuid: d098b240-d432-4c22-aa74-4124eecff0d7
-      :name: Jam
       :segued: false
     - :uuid: 4436a83f-9856-47dc-83ef-6f14adb9a928
       :name: Mama Tried
@@ -2830,7 +2501,7 @@
     - :uuid: 56cf7be8-5cd5-41eb-a113-3bf1e67423bd
       :name: Mama Tried
       :segued: false
-    - :uuid: '018acfc3-a849-4884-abbb-1a64f42815df'
+    - :uuid: 018acfc3-a849-4884-abbb-1a64f42815df
       :name: Dark Star
       :segued: false
     - :uuid: 782a71ff-fac6-4f6e-a352-2fa7d0d21893
@@ -2950,9 +2621,6 @@
     - :uuid: f79fe129-29dc-4e1e-97f9-c36d991a9018
       :name: Searchin'
       :segued: true
-    - :uuid: 4e20c093-5f25-4b6e-a95e-9d80e2ceacc1
-      :name: Good Lovin' Jam
-      :segued: true
     - :uuid: 4e66163d-d68a-424a-a51d-83c91ccff202
       :name: Good Lovin'
       :segued: false
@@ -2976,9 +2644,6 @@
     :songs:
     - :uuid: a164185b-0f7a-4647-a616-7f2e008f2fb9
       :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 87921b8f-d24c-41fc-86d0-6c6845777f50
-      :name: Jam
       :segued: true
     - :uuid: bc2e0630-b596-4e21-b625-23e07fa898f7
       :name: Doin' That Rag
@@ -3097,31 +2762,14 @@
   :sets: []
 1969/09/29:
   :uuid: 4168b183-1c60-45bf-bc53-f2e9588a1414
-  :venue: Caf' au Go
+  :venue: Cafe au Go Go
   :city: New York
   :state: NY
   :country: US
-  :sets:
-  - :uuid: a4eb9aa9-4827-4e29-9dda-3374d0f00db9
-    :songs:
-    - :uuid: cd98b94a-caac-43a8-9825-f9c3fdf11234
-      :name: Alligator
-      :segued: false
-    - :uuid: 41f31e48-9240-418d-8b25-8a727770f7fe
-      :name: Drums
-      :segued: false
-    - :uuid: 161b78f4-a00f-4fa7-911c-de30a824d206
-      :name: The Other One
-      :segued: false
-    - :uuid: 160f5605-ca98-421c-894c-42bcfeb409fa
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 18f8fad6-792b-41bb-b2b0-b5e995a4d9d0
-      :name: I Know You Rider
-      :segued: false
+  :sets: []
 1969/09/30:
   :uuid: 38336d02-3d0d-4f12-a5eb-d1fa2d03043e
-  :venue: Caf' au Go
+  :venue: Cafe au Go Go
   :city: New York
   :state: NY
   :country: US
@@ -3130,9 +2778,6 @@
     :songs:
     - :uuid: eda037e0-3b25-4e5d-b57e-20c31d6eee49
       :name: China Cat Sunflower
-      :segued: true
-    - :uuid: d3112aad-379f-4a7f-801b-04800f28c868
-      :name: Jam
       :segued: true
     - :uuid: 1c9d8a48-9277-4a61-94a0-b045871cff17
       :name: I Know You Rider
@@ -3169,75 +2814,14 @@
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 156dc2ec-33bb-483f-b054-0eea25d06513
-    :songs:
-    - :uuid: a878ac1f-d405-4bc9-a164-d2cdb21dd468
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 62ebe917-7aee-4248-a468-8e727d08ea8f
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 73f82014-fe1c-4053-8989-c7e54d24d5a2
-      :name: High Time
-      :segued: false
-    - :uuid: 5ab0572a-912e-4b19-bf23-864bd9714826
-      :name: Easy Wind
-      :segued: false
-    - :uuid: 24f118cb-d9ad-41d7-b9ca-e37935be46d1
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 36c2d5f4-b4c3-44c2-8b15-67d6e8cda603
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 4c07eebb-7314-406e-9402-ef9464ae27c4
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: e04428ec-021d-4d42-bdd6-cec346d3e37a
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: b8f18a50-121c-4cd4-9e64-4aab6857b254
-      :name: Drums
-      :segued: false
-    - :uuid: 55e90328-d96a-44e6-9331-1d93d9ede9b5
-      :name: The Other One
-      :segued: false
-    - :uuid: a4ee5e77-809b-4c42-b4c7-d9a268ab8fce
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: c50ee8a1-e5cd-4b44-86d3-24bbc5d1de76
-      :name: Cosmic Charlie
-      :segued: false
-    - :uuid: a08bbbaa-1b54-4667-8be9-137cb245a170
-      :name: Mama Tried
-      :segued: false
-    - :uuid: 7c96e714-cdc8-46e3-beb8-e923cc17eea2
-      :name: Good Lovin'
-      :segued: false
+  :sets: []
 1969/10/25:
   :uuid: 105725c0-d98f-497b-8959-685538a60557
   :venue: Winterland Arena
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: f9cb6b82-469a-4c8d-aeb6-f362da6757b6
-    :songs:
-    - :uuid: 9ac2f5d9-b5e1-4a92-8bff-b3a9536d1321
-      :name: High Time
-      :segued: false
-    - :uuid: 9febdf92-5864-4c69-bf6d-10982377886b
-      :name: Dark Star
-      :segued: true
-    - :uuid: 857d4ab8-2777-4533-b294-de78063d524c
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: dc827032-843b-49e8-8d9b-75a96251a3f6
-      :name: The Eleven
-      :segued: true
-    - :uuid: 3e65c4c1-0683-4016-8c05-410a79f52e28
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/10/26:
   :uuid: 33efc594-4553-485e-8861-6dacd387fa3e
   :venue: Winterland Arena
@@ -3304,11 +2888,11 @@
     - :uuid: fc631afc-ad33-4752-8707-a23cb134b55e
       :name: China Cat Sunflower
       :segued: true
-    - :uuid: 2bfc126d-a09a-4c73-9487-85dea2157178
-      :name: Jam
-      :segued: true
     - :uuid: 3ff58c08-f761-4f37-b8de-6f1213f2cbb7
       :name: I Know You Rider
+      :segued: false
+    - :uuid: 87c3bba7-9390-4dff-9ed3-420659564b9b
+      :name: Mama Tried
       :segued: false
     - :uuid: 87c3bba7-9390-4dff-9ed3-420659564b9b
       :name: High Time
@@ -3331,74 +2915,7 @@
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: a3bab9d8-fccc-41fb-bef3-e1d69b9816ab
-    :songs:
-    - :uuid: 2726653c-d5ae-44f4-bd99-9ada9ce61559
-      :name: Morning Dew
-      :segued: false
-    - :uuid: 25f45f66-d0ab-4e27-86d3-ac9935b29c39
-      :name: Dire Wolf
-      :segued: true
-    - :uuid: e5eb9b45-da31-4e09-b6a5-c07a35f27524
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: 1c3422d0-b97e-4df8-99da-5eb3cbe46d5f
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 881d5021-edeb-402b-8868-4eba0b46d010
-      :name: Mama Tried
-      :segued: true
-    - :uuid: dfa3d8ef-0209-4f9a-aaeb-fc6e9713d51e
-      :name: High Time
-      :segued: false
-    - :uuid: 59790225-482a-46cc-addc-29a5c979c5c2
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: bd86b13f-a382-456b-91a2-a5dce6535dea
-      :name: Drums
-      :segued: true
-    - :uuid: 85f8f552-08e2-437b-9338-e6b4702e7b5f
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: d30c0993-484e-415e-95c7-f71aaf876270
-      :name: Easy Wind
-      :segued: false
-  - :uuid: 87aa1bb9-1ea7-428c-ac61-632bbb739e9d
-    :songs:
-    - :uuid: 498312a2-7cde-428f-8c1a-4bc947eafbde
-      :name: He Was A Friend Of Mine
-      :segued: true
-    - :uuid: 58ab5a76-6957-40e2-a1a7-802ad37849cb
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 179e84ab-4727-4ff4-845e-c727508e4ab6
-      :name: Jam
-      :segued: true
-    - :uuid: 7b055362-d13e-41fb-8452-1f0b861beeca
-      :name: I Know You Rider
-      :segued: true
-    - :uuid: c78dffd4-4af7-47e4-a15b-100b920b9985
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 0f292574-d1fb-478d-84f6-034548c05c99
-      :name: Alligator
-      :segued: true
-    - :uuid: 83c67614-9993-41bb-b51b-2dc2b8e4de7d
-      :name: Drums
-      :segued: true
-    - :uuid: ed1dce00-3397-4233-903d-6c85ea758cbc
-      :name: Jam
-      :segued: true
-    - :uuid: 0ea97147-12cc-4fad-8a05-7dc611ff5621
-      :name: And We Bid You Good Night Jam
-      :segued: true
-    - :uuid: a7f96767-150e-4f0a-9dde-c58198808461
-      :name: Uncle John's Band Jam
-      :segued: true
-    - :uuid: 12b41ffc-9e01-4eda-9046-9e766b3c33d8
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/11/02:
   :uuid: 4fe17980-e7c0-477b-bf1b-30de9226d6a3
   :venue: Family Dog at the Great Highway
@@ -3423,6 +2940,12 @@
     - :uuid: 99aa4946-4445-4ed1-b08c-f7ad58cca50b
       :name: Next Time You See Me
       :segued: false
+    - :uuid: d288b8bf-1af9-4fa3-8128-e4be02bc1fd4
+      :name: Good Lovin'
+      :segued: true
+    - :uuid: d288b8bf-1af9-4fa3-8128-e4be02bc1fd4
+      :name: Drums
+      :segued: true
     - :uuid: d288b8bf-1af9-4fa3-8128-e4be02bc1fd4
       :name: Good Lovin'
       :segued: false
@@ -3453,206 +2976,21 @@
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 839d8cac-4f0a-47c4-8ce4-105ddad0f118
-    :songs:
-    - :uuid: c4ecb242-9adf-4390-be73-6227570f1713
-      :name: Morning Dew
-      :segued: false
-    - :uuid: c816bcb9-771a-4299-88bd-b794d9149fc9
-      :name: Mama Tried
-      :segued: false
-    - :uuid: 0c938f9d-8f0b-4131-9b32-6df87e0cddd9
-      :name: Star Spangled Banner
-      :segued: false
-    - :uuid: f8d187fa-758a-4c0a-ac2b-1b88f1a72467
-      :name: Next Time You See Me
-      :segued: false
-    - :uuid: 48e8a12d-55bc-4701-be1a-4a33ddb3f6ff
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: 7455453d-7817-4d16-af88-3f30c49ecfa3
-      :name: Drums
-      :segued: true
-    - :uuid: 6d949a3f-5eac-4d21-8d6c-2a754295f4d1
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: f7fd34c4-7110-45cd-82a2-40e64109105e
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 985d0e26-8fba-4de5-a95d-39acbd6ee281
-      :name: Jam
-      :segued: true
-    - :uuid: aeb32441-7e0c-4836-905f-6789db8c8242
-      :name: I Know You Rider
-      :segued: true
-    - :uuid: b124cde6-7759-4e1a-ab85-ced174d6a56d
-      :name: Dark Star
-      :segued: true
-    - :uuid: 2919ea04-46ec-428e-b882-8344375780a7
-      :name: Uncle John's Band Jam
-      :segued: true
-    - :uuid: 4e5acd46-e280-482d-aa00-addfbd288f6a
-      :name: Dark Star
-      :segued: true
-    - :uuid: 395c3e88-f274-40b0-8222-cec547485eaa
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: 26887e9e-7619-48d3-828b-2502c19d3581
-      :name: Drums
-      :segued: true
-    - :uuid: 650fa976-b55d-4bc3-8508-2735d4ba5cd5
-      :name: The Other One
-      :segued: true
-    - :uuid: 4b66fd21-7ac1-45c9-ba1e-2c2fcc0d0bad
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/11/08:
   :uuid: f1c1bae2-f57b-401e-a870-0d4caf3debed
   :venue: Fillmore Auditorium
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 41d201ae-415b-43c4-82a9-2bd77a02ca52
-    :songs:
-    - :uuid: 3f79ce78-b858-4ace-945a-3963159c5472
-      :name: Good Morning Little Schoolgirl
-      :segued: false
-    - :uuid: d8beac75-edd5-4168-b4a1-6c407438d7fb
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 38d47a28-2d32-409c-a39f-df96f5e6cd7f
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 2704fc88-5b3c-4284-8905-e084b1e57964
-      :name: Easy Wind
-      :segued: false
-    - :uuid: dbba7cc3-0af5-478a-8f94-03f1a88a0351
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 7217cfd3-611b-4d3f-8040-735dbb6c5699
-      :name: Jam
-      :segued: true
-    - :uuid: 817b6384-b59d-4458-ae8d-5ed4511b1774
-      :name: I Know You Rider
-      :segued: true
-    - :uuid: 41a5b814-abf6-45d4-8bd0-49970f4e3372
-      :name: High Time
-      :segued: false
-    - :uuid: c4df4a78-1a25-4825-9e16-150fd930767f
-      :name: Mama Tried
-      :segued: false
-    - :uuid: 721d4a2a-7a99-4d34-91ad-5c1f5b2e6415
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: 781e45b7-fb22-4480-8221-3201196bd7fd
-      :name: Drums
-      :segued: true
-    - :uuid: 0e6e01b1-1cac-4f13-ab24-1807219b4564
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: f55cdbce-c715-46bc-b690-d9dde38e23c8
-      :name: Cumberland Blues
-      :segued: false
-  - :uuid: c6efb590-b188-471c-8706-0ee9e7acb919
-    :songs:
-    - :uuid: a8f067ef-7b5c-44e4-a6ac-dc1ed59234da
-      :name: Dark Star
-      :segued: true
-    - :uuid: f387cc8c-f581-4ef5-9af1-cacee867c45d
-      :name: The Other One
-      :segued: true
-    - :uuid: '0496e766-a87a-48c5-bf73-39d47a024da6'
-      :name: Dark Star
-      :segued: true
-    - :uuid: 479e610c-8864-4112-92b1-80ee40fb7676
-      :name: Uncle John's Band Jam
-      :segued: true
-    - :uuid: 537672f4-0a55-437e-9987-68b0a16bb804
-      :name: Dark Star
-      :segued: true
-    - :uuid: b86c7da3-39ee-4840-ab2f-be5dc0a4fe92
-      :name: Saint Stephen
-      :segued: true
-    - :uuid: 64debf55-c6da-4cee-b643-6a2ea6b7cd36
-      :name: The Eleven
-      :segued: true
-    - :uuid: 5131f853-3e1a-4a28-8093-f489fe71fe64
-      :name: Caution (Do Not Stop On Tracks)
-      :segued: true
-    - :uuid: e1661328-438f-4f7b-af54-48f4178c69c6
-      :name: Jam
-      :segued: true
-    - :uuid: c718f8bd-ff4b-4ad9-a4be-f6762e96d683
-      :name: The Main Ten Jam
-      :segued: true
-    - :uuid: 0e1cd20e-8ce2-4da8-ab20-b2b8530520be
-      :name: Caution (Do Not Stop On Tracks)
-      :segued: true
-    - :uuid: f39df8af-fffb-4b49-b504-66d614877640
-      :name: Space
-      :segued: true
-    - :uuid: aaa6b1e6-0c24-4e3b-9ed8-7b7a65981a0a
-      :name: Feedback
-      :segued: true
-    - :uuid: c4e17cc6-782a-41d1-9fe7-06eae14a8e0d
-      :name: And We Bid You Good Night
-      :segued: false
+  :sets: []
 1969/11/15:
   :uuid: 1d164eb1-fb20-4556-87a9-fc4addb14bcd
   :venue: Lanai Theater
   :city: Crockett
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 9faac776-73f0-40b0-8e4b-4e60136703ca
-    :songs:
-    - :uuid: 7127b14b-a1de-42bc-8e3e-337cfe56e6b2
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 5c1f05ec-440a-4394-aecc-f4f3c3cf1ef6
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 28d415d6-e0da-4994-ab08-df949e2b7b23
-      :name: Easy Wind
-      :segued: false
-    - :uuid: 2c509532-4a83-4a55-b4d8-79857aaa0641
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 6b79dc0c-5788-40d9-a864-6abf8c9e1a9c
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 5d9351fe-6233-44c6-9055-bdea8b04493b
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: bfff5016-d77b-4c6d-a562-c0285dbe24cb
-      :name: High Time
-      :segued: false
-    - :uuid: c4131cbf-4bae-4d75-9ba7-005ee435106f
-      :name: Next Time You See Me
-      :segued: false
-    - :uuid: da8876c2-cf88-478e-b5b7-75fc7cd836b1
-      :name: Mama Tried
-      :segued: false
-    - :uuid: 84ac3efc-0309-4ce7-8daf-95da78d4eaba
-      :name: Big Boss Man
-      :segued: false
-    - :uuid: '09130b6c-ccd9-49d1-be1e-00b85c130565'
-      :name: Cosmic Charlie
-      :segued: false
-    - :uuid: 5254cdd0-15db-47d5-99be-d422ad99051b
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: ddcf3c4f-8acb-4cb0-b2f0-91aed0f0b751
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: 58b9efd1-4ff4-4c62-a0f8-230bd006c4bf
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 13d1ecef-0011-44b6-a255-9dbc8f5aa373
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/11/21:
   :uuid: ae97f586-41e1-45a0-82c0-7b5a186b2538
   :venue: Building A
@@ -3690,9 +3028,6 @@
       :segued: false
     - :uuid: 966daa1e-7a9a-48c1-b211-9ef8954852ab
       :name: China Cat Sunflower
-      :segued: true
-    - :uuid: a213efcc-4087-4d40-8830-92d0ce0c361b
-      :name: Jam
       :segued: true
     - :uuid: 66f247b3-f8a1-4a58-9d98-62d952eeebea
       :name: I Know You Rider
@@ -3754,9 +3089,6 @@
     - :uuid: 768b5eea-e0e2-4df1-ae2e-67bffcbd9857
       :name: China Cat Sunflower
       :segued: true
-    - :uuid: e4c08948-b55d-4c13-acaf-753408f6cbaf
-      :name: Jam
-      :segued: true
     - :uuid: 1ffe916b-74a4-4158-8759-11561805e9b0
       :name: I Know You Rider
       :segued: false
@@ -3769,84 +3101,7 @@
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 2c19d447-7038-4213-bd71-eeb23d9338ae
-    :songs:
-    - :uuid: 5316faf3-875e-4055-a11a-4f281767feaa
-      :name: Me And My Uncle
-      :segued: true
-    - :uuid: 1aeebd6a-dbd7-4e3e-bea2-817bbb4c7c79
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 23d2894a-7ed5-4791-83cc-0b4a93567eeb
-      :name: Black Peter
-      :segued: false
-    - :uuid: 354115cb-e9fa-4a33-a811-14c9e022b526
-      :name: Mama Tried
-      :segued: false
-    - :uuid: 2d792d00-246f-4fca-b37a-ce7720eeb743
-      :name: It Hurts Me Too
-      :segued: false
-    - :uuid: dba1c64d-fe4b-4222-ada3-adb2ff6478a3
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 537751a9-3370-4199-b154-a0e9b8fdc171
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: e7759727-8cc8-4fe5-9330-da110e2e3c4b
-      :name: Drums
-      :segued: true
-    - :uuid: 07125125-b83f-4e1e-a292-b3aca3323e7f
-      :name: The Other One
-      :segued: true
-    - :uuid: 76b3e7f6-ac86-4e52-8e80-04d3a93ca36e
-      :name: The Eleven Jam
-      :segued: true
-    - :uuid: a2bad23b-4ed4-4a5d-a28b-3a22045bfa65
-      :name: The Other One
-      :segued: true
-    - :uuid: 641795e3-9ccd-404e-8e90-3719a38719f0
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: 7ef61e81-39aa-4c4b-9c99-e084c4ce872a
-      :name: Cosmic Charlie
-      :segued: true
-    - :uuid: 8ba72fab-47e5-4ba9-a7d0-133b8d604f6e
-      :name: Dancing In The Street
-      :segued: true
-    - :uuid: 687eda7c-93bf-4188-a562-7608e741490a
-      :name: Dire Wolf
-      :segued: true
-    - :uuid: 949dcb00-5c5e-4cd1-9a27-55a453b4af6a
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 9d76a9ba-7213-4922-8842-5545fd78c659
-      :name: Dancing In The Street
-      :segued: false
-    - :uuid: e5ea5df6-c1ea-4c4d-afaf-1fa91a875776
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 440a284a-76d2-453e-8ba5-de3cd56cacdd
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 048e573f-983b-400f-a196-08ee7961baf7
-      :name: Jam
-      :segued: true
-    - :uuid: a8862e7c-5e04-43c8-8bdc-11dea56ac157
-      :name: I Know You Rider
-      :segued: true
-    - :uuid: 3d0591c5-5c18-46f3-80d1-48afd1fb10fd
-      :name: High Time
-      :segued: true
-    - :uuid: 7e4bb5e9-776a-4b53-88ed-e832da85d29a
-      :name: Uncle John's Band Jam
-      :segued: true
-    - :uuid: cad36259-0c0a-46e0-9efb-1a206d011358
-      :name: The Main Ten Jam
-      :segued: true
-    - :uuid: 9261102c-ae9d-425d-8cb4-bb17f82c6f0b
-      :name: It's All Over Now, Baby Blue
-      :segued: false
+  :sets: []
 1969/12/07:
   :uuid: 06d68181-a217-4fd2-8bee-4f6fd9960e00
   :venue: Fillmore West
@@ -3883,11 +3138,8 @@
     - :uuid: c6788181-d7f1-4ea2-9a35-f935eb7cb7e3
       :name: Good Lovin'
       :segued: false
-    - :uuid: '0540208c-ec9f-4861-bc6a-9801524f1c2c'
+    - :uuid: 0540208c-ec9f-4861-bc6a-9801524f1c2c
       :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 17727f6e-3909-4370-a39f-4bc21184712d
-      :name: Jam
       :segued: true
     - :uuid: 5e918fc1-462d-431a-b215-5453cf97e928
       :name: I Know You Rider
@@ -3993,9 +3245,6 @@
     - :uuid: 73952103-d0e2-4f44-b497-bc0b79432829
       :name: China Cat Sunflower
       :segued: true
-    - :uuid: a39d1ae1-7f4f-451f-8446-4dcafd4fc520
-      :name: Jam
-      :segued: true
     - :uuid: 21f8b5e4-96db-4678-a51c-301ac1e2cdcd
       :name: I Know You Rider
       :segued: true
@@ -4076,98 +3325,7 @@
   :city: Los Angeles
   :state: CA
   :country: US
-  :sets:
-  - :uuid: df885fb1-2240-455d-b14c-dc66ee885afa
-    :songs:
-    - :uuid: 93f41672-162f-4379-b739-72cb9c298901
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: c3de4d8b-b5c2-4b70-9292-5edfd8867670
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 9b81a347-2430-4de9-8d41-472c1b02bb6a
-      :name: Easy Wind
-      :segued: false
-    - :uuid: 0b5b0ca4-a88b-47dd-b257-38083926a523
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 119a8991-6db6-4fde-a6cf-caa01b465b4c
-      :name: Black Peter
-      :segued: false
-    - :uuid: 5c873eb0-9cc8-4ab6-bb30-3815e6e44197
-      :name: Next Time You See Me
-      :segued: false
-    - :uuid: 562f3afc-ec9c-4e66-9881-23dcb05227e2
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: ff58208e-7aa0-4a7e-aed0-8da38825a1c4
-      :name: Jam
-      :segued: true
-    - :uuid: 3b64d9e9-db47-4595-91c9-b55399f5bc14
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: b514fd06-9186-4312-9012-e3715bc40143
-      :name: Turn On Your Lovelight
-      :segued: false
-  - :uuid: 1e583119-69c0-4e95-b90e-f6e1f2e3245b
-    :songs:
-    - :uuid: 930fe2b7-2ece-4c72-91f0-b40a3e8368d1
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: ed778804-b11f-4a84-abf3-c9fa8e3b9d17
-      :name: Casey Jones
-      :segued: false
-    - :uuid: e57f0bec-8727-4bf1-92a0-77be3a9b70f9
-      :name: Mama Tried
-      :segued: true
-    - :uuid: 6275ac56-d2a4-4a9c-91d1-0025596bd14e
-      :name: High Time
-      :segued: false
-    - :uuid: bee540ce-4c25-47d0-af9b-7611db8700dd
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 71c17796-0e3a-4a8f-a8bd-eb7ea3d8068a
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: 24b09968-ee2e-4854-8dec-c1f069b8f4ab
-      :name: Drums
-      :segued: true
-    - :uuid: 5e2406fb-24a1-4590-a1ed-cebe0ee8d845
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: d946e300-f292-4e26-85f3-b7275534988a
-      :name: I'm A King Bee
-      :segued: false
-    - :uuid: 00c38c90-54dd-4220-af4b-8fc7ddaa40b6
-      :name: Uncle John's Band
-      :segued: true
-    - :uuid: 0ee62db7-a4f0-411d-aea9-cb960e281af6
-      :name: Jam
-      :segued: true
-    - :uuid: 756a3ef3-de3f-4c4c-8600-23aefb2fed7f
-      :name: He Was A Friend Of Mine
-      :segued: true
-    - :uuid: '085758b9-2828-4ddb-93e1-e8f41769847a'
-      :name: Alligator
-      :segued: true
-    - :uuid: ea178743-1809-4e00-b404-79bb51f5200e
-      :name: Drums
-      :segued: true
-    - :uuid: 2ea94f46-2a71-409a-8e70-c162f36500cd
-      :name: Caution (Do Not Stop On Tracks)
-      :segued: true
-    - :uuid: 0e827422-226d-4eeb-ad13-7424cded43f4
-      :name: And We Bid You Good Night Jam
-      :segued: true
-    - :uuid: 922837fd-5a43-4173-ba4c-f02d3ea1bfd1
-      :name: Caution (Do Not Stop On Tracks)
-      :segued: true
-    - :uuid: b1bae443-49b3-4a94-bdc7-aaa0a14156a5
-      :name: Feedback
-      :segued: true
-    - :uuid: b393cf96-06eb-4e69-8247-5def19dab1ba
-      :name: And We Bid You Good Night
-      :segued: false
+  :sets: []
 1969/12/13:
   :uuid: 603e1d86-6c42-492b-9dc9-f0028ee3bb6e
   :venue: Swing Auditorium
@@ -4191,9 +3349,6 @@
       :segued: true
     - :uuid: 66379479-d4ed-4347-aa55-910059241c22
       :name: China Cat Sunflower
-      :segued: true
-    - :uuid: dc4e3e4d-406a-4615-b100-d6126b00ecc2
-      :name: Jam
       :segued: true
     - :uuid: ba7e7b5f-620d-484c-b15f-f91eacad23a6
       :name: I Know You Rider
@@ -4225,143 +3380,21 @@
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 44b0f857-8796-489f-85f7-1a8c81425765
-    :songs:
-    - :uuid: e7497686-3d61-429a-9579-a772610fbfcd
-      :name: Monkey And The Engineer
-      :segued: false
-    - :uuid: e5c21cc9-04bc-42e6-9d80-285bcf05c66f
-      :name: Little Sadie
-      :segued: false
-    - :uuid: 1db12ae8-8287-419d-a187-7ef51562e853
-      :name: Long Black Limousine
-      :segued: false
-    - :uuid: 62f52ba2-5ed7-451d-9055-0cac1c9ba05c
-      :name: I've Been All Around This World
-      :segued: false
-    - :uuid: 0f298c22-b66d-44ef-841b-68fea418d663
-      :name: Mason's Children
-      :segued: false
-    - :uuid: 72824830-aad3-4255-af83-b43ad082e171
-      :name: Black Peter
-      :segued: false
-    - :uuid: 1d1ff89b-96ba-4a10-984f-37ba7f84385c
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 064d00ce-a4f0-4a14-baf1-3f32ea5a2921
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 00e48b94-f21c-4b84-ad3c-b264639bca6b
-      :name: Casey Jones
-      :segued: false
-    - :uuid: f15297ee-c392-474d-a11c-05de8e3b41b4
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: 35631cf6-11fa-49f9-9542-fb3c76a9ee83
-      :name: Drums
-      :segued: true
-    - :uuid: a393037d-9ef6-4af6-8849-107a6058ce5b
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: ce74d825-6494-4387-b085-caaa2999588d
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: ef8322e1-bf7e-44b7-955f-837f229b940d
-      :name: Drums
-      :segued: true
-    - :uuid: 43652a8f-291e-4290-a93a-4cbb9fbc696b
-      :name: The Other One
-      :segued: true
-    - :uuid: 93566ec6-0582-419f-9248-cbdbd464a7f9
-      :name: Cryptical Envelopment
-      :segued: true
-    - :uuid: 988501aa-250f-4945-b7d8-08b46bba7e28
-      :name: Uncle John's Band
-      :segued: true
-    - :uuid: 327ec26b-335d-4c46-a211-e59d3fd74780
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/12/20:
   :uuid: c16ef745-c29e-4a90-a8e2-8cd752021f04
   :venue: Fillmore Auditorium
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: 9e5a51ff-2d5c-486f-bc33-fd1cad37a40a
-    :songs:
-    - :uuid: d7862d3e-0150-4d9e-8a8d-80c07668d95a
-      :name: Mason's Children
-      :segued: false
-    - :uuid: c2bb9a80-3112-4cd9-b219-b4a77c4063d2
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 41e0b659-ae0a-444e-8eb4-81fbe20353c7
-      :name: Jam
-      :segued: true
-    - :uuid: 9b3d0636-9004-467b-9b62-610a9bbb5959
-      :name: I Know You Rider
-      :segued: true
-    - :uuid: a2d6e139-8522-4536-9a3e-6a429cf952ce
-      :name: High Time
-      :segued: false
-  - :uuid: 29d8ba27-8473-4f55-b7ed-d09ae01629a7
-    :songs:
-    - :uuid: 791d3955-cf4d-47d1-aafe-d3d3630b2f7f
-      :name: The Eleven
-      :segued: true
-    - :uuid: 3f34ef86-768c-48f6-b55f-0c65ec4f9893
-      :name: New Speedway Boogie
-      :segued: true
-    - :uuid: 7a6c9447-604e-43f8-8c61-37bff41ac24b
-      :name: Turn On Your Lovelight
-      :segued: false
+  :sets: []
 1969/12/21:
   :uuid: 5d857e70-d697-48e3-90c3-a37ddb3756ba
   :venue: Fillmore Auditorium
   :city: San Francisco
   :state: CA
   :country: US
-  :sets:
-  - :uuid: f18d42dd-fc62-49e3-9acd-c9e2dda02393
-    :songs:
-    - :uuid: 1d54066f-ecdd-499d-98e9-7e79a75dbb2e
-      :name: Smokestack Lightnin'
-      :segued: true
-    - :uuid: 3f337ca9-882f-43a1-8c51-ee426c7f3bd0
-      :name: New Speedway Boogie
-      :segued: false
-    - :uuid: 521993e2-9cd3-4686-93d8-640d90b7fe4d
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 7240fc6c-bd2d-48a5-b428-dcae0500207f
-      :name: Mason's Children
-      :segued: false
-    - :uuid: 81111b1c-4ff4-4d08-8a46-ad7d11ff67c7
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: cc5dc95b-fafb-441d-a824-97bf4f98c937
-      :name: I Know You Rider
-      :segued: true
-    - :uuid: 76eefe9b-57a1-4d64-b783-fbb1ce2c40dc
-      :name: Black Peter
-      :segued: false
-    - :uuid: '079b9956-d7d9-4066-9329-e52e8632c154'
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 678a6c19-6a93-465b-bc7d-1bc88fed60de
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: 379f2dc2-0b51-4c43-934c-2ca987237c7c
-      :name: Drums
-      :segued: true
-    - :uuid: 17303876-ba81-472b-bac8-34fd8cf1d026
-      :name: The Other One
-      :segued: true
-    - :uuid: f7964fbc-a2ad-4e14-88ee-50ae92610a3a
-      :name: Cumberland Blues
-      :segued: false
+  :sets: []
 1969/12/26:
   :uuid: b157a952-a984-4cb8-84cd-c9ab908a8db6
   :venue: McFarlin Auditorium
@@ -4404,9 +3437,6 @@
     - :uuid: 59e04865-b225-4f5d-85e1-449e77169f76
       :name: China Cat Sunflower
       :segued: true
-    - :uuid: 4d40fe7b-a767-4930-ab25-c7d90a76fd0b
-      :name: Jam
-      :segued: true
     - :uuid: 35935e86-b256-4ac2-af60-ca5d9996966c
       :name: I Know You Rider
       :segued: true
@@ -4426,377 +3456,30 @@
       :name: Turn On Your Lovelight
       :segued: false
 1969/12/28:
-  :uuid: '092a08cb-89e3-4d1f-965a-62f85da87168'
+  :uuid: 092a08cb-89e3-4d1f-965a-62f85da87168
   :venue: International Speedway
   :city: Hollywood
   :state: FL
   :country: US
-  :sets:
-  - :uuid: 55347368-b24a-4a06-8059-371103c67019
-    :songs:
-    - :uuid: d394628a-9e01-4141-bb43-98cdfa3db398
-      :name: Black Peter
-      :segued: false
-    - :uuid: adab00b2-322b-4d87-a5f1-65241b5dcb84
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 1e68fb4d-4e32-49ff-ba0c-7f2b08effcea
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 80417699-e437-4613-a5b3-f1c85e2ba339
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 86b0baf8-f46e-44a1-bff7-015dfd66f43c
-      :name: High Time
-      :segued: false
-    - :uuid: cebdb35e-6bac-4ebc-9d31-0e6b000ada37
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: d1bf5369-05db-4839-ab68-ad5f1d5b26eb
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: c06107b1-2843-4bea-8000-950bef261fbf
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: 7bd7bb2a-b39b-4b0b-a6aa-ccfed9b6391b
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 48182744-0cad-48d2-87a3-13ed27421ff4
-      :name: Mason's Children
-      :segued: false
-    - :uuid: 2b1869eb-0e6c-4bb8-b5fc-1880cbc90d81
-      :name: Turn On Your Lovelight
-      :segued: false
-1969/12/28:
-  :uuid: a84f53e0-e7d7-49fa-aad9-53cba6ce2529
-  :venue: Boston Tea Party
-  :city: Boston
-  :state: MA
-  :country: US
-  :sets:
-  - :uuid: e4cc5967-ef7a-42d7-a460-a4375a2b2b34
-    :songs:
-    - :uuid: a372a132-bcd0-409c-96ae-42548aeb420d
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: 55d6239d-7c04-4422-9bf9-e4fd36f9d303
-      :name: Mama Tried
-      :segued: false
-    - :uuid: 1130c3b4-471c-4a72-bb77-72ab8ae54055
-      :name: Black Peter
-      :segued: false
-    - :uuid: 164c1e4e-89af-483d-94e3-89ee96465335
-      :name: Easy Wind
-      :segued: false
-    - :uuid: deff6309-24ba-4e7d-9a09-f05be35b180c
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: cc16635e-0788-41b4-bc12-2d049e7446fd
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 77ff897d-8a09-4c10-b8ff-6ea9908bfc0c
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 4e77af53-a1e9-42e1-a221-1f9b58a24a83
-      :name: High Time
-      :segued: false
-    - :uuid: dba0608b-8651-4dda-8d2e-757b5ecd7a3b
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: fd05bd3c-12e9-4526-8a34-e6f667009f10
-      :name: Mason's Children
-      :segued: false
-  - :uuid: 8965d1fc-d845-4fda-9a2a-aa29922bcef3
-    :songs:
-    - :uuid: b9136c10-1661-4216-b81f-ac4ce13cacac
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: b64e336b-4457-402c-8c80-f1da424f5737
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 0e9e0675-70c7-461e-9394-dd980a3aa514
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 6d68b9ab-f4e1-460a-a194-f1f5f1f30ba3
-      :name: Dancing In The Street
-      :segued: false
-    - :uuid: f793a9f0-4fe3-4789-820e-6ebbd032105e
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: c95681ab-ddc5-4beb-8b3e-b41d66df8206
-      :name: Saint Stephen
-      :segued: false
-    - :uuid: 017dc367-2113-4220-bd31-ca9299821a0d
-      :name: Not Fade Away
-      :segued: false
+  :sets: []
 1969/12/29:
   :uuid: c9878d88-ff94-47fb-b02a-d7d660808fe4
   :venue: Boston Tea Party
   :city: Boston
   :state: MA
   :country: US
-  :sets:
-  - :uuid: 66a60649-58ac-4561-b7e1-5fa5415745bd
-    :songs:
-    - :uuid: f448873f-cec0-45e0-86cf-3f5aec427bd4
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: 7cd2ec1a-b154-4a6a-b5a7-0b36ada15151
-      :name: Mama Tried
-      :segued: false
-    - :uuid: 5f4d819d-6e18-4e7c-be42-572752ca5e41
-      :name: New Speedway Boogie
-      :segued: false
-    - :uuid: dcedb0d9-3d70-4acb-9566-51ba1aec0bdf
-      :name: Casey Jones
-      :segued: false
-    - :uuid: 29af6a2c-4c07-4c8b-9bc8-faafbf1ad81c
-      :name: Black Peter
-      :segued: false
-    - :uuid: 6d347485-860d-4e1d-bf22-bc92e3929e4f
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: cdee19f2-8477-4495-9b51-21518e72ece1
-      :name: In The Midnight Hour
-      :segued: false
-    - :uuid: 9f71c7e5-89d9-49fc-b9b3-4a773ba0fb7e
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 46b436b4-a32b-436b-af2e-41a69430e38a
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: bc6977d4-c6d1-4dc6-b9d9-704f74f6d924
-      :name: Drums
-      :segued: false
-    - :uuid: 385d2790-0934-488f-b5c6-6f790f9ae8bb
-      :name: The Other One
-      :segued: false
-    - :uuid: 5ca0f659-4d10-4fb7-a4e2-cde7199d401f
-      :name: Cryptical Envelopment
-      :segued: false
-    - :uuid: d608d8a7-5e9b-4bc0-a02b-945e7765084a
-      :name: Cosmic Charlie
-      :segued: false
-  - :uuid: 01b16154-4a57-410e-b9d9-c5c2b092946f
-    :songs:
-    - :uuid: d6f05a34-fae3-47c2-ba17-254bedf5807a
-      :name: Uncle John's Band
-      :segued: false
-    - :uuid: 8177cd55-2e60-48b4-9b6c-0b5f8b77cd49
-      :name: Mason's Children
-      :segued: false
-    - :uuid: 0fa8c75f-9355-464b-8cf2-89e7b0f94f66
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: 831c70e3-cf01-4ad3-be2c-cf2b2240dbab
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 24528f61-9f49-4d6b-914b-ed080988e408
-      :name: Dark Star
-      :segued: false
-    - :uuid: 36f9bad4-5c46-498f-bc56-9b6a4164e806
-      :name: Alligator
-      :segued: false
-    - :uuid: 694e66ca-e25f-44ff-a2e5-94d93fd2a888
-      :name: Drums
-      :segued: false
-    - :uuid: 4d11b72e-9e1b-49c0-b803-a3da1e9426fb
-      :name: The Eleven
-      :segued: false
-    - :uuid: 48ac97d5-27c2-4eb7-9a68-d49d6baee40d
-      :name: Alligator
-      :segued: false
-    - :uuid: 8b7266b0-973b-4e48-a603-0e495125b0d8
-      :name: Feedback
-      :segued: false
-    - :uuid: 82c663b8-8b8b-4a38-82f1-f33e02154b6e
-      :name: And We Bid You Good Night
-      :segued: false
+  :sets: []
 1969/12/30:
   :uuid: d37932b2-6b92-4907-b5fe-32369160c775
   :venue: Boston Tea Party
   :city: Boston
   :state: MA
   :country: US
-  :sets:
-  - :uuid: 48d4bcad-0e03-42ae-832d-4d059ef3a3ad
-    :songs:
-    - :uuid: 6efe6ece-1b9b-4009-bc78-7ffb3534e248
-      :name: China Cat Sunflower
-      :segued: false
-    - :uuid: fa8da0d0-3b08-40f5-b31c-6b812ea1d7ee
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 926ca003-e865-437e-b9d0-86db2a119011
-      :name: Mama Tried
-      :segued: false
-    - :uuid: f0d39c27-1496-49c4-8c42-9ffdaef7f46c
-      :name: Next Time You See Me
-      :segued: false
-    - :uuid: f0be74a3-4258-430c-a605-824c8a47fd83
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: efdb92b5-6990-43f2-8c6c-8b1610b6e5b4
-      :name: Black Peter
-      :segued: false
-    - :uuid: a82d59ae-b711-4211-8fc7-486ab1336353
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: 97e69415-30f9-4391-b44b-6c974b73efe7
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: aeecd40a-aa5f-424a-a102-37a402b6d765
-      :name: Mason's Children
-      :segued: false
-    - :uuid: ad4f4c05-5107-44c1-bfa9-2428f74cd858
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: 8a8da7de-0b06-4f95-8f39-69fe16ecd6a6
-      :name: Uncle John's Band
-      :segued: false
-    - :uuid: d5ae8357-aa5c-481c-9f0d-37836b4982cd
-      :name: Alligator
-      :segued: false
-    - :uuid: 266ffc2a-1753-49b3-b990-a97102c0636e
-      :name: Drums
-      :segued: false
-    - :uuid: c22dc4d5-baf1-4ffe-830d-10d7ba2b5ef2
-      :name: Good Lovin'
-      :segued: false
-    - :uuid: a9afd1c0-79a2-45c1-b61d-6ab54bf3e7ae
-      :name: The Eleven
-      :segued: false
-    - :uuid: 324a8a49-cc9f-4cb1-9e5d-733fb3513e9e
-      :name: High Time
-      :segued: false
-    - :uuid: fb6caedb-ce62-4ab9-b057-38cf1784de56
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 3d4c501e-8e77-41f7-88b1-68ff7e28d150
-      :name: Big Boy Pete
-      :segued: false
-    - :uuid: 7c141da6-ac30-410e-bc23-ae6f7375155b
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 85d18bda-7312-449d-81b5-803ee8fdd8d4
-      :name: Seasons Of My Heart
-      :segued: false
-    - :uuid: 4d7f04b2-e9e0-4d6f-8c29-448da093cbd8
-      :name: The Race Is On
-      :segued: false
-    - :uuid: 10926bb7-494f-415c-86db-5435081ffe8f
-      :name: Silver Threads And Golden Needle
-      :segued: false
-    - :uuid: aa63a65d-d5b8-4b37-8040-0b592bf2e01c
-      :name: Ol' Slewfoot
-      :segued: false
-    - :uuid: 6ddab2a2-0fd0-45cf-bbf3-8a8d42002bb0
-      :name: Dancing In The Street
-      :segued: false
+  :sets: []
 1969/12/31:
   :uuid: 5d610c07-8c8b-47e6-892d-1cce8a038cee
   :venue: Boston Tea Party
   :city: Boston
   :state: MA
   :country: US
-  :sets:
-  - :uuid: 508ea864-0c5c-4ead-bf3e-3114b99ccef0
-    :songs:
-    - :uuid: deb7ae25-6741-47e3-9e22-3dddb49f1d9c
-      :name: China Cat Sunflower
-      :segued: true
-    - :uuid: 7f4c9c73-4ec9-4cd3-9632-186e771bf3e8
-      :name: Jam
-      :segued: true
-    - :uuid: cd63fc74-1d3a-46d9-a006-f14f2c1630ad
-      :name: I Know You Rider
-      :segued: false
-    - :uuid: 67ca6aa8-b291-45d8-8303-c78073079b0a
-      :name: Mama Tried
-      :segued: false
-    - :uuid: 757bdfa1-d335-4956-8ad1-7b0018e41caf
-      :name: Next Time You See Me
-      :segued: false
-    - :uuid: 78f299b6-5f00-4772-bf6f-26ef84da0dbb
-      :name: Cold Rain And Snow
-      :segued: false
-    - :uuid: 759aecb4-087c-427e-aac1-6298356b41a2
-      :name: Black Peter
-      :segued: false
-    - :uuid: 9de88484-13e9-401c-a660-e6ea0923aac7
-      :name: Hard To Handle
-      :segued: false
-    - :uuid: e5fddab6-864c-4cc9-8bf6-33bee24bb486
-      :name: Me And My Uncle
-      :segued: false
-    - :uuid: 2048be6a-d83a-48b1-bc70-4242864125ef
-      :name: Mason's Children
-      :segued: false
-    - :uuid: 4687f10f-28fb-41c6-a9bb-db19f95cdb12
-      :name: Dire Wolf
-      :segued: false
-    - :uuid: a1783c29-ae8b-4725-8c58-0ad40a77daf6
-      :name: Uncle John's Band
-      :segued: false
-  - :uuid: 7b535c90-740a-4e26-a549-a657fdb62eda
-    :songs:
-    - :uuid: 7d963d6e-b7b7-4d6e-9d91-8bf3aa764cd6
-      :name: Alligator
-      :segued: true
-    - :uuid: 04f2010d-9e1f-4117-a5c8-d554f2fdc4bd
-      :name: Drums
-      :segued: true
-    - :uuid: 81924188-f93e-4dcf-9d12-6e4543d42feb
-      :name: Alligator
-      :segued: true
-    - :uuid: 982373b0-85c5-4336-9a81-097c682d7137
-      :name: Jam
-      :segued: true
-    - :uuid: 10386ae4-b071-4bee-b4ea-46d5b2d41560
-      :name: And We Bid You Good Night Jam
-      :segued: true
-    - :uuid: '040529f1-ff98-409f-955e-3eb20320d038'
-      :name: Alligator
-      :segued: true
-    - :uuid: 10574e39-7ce5-48da-8f01-394d8b4bb260
-      :name: Caution (Do Not Stop On Tracks)
-      :segued: true
-    - :uuid: 998b4251-512e-4ed3-8fb1-39c4f80aa0ed
-      :name: Feedback
-      :segued: true
-    - :uuid: 0f6b1190-8355-497e-9707-5c8838b816d9
-      :name: Good Lovin'
-      :segued: true
-    - :uuid: bb28fb76-746a-425f-818b-05c15cc4a188
-      :name: Drums
-      :segued: true
-    - :uuid: 3e78242c-5b31-48d9-b2b3-7c9545a98a70
-      :name: The Eleven
-      :segued: false
-    - :uuid: 120793ba-c03f-4779-937f-92d6674daa80
-      :name: High Time
-      :segued: false
-    - :uuid: 01a4e613-e6b2-47e0-ae8d-b3f51bbe281b
-      :name: Cumberland Blues
-      :segued: false
-    - :uuid: 429930a3-e0e8-4e23-8c2c-161fd2dd605c
-      :name: Big Boy Pete
-      :segued: false
-    - :uuid: faf36686-2953-4556-b871-9419b85d6f51
-      :name: Not Fade Away
-      :segued: false
-    - :uuid: 6b3a08aa-3457-444c-acc5-c68a636bbec0
-      :name: Seasons Of My Heart
-      :segued: false
-    - :uuid: 1fcc3a29-096d-4914-ac95-9a06a2d05813
-      :name: The Race Is On
-      :segued: false
-    - :uuid: 0b65a8e9-1a00-4c81-bd26-1abb46141c9b
-      :name: Silver Threads And Golden Needle
-      :segued: false
-    - :uuid: d7f10970-9567-4b00-9f13-1ddcdb6eaa6f
-      :name: Ol' Slewfoot
-      :segued: false
-    - :uuid: 556d4a55-0508-4724-ad06-baec944d2722
-      :name: Dancing In The Street
-      :segued: false
+  :sets: []

@@ -299,7 +299,7 @@ def output_json_venues(final_yml):
 
 if __name__ == '__main__':
     matched_shows = []
-    years = [x+1900 for x in [70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]]
+    years = [x+1900 for x in [69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]]
     # For 1970 and earlier, we have to solve double shows
     years = [1969]
     for i in years:

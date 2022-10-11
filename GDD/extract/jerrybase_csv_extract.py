@@ -80,7 +80,7 @@ class CompleteShow:
 
         # sort all inner sets by song order
         final_order = {}
-        for key, value in  all_sets.items():
+        for key, value in all_sets.items():
             songs_sorted = sorted(value, key=lambda x: x.sequence_number, reverse=False)
             final_order[key] = songs_sorted
         return final_order
@@ -96,9 +96,12 @@ class CompleteShow:
         new_order = []
         key_list = list(self.sets.keys())
         key_list.sort()
+        # force sets to go 1, 2, 3 etc
+        set_index = 1
         for set_key in key_list:
             for new_song in self.sets[set_key]:
-                new_order.append([set_key, new_song.song_name])
+                new_order.append([set_index, new_song.song_name])
+            set_index += 1
         return(new_order)
 
 

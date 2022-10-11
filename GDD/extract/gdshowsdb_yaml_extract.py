@@ -28,11 +28,15 @@ class PlayedSong:
 
 
 class GdSet:
-    def __init__(self, set_data):
+    def __init__(self, set_data, played=False):
         # set data is a dict
         self.songs = []
-        for i in set_data[':songs']:
-            self.songs.append(PlayedSong(i))
+        if played:
+            for i in set_data[':songs']:
+                self.songs.append(i)
+        else:
+            for i in set_data[':songs']:
+                self.songs.append(PlayedSong(i))
 
 
 class GdShow:
@@ -49,7 +53,22 @@ class GdShow:
 
     @property
     def full_location(self):
-        return f'{self.venue_name}, {self.city}, {self.state}'
+        venue_name = '-' if self.venue_name is None else self.venue_name
+        city = '-' if self.city is None else self.city
+        state = '-' if self.state is None else self.state
+        country = '-' if self.country is None else self.country
+        return f'{venue_name},{city},{state},{country}'
+
+    def convert_nulls(self):
+        # some data should be null, not an empty string
+        if len(self.venue_name) == 0:
+            self.venue_name = None
+        if len(self.city) == 0:
+            self.venue_name = None
+        if len(self.state) == 0:
+            self.venue_name = None
+        if len(self.country) == 0:
+            self.venue_name = None
 
     def get_show_number(self, given_date):
         date_info = [int(x) for x in given_date.split('/')]
@@ -94,22 +113,40 @@ class GdShow:
         all_new_sets = []
         new_set = []
         set_index = 1
+
+        # we know that the sets will come out as 1, 2, 3 etc from csv_clean
+        new_set = []
         for i in csv_clean:
-            if i[0] != set_index:
-                set_index += 1
-                all_new_sets.append(new_set)
-                new_set = []
-            # find the song
-            found = False
+            # cycle through all in the same set
+
+            # first just find the song
+            found = None
             for j in all_songs:
                 if i[1] == j[1]:
                     # found it
-                    new_set.append(PlayedSong({':uuid':'N/A', ':name': i[1], ':segued': False}))
-                    found = True
+                    # i[0] because we want the YAML name, not the Jerrybase one
+                    found = PlayedSong({':uuid': 'N/A', ':name': i[0], ':segued': False})
                     break
-            if not found:
+            if found is None:
                 print(f'No song {i[1]} in csv data')
                 raise ValueError
+
+            if i[0] == set_index:
+                # add as normal
+                new_set.append(found)
+            else:
+                # Convert to a GDSet. We pass songs, not names, thus played=True
+                all_new_sets.append(GdSet({':songs': new_set}, played=True))
+                # we know sets come as 1, 2, 3 etc
+                set_index += 1
+                new_set = []
+                # we need to add that song we just found!
+                new_set.append(found)
+
+        # add the last set
+        all_new_sets.append(GdSet({':songs': new_set}, played=True))
+
+        # set this as our new song data
         self.sets = all_new_sets
 
     def check_drums_space(self, cvs_clean):

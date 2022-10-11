@@ -1,14 +1,12 @@
 import json
+import os
+from datetime import date
+from pathlib import Path
 
-from datetime import date, time
+OUTPUT = Path(os.getcwd())
+OUTPUT_YEAR_FOLDER =  OUTPUT / 'output' / 'years'
 
-# if in json, we would want to move from json to class
-# so these classes need a way to move to and from json easily
-# jsonStr = json.dumps(some_instance.__dict__) could be useful here
 
-# start with the simplest thing
-
-# Data is all one big yaml file from
 # The structure of the file is simple, it's a list of shows
 
 
@@ -76,7 +74,6 @@ class GDSet:
 
 class Venue:
     def __init__(self, data):
-        self.index = data['index']
         self.name = data['name']
         self.latitude = data['latitude']
         self.longitude = data['longitude']
@@ -85,13 +82,13 @@ class Venue:
         self.country = data['country']
 
     def to_json(self):
-        data = {'index': self.index,
-                'name': self.name,
-                'latitude': self.latitude,
-                'longitude': self.longitude,
+        data = {'name': self.name,
                 'city': self.city,
                 'state': self.state,
-                'country': self.country}
+                'country': self.country,
+                'latitude': self.latitude,
+                'longitude': self.longitude
+        }
         return data
 
 
@@ -100,17 +97,18 @@ class Weather:
         pass
 
 
-def create(yml_shows):
+def create(year, yml_shows):
     # given a list of yml shows, create the dataset
     venues = {}
     all_shows = []
+
+    file_name = OUTPUT_YEAR_FOLDER / f'{year}.json'
+
+    # convert empty strings into nulls
     for show in yml_shows:
-        # for the venue, construct a string
-        venue_string = f'{show.venue_name},{show.city},{show.state},{show.country}'
-        if venue_string in venues:
-            venues[venue_string].append(show.date)
-        else:
-            venues[venue_string] = [show.date]
+        show.convert_nulls()
+
+    for show in yml_shows:
         # generate the show data
         all_sets = []
         for dead_set in show.sets:
@@ -118,33 +116,35 @@ def create(yml_shows):
             new_songs = [Song({'name': x.name, 'segued': x.segue}) for x in dead_set.songs]
             all_sets.append(GDSet({'songs': new_songs, 'encore': False}))
         # construct the show
-        data = {'venue': None, 'weather': None, 'date':show.date.isoformat(),
+        data = {'venue': show.full_location, 'weather': None, 'date':show.date.isoformat(),
                 'start_time': None, 'end_time': None, 'sets': all_sets, 'show_index': show.show_number}
         all_shows.append(Show(data))
 
+    json_shows = [x.to_json() for x in all_shows]
+
+    # output the json
+    filepath = OUTPUT_YEAR_FOLDER / f'{year}.json'
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(json_shows, f, ensure_ascii=False, indent=4)
+    print(f'Dumped JSON as {filepath}')
+
+
+def get_all_venues(yml_shows):
+    all_venues = []
+    for i in yml_shows:
+        if i.full_location not in all_venues:
+            all_venues.append(i.full_location)
     # having obtained all venues, we now need create the venue details
     all_venues = []
-    index = 0
-    for show, dates in venues.items():
+    for show in all_venues:
         xd = show.split(',')
-        venue_data = {'index': index,
-                      'name': xd[0],
-                      'city': xd[1],
-                      'state': xd[2],
-                      'country': xd[3],
+        venue_data = {'name': xd[0] if xd[0] != '-' else None,
+                      'city': xd[1] if xd[1] != '-' else None,
+                      'state': xd[2] if xd[2] != '-' else None,
+                      'country': xd[3] if xd[3] != '-' else None,
                       'latitude': None,
                       'longitude': None}
-        new_venue = Venue
-        for show_date in dates:
-            # find the show with this date
-            for i in all_shows:
-                if show_date == i.date:
-                   i.venue = index
-        index += 1
         all_venues.append(Venue(venue_data))
-
-    # now we should have all venues combined with all shows
-    print(json.dumps(all_shows[-1].to_json(), indent=4))
 
 
 if __name__ == '__main__':

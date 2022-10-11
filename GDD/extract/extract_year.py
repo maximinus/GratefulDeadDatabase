@@ -232,7 +232,6 @@ def fix_yaml_show(yml_show, csv_show):
     # is yml empty and csv not?
     # WE NEED EDIT THE ORIGINAL FILES ON EVERY ITERATION
     # We always seek to edit the yaml files, that is the goal to improve
-    # Therefore, we need to be able to export out as yaml at some point
 
     # we need the originals to fully build new yaml
     yml_clean = yml_show.get_ordered()
@@ -301,20 +300,22 @@ if __name__ == '__main__':
     matched_shows = []
     years = [x+1900 for x in [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]]
     # For 1970 and earlier, we have to solve double shows
+
     for i in years:
-        matched_shows.extend(compare_shows(i))
+        #matched_shows.extend(compare_shows(i))
+        matched_shows = compare_shows(i)
 
-    # Note i[1] is a CompleteShow object (from cvs)
-    #      i[0] is a GdShow object (from yaml)
+        # Note i[1] is a CompleteShow object (from cvs)
+        #      i[0] is a GdShow object (from yaml)
 
-    final_yml = []
-    for i in matched_shows:
-        print(f'Show: {i[0].text_date}')
-        final_yml.append(fix_yaml_show(i[0], i[1]))
+        final_yml = []
+        for j in matched_shows:
+            #print(f'Show: {j[0].text_date}')
+            final_yml.append(fix_yaml_show(j[0], j[1]))
 
-    # build the final json files
-    #create(final_yml)
+        # build the final json files
+        create(i, final_yml)
 
-    # The output is a list of GDShow objects
-    print(f'Total shows: {len(final_yml)}')
+        # The output is a list of GDShow objects
+        print(f'{i}: {len(final_yml)} shows')
     #output_json_venues(final_yml)

@@ -124,8 +124,8 @@ class GdShow:
             for j in all_songs:
                 if i[1] == j[1]:
                     # found it
-                    # i[0] because we want the YAML name, not the Jerrybase one
-                    found = PlayedSong({':uuid': 'N/A', ':name': i[0], ':segued': False})
+                    # j[0] because we want the YAML name, not the Jerrybase one
+                    found = PlayedSong({':uuid': 'N/A', ':name': j[0], ':segued': False})
                     break
             if found is None:
                 print(f'No song {i[1]} in csv data')
@@ -172,7 +172,6 @@ class GdShow:
                     # no, we need to insert a space. Seque is auto both ways
                     i.songs[j].sequed = True
                     i.songs.insert(j + 1, PlayedSong({':uuid':'N/A', ':name': 'Space', ':segued': True}))
-                    print('  Inserted space into show')
                     return True
 
 

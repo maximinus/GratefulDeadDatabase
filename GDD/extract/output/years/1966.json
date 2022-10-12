@@ -1,0 +1,1937 @@
+[
+    {
+        "venue": "The Matrix,San Francisco,CA,US",
+        "date": "1966-01-07",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "It's A Sin",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Sick And Tired",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Mindbender",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "On The Road Again",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "She Belongs To Me",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I'll Go Crazy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Can't Come Down",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Death Don't Have No Mercy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Parchman Farm",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "The Only Time Is Now",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Early Morning Rain",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It's All Over Now, Baby Blue",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Fillmore Auditorim,San Francisco,CA,US",
+        "date": "1966-01-08",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "I'm A King Bee",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I'm A Hog For You Baby",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Caution (Do Not Stop On Tracks)",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Death Don't Have No Mercy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Star Spangled Banner",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "The Matrix,San Francisco,CA,US",
+        "date": "1966-01-13",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "All Of My Love",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I'm A Hog For You Baby",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "The Matrix,San Francisco,CA,US",
+        "date": "1966-01-28",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "You Don't Have To Ask",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I Know You Rider",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Northridge Unitarian Church,Los Angeles,CA,US",
+        "date": "1966-02-06",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Tastebud",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Mindbender",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "One Kind Favor",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "The Only Time Is Now",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Youth Opportunities Center,Compton,CA,US",
+        "date": "1966-02-12",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Jam",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "New Orleans",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Twist And Shout",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Bear’s House,Los Angeles,CA,US",
+        "date": "1966-03-02",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Betty And Dupree",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Stealin'",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Carthay Studios,Los Angeles,CA,US",
+        "date": "1966-03-12",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "One Kind Favor",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I Know You Rider",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "You See A Broken Heart",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It's A Sin",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Heads Up",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Next Time You See Me",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Jam",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Death Don't Have No Mercy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Carthay Studios,Los Angeles,CA,US",
+        "date": "1966-03-19",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Trouper's Club,Los Angeles,CA,US",
+        "date": "1966-03-25",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Stealin'",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Jam",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Hey Little One",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I'm A Hog For You Baby",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "You Don't Have To Ask",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cold Rain And Snow",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Next Time You See Me",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Longshoreman's Hall,San Francisco,CA,US",
+        "date": "1966-04-22",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Good Morning Little Schoolgirl",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "You Don't Love Me",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Good Morning Little Schoolgirl",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Longshoreman's Hall,San Francisco,CA,US",
+        "date": "1966-04-24",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "It's A Sin",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Teddy Bear's Picnic",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Blues Jam",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Harmon Gym,Berkeley,CA,US",
+        "date": "1966-05-07",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Avalon Ballroom,San Francisco,CA,US",
+        "date": "1966-05-19",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Standing On The Corner",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Mindbender",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It Hurts Me Too",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I Know You Rider",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It's A Sin",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Sick And Tired",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cream Puff War",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "Sittin' On Top Of The World",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "New Minglewood Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cold Rain And Snow",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Tastebud",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Silver Threads And Golden Needle",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It's All Over Now, Baby Blue",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Good Lovin'",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "You Don't Have To Ask",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "California Hall,San Francisco,CA,US",
+        "date": "1966-05-29",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Dancing In The Street",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Fillmore Auditorium,San Francisco,CA,US",
+        "date": "1966-06-03",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Mindbender",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Fillmore Auditorium,San Francisco,CA,US",
+        "date": "1966-07-03",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Nobody's Fault But Mine",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Dancing In The Street",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I Know You Rider",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "He Was A Friend Of Mine",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Next Time You See Me",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Big Boss Man",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Sittin' On Top Of The World",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Keep Rolling By",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "New Minglewood Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cold Rain And Snow",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Tastebud",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cream Puff War",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Don't Mess Up A Good Thing",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cardboard Cowboy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Gangster Of Love",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "You Don't Have To Ask",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Fillmore Auditorium,San Francisco,CA,US",
+        "date": "1966-07-15",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "One Kind Favor",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Keep Rolling By",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Fillmore Auditorium,San Francisco,CA,US",
+        "date": "1966-07-16",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "I Know You Rider",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Big Boss Man",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Standing On The Corner",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "In The Pines",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cardboard Cowboy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Nobody's Fault But Mine",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Next Time You See Me",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "He Was A Friend Of Mine",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cream Puff War",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Don't Ease Me In",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Pain In My Heart",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "New Minglewood Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Sittin' On Top Of The World",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "You Don't Have To Ask",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cold Rain And Snow",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Good Morning Little Schoolgirl",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It's All Over Now, Baby Blue",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Dancing In The Street",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Fillmore Auditorium,San Francisco,CA,US",
+        "date": "1966-07-17",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Big Boss Man",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cold Rain And Snow",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It's All Over Now, Baby Blue",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cream Puff War",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I'm A King Bee",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Stealin'",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Dancing In The Street",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Next Time You See Me",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "One Kind Favor",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "He Was A Friend Of Mine",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Keep Rolling By",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "-,B.C.,,CA",
+        "date": "1966-07-29",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Standing On The Corner",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I Know You Rider",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Next Time You See Me",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Sittin' On Top Of The World",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "You Don't Have To Ask",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Big Boss Man",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Stealin'",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cardboard Cowboy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It's All Over Now, Baby Blue",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cream Puff War",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Good Morning Little Schoolgirl",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "-,B.C.,,CA",
+        "date": "1966-07-30",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Dancing In The Street",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cold Rain And Snow",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I'm A King Bee",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "One Kind Favor",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "You Don't Have To Ask",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Hey Little One",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Good Morning Little Schoolgirl",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "New Minglewood Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "-,B.C.,,CA",
+        "date": "1966-07-31",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Don't Ease Me In",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Tastebud",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "House Party,Loma Mar,CA,US",
+        "date": "1966-09-01",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Fillmore Auditorium,San Francisco,CA,US",
+        "date": "1966-09-11",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Las Lomas High School,Walnut Creek,CA,US",
+        "date": "1966-10-23",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Good Morning Little Schoolgirl",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "California Hall,San Francisco,CA,US",
+        "date": "1966-10-31",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Alice D. Millionaire",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Fillmore Auditorium,San Francisco,CA,US",
+        "date": "1966-11-19",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Cold Rain And Snow",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Hi-Heeled Sneakers",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Pain In My Heart",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cream Puff War",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "The Same Thing",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "He Was A Friend Of Mine",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Dancing In The Street",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "Smokestack Lightnin'",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I'm A King Bee",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "The Matrix,San Francisco,CA,US",
+        "date": "1966-11-29",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Cream Puff War",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "Me And My Uncle",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "The Same Thing",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Stealin'",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Big Boy Pete",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "One Kind Favor",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Early Morning Rain",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cold Rain And Snow",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "Lindy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Good Morning Little Schoolgirl",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I Just Want To Make Love To You",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "The Matrix,San Francisco,CA,US",
+        "date": "1966-12-01",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "New Minglewood Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Betty And Dupree",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Next Time You See Me",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "I Know You Rider",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Big Boss Man",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "One Kind Favor",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Alice D. Millionaire",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Me And My Uncle",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cream Puff War",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "You Don't Love Me",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Beat It On Down The Line",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It Hurts Me Too",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "On The Road Again",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Look Over Yonder's Wall",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "My Own Fault",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Down So Long",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Cold Rain And Snow",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Viola Lee Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "Deep Elem Blues",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "There's Something On Your Mind",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Big Boy Pete",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Death Don't Have No Mercy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Lindy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Dancing In The Street",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Me And My Uncle",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Avalon Ballroom,San Francisco,CA,US",
+        "date": "1966-12-23",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "I Know You Rider",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It Hurts Me Too",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It's All Over Now, Baby Blue",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Good Morning Little Schoolgirl",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Lindy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Dancing In The Street",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            },
+            {
+                "songs": [
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Avalon Ballroom,San Francisco,CA,US",
+        "date": "1966-12-24",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "I Know You Rider",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It Hurts Me Too",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "It's All Over Now, Baby Blue",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Good Morning Little Schoolgirl",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Lindy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Dancing In The Street",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "In The Midnight Hour",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    },
+    {
+        "venue": "Governor's Hall,Sacramento,CA,US",
+        "date": "1966-12-28",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Death Don't Have No Mercy",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    }
+]

@@ -1,15 +1,37 @@
 Order of things to do
 
-1: Finish all years shows
+*: Finish all years shows
 *: Get the venue data for all 77/78 shows
-3: Get weather info for all 77/78 shows     # 6th October
-4: Get song lengths for 77/78 shows         # 31st October
-5: Get BPM / Volume (?) for 77/78 shows     # 31st October
 
-6: Make maps of 77/78 tours                 # 7th November
-7: Make pretty BPM comparisons              # 15th November
-8: Make pretty graphs                       # 21st November
+The JSON output is now done. Test when you can, by writing a program that reads a date and outputs a setlist
+    This makes it easy to test
 
-9: Make website                             # 12th December
+Create the master songs list
+    Use it to verify the show data
 
-10: Write article                           # 20th December
+Create the venues data
+    You need to clean this data, likely, so try to clean on the original yaml file to start with
+    Take the venue data with long lat you have so far and merge them
+
+Now this all done, tidy the code. Move all the code to merge the 2 pieces of data off the repo (but store and keep)
+    We have; a set of files for each year; a list of venues; a list of songs and writers (TODO)
+
+Write code to get weather, first by finding the next show to grab.
+    Now we need to add data: the venue data should be completed here for 77/78
+    Attempt to do some venues, and see how long it could take
+    With all venue data, we get all weather data
+
+Go back to GODOT
+    Grab the songs
+    Take measurements for the year
+
+Now we have the 77/78 files, so do the BPM
+    Try and do volume as well
+
+6: Make maps of 77/78 tours
+7: Make pretty BPM comparisons
+8: Make pretty graphs
+
+9: Make website
+
+10: Write article

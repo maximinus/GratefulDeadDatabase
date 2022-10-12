@@ -1,0 +1,47 @@
+[
+    {
+        "venue": "Muir Beach Lodge,Muir Beach,CA,US",
+        "date": "1965-12-18",
+        "start_time": null,
+        "end_time": null,
+        "weather": null,
+        "sets": [
+            {
+                "songs": [
+                    {
+                        "name": "Golden Road To Unlimited Devotion",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "New Potato Caboose",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Alligator",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "He Was A Friend Of Mine",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    },
+                    {
+                        "name": "Good Lovin'",
+                        "segued": false,
+                        "length": -1,
+                        "notes": ""
+                    }
+                ],
+                "encore": false
+            }
+        ],
+        "show_index": 0
+    }
+]

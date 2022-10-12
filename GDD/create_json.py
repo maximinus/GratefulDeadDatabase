@@ -1,102 +1,28 @@
 import json
 import os
-from datetime import date
 from pathlib import Path
+
+from extract.json_objects import PlayedSong, Show, GDSet, Venue
 
 OUTPUT = Path(os.getcwd())
 OUTPUT_YEAR_FOLDER =  OUTPUT / 'output' / 'years'
 
 
+# also need to create all the songs and all the venues
+def create_venues():
+    pass
+
+
+def create_songs():
+    # load the current songs
+    # grab the first
+    # sort
+    # add song details to dict
+    # export
+    pass
+
+
 # The structure of the file is simple, it's a list of shows
-
-
-class Song:
-    def __init__(self, data):
-        self.name = data['name']
-        self.segued = data['segued']
-        self.length = -1
-        self.notes = ''
-
-    def to_json(self):
-        data = {'name': self.name,
-                'segued': self.segued,
-                'length': self.length,
-                'notes': self.notes}
-        return data
-
-    def __repr__(self):
-        if self.segued:
-            return f'{self.name} >'
-        else:
-            return self.name
-
-
-class Show:
-    def __init__(self, data):
-        # where?
-        self.venue = data['venue']
-        # when?
-        self.date = date.fromisoformat(data['date'])
-        # when did it start?
-        self.start_time = data['start_time']
-        self.end_time = data['end_time']
-        self.weather = data['weather']
-        self.sets = data['sets']
-        self.show_index = data['show_index']
-
-    def to_json(self):
-        weather = self.weather.to_json() if self.weather is not None else None
-        start_time = self.start_time
-        end_time = self.end_time
-        show_date = self.date.isoformat()
-        data = {'venue': self.venue,
-                'date': show_date,
-                'start_time': start_time,
-                'end_time': end_time,
-                'weather': weather,
-                'sets': [x.to_json() for x in self.sets]}
-        return data
-
-
-class GDSet:
-    def __init__(self, data):
-        self.songs = data['songs']
-        self.encore = data['encore']
-
-    def to_json(self):
-        data = {'songs': [x.to_json() for x in self.songs],
-                'encore': self.encore}
-        return data
-
-    def __repr__(self):
-        return '\n'.join([str(x) for x in self.songs])
-
-
-class Venue:
-    def __init__(self, data):
-        self.name = data['name']
-        self.latitude = data['latitude']
-        self.longitude = data['longitude']
-        self.city = data['city']
-        self.state = data['state']
-        self.country = data['country']
-
-    def to_json(self):
-        data = {'name': self.name,
-                'city': self.city,
-                'state': self.state,
-                'country': self.country,
-                'latitude': self.latitude,
-                'longitude': self.longitude
-        }
-        return data
-
-
-class Weather:
-    def __init__(self):
-        pass
-
-
 def create(year, yml_shows):
     # given a list of yml shows, create the dataset
     venues = {}
@@ -112,8 +38,10 @@ def create(year, yml_shows):
         # generate the show data
         all_sets = []
         for dead_set in show.sets:
-            # this is a PlayedSong, has self.name and self.segue
-            new_songs = [Song({'name': x.name, 'segued': x.segue}) for x in dead_set.songs]
+            # this is a yaml.PlayedSong, has self.name and self.segue
+            # yes the song class names are the same
+            # this will go away when the code is finished
+            new_songs = [PlayedSong({'name': x.name, 'segued': x.segue}) for x in dead_set.songs]
             all_sets.append(GDSet({'songs': new_songs, 'encore': False}))
         # construct the show
         data = {'venue': show.full_location, 'weather': None, 'date':show.date.isoformat(),
@@ -145,10 +73,3 @@ def get_all_venues(yml_shows):
                       'latitude': None,
                       'longitude': None}
         all_venues.append(Venue(venue_data))
-
-
-if __name__ == '__main__':
-    foo = Song({'index': 1, 'name': 'China Cat'})
-    json_data = json.dumps(foo.__dict__)
-    dict_data = json.loads(json_data)
-    print(Song(dict_data))

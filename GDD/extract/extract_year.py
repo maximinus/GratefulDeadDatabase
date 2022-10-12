@@ -247,7 +247,6 @@ def fix_yaml_show(yml_show, csv_show):
     if len(yml_clean) == 0 and len(csv_clean) != 0:
         # Empty YAML and non-empty CSV, so convert
         yml_show.songs_from_csv_clean(csv_clean, ALL_SONGS)
-        print('  Converted empty sets')
         return yml_show
 
     if yml_show.check_drums_space(csv_clean):

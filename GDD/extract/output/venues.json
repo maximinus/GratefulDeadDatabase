@@ -1,0 +1,4250 @@
+[
+    {
+        "name": "Stockton Civic Auditorium",
+        "city": "Stockton",
+        "state": "CA",
+        "country": "US",
+        "latitude": 37.959,
+        "longitude": 37.959
+    },
+    {
+        "name": "Star Theatre",
+        "city": "Phoenix",
+        "state": "AZ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "KQED Studios",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Gaelic Park",
+        "city": "Bronx",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Ark",
+        "city": "Boston",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Charlotte Coliseum",
+        "city": "Charlotte",
+        "state": "NC",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "West Palm Beach Auditorium",
+        "city": "West Palm Beach",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Santa Clara County Fairgrounds",
+        "city": "Santa Clara",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "NBC Studios",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": 40.759,
+        "longitude": 40.759
+    },
+    {
+        "name": "Seattle Center Arena",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Campus Stadium",
+        "city": "Santa Barbara",
+        "state": "CA",
+        "country": "US",
+        "latitude": 34.421,
+        "longitude": 34.421
+    },
+    {
+        "name": "Patrick Gym",
+        "city": "Burlington",
+        "state": "VT",
+        "country": "US",
+        "latitude": 44.471,
+        "longitude": 44.471
+    },
+    {
+        "name": "Erb Memorial Union",
+        "city": "Eugene",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "American Legion Hall",
+        "city": "South Lake Tahoe",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Sportatorium",
+        "city": "Pembroke Pines",
+        "state": "FL",
+        "country": "US",
+        "latitude": 26.009,
+        "longitude": 26.009
+    },
+    {
+        "name": "The Music Box",
+        "city": "Omaha",
+        "state": "NE",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Laguna Seca Recreation Area",
+        "city": "Monterey",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Springfield Civic Center Arena",
+        "city": "Springfield",
+        "state": "MA",
+        "country": "US",
+        "latitude": 42.102,
+        "longitude": 42.102
+    },
+    {
+        "name": "Vanderbilt University",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Des Moines Civic Center",
+        "city": "Des Moines",
+        "state": "IA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Aladdin Theatre",
+        "city": "Las Vegas",
+        "state": "NV",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Continental Ballroom",
+        "city": "Santa Clara",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Albuquerque Civic Auditorium",
+        "city": "Albuquerque",
+        "state": "NM",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Park West Ski Resort",
+        "city": "Park West",
+        "state": "UT",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Soldiers & Sailors Memorial Hall",
+        "city": "Kansas City",
+        "state": "KS",
+        "country": "US",
+        "latitude": 39.112,
+        "longitude": 39.112
+    },
+    {
+        "name": "Deer Creek Music Center",
+        "city": "Noblesville",
+        "state": "IN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Bayfront Center Arena",
+        "city": "St. Petersburg",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Ford Auditorium",
+        "city": "Detroit",
+        "state": "MI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Club Agora",
+        "city": "Columbus",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Playhouse",
+        "city": "Edinburgh",
+        "state": "Lothian",
+        "country": "UK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Santa Rosa Fairgrounds",
+        "city": "Santa Rosa",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Boston Music Hall",
+        "city": "Boston",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Great Western Forum",
+        "city": "Inglewood",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Pauley Ballroom",
+        "city": "Berkeley",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Fox Theatre",
+        "city": "Atlanta",
+        "state": "GA",
+        "country": "US",
+        "latitude": 33.773,
+        "longitude": 33.773
+    },
+    {
+        "name": "Milwaukee Auditorium",
+        "city": "Milwaukee",
+        "state": "WI",
+        "country": "US",
+        "latitude": 43.049,
+        "longitude": 43.049
+    },
+    {
+        "name": "Rich Stadium",
+        "city": "Orchard Park",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Glen Helen Regional Park",
+        "city": "Devore",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Bear’s House",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Boutwell Auditorium",
+        "city": "Birmingham",
+        "state": "AL",
+        "country": "US",
+        "latitude": 33.522,
+        "longitude": 33.522
+    },
+    {
+        "name": "Golden Hall",
+        "city": "San Diego",
+        "state": "CA",
+        "country": "US",
+        "latitude": 32.717,
+        "longitude": 32.717
+    },
+    {
+        "name": "Houston",
+        "city": "Houston",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Rhode Island Auditorium",
+        "city": "Providence",
+        "state": "RI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Fresno Convention Center",
+        "city": "Fresno",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "McArthur Court",
+        "city": "Eugene",
+        "state": "OR",
+        "country": "US",
+        "latitude": 44.042,
+        "longitude": 44.042
+    },
+    {
+        "name": "Harpur College",
+        "city": "Binghamton",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Fillmore West",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Bakersfield Memorial Auditorium",
+        "city": "Bakersfield",
+        "state": "CA",
+        "country": "US",
+        "latitude": 35.413,
+        "longitude": 35.413
+    },
+    {
+        "name": "Monterey Peninsula College",
+        "city": "Monterey",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "State Fairgrounds",
+        "city": "Des Moines",
+        "state": "IA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "San Jose State University",
+        "city": "San Jose",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Moody Coliseum",
+        "city": "Dallas",
+        "state": "TX",
+        "country": "US",
+        "latitude": 32.841,
+        "longitude": 32.841
+    },
+    {
+        "name": "Marigold Ballroom",
+        "city": "Fresno",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Old Renaissance Faire Grounds",
+        "city": "Veneta",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Electric Circus",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Stakladen",
+        "city": "Aarhus",
+        "state": null,
+        "country": "DK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Beacon Theatre",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Paramount Northwest Theatre",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "US",
+        "latitude": 47.614,
+        "longitude": 47.614
+    },
+    {
+        "name": "The Matrix",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Centennial Coliseum",
+        "city": "Reno",
+        "state": "NV",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Rheinhalle",
+        "city": "Duesseldorf",
+        "state": null,
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "California Hall",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Northridge Unitarian Church",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Orlando Arena",
+        "city": "0rlando",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Dane County Coliseum",
+        "city": "Madison",
+        "state": "WI",
+        "country": "US",
+        "latitude": 43.047,
+        "longitude": 43.047
+    },
+    {
+        "name": "Taft Auditorium",
+        "city": "Cincinnati",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Rubber Bowl",
+        "city": "Akron",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Nashville Municipal Auditorium",
+        "city": "Nashville",
+        "state": "TN",
+        "country": "US",
+        "latitude": 36.168,
+        "longitude": 36.168
+    },
+    {
+        "name": "Starlight Theatre",
+        "city": "Kansas City",
+        "state": "MO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Pyramid",
+        "city": "Memphis",
+        "state": "TN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cassell Coliseum",
+        "city": "Blacksburg",
+        "state": "VA",
+        "country": "US",
+        "latitude": 37.223,
+        "longitude": 37.223
+    },
+    {
+        "name": "Recreation Center",
+        "city": "Mill Valley",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Alpine Valley Music Theatre",
+        "city": "East Troy",
+        "state": "WI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Gill Coliseum",
+        "city": " Oregon State University",
+        "state": "Corvallis",
+        "country": "OR",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Richmond Coliseum",
+        "city": "Richmond",
+        "state": "VA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Austin Municipal Auditorium",
+        "city": "Austin",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Terrace Ballroom",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hartford Civic Center",
+        "city": "Hartford",
+        "state": "CT",
+        "country": "US",
+        "latitude": 41.769,
+        "longitude": 41.769
+    },
+    {
+        "name": "Broome County Arena",
+        "city": "Binghamton",
+        "state": "NY",
+        "country": "US",
+        "latitude": 42.096,
+        "longitude": 42.096
+    },
+    {
+        "name": "Mile High Stadium",
+        "city": "Denver",
+        "state": "CO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Giants Stadium",
+        "city": "East Rutherford",
+        "state": "NJ",
+        "country": "US",
+        "latitude": 40.814,
+        "longitude": 40.814
+    },
+    {
+        "name": "Dillon Gym",
+        "city": "Princeton",
+        "state": "NJ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Palace Theater",
+        "city": "Waterbury",
+        "state": "CT",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Tacoma Dome",
+        "city": "Tacoma",
+        "state": "WA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Field House",
+        "city": "Troy",
+        "state": "NY",
+        "country": "US",
+        "latitude": 42.733,
+        "longitude": 42.733
+    },
+    {
+        "name": "Harmon Gym",
+        "city": "Berkeley",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Fillmore East",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Silver Dollar Fairgrounds",
+        "city": "Chico",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Expo '67",
+        "city": "Montreal",
+        "state": null,
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "McDonough Arena",
+        "city": "Washington",
+        "state": "DC",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Civic Arena",
+        "city": "Pittsburgh",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Orpheum Theatre",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "College Of William and Mary",
+        "city": "Williamsburg",
+        "state": "VA",
+        "country": "US",
+        "latitude": 37.271,
+        "longitude": 37.271
+    },
+    {
+        "name": "Arlington Theater",
+        "city": "Santa Barbara",
+        "state": "CA",
+        "country": "US",
+        "latitude": 34.425,
+        "longitude": 34.425
+    },
+    {
+        "name": "The Bank",
+        "city": "Torrance",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "House Party",
+        "city": "Loma Mar",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Haight Street",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cameron Indoor Stadium",
+        "city": "Durham",
+        "state": "NC",
+        "country": "US",
+        "latitude": 35.998,
+        "longitude": 35.998
+    },
+    {
+        "name": "Folsom Field",
+        "city": "Boulder",
+        "state": "CO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hec. S. Edmundson Pavilion",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Forum",
+        "city": "Inglewood",
+        "state": "CA",
+        "country": "US",
+        "latitude": 33.958,
+        "longitude": 33.958
+    },
+    {
+        "name": "The Mosque",
+        "city": "Richmond",
+        "state": "VA",
+        "country": "US",
+        "latitude": 37.546,
+        "longitude": 37.546
+    },
+    {
+        "name": "Johanneshov Ice Stadium",
+        "city": "Stockholm",
+        "state": null,
+        "country": "SE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Horton Field House",
+        "city": "Normal",
+        "state": "IL",
+        "country": "US",
+        "latitude": 40.512,
+        "longitude": 40.512
+    },
+    {
+        "name": "Felt Forum",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Seattle Center Memorial Stadium",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Grande Ballroom",
+        "city": "Detroit",
+        "state": "MI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Atwood Hall",
+        "city": "Worcester",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Concertgebouw",
+        "city": "Amsterdam",
+        "state": "North Holland",
+        "country": "NL",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Melkweg",
+        "city": "Amsterdam",
+        "state": "North Holland",
+        "country": "NL",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Selland Arena",
+        "city": "Fresno",
+        "state": "CA",
+        "country": "US",
+        "latitude": 36.733,
+        "longitude": 36.733
+    },
+    {
+        "name": "Kleinhans Music Hall",
+        "city": "Buffalo",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Kirby Fieldhouse",
+        "city": "Easton",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Sargent Gym",
+        "city": "Boston",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Capitol Theatre",
+        "city": "Passaic",
+        "state": "NJ",
+        "country": "US",
+        "latitude": 41.002,
+        "longitude": 41.002
+    },
+    {
+        "name": "Gulfstream Park Racetrack",
+        "city": "Hallandale",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Earl Warren Showgrounds",
+        "city": "Santa Barbara",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Walter Koebel Halle",
+        "city": "Ruesselsheim",
+        "state": null,
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Lindley Meadows",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Boston Tea Party",
+        "city": "Boston",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Market Square Arena",
+        "city": "Indianapolis",
+        "state": "IN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Reed's Ranch",
+        "city": "Colorado Springs",
+        "state": "CO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Century II Convention Hall",
+        "city": "Wichita",
+        "state": "KS",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Boreal Ridge Ski Resort",
+        "city": "Donner's Summit",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Fillmore Auditorium",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "O'Keefe Centre",
+        "city": "Toronto",
+        "state": "Ontario",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "CNE Stadium",
+        "city": "Toronto",
+        "state": "Ontario",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Field House (Seneca College)",
+        "city": "Toronto",
+        "state": "Ontario",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Kingswood Music Theatre",
+        "city": "Vaughan",
+        "state": "Ontario",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Copps Coliseum",
+        "city": "Hamilton",
+        "state": "Ontario",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Freedom Hall",
+        "city": "Louisville",
+        "state": "KY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Chateau d'Herouville",
+        "city": "Herouville",
+        "state": "Val-d'Oise",
+        "country": "FR",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "State Fairgrounds",
+        "city": "Lewiston",
+        "state": "ME",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Denver Coliseum",
+        "city": "Denver",
+        "state": "CO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Soccer Field",
+        "city": "Washington",
+        "state": "DC",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hollywood Music Festival",
+        "city": "Newcastle-Under-Lyme",
+        "state": "Staffordshire",
+        "country": "UK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "County Fairgrounds",
+        "city": "Ventura",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Memorial Coliseum",
+        "city": "Tuscaloosa",
+        "state": "AL",
+        "country": "US",
+        "latitude": 33.203,
+        "longitude": 33.203
+    },
+    {
+        "name": "Rutgers Athletic Center",
+        "city": "Piscataway",
+        "state": "NJ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Lusk Field House",
+        "city": "Cortland",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Northrop Auditorium",
+        "city": "Minneapolis",
+        "state": "MN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Bickershaw Festival",
+        "city": "Wigan",
+        "state": "Greater Manchester",
+        "country": "UK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Mid",
+        "city": "Memphis",
+        "state": "TN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Dupont Gymnasium",
+        "city": "Cambridge",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "St. Paul Civic Center Arena",
+        "city": "St. Paul",
+        "state": "MN",
+        "country": "US",
+        "latitude": 39.436,
+        "longitude": 39.436
+    },
+    {
+        "name": "Crisler Arena",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Pirates World",
+        "city": "Dania",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Wallace Wade Stadium",
+        "city": "Durham",
+        "state": "NC",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Tower Theatre",
+        "city": "Upper Darby",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Campolindo High School",
+        "city": "Moraga",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Labor Temple",
+        "city": "Minneapolis",
+        "state": "MN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Seminole Indian Village",
+        "city": "West Hollywood",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Irvine Meadows Amphitheatre",
+        "city": "Irvine",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Veterans Memorial Auditorium",
+        "city": "Columbus",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Great American Music Hall",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Three Rivers Stadium",
+        "city": "Pittsburgh",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Catholic Youth Center",
+        "city": "Scranton",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Portland Meadows",
+        "city": "Portland",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "L'Olympia Bruno Coquatrix",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "country": "FR",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Palais des Sports",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "country": "FR",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hippodrome de Pantin",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "country": "FR",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Le Zenith",
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "country": "FR",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cow Palace",
+        "city": "Daly City",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Keifer Lakefront Arena",
+        "city": "New Orleans",
+        "state": "LA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Farrell Hall",
+        "city": "Delhi",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Pauley Pavilion",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": 34.071,
+        "longitude": 34.071
+    },
+    {
+        "name": "Tulsa Fairgrounds Pavilion",
+        "city": "Tulsa",
+        "state": "OK",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Fieldhouse",
+        "city": "Iowa City",
+        "state": "IA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Kiel Opera House",
+        "city": "St. Louis",
+        "state": "MO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "International Speedway",
+        "city": "Hollywood",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Metropolitan Center",
+        "city": "Minneapolis",
+        "state": "MN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Downs of Santa Fe",
+        "city": "Santa Fe",
+        "state": null,
+        "country": "NM",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Roscoe Maples Pavilion",
+        "city": "Palo Alto",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Utica Memorial Auditorium",
+        "city": "Utica",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Glens Falls Civic Center",
+        "city": "Glens Falls",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Henry J. Kaiser Convention Center",
+        "city": "Oakland",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Carolina Coliseum Arena",
+        "city": "Columbia",
+        "state": "SC",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Winterland Arena",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": 37.786,
+        "longitude": 37.786
+    },
+    {
+        "name": "Sullivan Stadium",
+        "city": "Foxboro",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Los Angeles Sports Arena",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Autzen Stadium",
+        "city": "Eugene",
+        "state": "OR",
+        "country": "US",
+        "latitude": 44.058,
+        "longitude": 44.058
+    },
+    {
+        "name": "Marin County Veterans Auditorium",
+        "city": "San Rafael",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Palacio De Los Deportes",
+        "city": "Barcelona",
+        "state": null,
+        "country": "ES",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Arrowhead Stadium",
+        "city": "Kansas City",
+        "state": "MO",
+        "country": "US",
+        "latitude": 39.049,
+        "longitude": 39.049
+    },
+    {
+        "name": "Robertson Gym",
+        "city": "Santa Barbara",
+        "state": "CA",
+        "country": "US",
+        "latitude": 34.416,
+        "longitude": 34.416
+    },
+    {
+        "name": "Allegheny College",
+        "city": "Meadville",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Paramount Theater",
+        "city": "Portland",
+        "state": "OR",
+        "country": "US",
+        "latitude": 45.517,
+        "longitude": 45.517
+    },
+    {
+        "name": "Wembley Empire Pool",
+        "city": "London",
+        "state": "Greater London",
+        "country": "UK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Lyceum Theatre",
+        "city": "London",
+        "state": "Greater London",
+        "country": "UK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Alexandra Palace",
+        "city": "London",
+        "state": "Greater London",
+        "country": "UK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Rainbow Theatre",
+        "city": "London",
+        "state": "Greater London",
+        "country": "UK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Wembley Arena",
+        "city": "London",
+        "state": "Greater London",
+        "country": "UK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Thompson Arena",
+        "city": "Hanover",
+        "state": "NH",
+        "country": "US",
+        "latitude": 43.701,
+        "longitude": 43.701
+    },
+    {
+        "name": "Hyde Park Teen Center",
+        "city": "Cincinnati",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Newcastle City Hall",
+        "city": "Newcastle upon Tyne",
+        "state": "Tyne and Wear",
+        "country": "UK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Carter",
+        "city": "Raleigh",
+        "state": "NC",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "UIC Pavilion",
+        "city": "Chicago",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Civic Convention Hall Auditorium",
+        "city": "Philadelphia",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cal Expo Amphitheatre",
+        "city": "Sacramento",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Sam Boyd Silver Bowl",
+        "city": "Las Vegas",
+        "state": "NV",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Memorial Union Ballroom",
+        "city": "West Lafayette",
+        "state": "IN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Indianapolis Sports Center",
+        "city": "Indianapolis",
+        "state": "IN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Radio City Music Hall",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Student Center",
+        "city": "Modesto",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Rose Palace",
+        "city": "Pasadena",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Anaheim Stadium",
+        "city": "Anaheim",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "San Jose Civic Auditorium",
+        "city": "San Jose",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Oregon Country Fair Site",
+        "city": "Veneta",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "St. John Arena",
+        "city": "Columbus",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Gizah Sound and Light Theater",
+        "city": "Cairo",
+        "state": "Greater Cairo",
+        "country": "EG",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Musikhalle",
+        "city": "Hamburg",
+        "state": null,
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Alsterdorfer Sporthalle",
+        "city": "Hamburg",
+        "state": null,
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "SUNY Gym",
+        "city": "Stony Brook",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Middlesex County Community College",
+        "city": "Edison",
+        "state": "NJ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Shrine Auditorium",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": 34.024,
+        "longitude": 34.024
+    },
+    {
+        "name": "Nevada County Fairgrounds",
+        "city": "Grass Valley",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Trouper's Club",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Boston Garden",
+        "city": "Boston",
+        "state": "MA",
+        "country": "US",
+        "latitude": 42.364,
+        "longitude": 42.364
+    },
+    {
+        "name": "NY State Pavilion",
+        "city": "Queens",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Lille Fairgrounds",
+        "city": "Lille",
+        "state": "Hauts-de-France",
+        "country": "FR",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Oakland Coliseum Arena",
+        "city": "Oakland",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Village Theater",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Palestra",
+        "city": "Rochester",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Thelma Theater",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Onondaga County War Memorial",
+        "city": "Syracuse",
+        "state": "NY",
+        "country": "US",
+        "latitude": 43.045,
+        "longitude": 43.045
+    },
+    {
+        "name": "Crystal Ballroom",
+        "city": "Portland",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "P.N.E. Coliseum",
+        "city": "Vancouver",
+        "state": "BC",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "University of Virginia",
+        "city": "Charlottesville",
+        "state": "VA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Dallas Memorial Auditorium",
+        "city": "Dallas",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Shea's Buffalo Theatre",
+        "city": "Buffalo",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Los Angeles Memorial Coliseum",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "County Coliseum",
+        "city": "El Paso",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Curtis Hixon Convention Hall",
+        "city": "Tampa",
+        "state": "FL",
+        "country": "US",
+        "latitude": 27.949,
+        "longitude": 27.949
+    },
+    {
+        "name": "Tampa Stadium",
+        "city": "Tampa",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Foxboro Stadium",
+        "city": "Foxboro",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Blossom Music Center",
+        "city": "Cuyahoga Falls",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Grand Prix Racecourse",
+        "city": "Watkins Glen",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "University of Nevada",
+        "city": "Reno",
+        "state": "NV",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Legion Stadium",
+        "city": "El Monte",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Shrine Exhibition Hall",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hampton Coliseum",
+        "city": "Hampton",
+        "state": "VA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "St. Louis Arena",
+        "city": "St. Louis",
+        "state": "MO",
+        "country": "US",
+        "latitude": 38.644,
+        "longitude": 38.644
+    },
+    {
+        "name": "World Music Theatre",
+        "city": "Tinley Park",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Student Union Ballroom",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Yale Bowl",
+        "city": "New Haven",
+        "state": "CT",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Texas Christian University",
+        "city": "Fort Worth",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Sun Dome",
+        "city": "Tampa",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Rupp Arena",
+        "city": "Lexington",
+        "state": "KY",
+        "country": "US",
+        "latitude": 38.049,
+        "longitude": 38.049
+    },
+    {
+        "name": "Seattle Center Memorial Coliseum",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Roanoke Civic Center",
+        "city": "Roanoke",
+        "state": "VA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Pine Knob Music Theatre",
+        "city": "Clarkston",
+        "state": "MI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hubert H. Humphrey Metrodome",
+        "city": "Minneapolis",
+        "state": "MN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Jenison Field House",
+        "city": "East Lansing",
+        "state": "MI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "River Front Coliseum",
+        "city": "Cincinnati",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Sam Houston Coliseum",
+        "city": "Houston",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Kansas City Municipal Auditorium Arena",
+        "city": "Kansas City",
+        "state": "MO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Syndrome",
+        "city": "Chicago",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hill Auditorium",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Radio Luxembourg",
+        "city": "Luxembourg",
+        "state": "Luxembourg",
+        "country": "LU",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Fiesta Hall",
+        "city": "San Mateo",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Zoo Amphitheatre",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hollywood Palladium",
+        "city": "Hollywood",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Sandstone Amphitheatre",
+        "city": "Bonner Springs",
+        "state": "KS",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Awalt High School",
+        "city": "Mountain View",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Desert Sky Pavilion",
+        "city": "Phoenix",
+        "state": "AZ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Sierra College",
+        "city": "Rocklin",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Dean Smith Center",
+        "city": "Chapel Hill",
+        "state": "NC",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Events Center",
+        "city": "Boulder",
+        "state": "CO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Boston Music Hall",
+        "city": "Boston",
+        "state": "MA",
+        "country": "US",
+        "latitude": 42.356,
+        "longitude": 42.356
+    },
+    {
+        "name": "Fox Theatre",
+        "city": "St. Louis",
+        "state": "MO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Universal Amphitheatre",
+        "city": "Universal City",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "National Guard Armory",
+        "city": "St. Louis",
+        "state": "MO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Longshoreman's Hall",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Kezar Stadium",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "University of New Mexico",
+        "city": "Albuquerque",
+        "state": "NM",
+        "country": "US",
+        "latitude": 35.085,
+        "longitude": 35.085
+    },
+    {
+        "name": "Cleveland Music Hall",
+        "city": "Cleveland",
+        "state": "OH",
+        "country": "US",
+        "latitude": 41.506,
+        "longitude": 41.506
+    },
+    {
+        "name": "Recreational Hall",
+        "city": "Davis",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Alfond Arena",
+        "city": "Orono",
+        "state": "ME",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Five Seasons Center",
+        "city": "Cedar Rapids",
+        "state": "IA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Garden Auditorium",
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "PNE Agrodome",
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Paradise Valley Resort",
+        "city": "Squamish",
+        "state": "British Columbia",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Pacific Coliseum",
+        "city": "Vancouver",
+        "state": "British Columbia",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Reunion Arena",
+        "city": "Dallas",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Olympic Center",
+        "city": "Lake Placid",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Recreation Hall",
+        "city": "State College",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Spartan Stadium",
+        "city": "San Jose",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Warfield Theater",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Oakland Coliseum Stadium",
+        "city": "Oakland",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Southern Star Amphitheatre",
+        "city": "Houston",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Avalon Ballroom",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Kongressaal",
+        "city": "Munich",
+        "state": "Bavaria",
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Thee Image",
+        "city": "Miami",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Veterans Hall",
+        "city": "Columbus",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Colden Auditorium",
+        "city": "Queens",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Dillon Stadium",
+        "city": "Hartford",
+        "state": "CT",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cobo Arena",
+        "city": "Detroit",
+        "state": "MI",
+        "country": "US",
+        "latitude": 42.327,
+        "longitude": 42.327
+    },
+    {
+        "name": "Seattle Center Coliseum",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Alumni Stadium",
+        "city": "Amherst",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Max Yasgur's Farm",
+        "city": "Bethel",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Jai",
+        "city": "Miami",
+        "state": "FL",
+        "country": "US",
+        "latitude": 25.808,
+        "longitude": 25.808
+    },
+    {
+        "name": "Irvine Auditorium",
+        "city": "Philadelphia",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Saratoga Performing Arts Center",
+        "city": "Saratoga",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Niagara Falls Civic Center",
+        "city": "Niagara Falls",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "El Camino Park",
+        "city": "Palo Alto",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Kresge Plaza",
+        "city": "Cambridge",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "McMahon Stadium",
+        "city": "Calgary",
+        "state": "Alberta",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Tivoli Concert Hall",
+        "city": "Copenhagen",
+        "state": "Hovedstadsomradet",
+        "country": "DK",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Oregon State University",
+        "city": "Corvallis",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Internationales Congress Centrum",
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Palladium",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": 40.752,
+        "longitude": 40.752
+    },
+    {
+        "name": "Dream Bowl",
+        "city": "Napa",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "St. Paul Auditorium",
+        "city": "St. Paul",
+        "state": "MN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "City Island",
+        "city": "Harrisburg",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Star Lake Amphitheatre",
+        "city": "Burgettstown",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Barton Hall",
+        "city": "Ithaca",
+        "state": "NY",
+        "country": "US",
+        "latitude": 42.446,
+        "longitude": 42.446
+    },
+    {
+        "name": "Building A",
+        "city": "Sacramento",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Metropolitan Sports Center",
+        "city": "Bloomington",
+        "state": "MN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Lloyd Noble Center",
+        "city": "Norman",
+        "state": "OK",
+        "country": "US",
+        "latitude": 35.187,
+        "longitude": 35.187
+    },
+    {
+        "name": "Poplar Creek Music Theatre",
+        "city": "Hoffman Estates",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "San Francisco Civic Auditorium",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Red Rocks Amphitheatre",
+        "city": "Morrison",
+        "state": "CO",
+        "country": "US",
+        "latitude": 39.666,
+        "longitude": 39.666
+    },
+    {
+        "name": "Billerica Forum",
+        "city": "Billerica",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Scope",
+        "city": "Norfolk",
+        "state": "VA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Del Mar Fairgrounds",
+        "city": "San Diego",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "War Memorial Auditorium",
+        "city": "Buffalo",
+        "state": "NY",
+        "country": "US",
+        "latitude": 42.938,
+        "longitude": 42.938
+    },
+    {
+        "name": "San Antonio Civic Center Arena",
+        "city": "San Antonio",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Salt Palace",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Soldier Field",
+        "city": "Chicago",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Betty Nelson's Organic Raspberry Farm",
+        "city": "Sultan",
+        "state": "WA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "East Hall",
+        "city": " Franklin & Marshall College",
+        "state": "Lancaster",
+        "country": "PA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cleveland Public Hall",
+        "city": "Cleveland",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Veterans Memorial Hall",
+        "city": "Berkeley",
+        "state": "CA",
+        "country": "US",
+        "latitude": 37.87,
+        "longitude": 37.87
+    },
+    {
+        "name": "Santa Cruz County Fairgrounds",
+        "city": "Watsonville",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Moscone Convention Center",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Stanley Theatre",
+        "city": "Pittsburgh",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Anderson Theater",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Stabler Arena",
+        "city": "Bethlehem",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Knickerbocker Arena",
+        "city": "Albany",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Indiana Convention Center",
+        "city": "Indianapolis",
+        "state": "IN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "McGaw Memorial Hall",
+        "city": "Evanston",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cumberland County Civic Center",
+        "city": "Portland",
+        "state": "ME",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Summit",
+        "city": "Houston",
+        "state": "TX",
+        "country": "US",
+        "latitude": 29.73,
+        "longitude": 29.73
+    },
+    {
+        "name": "Stockton Ballroom",
+        "city": "Stockton",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Robert F. Kennedy Stadium",
+        "city": "Washington",
+        "state": " D.C.",
+        "country": "DC",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Glenn Miller Ballroom",
+        "city": "Boulder",
+        "state": "CO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Saenger Performing Arts Center",
+        "city": "New Orleans",
+        "state": "LA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Lane Community College",
+        "city": "Eugene",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Swing Auditorium",
+        "city": "San Bernardino",
+        "state": "CA",
+        "country": "US",
+        "latitude": 34.109,
+        "longitude": 34.109
+    },
+    {
+        "name": "Ice Palace",
+        "city": "Las Vegas",
+        "state": "NV",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Tyrone Guthrie Theatre",
+        "city": "Minneapolis",
+        "state": "MN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Feyline Field",
+        "city": "Tempe",
+        "state": "AZ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Atlanta Municipal Auditorium",
+        "city": "Atlanta",
+        "state": "GA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Grugahalle",
+        "city": "Essen",
+        "state": "North Rhine-Westphalia",
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "University Gymnasium",
+        "city": " State University of New York",
+        "state": "Stony Brook",
+        "country": "NY",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Riverfront Arena",
+        "city": "Cincinnati",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Euphoria Ballroom",
+        "city": "San Rafael",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Grote Zaal",
+        "city": "Rotterdam",
+        "state": "South Holland",
+        "country": "NL",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Capitol Theater",
+        "city": "Port Chester",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "USAir Arena",
+        "city": "Landover",
+        "state": "MD",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Harding Theater",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Providence Civic Center",
+        "city": "Providence",
+        "state": "RI",
+        "country": "US",
+        "latitude": 41.824,
+        "longitude": 41.824
+    },
+    {
+        "name": "Capital Centre",
+        "city": "Landover`",
+        "state": "MD",
+        "country": "US",
+        "latitude": 38.906,
+        "longitude": 38.906
+    },
+    {
+        "name": "Huntington Civic Center",
+        "city": "Huntington",
+        "state": "WV",
+        "country": "US",
+        "latitude": 38.422,
+        "longitude": 38.422
+    },
+    {
+        "name": "Riverport Amphitheatre",
+        "city": "Maryland Heights",
+        "state": "MO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Calaveras County Fairgrounds",
+        "city": "Angel's Camp",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Madison Square Garden",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cole Field House",
+        "city": "College Park",
+        "state": "MD",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Bellarmine College",
+        "city": "Louisville",
+        "state": "KY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Springer's Inn",
+        "city": "Portland",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Napa County Fairgrounds",
+        "city": "Napa",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Manhattan Center",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Kiel Auditorium",
+        "city": "St. Louis",
+        "state": "MO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hara Arena",
+        "city": "Dayton",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Sacramento Memorial Auditorium",
+        "city": "Sacramento",
+        "state": "CA",
+        "country": "US",
+        "latitude": 38.579,
+        "longitude": 38.579
+    },
+    {
+        "name": "1300 Boulevard Way",
+        "city": "Walnut Creek",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "McFarlin Auditorium",
+        "city": "Dallas",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Veterans Auditorium",
+        "city": "Santa Rosa",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Electric Theater",
+        "city": "Chicago",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Coliseum",
+        "city": "Morgantown",
+        "state": "WV",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Assembly Hall",
+        "city": "Bloomington",
+        "state": "IN",
+        "country": "US",
+        "latitude": 39.181,
+        "longitude": 39.181
+    },
+    {
+        "name": "Veterans Memorial Coliseum",
+        "city": "New Haven",
+        "state": "CT",
+        "country": "US",
+        "latitude": 40.783,
+        "longitude": 40.783
+    },
+    {
+        "name": "Beat Club",
+        "city": "Bremen",
+        "state": "Bremen",
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Stadthalle",
+        "city": "Bremen",
+        "state": "Bremen",
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Monterey Fairgrounds",
+        "city": "Monterey",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Omaha Civic Auditorium",
+        "city": "Omaha",
+        "state": "NE",
+        "country": "US",
+        "latitude": 41.261,
+        "longitude": 41.261
+    },
+    {
+        "name": "Spokane Coliseum",
+        "city": "Spokane",
+        "state": "WA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Eagles Auditorium",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "San Antonio Civic Auditorium",
+        "city": "San Antonio",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Community War Memorial",
+        "city": "Rochester",
+        "state": "NY",
+        "country": "US",
+        "latitude": 43.154,
+        "longitude": 43.154
+    },
+    {
+        "name": "Birmingham Jefferson Convention Complex Coliseum",
+        "city": "Birmingham",
+        "state": "AL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hilton Hotel",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Ohio Theatre",
+        "city": "Columbus",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Exposition Center",
+        "city": "Milwaukee",
+        "state": "WI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Lakeland Civic Center Arena",
+        "city": "Lakeland",
+        "state": "FL",
+        "country": "US",
+        "latitude": 28.041,
+        "longitude": 28.041
+    },
+    {
+        "name": "Family Dog at the Great Highway",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Pelletier Farm",
+        "city": "St. Helens",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Meadowlands Arena",
+        "city": "East Rutherford",
+        "state": "NJ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Silver Stadium",
+        "city": "Rochester",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Youth Opportunities Center",
+        "city": "Compton",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Green Lake Aqua Theatre",
+        "city": "Seattle",
+        "state": "WA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Piedmont Park",
+        "city": "Atlanta",
+        "state": "GA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Muir Beach Lodge",
+        "city": "Muir Beach",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Carrier Dome",
+        "city": "Syracuse",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Holleder Memorial Stadium",
+        "city": "Rochester",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Terminal Island Correctional Fac.",
+        "city": "San Pedro",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Oxford Plains Speedway",
+        "city": "Oxford",
+        "state": "ME",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Stanley Theatre",
+        "city": "Jersey City",
+        "state": "NJ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hofheinz Pavilion",
+        "city": "Houston",
+        "state": "TX",
+        "country": "US",
+        "latitude": 29.725,
+        "longitude": 29.725
+    },
+    {
+        "name": "Richfield Coliseum",
+        "city": "Richfield",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Nassau Veterans Memorial Coliseum",
+        "city": "Uniondale",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Delta Center",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "York Farm",
+        "city": "Poynette",
+        "state": "WI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Temple University",
+        "city": "Philadelphia",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cincinnati Gardens",
+        "city": "Cincinnati",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Veteran's Memorial Coliseum",
+        "city": "Jacksonville",
+        "state": "FL",
+        "country": "US",
+        "latitude": 30.326,
+        "longitude": 30.326
+    },
+    {
+        "name": "Carthay Studios",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Rosemont Horizon",
+        "city": "Rosemont",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Camp Randall Field House",
+        "city": "Madison",
+        "state": "WI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Masonic Temple",
+        "city": "Portland",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Spectrum",
+        "city": "Philadelphia",
+        "state": "PA",
+        "country": "US",
+        "latitude": 39.905,
+        "longitude": 39.905
+    },
+    {
+        "name": "Washington University",
+        "city": "St. Louis",
+        "state": "MO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Low Library Plaza",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hall Of Flowers",
+        "city": "San Mateo",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Silva Hall",
+        "city": "Eugene",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "BSU Pavilion",
+        "city": "Boise",
+        "state": "ID",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cleveland Convention Center",
+        "city": "Cleveland",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Mammoth Gardens",
+        "city": "Denver",
+        "state": "CO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Santa Monica Civic Auditorium",
+        "city": "Santa Monica",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "University Auditorium",
+        "city": "Tucson",
+        "state": "AZ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Oklahoma City Fairgrounds Arena",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Manor Downs",
+        "city": "Austin",
+        "state": "TX",
+        "country": "US",
+        "latitude": 30.359,
+        "longitude": 30.359
+    },
+    {
+        "name": "Dallas Convention Center Arena",
+        "city": "Dallas",
+        "state": "TX",
+        "country": "US",
+        "latitude": 32.774,
+        "longitude": 32.774
+    },
+    {
+        "name": "Greek Theatre",
+        "city": "Berkeley",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Warehouse",
+        "city": "New Orleans",
+        "state": "LA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Oklahoma City Music Hall",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Las Lomas High School",
+        "city": "Walnut Creek",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "King's Beach Bowl",
+        "city": "Lake Tahoe",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Straight Theater",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Compton Terrace Amphitheatre",
+        "city": "Tempe",
+        "state": "AZ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Greensboro Coliseum",
+        "city": "Greensboro",
+        "state": "NC",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Merriweather Post Pavilion",
+        "city": "Columbia",
+        "state": "MD",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Pershing Municipal Auditorium",
+        "city": "Lincoln",
+        "state": "NE",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hershey Park Stadium",
+        "city": "Hershey",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Activity Center",
+        "city": "Tempe",
+        "state": "AZ",
+        "country": "US",
+        "latitude": 33.425,
+        "longitude": 33.425
+    },
+    {
+        "name": "Cotterell Gym",
+        "city": "Hamilton",
+        "state": "NY",
+        "country": "US",
+        "latitude": 42.816,
+        "longitude": 42.816
+    },
+    {
+        "name": "Worcester Polytechnic Institute",
+        "city": "Worcester",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "San Diego Sports Arena",
+        "city": "San Diego",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Evans Field House",
+        "city": "DeKalb",
+        "state": "IL",
+        "country": "US",
+        "latitude": 41.936,
+        "longitude": 41.936
+    },
+    {
+        "name": "Augusta Civic Center",
+        "city": "Augusta",
+        "state": "ME",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Easttown Theatre",
+        "city": "Detroit",
+        "state": "MI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "International Amphitheatre",
+        "city": "Chicago",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Psychedelic Supermarket",
+        "city": "Boston",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "McNichols Sports Arena",
+        "city": "Denver",
+        "state": "CO",
+        "country": "US",
+        "latitude": 39.78,
+        "longitude": 39.78
+    },
+    {
+        "name": "Devore Field",
+        "city": "Chula Vista",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "John F. Kennedy Stadium",
+        "city": "Philadelphia",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Carousel Ballroom",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Bucknell University",
+        "city": "Lewisburg",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "West High Auditorium",
+        "city": "Anchorage",
+        "state": "AK",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Alfred College",
+        "city": "Alfred",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Auditorium Theater",
+        "city": "Chicago",
+        "state": "IL",
+        "country": "US",
+        "latitude": 41.876,
+        "longitude": 41.876
+    },
+    {
+        "name": "Eureka Municipal Auditorium",
+        "city": "Eureka",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Electric Factory",
+        "city": "Philadelphia",
+        "state": "PA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Portland Memorial Coliseum",
+        "city": "Portland",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Parc des Expositions",
+        "city": "Dijon",
+        "state": "Bourgogne-Franche-Comte",
+        "country": "FR",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Palace Of Fine Arts",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Miami Arena",
+        "city": "Miami",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Honolulu Civic Auditorium",
+        "city": "Honolulu",
+        "state": "HI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Field House",
+        "city": "Cincinnati",
+        "state": "OH",
+        "country": "US",
+        "latitude": 39.105,
+        "longitude": 39.105
+    },
+    {
+        "name": "SIU Arena",
+        "city": "Carbondale",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "California Exposition Amphitheater",
+        "city": "Sacramento",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Town Park",
+        "city": "Telluride",
+        "state": "CO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Joe Louis Arena",
+        "city": "Detroit",
+        "state": "MI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Melodyland Theater",
+        "city": "Anaheim",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Roosevelt Stadium",
+        "city": "Jersey City",
+        "state": "NJ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Buckeye Lake Music Center",
+        "city": "Hebron",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "California State U. Dominguez Hills",
+        "city": "Carson",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Alligator Alley Gym",
+        "city": "Gainesville",
+        "state": "FL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Frost Amphitheatre",
+        "city": "Palo Alto",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Assembly Center",
+        "city": "Baton Rouge",
+        "state": "LA",
+        "country": "US",
+        "latitude": 30.415,
+        "longitude": 30.415
+    },
+    {
+        "name": "Cardinal Stadium",
+        "city": "Louisville",
+        "state": "KY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Kinetic Playground",
+        "city": "Chicago",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Music Hall",
+        "city": "Cincinnati",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cafe au Go Go",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Bangor Municipal Auditorium",
+        "city": "Bangor",
+        "state": "ME",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Memorial Coliseum",
+        "city": "Jackson",
+        "state": "MS",
+        "country": "US",
+        "latitude": 32.33,
+        "longitude": 32.33
+    },
+    {
+        "name": "Dance Hall",
+        "city": "Rio Nido",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Shoreline Amphitheatre",
+        "city": "Mountain View",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Berkeley Community Theatre",
+        "city": "Berkeley",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Central Park",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Freeborn Hall",
+        "city": "Davis",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Performing Arts Center",
+        "city": "Milwaukee",
+        "state": "WI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Jahrhunderthalle",
+        "city": "Frankfurt",
+        "state": "Hesse",
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "State Fair Coliseum",
+        "city": "Indianapolis",
+        "state": "IN",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Marion Shea Aud.",
+        "city": "Wayne",
+        "state": "NJ",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Governor's Hall",
+        "city": "Sacramento",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Mecca",
+        "city": "Milwaukee",
+        "state": "WI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Uptown Theatre",
+        "city": "Chicago",
+        "state": "IL",
+        "country": "US",
+        "latitude": 41.97,
+        "longitude": 41.97
+    },
+    {
+        "name": "Jamaica World Music Festival",
+        "city": "Montego Bay",
+        "state": "St. James",
+        "country": "JM",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Portland International Raceway",
+        "city": "Portland",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Pittsburgh Civic Arena",
+        "city": "Pittsburgh",
+        "state": "PA",
+        "country": "US",
+        "latitude": 40.44,
+        "longitude": 40.44
+    },
+    {
+        "name": "Winnipeg Stadium",
+        "city": "Winnipeg",
+        "state": null,
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Uni",
+        "city": "Cedar Falls",
+        "state": "IA",
+        "country": "US",
+        "latitude": 42.512,
+        "longitude": 42.512
+    },
+    {
+        "name": "Baltimore Civic Center",
+        "city": "Baltimore",
+        "state": "MD",
+        "country": "US",
+        "latitude": 39.289,
+        "longitude": 39.289
+    },
+    {
+        "name": "Aztec Bowl",
+        "city": "San Diego",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Long Beach Arena",
+        "city": "Long Beach",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Meramec Community College",
+        "city": "Kirkwood",
+        "state": "MO",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Orange County Fairgrounds",
+        "city": "Costa Mesa",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "River Bend Music Center",
+        "city": "Cincinnati",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Baton Rouge Int. Speedway",
+        "city": "Prairieville",
+        "state": "LA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Franklin County Field",
+        "city": "Highgate",
+        "state": "VT",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Academy of Music",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Fillmore Auditorim",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Auditorium",
+        "city": "Austin",
+        "state": "TX",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Caf' au Go",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Polo Field",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Allan Theater",
+        "city": "Cleveland",
+        "state": "OH",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Oakland Auditorium Arena",
+        "city": "Oakland",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Cape Cod Coliseum",
+        "city": "South Yarmouth",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Assembly Hall",
+        "city": "Champaign-Urbana",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Palace",
+        "city": "Auburn Hills",
+        "state": "MI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Grand Center",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Colt Park",
+        "city": "Hartford",
+        "state": "CT",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "46th Street Rock Palace",
+        "city": "Brooklyn",
+        "state": "NY",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Raceway Park",
+        "city": "Englishtown",
+        "state": "NJ",
+        "country": "US",
+        "latitude": 40.336,
+        "longitude": 40.336
+    },
+    {
+        "name": "The Omni",
+        "city": "Atlanta",
+        "state": "GA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Hollywood Bowl",
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "The Centrum",
+        "city": "Worcester",
+        "state": "MA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Lanai Theater",
+        "city": "Crockett",
+        "state": "CA",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Mississippi River Festival",
+        "city": "Edwardsville",
+        "state": "IL",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Adams Field House",
+        "city": "Missoula",
+        "state": null,
+        "country": "MT",
+        "latitude": null,
+        "longitude": null
+    }
+]

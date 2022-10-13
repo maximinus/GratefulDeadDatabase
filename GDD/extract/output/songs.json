@@ -1,5 +1,5 @@
 {
-    "Songs": [
+    "songs": [
         {
             "name": "(Baby) Hully Gully",
             "full_name": null,
@@ -2869,5 +2869,5 @@
             "writers": []
         }
     ],
-    "Writers": []
+    "writers": []
 }

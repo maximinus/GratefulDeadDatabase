@@ -1,18 +1,21 @@
 import os
 import json
+from tqdm import tqdm
 from pathlib import Path
 
-from json_objects import Show, PlayedSong, GDSet, Venue
+from json_objects import Show, PlayedSong, GDSet, Venue, Song
 
-JSON_DIR = Path(os.getcwd()) / 'output' / 'years'
+YEARS_FOLDER = Path(os.getcwd()) / 'output' / 'years'
+SONGS_FILE = Path(os.getcwd()) / 'output' / 'songs.json'
+VENUES_FILE= Path(os.getcwd()) / 'output' / 'venues.json'
 
 
 # load from json, should be easy
 def load_all_shows():
     all_data = []
-    for i in range(65, 96):
-        filename = JSON_DIR / f'19{i}.json'
-        print(f'Loading {filename}')
+    print(f'Loading all shows')
+    for i in tqdm(range(65, 96)):
+        filename = YEARS_FOLDER / f'19{i}.json'
         with open(filename) as fd:
             json_data = json.load(fd)
         for j in json_data:
@@ -21,11 +24,14 @@ def load_all_shows():
 
 
 def load_all_songs():
-    pass
+    with open(SONGS_FILE) as fd:
+        json_data = json.load(fd)
+    all_songs = [Song(x) for x in json_data['songs']]
+    return all_songs
 
 
 def load_all_venues():
-    with open('output/venues.json') as f:
+    with open(VENUES_FILE) as f:
         venues = json.load(f)
     venues = [Venue(x) for x in venues]
     print(f'Loaded {len(venues)} venues')
@@ -55,8 +61,19 @@ def check_venue_data(venues):
     return
 
 
-def check_song_names():
-    pass
+def check_song_names(shows, songs):
+    # grab all string names and put into an array
+    all_names = [x.name for x in songs]
+    # make sure all of them are found
+    count = 0
+    for show in shows:
+        for single_set in show.sets:
+            for played in single_set.songs:
+                count += 1
+                # this is a PlayedSong
+                if played.name not in all_names:
+                    raise ValueError(f'Could not find song named {played.name}')
+    print(f'All {count} songs ok')
 
 
 def get_next_weather():
@@ -65,6 +82,13 @@ def get_next_weather():
     pass
 
 
+def check_data():
+    #all_venues = load_all_venues()
+    #check_venue_data(all_venues)
+    shows = load_all_shows()
+    songs = load_all_songs()
+    check_song_names(shows, songs)
+
+
 if __name__ == '__main__':
-    all_venues = load_all_venues()
-    check_venue_data(all_venues)
+    check_data()

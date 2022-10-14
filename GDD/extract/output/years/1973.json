@@ -4236,7 +4236,7 @@
         "show_index": 0
     },
     {
-        "venue": "Robert F. Kennedy Stadium,Washington, D.C.,DC,US",
+        "venue": "Robert F. Kennedy Stadium,Washington,DC,US",
         "date": "1973-06-09",
         "start_time": null,
         "end_time": null,
@@ -4412,7 +4412,7 @@
         "show_index": 0
     },
     {
-        "venue": "Robert F. Kennedy Stadium,Washington, D.C.,DC,US",
+        "venue": "Robert F. Kennedy Stadium,Washington,DC,US",
         "date": "1973-06-10",
         "start_time": null,
         "end_time": null,

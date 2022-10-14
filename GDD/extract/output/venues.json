@@ -442,7 +442,7 @@
     {
         "name": "Stakladen",
         "city": "Aarhus",
-        "state": null,
+        "state": "Aarhus",
         "country": "DK",
         "latitude": null,
         "longitude": null
@@ -482,7 +482,7 @@
     {
         "name": "Rheinhalle",
         "city": "Duesseldorf",
-        "state": null,
+        "state": "North Rhine-Westphalia",
         "country": "DE",
         "latitude": null,
         "longitude": null
@@ -585,9 +585,17 @@
     },
     {
         "name": "Gill Coliseum",
-        "city": " Oregon State University",
-        "state": "Corvallis",
-        "country": "OR",
+        "city": "Corvallis",
+        "state": "OR",
+        "country": "US",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Oregon State University",
+        "city": "Corvallis",
+        "state": "OR",
+        "country": "US",
         "latitude": null,
         "longitude": null
     },
@@ -818,7 +826,7 @@
     {
         "name": "Johanneshov Ice Stadium",
         "city": "Stockholm",
-        "state": null,
+        "state": "Sodermanland",
         "country": "SE",
         "latitude": null,
         "longitude": null
@@ -938,7 +946,7 @@
     {
         "name": "Walter Koebel Halle",
         "city": "Ruesselsheim",
-        "state": null,
+        "state": "Hessen",
         "country": "DE",
         "latitude": null,
         "longitude": null
@@ -1017,6 +1025,14 @@
     },
     {
         "name": "Field House (Seneca College)",
+        "city": "Toronto",
+        "state": "Ontario",
+        "country": "CA",
+        "latitude": null,
+        "longitude": null
+    },
+    {
+        "name": "Rock Pile",
         "city": "Toronto",
         "state": "Ontario",
         "country": "CA",
@@ -1370,8 +1386,8 @@
     {
         "name": "Downs of Santa Fe",
         "city": "Santa Fe",
-        "state": null,
-        "country": "NM",
+        "state": "NM",
+        "country": "US",
         "latitude": null,
         "longitude": null
     },
@@ -1458,7 +1474,7 @@
     {
         "name": "Palacio De Los Deportes",
         "city": "Barcelona",
-        "state": null,
+        "state": "Catalonia",
         "country": "ES",
         "latitude": null,
         "longitude": null
@@ -1682,7 +1698,7 @@
     {
         "name": "Musikhalle",
         "city": "Hamburg",
-        "state": null,
+        "state": "Hamburg",
         "country": "DE",
         "latitude": null,
         "longitude": null
@@ -1690,7 +1706,7 @@
     {
         "name": "Alsterdorfer Sporthalle",
         "city": "Hamburg",
-        "state": null,
+        "state": "Hamburg",
         "country": "DE",
         "latitude": null,
         "longitude": null
@@ -2336,6 +2352,14 @@
         "longitude": null
     },
     {
+        "name": "Stadthalle",
+        "city": "Munich",
+        "state": "Bavaria",
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
         "name": "Thee Image",
         "city": "Miami",
         "state": "FL",
@@ -2464,10 +2488,10 @@
         "longitude": null
     },
     {
-        "name": "Oregon State University",
-        "city": "Corvallis",
-        "state": "OR",
-        "country": "US",
+        "name": "Forum Kobenhavn",
+        "city": "Copenhagen",
+        "state": "Hovedstadsomradet",
+        "country": "DK",
         "latitude": null,
         "longitude": null
     },
@@ -2640,10 +2664,10 @@
         "longitude": null
     },
     {
-        "name": "East Hall",
-        "city": " Franklin & Marshall College",
-        "state": "Lancaster",
-        "country": "PA",
+        "name": "Franklin & Marshall College",
+        "city": "Lancaster",
+        "state": "PA",
+        "country": "US",
         "latitude": null,
         "longitude": null
     },
@@ -2754,8 +2778,8 @@
     {
         "name": "Robert F. Kennedy Stadium",
         "city": "Washington",
-        "state": " D.C.",
-        "country": "DC",
+        "state": "DC",
+        "country": "US",
         "latitude": null,
         "longitude": null
     },
@@ -2832,10 +2856,10 @@
         "longitude": null
     },
     {
-        "name": "University Gymnasium",
-        "city": " State University of New York",
-        "state": "Stony Brook",
-        "country": "NY",
+        "name": "State University of New York",
+        "city": "New York",
+        "state": "NY",
+        "country": "US",
         "latitude": null,
         "longitude": null
     },
@@ -3944,6 +3968,14 @@
         "longitude": null
     },
     {
+        "name": "Festhalle",
+        "city": "Frankfurt",
+        "state": "Hesse",
+        "country": "DE",
+        "latitude": null,
+        "longitude": null
+    },
+    {
         "name": "State Fair Coliseum",
         "city": "Indianapolis",
         "state": "IN",
@@ -4010,7 +4042,7 @@
     {
         "name": "Winnipeg Stadium",
         "city": "Winnipeg",
-        "state": null,
+        "state": "Manitoba",
         "country": "CA",
         "latitude": null,
         "longitude": null
@@ -4242,8 +4274,8 @@
     {
         "name": "Adams Field House",
         "city": "Missoula",
-        "state": null,
-        "country": "MT",
+        "state": "MT",
+        "country": "US",
         "latitude": null,
         "longitude": null
     }

@@ -995,7 +995,7 @@
         "show_index": 0
     },
     {
-        "venue": "Adams Field House,Missoula,,MT,US",
+        "venue": "Adams Field House,Missoula,MT,US",
         "date": "1974-05-14",
         "start_time": null,
         "end_time": null,
@@ -4991,7 +4991,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,London,,UK",
+        "venue": "Alexandra Palace,London,Greater London,UK",
         "date": "1974-09-09",
         "start_time": null,
         "end_time": null,
@@ -5124,7 +5124,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,London,,UK",
+        "venue": "Alexandra Palace,London,Greater London,UK",
         "date": "1974-09-10",
         "start_time": null,
         "end_time": null,
@@ -5275,7 +5275,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,London,,UK",
+        "venue": "Alexandra Palace,London,Greater London,UK",
         "date": "1974-09-11",
         "start_time": null,
         "end_time": null,
@@ -5425,7 +5425,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Muenchen,,DE",
+        "venue": "Kongressaal,Munich,Bavaria,DE",
         "date": "1974-09-14",
         "start_time": null,
         "end_time": null,
@@ -5606,7 +5606,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Dijon,,FR",
+        "venue": "Parc des Expositions,Dijon,Bourgogne-Franche-Comte,FR",
         "date": "1974-09-18",
         "start_time": null,
         "end_time": null,
@@ -5781,7 +5781,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Paris,,FR",
+        "venue": "Palais des Sports,Paris,Ile-de-France,FR",
         "date": "1974-09-20",
         "start_time": null,
         "end_time": null,
@@ -5962,7 +5962,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Paris,,FR",
+        "venue": "Palais des Sports,Paris,Ile-de-France,FR",
         "date": "1974-09-21",
         "start_time": null,
         "end_time": null,

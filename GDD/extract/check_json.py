@@ -76,6 +76,21 @@ def check_song_names(shows, songs):
     print(f'All {count} songs ok')
 
 
+def check_show_venues(venues, shows):
+    # each show should have a venue that exists
+    venue_names = [str(x) for x in venues]
+    count = 0
+    missing = 0
+    for show in shows:
+        if show.venue not in venue_names:
+            if missing == 0:
+                print('Shows with missing venues')
+            print(f'  {show.date}, {show.venue}')
+            missing += 1
+        count += 1
+    print(f'{count} shows, {missing} missing venues')
+
+
 def get_next_weather():
     # search a year and get the next weather report required
     # For this we need the shows venue to not have nulls on latitude and longitude
@@ -83,12 +98,25 @@ def get_next_weather():
 
 
 def check_data():
-    #all_venues = load_all_venues()
-    #check_venue_data(all_venues)
+    venues = load_all_venues()
+    #check_venue_data(venues)
     shows = load_all_shows()
-    songs = load_all_songs()
-    check_song_names(shows, songs)
+    #songs = load_all_songs()
+    #check_song_names(shows, songs)
+    check_show_venues(venues, shows)
+
+
+def get_show_venue_string():
+    venues = load_all_venues()
+    while True:
+        name = input('City? ')
+        if name == 'exit':
+            return
+        for i in venues:
+            if i.city.lower() == name.lower():
+                print(f'  {str(i)}')
 
 
 if __name__ == '__main__':
     check_data()
+    #get_show_venue_string()

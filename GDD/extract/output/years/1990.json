@@ -1126,7 +1126,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Ontario,,CA",
+        "venue": "Copps Coliseum,Hamilton,Ontario,CA",
         "date": "1990-03-21",
         "start_time": null,
         "end_time": null,
@@ -1271,7 +1271,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Ontario,,CA",
+        "venue": "Copps Coliseum,Hamilton,Ontario,CA",
         "date": "1990-03-22",
         "start_time": null,
         "end_time": null,
@@ -4763,7 +4763,7 @@
         "show_index": 0
     },
     {
-        "venue": "Robert F. Kennedy Stadium,Washington, D.C.,DC,US",
+        "venue": "Robert F. Kennedy Stadium,Washington,DC,US",
         "date": "1990-07-12",
         "start_time": null,
         "end_time": null,
@@ -7458,7 +7458,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Stockholm,,SE",
+        "venue": "Johanneshov Ice Stadium,Stockholm,Sodermanland,SE",
         "date": "1990-10-13",
         "start_time": null,
         "end_time": null,
@@ -7597,7 +7597,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Essen,,DE",
+        "venue": "Grugahalle,Essen,North Rhine-Westphalia,DE",
         "date": "1990-10-17",
         "start_time": null,
         "end_time": null,
@@ -7748,7 +7748,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Berlin,,DE",
+        "venue": "Internationales Congress Centrum,Berlin,Berlin,DE",
         "date": "1990-10-19",
         "start_time": null,
         "end_time": null,
@@ -7893,7 +7893,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Berlin,,DE",
+        "venue": "Internationales Congress Centrum,Berlin,Berlin,DE",
         "date": "1990-10-20",
         "start_time": null,
         "end_time": null,
@@ -8032,7 +8032,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Frankfurt,,DE",
+        "venue": "Festhalle,Frankfurt,Hesse,DE",
         "date": "1990-10-22",
         "start_time": null,
         "end_time": null,
@@ -8165,7 +8165,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Hamburg,,DE",
+        "venue": "Alsterdorfer Sporthalle,Hamburg,Hamburg,DE",
         "date": "1990-10-24",
         "start_time": null,
         "end_time": null,
@@ -8316,7 +8316,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Paris,,FR",
+        "venue": "Le Zenith,Paris,Ile-de-France,FR",
         "date": "1990-10-27",
         "start_time": null,
         "end_time": null,
@@ -8467,7 +8467,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,Paris,,FR",
+        "venue": "Le Zenith,Paris,Ile-de-France,FR",
         "date": "1990-10-28",
         "start_time": null,
         "end_time": null,
@@ -8612,7 +8612,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,London,,UK",
+        "venue": "Wembley Arena,London,Greater London,UK",
         "date": "1990-10-30",
         "start_time": null,
         "end_time": null,
@@ -8751,7 +8751,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,London,,UK",
+        "venue": "Wembley Arena,London,Greater London,UK",
         "date": "1990-10-31",
         "start_time": null,
         "end_time": null,
@@ -8908,7 +8908,7 @@
         "show_index": 0
     },
     {
-        "venue": "-,London,,UK",
+        "venue": "Wembley Arena,London,Greater London,UK",
         "date": "1990-11-01",
         "start_time": null,
         "end_time": null,

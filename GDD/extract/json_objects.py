@@ -96,7 +96,7 @@ class Venue:
         return data
 
     def __repr__(self):
-        return f'{self.name}, {self.city}, {self.state}, {self.country}'
+        return f'{self.name},{self.city},{self.state},{self.country}'
 
 
 class Weather:

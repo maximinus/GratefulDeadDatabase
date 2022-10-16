@@ -1,12 +1,12 @@
 import json
 from enum import Enum
 
-from gdshowsdb_yaml_extract import extract_year
-from jerrybase_csv_extract import sort_into_shows, CompleteShow
+from extract.original_data.gdshowsdb_yaml_extract import extract_year
+from extract.original_data.jerrybase_csv_extract import sort_into_shows, CompleteShow
 from create_json import create
 
 ALL_SONGS = []
-with open('output/matched_songs.json', 'r') as f:
+with open('original_data/matched_songs.json', 'r') as f:
     ALL_SONGS = json.load(f)
 
 

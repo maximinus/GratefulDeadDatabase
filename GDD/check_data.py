@@ -1,5 +1,7 @@
 import os
 import json
+
+from datetime import date
 from tqdm import tqdm
 from pathlib import Path
 
@@ -91,6 +93,30 @@ def check_show_venues(venues, shows):
     print(f'{count} shows, {missing} missing venues')
 
 
+def check_all_venues_used(venues, shows):
+    # check to ensure that all venues in the list of venues are used
+    # let's get a list of all these venues in a hash, and mark as "unused"
+    venues_used = {}
+    for i in venues:
+        venues_used[str(i)] = False
+    for i in shows:
+        if i.venue not in venues_used:
+            print(f'  Error: Venue {i.venue} not found')
+            return
+        venues_used[i.venue] = True
+    # grab all the false ones!
+    unused_venues = []
+    for key, used in venues_used.items():
+        if not used:
+            unused_venues.append(key)
+    if len(unused_venues) == 0:
+        print('  No unused venues')
+        return
+    print(f'{len(unused_venues)} unused venues')
+    for i in unused_venues:
+        print(i)
+
+
 def get_next_weather():
     # search a year and get the next weather report required
     # For this we need the shows venue to not have nulls on latitude and longitude
@@ -109,7 +135,7 @@ def check_data():
 def get_show_venue_string():
     venues = load_all_venues()
     while True:
-        name = input('City? ')
+        name = input('City name? ')
         if name == 'exit':
             return
         for i in venues:
@@ -117,6 +143,53 @@ def get_show_venue_string():
                 print(f'  {str(i)}')
 
 
+def view_setlist():
+    shows = load_all_shows()
+    while True:
+        print('Please enter a date as YY-MM-DD, or exit')
+        chosen_date = input('? ')
+        if chosen_date == 'exit':
+            return
+        try:
+            actual_date = date.fromisoformat(f'19{chosen_date}')
+            for i in shows:
+                if i.date == actual_date:
+                    print(f'{i}\n')
+                    break
+        except ValueError:
+            print(f'  Error: Date {chosen_date} is not valid')
+
+
+def check_venues():
+    shows = load_all_shows()
+    venues = load_all_venues()
+    check_venue_data(venues)
+    check_show_venues(venues, shows)
+    check_all_venues_used(venues, shows)
+
+
+def what_to_do():
+    print('Please choose:')
+    print('  1: See a setlist')
+    print('  2: Check all venues match shows')
+    print('  3: Get all venues in a city')
+    print('  0: Exit')
+    while True:
+        answer = input('? ')
+        try:
+            answer = int(answer)
+            if answer == 0:
+                return
+            if answer == 1:
+                return view_setlist()
+            elif answer == 2:
+                return check_venues()
+            elif answer == 3:
+                return get_show_venue_string()
+            print('Invalid answer, please enter a number')
+        except ValueError:
+            print('Answer must be a number')
+
+
 if __name__ == '__main__':
-    check_data()
-    #get_show_venue_string()
+    what_to_do()

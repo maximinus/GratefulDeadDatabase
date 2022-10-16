@@ -62,6 +62,15 @@ class Show:
                 'show_index': self.show_index}
         return data
 
+    def __repr__(self):
+        lines = [f'{self.date.isoformat()}, {self.venue}']
+        index = 1
+        for i in self.sets:
+            lines.append(f'  {index}')
+            for j in i.songs:
+                lines.append(f'    {j.name}')
+        return '\n'.join(lines)
+
 
 class GDSet:
     def __init__(self, data):

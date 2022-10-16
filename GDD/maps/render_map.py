@@ -3,7 +3,7 @@ import geopandas as gpd
 from shapely.geometry import Point, LineString
 import matplotlib.pyplot as plt
 
-from gdshowsdb_yaml_extract import extract_year
+from extract.original_data.gdshowsdb_yaml_extract import extract_year
 
 output = 'output/cleaned_venues.json'
 

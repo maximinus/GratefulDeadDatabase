@@ -4,17 +4,17 @@ Order of things to do
 *: Get the venue data for all 77/78 shows
 
 * The JSON output is now done.
-    Test when you can, by writing a program that reads a date and outputs a setlist
-    This makes it easy to test
+    * Test when you can, by writing a program that reads a date and outputs a setlist
+    * This makes it easy to test
 
 * Create the master songs list
-    Use it to verify the show data
+    * Use it to verify the show data
 
 Create the venues data
-    You need to clean this data, likely, so try to clean on the original yaml file to start with
+    * You need to clean this data, likely, so try to clean on the original yaml file to start with
     * Take the venue data with long lat you have so far and merge them
-    After cleaning everything, ensure to throw away any unused venues.
-        Unlikely, but check anyway - this would be part of the auto checking anyway
+    * After cleaning everything, ensure to throw away any unused venues.
+        * Unlikely, but check anyway - this would be part of the auto checking anyway
 
 Now this all done, tidy the code. Move all the code to merge the 2 pieces of data off the repo (but store and keep)
     We have;

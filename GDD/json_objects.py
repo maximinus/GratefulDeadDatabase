@@ -42,14 +42,12 @@ class Show:
         # when did it start?
         self.start_time = data['start_time']
         self.end_time = data['end_time']
-        self.weather = data['weather']
         self.sets = data['sets']
         # convert sets
         self.sets = [GDSet(x) for x in data['sets']]
         self.show_index = data['show_index']
 
     def to_json(self):
-        weather = self.weather.to_json() if self.weather is not None else None
         start_time = self.start_time
         end_time = self.end_time
         show_date = self.date.isoformat()
@@ -57,7 +55,6 @@ class Show:
                 'date': show_date,
                 'start_time': start_time,
                 'end_time': end_time,
-                'weather': weather,
                 'sets': [x.to_json() for x in self.sets],
                 'show_index': self.show_index}
         return data

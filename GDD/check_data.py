@@ -7,9 +7,9 @@ from pathlib import Path
 
 from json_objects import Show, PlayedSong, GDSet, Venue, Song
 
-YEARS_FOLDER = Path(os.getcwd()) / 'output' / 'years'
-SONGS_FILE = Path(os.getcwd()) / 'output' / 'songs.json'
-VENUES_FILE= Path(os.getcwd()) / 'output' / 'venues.json'
+YEARS_FOLDER = Path(os.getcwd()) / 'database' / 'years'
+SONGS_FILE = Path(os.getcwd()) / 'database' / 'songs.json'
+VENUES_FILE= Path(os.getcwd()) / 'database' / 'venues.json'
 
 
 # load from json, should be easy

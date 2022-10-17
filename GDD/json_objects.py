@@ -108,7 +108,34 @@ class Venue:
 class Weather:
     def __init__(self, data):
         # quite a complex object
-        pass
+        self.tempmax = data["tempmax"]
+        self.tempmin = data["tempmin"]
+        self.temp = data["temp"]
+        self.feelslikemax = data["feelslikemax"]
+        self.feelslikemin= data["feelslikemin"]
+        self.feelslike = data["feelslike"]
+        self.dew = data["dew"]
+        self.humidity = data["humidity"]
+        self.precip = data["precip"]
+        self.precipprob = data["precipprob"]
+        self.precipcover= data["precipcover"]
+        self.preciptype= data["preciptype"]
+        self.snow = data["snow"]
+        self.snowdepth = data["snowdepth"]
+        self.windgust = data["windgust"]
+        self.windspeed = data["windspeed"]
+        self.winddir = data["winddir"]
+        self.pressure = data["pressure"]
+        self.cloudcover = data["cloudcover"]
+        self.visibility = data["visibility"]
+        self.solarradiation = data["solarradiation"]
+        self.solarenergy = data["solarenergy"]
+        self.uvindex = data["uvindex"]
+        self.sunrise = data["sunrise"]
+        self.sunset = data["sunset"]
+        self.moonphase = data["moonphase"]
+        self.conditions = data["conditions"]
+        self.description = data["description"]
 
 
 class HourWeather:

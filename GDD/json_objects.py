@@ -106,5 +106,40 @@ class Venue:
 
 
 class Weather:
-    def __init__(self):
+    def __init__(self, data):
+        # quite a complex object
         pass
+
+
+class HourWeather:
+    def __init__(self, data):
+        self.time = data['datetime']
+        self.temp = data['temp']
+        self.feelslike = data['feelslike']
+        self.humidity = data['humidity']
+        self.dew = data['dew']
+        self.precip = data['precip']
+        self.precipprob = data['precipprob']
+        self.snow = data['snow']
+        self.snowdepth = data['snowdepth']
+        self.preciptype = data['preciptype']
+        self.windgust = data['windgust']
+        self.windspeed = data['windspeed']
+        self.windir = data'winddir']
+        self.pressure = data'pressure']
+        self.visibility = data['visibility']
+        self.cloudcover = data['cloudcover']
+        self.solarradiation = data['solarradiation']
+        self.solarenergy = data['solarenergy']
+        self.uvindex = data['uvindex']
+        self.conditions = data['conditions']
+
+
+class Stations:
+    def __init__(self, data):
+        self.names = []
+        total_quality = 0
+        for i in data:
+            self.names.append(i['name'])
+            total_quality += float(i['quality'])
+        self.quality =  int(total_quality / float(len(self.names)))

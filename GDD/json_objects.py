@@ -101,8 +101,12 @@ class Venue:
                 'longitude': self.longitude}
         return data
 
-    def __repr__(self):
+    @property
+    def long_name(self):
         return f'{self.name},{self.city},{self.state},{self.country}'
+
+    def __repr__(self):
+        return self.long_name
 
 
 class Weather:

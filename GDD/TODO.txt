@@ -3,25 +3,7 @@ Order of things to do
 *: Finish all years shows
 *: Get the venue data for all 77/78 shows
 
-* The JSON output is now done.
-    * Test when you can, by writing a program that reads a date and outputs a setlist
-    * This makes it easy to test
-
-* Create the master songs list
-    * Use it to verify the show data
-
-Create the venues data
-    * You need to clean this data, likely, so try to clean on the original yaml file to start with
-    * Take the venue data with long lat you have so far and merge them
-    * After cleaning everything, ensure to throw away any unused venues.
-        * Unlikely, but check anyway - this would be part of the auto checking anyway
-
-Now this all done, tidy the code. Move all the code to merge the 2 pieces of data off the repo (but store and keep)
-    We have;
-        * a set of files for each year
-        * a list of venues
-        * a list of songs and writers
-        Some scripts to make meta editing and checking palatable
+Put everything we have (song, shows, venues, sets) into a database
 
 Write code to get weather, first by finding the next show to grab.
     Now we need to add data: the venue data should be completed here for 77/78

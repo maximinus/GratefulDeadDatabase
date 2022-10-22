@@ -2,7 +2,7 @@ from datetime import date
 import sqlalchemy.exc
 from sqlalchemy.orm import Session
 
-from gddb import get_engine, Show, Venue, GDSet
+from gddb import get_engine, Show, Venue, GDSet, PlayedSong, Song
 
 
 def display_show(show_date):
@@ -16,11 +16,18 @@ def display_show(show_date):
             print(f'  Error: No show on {show_date}')
             return
         venue = session.query(Venue).get(show.venue)
-        # now we need get all sets
-        show_sets = session.query(GDSet).filter_by(show=show.id).all().order_by(GDSet.index.desc())
-        for i in show_sets:
-            print(i)
         print(f'{show.date}: {venue}')
+        # now we need get all sets
+        show_sets = session.query(GDSet).filter_by(show=show.id).order_by(GDSet.index.asc())
+        index = 1
+        for i in show_sets:
+            # get all songs from this set and sort in order
+            all_songs = session.query(PlayedSong).filter_by(gdset=i.id).order_by(PlayedSong.index.desc())
+            print(f'Set #{index}')
+            for j in all_songs:
+                song_name = session.query(Song).get(j.song)
+                print(f'  {song_name}')
+            index += 1
 
 
 def view_setlist():
@@ -54,4 +61,6 @@ def options():
 
 
 if __name__ == '__main__':
-    options()
+    #options()
+    show_date = date.fromisoformat('1989-10-09')
+    display_show(show_date)

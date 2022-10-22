@@ -43,10 +43,71 @@ class Venue(Base):
         return self.fullname
 
 
+class Weather(Base):
+    __tablename__ = 'weather'
+    # this weather object is insane!
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    tempmax = Column(Float, nullable=True)
+    tempmin = Column(Float, nullable=True)
+    temp = Column(Float, nullable=True)
+    feelslikemax = Column(Float, nullable=True)
+    feelslikemin = Column(Float, nullable=True)
+    feelslike = Column(Float, nullable=True)
+    dew = Column(Float, nullable=True)
+    humidity = Column(Float, nullable=True)
+    precip = Column(Float, nullable=True)
+    precipprob = Column(Float, nullable=True)
+    precipcover = Column(Float, nullable=True)
+    preciptype = Column(Float, nullable=True)
+    snow = Column(Float, nullable=True)
+    snowdepth = Column(Float, nullable=True)
+    windgust = Column(Float, nullable=True)
+    windspeed = Column(Float, nullable=True)
+    winddir = Column(Float, nullable=True)
+    pressure = Column(Float, nullable=True)
+    cloudcover = Column(Float, nullable=True)
+    visibility = Column(Float, nullable=True)
+    solarradiation = Column(Float, nullable=True)
+    solarenergy = Column(Float, nullable=True)
+    uvindex = Column(Float, nullable=True)
+    sunrise = Column(Time, nullable=True)
+    sunset = Column(Time, nullable=True)
+    moonphase = Column(Float, nullable=True)
+    conditions = Column(Text, nullable=True)
+    description = Column(Text, nullable=True)
+
+
+class HourWeather(Base):
+    __tablename__ = 'hourweather'
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    weather = Column(Integer, ForeignKey('weather.id'), nullable=False)
+    time = Column(Time, nullable=True)
+    temp = Column(Float, nullable=True)
+    feelslike = Column(Float, nullable=True)
+    humidity = Column(Float, nullable=True)
+    dew = Column(Float, nullable=True)
+    precip = Column(Float, nullable=True)
+    precipprob = Column(Float, nullable=True)
+    snow = Column(Float, nullable=True)
+    snowdepth = Column(Float, nullable=True)
+    preciptype = Column(Float, nullable=True)
+    windgust = Column(Float, nullable=True)
+    windspeed = Column(Float, nullable=True)
+    winddir = Column(Float, nullable=True)
+    pressure = Column(Float, nullable=True)
+    visibility = Column(Float, nullable=True)
+    cloudcover = Column(Float, nullable=True)
+    solarradiation = Column(Float, nullable=True)
+    solarenergy = Column(Float, nullable=True)
+    uvindex = Column(Float, nullable=True)
+    conditions = Column(Text, nullable=True)
+
+
 class Show(Base):
     __tablename__ = 'shows'
     id = Column(Integer, primary_key=True, autoincrement=True)
     venue = Column(Integer, ForeignKey('venues.id'), nullable=False)
+    weather = Column(Integer, ForeignKey('weather.id'), nullable=True, default=None)
     date = Column(Date, nullable=False, default=None)
     start_time = Column(Time, nullable=True, default=None)
     end_time = Column(Time, nullable=True, default=None)
@@ -70,9 +131,6 @@ class PlayedSong(Base):
     segued = Column(Boolean, nullable=False, default=False)
     index = Column(Integer, nullable=False)
     notes = Column(Text, nullable=True, default=None)
-
-    def __repr__(self):
-        return f'Played: {self.song.name}'
 
 
 def add_all_songs(sql_engine):
@@ -133,8 +191,8 @@ def add_all_shows(sql_engine):
                 session.flush()
                 set_id = new_set.id
                 # and all songs!
+                song_index = 0
                 for k in j.songs:
-                    song_index = 0
                     song_id = session.query(Song.id).filter_by(name=k.name)[0][0]
                     song_rows.append(PlayedSong(song=song_id,
                                                 gdset=set_id,
@@ -163,8 +221,8 @@ def get_engine():
 
 if __name__ == '__main__':
     engine = get_engine()
-    #create(engine)
-    #add_all_songs(engine)
-    #add_all_venues(engine)
-    #add_all_shows(engine)
+    create(engine)
+    add_all_songs(engine)
+    add_all_venues(engine)
+    add_all_shows(engine)
     #print_all_venues(engine)

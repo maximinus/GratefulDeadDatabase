@@ -4,8 +4,8 @@
         "city": "Stockton",
         "state": "CA",
         "country": "US",
-        "latitude": 37.959,
-        "longitude": 37.959
+        "latitude": 37.958,
+        "longitude": -121.293
     },
     {
         "name": "Star Theatre",
@@ -69,7 +69,7 @@
         "state": "NY",
         "country": "US",
         "latitude": 40.759,
-        "longitude": 40.759
+        "longitude": -73.980
     },
     {
         "name": "Seattle Center Arena",
@@ -85,7 +85,7 @@
         "state": "CA",
         "country": "US",
         "latitude": 34.421,
-        "longitude": 34.421
+        "longitude": -119.854
     },
     {
         "name": "Patrick Gym",
@@ -93,7 +93,7 @@
         "state": "VT",
         "country": "US",
         "latitude": 44.471,
-        "longitude": 44.471
+        "longitude": -73.195
     },
     {
         "name": "Erb Memorial Union",
@@ -117,7 +117,7 @@
         "state": "FL",
         "country": "US",
         "latitude": 26.009,
-        "longitude": 26.009
+        "longitude": -80.375
     },
     {
         "name": "The Music Box",
@@ -141,7 +141,7 @@
         "state": "MA",
         "country": "US",
         "latitude": 42.102,
-        "longitude": 42.102
+        "longitude": -72.587
     },
     {
         "name": "Vanderbilt University",
@@ -197,7 +197,7 @@
         "state": "KS",
         "country": "US",
         "latitude": 39.112,
-        "longitude": 39.112
+        "longitude": -94.627
     },
     {
         "name": "Deer Creek Music Center",
@@ -277,15 +277,15 @@
         "state": "GA",
         "country": "US",
         "latitude": 33.773,
-        "longitude": 33.773
+        "longitude": -84.385
     },
     {
         "name": "Milwaukee Auditorium",
         "city": "Milwaukee",
         "state": "WI",
         "country": "US",
-        "latitude": 43.049,
-        "longitude": 43.049
+        "latitude": 43.042,
+        "longitude": -87.918
     },
     {
         "name": "Rich Stadium",
@@ -317,7 +317,7 @@
         "state": "AL",
         "country": "US",
         "latitude": 33.522,
-        "longitude": 33.522
+        "longitude": -86.812
     },
     {
         "name": "Golden Hall",
@@ -325,7 +325,7 @@
         "state": "CA",
         "country": "US",
         "latitude": 32.717,
-        "longitude": 32.717
+        "longitude": -117.164
     },
     {
         "name": "Houston",
@@ -357,7 +357,7 @@
         "state": "OR",
         "country": "US",
         "latitude": 44.042,
-        "longitude": 44.042
+        "longitude": -123.074
     },
     {
         "name": "Harpur College",
@@ -380,8 +380,8 @@
         "city": "Bakersfield",
         "state": "CA",
         "country": "US",
-        "latitude": 35.413,
-        "longitude": 35.413
+        "latitude": 35.370,
+        "longitude": -119.022
     },
     {
         "name": "Monterey Peninsula College",
@@ -413,7 +413,7 @@
         "state": "TX",
         "country": "US",
         "latitude": 32.841,
-        "longitude": 32.841
+        "longitude": -96.781
     },
     {
         "name": "Marigold Ballroom",
@@ -461,7 +461,7 @@
         "state": "WA",
         "country": "US",
         "latitude": 47.614,
-        "longitude": 47.614
+        "longitude": -122.331
     },
     {
         "name": "The Matrix",
@@ -516,8 +516,8 @@
         "city": "Madison",
         "state": "WI",
         "country": "US",
-        "latitude": 43.047,
-        "longitude": 43.047
+        "latitude": 43.046,
+        "longitude": -89.379
     },
     {
         "name": "Taft Auditorium",
@@ -541,7 +541,7 @@
         "state": "TN",
         "country": "US",
         "latitude": 36.168,
-        "longitude": 36.168
+        "longitude": -86.782
     },
     {
         "name": "Starlight Theatre",
@@ -565,7 +565,7 @@
         "state": "VA",
         "country": "US",
         "latitude": 37.223,
-        "longitude": 37.223
+        "longitude": -80.419
     },
     {
         "name": "Recreation Center",
@@ -629,7 +629,7 @@
         "state": "CT",
         "country": "US",
         "latitude": 41.769,
-        "longitude": 41.769
+        "longitude": -72.677
     },
     {
         "name": "Broome County Arena",
@@ -637,7 +637,7 @@
         "state": "NY",
         "country": "US",
         "latitude": 42.096,
-        "longitude": 42.096
+        "longitude": -75.913
     },
     {
         "name": "Mile High Stadium",
@@ -653,7 +653,7 @@
         "state": "NJ",
         "country": "US",
         "latitude": 40.814,
-        "longitude": 40.814
+        "longitude": -74.074
     },
     {
         "name": "Dillon Gym",
@@ -684,8 +684,8 @@
         "city": "Troy",
         "state": "NY",
         "country": "US",
-        "latitude": 42.733,
-        "longitude": 42.733
+        "latitude": 42.732,
+        "longitude": -73.669
     },
     {
         "name": "Harmon Gym",
@@ -748,8 +748,8 @@
         "city": "Williamsburg",
         "state": "VA",
         "country": "US",
-        "latitude": 37.271,
-        "longitude": 37.271
+        "latitude": 37.274,
+        "longitude": -76.720
     },
     {
         "name": "Arlington Theater",
@@ -757,7 +757,7 @@
         "state": "CA",
         "country": "US",
         "latitude": 34.425,
-        "longitude": 34.425
+        "longitude": -119.706
     },
     {
         "name": "The Bank",
@@ -789,7 +789,7 @@
         "state": "NC",
         "country": "US",
         "latitude": 35.998,
-        "longitude": 35.998
+        "longitude": -78.942
     },
     {
         "name": "Folsom Field",
@@ -813,7 +813,7 @@
         "state": "CA",
         "country": "US",
         "latitude": 33.958,
-        "longitude": 33.958
+        "longitude": -118.342
     },
     {
         "name": "The Mosque",
@@ -821,7 +821,7 @@
         "state": "VA",
         "country": "US",
         "latitude": 37.546,
-        "longitude": 37.546
+        "longitude": -77.452
     },
     {
         "name": "Johanneshov Ice Stadium",
@@ -837,7 +837,7 @@
         "state": "IL",
         "country": "US",
         "latitude": 40.512,
-        "longitude": 40.512
+        "longitude": -88.998
     },
     {
         "name": "Felt Forum",
@@ -893,7 +893,7 @@
         "state": "CA",
         "country": "US",
         "latitude": 36.733,
-        "longitude": 36.733
+        "longitude": -119.783
     },
     {
         "name": "Kleinhans Music Hall",
@@ -925,7 +925,7 @@
         "state": "NJ",
         "country": "US",
         "latitude": 41.002,
-        "longitude": 41.002
+        "longitude": -73.666
     },
     {
         "name": "Gulfstream Park Racetrack",
@@ -1117,7 +1117,7 @@
         "state": "AL",
         "country": "US",
         "latitude": 33.203,
-        "longitude": 33.203
+        "longitude": -87.540
     },
     {
         "name": "Rutgers Athletic Center",
@@ -1172,8 +1172,8 @@
         "city": "St. Paul",
         "state": "MN",
         "country": "US",
-        "latitude": 39.436,
-        "longitude": 39.436
+        "latitude": 39.429,
+        "longitude": -85.630
     },
     {
         "name": "Crisler Arena",
@@ -1340,8 +1340,8 @@
         "city": "Los Angeles",
         "state": "CA",
         "country": "US",
-        "latitude": 34.071,
-        "longitude": 34.071
+        "latitude": 34.070,
+        "longitude": -118.447
     },
     {
         "name": "Tulsa Fairgrounds Pavilion",
@@ -1437,7 +1437,7 @@
         "state": "CA",
         "country": "US",
         "latitude": 37.786,
-        "longitude": 37.786
+        "longitude": -122.435
     },
     {
         "name": "Sullivan Stadium",
@@ -1461,7 +1461,7 @@
         "state": "OR",
         "country": "US",
         "latitude": 44.058,
-        "longitude": 44.058
+        "longitude": -123.068
     },
     {
         "name": "Marin County Veterans Auditorium",
@@ -1485,7 +1485,7 @@
         "state": "MO",
         "country": "US",
         "latitude": 39.049,
-        "longitude": 39.049
+        "longitude": -94.484
     },
     {
         "name": "Robertson Gym",
@@ -1493,7 +1493,7 @@
         "state": "CA",
         "country": "US",
         "latitude": 34.416,
-        "longitude": 34.416
+        "longitude": -119.849
     },
     {
         "name": "Allegheny College",
@@ -1509,7 +1509,7 @@
         "state": "OR",
         "country": "US",
         "latitude": 45.517,
-        "longitude": 45.517
+        "longitude": -122.681
     },
     {
         "name": "Wembley Empire Pool",
@@ -1557,7 +1557,7 @@
         "state": "NH",
         "country": "US",
         "latitude": 43.701,
-        "longitude": 43.701
+        "longitude": -72.281
     },
     {
         "name": "Hyde Park Teen Center",
@@ -1733,7 +1733,7 @@
         "state": "CA",
         "country": "US",
         "latitude": 34.024,
-        "longitude": 34.024
+        "longitude": -118.281
     },
     {
         "name": "Nevada County Fairgrounds",
@@ -1756,8 +1756,8 @@
         "city": "Boston",
         "state": "MA",
         "country": "US",
-        "latitude": 42.364,
-        "longitude": 42.364
+        "latitude": 42.366,
+        "longitude": -71.062
     },
     {
         "name": "NY State Pavilion",
@@ -1813,7 +1813,7 @@
         "state": "NY",
         "country": "US",
         "latitude": 43.045,
-        "longitude": 43.045
+        "longitude": -76.148
     },
     {
         "name": "Crystal Ballroom",
@@ -1877,7 +1877,7 @@
         "state": "FL",
         "country": "US",
         "latitude": 27.949,
-        "longitude": 27.949
+        "longitude": -82.462
     },
     {
         "name": "Tampa Stadium",
@@ -1949,7 +1949,7 @@
         "state": "MO",
         "country": "US",
         "latitude": 38.644,
-        "longitude": 38.644
+        "longitude": -90.282
     },
     {
         "name": "World Music Theatre",
@@ -1997,7 +1997,7 @@
         "state": "KY",
         "country": "US",
         "latitude": 38.049,
-        "longitude": 38.049
+        "longitude": -84.503
     },
     {
         "name": "Seattle Center Memorial Coliseum",
@@ -2164,8 +2164,8 @@
         "city": "Boston",
         "state": "MA",
         "country": "US",
-        "latitude": 42.356,
-        "longitude": 42.356
+        "latitude": 42.351,
+        "longitude": -71.065
     },
     {
         "name": "Fox Theatre",
@@ -2212,16 +2212,16 @@
         "city": "Albuquerque",
         "state": "NM",
         "country": "US",
-        "latitude": 35.085,
-        "longitude": 35.085
+        "latitude": 35.083,
+        "longitude": -106.618
     },
     {
         "name": "Cleveland Music Hall",
         "city": "Cleveland",
         "state": "OH",
         "country": "US",
-        "latitude": 41.506,
-        "longitude": 41.506
+        "latitude": 41.505,
+        "longitude": -81.693
     },
     {
         "name": "Recreational Hall",
@@ -2397,7 +2397,7 @@
         "state": "MI",
         "country": "US",
         "latitude": 42.327,
-        "longitude": 42.327
+        "longitude": -83.049
     },
     {
         "name": "Seattle Center Coliseum",
@@ -2424,12 +2424,12 @@
         "longitude": null
     },
     {
-        "name": "Jai",
+        "name": "Jai-Alai Fronton",
         "city": "Miami",
         "state": "FL",
         "country": "US",
         "latitude": 25.808,
-        "longitude": 25.808
+        "longitude": -80.257
     },
     {
         "name": "Irvine Auditorium",
@@ -2508,8 +2508,8 @@
         "city": "New York",
         "state": "NY",
         "country": "US",
-        "latitude": 40.752,
-        "longitude": 40.752
+        "latitude": 40.734,
+        "longitude": -73.989
     },
     {
         "name": "Dream Bowl",
@@ -2549,7 +2549,7 @@
         "state": "NY",
         "country": "US",
         "latitude": 42.446,
-        "longitude": 42.446
+        "longitude": -76.480
     },
     {
         "name": "Building A",
@@ -2573,7 +2573,7 @@
         "state": "OK",
         "country": "US",
         "latitude": 35.187,
-        "longitude": 35.187
+        "longitude": -97.444
     },
     {
         "name": "Poplar Creek Music Theatre",
@@ -2597,7 +2597,7 @@
         "state": "CO",
         "country": "US",
         "latitude": 39.666,
-        "longitude": 39.666
+        "longitude": -105.205
     },
     {
         "name": "Billerica Forum",
@@ -2628,8 +2628,8 @@
         "city": "Buffalo",
         "state": "NY",
         "country": "US",
-        "latitude": 42.938,
-        "longitude": 42.938
+        "latitude": 42.878,
+        "longitude": -78.879
     },
     {
         "name": "San Antonio Civic Center Arena",
@@ -2684,8 +2684,8 @@
         "city": "Berkeley",
         "state": "CA",
         "country": "US",
-        "latitude": 37.87,
-        "longitude": 37.87
+        "latitude": 37.870,
+        "longitude": -122.272
     },
     {
         "name": "Santa Cruz County Fairgrounds",
@@ -2765,7 +2765,7 @@
         "state": "TX",
         "country": "US",
         "latitude": 29.73,
-        "longitude": 29.73
+        "longitude": -95.436
     },
     {
         "name": "Stockton Ballroom",
@@ -2813,7 +2813,7 @@
         "state": "CA",
         "country": "US",
         "latitude": 34.109,
-        "longitude": 34.109
+        "longitude": -117.290
     },
     {
         "name": "Ice Palace",
@@ -2917,15 +2917,15 @@
         "state": "RI",
         "country": "US",
         "latitude": 41.824,
-        "longitude": 41.824
+        "longitude": -71.418
     },
     {
         "name": "Capital Centre",
         "city": "Landover`",
         "state": "MD",
         "country": "US",
-        "latitude": 38.906,
-        "longitude": 38.906
+        "latitude": 38.903,
+        "longitude": -76.848
     },
     {
         "name": "Huntington Civic Center",
@@ -2933,7 +2933,7 @@
         "state": "WV",
         "country": "US",
         "latitude": 38.422,
-        "longitude": 38.422
+        "longitude": -82.447
     },
     {
         "name": "Riverport Amphitheatre",
@@ -3021,7 +3021,7 @@
         "state": "CA",
         "country": "US",
         "latitude": 38.579,
-        "longitude": 38.579
+        "longitude": -121.486
     },
     {
         "name": "1300 Boulevard Way",
@@ -3069,15 +3069,15 @@
         "state": "IN",
         "country": "US",
         "latitude": 39.181,
-        "longitude": 39.181
+        "longitude": -86.522
     },
     {
         "name": "Veterans Memorial Coliseum",
         "city": "New Haven",
         "state": "CT",
         "country": "US",
-        "latitude": 40.783,
-        "longitude": 40.783
+        "latitude": 41.302,
+        "longitude": -72.925
     },
     {
         "name": "Beat Club",
@@ -3109,7 +3109,7 @@
         "state": "NE",
         "country": "US",
         "latitude": 41.261,
-        "longitude": 41.261
+        "longitude": -95.940
     },
     {
         "name": "Spokane Coliseum",
@@ -3141,7 +3141,7 @@
         "state": "NY",
         "country": "US",
         "latitude": 43.154,
-        "longitude": 43.154
+        "longitude": -77.611
     },
     {
         "name": "Birmingham Jefferson Convention Complex Coliseum",
@@ -3181,7 +3181,7 @@
         "state": "FL",
         "country": "US",
         "latitude": 28.041,
-        "longitude": 28.041
+        "longitude": -81.963
     },
     {
         "name": "Family Dog at the Great Highway",
@@ -3293,7 +3293,7 @@
         "state": "TX",
         "country": "US",
         "latitude": 29.725,
-        "longitude": 29.725
+        "longitude": -95.347
     },
     {
         "name": "Richfield Coliseum",
@@ -3348,8 +3348,8 @@
         "city": "Jacksonville",
         "state": "FL",
         "country": "US",
-        "latitude": 30.326,
-        "longitude": 30.326
+        "latitude": 30.325,
+        "longitude": -81.640
     },
     {
         "name": "Carthay Studios",
@@ -3389,7 +3389,7 @@
         "state": "PA",
         "country": "US",
         "latitude": 39.905,
-        "longitude": 39.905
+        "longitude": -75.171
     },
     {
         "name": "Washington University",
@@ -3477,7 +3477,7 @@
         "state": "TX",
         "country": "US",
         "latitude": 30.359,
-        "longitude": 30.359
+        "longitude": -97.577
     },
     {
         "name": "Dallas Convention Center Arena",
@@ -3485,7 +3485,7 @@
         "state": "TX",
         "country": "US",
         "latitude": 32.774,
-        "longitude": 32.774
+        "longitude": -96.802
     },
     {
         "name": "Greek Theatre",
@@ -3580,8 +3580,8 @@
         "city": "Tempe",
         "state": "AZ",
         "country": "US",
-        "latitude": 33.425,
-        "longitude": 33.425
+        "latitude": 33.428,
+        "longitude": -111.928
     },
     {
         "name": "Cotterell Gym",
@@ -3589,7 +3589,7 @@
         "state": "NY",
         "country": "US",
         "latitude": 42.816,
-        "longitude": 42.816
+        "longitude": -75.543
     },
     {
         "name": "Worcester Polytechnic Institute",
@@ -3613,7 +3613,7 @@
         "state": "IL",
         "country": "US",
         "latitude": 41.936,
-        "longitude": 41.936
+        "longitude": -88.773
     },
     {
         "name": "Augusta Civic Center",
@@ -3652,8 +3652,8 @@
         "city": "Denver",
         "state": "CO",
         "country": "US",
-        "latitude": 39.78,
-        "longitude": 39.78
+        "latitude": 39.74,
+        "longitude": -105.021
     },
     {
         "name": "Devore Field",
@@ -3709,7 +3709,7 @@
         "state": "IL",
         "country": "US",
         "latitude": 41.876,
-        "longitude": 41.876
+        "longitude": -87.625
     },
     {
         "name": "Eureka Municipal Auditorium",
@@ -3772,8 +3772,8 @@
         "city": "Cincinnati",
         "state": "OH",
         "country": "US",
-        "latitude": 39.105,
-        "longitude": 39.105
+        "latitude": 39.133,
+        "longitude": -84.515
     },
     {
         "name": "SIU Arena",
@@ -3861,7 +3861,7 @@
         "state": "LA",
         "country": "US",
         "latitude": 30.415,
-        "longitude": 30.415
+        "longitude": -91.185
     },
     {
         "name": "Cardinal Stadium",
@@ -3909,7 +3909,7 @@
         "state": "MS",
         "country": "US",
         "latitude": 32.33,
-        "longitude": 32.33
+        "longitude": -90.180
     },
     {
         "name": "Dance Hall",
@@ -4012,8 +4012,8 @@
         "city": "Chicago",
         "state": "IL",
         "country": "US",
-        "latitude": 41.97,
-        "longitude": 41.97
+        "latitude": 41.970,
+        "longitude": -87.660
     },
     {
         "name": "Jamaica World Music Festival",
@@ -4036,8 +4036,8 @@
         "city": "Pittsburgh",
         "state": "PA",
         "country": "US",
-        "latitude": 40.44,
-        "longitude": 40.44
+        "latitude": 40.440,
+        "longitude": -79.991
     },
     {
         "name": "Winnipeg Stadium",
@@ -4048,12 +4048,12 @@
         "longitude": null
     },
     {
-        "name": "Uni",
+        "name": "Unidome",
         "city": "Cedar Falls",
         "state": "IA",
         "country": "US",
-        "latitude": 42.512,
-        "longitude": 42.512
+        "latitude": 42.516,
+        "longitude": -92.467
     },
     {
         "name": "Baltimore Civic Center",
@@ -4061,7 +4061,7 @@
         "state": "MD",
         "country": "US",
         "latitude": 39.289,
-        "longitude": 39.289
+        "longitude": -76.619
     },
     {
         "name": "Aztec Bowl",
@@ -4228,8 +4228,8 @@
         "city": "Englishtown",
         "state": "NJ",
         "country": "US",
-        "latitude": 40.336,
-        "longitude": 40.336
+        "latitude": 40.335,
+        "longitude": -74.352
     },
     {
         "name": "The Omni",

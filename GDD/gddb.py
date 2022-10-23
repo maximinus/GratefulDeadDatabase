@@ -70,8 +70,8 @@ class Weather(Base):
     solarradiation = Column(Float, nullable=True)
     solarenergy = Column(Float, nullable=True)
     uvindex = Column(Float, nullable=True)
-    sunrise = Column(Time, nullable=True)
-    sunset = Column(Time, nullable=True)
+    sunrise = Column(Text, nullable=True)
+    sunset = Column(Text, nullable=True)
     moonphase = Column(Float, nullable=True)
     conditions = Column(Text, nullable=True)
     description = Column(Text, nullable=True)
@@ -81,7 +81,8 @@ class HourWeather(Base):
     __tablename__ = 'hourweather'
     id = Column(Integer, primary_key=True, autoincrement=True)
     weather = Column(Integer, ForeignKey('weather.id'), nullable=False)
-    time = Column(Time, nullable=True)
+    # no time object in sqlite, so we use an integer - minutes since 00:00
+    time = Column(Integer, nullable=True)
     temp = Column(Float, nullable=True)
     feelslike = Column(Float, nullable=True)
     humidity = Column(Float, nullable=True)

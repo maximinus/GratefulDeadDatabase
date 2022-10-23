@@ -2,6 +2,7 @@ import sys
 import json
 import requests
 
+from datetime import time
 from sqlalchemy import and_
 from sqlalchemy.orm import Session
 
@@ -21,11 +22,13 @@ def get_weather(show_date, lat, long):
     if response.status_code != 200:
         print(f'Error: HTTP {response.status_code} for {full_url}')
         sys.exit()
-    return data
+    print(data)
+    return(data)
 
 
 def convert_weather_data(data):
-    data = data['days']
+    # there's only ever 1 day here
+    data = data['days'][0]
     # need to make Weather and HourWeather objects
     neww = Weather(tempmax=data['tempmax'],
                    tempmin=data['tempmin'],
@@ -55,30 +58,45 @@ def convert_weather_data(data):
                    moonphase=data['moonphase'],
                    conditions=data['conditions'],
                    description=data['description'])
+    # add to db
+    sql_engine = get_engine()
+    with Session(sql_engine) as session:
+        session.add(neww)
+        session.flush()
+    weather_id = neww.id
+    for i in data['hours']:
+        make_hour_weather(weather_id, i)
 
 
-def make_hour_weather(data, weather_id):
+def make_hour_weather(weather_id, data):
+    # it looks like 00:00:00, so convert to an int - minutes since 00:00
+    time_data = [int(x) for x in data['datetime'].split(':')]
+    minutes = (time_data[0]) * 60 + time_data[1]
     hw = HourWeather(weather=weather_id,
-                     time=data['time'],
+                     time=minutes,
                      temp=data['temp'],
-                     feelslike=data[''],
-                     humidity=data[''],
-                     dew=data[''],
-                     precip=data[''],
-                     precipprob=data[''],
-                     snow=data[''],
-                     snowdepth=data[''],
-                     preciptype=data[''],
-                     windgust=data[''],
-                     windspeed=data[''],
-                     winddir=data[''],
-                     pressure=data[''],
-                     visibility=data[''],
-                     cloudcover=data[''],
-                     solarradiation=data[''],
-                     solarenergy=data[''],
-                     uvindex=data[''],
-                     conditions=data[''])
+                     feelslike=data['feelslike'],
+                     humidity=data['humidity'],
+                     dew=data['dew'],
+                     precip=data['precip'],
+                     precipprob=data['precipprob'],
+                     snow=data['snow'],
+                     snowdepth=data['snowdepth'],
+                     preciptype=data['preciptype'],
+                     windgust=data['windgust'],
+                     windspeed=data['windspeed'],
+                     winddir=data['winddir'],
+                     pressure=data['pressure'],
+                     visibility=data['visibility'],
+                     cloudcover=data['cloudcover'],
+                     solarradiation=data['solarradiation'],
+                     solarenergy=data['solarenergy'],
+                     uvindex=data['uvindex'],
+                     conditions=data['conditions'])
+    sql_engine = get_engine()
+    with Session(sql_engine) as session:
+        session.add(hw)
+        session.flush()
 
 
 def get_viable_shows(year):
@@ -103,7 +121,5 @@ if __name__ == '__main__':
         show_date = i[1].isoformat()
         latitude = i[2]
         longitude = i[3]
-        get_weather(show_date, latitude, longitude)
-        #print(i)
-
-    #get_next_weather()
+        w = get_weather(show_date, latitude, longitude)
+        convert_weather_data(w)

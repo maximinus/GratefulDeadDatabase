@@ -22,7 +22,7 @@ def display_show(show_date):
         index = 1
         for i in show_sets:
             # get all songs from this set and sort in order
-            all_songs = session.query(PlayedSong).filter_by(gdset=i.id).order_by(PlayedSong.index.desc())
+            all_songs = session.query(PlayedSong).filter_by(gdset=i.id).order_by(PlayedSong.index.asc())
             print(f'Set #{index}')
             for j in all_songs:
                 song_name = session.query(Song).get(j.song)

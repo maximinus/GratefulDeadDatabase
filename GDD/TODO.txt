@@ -3,11 +3,11 @@ Order of things to do
 *: Finish all years shows
 *: Get the venue data for all 77/78 shows
 
-Put everything we have (song, shows, venues, sets) into a database
+* Put everything we have (song, shows, venues, sets) into a database
 
-Write code to get weather, first by finding the next show to grab.
-    Now we need to add data: the venue data should be completed here for 77/78
-    Attempt to do some venues, and see how long it could take
+* Write code to get weather, first by finding the next show to grab.
+    * Now we need to add data: the venue data should be completed here for 77/78
+    * Attempt to do some venues, and see how long it could take
     With all venue data, we get all weather data
 
 Go back to GODOT
@@ -22,5 +22,6 @@ Now we have the 77/78 files, so do the BPM
 8: Make pretty graphs
 
 9: Make website
+    See website folder
 
 10: Write article

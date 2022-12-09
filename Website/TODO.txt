@@ -1,0 +1,15 @@
+Changes to the current website:
+
+    Graphs should also show "average" as a dotted line
+    List rows should be coloured
+    "St. Stephen" should get you St Stephen, so allow searches on alternate names
+    Clicking on found name in drop-down automatically updates song
+    Add a navigation bar to the top
+    Numbers on charts should only be to 2 d.p.
+    The scrollbar on list pop-ups needs to reset on a new pop-up
+    Add footer with simple about info
+    Make all dates hyperlinks
+
+Binary data:
+    Extract the current binary data and add the timings
+    Bring in new data

@@ -58,7 +58,10 @@ class Weather(Base):
     precip = Column(Float, nullable=True)
     precipprob = Column(Float, nullable=True)
     precipcover = Column(Float, nullable=True)
-    preciptype = Column(Float, nullable=True)
+    # this next one is a json array of text values.
+    # we will store that as ','.join(values), i.e. a string
+    # if NULL, the string is empty
+    preciptype = Column(Text, nullable=True)
     snow = Column(Float, nullable=True)
     snowdepth = Column(Float, nullable=True)
     windgust = Column(Float, nullable=True)
@@ -82,7 +85,7 @@ class HourWeather(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     weather = Column(Integer, ForeignKey('weather.id'), nullable=False)
     # no time object in sqlite, so we use an integer - minutes since 00:00
-    time = Column(Integer, nullable=True)
+    time = Column(Text, nullable=True)
     temp = Column(Float, nullable=True)
     feelslike = Column(Float, nullable=True)
     humidity = Column(Float, nullable=True)
@@ -91,7 +94,10 @@ class HourWeather(Base):
     precipprob = Column(Float, nullable=True)
     snow = Column(Float, nullable=True)
     snowdepth = Column(Float, nullable=True)
-    preciptype = Column(Float, nullable=True)
+    # this next one is a json array of text values.
+    # we will store that as ','.join(values), i.e. a string
+    # if NULL, the string is empty
+    preciptype = Column(Text, nullable=True)
     windgust = Column(Float, nullable=True)
     windspeed = Column(Float, nullable=True)
     winddir = Column(Float, nullable=True)

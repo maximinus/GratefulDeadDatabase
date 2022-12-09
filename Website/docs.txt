@@ -1,3 +1,26 @@
-How the binary works:
+How the binary works in the javascript:
 
-TODO
+1: Get the files
+    songs.bin
+    shows.bin
+
+2: The data format is unsigned 8-bit array
+
+3: The songs.bin is just an array of strings, null terminated, with an EXTRA 0 byte at the end
+
+4: shows.bin uses 16 bit values, i.e. 2 bytes each
+    We traverse the array until we hit a 16-bit zero
+    The first 2 bytes are the date, represented as number of days 1st Jan 1950 + days
+        (this gives 179 years of possible dates)
+    Then follows a set. A set is a list of [song_index, length]
+        song_index must be -1 since we cannot store a zero
+        length is in seconds
+        We keep getting sets until we hit a zero
+    Sets are collected until a zero hits, i.e. one show is:
+
+    Date as day offset from 1st Jan 1950, as word
+    Array of sets, ending with 0 word
+        Set is an array of [song index, length] ending in zero
+
+5: If a word is at index n, then the calculation is
+        value = array[index] + (array[index + 1] * 256)

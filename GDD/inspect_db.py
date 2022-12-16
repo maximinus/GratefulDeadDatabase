@@ -2,7 +2,8 @@ from datetime import date
 import sqlalchemy.exc
 from sqlalchemy.orm import Session
 
-from gddb import get_engine, Show, Venue, GDSet, PlayedSong, Song
+from src.tables import Show, Venue, GDSet, PlayedSong, Song
+from gddb import get_engine
 
 
 def display_show(show_date):

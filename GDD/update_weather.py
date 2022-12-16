@@ -7,7 +7,9 @@ from pathlib import Path
 from sqlalchemy import and_
 from sqlalchemy.orm import Session
 
-from gddb import get_engine, Show, Venue, Weather, HourWeather
+from src.database_helpers import get_engine
+from src.tables import Show, Venue, Weather, HourWeather
+
 from weather.secrets import API_KEY
 
 

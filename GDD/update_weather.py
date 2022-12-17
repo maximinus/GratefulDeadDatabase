@@ -24,13 +24,14 @@ URL = 'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/service
 def get_weather(show_date, lat, long):
     location = f'{lat},{long}'
     full_url = f'{URL}{location}/{show_date}?key={API_KEY}'
+    year = show_date.split('-')[0]
     response = requests.get(url=full_url)
     data = response.json()
     if response.status_code != 200:
         print(f'Error: HTTP {response.status_code} for {full_url}')
         sys.exit()
     # we need to save this data
-    filepath = WEATHER_DIR / f'{show_date}.json'
+    filepath = WEATHER_DIR / year / f'{show_date}.json'
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
     return(data)
@@ -38,7 +39,6 @@ def get_weather(show_date, lat, long):
 
 def convert_weather_data(show_id, data):
     sql_engine = get_engine()
-    weather_id = None
     with Session(sql_engine) as session:
         # there's only ever 1 day here
         data = data['days'][0]
@@ -130,25 +130,31 @@ def make_hour_weather(weather_id, data):
         session.commit()
 
 
-def get_viable_shows(year):
-    start = f'{year}-01-01'
-    end = f'{year}-12-31'
+def get_viable_shows():
     sql_engine = get_engine()
     with Session(sql_engine) as session:
-        # SELECT shows.id, shows.date, venue.long, venue.lat
-        # FROM shows
-        # INNER JOIN venues
-        # ON show.venue = venue.id
-        # WHERE shows.date >= start AND shows.date <= end AND shows.weather = NULL
-        # ORDER BY shows.date
-        query = session.query(Show.id, Show.date, Venue.latitude, Venue.longitude).join(Venue, Show.venue == Venue.id, isouter=True).filter(and_(
-            Show.date >= start, Show.date <= end, Show.weather == None)).all()
-        # this is a list of tuples with (Show.id, Show.date, Venue.longitude, Venue.latitude)
-        return query
+        # select all shows that have no weather
+        all_shows = session.query(Show).filter(Show.weather == None).all()
+        # go over all shows
+        shows_to_do = []
+        for i in all_shows:
+            # cannot do before 1970 in this format
+            if i.date.year < 1970:
+                continue
+            # get the venue
+            venue = session.query(Venue).get(i.venue)
+            # does this have long and lat?
+            if venue.latitude is None and venue.longitude is None:
+                continue
+            else:
+                shows_to_do.append([i.id, i.date, venue.latitude, venue.longitude])
+        print(f'Shows missing weather with viable venues: {len(shows_to_do)}')
+        return shows_to_do
 
 
 def get_json_weather(show_date):
-    filepath = WEATHER_DIR / f'{show_date}.json'
+    year = show_date.split('-')[0]
+    filepath = WEATHER_DIR / year / f'{show_date}.json'
     if os.path.exists(filepath):
         # load and return
         with open(filepath) as f:
@@ -194,7 +200,8 @@ if __name__ == '__main__':
     #sys.exit()
 
     shows_to_get = 20
-    for i in get_viable_shows(1978)[:shows_to_get]:
+    new_shows = get_viable_shows()[:shows_to_get]
+    for i in new_shows:
         show_id = int(i[0])
         show_date = i[1].isoformat()
         latitude = i[2]

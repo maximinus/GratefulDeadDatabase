@@ -1,6 +1,3 @@
-import os
-from pathlib import Path
-
 from sqlalchemy.orm import Session
 
 from src.tables import Song, Venue, Show, GDSet, PlayedSong, Base

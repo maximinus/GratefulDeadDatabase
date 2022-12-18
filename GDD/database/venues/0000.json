@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Star Theatre, Phoenix, AZ",
+        "id": 2,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.45459644852362, -112.01472675905259"
+    },
+    {
+        "name": "KQED Studios, San Francisco, CA",
+        "id": 3,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.76293729640017, -122.40973840308152"
+    },
+    {
+        "name": "Gaelic Park, Bronx, NY",
+        "id": 4,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.88785494459888, -73.90140444528603"
+    },
+    {
+        "name": "The Ark, Boston, MA",
+        "id": 5,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.34754464734386, -71.09569568755268"
+    },
+    {
+        "name": "Charlotte Coliseum, Charlotte, NC",
+        "id": 6,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "35.20491714328554, -80.79555954128797"
+    },
+    {
+        "name": "West Palm Beach Auditorium, West Palm Beach, FL",
+        "id": 7,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "26.724018995854546, -80.08198601692715"
+    },
+    {
+        "name": "Santa Clara County Fairgrounds, Santa Clara, CA",
+        "id": 8,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.303463988664326, -121.85387220309875"
+    },
+    {
+        "name": "Seattle Center Arena, Seattle, WA",
+        "id": 10,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.62223759375417, -122.35406067382803"
+    },
+    {
+        "name": "Erb Memorial Union, Eugene, OR",
+        "id": 13,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.04510069031771, -123.0736682451529"
+    },
+    {
+        "name": "American Legion Hall, South Lake Tahoe, CA",
+        "id": 14,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.930055163123, -119.98004530489229"
+    },
+    {
+        "name": "The Music Box, Omaha, NE",
+        "id": 16,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.26010809957645, -95.94115866061672"
+    },
+    {
+        "name": "Laguna Seca Recreation Area, Monterey, CA",
+        "id": 17,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.57932199063645, -121.76248489339368"
+    },
+    {
+        "name": "Vanderbilt University, Nashville, TN",
+        "id": 19,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.14643597278328, -86.80310055699098"
+    },
+    {
+        "name": "Des Moines Civic Center, Des Moines, IA",
+        "id": 20,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.58744643816562, -93.62053458943967"
+    },
+    {
+        "name": "Aladdin Theatre, Las Vegas, NV",
+        "id": 21,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.11006099706909, -115.16995887430606"
+    },
+    {
+        "name": "Continental Ballroom, Santa Clara, CA",
+        "id": 22,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.35027793821238, -121.89386405705949"
+    },
+    {
+        "name": "Albuquerque Civic Auditorium, Albuquerque, NM",
+        "id": 23,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "35.096752460084524, -106.63505733705964"
+    },
+    {
+        "name": "Park West Ski Resort, Park West, UT",
+        "id": 24,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.68808429093312, -111.54726187413061"
+    },
+    {
+        "name": "Deer Creek Music Center, Noblesville, IN",
+        "id": 26,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.005110834635595, -85.93082276066751"
+    },
+    {
+        "name": "Bayfront Center Arena, St. Petersburg, FL",
+        "id": 27,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "27.7674099660537, -82.63185277885229"
+    },
+    {
+        "name": "Ford Auditorium, Detroit, MI",
+        "id": 28,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.32718807034735, -83.0440295028994"
+    },
+    {
+        "name": "Club Agora, Columbus, OH",
+        "id": 29,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.81243958842568, -83.498288345248"
+    },
+    {
+        "name": "The Playhouse, Edinburgh, Lothian",
+        "id": 30,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "55.957047727331954, -3.1853538869015665"
+    },
+    {
+        "name": "Santa Rosa Fairgrounds, Santa Rosa, CA",
+        "id": 31,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.43295059961225, -122.7015747958192"
+    },
+    {
+        "name": "Boston Music Hall, Boston, PA",
+        "id": 32,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.356410908463474, -71.0610048163888"
+    }
+]

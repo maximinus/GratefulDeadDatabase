@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Great Western Forum, Inglewood, CA",
+        "id": 33,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.95844224640108, -118.34186931670855"
+    },
+    {
+        "name": "Pauley Ballroom, Berkeley, CA",
+        "id": 34,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.869440178454035, -122.25970518958684"
+    },
+    {
+        "name": "Rich Stadium, Orchard Park, NY",
+        "id": 37,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.77396720674804, -78.78689720102527"
+    },
+    {
+        "name": "Glen Helen Regional Park, Devore, CA",
+        "id": 38,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.20827422238871, -117.40879863374326"
+    },
+    {
+        "name": "Bear’s House, Los Angeles, CA",
+        "id": 39,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.94585688311895, -118.26857961191388"
+    },
+    {
+        "name": "Houston, Houston, TX",
+        "id": 42,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "29.67814674682351, -95.45844291684459"
+    },
+    {
+        "name": "Rhode Island Auditorium, Providence, RI",
+        "id": 43,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.85078994879227, -71.40156583175585"
+    },
+    {
+        "name": "Fresno Convention Center, Fresno, CA",
+        "id": 44,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.73517973248136, -119.78481961846575"
+    },
+    {
+        "name": "Harpur College, Binghamton, NY",
+        "id": 46,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.089111319131895, -75.96372546058232"
+    },
+    {
+        "name": "Fillmore West, San Francisco, CA",
+        "id": 47,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.78418882944555, -122.43299690122551"
+    },
+    {
+        "name": "Monterey Peninsula College, Monterey, CA",
+        "id": 49,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.588062007022394, -121.88453614805535"
+    },
+    {
+        "name": "State Fairgrounds, Des Moines, IA",
+        "id": 50,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.59586863596354, -93.55352644711226"
+    },
+    {
+        "name": "San Jose State University, San Jose, CA",
+        "id": 51,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.335400634550936, -121.88097494356938"
+    },
+    {
+        "name": "Marigold Ballroom, Fresno, CA",
+        "id": 53,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.76029875212211, -119.78858198962827"
+    },
+    {
+        "name": "Old Renaissance Faire Grounds, Veneta, OR",
+        "id": 54,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.06094192011496, -123.37304419108882"
+    },
+    {
+        "name": "Electric Circus, New York, NY",
+        "id": 55,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.729422750659396, -73.98867881645593"
+    },
+    {
+        "name": "Stakladen, Aarhus, Aarhus",
+        "id": 56,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "56.171707393686994, 10.199681413109875"
+    },
+    {
+        "name": "Beacon Theatre, New York, NY",
+        "id": 57,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.780700424493595, -73.98122417783748"
+    },
+    {
+        "name": "The Matrix, San Francisco, CA",
+        "id": 59,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.79891401149015, -122.43557714540727"
+    },
+    {
+        "name": "Centennial Coliseum, Reno, NV",
+        "id": 60,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.48709967616253, -119.79132960115976"
+    },
+    {
+        "name": "Rheinhalle, Duesseldorf, North Rhine-Westphalia",
+        "id": 61,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "51.23226122257107, 6.7726060398365515"
+    },
+    {
+        "name": "California Hall, San Francisco, CA",
+        "id": 62,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.782560076291084, -122.41913310308091"
+    },
+    {
+        "name": "Northridge Unitarian Church, Los Angeles, CA",
+        "id": 63,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.2584767658645, -118.46663535069807"
+    },
+    {
+        "name": "Orlando Arena, 0rlando, FL",
+        "id": 64,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "28.549497106722267, -81.3870696703362"
+    },
+    {
+        "name": "Taft Auditorium, Cincinnati, OH",
+        "id": 66,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.10201506963106, -84.50775130303015"
+    }
+]

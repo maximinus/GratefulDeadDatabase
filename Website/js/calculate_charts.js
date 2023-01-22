@@ -85,11 +85,16 @@ function buildPlayed(song_title, element_name) {
 };
 
 function getAverageLength(song_title) {
+    // return an arrayy of [results, global_time]
     var averages = new Array(YEARS_PLAYED);
     for(var i = 0; i < averages.length; i++) {
         averages[i] = [0,0];
     }
     var index = getIndexOfSong(song_title);
+    // calculate the "global average"
+    var times_played = 0;
+    var total_time = 0;
+    // add together the sum and total for all years
     for(var show of shows) {
         var year_index = getYear(show.date) - YEAR_OFFSET;
         for(var song of show.getAllSongs()) {
@@ -98,10 +103,21 @@ function getAverageLength(song_title) {
                 if(song.seconds != 65535) {
                     averages[year_index][0] += 1;
                     averages[year_index][1] += song.seconds;
+                    times_played += 1;
+                    total_time += song.seconds;
                 }
             }
         }
     }
+
+    // calculate the global average
+    var global_average = 0;
+    log(`Time: ${total_time}, Played: ${times_played}`);
+    if (times_played != 0 && total_time != 0) {
+        // we want average in minutes
+        global_average = (total_time / times_played) / 60.0;
+    }
+
     // now we can calculate the averages
     var final_results = new Array(YEARS_PLAYED);
     final_results.fill(0);
@@ -114,11 +130,24 @@ function getAverageLength(song_title) {
             final_results[i] = null;
         }
     }
-    return final_results;
+    return [final_results, global_average];
 };
 
 function buildLength(song_title, element_name) {
-    data = getAverageLength(song_title);
+    var all_data = getAverageLength(song_title);
+    var lengths = all_data[0];
+    var average = all_data[1];
+    // we need a set of data the same length as lengths
+    var average_global = new Array(lengths.length);
+    average_global.fill(average);
+    // roll back to seconds to get as time string
+    // ensure conversion to integer otherwise the times go wrong
+    var average_global_text = convertTime(Math.round(average * 60.0));
+    // sort out the y axis range
+    // we need to take the original and remove all nulls from it
+    var values = lengths.filter(Number) 
+    var min_y_value = Math.floor(Math.min.apply(Math, values));
+    var max_y_value = Math.ceil(Math.max.apply(Math, values));
     var chart = Highcharts.chart(element_name, {
         chart: {
             type: 'line'
@@ -126,31 +155,63 @@ function buildLength(song_title, element_name) {
         title: {
             text: null
         },
+        legend: {
+            enabled: true,
+            layout: "horizontal",
+            align: "right",
+            verticalAlign: "top",
+            floating: true,
+            labelFormatter: function() {
+              return `Avg: ${average_global_text}`;
+            },
+            itemStyle: {
+              color: '#000000',
+              fontWeight: 'bold',
+              fontSize: 8,
+            },
+            borderWidth: 1
+          },
         xAxis: {
         },
         yAxis: {
-            title: {text: 'Average Length / mins'}
+            title: {text: 'Average Length / mins'},
+            min: min_y_value,
+            max: max_y_value,
+            plotLines: [{
+                color: '#666666aa',
+                width: 2,
+                value: average
+            }]
         },
         credits: {
             enabled: false
         },
-        plotOptions: {
-            series: {
-                marker: {
-                    radius: 3
-                }
-            }
-        },
         tooltip: {
             // only show 2 decimal places on tooltip
             valueDecimals: 2,
+            formatter: function () {
+                var time_length = convertTime(Math.round(this.y * 60.0));
+                return `${this.x}: ${time_length}`;
+            }
         },
         series: [{
-            name: 'Average Length / s',
+            name: 'Average Length',
             showInLegend: false,
             pointStart: 1965,
             color: '#88cc88',
-            data: data
+            data: lengths
+        },
+        {
+            name: 'Global Average',
+            showInLegend: true,
+            pointStart: 1965,
+            color: '#66666688',
+            allowPointSelect: false,
+            enableMouseTracking: false,
+            marker: {
+                enabled: false
+            },
+            data: average_global
         }],
     });
 };

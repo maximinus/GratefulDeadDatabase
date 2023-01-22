@@ -15,3 +15,8 @@
     max-height: 80vh; !important;
     overflow-y: auto; !important;
 }
+
+.card-header {
+    color: #333333 !important;
+    background-color: #e0f7f7 !important;
+}

@@ -39,15 +39,35 @@ function getAllTimesPlayed(song_title) {
         // count the shows
         percent[year_index] += 1;
     }
+    // avg per year is applied for all years that song was played
+    // this means we add nulls for the years it was not played
+    var avg_per_year = 0
+    var total = 0
+    var total_years = 0
     // recalculate the %
     for(var i = 0; i < percent.length; i++) {
+        if (years[i] != 0) {
+            // i.e. some shows that year
+            total_years += 1;
+            total += years[i];
+        }
         percent[i] = (years[i] / percent[i]) * 100;
+        if (percent[i] == 0) {
+            percent[i] = null;
+        }
     }
-    return percent;
+    // reduce to 2 d.p. as well
+    avg_per_year = Math.round((total / total_years) * 100.0) / 100.0;
+    return [percent, avg_per_year];
 };
 
 function buildPlayed(song_title, element_name) {
-    data = getAllTimesPlayed(song_title);
+    var data = getAllTimesPlayed(song_title);
+    var played = data[0];
+    var averages = new Array(played.length);
+    averages.fill(data[1]);
+    var min_y_value = Math.floor(Math.min.apply(Math, played));
+    var max_y_value = Math.ceil(Math.max.apply(Math, played));
     var chart = Highcharts.chart(element_name, {
         chart: {
             type: 'line'
@@ -55,10 +75,28 @@ function buildPlayed(song_title, element_name) {
         title: {
             text: null
         },
+        legend: {
+            enabled: true,
+            layout: "horizontal",
+            align: "right",
+            verticalAlign: "top",
+            floating: true,
+            labelFormatter: function() {
+              return `Avg when played: ${data[1]} %`;
+            },
+            itemStyle: {
+              color: '#000000',
+              fontWeight: 'bold',
+              fontSize: 8,
+            },
+            borderWidth: 1
+        },
         xAxis: {
         },
         yAxis: {
-            title: {text: '% Shows Played At'}
+            title: {text: '% Shows Played At'},
+            min: min_y_value,
+            max: max_y_value,
         },
         credits: {
             enabled: false
@@ -72,14 +110,26 @@ function buildPlayed(song_title, element_name) {
         },
         tooltip: {
             // only show 2 decimal places on tooltip
-            valueDecimals: 2,
+            valueDecimals: 2
         },
         series: [{
             name: '% shows played',
             showInLegend: false,
             pointStart: 1965,
             color: '#8888cc',
-            data: data
+            data: played,
+        },
+        {
+            name: 'Average',
+            showInLegend: true,
+            pointStart: 1965,
+            color: '#66666688',
+            allowPointSelect: false,
+            enableMouseTracking: false,
+            marker: {
+                enabled: false
+            },
+            data: averages
         }],
     });
 };
@@ -112,7 +162,6 @@ function getAverageLength(song_title) {
 
     // calculate the global average
     var global_average = 0;
-    log(`Time: ${total_time}, Played: ${times_played}`);
     if (times_played != 0 && total_time != 0) {
         // we want average in minutes
         global_average = (total_time / times_played) / 60.0;
@@ -170,7 +219,7 @@ function buildLength(song_title, element_name) {
               fontSize: 8,
             },
             borderWidth: 1
-          },
+        },
         xAxis: {
         },
         yAxis: {
@@ -245,25 +294,56 @@ function getAveragePosition(song_title) {
     }
     // now we have a list for every year, so calculate the average
     var final_results = new Array(YEARS_PLAYED);
+    var global_total = 0;
+    var global_length = 0;
     for(var i = 0; i < years.length; i++) {
         if(years[i].length != 0) {
             // we have some data. Add up set positions and divide by total
-            final_results[i] = years[i].reduce((a, b) => a + b, 0) / years[i].length;
+            var year_sum = years[i].reduce((a, b) => a + b, 0)
+            final_results[i] = year_sum / years[i].length;
+            global_total += year_sum
+            global_length += years[i].length;
         } else {
             final_results[i] = null;
         }
     }
-    return final_results;
+    var global_average = Math.round((global_total / global_length) * 100) / 100;
+    return [final_results, global_average];
 }
 
 function buildPosition(song_title, element_name) {
-    data = getAveragePosition(song_title);
+    var data = getAveragePosition(song_title);
+    var positions = data[0];
+    var average_pos = new Array(positions.length);
+    for(var i = 0; i < positions.length; i++) {
+        if (positions[i] == null) {
+            average_pos[i] = null;
+        } else {
+            average_pos[i] = data[1];
+        }
+    }
     var chart = Highcharts.chart(element_name, {
         chart: {
             type: 'line'
         },
         title: {
             text: null
+        },
+        legend: {
+            enabled: true,
+            layout: "horizontal",
+            align: "right",
+            verticalAlign: "top",
+            floating: true,
+            labelFormatter: function() {
+              return `Avg: ${data[1]}`;
+            },
+            itemStyle: {
+              color: '#000000',
+              fontWeight: 'bold',
+              fontSize: 8,
+            },
+            borderWidth: 1
         },
         xAxis: {
         },
@@ -289,7 +369,19 @@ function buildPosition(song_title, element_name) {
             showInLegend: false,
             pointStart: 1965,
             color: '#cc8888',
-            data: data
+            data: positions
+        },
+        {
+            name: 'Global Average',
+            showInLegend: true,
+            pointStart: 1965,
+            color: '#66666688',
+            allowPointSelect: false,
+            enableMouseTracking: false,
+            marker: {
+                enabled: false
+            },
+            data: average_pos
         }],
     });
 };

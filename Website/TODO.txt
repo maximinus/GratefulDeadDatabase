@@ -1,7 +1,8 @@
 Changes to the current website:
 
-    Graphs should also show "average" as a dotted line
-    List rows should be coloured
+    * Graphs should also show "average" as a dotted line
+    Add "total played" to the "played per year" chart
+    * List rows should be coloured
     "St. Stephen" should get you St Stephen, so allow searches on alternate names
     Clicking on found name in drop-down automatically updates song
     Add a navigation bar to the top

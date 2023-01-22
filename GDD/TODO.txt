@@ -10,6 +10,11 @@ Order of things to do
     * Attempt to do some venues, and see how long it could take
     With all venue data, we get all weather data
 
+* These venues are hard:
+    Hilton Hotel, 1969
+    Beat Club broadcast, 1972 Bremen
+    Exposition Center, Milwaukee, WI
+
 Go back to GODOT
     Grab the songs
     Take measurements for the year

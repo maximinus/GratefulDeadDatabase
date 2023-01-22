@@ -1,4 +1,6 @@
 // functions for local data storage
+// i.e, here is where we have all database functions, the functions being loading and parsing
+
 // TODO: get date of file from web and compare with ours
 //       Handle case where not enough data for tables
 //       Update header text and info
@@ -18,12 +20,15 @@ const NEXT_UPDATE = 365;
 
 const DEFAULT_SONG = 'Playing In The Band';
 
+// these is global data seens by all
 var shows = [];
 var songs = [];
 var song_data = {};
 var last_update = '';
 var load_counter = 0;
 var data_loaded = false;
+
+// start with the class definitions we need
 
 // define the data endpoints
 // we need to convert to this data from local storage if need be
@@ -123,7 +128,10 @@ class Show {
     };
 };
 
+// helper functions
+
 function log(message) {
+    // log error messages etc to console
     if(LOGGING_ON == false) {
         return;
     }

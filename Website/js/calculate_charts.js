@@ -70,6 +70,10 @@ function buildPlayed(song_title, element_name) {
                 }
             }
         },
+        tooltip: {
+            // only show 2 decimal places on tooltip
+            valueDecimals: 2,
+        },
         series: [{
             name: '% shows played',
             showInLegend: false,
@@ -136,6 +140,10 @@ function buildLength(song_title, element_name) {
                     radius: 3
                 }
             }
+        },
+        tooltip: {
+            // only show 2 decimal places on tooltip
+            valueDecimals: 2,
         },
         series: [{
             name: 'Average Length / s',
@@ -210,6 +218,10 @@ function buildPosition(song_title, element_name) {
                     radius: 3
                 }
             }
+        },
+        tooltip: {
+            // only show 2 decimal places on tooltip
+            valueDecimals: 2,
         },
         series: [{
             name: 'Average Set Position',

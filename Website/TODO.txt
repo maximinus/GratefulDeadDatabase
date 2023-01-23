@@ -1,16 +1,117 @@
-Changes to the current website:
+Path of Work / Priorities
+-------------------------
+
+Estimate 5 (days): Priority 5
+
+After analysis, this order:
+
+1: Download all the GD (ongoing - note not every recording, just every show)
+    Es ?  Pr 8
+1: Add tabs, other tables and Graphs
+    Es 14 Pr 8
+2: Extract the timings we have, and add them the to real DB
+    Es 10 Pr 9
+3: Use the real DB to build the binary data. Update the data
+    Es 10 Pr 9
+4: Look at hosting
+    Es 2  Pr 10
+5: Check venue data complete
+    Es 1  Pr 8
+6: Work out how to manipulate the DB tables, and make backups
+    Es 3  Pr 8
+7: Add weather info and special graph
+    Es 7  Pr 5
+
+Future Work:
+
+Start taking timings properly and add to the DB
+    Es 12 Pr 7
+Sort out the mess that is the repo, and remove propriatary data
+    Es 2  Pr 6
+Start taking BPM timings and add the to the DB
+    Es 5  Pr 6
+Split shows up into tours
+    Es 7  Pr 6
+Generate tour maps to show the tours
+    Es 20 Pr 5
+Match sources to shows, i.e. each show should have a link to sources
+    Es 20 Pr 4
+Write code to measure accuratly pitch shift due to sped up setOrderTablePopupList
+    Es 20 Pr 3
+
+
+Done work in 2023:
 
     * Graphs should also show "average" as a dotted line
-    Add "total played" to the "played per year" chart
     * List rows should be coloured
+    * Numbers on charts should only be to 2 d.p.
+
+Changes to the current website:
+
+    Songs should show how common they are ("7th most commonly played")
+        Split all songs into bands of equal size: Common, Uncommon, Rare, Very Rare, Unique
+        Add a tooltip for the meaning of this
+    Add "total played" to the "played per year" chart
     "St. Stephen" should get you St Stephen, so allow searches on alternate names
     Clicking on found name in drop-down automatically updates song
+        (also when enter is pressed)
     Add a navigation bar to the top
-    * Numbers on charts should only be to 2 d.p.
     The scrollbar on list pop-ups needs to reset on a new pop-up
     Add footer with simple about info
     Make all dates hyperlinks
+    For average position in show, formulate it as a % position along the show. Place the average set marker as a bar under the position average
+        Where there are 3 sets, ignore the whole show
 
 Binary data:
     Extract the current binary data and add the timings
     Bring in new data
+
+
+Other calculations:
+    Must start collecting BPM and add it to the DB.
+    This means grabbing ALL the GD. I have a NAS just for this.
+    Try and start timing some songs. Just a tour (like spring 78).
+        Work out what needs to work
+
+
+For the year data:
+    Show the year, total shows
+    Show:
+        most common songs
+        most common pairings (minus drums > space)
+        longest shows
+        shortest shows
+        longest songs
+        shortest songs
+        my picks for the year
+        most common venues
+        hottest shows
+        coldest shows
+        unique songs
+        songs introduced
+        songs stopped playing (except uniques)
+            (i.e. played this year and never after)
+        longest since last played
+        Most similar sets
+        Most dissimilar sets
+        Average show to represent the year
+
+For the song data
+    First played
+    Last played
+    Common into
+    Common out of
+    Longest
+    Shortest
+    Average per year
+    Average set position
+
+For the about page:
+    A page about means
+    Be brave and show a photo
+
+
+For the download page:
+    Point to repo, which should have a decent setup by this point
+    Download as a CSV file 
+    Download as SQL

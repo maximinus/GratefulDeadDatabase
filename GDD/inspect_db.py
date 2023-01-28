@@ -3,7 +3,7 @@ import sqlalchemy.exc
 from sqlalchemy.orm import Session
 
 from src.tables import Show, Venue, GDSet, PlayedSong, Song
-from gddb import get_engine
+from old_code.gddb import get_engine
 
 
 def display_show(show_date):
@@ -63,5 +63,5 @@ def options():
 
 if __name__ == '__main__':
     #options()
-    show_date = date.fromisoformat('1989-10-09')
-    display_show(show_date)
+    show_exact_date = date.fromisoformat('1989-10-09')
+    display_show(show_exact_date)

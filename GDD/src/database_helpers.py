@@ -4,7 +4,7 @@ from pathlib import Path
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, and_
 
-from src.tables import Show, Venue, GDSet, PlayedSong, Song
+from src.tables import Show, Venue, GDSet, PlayedSong, Song, Weather, HourWeather
 
 DATABASE_FILE = Path(os.getcwd()) / 'database' / 'gd.db'
 
@@ -23,6 +23,16 @@ def get_all_shows():
 def get_all_venues():
     with Session(get_engine()) as session:
         return session.query(Venue).all()
+
+
+def get_all_weather():
+    with Session(get_engine()) as session:
+        return session.query(Weather).all()
+
+
+def get_all_hour_weather(weather_id):
+    with Session(get_engine()) as session:
+        return session.query(HourWeather).filter(HourWeather.weather == weather_id).all()
 
 
 def get_single_show(single_day):

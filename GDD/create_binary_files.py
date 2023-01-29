@@ -2,7 +2,7 @@ import struct
 import operator
 from pathlib import Path
 
-from src.database_helpers import get_all_songs
+from src.database_helpers import get_all_songs, get_all_venues
 
 BINARY_FOLDER = Path('./database/binary_data')
 SONGS_FILE = BINARY_FOLDER / 'songs.bin'
@@ -52,11 +52,15 @@ def write_song_data():
     byte_data = []
     for i in all_songs:
         for j in i.name:
+            if ord(j) > 255:
+                print(f'Error: {j}: {ord(j)}')
+                return
             byte_data.append(ord(j))
         byte_data.append(0)
     # write to file
     binary_file = open(SONGS_FILE, 'wb')
-    binary_file.write(struct.pack('5B', *byte_data))
+    binary_file.write(struct.pack(f'<{len(byte_data)}B', *byte_data))
+    print(f'Saved songs to {SONGS_FILE}, {len(byte_data)} bytes')
 
 
 def write_show_data():
@@ -64,7 +68,8 @@ def write_show_data():
 
 
 def write_venue_data():
-    pass
+    venues = get_all_venues()
+
 
 
 def write_weather_data():

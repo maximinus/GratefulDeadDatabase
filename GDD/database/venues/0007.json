@@ -1,0 +1,177 @@
+[
+    {
+        "name": "SUNY Gym, Stony Brook, NY",
+        "id": 215,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.91897952781784, -73.12907213179419"
+    },
+    {
+        "name": "Middlesex County Community College, Edison, NJ",
+        "id": 216,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.505003182557815, -74.36670498762854"
+    },
+    {
+        "name": "Nevada County Fairgrounds, Grass Valley, CA",
+        "id": 218,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.20667993548642, -121.08193825884373"
+    },
+    {
+        "name": "Trouper's Club, Los Angeles, CA",
+        "id": 219,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.10109202156289, -118.34515497437665"
+    },
+    {
+        "name": "NY State Pavilion, Queens, NY",
+        "id": 221,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.74378099974456, -73.84431488761895"
+    },
+    {
+        "name": "Lille Fairgrounds, Lille, Hauts-de-France",
+        "id": 222,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "50.63311416615134, 3.0779005142993996"
+    },
+    {
+        "name": "Oakland Coliseum Arena, Oakland, CA",
+        "id": 223,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.75059246575625, -122.20303827424566"
+    },
+    {
+        "name": "Village Theater, New York, NY",
+        "id": 224,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.82160057140933, -121.99749357424278"
+    },
+    {
+        "name": "The Palestra, Rochester, NY",
+        "id": 225,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.12996525033676, -77.62860377402893"
+    },
+    {
+        "name": "Thelma Theater, Los Angeles, CA",
+        "id": 226,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.67748319455803, -73.94061448947693"
+    },
+    {
+        "name": "Crystal Ballroom, Portland, OR",
+        "id": 228,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "46.36398837511608, -122.77221604536649"
+    },
+    {
+        "name": "P.N.E. Coliseum, Vancouver, BC",
+        "id": 229,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "49.28599452436816, -123.0427520602585"
+    },
+    {
+        "name": "University of Virginia, Charlottesville, VA",
+        "id": 230,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.03370410383159, -78.50794414322722"
+    },
+    {
+        "name": "Dallas Memorial Auditorium, Dallas, TX",
+        "id": 231,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "32.77731785563633, -96.80231976576094"
+    },
+    {
+        "name": "Shea's Buffalo Theatre, Buffalo, NY",
+        "id": 232,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.891803818500286, -78.87351838938496"
+    },
+    {
+        "name": "Los Angeles Memorial Coliseum, Los Angeles, CA",
+        "id": 233,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.01421264947965, -118.28791831856195"
+    },
+    {
+        "name": "County Coliseum, El Paso, TX",
+        "id": 234,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "31.764974763403433, -106.4417206897995"
+    },
+    {
+        "name": "Tampa Stadium, Tampa, FL",
+        "id": 236,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "27.97636836651491, -82.50346542296789"
+    },
+    {
+        "name": "Foxboro Stadium, Foxboro, MA",
+        "id": 237,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.09109181049752, -71.2643321978466"
+    },
+    {
+        "name": "Blossom Music Center, Cuyahoga Falls, OH",
+        "id": 238,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.19151538481078, -81.56068296061956"
+    },
+    {
+        "name": "Grand Prix Racecourse, Watkins Glen, NY",
+        "id": 239,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.33846347368857, -76.92640061824486"
+    },
+    {
+        "name": "University of Nevada, Reno, NV",
+        "id": 240,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.54394385367683, -119.81410455883051"
+    },
+    {
+        "name": "Legion Stadium, El Monte, CA",
+        "id": 241,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.07253648374111, -118.04538798972351"
+    },
+    {
+        "name": "Shrine Exhibition Hall, Los Angeles, CA",
+        "id": 242,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.02368447664582, -118.2811959301969"
+    },
+    {
+        "name": "Hampton Coliseum, Hampton, VA",
+        "id": 243,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.036577195326274, -76.38128213819023"
+    }
+]

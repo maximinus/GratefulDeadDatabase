@@ -1,0 +1,177 @@
+[
+    {
+        "name": "The Rubber Bowl, Akron, OH",
+        "id": 67,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.039576248218545, -81.45609133178927"
+    },
+    {
+        "name": "Starlight Theatre, Kansas City, MO",
+        "id": 69,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.00765445925342, -94.5328006453609"
+    },
+    {
+        "name": "The Pyramid, Memphis, TN",
+        "id": 70,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "35.156529496017875, -90.05182667619542"
+    },
+    {
+        "name": "Recreation Center, Mill Valley, CA",
+        "id": 72,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.89935516199074, -122.52821831778405"
+    },
+    {
+        "name": "Alpine Valley Music Theatre, East Troy, WI",
+        "id": 73,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.73816964989938, -88.43383927404557"
+    },
+    {
+        "name": "Gill Coliseum, Corvallis, OR",
+        "id": 74,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.56144433404296, -123.2805909604762"
+    },
+    {
+        "name": "Oregon State University, Corvallis, OR",
+        "id": 75,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.564002245820106, -123.27941211629377"
+    },
+    {
+        "name": "Richmond Coliseum, Richmond, VA",
+        "id": 76,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.54667322236151, -77.4347668511135"
+    },
+    {
+        "name": "Austin Municipal Auditorium, Austin, TX",
+        "id": 77,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.54551186241396, -77.4348862748244"
+    },
+    {
+        "name": "Terrace Ballroom, Salt Lake City, UT",
+        "id": 78,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "30.287150915083597, -97.74042728427922"
+    },
+    {
+        "name": "Mile High Stadium, Denver, CO",
+        "id": 81,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.74408745950219, -105.02010940300484"
+    },
+    {
+        "name": "Dillon Gym, Princeton, NJ",
+        "id": 83,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.34583045054749, -74.65887120483629"
+    },
+    {
+        "name": "The Palace Theater, Waterbury, CT",
+        "id": 84,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.55542395658712, -73.03924904525864"
+    },
+    {
+        "name": "Tacoma Dome, Tacoma, WA",
+        "id": 85,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.23671063192086, -122.42678744500944"
+    },
+    {
+        "name": "Harmon Gym, Berkeley, CA",
+        "id": 87,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.869608339006156, -122.26211513005862"
+    },
+    {
+        "name": "Fillmore East, New York, NY",
+        "id": 88,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.72792875595308, -73.9886733587831"
+    },
+    {
+        "name": "Silver Dollar Fairgrounds, Chico, CA",
+        "id": 89,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.71771599326206, -121.81271414718829"
+    },
+    {
+        "name": "Expo '67, Montreal, Quebec",
+        "id": 90,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "45.50657889880498, -73.52789378019052"
+    },
+    {
+        "name": "McDonough Arena, Washington, DC",
+        "id": 91,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.90782169513005, -77.07742210303768"
+    },
+    {
+        "name": "Civic Arena, Pittsburgh, PA",
+        "id": 92,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.457342094672775, -79.9167374913411"
+    },
+    {
+        "name": "Orpheum Theatre, San Francisco, CA",
+        "id": 93,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.77948580669438, -122.41454828773489"
+    },
+    {
+        "name": "The Bank, Torrance, CA",
+        "id": 96,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.85458509493988, -118.28605762227815"
+    },
+    {
+        "name": "House Party, Loma Mar, CA",
+        "id": 97,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.27256733959705, -122.30923611890613"
+    },
+    {
+        "name": "Haight Street, San Francisco, CA",
+        "id": 98,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.77020562680897, -122.44536900155933"
+    },
+    {
+        "name": "Folsom Field, Boulder, CO",
+        "id": 100,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.009677411825955, -105.2668654453214"
+    }
+]

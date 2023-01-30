@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Allegheny College, Meadville, PA",
+        "id": 188,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.64863204450246, -80.14552207409123"
+    },
+    {
+        "name": "Wembley Empire Pool, London, Greater London",
+        "id": 190,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "51.55825605971077, -0.2825752736377702"
+    },
+    {
+        "name": "Lyceum Theatre, London, Greater London",
+        "id": 191,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "51.51169374637787, -0.12008070247656341"
+    },
+    {
+        "name": "Alexandra Palace, London, Greater London",
+        "id": 192,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "51.594230563186215, -0.1297282159630609"
+    },
+    {
+        "name": "Rainbow Theatre, London, Greater London",
+        "id": 193,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "51.56256210513896, -0.10926024480109225"
+    },
+    {
+        "name": "Wembley Arena, London, Greater London",
+        "id": 194,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "51.55825605971077, -0.2825752736377702"
+    },
+    {
+        "name": "Hyde Park Teen Center, Cincinnati, OH",
+        "id": 196,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.14016091981698, -84.44309830488397"
+    },
+    {
+        "name": "Newcastle City Hall, Newcastle upon Tyne, Tyne and Wear",
+        "id": 197,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "54.97731829063931, -1.6101385446262717"
+    },
+    {
+        "name": "Carter, Raleigh, NC",
+        "id": 198,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "35.800982736918996, -78.71957624998255"
+    },
+    {
+        "name": "UIC Pavilion, Chicago, IL",
+        "id": 199,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.874985257179944, -87.65621831640892"
+    },
+    {
+        "name": "Civic Convention Hall Auditorium, Philadelphia, PA",
+        "id": 200,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.955124000121714, -75.16032544532362"
+    },
+    {
+        "name": "Cal Expo Amphitheatre, Sacramento, CA",
+        "id": 201,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.59390239679834, -121.43468611654043"
+    },
+    {
+        "name": "Sam Boyd Silver Bowl, Las Vegas, NV",
+        "id": 202,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.086450129902, -115.01669864547053"
+    },
+    {
+        "name": "Memorial Union Ballroom, West Lafayette, IN",
+        "id": 203,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.42490315440413, -86.9104781011224"
+    },
+    {
+        "name": "Indianapolis Sports Center, Indianapolis, IN",
+        "id": 204,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.77645052317916, -86.15671214245026"
+    },
+    {
+        "name": "Radio City Music Hall, New York, NY",
+        "id": 205,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.76014662916018, -73.98002011831007"
+    },
+    {
+        "name": "Student Center, Modesto, CA",
+        "id": 206,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.65433992674914, -121.01044010315836"
+    },
+    {
+        "name": "Rose Palace, Pasadena, CA",
+        "id": 207,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.13155727866411, -118.14906465531911"
+    },
+    {
+        "name": "Anaheim Stadium, Anaheim, CA",
+        "id": 208,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.8004773669047, -117.8827535608962"
+    },
+    {
+        "name": "San Jose Civic Auditorium, San Jose, CA",
+        "id": 209,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.330999792009564, -121.88970468775184"
+    },
+    {
+        "name": "Oregon Country Fair Site, Veneta, OR",
+        "id": 210,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.05840233587396, -123.37340904785643"
+    },
+    {
+        "name": "St. John Arena, Columbus, OH",
+        "id": 211,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.00553084243058, -83.01933780299453"
+    },
+    {
+        "name": "Gizah Sound and Light Theater, Cairo, Greater Cairo",
+        "id": 212,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "29.976294713311415, 31.134307059864494"
+    },
+    {
+        "name": "Musikhalle, Hamburg, Hamburg",
+        "id": 213,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "53.55611159203147, 9.980847011117541"
+    },
+    {
+        "name": "Alsterdorfer Sporthalle, Hamburg, Hamburg",
+        "id": 214,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "53.602899661650696, 10.001892338101113"
+    }
+]

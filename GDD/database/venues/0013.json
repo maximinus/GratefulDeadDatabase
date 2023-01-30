@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Eagles Auditorium, Seattle, WA",
+        "id": 391,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.61127822745104, -122.3326905161554"
+    },
+    {
+        "name": "San Antonio Civic Auditorium, San Antonio, TX",
+        "id": 392,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "29.430959193514926, -98.4885982456883"
+    },
+    {
+        "name": "Birmingham Jefferson Convention Complex Coliseum, Birmingham, AL",
+        "id": 394,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.52519771230638, -86.81121193628309"
+    },
+    {
+        "name": "Hilton Hotel, San Francisco, CA",
+        "id": 395,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.7959327626299, -122.41072903960332"
+    },
+    {
+        "name": "Ohio Theatre, Columbus, OH",
+        "id": 396,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.96032734458369, -82.99904684843695"
+    },
+    {
+        "name": "Exposition Center, Milwaukee, WI",
+        "id": 397,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.112588964380585, -88.22354447190804"
+    },
+    {
+        "name": "Family Dog at the Great Highway, San Francisco, CA",
+        "id": 399,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.77510631913966, -122.51115246075402"
+    },
+    {
+        "name": "Pelletier Farm, St. Helens, OR",
+        "id": 400,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "45.888206253842384, -122.91210298236597"
+    },
+    {
+        "name": "Meadowlands Arena, East Rutherford, NJ",
+        "id": 401,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.81127331755637, -74.06820969528903"
+    },
+    {
+        "name": "Silver Stadium, Rochester, NY",
+        "id": 402,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.18695886053273, -77.61122310286291"
+    },
+    {
+        "name": "Youth Opportunities Center, Compton, CA",
+        "id": 403,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.95491305405575, -118.28301818787236"
+    },
+    {
+        "name": "Green Lake Aqua Theatre, Seattle, WA",
+        "id": 404,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.6716189365888, -122.34261277382569"
+    },
+    {
+        "name": "Piedmont Park, Atlanta, GA",
+        "id": 405,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.78878034023388, -84.37199313206025"
+    },
+    {
+        "name": "Muir Beach Lodge, Muir Beach, CA",
+        "id": 406,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.862399237002215, -122.58091465172701"
+    },
+    {
+        "name": "Carrier Dome, Syracuse, NY",
+        "id": 407,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.03641333561377, -76.13635747588823"
+    },
+    {
+        "name": "Holleder Memorial Stadium, Rochester, NY",
+        "id": 408,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.15400956268131, -77.610808101009"
+    },
+    {
+        "name": "Terminal Island Correctional Fac., San Pedro, CA",
+        "id": 409,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.72851886175669, -118.2683208455529"
+    },
+    {
+        "name": "Oxford Plains Speedway, Oxford, ME",
+        "id": 410,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.15426980382444, -70.48434824514813"
+    },
+    {
+        "name": "Stanley Theatre, Jersey City, NJ",
+        "id": 411,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.73345013802031, -74.06252100296525"
+    },
+    {
+        "name": "Richfield Coliseum, Richfield, OH",
+        "id": 413,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.251057772964515, -81.59508488083883"
+    },
+    {
+        "name": "Nassau Veterans Memorial Coliseum, Uniondale, NY",
+        "id": 414,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.723472916449325, -73.59066353180218"
+    },
+    {
+        "name": "Delta Center, Salt Lake City, UT",
+        "id": 415,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.76844683340389, -111.90111958947327"
+    },
+    {
+        "name": "York Farm, Poynette, WI",
+        "id": 416,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.39357759552186, -89.3992532384959"
+    },
+    {
+        "name": "Temple University, Philadelphia, PA",
+        "id": 417,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.98142125992989, -75.15531338764956"
+    },
+    {
+        "name": "Cincinnati Gardens, Cincinnati, OH",
+        "id": 418,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.18157489924443, -84.45513775884473"
+    }
+]

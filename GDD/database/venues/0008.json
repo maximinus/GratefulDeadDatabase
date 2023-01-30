@@ -1,0 +1,177 @@
+[
+    {
+        "name": "World Music Theatre, Tinley Park, IL",
+        "id": 245,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.54423537012378, -87.77657941827796"
+    },
+    {
+        "name": "Student Union Ballroom, Salt Lake City, UT",
+        "id": 246,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.76507344636476, -111.84178324529103"
+    },
+    {
+        "name": "Yale Bowl, New Haven, CT",
+        "id": 247,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.31345431044839, -72.96050388945102"
+    },
+    {
+        "name": "Texas Christian University, Fort Worth, TX",
+        "id": 248,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "32.70806973671226, -97.36286847627849"
+    },
+    {
+        "name": "Sun Dome, Tampa, FL",
+        "id": 249,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "28.059425334933632, -82.40649578805451"
+    },
+    {
+        "name": "Seattle Center Memorial Coliseum, Seattle, WA",
+        "id": 251,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.62287751135657, -122.34889998361528"
+    },
+    {
+        "name": "Roanoke Civic Center, Roanoke, VA",
+        "id": 252,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.279485603786625, -79.93589513193616"
+    },
+    {
+        "name": "Pine Knob Music Theatre, Clarkston, MI",
+        "id": 253,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.745342946916814, -83.37231898939118"
+    },
+    {
+        "name": "Hubert H. Humphrey Metrodome, Minneapolis, MN",
+        "id": 254,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.972769242198154, -93.25516215860273"
+    },
+    {
+        "name": "Jenison Field House, East Lansing, MI",
+        "id": 255,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.73108632625525, -84.49009193171885"
+    },
+    {
+        "name": "River Front Coliseum, Cincinnati, OH",
+        "id": 256,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.09820705546177, -84.50443578768444"
+    },
+    {
+        "name": "Sam Houston Coliseum, Houston, TX",
+        "id": 257,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "29.76328492709081, -95.36750050335142"
+    },
+    {
+        "name": "Kansas City Municipal Auditorium Arena, Kansas City, MO",
+        "id": 258,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.098069803229066, -94.58628735884794"
+    },
+    {
+        "name": "The Syndrome, Chicago, IL",
+        "id": 259,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.861644073854386, -87.62500422990009"
+    },
+    {
+        "name": "Hill Auditorium, Ann Arbor, MI",
+        "id": 260,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.27925166522297, -83.73931413730391"
+    },
+    {
+        "name": "Radio Luxembourg, Luxembourg, Luxembourg",
+        "id": 261,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "49.61310000139396, 6.122557939951948"
+    },
+    {
+        "name": "Fiesta Hall, San Mateo, CA",
+        "id": 262,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.54660069540268, -122.30150498032249"
+    },
+    {
+        "name": "Zoo Amphitheatre, Oklahoma City, OK",
+        "id": 263,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "35.51816451890655, -97.47457323200031"
+    },
+    {
+        "name": "Hollywood Palladium, Hollywood, CA",
+        "id": 264,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.098682542847015, -118.32429956088622"
+    },
+    {
+        "name": "Sandstone Amphitheatre, Bonner Springs, KS",
+        "id": 265,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.114229108586436, -94.87712550302969"
+    },
+    {
+        "name": "Awalt High School, Mountain View, CA",
+        "id": 266,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.360457635720586, -122.0678781454237"
+    },
+    {
+        "name": "Desert Sky Pavilion, Phoenix, AZ",
+        "id": 267,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.47173921227142, -112.23290604741676"
+    },
+    {
+        "name": "Sierra College, Rocklin, CA",
+        "id": 268,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.791150807839585, -121.21088698955158"
+    },
+    {
+        "name": "Dean Smith Center, Chapel Hill, NC",
+        "id": 269,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "35.8997016437351, -79.0438945608231"
+    },
+    {
+        "name": "Events Center, Boulder, CO",
+        "id": 270,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.01196715850217, -105.26219960675105"
+    }
+]

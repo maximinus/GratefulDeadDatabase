@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Long Beach Arena, Long Beach, CA",
+        "id": 510,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.7649876754479, -118.18930443020561"
+    },
+    {
+        "name": "Meramec Community College, Kirkwood, MO",
+        "id": 511,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.56895200596776, -90.42063560305084"
+    },
+    {
+        "name": "Orange County Fairgrounds, Costa Mesa, CA",
+        "id": 512,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.66614620555604, -117.90098149765369"
+    },
+    {
+        "name": "River Bend Music Center, Cincinnati, OH",
+        "id": 513,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.05218469194415, -84.41888597419563"
+    },
+    {
+        "name": "Baton Rouge Int. Speedway, Prairieville, LA",
+        "id": 514,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "30.622087791264942, -91.12238881867154"
+    },
+    {
+        "name": "Franklin County Field, Highgate, VT",
+        "id": 515,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.934502402573436, -73.09104255253517"
+    },
+    {
+        "name": "Academy of Music, New York, NY",
+        "id": 516,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.734232606806756, -73.98853337312664"
+    },
+    {
+        "name": "Fillmore Auditorim, San Francisco, CA",
+        "id": 517,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.78424818422584, -122.43299690122551"
+    },
+    {
+        "name": "The Auditorium, Austin, TX",
+        "id": 518,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "30.2604929160605, -97.75107064566365"
+    },
+    {
+        "name": "Caf' au Go, New York, NY",
+        "id": 519,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.728269993522424, -73.9995024621193"
+    },
+    {
+        "name": "Polo Field, San Francisco, CA",
+        "id": 520,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.76833887479951, -122.49294566075432"
+    },
+    {
+        "name": "Allan Theater, Cleveland, OH",
+        "id": 521,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.50190158085597, -81.68151284526083"
+    },
+    {
+        "name": "Oakland Auditorium Arena, Oakland, CA",
+        "id": 522,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.79782765917505, -122.26160843191678"
+    },
+    {
+        "name": "Cape Cod Coliseum, South Yarmouth, MA",
+        "id": 523,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.68949800879853, -70.19583436059901"
+    },
+    {
+        "name": "Assembly Hall, Champaign-Urbana, IL",
+        "id": 524,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.09644183610147, -88.23594711833678"
+    },
+    {
+        "name": "The Palace, Auburn Hills, MI",
+        "id": 525,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.69729425894349, -83.24553886055675"
+    },
+    {
+        "name": "Grand Center, Grand Rapids, MI",
+        "id": 526,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.9691866846873, -85.67287102985341"
+    },
+    {
+        "name": "Colt Park, Hartford, CT",
+        "id": 527,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.75182777405256, -72.6691259471059"
+    },
+    {
+        "name": "46th Street Rock Palace, Brooklyn, NY",
+        "id": 528,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.63934108690406, -73.99399757598793"
+    },
+    {
+        "name": "The Omni, Atlanta, GA",
+        "id": 530,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.7727298319506, -84.39203568787838"
+    },
+    {
+        "name": "Hollywood Bowl, Los Angeles, CA",
+        "id": 531,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.11236609845932, -118.33916008972226"
+    },
+    {
+        "name": "The Centrum, Worcester, MA",
+        "id": 532,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.26460856819179, -71.79866340290202"
+    },
+    {
+        "name": "Lanai Theater, Crockett, CA",
+        "id": 533,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.054690127303886, -122.22370616074356"
+    },
+    {
+        "name": "Mississippi River Festival, Edwardsville, IL",
+        "id": 534,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.79528237286594, -89.99964404511755"
+    },
+    {
+        "name": "Adams Field House, Missoula, MT",
+        "id": 535,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "46.863476257314574, -113.98029991619015"
+    }
+]

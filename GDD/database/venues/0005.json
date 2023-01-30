@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Three Rivers Stadium, Pittsburgh, PA",
+        "id": 158,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.45713424126084, -79.91639476083797"
+    },
+    {
+        "name": "Catholic Youth Center, Scranton, PA",
+        "id": 159,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.41014037544327, -75.65677424730092"
+    },
+    {
+        "name": "Portland Meadows, Portland, OR",
+        "id": 160,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "45.590603961152254, -122.67627691933185"
+    },
+    {
+        "name": "L'Olympia Bruno Coquatrix, Paris, Ile-de-France",
+        "id": 161,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "48.870311013191255, 2.3282905819083433"
+    },
+    {
+        "name": "Palais des Sports, Paris, Ile-de-France",
+        "id": 162,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "48.832961716843336, 2.2863330837562175"
+    },
+    {
+        "name": "Hippodrome de Pantin, Paris, Ile-de-France",
+        "id": 163,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "48.89020121375989, 2.3918008561188957"
+    },
+    {
+        "name": "Le Zenith, Paris, Ile-de-France",
+        "id": 164,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "48.8943809132472, 2.3932606837594887"
+    },
+    {
+        "name": "Cow Palace, Daly City, CA",
+        "id": 165,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.70792317230706, -122.42036727445347"
+    },
+    {
+        "name": "Keifer Lakefront Arena, New Orleans, LA",
+        "id": 166,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "30.03036780157796, -90.05042447290585"
+    },
+    {
+        "name": "Farrell Hall, Delhi, NY",
+        "id": 167,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.270019932913414, -74.92479730863141"
+    },
+    {
+        "name": "Tulsa Fairgrounds Pavilion, Tulsa, OK",
+        "id": 169,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.13714851943449, -95.93291258986291"
+    },
+    {
+        "name": "Fieldhouse, Iowa City, IA",
+        "id": 170,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.658691316954325, -91.54665286078216"
+    },
+    {
+        "name": "Kiel Opera House, St. Louis, MO",
+        "id": 171,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.628239491238936, -90.20174783023477"
+    },
+    {
+        "name": "International Speedway, Hollywood, FL",
+        "id": 172,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "25.97830649730983, -80.13958343256158"
+    },
+    {
+        "name": "Metropolitan Center, Minneapolis, MN",
+        "id": 173,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.898110869434205, -93.24766197411812"
+    },
+    {
+        "name": "Downs of Santa Fe, Santa Fe, NM",
+        "id": 174,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "35.58902369406581, -106.07427746104985"
+    },
+    {
+        "name": "Roscoe Maples Pavilion, Palo Alto, CA",
+        "id": 175,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.42985792537234, -122.16063330330114"
+    },
+    {
+        "name": "Utica Memorial Auditorium, Utica, NY",
+        "id": 176,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.104723975981365, -75.23347720489174"
+    },
+    {
+        "name": "Glens Falls Civic Center, Glens Falls, NY",
+        "id": 177,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.30810441424393, -73.64166028398952"
+    },
+    {
+        "name": "Henry J. Kaiser Convention Center, Oakland, CA",
+        "id": 178,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.79813552366346, -122.26112716122854"
+    },
+    {
+        "name": "Carolina Coliseum Arena, Columbia, SC",
+        "id": 179,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.99427354944962, -81.0327909113862"
+    },
+    {
+        "name": "Sullivan Stadium, Foxboro, MA",
+        "id": 181,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.09115277439431, -71.2643465030904"
+    },
+    {
+        "name": "Los Angeles Sports Arena, Los Angeles, CA",
+        "id": 182,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.0142660081744, -118.28790758994919"
+    },
+    {
+        "name": "Marin County Veterans Auditorium, San Rafael, CA",
+        "id": 184,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.00227621822569, -122.53346278793356"
+    },
+    {
+        "name": "Palacio De Los Deportes, Barcelona, Catalonia",
+        "id": 185,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.59833407776922, 2.287200231472611"
+    }
+]

@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Worcester Polytechnic Institute, Worcester, MA",
+        "id": 450,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.274723852347606, -71.80668332450423"
+    },
+    {
+        "name": "San Diego Sports Arena, San Diego, CA",
+        "id": 451,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "32.75555234413977, -117.21222610325817"
+    },
+    {
+        "name": "Augusta Civic Center, Augusta, ME",
+        "id": 453,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.34249321533457, -69.79890076437216"
+    },
+    {
+        "name": "Easttown Theatre, Detroit, MI",
+        "id": 454,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.3888170532811, -83.02010906162936"
+    },
+    {
+        "name": "International Amphitheatre, Chicago, IL",
+        "id": 455,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.81718637017093, -87.64563488943021"
+    },
+    {
+        "name": "Psychedelic Supermarket, Boston, MA",
+        "id": 456,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.34894033099803, -71.10012624708092"
+    },
+    {
+        "name": "Devore Field, Chula Vista, CA",
+        "id": 458,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "32.64322039408184, -117.00011033209833"
+    },
+    {
+        "name": "John F. Kennedy Stadium, Philadelphia, PA",
+        "id": 459,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.920154437815754, -75.1705726164885"
+    },
+    {
+        "name": "Carousel Ballroom, San Francisco, CA",
+        "id": 460,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.96163334999239, -75.58584051834215"
+    },
+    {
+        "name": "Bucknell University, Lewisburg, PA",
+        "id": 461,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.955594048554914, -76.88520164565567"
+    },
+    {
+        "name": "West High Auditorium, Anchorage, AK",
+        "id": 462,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "61.20121303648905, -149.91686396148737"
+    },
+    {
+        "name": "Alfred College, Alfred, NY",
+        "id": 463,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.25361650210607, -77.78768374522961"
+    },
+    {
+        "name": "Eureka Municipal Auditorium, Eureka, CA",
+        "id": 465,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.79688611025712, -124.1654403373651"
+    },
+    {
+        "name": "Electric Factory, Philadelphia, PA",
+        "id": 466,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.95906707439214, -75.15019056438003"
+    },
+    {
+        "name": "Portland Memorial Coliseum, Portland, OR",
+        "id": 467,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "45.53229128380949, -122.66930844508715"
+    },
+    {
+        "name": "Parc des Expositions, Dijon, Bourgogne-Franche-Comte",
+        "id": 468,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.32898574023112, 5.053838683831397"
+    },
+    {
+        "name": "Palace Of Fine Arts, San Francisco, CA",
+        "id": 469,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.80315117643807, -122.44841237424359"
+    },
+    {
+        "name": "Miami Arena, Miami, FL",
+        "id": 470,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "25.78142380427249, -80.19489837647991"
+    },
+    {
+        "name": "Honolulu Civic Auditorium, Honolulu, HI",
+        "id": 471,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "21.29934276491334, -157.84386810356378"
+    },
+    {
+        "name": "SIU Arena, Carbondale, IL",
+        "id": 473,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.708497930886075, -89.21867941657419"
+    },
+    {
+        "name": "California Exposition Amphitheater, Sacramento, CA",
+        "id": 474,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.590602877451865, -121.43532067235819"
+    },
+    {
+        "name": "Town Park, Telluride, CO",
+        "id": 475,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.93447529789785, -107.80738953191157"
+    },
+    {
+        "name": "Joe Louis Arena, Detroit, MI",
+        "id": 476,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.32543077588681, -83.05266007406301"
+    },
+    {
+        "name": "Melodyland Theater, Anaheim, CA",
+        "id": 477,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.800734259035735, -117.91805974740576"
+    },
+    {
+        "name": "Roosevelt Stadium, Jersey City, NJ",
+        "id": 478,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.70634916555169, -74.09959557412989"
+    }
+]

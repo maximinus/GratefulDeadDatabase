@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Dillon Stadium, Hartford, CT",
+        "id": 299,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.75392295593664, -72.66107786059632"
+    },
+    {
+        "name": "Seattle Center Coliseum, Seattle, WA",
+        "id": 301,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.62199915263259, -122.35166269414273"
+    },
+    {
+        "name": "Alumni Stadium, Amherst, MA",
+        "id": 302,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.37746118615743, -72.5360834182432"
+    },
+    {
+        "name": "Max Yasgur's Farm, Bethel, NY",
+        "id": 303,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.70239170888558, -74.88056037032445"
+    },
+    {
+        "name": "Irvine Auditorium, Philadelphia, PA",
+        "id": 305,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.95112738794749, -75.19300326066966"
+    },
+    {
+        "name": "Saratoga Performing Arts Center, Saratoga, NY",
+        "id": 306,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.055553439846605, -73.80598364705097"
+    },
+    {
+        "name": "Niagara Falls Civic Center, Niagara Falls, NY",
+        "id": 307,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.08602653213258, -79.05971734519436"
+    },
+    {
+        "name": "El Camino Park, Palo Alto, CA",
+        "id": 308,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.44497540498475, -122.16786410309352"
+    },
+    {
+        "name": "Kresge Plaza, Cambridge, MA",
+        "id": 309,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.35832191607258, -71.09502373173468"
+    },
+    {
+        "name": "McMahon Stadium, Calgary, Alberta",
+        "id": 310,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "51.070540972096616, -114.12143065064322"
+    },
+    {
+        "name": "Tivoli Concert Hall, Copenhagen, Hovedstadsomradet",
+        "id": 311,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "55.6729702771436, 12.568558555410466"
+    },
+    {
+        "name": "Forum Kobenhavn, Copenhagen, Hovedstadsomradet",
+        "id": 312,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "55.681249048619, 12.552873184247355"
+    },
+    {
+        "name": "Internationales Congress Centrum, Berlin, Berlin",
+        "id": 313,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "52.50464073766357, 13.280512353390938"
+    },
+    {
+        "name": "Dream Bowl, Napa, CA",
+        "id": 315,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.2076507727677, -122.2557583300158"
+    },
+    {
+        "name": "St. Paul Auditorium, St. Paul, MN",
+        "id": 316,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.944160060044915, -93.09858557394988"
+    },
+    {
+        "name": "City Island, Harrisburg, PA",
+        "id": 317,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.25590723659738, -76.88794331824606"
+    },
+    {
+        "name": "Star Lake Amphitheatre, Burgettstown, PA",
+        "id": 318,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.419617240772865, -80.4341220164685"
+    },
+    {
+        "name": "Building A, Sacramento, CA",
+        "id": 320,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.597031497891216, -121.43541499692829"
+    },
+    {
+        "name": "Metropolitan Sports Center, Bloomington, MN",
+        "id": 321,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.863912382145834, -93.2486050027899"
+    },
+    {
+        "name": "Poplar Creek Music Theatre, Hoffman Estates, IL",
+        "id": 323,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.08168355675561, -88.22457350290969"
+    },
+    {
+        "name": "San Francisco Civic Auditorium, San Francisco, CA",
+        "id": 324,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.778399770083354, -122.41737688959047"
+    },
+    {
+        "name": "Billerica Forum, Billerica, MA",
+        "id": 326,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.58902274625151, -71.30769564707079"
+    },
+    {
+        "name": "The Scope, Norfolk, VA",
+        "id": 327,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.85340031604791, -76.2868565454426"
+    },
+    {
+        "name": "Del Mar Fairgrounds, San Diego, CA",
+        "id": 328,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "32.973686216749485, -117.25657137767529"
+    },
+    {
+        "name": "San Antonio Civic Center Arena, San Antonio, TX",
+        "id": 330,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "29.419199873038252, -98.48542505917924"
+    }
+]

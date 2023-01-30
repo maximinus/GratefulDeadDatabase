@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Salt Palace, Salt Lake City, UT",
+        "id": 331,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.76807768560325, -111.89619974714617"
+    },
+    {
+        "name": "Soldier Field, Chicago, IL",
+        "id": 332,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.86253689946862, -87.61665621640944"
+    },
+    {
+        "name": "Betty Nelson's Organic Raspberry Farm, Sultan, WA",
+        "id": 333,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.86322419301886, -122.1414340310637"
+    },
+    {
+        "name": "Franklin & Marshall College, Lancaster, PA",
+        "id": 334,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.04893708071454, -76.31988318764692"
+    },
+    {
+        "name": "Cleveland Public Hall, Cleveland, OH",
+        "id": 335,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.50430378294227, -81.69343745478908"
+    },
+    {
+        "name": "Santa Cruz County Fairgrounds, Watsonville, CA",
+        "id": 337,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.951380894070944, -121.73438790125662"
+    },
+    {
+        "name": "Moscone Convention Center, San Francisco, CA",
+        "id": 338,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.784509915083376, -122.40070073191721"
+    },
+    {
+        "name": "Stanley Theatre, Pittsburgh, PA",
+        "id": 339,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.443358496170525, -79.99964090297699"
+    },
+    {
+        "name": "Anderson Theater, New York, NY",
+        "id": 340,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.29932825647993, -75.94833538273468"
+    },
+    {
+        "name": "Stabler Arena, Bethlehem, PA",
+        "id": 341,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.5854386811536, -75.35788520061257"
+    },
+    {
+        "name": "Knickerbocker Arena, Albany, NY",
+        "id": 342,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.64884640974642, -73.75483518753995"
+    },
+    {
+        "name": "Indiana Convention Center, Indianapolis, IN",
+        "id": 343,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.76468190622654, -86.1643665030041"
+    },
+    {
+        "name": "McGaw Memorial Hall, Evanston, IL",
+        "id": 344,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.066663041711976, -87.69282075451402"
+    },
+    {
+        "name": "Cumberland County Civic Center, Portland, ME",
+        "id": 345,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.65574707876558, -70.25926573167929"
+    },
+    {
+        "name": "Stockton Ballroom, Stockton, CA",
+        "id": 347,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.04001231750546, -121.34296590863704"
+    },
+    {
+        "name": "Robert F. Kennedy Stadium, Washington, DC",
+        "id": 348,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.88974734850461, -76.97220505885603"
+    },
+    {
+        "name": "Glenn Miller Ballroom, Boulder, CO",
+        "id": 349,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.00703719155134, -105.27150120299446"
+    },
+    {
+        "name": "Saenger Performing Arts Center, New Orleans, LA",
+        "id": 350,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "29.95675916250205, -90.07247600334567"
+    },
+    {
+        "name": "Lane Community College, Eugene, OR",
+        "id": 351,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.00915985055953, -123.03473154515457"
+    },
+    {
+        "name": "Ice Palace, Las Vegas, NV",
+        "id": 353,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.14108490770166, -115.14391828965076"
+    },
+    {
+        "name": "Tyrone Guthrie Theatre, Minneapolis, MN",
+        "id": 354,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.97834462522618, -93.25584504511188"
+    },
+    {
+        "name": "Feyline Field, Tempe, AZ",
+        "id": 355,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.40092478313895, -111.97095496090962"
+    },
+    {
+        "name": "Atlanta Municipal Auditorium, Atlanta, GA",
+        "id": 356,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.75407462109583, -84.38456710322492"
+    },
+    {
+        "name": "Grugahalle, Essen, North Rhine-Westphalia",
+        "id": 357,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "51.43144064067173, 6.9980589821735295"
+    },
+    {
+        "name": "State University of New York, New York, NY",
+        "id": 358,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.75446536998251, -73.99117843513059"
+    }
+]

@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Fox Theatre, St. Louis, MO",
+        "id": 272,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.63906552143551, -90.23182221864565"
+    },
+    {
+        "name": "Universal Amphitheatre, Universal City, CA",
+        "id": 273,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.13641498089048, -118.35523443204843"
+    },
+    {
+        "name": "National Guard Armory, St. Louis, MO",
+        "id": 274,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.63210631733571, -90.23756066072134"
+    },
+    {
+        "name": "Longshoreman's Hall, San Francisco, CA",
+        "id": 275,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.80657522652044, -122.41593184540704"
+    },
+    {
+        "name": "Kezar Stadium, San Francisco, CA",
+        "id": 276,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.76716412750821, -122.45605788773555"
+    },
+    {
+        "name": "Recreational Hall, Davis, CA",
+        "id": 279,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.542016778276896, -121.75964923188839"
+    },
+    {
+        "name": "Alfond Arena, Orono, ME",
+        "id": 280,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.904609149948584, -68.67308185624705"
+    },
+    {
+        "name": "Five Seasons Center, Cedar Rapids, IA",
+        "id": 281,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.98034348451378, -91.66745765873156"
+    },
+    {
+        "name": "Garden Auditorium, Vancouver, British Columbia",
+        "id": 282,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "49.281815946069365, -123.03628624676807"
+    },
+    {
+        "name": "PNE Agrodome, Vancouver, British Columbia",
+        "id": 283,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "49.284914078615635, -123.0407718202901"
+    },
+    {
+        "name": "Paradise Valley Resort, Squamish, British Columbia",
+        "id": 284,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "49.82036176463454, -123.15547392677487"
+    },
+    {
+        "name": "Pacific Coliseum, Vancouver, British Columbia",
+        "id": 285,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "49.28602251733936, -123.0427091449126"
+    },
+    {
+        "name": "Reunion Arena, Dallas, TX",
+        "id": 286,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "32.77414061798527, -96.80845224558453"
+    },
+    {
+        "name": "Olympic Center, Lake Placid, NY",
+        "id": 287,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.28307495601353, -73.98582306048839"
+    },
+    {
+        "name": "Recreation Hall, State College, PA",
+        "id": 288,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.79561586029256, -77.86867233179926"
+    },
+    {
+        "name": "Spartan Stadium, San Jose, CA",
+        "id": 289,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.31985358505329, -121.86799748614854"
+    },
+    {
+        "name": "Warfield Theater, San Francisco, CA",
+        "id": 290,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.78291957509485, -122.41042800308087"
+    },
+    {
+        "name": "Oakland Coliseum Stadium, Oakland, CA",
+        "id": 291,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.750491218670945, -122.20306340578611"
+    },
+    {
+        "name": "Southern Star Amphitheatre, Houston, TX",
+        "id": 292,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "29.673094694838994, -95.41179806873309"
+    },
+    {
+        "name": "Avalon Ballroom, San Francisco, CA",
+        "id": 293,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.79248555160507, -122.4231449030805"
+    },
+    {
+        "name": "Kongressaal, Munich, Bavaria",
+        "id": 294,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "48.13056310920063, 11.584149683868887"
+    },
+    {
+        "name": "Stadthalle, Munich, Bavaria",
+        "id": 295,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "48.13081048685853, 11.366509153177077"
+    },
+    {
+        "name": "Thee Image, Miami, FL",
+        "id": 296,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "25.946617509691393, -80.1221462169474"
+    },
+    {
+        "name": "Veterans Hall, Columbus, OH",
+        "id": 297,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.96215113146064, -83.00810683183272"
+    },
+    {
+        "name": "Colden Auditorium, Queens, NY",
+        "id": 298,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.738468272474364, -73.8159763183109"
+    }
+]

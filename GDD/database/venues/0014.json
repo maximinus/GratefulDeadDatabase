@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Carthay Studios, Los Angeles, CA",
+        "id": 420,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.05227252341828, -118.36813400135951"
+    },
+    {
+        "name": "Rosemont Horizon, Rosemont, IL",
+        "id": 421,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.005474226205166, -87.88785146058585"
+    },
+    {
+        "name": "Camp Randall Field House, Madison, WI",
+        "id": 422,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.06868350291348, -89.41267463170448"
+    },
+    {
+        "name": "Masonic Temple, Portland, OR",
+        "id": 423,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "45.51708189517649, -122.68332011625135"
+    },
+    {
+        "name": "Washington University, St. Louis, MO",
+        "id": 425,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.65592394195506, -90.31052966072045"
+    },
+    {
+        "name": "Low Library Plaza, New York, NY",
+        "id": 426,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.77364036898071, -73.98476128947303"
+    },
+    {
+        "name": "Hall Of Flowers, San Mateo, CA",
+        "id": 427,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.54487974499658, -122.30171513192629"
+    },
+    {
+        "name": "Silva Hall, Eugene, OR",
+        "id": 428,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "44.05292803035418, -123.09324327584442"
+    },
+    {
+        "name": "BSU Pavilion, Boise, ID",
+        "id": 429,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.60378246629489, -116.19893167400856"
+    },
+    {
+        "name": "Cleveland Convention Center, Cleveland, OH",
+        "id": 430,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.50382240543244, -81.69452334526083"
+    },
+    {
+        "name": "Mammoth Gardens, Denver, CO",
+        "id": 431,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.74040912002193, -104.97718515882272"
+    },
+    {
+        "name": "Santa Monica Civic Auditorium, Santa Monica, CA",
+        "id": 432,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.00911637476673, -118.48935406173841"
+    },
+    {
+        "name": "University Auditorium, Tucson, AZ",
+        "id": 433,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "32.23167713523947, -110.95542008792923"
+    },
+    {
+        "name": "Oklahoma City Fairgrounds Arena, Oklahoma City, OK",
+        "id": 434,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "35.470754977511405, -97.57358188967488"
+    },
+    {
+        "name": "Greek Theatre, Berkeley, CA",
+        "id": 437,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.87376218955882, -122.25446077424077"
+    },
+    {
+        "name": "The Warehouse, New Orleans, LA",
+        "id": 438,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "29.926059727779112, -90.06760476101954"
+    },
+    {
+        "name": "Oklahoma City Music Hall, Oklahoma City, OK",
+        "id": 439,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "35.469230629978256, -97.52361394734791"
+    },
+    {
+        "name": "Las Lomas High School, Walnut Creek, CA",
+        "id": 440,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.89103847884716, -122.05628133747918"
+    },
+    {
+        "name": "King's Beach Bowl, Lake Tahoe, CA",
+        "id": 441,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.23628976078681, -120.02519458953428"
+    },
+    {
+        "name": "Straight Theater, San Francisco, CA",
+        "id": 442,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.769975641369506, -122.45063490713288"
+    },
+    {
+        "name": "Compton Terrace Amphitheatre, Tempe, AZ",
+        "id": 443,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "33.44732616278472, -111.95778480509055"
+    },
+    {
+        "name": "Greensboro Coliseum, Greensboro, NC",
+        "id": 444,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.059733664039165, -79.82569578779847"
+    },
+    {
+        "name": "Merriweather Post Pavilion, Columbia, MD",
+        "id": 445,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.2090727750267, -76.86272096069892"
+    },
+    {
+        "name": "Pershing Municipal Auditorium, Lincoln, NE",
+        "id": 446,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.81217045720668, -96.6994358006034"
+    },
+    {
+        "name": "Hershey Park Stadium, Hershey, PA",
+        "id": 447,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.290124178932835, -76.6587727453102"
+    }
+]

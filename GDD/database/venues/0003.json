@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Hec. S. Edmundson Pavilion, Seattle, WA",
+        "id": 101,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.652238825560964, -122.3020701008076"
+    },
+    {
+        "name": "Johanneshov Ice Stadium, Stockholm, Sodermanland",
+        "id": 104,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "59.29498837660859, 18.081783469097424"
+    },
+    {
+        "name": "Felt Forum, New York, NY",
+        "id": 106,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.75067213667586, -73.99331010296447"
+    },
+    {
+        "name": "Seattle Center Memorial Stadium, Seattle, WA",
+        "id": 107,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.62303248518135, -122.34881957197261"
+    },
+    {
+        "name": "Grande Ballroom, Detroit, MI",
+        "id": 108,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.36498766069345, -83.128704783491"
+    },
+    {
+        "name": "Atwood Hall, Worcester, MA",
+        "id": 109,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.25153465017039, -71.82200368941204"
+    },
+    {
+        "name": "Concertgebouw, Amsterdam, North Holland",
+        "id": 110,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "52.35650244516576, 4.8791244398928475"
+    },
+    {
+        "name": "Melkweg, Amsterdam, North Holland",
+        "id": 111,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "52.36493010193754, 4.881248897566249"
+    },
+    {
+        "name": "Kleinhans Music Hall, Buffalo, NY",
+        "id": 113,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.901911526842625, -78.8834821453803"
+    },
+    {
+        "name": "Kirby Fieldhouse, Easton, PA",
+        "id": 114,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.70205534555879, -75.21071247616942"
+    },
+    {
+        "name": "Sargent Gym, Boston, MA",
+        "id": 115,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.34985265740759, -71.1019621770728"
+    },
+    {
+        "name": "Gulfstream Park Racetrack, Hallandale, FL",
+        "id": 117,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "25.9783354316878, -80.13951905954741"
+    },
+    {
+        "name": "Earl Warren Showgrounds, Santa Barbara, CA",
+        "id": 118,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "34.43022995534065, -119.73532490342548"
+    },
+    {
+        "name": "Walter Koebel Halle, Ruesselsheim, Hessen",
+        "id": 119,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "49.98196804656733, 8.434917181968038"
+    },
+    {
+        "name": "Lindley Meadows, San Francisco, CA",
+        "id": 120,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.77083053448994, -122.49074667445068"
+    },
+    {
+        "name": "Boston Tea Party, Boston, MA",
+        "id": 121,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "42.34671932303873, -71.07039942040961"
+    },
+    {
+        "name": "Market Square Arena, Indianapolis, IN",
+        "id": 122,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.76857634253372, -86.15258467436226"
+    },
+    {
+        "name": "Reed's Ranch, Colorado Springs, CO",
+        "id": 123,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.93376168460616, -104.79063304368528"
+    },
+    {
+        "name": "Century II Convention Hall, Wichita, KS",
+        "id": 124,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.685139246900086, -97.3405264321258"
+    },
+    {
+        "name": "Boreal Ridge Ski Resort, Donner's Summit, CA",
+        "id": 125,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.33631171121797, -120.35042340136756"
+    },
+    {
+        "name": "Fillmore Auditorium, San Francisco, CA",
+        "id": 126,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.78423970496917, -122.43299690143587"
+    },
+    {
+        "name": "O'Keefe Centre, Toronto, Ontario",
+        "id": 127,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.64685859460922, -79.37605268952271"
+    },
+    {
+        "name": "CNE Stadium, Toronto, Ontario",
+        "id": 128,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.63320427170296, -79.42261843185192"
+    },
+    {
+        "name": "Field House (Seneca College), Toronto, Ontario",
+        "id": 129,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.80539203106081, -79.35161850115794"
+    },
+    {
+        "name": "Rock Pile, Toronto, Ontario",
+        "id": 130,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "43.629782678967345, -79.54900238767364"
+    }
+]

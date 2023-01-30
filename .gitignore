@@ -10,11 +10,17 @@ export_presets.cfg
 # Environments 
 venv/
 
+# Don't add cache details
+__pycache__/
+
 # Pycharm settings
 .idea/
 
 # Don't add raw sound files
 *.wav
+
+# Don't add python compiled files
+*.pyf
 
 # don't add raw csv
 jerrybase.csv

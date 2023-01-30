@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Riverfront Arena, Cincinnati, OH",
+        "id": 359,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.098173750308916, -84.50446797419386"
+    },
+    {
+        "name": "Euphoria Ballroom, San Rafael, CA",
+        "id": 360,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.96399705248433, -122.51092222027519"
+    },
+    {
+        "name": "Grote Zaal, Rotterdam, South Holland",
+        "id": 361,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "51.92220769135966, 4.472831139871008"
+    },
+    {
+        "name": "Capitol Theater, Port Chester, NY",
+        "id": 362,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.00161251674513, -73.66549216062732"
+    },
+    {
+        "name": "USAir Arena, Landover, MD",
+        "id": 363,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.894432727561394, -76.83905874536532"
+    },
+    {
+        "name": "Harding Theater, San Francisco, CA",
+        "id": 364,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.77557737843475, -122.4375398472634"
+    },
+    {
+        "name": "Riverport Amphitheatre, Maryland Heights, MO",
+        "id": 368,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.7448441732843, -90.46916762074859"
+    },
+    {
+        "name": "Calaveras County Fairgrounds, Angel's Camp, CA",
+        "id": 369,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.047783646436535, -120.5215788607438"
+    },
+    {
+        "name": "Madison Square Garden, New York, NY",
+        "id": 370,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.75070766429956, -73.99339578761862"
+    },
+    {
+        "name": "Cole Field House, College Park, MD",
+        "id": 371,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.98821455351936, -76.94673934536165"
+    },
+    {
+        "name": "Bellarmine College, Louisville, KY",
+        "id": 372,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.2187130304295, -85.70547345888187"
+    },
+    {
+        "name": "Springer's Inn, Portland, OR",
+        "id": 373,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "45.51132844280751, -122.46795631625167"
+    },
+    {
+        "name": "Napa County Fairgrounds, Napa, CA",
+        "id": 374,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.307586306632146, -122.28121175796899"
+    },
+    {
+        "name": "Manhattan Center, New York, NY",
+        "id": 375,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "40.752995457307954, -73.99378056063746"
+    },
+    {
+        "name": "Kiel Auditorium, St. Louis, MO",
+        "id": 376,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.628256254251575, -90.20180147421205"
+    },
+    {
+        "name": "Hara Arena, Dayton, OH",
+        "id": 377,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.82130505821271, -84.25571410114655"
+    },
+    {
+        "name": "1300 Boulevard Way, Walnut Creek, CA",
+        "id": 379,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "37.89338177384429, -122.0773048607495"
+    },
+    {
+        "name": "McFarlin Auditorium, Dallas, TX",
+        "id": 380,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "32.84441497731103, -96.7861262186011"
+    },
+    {
+        "name": "Veterans Auditorium, Santa Rosa, CA",
+        "id": 381,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "38.43429338780547, -122.70100245887373"
+    },
+    {
+        "name": "Electric Theater, Chicago, IL",
+        "id": 382,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "41.96962957839271, -87.66781906058738"
+    },
+    {
+        "name": "Coliseum, Morgantown, WV",
+        "id": 383,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "39.649548970074875, -79.98138174533574"
+    },
+    {
+        "name": "Beat Club, Bremen, Bremen",
+        "id": 386,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "53.079427904930455, 8.80054276799636"
+    },
+    {
+        "name": "Stadthalle, Bremen, Bremen",
+        "id": 387,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "53.0867876919858, 8.816804926439405"
+    },
+    {
+        "name": "Monterey Fairgrounds, Monterey, CA",
+        "id": 388,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "36.59494586080081, -121.86352124545198"
+    },
+    {
+        "name": "Spokane Coliseum, Spokane, WA",
+        "id": 390,
+        "latitude": null,
+        "longitude": null,
+        "lat_long": "47.6667123314159, -117.42227523520941"
+    }
+]

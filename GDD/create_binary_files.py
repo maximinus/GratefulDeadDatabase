@@ -216,7 +216,7 @@ def write_weather_data():
             byte_data.append(w_hour[1])
 
     # save the data
-    binary_file = open(VENUES_FILE, 'wb')
+    binary_file = open(WEATHER_FILE, 'wb')
     binary_file.write(struct.pack(f'<{len(byte_data)}H', *byte_data))
     binary_file.close()
     print(f'Saved weather to {WEATHER_FILE}, {len(byte_data)} bytes')

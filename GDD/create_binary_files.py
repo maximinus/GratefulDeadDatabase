@@ -1,8 +1,11 @@
 import struct
 import operator
+from tqdm import tqdm
 from pathlib import Path
+from datetime import date
 
-from src.database_helpers import get_all_songs, get_all_venues, get_all_weather, get_all_hour_weather
+from src.database_helpers import get_all_songs, get_all_venues, get_all_weather,\
+    get_all_hour_weather, get_all_shows, get_all_sets, get_all_songs_in_set
 
 BINARY_FOLDER = Path('./database/binary_data')
 SONGS_FILE = BINARY_FOLDER / 'songs.bin'
@@ -11,49 +14,24 @@ VENUES_FILE = BINARY_FOLDER / 'venues.bin'
 WEATHER_FILE = BINARY_FOLDER / 'weather.bin'
 
 # builds the binary files needed by the website
-
-# there are 4 files
-
-# songs.bin
-#   the data format is unsigned 8-bit array
-#   An array of strings, null terminated, with an extra 0 byte at the end
-#   The array of strings must be arranged in the id order of the songs, from 0 upwards
-
-# shows.bin
-#   For each show:
-#       the data format is unsigned 16-bit array
-#       First 2 bytes are the date, represented as number of days since 1st Jan 1950
-#       3rd and 4th bytes are the venue id
-#       Then we have a set, constructed as a list of [song_index, length]
-#       Since we can't store a zero, the song_index is the real index + 1
-#       Each set ends with a zero
-#       If a set STARTS with a zero, that means we are at the end of the show
-
-# venues.bin
-#   the data format is unsigned 8-bit array
-#   An array of strings. Each venue has 8 strings:
-#       1: Venue ID as string
-#       2: Venue name
-#       3: College name
-#       4: City name
-#       5: State name (or regional name) - this will be a code like CA if a US state
-#       6: Country name
-#       7: Latitude
-#       8: Longitude
-#   Since every venue has 8 strings, we just traverse in order
-
-# weather.bin
-#   grabs hour data for temp, feels like temp and boolean "is raining"
-#   array of: [weather_id, [temp, feels_like] * 24] for all weather data
+# there are 4 files:
+#   songs.bin
+#   shows.bin
+#   venues.bin
+#   weather.bin
 
 
 def write_song_data():
+    # the data format is unsigned 8-bit array
+    # An array of strings, null terminated, with an extra 0 byte at the end
+    # The array of strings must be arranged in the id order of the songs, from 0 upwards
     # take the easy way and just create the values required first
+    print('Getting songs')
     all_songs = get_all_songs()
     # order by id value
     all_songs.sort(key=operator.attrgetter('id'))
     byte_data = []
-    for i in all_songs:
+    for i in tqdm(all_songs):
         for j in i.name:
             if ord(j) > 255:
                 print(f'Error: {j}: {ord(j)}')
@@ -67,14 +45,90 @@ def write_song_data():
     print(f'Saved songs to {SONGS_FILE}, {len(byte_data)} bytes')
 
 
+def get_day_offset(show_date):
+    # number of days since 1st Jan 1950
+    start = date(1950, 1, 1)
+    delta = show_date - start
+    return delta.days
+
+
 def write_show_data():
-    pass
+    #   For each show:
+    #       the data format is unsigned 16-bit array
+    #       First 2 bytes are the date, represented as number of days since 1st Jan 1950
+    #       3rd and 4th bytes are the venue id
+    #       Then we have a set, constructed as a list of [song_index, length]
+    #       Since we can't store a zero, the song_index is the real index + 1
+    #           If a song seques, then add 32768 to the index
+    #       Each set ends with a zero
+    #       If a set STARTS with a zero, that means we are at the end of the show
+    #       (i.e. put a zero at the end so we get a double zero)
+    print('Getting all shows')
+    all_shows = get_all_shows()
+    byte_data = []
+    for i in tqdm(all_shows):
+        # days offset
+        offset = get_day_offset(i.date)
+        if offset > 65535:
+            print(f'Error: Day offset is {song_index}')
+            return
+        byte_data.append(offset)
+        # venue id
+        if i.venue > 65535:
+            print(f'Error: Venue id is {song_index}')
+            return
+        byte_data.append(i.venue)
+        # get all the sets from the show
+        show_sets = get_all_sets(i.id)
+        # sort by index
+        show_sets.sort(key=operator.attrgetter('index'))
+        for single_set in show_sets:
+            all_songs = get_all_songs_in_set(single_set.id)
+            all_songs.sort(key=operator.attrgetter('index'))
+            for single_song in all_songs:
+                song_index = single_song.song
+                song_index += 1
+                if single_song.segued is True:
+                    song_index += 32768
+                if song_index > 65535:
+                    print(f'Error: Index is {song_index}')
+                    return
+                byte_data.append(song_index)
+                if single_song.computed_time is None:
+                    # can't append 0 since that is how we look for the end
+                    byte_data.append(65535)
+                else:
+                    if single_song.computed_time > 65535:
+                        print(f'Error: Time is {single_song.computed_time}')
+                    byte_data.append(single_song.computed_time)
+            byte_data.append(0)
+        # end of sets
+        byte_data.append(0)
+    # end of all shows
+    byte_data.append(0)
+
+    binary_file = open(SHOWS_FILE, 'wb')
+    binary_file.write(struct.pack(f'<{len(byte_data)}H', *byte_data))
+    binary_file.close()
+    print(f'Saved shows to {SHOWS_FILE}, {len(byte_data)} bytes')
 
 
 def write_venue_data():
+    #   the data format is unsigned 8-bit array
+    #   An array of strings. Each venue has 8 strings:
+    #       1: Venue ID as string
+    #       2: Venue name
+    #       3: College name
+    #       4: City name
+    #       5: State name (or regional name) - this will be a code like CA if a US state
+    #       6: Country name
+    #       7: Latitude
+    #       8: Longitude
+    #   Since every venue has 8 strings, we just traverse in order
+    print('Getting all venues')
     venues = get_all_venues()
     byte_data = []
-    for i in venues:
+    for i in tqdm(venues):
         for vstring in [str(i.id), i.name, i.college, i.city, i.state, i.country, str(i.latitude), str(i.longitude)]:
             if vstring is not None:
                 for char in vstring:
@@ -86,10 +140,12 @@ def write_venue_data():
     binary_file = open(VENUES_FILE, 'wb')
     binary_file.write(struct.pack(f'<{len(byte_data)}B', *byte_data))
     binary_file.close()
-    print(f'Saved songs to {VENUES_FILE}, {len(byte_data)} bytes')
+    print(f'Saved venues to {VENUES_FILE}, {len(byte_data)} bytes')
 
 
 def write_weather_data():
+    # grabs hour data for temp, feels like temp and boolean "is raining"
+    # array of: [weather_id, [temp, feels_like] * 24] for all weather data
     # we need all weather objects
     # for all of them, we obtain the hour data
     # for the hour data, we sort by times
@@ -98,13 +154,13 @@ def write_weather_data():
     # the "feels like" temp
     # if it was raining (precip > 0.0 and not null)
     # then we can start to output
-    print('Gathering data')
+    print('Getting all weather')
     weather_data = []
     all_temps = []
     all_feels = []
     none_count = 0
     none_feels = 0
-    for weather in get_all_weather():
+    for weather in tqdm(get_all_weather()):
         # extract and sort
         hour_data = get_all_hour_weather(weather.id)
         hour_data.sort(key=operator.attrgetter('time'))
@@ -163,10 +219,12 @@ def write_weather_data():
     binary_file = open(VENUES_FILE, 'wb')
     binary_file.write(struct.pack(f'<{len(byte_data)}H', *byte_data))
     binary_file.close()
-    print(f'Saved songs to {WEATHER_FILE}, {len(byte_data)} bytes')
+    print(f'Saved weather to {WEATHER_FILE}, {len(byte_data)} bytes')
 
 
 if __name__ == '__main__':
-    # write_song_data()
-    #write_venue_data()
+    write_song_data()
+    write_venue_data()
+    write_show_data()
     write_weather_data()
+    print(f'All binary files complete and save to {BINARY_FOLDER}')

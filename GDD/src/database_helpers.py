@@ -20,6 +20,16 @@ def get_all_shows():
         return session.query(Show).all()
 
 
+def get_all_sets(show_id):
+    with Session(get_engine()) as session:
+        return session.query(GDSet).filter(GDSet.show == show_id).all()
+
+
+def get_all_songs_in_set(set_id):
+    with Session(get_engine()) as session:
+        return session.query(PlayedSong).filter(PlayedSong.gdset == set_id).all()
+
+
 def get_all_venues():
     with Session(get_engine()) as session:
         return session.query(Venue).all()

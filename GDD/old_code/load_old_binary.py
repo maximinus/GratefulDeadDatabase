@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from gddb import get_engine, Show, PlayedSong, GDSet, Song
 
-ROOT_DIR = '../../Website/'
+ROOT_DIR = '../Website/'
 SONGS_FILES = f'{ROOT_DIR}songs.bin'
 SHOWS_FILES = f'{ROOT_DIR}shows.bin'
 
@@ -247,7 +247,7 @@ def get_show_from_db(matched_show):
     return result_sets
 
 
-def compare_show(matched_show):
+def compare_show(matched_show, write_to_db=False):
     # returns None, or a list of [PlayedSong, computed_time]
     db_show = get_show_from_db(matched_show)
     # this gives us an array of arrays
@@ -277,6 +277,9 @@ def compare_show(matched_show):
         while index < len(binary_songs):
             # are we looking at the same song?
             if binary_songs[index][0] == i.song:
+                # 65535 means "no data"
+                if binary_songs[index][1] >= 65535:
+                    binary_songs[index][1] = 0
                 # yes, a match. Do we have a time?
                 if binary_songs[index][1] > 0:
                     # yes, we do have a time!
@@ -290,7 +293,7 @@ def compare_show(matched_show):
                         # yes, so check if it's an "unknown" song
                         if binary_songs[index + 1][0] < 0:
                             # yes, it's an unknown song. Does it have a time?
-                            if binary_songs[index + 1][1] > 0:
+                            if binary_songs[index + 1][1] > 0 and binary_songs[index + 1][1] < 3600:
                                 # yes, it does! Print details and ask
                                 print(f'After {binary_songs[index][2]}, we have {binary_songs[index + 1][2]}')
                                 answer = input('Merge both times to the database? ')
@@ -300,6 +303,11 @@ def compare_show(matched_show):
                                     binary_songs[index][1] += binary_songs[index + 1][1]
                                 else:
                                     print('Not merged')
+
+                    if binary_songs[index][1] > 3600:
+                        # more than an hour? we have an issue
+                        raise ValueError('More than an hour in time')
+
                     new_database_details.append([i, binary_songs[index][1]])
                     add_data += 1
                     matched = True
@@ -313,6 +321,9 @@ def compare_show(matched_show):
             # need to add the song anyway
             new_database_details.append([i, 65535])
     print(f'{matched_show.show_date}: Updated {add_data}/{len(new_database_details)}')
+
+    if write_to_db is False:
+        return
 
     # finally, write these to the database
     sql_engine = get_engine()
@@ -350,4 +361,4 @@ if __name__ == '__main__':
     # for all the matched shows, iterate over and grab the songs that match
     # these are all GDShows, as defined in this file
     for i in matched_shows:
-        compare_show(i)
+        compare_show(i, write_to_db=True)

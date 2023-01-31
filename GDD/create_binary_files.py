@@ -5,7 +5,7 @@ from pathlib import Path
 from datetime import date
 
 from src.database_helpers import get_all_songs, get_all_venues, get_all_weather,\
-    get_all_hour_weather, get_all_shows, get_all_sets, get_all_songs_in_set
+    get_all_hour_weather, get_all_shows, get_all_sets, get_all_songs_in_set, get_show_from_weather
 
 BINARY_FOLDER = Path('./database/binary_data')
 SONGS_FILE = BINARY_FOLDER / 'songs.bin'
@@ -57,6 +57,7 @@ def write_show_data():
     #       the data format is unsigned 16-bit array
     #       First 2 bytes are the date, represented as number of days since 1st Jan 1950
     #       3rd and 4th bytes are the venue id
+    #       5th and 6th bytes are the show id
     #       Then we have a set, constructed as a list of [song_index, length]
     #       Since we can't store a zero, the song_index is the real index + 1
     #           If a song seques, then add 32768 to the index
@@ -77,7 +78,9 @@ def write_show_data():
         if i.venue > 65535:
             print(f'Error: Venue id is {song_index}')
             return
+        # add venue and show id's
         byte_data.append(i.venue)
+        byte_data.append(i.id)
         # get all the sets from the show
         show_sets = get_all_sets(i.id)
         # sort by index
@@ -136,6 +139,8 @@ def write_venue_data():
                         print(f'Error: {char}: {ord(char)}')
                     byte_data.append(ord(char))
             byte_data.append(0)
+    # we need a zero byte to signify the end
+    byte_data.append(0)
     # write to file
     binary_file = open(VENUES_FILE, 'wb')
     binary_file.write(struct.pack(f'<{len(byte_data)}B', *byte_data))
@@ -161,6 +166,12 @@ def write_weather_data():
     none_count = 0
     none_feels = 0
     for weather in tqdm(get_all_weather()):
+        # we need to extract out the date of the show we are against
+        # doesn't matter if we have 2 shows, as that is so very rare, and they'll be the same anyway
+        exact_show = get_show_from_weather(weather.id)
+        if len(exact_show) != 1:
+            raise ValueError('> 1 match')
+        show_id = exact_show[0].id
         # extract and sort
         hour_data = get_all_hour_weather(weather.id)
         hour_data.sort(key=operator.attrgetter('time'))
@@ -175,7 +186,7 @@ def write_weather_data():
                 if hour.precip > 0:
                     precip = hour.precip
             hdata.append([hour.temp, hour.feelslike, precip])
-        weather_data.append([hdata, weather.id])
+        weather_data.append([hdata, show_id])
         all_temps.extend([x[0] for x in hdata])
         all_feels.extend([x[1] for x in hdata])
 
@@ -207,7 +218,7 @@ def write_weather_data():
             calculated_hour.append([temp_final, feel_final])
         calculated_data.append([calculated_hour, tdata[1]])
 
-    #   array of: [weather_id, [temp, feels_like] * 24] for all weather data
+    #   array of: [weather_date, [temp, feels_like] * 24] for all weather data
     byte_data = []
     for i in calculated_data:
         byte_data.append(i[1])

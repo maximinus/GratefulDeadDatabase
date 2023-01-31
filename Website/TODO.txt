@@ -9,16 +9,16 @@ After analysis, this order:
     Es ?  Pr 8
 1: Add tabs, other tables and Graphs
     Es 14 Pr 8
-2: Extract the timings we have, and add them the to real DB
-    Es 10 Pr 9
-3: Use the real DB to build the binary data. Update the data
-    Es 10 Pr 9
+*: Extract the timings we have, and add them the to real DB
+    Done
+*: Use the real DB to build the binary data. Update the data
+    Done
 4: Look at hosting
     Es 2  Pr 10
-5: Check venue data complete
-    Es 1  Pr 8
-6: Work out how to manipulate the DB tables, and make backups
-    Es 3  Pr 8
+*: Check venue data complete
+    Done
+*: Work out how to manipulate the DB tables, and make backups
+    Done
 7: Add weather info and special graph
     Es 7  Pr 5
 

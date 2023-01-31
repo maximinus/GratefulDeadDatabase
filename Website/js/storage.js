@@ -8,12 +8,18 @@
 
 const SONGS_FILE = 'songs.bin';
 const SHOWS_FILE = 'shows.bin';
+const VENUES_FILE = 'data/venues.bin';
+const WEATHER_FILE = 'data/weather.bin'
 const LOGGING_ON = true;
 
 const SONG_DATA = 'songs';
 const SHOW_DATA = 'shows';
+const VENUE_DATA = 'venues';
+const WEATHER_DATA = 'weather';
 const LAST_UPDATE = 'update-data';
-const FORCE_UPDATE = false;
+
+// used when debugging
+const FORCE_UPDATE = true;
 
 // how often to check the update, in number of days
 const NEXT_UPDATE = 365;
@@ -23,6 +29,9 @@ const DEFAULT_SONG = 'Playing In The Band';
 // these is global data seens by all
 var shows = [];
 var songs = [];
+var venues = [];
+var weather = [];
+// song data is a hash map of song_title: [(date, length), ...]
 var song_data = {};
 var last_update = '';
 var load_counter = 0;
@@ -32,7 +41,64 @@ var data_loaded = false;
 
 // define the data endpoints
 // we need to convert to this data from local storage if need be
+class Weather {
+    // data is an array of # array of: [weather_id, [temp, feels_like] * 24] for all weather data
+    // TODO: should be a date, so we can match with the show, not a weather id
+    constructor(weather_date, temps, feels) {
+        this.date = weather_date;
+        this.temps = temps;
+        this.feels = feels;
+    };
+
+    getJsonData() {
+        return JSON.stringify({'date':this.date, 'temps':this.temps, 'feels':this.feels});
+    };
+
+    static fromJsonData(data) {
+        data = JSON.parse(data);
+        return new Weather(data['date'], data['temps'], data['feels']);
+    };
+}
+
+class Venue {
+    constructor(venue_data) {
+        // venue data is just 8 strings, in this order
+        // 1: Venue ID as string
+        // 2: Venue name
+        // 3: College name
+        // 4: City name
+        // 5: State name (or regional name) - this will be a code like CA if a US state
+        // 6: Country name
+        // 7: Latitude
+        // 8: Longitude
+        if(venue_data.length != 8) {
+            console.log('Error: Venue data missing data')
+        }
+        this.id = parseInt(venue_data[0]);
+        this.venue = venue_data[1];
+        this.college = venue_data[2];
+        this.city = venue_data[3];
+        this.state = venue_data[4];
+        this.country = venue_data[5];
+        this.latitude = parseFloat(venue_data[6]);
+        this.longitude = parseFloat(venue_data[7]);
+    };
+
+    getJsonData() {
+        return JSON.stringify({'id':this.id, 'venue':this.venue,
+                               'college':this.college, 'city':this.city,
+                               'state':this.state, 'country':this.country,
+                               'latitude':this.latitude, 'longitude':this.longitude});
+    };
+
+    static fromJsonData(data) {
+        data = JSON.parse(data);
+        return new Venue([data.id.toString(), data.venue, data.college, data.city, data.state, data.country, data.latitude, data.longitude]);
+    }
+}
+
 class Song {
+    // a Song is stored in a ShowSet
     constructor(song_index, seconds) {
         this.song = song_index;
         this.seconds = seconds;
@@ -52,6 +118,7 @@ class Song {
 };
 
 class SongData {
+    // SongData is stored in a map of songs -> [SongData]
     constructor(date, seconds) {
         this.date = date;
         this.seconds = seconds;
@@ -60,6 +127,7 @@ class SongData {
 
 class ShowSet {
     constructor(set_songs) {
+        // set songs is a list of Song instances
         this.songs = set_songs;
     };
 
@@ -182,7 +250,7 @@ function storageAvailable() {
 };
 
 function checkFinish() {
-    if(load_counter < 2) {
+    if(load_counter < 3) {
         // not done yet
         return;
     }
@@ -288,6 +356,38 @@ function parseShows(binary_data) {
     checkFinish();
 };
 
+function parseWeather(binary_data) {
+    // TODO
+}
+
+function parseVenues(binary_data) {
+    var new_venues = [];
+    // just 8 strings, grab them all
+    var index = 0;
+    var new_venues = []
+    while(true) {
+        var details = [];
+        for (var i = 0; i < 8; i++) {
+            next_title = '';
+            while(binary_data[index] != 0) {
+                next_title += String.fromCharCode(binary_data[index]);
+                index += 1;
+            }
+            // move past zero marker
+            index += 1;
+            details.push(next_title);
+        }
+        venues.push(new Venue(details))
+        // now we've collected them all, is there a zero at the end?
+        if(binary_data[index] == 0) {
+            log(`Got ${venues.length} venues`);
+            load_counter += 1;
+            checkFinish();
+            return;
+        }
+    }
+};
+
 function storeData() {
     // store the contents of the songs and shows, if we can
     if(storageAvailable() == false) {
@@ -300,8 +400,9 @@ function storeData() {
     }
     localStorage.setItem(SHOW_DATA, JSON.stringify(all_shows));
     // repeat for all songs
-    // songs is just a test list of songs
     localStorage.setItem(SONG_DATA, JSON.stringify(songs));
+    // and venues
+    localStorage.setItem(VENUE_DATA, JSON.stringify(venues));
     // now we need store the current date
     var current_date = new Date();
     localStorage.setItem(LAST_UPDATE, JSON.stringify(current_date));
@@ -311,7 +412,7 @@ function storeData() {
 function fetchBinaryData() {
     var song_request = new XMLHttpRequest();
     song_request.open('GET', SONGS_FILE, true);
-    song_request.responseType = "arraybuffer";
+    song_request.responseType = 'arraybuffer';
     song_request.send();
 
     song_request.onload = function(event) {
@@ -324,7 +425,7 @@ function fetchBinaryData() {
 
     var show_request = new XMLHttpRequest();
     show_request.open('GET', SHOWS_FILE, true);
-    show_request.responseType = "arraybuffer";
+    show_request.responseType = 'arraybuffer';
     show_request.send();
 
     show_request.onload = function(event) {
@@ -332,6 +433,32 @@ function fetchBinaryData() {
         if(arrayBuffer) {
             var byteArray = new Uint8Array(arrayBuffer);
             parseShows(byteArray);
+        }
+    }
+
+    var venue_request = new XMLHttpRequest();
+    venue_request.open('GET', VENUES_FILE, true);
+    venue_request.responseType = 'arraybuffer';
+    venue_request.send();
+
+    venue_request.onload = function(event) {
+        var arrayBuffer = venue_request.response;
+        if(arrayBuffer) {
+            var byteArray = new Uint8Array(arrayBuffer);
+            parseVenues(byteArray);
+        }
+    }
+
+    var weather_request = new XMLHttpRequest();
+    weather_request.open('GET', VENUES_FILE, true);
+    weather_request.responseType = 'arraybuffer';
+    weather_request.send();
+
+    weather_request.onload = function(event) {
+        var arrayBuffer = weather_request.response;
+        if(arrayBuffer) {
+            var byteArray = new Uint8Array(arrayBuffer);
+            parseWeather(byteArray);
         }
     }
 };
@@ -350,7 +477,7 @@ function updateRequired() {
     return false;
 };
 
-function convertLocalData(loaded_songs, loaded_shows) {
+function convertLocalData(loaded_songs, loaded_shows, loaded_venues) {
     try {
         songs = JSON.parse(loaded_songs);
         // convert back to shows
@@ -358,7 +485,8 @@ function convertLocalData(loaded_songs, loaded_shows) {
         shows = [];
         for(var i of json_shows) {
             shows.push(Show.fromJsonData(i));
-        } 
+        }
+        venues = JSON.parse(loaded_venues);
     } catch(error) {
         log(`Error: ${error}`);
         log('Malformed data in local storage');
@@ -373,8 +501,9 @@ function getFromLocalStorage() {
     // do we have our data here?
     var loaded_shows = localStorage.getItem(SHOW_DATA);
     var loaded_songs = localStorage.getItem(SONG_DATA);
+    var loaded_venues = localStorage.getItem(VENUE_DATA);
     last_update = localStorage.getItem(LAST_UPDATE);
-    if(shows == null || songs == null || last_update == null) {
+    if(loaded_shows == null || loaded_songs == null || loaded_venues == null || last_update == null) {
         log('No local data found');
         // we need to reload
         return false;
@@ -385,16 +514,20 @@ function getFromLocalStorage() {
         return false;
     }
     // we are not complete, we need to convert the data
-    if(convertLocalData(loaded_songs, loaded_shows) == false) {
+    if(convertLocalData(loaded_songs, loaded_shows, loaded_venues) == false) {
         return false;
     }
     log(`Got ${songs.length} songs`);
-    log(`Got ${shows.length} shows`)
+    log(`Got ${shows.length} shows`);
+    log(`Got ${venues.length} venues`);
     return true;
 };
 
 function getSongData() {
     // we now have all the shows, so collate song data
+    // this means we want to produce a map of song -> song instances
+    // this is why they have a date and a time
+    // we often search by song, this makes things a lot quicker
     song_data = {}
     for(var show of shows) {
         for(var i of show.getAllSongs()) {

@@ -30,6 +30,12 @@ def get_all_songs_in_set(set_id):
         return session.query(PlayedSong).filter(PlayedSong.gdset == set_id).all()
 
 
+def get_show_from_weather(weather_id):
+    # each show has a unique weather, even if there are 2 shows on the same day
+    with Session(get_engine()) as session:
+        return session.query(Show).filter(Show.weather == weather_id).all()
+
+
 def get_all_venues():
     with Session(get_engine()) as session:
         return session.query(Venue).all()

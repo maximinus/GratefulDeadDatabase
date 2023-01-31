@@ -425,8 +425,8 @@ function convertTime(total_time) {
 function buildLengthVersions(song_title) {
     // get the versions first
     // get the songs, and sort by length
+    // create a new list with the 65535 stripped out
     var data = song_data[song_title].filter(x => x.seconds != 65535);
-    // creata new list with the 65535 stripped out
     data.sort((a, b) => (a.seconds < b.seconds) ? 1 : -1);
     // get the first 5
     var table_data = data.slice(0, TABLE_ENTRIES);

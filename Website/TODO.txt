@@ -1,24 +1,14 @@
 Path of Work / Priorities
 -------------------------
 
-Estimate 5 (days): Priority 5
-
 After analysis, this order:
 
 1: Download all the GD (ongoing - note not every recording, just every show)
     Es ?  Pr 8
 1: Add tabs, other tables and Graphs
     Es 14 Pr 8
-*: Extract the timings we have, and add them the to real DB
-    Done
-*: Use the real DB to build the binary data. Update the data
-    Done
 4: Look at hosting
     Es 2  Pr 10
-*: Check venue data complete
-    Done
-*: Work out how to manipulate the DB tables, and make backups
-    Done
 7: Add weather info and special graph
     Es 7  Pr 5
 
@@ -45,19 +35,23 @@ Done work in 2023:
     * Graphs should also show "average" as a dotted line
     * List rows should be coloured
     * Numbers on charts should only be to 2 d.p.
+    * Add tabs to top of page for show, years etc...
+    * Add footer with simple about info
+    * Extract the timings we have, and add them the to real DB
+    * Use the real DB to build the binary data. Update the data
+    * Add venues and weather to the binary files, load in javascript
 
 Changes to the current website:
 
     Songs should show how common they are ("7th most commonly played")
-        Split all songs into bands of equal size: Common, Uncommon, Rare, Very Rare, Unique
+        Split all songs into bands of equal size: Common, Uncommon, Rare, Very Rare, Unique (why?)
         Add a tooltip for the meaning of this
     Add "total played" to the "played per year" chart
     "St. Stephen" should get you St Stephen, so allow searches on alternate names
+        I.e. add levenstein distance
     Clicking on found name in drop-down automatically updates song
         (also when enter is pressed)
-    Add a navigation bar to the top
     The scrollbar on list pop-ups needs to reset on a new pop-up
-    Add footer with simple about info
     Make all dates hyperlinks
     For average position in show, formulate it as a % position along the show. Place the average set marker as a bar under the position average
         Where there are 3 sets, ignore the whole show
@@ -71,7 +65,7 @@ Other calculations:
     Must start collecting BPM and add it to the DB.
     This means grabbing ALL the GD. I have a NAS just for this.
     Try and start timing some songs. Just a tour (like spring 78).
-        Work out what needs to work
+        Work out the exact workflow to the point of estimating how long this will take.
 
 
 For the year data:

@@ -10,6 +10,8 @@ const SONGS_FILE = 'songs.bin';
 const SHOWS_FILE = 'shows.bin';
 const VENUES_FILE = 'data/venues.bin';
 const WEATHER_FILE = 'data/weather.bin'
+const FILES_TO_LOAD = 4;
+
 const LOGGING_ON = true;
 
 const SONG_DATA = 'songs';
@@ -250,7 +252,7 @@ function storageAvailable() {
 };
 
 function checkFinish() {
-    if(load_counter < 3) {
+    if(load_counter < FILES_TO_LOAD) {
         // not done yet
         return;
     }
@@ -307,7 +309,7 @@ function getSingleSet(binary_data, i) {
         i += 2;
         set_songs.push(new Song(index, length));
     }
-}
+};
 
 function getSets(binary_data, i) {
     // keep going until we hit the zero
@@ -357,14 +359,53 @@ function parseShows(binary_data) {
 };
 
 function parseWeather(binary_data) {
-    // TODO
-}
+    weather = [];
+    // all 16 bit data
+    // [show_id, [temp, feels_like] * 24], i.e. 49 * 2 = 98 bytes each
+    // precipitation true/false is held as the high bit in feels_like
+    var index = 0;
+    while(true) {
+        var show_id = getWord(binary_data, index);
+        index += 2;
+        var temps = [];
+        var feels = [];
+        var precip = [];
+        for(var i = 0; i < 24; i++) {
+            temps.push(getWord(binary_data, index));
+            index += 2;
+            feels_tmp = getWord(binary_data, index);
+            index += 2;
+            if(feels_tmp > 32768) {
+                feels_temp -= 32768;
+                precip.push(true);
+            } else {
+                precip.push(false);
+            }
+            feels.push(feels_tmp);
+        }
+        weather.push(new Weather(show_id, temps, feels, precip));
+        // should be a zero to verify the end
+        if(getWord(binary_data, index) != 0) {
+            log('Error parsing weather');
+            return;
+        }
+        index +=2;
+        // really at the end?
+        if(getWord(binary_data, index) == 0) {
+            log(`Got ${weather.length} weather data`);
+            load_counter += 1;
+            checkFinish();
+            return;
+        }
+        // no, so carry on
+        index += 2;
+    }
+};
 
 function parseVenues(binary_data) {
-    var new_venues = [];
+    venues = [];
     // just 8 strings, grab them all
     var index = 0;
-    var new_venues = []
     while(true) {
         var details = [];
         for (var i = 0; i < 8; i++) {
@@ -403,6 +444,8 @@ function storeData() {
     localStorage.setItem(SONG_DATA, JSON.stringify(songs));
     // and venues
     localStorage.setItem(VENUE_DATA, JSON.stringify(venues));
+    // finally, weather
+    localStorage.setItem(WEATHER_DATA, JSON.stringify(weather));
     // now we need store the current date
     var current_date = new Date();
     localStorage.setItem(LAST_UPDATE, JSON.stringify(current_date));
@@ -450,7 +493,7 @@ function fetchBinaryData() {
     }
 
     var weather_request = new XMLHttpRequest();
-    weather_request.open('GET', VENUES_FILE, true);
+    weather_request.open('GET', WEATHER_FILE, true);
     weather_request.responseType = 'arraybuffer';
     weather_request.send();
 
@@ -477,9 +520,11 @@ function updateRequired() {
     return false;
 };
 
-function convertLocalData(loaded_songs, loaded_shows, loaded_venues) {
+function convertLocalData(loaded_songs, loaded_shows, loaded_venues, loaded_weather) {
     try {
         songs = JSON.parse(loaded_songs);
+        venues = JSON.parse(loaded_venues);
+        weather = JSON.parse(loaded_weather);
         // convert back to shows
         var json_shows = JSON.parse(loaded_shows);
         shows = [];
@@ -502,8 +547,9 @@ function getFromLocalStorage() {
     var loaded_shows = localStorage.getItem(SHOW_DATA);
     var loaded_songs = localStorage.getItem(SONG_DATA);
     var loaded_venues = localStorage.getItem(VENUE_DATA);
+    var loaded_weather = localStorage.getItem(WEATHER_DATA);
     last_update = localStorage.getItem(LAST_UPDATE);
-    if(loaded_shows == null || loaded_songs == null || loaded_venues == null || last_update == null) {
+    if(loaded_shows == null || loaded_songs == null || loaded_venues == null || last_update == null || loaded_weather == null) {
         log('No local data found');
         // we need to reload
         return false;
@@ -514,12 +560,13 @@ function getFromLocalStorage() {
         return false;
     }
     // we are not complete, we need to convert the data
-    if(convertLocalData(loaded_songs, loaded_shows, loaded_venues) == false) {
+    if(convertLocalData(loaded_songs, loaded_shows, loaded_venues, loaded_weather) == false) {
         return false;
     }
     log(`Got ${songs.length} songs`);
     log(`Got ${shows.length} shows`);
     log(`Got ${venues.length} venues`);
+    log(`Got ${weather.length} weather data`);
     return true;
 };
 

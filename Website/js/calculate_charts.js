@@ -7,6 +7,14 @@ var played_before = [];
 var played_after = [];
 var current_song_title = '';
 
+
+// TODO: We can classify this up
+// A class to store the data locally
+// A class that holds all the data
+// An api that gets the data we need
+// expose the latter as a namespace, hide the others if possible
+
+
 function getIndexOfSong(song_title) {
     return songs.indexOf(song_title);
 };

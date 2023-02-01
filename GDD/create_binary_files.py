@@ -150,7 +150,7 @@ def write_venue_data():
 
 def write_weather_data():
     # grabs hour data for temp, feels like temp and boolean "is raining"
-    # array of: [weather_id, [temp, feels_like] * 24] for all weather data
+    # array of: [show_id, [temp, feels_like] * 24] for all weather data
     # we need all weather objects
     # for all of them, we obtain the hour data
     # for the hour data, we sort by times
@@ -225,6 +225,10 @@ def write_weather_data():
         for w_hour in i[0]:
             byte_data.append(w_hour[0])
             byte_data.append(w_hour[1])
+        # end 0 marker
+        byte_data.append(0)
+    # end all data
+    byte_data.append(0)
 
     # save the data
     binary_file = open(WEATHER_FILE, 'wb')

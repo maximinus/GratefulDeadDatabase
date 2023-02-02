@@ -392,13 +392,11 @@ function parseWeather(binary_data) {
         index +=2;
         // really at the end?
         if(getWord(binary_data, index) == 0) {
-            log(`Got ${weather.length} weather data`);
+            log(`Got ${weather.length} days of weather`);
             load_counter += 1;
             checkFinish();
             return;
         }
-        // no, so carry on
-        index += 2;
     }
 };
 
@@ -566,7 +564,7 @@ function getFromLocalStorage() {
     log(`Got ${songs.length} songs`);
     log(`Got ${shows.length} shows`);
     log(`Got ${venues.length} venues`);
-    log(`Got ${weather.length} weather data`);
+    log(`Got ${weather.length} days of weather`);
     return true;
 };
 

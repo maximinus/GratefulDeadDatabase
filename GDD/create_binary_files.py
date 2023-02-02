@@ -113,7 +113,7 @@ def write_show_data():
     binary_file = open(SHOWS_FILE, 'wb')
     binary_file.write(struct.pack(f'<{len(byte_data)}H', *byte_data))
     binary_file.close()
-    print(f'Saved shows to {SHOWS_FILE}, {len(byte_data)} bytes')
+    print(f'Saved shows to {SHOWS_FILE}, {len(byte_data) * 2} bytes')
 
 
 def write_venue_data():
@@ -148,6 +148,31 @@ def write_venue_data():
     print(f'Saved venues to {VENUES_FILE}, {len(byte_data)} bytes')
 
 
+def fix_hour_data(hour_data):
+    # we are sent a list of HourWeather classes sorted by time
+    # the element "time" is represented as a string, which SHOULD always have the format "00:00:00",
+    # or "HH:MM:SS". So first let's assert that true for all cases
+    for i in hour_data:
+        t = i.time
+        assert len(t) == 8
+        assert len(t.split(':')) == 3
+    # with that done, let's start work
+    time = 0
+    index = 0
+    hdata = []
+    # don't forget we are sorted by time
+    while time < 24:
+        this_time = int(hour_data[index].time.split(':')[0])
+        if this_time != time:
+            # we need insert this time
+            hdata.append([None, None, None])
+        else:
+            hdata.append([hour_data[index].temp, hour_data[index].feelslike, hour_data[index].precip])
+            index += 1
+        time += 1
+    return hdata
+
+
 def write_weather_data():
     # grabs hour data for temp, feels like temp and boolean "is raining"
     # array of: [show_id, [temp, feels_like] * 24] for all weather data
@@ -175,17 +200,8 @@ def write_weather_data():
         # extract and sort
         hour_data = get_all_hour_weather(weather.id)
         hour_data.sort(key=operator.attrgetter('time'))
-        hdata = []
-        for hour in hour_data:
-            if hour.temp is None:
-                none_count += 1
-            if hour.feelslike is None:
-                none_feels += 1
-            precip = 0.0
-            if hour.precip is not None:
-                if hour.precip > 0:
-                    precip = hour.precip
-            hdata.append([hour.temp, hour.feelslike, precip])
+        # it is possible for 1 or more time values to be missing, so fix this here
+        hdata = fix_hour_data(hour_data)
         weather_data.append([hdata, show_id])
         all_temps.extend([x[0] for x in hdata])
         all_feels.extend([x[1] for x in hdata])
@@ -195,8 +211,6 @@ def write_weather_data():
     all_feels = list(filter(lambda item: item is not None, all_feels))
     print(f'  Temps range: {min(all_temps)} -> {max(all_temps)}')
     print(f'  Feels range: {min(all_feels)} -> {max(all_feels)}')
-    print(f'  Missing temps: {none_count}/{len(all_temps)}')
-    print(f'  Missing feels: {none_feels}/{len(all_feels)}')
     # Finally we can build the data
     # Temp is done as:
     #   Take the temp and add 50.0              73.4  -> 113.4
@@ -222,6 +236,8 @@ def write_weather_data():
     byte_data = []
     for i in calculated_data:
         byte_data.append(i[1])
+        if len(i[0]) != 24:
+            raise ValueError('Not 24 hours')
         for w_hour in i[0]:
             byte_data.append(w_hour[0])
             byte_data.append(w_hour[1])
@@ -234,12 +250,13 @@ def write_weather_data():
     binary_file = open(WEATHER_FILE, 'wb')
     binary_file.write(struct.pack(f'<{len(byte_data)}H', *byte_data))
     binary_file.close()
-    print(f'Saved weather to {WEATHER_FILE}, {len(byte_data)} bytes')
+    # *2 as we save words not bytes
+    print(f'Saved weather to {WEATHER_FILE}, {len(byte_data) * 2} bytes')
 
 
 if __name__ == '__main__':
-    write_song_data()
-    write_venue_data()
-    write_show_data()
+    #write_song_data()
+    #write_venue_data()
+    #write_show_data()
     write_weather_data()
     print(f'All binary files complete and save to {BINARY_FOLDER}')

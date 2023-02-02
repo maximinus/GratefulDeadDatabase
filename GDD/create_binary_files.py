@@ -90,7 +90,8 @@ def write_show_data():
             all_songs.sort(key=operator.attrgetter('index'))
             for single_song in all_songs:
                 song_index = single_song.song
-                song_index += 1
+                # song id 0 does not exist
+                assert song_index != 0
                 if single_song.segued is True:
                     song_index += 32768
                 if song_index > 65535:
@@ -255,8 +256,8 @@ def write_weather_data():
 
 
 if __name__ == '__main__':
-    #write_song_data()
+    write_song_data()
     #write_venue_data()
-    #write_show_data()
-    write_weather_data()
+    write_show_data()
+    #write_weather_data()
     print(f'All binary files complete and save to {BINARY_FOLDER}')

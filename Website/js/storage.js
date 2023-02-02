@@ -6,8 +6,8 @@
 //       Update header text and info
 //       Make text song input work
 
-const SONGS_FILE = 'songs.bin';
-const SHOWS_FILE = 'shows.bin';
+const SONGS_FILE = 'data/songs.bin';
+const SHOWS_FILE = 'data/shows.bin';
 const VENUES_FILE = 'data/venues.bin';
 const WEATHER_FILE = 'data/weather.bin'
 const FILES_TO_LOAD = 4;
@@ -101,21 +101,22 @@ class Venue {
 
 class Song {
     // a Song is stored in a ShowSet
-    constructor(song_index, seconds) {
+    constructor(song_index, seconds, sequed) {
         this.song = song_index;
         this.seconds = seconds;
+        this.sequed = sequed;
         if(song_index > 1000) {
             console.log('Error: ', song_index)
         }
     };
 
     getJsonData() {
-        return JSON.stringify({'song':this.song, 'seconds':this.seconds});
+        return JSON.stringify({'song':this.song, 'seconds':this.seconds, 'sequed': this.sequed});
     };
 
     static fromJsonData(data) {
         data = JSON.parse(data);
-        return new Song(data.song, data.seconds);
+        return new Song(data.song, data.seconds, data.sequed);
     };
 };
 
@@ -152,9 +153,11 @@ class ShowSet {
 };
 
 class Show {
-    constructor(show_sets, date) {
+    constructor(show_sets, date, venue_id, show_id) {
+        this.id = show_id;
         this.sets = show_sets;
         this.date = date;
+        this.venue = venue_id;
     };
 
     getJsonData() {
@@ -162,7 +165,7 @@ class Show {
         for(var show_set of this.sets) {
             json_sets.push(show_set.getJsonData());
         }
-        return {'date':this.date, 'sets':json_sets};
+        return {'date':this.date, 'sets':json_sets, 'id':this.id, 'venue':this.venue_id};
     };
 
     getAllSongs() {
@@ -194,7 +197,7 @@ class Show {
         for(var show_set of data.sets) {
             show_sets.push(ShowSet.fromJsonData(show_set));
         }
-        return new Show(show_sets, data.date);
+        return new Show(show_sets, data.date, data.venue_id, data.id);
     };
 };
 
@@ -271,14 +274,16 @@ function dataLoaded() {
 
 function parseSongs(binary_data) {
     // zero terminated strings stored in bytes
-    var strings = [];
+    songs = [];
+    // there is no ID = 0 for songs, so we add a null string
+    songs.push('');
     var next_title = '';
     for(var i = 0; i < binary_data.byteLength; i++) {
         if(binary_data[i] != 0) {
             next_title += String.fromCharCode(binary_data[i]);
         }
         else {
-            strings.push(next_title);
+            songs.push(next_title);
             next_title = '';
             // a zero after the zero (a double termination) is the end
             if(binary_data[i+1] == 0) {
@@ -287,14 +292,18 @@ function parseSongs(binary_data) {
             }
         }
     }
-    var total_songs = strings.length;
-    log(`Got ${total_songs} songs`);
-    songs = strings;
+    var total_songs = songs.length;
+    log(`Got ${songs.length} songs`);
     load_counter += 1;
     checkFinish();
 };
 
 function getSingleSet(binary_data, i) {
+    // Since we can't store a zero, the song_index is the real index + 1
+    // If a song seques, then add 32768 to the index
+    // Each set ends with a zero
+    // If a set STARTS with a zero, that means we are at the end of the show
+    // (i.e. put a zero at the end so we get a double zero)
     var set_songs = [];
     while(true) {
         if(getWord(binary_data, i) == 0) {
@@ -303,11 +312,21 @@ function getSingleSet(binary_data, i) {
         }
         // we store song indexes with +1 so as not to hit the set marker
         // here we reset so that the index is correct
-        var index = getWord(binary_data, i) - 1;
+        var index = getWord(binary_data, i);
         i += 2;
         var length = getWord(binary_data, i);
         i += 2;
-        set_songs.push(new Song(index, length));
+        if(length == 65535) {
+            // 0 means "we don't have this"
+            length = 0;
+        }
+        if(index > 32767) {
+            index -= 32768;
+            // sequed
+            set_songs.push(new Song(index, length, true));
+        } else {
+            set_songs.push(new Song(index, length, false));
+        }
     }
 };
 
@@ -334,26 +353,32 @@ function getWord(binary, index) {
 
 function parseShows(binary_data) {
     // get the show data
-    var new_shows = [];
+    // the data format is unsigned 16-bit array
+    // First 2 bytes are the date, represented as number of days since 1st Jan 1950
+    // 3rd and 4th bytes are the venue id
+    // 5th and 6th bytes are the show id
+    // Then we have a set, constructed as a list of [song_index, length]
+    shows = [];
     // All +2 are to move a word in the byte array
-    var i = 0;
+    var index = 0;
     while(true) {
         // traverse over each show until we meet 0
-        if(getWord(binary_data, i) == 0) {
+        if(getWord(binary_data, index) == 0) {
             break;
         }
-        // get the date
-        var date = getWord(binary_data, i);
-        i += 2;
+        var date = getWord(binary_data, index);
+        index += 2;
+        var venue_id = getWord(binary_data, index);
+        index += 2;
+        var show_id = getWord(binary_data, index);
+        index += 2;
         // traverse sets, waiting for a 0 byte
-        var new_sets_data = getSets(binary_data, i);
-        i = new_sets_data[1];
+        var new_sets_data = getSets(binary_data, index);
+        index = new_sets_data[1];
         // save the show
-        new_shows.push(new Show(new_sets_data[0], date));
+        shows.push(new Show(new_sets_data[0], date, venue_id, show_id));
     }
-
-    log(`Got ${new_shows.length} shows`);
-    shows = new_shows;
+    log(`Got ${shows.length} shows`);
     load_counter += 1;
     checkFinish();
 };

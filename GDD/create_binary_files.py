@@ -5,7 +5,8 @@ from pathlib import Path
 from datetime import date
 
 from src.database_helpers import get_all_songs, get_all_venues, get_all_weather,\
-    get_all_hour_weather, get_all_shows, get_all_sets, get_all_songs_in_set, get_show_from_weather
+    get_all_hour_weather, get_all_shows, get_all_sets, get_all_songs_in_set, get_show_from_weather,\
+    get_show_from_set, get_all_played_sets, delete_sets
 
 BINARY_FOLDER = Path('./database/binary_data')
 SONGS_FILE = BINARY_FOLDER / 'songs.bin'
@@ -52,6 +53,24 @@ def get_day_offset(show_date):
     return delta.days
 
 
+def no_false_end(byte_data):
+    # return true if there is no run of 3 points with the value zero
+    index = 0
+    longest = 0
+    new_longest = 0
+    while index < len(byte_data):
+        if byte_data[index] == 0:
+            new_longest += 1
+        else:
+            if new_longest > longest:
+                longest = new_longest
+            new_longest = 0
+        index += 1
+    if new_longest < 3:
+        return True
+    return False
+
+
 def write_show_data():
     #   For each show:
     #       the data format is unsigned 16-bit array
@@ -70,6 +89,7 @@ def write_show_data():
     for i in tqdm(all_shows):
         # days offset
         offset = get_day_offset(i.date)
+        assert offset != 0
         if offset > 65535:
             print(f'Error: Day offset is {song_index}')
             return
@@ -88,6 +108,8 @@ def write_show_data():
         for single_set in show_sets:
             all_songs = get_all_songs_in_set(single_set.id)
             all_songs.sort(key=operator.attrgetter('index'))
+            # could there be an empty set?
+            assert len(all_songs) != 0
             for single_song in all_songs:
                 song_index = single_song.song
                 # song id 0 does not exist
@@ -98,7 +120,10 @@ def write_show_data():
                     print(f'Error: Index is {song_index}')
                     return
                 byte_data.append(song_index)
-                if single_song.computed_time is None:
+                if single_song.computed_time == 0:
+                    # how was that possible?
+                   byte_data.append(65535)
+                elif single_song.computed_time is None:
                     # can't append 0 since that is how we look for the end
                     byte_data.append(65535)
                 else:
@@ -108,6 +133,10 @@ def write_show_data():
             byte_data.append(0)
         # end of sets
         byte_data.append(0)
+        # after adding a show, make sure we don't have 3 zeros in a row - which is actually 6
+        if no_false_end(byte_data) is False:
+            print(byte_data[-30:])
+            raise ValueError
     # end of all shows
     byte_data.append(0)
 
@@ -255,9 +284,33 @@ def write_weather_data():
     print(f'Saved weather to {WEATHER_FILE}, {len(byte_data) * 2} bytes')
 
 
+def check_empty_sets():
+    all_sets = get_all_played_sets()
+    empty_sets = []
+    for i in tqdm(all_sets):
+        songs = get_all_songs_in_set(i.id)
+        if len(songs) == 0:
+            empty_sets.append(i)
+    print(f'Found {len(empty_sets)} empty sets')
+    # get the date of the sets and print it
+    if len(empty_sets) == 0:
+        print('No empty sets found')
+        return
+    for i in empty_sets:
+        all_shows = get_show_from_set(i)
+        if len(all_shows) == 0:
+            print('  Error: Set has no show')
+        print(f'  Date: {all_shows[0].date}, #{i.index}')
+    answer = input('Delete these sets? ')
+    if answer.lower() == 'y':
+        delete_sets([x.id for x in empty_sets])
+        print('Sets deleted')
+
+
 if __name__ == '__main__':
+    #check_empty_sets()
     write_song_data()
-    #write_venue_data()
+    write_venue_data()
     write_show_data()
-    #write_weather_data()
+    write_weather_data()
     print(f'All binary files complete and save to {BINARY_FOLDER}')

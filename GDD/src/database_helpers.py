@@ -25,6 +25,11 @@ def get_all_sets(show_id):
         return session.query(GDSet).filter(GDSet.show == show_id).all()
 
 
+def get_all_played_sets():
+    with Session(get_engine()) as session:
+        return session.query(GDSet).all()
+
+
 def get_all_songs_in_set(set_id):
     with Session(get_engine()) as session:
         return session.query(PlayedSong).filter(PlayedSong.gdset == set_id).all()
@@ -59,6 +64,12 @@ def get_single_show(single_day):
         return selected_shows
 
 
+def get_show_from_set(single_set):
+    with Session(get_engine()) as session:
+        selected_shows = session.query(Show).filter(Show.id == single_set.show).all()
+        return selected_shows
+
+
 def get_shows_from_year(year):
     with Session(get_engine()) as session:
         # could be more than one show
@@ -88,6 +99,14 @@ def get_all_song_versions(song_name):
     actual_song = get_single_song(song_name)
     with Session(get_engine()) as session:
         return session.query(PlayedSong).filter(PlayedSong.song == actual_song).all()
+
+
+def delete_sets(all_set_ids):
+    with Session(get_engine()) as session:
+        for i in all_set_ids:
+            show_set = session.get(GDSet, i)
+            session.delete(show_set)
+        session.commit()
 
 
 if __name__ == '__main__':

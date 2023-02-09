@@ -45,6 +45,7 @@ function setSongDropdown() {
 };
 
 document.addEventListener("DOMContentLoaded", function(){
+	// TODO: Confirm this waits until all JSON files are loaded
 	getData();
 	setSongDropdown();
 	// add events

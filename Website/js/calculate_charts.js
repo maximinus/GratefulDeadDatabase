@@ -8,26 +8,10 @@ var played_after = [];
 var current_song_title = '';
 
 
-// TODO: We can classify this up
-// A class to store the data locally
-// A class that holds all the data
-// An api that gets the data we need
-// expose the latter as a namespace, hide the others if possible
-
-
-function getIndexOfSong(song_title) {
-    return songs.indexOf(song_title);
-};
-
-function getYear(days) {
-    // get the year of the show as an integer
-    // the value sent is an int: number of days since 1st Jan 1950
-    var new_date = new Date(1950, 0, 1);
-    new_date.setDate(new_date.getDate() + days);
-    // now convert to string and return
-    var year = new_date.getFullYear().toString().slice(2,4);
-    return parseInt(year);
-};
+// first I extract the code in here that should be in the API / helpers
+// only code to render, update and display the song charts should be here
+// that DOES include data collection specific to the charts.
+// getAllTimesPlayed() is a good example of this
 
 function getAllTimesPlayed(song_title) {
     // create new array
@@ -400,36 +384,6 @@ function buildCharts(song_title) {
     buildPosition(song_title, 'position-chart');
 };
 
-
-function nth(n) { 
-    return['st', 'nd', 'rd'][((n+90)%100-10)%10-1]||'th';
-};
-
-function convertDate(days) {
-    // convert to date format "13th Oct 73" or similar
-    // the value sent is an int: number of days since 1st Jan 1950
-    var new_date = new Date(1950, 0, 1);
-    new_date.setDate(new_date.getDate() + days);
-    // now convert to string and return
-    var day = new_date.getDate();
-    var month = new_date.toLocaleString('default', { month: 'short' });
-    var year = new_date.getFullYear().toString().slice(2,4);
-    // calculate st/nd/rd/th
-    var day_ending = nth(day);
-    return `${day}${day_ending} ${month} ${year}`;
-};
-
-function convertTime(total_time) {
-    // convert to some time in format "4m 17s"
-    // argument is an integer in seconds
-    var minutes = Math.floor(total_time / 60);
-    var seconds = total_time - (minutes * 60);
-    if(minutes == 0) {
-        return `${seconds}s`
-    }
-    return `${minutes}m ${seconds}s`;
-};
-
 function buildLengthVersions(song_title) {
     // get the versions first
     // get the songs, and sort by length
@@ -470,13 +424,6 @@ function buildLengthVersions(song_title) {
     }
     // make sure default data is the right order
     sorted_by_length.reverse()
-};
-
-function dayDays(delta) {
-    if(delta < 2) {
-        return `${delta} day`;
-    }
-    return `${delta} days`;
 };
 
 function buildFirstLastVersions(song_title) {
@@ -523,10 +470,6 @@ function buildFirstLastVersions(song_title) {
     data.reverse();
 };
 
-function getSetName(index) {
-    var names = ['1st', '2nd', '3rd', '4th', '5th', '6th'];
-    return names[index];
-};
 
 function buildBeforeAfterSongs(song_title) {
     // be careful here, only the numbers are stores, and we have the name
@@ -653,7 +596,7 @@ function setLengthTablePopupList(table_data, element) {
         element.appendChild(row);
         row_index += 1;
     }
-}
+};
 
 function popOutLongest() {
     var table = document.getElementById('table-entry');
@@ -815,40 +758,6 @@ function buildTables(song_title) {
     buildBeforeAfterSongs(song_title);
 };
 
-function dateDifference(startingDate, endingDate) {
-    var startDate = new Date(new Date(startingDate).toISOString().substr(0, 10));
-    if (!endingDate) {
-        endingDate = new Date().toISOString().substr(0, 10);
-    }
-    var endDate = new Date(endingDate);
-    if (startDate > endDate) {
-        var swap = startDate;
-        startDate = endDate;
-        endDate = swap;
-    }
-    var startYear = startDate.getFullYear();
-    var february = (startYear % 4 === 0 && startYear % 100 !== 0) || startYear % 400 === 0 ? 29 : 28;
-    var daysInMonth = [31, february, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-    var yearDiff = endDate.getFullYear() - startYear;
-    var monthDiff = endDate.getMonth() - startDate.getMonth();
-    if (monthDiff < 0) {
-        yearDiff--;
-        monthDiff += 12;
-    }
-    var dayDiff = endDate.getDate() - startDate.getDate();
-    if (dayDiff < 0) {
-        if (monthDiff > 0) {
-            monthDiff--;
-        } else {
-            yearDiff--;
-            monthDiff = 11;
-        }
-        dayDiff += daysInMonth[startDate.getMonth()];
-    }
-    return yearDiff + ' years, ' + monthDiff + ' months ' + dayDiff + ' days';
-}
-
 function buildSongText(song_title) {
     // pieces of information we need:
     // How many times played; First time, last time, length of this time
@@ -910,6 +819,7 @@ function buildSongText(song_title) {
 
 function updateVisualData(song_title) {
     // this needs to wait until data is loaded
+    // TODO: this function should be somewhere else
     current_song_title = song_title;
     log(`Updating charts and tables: ${song_title}`)
     buildTables(song_title);

@@ -5,11 +5,12 @@ After analysis, this order:
 
 1: Download all the GD (ongoing - note not every recording, just every show)
     Es ?  Pr 8
-1: Add tabs, other tables and Graphs
+2: Tidy up existing code
+3: Add tabs, other tables and Graphs
     Es 14 Pr 8
 4: Look at hosting
     Es 2  Pr 10
-7: Add weather info and special graph
+5: Add weather info and special graph
     Es 7  Pr 5
 
 Future Work:
@@ -56,6 +57,11 @@ Changes to the current website:
     For average position in show, formulate it as a % position along the show. Place the average set marker as a bar under the position average
         Where there are 3 sets, ignore the whole show
 
+
+Tidy Up Code:
+    Have a storage object, an API and seperate files for all display tabs
+
+
 Binary data:
     Extract the current binary data and add the timings
     Bring in new data
@@ -66,6 +72,17 @@ Other calculations:
     This means grabbing ALL the GD. I have a NAS just for this.
     Try and start timing some songs. Just a tour (like spring 78).
         Work out the exact workflow to the point of estimating how long this will take.
+
+
+For the show data:
+    List the setlist
+    Show the times underneath the songs
+    Show the weather of the show as some kind of graph
+    Show the venue information
+    All songs have hyperlinks to the song info
+    Have a "next / previous" show
+    Have a "next / previous" for the venue
+    Show the day of the show
 
 
 For the year data:

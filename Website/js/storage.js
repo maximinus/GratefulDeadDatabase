@@ -6,6 +6,7 @@
 //       Update header text and info
 //       Make text song input work
 
+
 const SONGS_FILE = 'data/songs.bin';
 const SHOWS_FILE = 'data/shows.bin';
 const VENUES_FILE = 'data/venues.bin';
@@ -19,6 +20,25 @@ const SHOW_DATA = 'shows';
 const VENUE_DATA = 'venues';
 const WEATHER_DATA = 'weather';
 const LAST_UPDATE = 'update-data';
+
+
+// this should be a class just to not pollute the environment
+class STORAGE {
+    constructor() {
+        // this will load and so on
+        var loaded = false;
+        var shows = [];
+        var songs = [];
+        var venues = [];
+        var weather = [];
+        // {song_title: [date, length]} for all songs
+        var song_data = {};
+        var last_update = '';
+        var load_counter = 0;
+    };
+};
+
+
 
 // used when debugging
 const FORCE_UPDATE = true;
@@ -641,3 +661,10 @@ function getData() {
     log('Loading data from network');
     fetchBinaryData();
 };
+
+
+// helper functions for pulling data from the db
+
+function get_show_from_date(show_date) {
+    // convert into what the date should be
+}

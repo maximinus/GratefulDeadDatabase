@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Hide favicon request -->
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./css/flatly.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+  </head>
+  <body>
+    <!-- The top image bar, should likely have search somwehere -->
+    <div class="container py-3">
+      <img src="./gfx/logo.png" alt="Logo" id="logo">
+      <h1 class="px-4 align-middle" style="display:inline"><b>{{ header }}</b></h1>
+    </div>
+    <div class="container">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="songs-tab" data-toggle="tab" href="#songs" role="tab" aria-controls="songs" aria-selected="true">Songs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="shows-tab" data-toggle="tab" href="#shows" role="tab" aria-controls="shows" aria-selected="false">Shows</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="years-tab" data-toggle="tab" href="#years" role="tab" aria-controls="years" aria-selected="false">Years</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="venues-tab" data-toggle="tab" href="#venues" role="tab" aria-controls="venues" aria-selected="false">Venues</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">About</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="songs" role="tabpanel" aria-labelledby="home-tab">
+          {{> songs}}
+        </div>
+        <div class="tab-pane fade" id="shows" role="tabpanel" aria-labelledby="profile-tab">
+          {{> show}}
+        </div>
+        <div class="tab-pane fade" id="years" role="tabpanel" aria-labelledby="contact-tab">
+          We put years here
+        </div>
+        <div class="tab-pane fade" id="venues" role="tabpanel" aria-labelledby="contact-tab">
+          Venue stuff here
+        </div>
+        <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="contact-tab">
+          And the about info here
+        </div>
+      </div>
+      <div class="card my-3">
+        <div class="card-body">
+          <p class="card-text"><i>{{ footer }}</i></p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="./js/jquery-3.2.1.slim.min.js"></script>
+  <script type="text/javascript" src="./js/popper.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/highcharts.js"></script>
+  <script type="text/javascript" src="./js/helpers.js"></script>
+  <script type="text/javascript" src="./js/storage.js"></script>
+  <script type="text/javascript" src="./js/calculate_charts.js"></script>
+  <script type="text/javascript" src="./js/display_show.js"></script>
+  <script type="text/javascript" src="./js/jerrybase.js"></script>
+</html>

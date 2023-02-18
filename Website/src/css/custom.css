@@ -1,0 +1,22 @@
+.table {
+	--bs-table-accent-bg: transparent; !important;
+}
+
+.popup {
+    opacity: 0.5;
+    filter: alpha(opacity=40);
+}
+    
+.popup:hover {
+    opacity: 1.0;
+}
+
+.modal-body {
+    max-height: 80vh; !important;
+    overflow-y: auto; !important;
+}
+
+.card-header {
+    color: #333333 !important;
+    background-color: #e0f7f7 !important;
+}

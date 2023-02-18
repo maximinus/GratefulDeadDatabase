@@ -1,0 +1,355 @@
+<!-- This is the songs tab page -->
+<div class="container">
+    <!-- Row for header and explanation -->
+    <div class="row pt-2">
+        <!-- Header on the left, form on the right -->
+        <div class="col">
+            <h2 id="song-title"></h2>
+        </div>
+        <div class="col-auto">
+            <form autocomplete="off">
+                <input id="song-input" style="width:350px;" type="text" placeholder="Enter song" list="choose-song">
+                <datalist id="choose-song">
+                </datalist>
+            </form>
+        </div>
+    </div>
+    <div id="song-details" class="row pt-1 pb-4">
+        <h5 id="song-detail-text"></h5>
+    </div>
+    <!-- 1st Row -->
+    <div class="row">
+        <div class="col-sm">
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5>Played Per Year</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-played">
+                </div>
+                <div id="played-chart" style="width:100%; height:100%;"></div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5>Longest Versions</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-longest">
+                </div>
+                <table class="table table-striped">
+                    <tbody id='longest-versions'>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>date</td>
+                            <td>time</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5>Shortest Versions</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-shortest">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="shortest-versions">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Date</td>
+                            <td>Time</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 1st row -->
+    <!-- 2nd Row -->
+    <div class="row pt-4">
+        <div class="col-sm">
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5>Average Length Per Year</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-average">
+                </div>
+                <div id="length-chart" style="width:100%; height:100%;"></div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5>First time played</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-first">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="first-played">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Date</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5>Last time played</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-last">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="last-played">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Date</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 2nd row -->
+    <!-- 3rd Row -->
+    <div class="row pt-4">
+        <div class="col-sm">
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5>Average set Position</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-position">
+                </div>
+                <div id="position-chart" style="width:100%; height:100%;"></div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5>Songs Before</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-before">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="songs-before">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Name</td>
+                            <td>Total</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5>Songs After</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-after">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="songs-after">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Name</td>
+                            <td>Total</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 3rd row -->
+</div>
+<!-- End of container -->
+<!-- Dump the modal dialogs here  -->
+<!-- First the table pop-up       -->
+<div class="modal" tabindex="-1" role="dialog" id="table-dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="dialog-table-title"></h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <tbody id="table-entry">
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of table dialog -->
+<!-- then the chart pop-up -->
+<div class="modal" tabindex="-1" role="dialog" id="chart-dialog">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="dialog-chart-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div id="pop-up-charts"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,10 @@ import sys
 import json
 import shutil
 import chevron
+import threading
+import webbrowser
+import http.server
+import socketserver
 
 from pathlib import Path
 
@@ -60,18 +64,32 @@ def copy_files():
     for folder in FOLDER_NAMES:
         source_folder = SOURCE_FOLDER / folder
         dest_folder = DIST_FOLDER / folder
-        print(f'* Copying file from {folder}')
+        print(f'* Copying files from {source_folder}')
         # copy all files from one to the other
         try:
             shutil.copytree(source_folder, dest_folder)
-            pass
         except (FileExistsError, OSError) as ex:
             error(f'Could not copy files: {ex}')
 
 
-def serve():
+class Handler(http.server.SimpleHTTPRequestHandler):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory=DIST_FOLDER, **kwargs)
+
+
+def server_thread(name):
+    httpd = socketserver.TCPServer(('', 8000), Handler)
+    httpd.serve_forever()
+
+
+def serve_page():
+    x = threading.Thread(target=server_thread, args=(1,))
+    x.start()
     # serve the file and open up in the browser
     print(f'* Serving {OUTPUT_HTML}')
+    webbrowser.open_new_tab('0.0.0.0:8000')
+    # wait for thread to die
+    x.join()
 
 
 if __name__ == '__main__':
@@ -79,4 +97,4 @@ if __name__ == '__main__':
     page_data = get_data()
     build_html(page_data)
     copy_files()
-    serve()
+    serve_page()

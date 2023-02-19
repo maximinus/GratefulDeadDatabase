@@ -15,6 +15,7 @@ JSON_FILE = Path('./data.json')
 HTML_FILE = Path('./src/html/index.html')
 PARTIALS_FOLDER = Path('./src/html')
 OUTPUT_HTML = Path('./dist/index.html')
+TEMPLATE_FOLDER = Path('./src/html/templates')
 
 # folders to copy
 SOURCE_FOLDER = Path('./src')
@@ -36,11 +37,29 @@ def clean_dist():
         error(f'Could not clean folder: {ex}')
 
 
+def get_templates():
+    all_templates = os.listdir(TEMPLATE_FOLDER)
+    template_data = []
+    for i in all_templates:
+        template_id = i.split('.')[0]
+        # not sure why this doesn't need 2 spaces
+        template_data.append(f'<script id="{template_id}" type="x-tmpl-mustache">\n')
+        template_file = TEMPLATE_FOLDER / i
+        with open(template_file) as f:
+            for i in f.readlines():
+                template_data.append('    ' + i)
+        template_data.append('  </script>\n')
+    return ''.join(template_data)
+
+
 def get_data():
+    templates = get_templates()
+    print('* Loaded templates')
     try:
         with open(JSON_FILE) as f:
             data = json.load(f)
         print('* Loaded JSON data')
+        data['templates'] = templates
         return data
     except OSError as ex:
         error(f'Could not get JSON: {ex}')
@@ -78,6 +97,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 
 def server_thread(name):
+    socketserver.TCPServer.allow_reuse_address = True
     httpd = socketserver.TCPServer(('', 8000), Handler)
     httpd.serve_forever()
 

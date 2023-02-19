@@ -4,6 +4,12 @@
 const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 
+// helper functions for pulling data from the db
+
+function get_show_from_date(show_date) {
+    // convert into what the date should be
+};
+
 function getIndexOfSong(song_title) {
     // what's the index of song text x in the array songs?
     return songs.indexOf(song_title);

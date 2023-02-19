@@ -39,7 +39,6 @@ class STORAGE {
 };
 
 
-
 // used when debugging
 const FORCE_UPDATE = true;
 
@@ -284,11 +283,11 @@ function checkFinish() {
 
 function dataLoaded() {
     // callback for when we have all data from network load
-    log('Loading finished');
     // store for next time
     storeData();
     getSongData();
-    updateVisualData(DEFAULT_SONG);
+    log('Loading finished');
+    updateTabs();
     data_loaded = true;
 };
 
@@ -618,6 +617,7 @@ function getSongData() {
     // this means we want to produce a map of song -> song instances
     // this is why they have a date and a time
     // we often search by song, this makes things a lot quicker
+    log('Getting song data from database');
     song_data = {}
     for(var show of shows) {
         for(var i of show.getAllSongs()) {
@@ -646,6 +646,12 @@ function checkLocalStorage() {
     return false;
 };
 
+function updateTabs() {
+	// data has been loaded by this point
+	updateVisualData(DEFAULT_SONG);
+    displayShow('31/21/78');
+};
+
 function getData() {
     if(FORCE_UPDATE == true) {
         log('Update forced');
@@ -654,17 +660,10 @@ function getData() {
         if(checkLocalStorage() == true) {
             getSongData();
             data_loaded = true;
-            updateVisualData(DEFAULT_SONG);
+            updateTabs();
             return;
         }
     }
     log('Loading data from network');
     fetchBinaryData();
 };
-
-
-// helper functions for pulling data from the db
-
-function get_show_from_date(show_date) {
-    // convert into what the date should be
-}

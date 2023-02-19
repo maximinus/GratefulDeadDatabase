@@ -1,0 +1,19 @@
+<!-- Template for single sets -->
+<!-- This template is rendered from javascript code -->
+<div class="container">
+    <div class="row">
+        <h4 id="show-date">{{ show-date }}</h4>
+    </div>
+    <div class="row">
+        <h4 id="show-venue">{{ show-venue }}</h4>
+    </div>
+</div>
+<div class="container">
+    <!-- for loop over sets -->
+    {{#sets}}
+    <div class="row">
+        <div class="col-1 set-name">{{ set-name }}</div>
+        <div class="col">{{ songs }}</div>
+    </div>
+    {{/sets}}
+</div>

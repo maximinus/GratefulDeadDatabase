@@ -24,6 +24,7 @@ def error(message):
 
 def clean_dist():
     try:
+        print(DIST_FOLDER)
         shutil.rmtree(DIST_FOLDER)
         os.makedirs(DIST_FOLDER)
         print('* Cleaned dist folder')
@@ -49,7 +50,7 @@ def build_html(data):
                                   partials_ext='html')
         with open(OUTPUT_HTML, "w") as f:
             f.write(page)
-            print('* Built new index.html')
+            print(f'* Built new index.html at {OUTPUT_HTML}')
     except OSError as ex:
         error(f'Could not create index.html {ex}')
 
@@ -59,12 +60,13 @@ def copy_files():
     for folder in FOLDER_NAMES:
         source_folder = SOURCE_FOLDER / folder
         dest_folder = DIST_FOLDER / folder
-        print('* Copying from {folder} folder')
+        print(f'* Copying file from {folder}')
         # copy all files from one to the other
         try:
             shutil.copytree(source_folder, dest_folder)
+            pass
         except (FileExistsError, OSError) as ex:
-            error('Could not copy files: {ex}')
+            error(f'Could not copy files: {ex}')
 
 
 def serve():

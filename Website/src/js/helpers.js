@@ -1,14 +1,44 @@
 // common helpers to extract data from data, change data, ask questions and so
 // this is used by all display code
 
-const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+// maybe put these in a consts file?
 
+const SONGS_FILE = 'data/songs.bin';
+const SHOWS_FILE = 'data/shows.bin';
+const VENUES_FILE = 'data/venues.bin';
+const WEATHER_FILE = 'data/weather.bin'
+const FILES_TO_LOAD = 4;
+
+const LOGGING_ON = true;
+
+const SONG_DATA = 'songs';
+const SHOW_DATA = 'shows';
+const VENUE_DATA = 'venues';
+const WEATHER_DATA = 'weather';
+const LAST_UPDATE = 'update-data';
+
+const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const TABLE_ENTRIES = 6;
+const YEAR_OFFSET = 65;
+const YEARS_PLAYED = 31;
 
 // helper functions for pulling data from the db
 
-function get_show_from_date(show_date) {
-    // convert into what the date should be
+function getShowFromDate(show_date) {
+    // TODO: convert into what the date should be
+    // remove by adding real date to show
 };
+
+function getAllShowsInYear(year) {
+    // TODO: test the year function in the show. Fix the date
+    var all_shows_in_year = []
+    for(var show of shows) {
+        if(show.year == year) {
+            all_shows_in_year.push[show];
+        }
+    }
+    return all_shows_in_year;
+}
 
 function getIndexOfSong(song_title) {
     // what's the index of song text x in the array songs?

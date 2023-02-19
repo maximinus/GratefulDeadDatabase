@@ -7,21 +7,6 @@
 //       Make text song input work
 
 
-const SONGS_FILE = 'data/songs.bin';
-const SHOWS_FILE = 'data/shows.bin';
-const VENUES_FILE = 'data/venues.bin';
-const WEATHER_FILE = 'data/weather.bin'
-const FILES_TO_LOAD = 4;
-
-const LOGGING_ON = true;
-
-const SONG_DATA = 'songs';
-const SHOW_DATA = 'shows';
-const VENUE_DATA = 'venues';
-const WEATHER_DATA = 'weather';
-const LAST_UPDATE = 'update-data';
-
-
 // this should be a class just to not pollute the environment
 class STORAGE {
     constructor() {
@@ -47,7 +32,8 @@ const NEXT_UPDATE = 365;
 
 const DEFAULT_SONG = 'Playing In The Band';
 
-// these is global data seens by all
+// these is global data seen by all
+// really needs a namespace - make a storage object and update
 var shows = [];
 var songs = [];
 var venues = [];
@@ -175,7 +161,9 @@ class Show {
     constructor(show_sets, date, venue_id, show_id) {
         this.id = show_id;
         this.sets = show_sets;
+        // TODO: date needs to be better
         this.date = date;
+        this.year = 78;
         this.venue = venue_id;
     };
 
@@ -195,6 +183,24 @@ class Show {
             }
         }
         return all_songs;
+    };
+
+    getAllUniqueSongs() {
+        var all_songs = this.getAllSongs();
+        // turn to set and then back to lisr
+        return [...new Set(all_songs)];
+    }
+
+    getAllUniqueSongsBySet() {
+        sets_by_song = []
+        for(var i of this.sets) {
+            var songs_in_set = [];
+            for(var j of i.songs) {
+                songs_in_set.push(j);
+            }
+            sets_by_song.push([...new Set(songs_in_set)]);
+        }
+        return sets_by_song;
     };
 
     printShow() {

@@ -1,7 +1,3 @@
-const TABLE_ENTRIES = 6;
-const YEAR_OFFSET = 65;
-const YEARS_PLAYED = 31;
-
 var sorted_by_length = [];
 var played_before = [];
 var played_after = [];

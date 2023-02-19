@@ -1,19 +1,35 @@
 <!-- Template for single sets -->
 <!-- This template is rendered from javascript code -->
-<div class="container">
-    <div class="row">
-        <h4 id="show-date">{{ show-date }}</h4>
-    </div>
-    <div class="row">
-        <h4 id="show-venue">{{ show-venue }}</h4>
+<div class="container my-4">
+    <div class="card h-100">
+        <div class="card-header" style="display:flex; justify-content:space-between;">
+            <h5 class="my-auto">{{ show-date }}, {{ show-venue }}</h5>
+        </div>
+        <div class="container my-2">
+            {{#sets}}
+            <div class="row my-1">
+                <div class="col-1 set-name"><i>{{ set-name }}</i></div>
+                <div class="col">{{ songs }}</div>
+            </div>
+            {{/sets}}
+        </div>
     </div>
 </div>
-<div class="container">
-    <!-- for loop over sets -->
-    {{#sets}}
-    <div class="row">
-        <div class="col-1 set-name">{{ set-name }}</div>
-        <div class="col">{{ songs }}</div>
+<div class="container my-4">
+    <div class="card h-100">
+        <div class="card-header" style="display:flex; justify-content:space-between;">
+            <h5 class="my-auto">Weather</h5>
+            <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                <label class="btn btn-secondary active" id="weather-f">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked>
+                    Farenheiht
+                </label>
+                <label class="btn btn-secondary" id="weather-c">
+                    <input type="radio" name="options" id="option2" autocomplete="off">
+                    Celcius
+                </label>
+            </div>
+        </div>
+        <div id="show-weather-chart" style="width:100%; height:100%;"></div>
     </div>
-    {{/sets}}
 </div>

@@ -69,6 +69,11 @@ class Venue {
         this.longitude = parseFloat(venue_data[7]);
     };
 
+    getVenueName() {
+        // return full name of venue
+        return `${this.venue}, ${this.city}, ${this.state}, ${this.country}`;
+    };
+
     getJsonData() {
         return JSON.stringify({'id':this.id, 'venue':this.venue,
                                'college':this.college, 'city':this.city,
@@ -139,9 +144,9 @@ class Show {
     constructor(show_sets, date, venue_id, show_id) {
         this.id = show_id;
         this.sets = show_sets;
-        // TODO: date needs to be better
-        this.date = date;
-        this.year = 78;
+        // date is a number of days since 1950, so convert this
+        this.date = date
+        this.js_date = getRealDate(date);
         this.venue = venue_id;
     };
 
@@ -170,7 +175,7 @@ class Show {
     }
 
     getAllUniqueSongsBySet() {
-        sets_by_song = []
+        var sets_by_song = []
         for(var i of this.sets) {
             var songs_in_set = [];
             for(var j of i.songs) {
@@ -634,7 +639,7 @@ function updateTabs() {
 	// data has been loaded by this point
 	setSongDropdown();
 	updateVisualData(DEFAULT_SONG);
-    displayShow('31/21/78');
+    displayShow(DEFAULT_SHOW);
 };
 
 function getData() {

@@ -12,7 +12,7 @@ function getAllShowsInYear(year) {
     // TODO: test the year function in the show. Fix the date
     var all_shows_in_year = []
     for(var show of store.shows) {
-        if(show.year == year) {
+        if(show.js_date.getFullYear() == year) {
             all_shows_in_year.push[show];
         }
     }
@@ -52,6 +52,26 @@ function convertDate(days) {
     return `${day}${day_ending} ${month} ${year}`;
 };
 
+function convertDateLong(days) {
+    // convert to date format "13th October 1973" or similar
+    // the value sent is an int: number of days since 1st Jan 1950
+    var new_date = new Date(1950, 0, 1);
+    new_date.setDate(new_date.getDate() + days);
+    // now convert to string and return
+    var day = new_date.getDate();
+    var month = new_date.toLocaleString('default', { month: 'long' });
+    var year = new_date.getFullYear().toString();
+    // calculate st/nd/rd/th
+    var day_ending = nth(day);
+    return `${day}${day_ending} ${month} ${year}`;
+}
+
+function getRealDate(days) {
+    var new_date = new Date(1950, 0, 1);
+    new_date.setDate(new_date.getDate() + days);
+    return new_date;
+};
+
 function convertFromDate(show_date) {
     // do the opposite of above
     var new_date = new Date(1950, 0 ,1);
@@ -59,7 +79,7 @@ function convertFromDate(show_date) {
     return Math.ceil(diff / (1000 * 3600 * 24));
 };
 
-function get_actual_day(show_date) {
+function getActualDay(show_date) {
     // given a real date, find out what day it really was
     return WEEKDAYS[show_date.getDay()];
 };
@@ -85,6 +105,14 @@ function dayDays(delta) {
 function getSetName(index) {
     var names = ['1st', '2nd', '3rd', '4th', '5th', '6th'];
     return names[index];
+};
+
+function getSongName(index) {
+    // get the name of the song at this index, check for errors
+    if(index >= store.songs.length) {
+        return "Index too high";
+    }
+    return store.songs[index];
 };
 
 function dateDifference(startingDate, endingDate) {

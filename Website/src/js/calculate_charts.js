@@ -2,10 +2,10 @@
 
 class ChartsStorage {
     constructor() {
-        var sorted_by_length = [];
-        var played_before = [];
-        var played_after = [];
-        var current_song_title = '';
+        this.sorted_by_length = [];
+        this.played_before = [];
+        this.played_after = [];
+        this.current_song_title = '';
     };
 };
 

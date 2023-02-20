@@ -8,46 +8,24 @@
 
 
 // this should be a class just to not pollute the environment
-class STORAGE {
+class Storage {
     constructor() {
         // this will load and so on
-        var loaded = false;
-        var shows = [];
-        var songs = [];
-        var venues = [];
-        var weather = [];
+        this.loaded = false;
+        this.shows = [];
+        this.songs = [];
+        this.venues = [];
+        this.weather = [];
         // {song_title: [date, length]} for all songs
-        var song_data = {};
-        var last_update = '';
-        var load_counter = 0;
-    };
-};
+        this.song_data = {};
+        this.last_update = '';
+        this.load_counter = 0;
+    }
+}
 
+// the singleton for others to use
+var store = new Storage();
 
-// used when debugging
-const FORCE_UPDATE = true;
-
-// how often to check the update, in number of days
-const NEXT_UPDATE = 365;
-
-const DEFAULT_SONG = 'Playing In The Band';
-
-// these is global data seen by all
-// really needs a namespace - make a storage object and update
-var shows = [];
-var songs = [];
-var venues = [];
-var weather = [];
-// song data is a hash map of song_title: [(date, length), ...]
-var song_data = {};
-var last_update = '';
-var load_counter = 0;
-var data_loaded = false;
-
-// start with the class definitions we need
-
-// define the data endpoints
-// we need to convert to this data from local storage if need be
 class Weather {
     // data is an array of # array of: [weather_id, [temp, feels_like] * 24] for all weather data
     // TODO: should be a date, so we can match with the show, not a weather id
@@ -280,7 +258,7 @@ function storageAvailable() {
 };
 
 function checkFinish() {
-    if(load_counter < FILES_TO_LOAD) {
+    if(store.load_counter < FILES_TO_LOAD) {
         // not done yet
         return;
     }
@@ -293,22 +271,22 @@ function dataLoaded() {
     storeData();
     getSongData();
     log('Loading finished');
+    store.loaded = true;
     updateTabs();
-    data_loaded = true;
 };
 
 function parseSongs(binary_data) {
     // zero terminated strings stored in bytes
-    songs = [];
+    store.songs = [];
     // there is no ID = 0 for songs, so we add a null string
-    songs.push('');
+    store.songs.push('');
     var next_title = '';
     for(var i = 0; i < binary_data.byteLength; i++) {
         if(binary_data[i] != 0) {
             next_title += String.fromCharCode(binary_data[i]);
         }
         else {
-            songs.push(next_title);
+            store.songs.push(next_title);
             next_title = '';
             // a zero after the zero (a double termination) is the end
             if(binary_data[i+1] == 0) {
@@ -318,8 +296,8 @@ function parseSongs(binary_data) {
         }
     }
     var total_songs = songs.length;
-    log(`Got ${songs.length} songs`);
-    load_counter += 1;
+    log(`Got ${store.songs.length} songs`);
+    store.load_counter += 1;
     checkFinish();
 };
 
@@ -383,7 +361,7 @@ function parseShows(binary_data) {
     // 3rd and 4th bytes are the venue id
     // 5th and 6th bytes are the show id
     // Then we have a set, constructed as a list of [song_index, length]
-    shows = [];
+    store.shows = [];
     // All +2 are to move a word in the byte array
     var index = 0;
     while(true) {
@@ -401,15 +379,16 @@ function parseShows(binary_data) {
         var new_sets_data = getSets(binary_data, index);
         index = new_sets_data[1];
         // save the show
-        shows.push(new Show(new_sets_data[0], date, venue_id, show_id));
+        store.shows.push(new Show(new_sets_data[0], date, venue_id, show_id));
     }
-    log(`Got ${shows.length} shows`);
-    load_counter += 1;
+    log(`Got ${store.shows.length} shows`);
+    log(`Got ${store.shows.length} shows`);
+    store.load_counter += 1;
     checkFinish();
 };
 
 function parseWeather(binary_data) {
-    weather = [];
+    store.weather = [];
     // all 16 bit data
     // [show_id, [temp, feels_like] * 24], i.e. 49 * 2 = 98 bytes each
     // precipitation true/false is held as the high bit in feels_like
@@ -433,7 +412,7 @@ function parseWeather(binary_data) {
             }
             feels.push(feels_tmp);
         }
-        weather.push(new Weather(show_id, temps, feels, precip));
+        store.weather.push(new Weather(show_id, temps, feels, precip));
         // should be a zero to verify the end
         if(getWord(binary_data, index) != 0) {
             log('Error parsing weather');
@@ -442,8 +421,8 @@ function parseWeather(binary_data) {
         index +=2;
         // really at the end?
         if(getWord(binary_data, index) == 0) {
-            log(`Got ${weather.length} days of weather`);
-            load_counter += 1;
+            log(`Got ${store.weather.length} days of weather`);
+            store.load_counter += 1;
             checkFinish();
             return;
         }
@@ -451,7 +430,7 @@ function parseWeather(binary_data) {
 };
 
 function parseVenues(binary_data) {
-    venues = [];
+    store.venues = [];
     // just 8 strings, grab them all
     var index = 0;
     while(true) {
@@ -466,11 +445,11 @@ function parseVenues(binary_data) {
             index += 1;
             details.push(next_title);
         }
-        venues.push(new Venue(details))
+        store.venues.push(new Venue(details))
         // now we've collected them all, is there a zero at the end?
         if(binary_data[index] == 0) {
-            log(`Got ${venues.length} venues`);
-            load_counter += 1;
+            log(`Got ${store.venues.length} venues`);
+            store.load_counter += 1;
             checkFinish();
             return;
         }
@@ -484,16 +463,16 @@ function storeData() {
     }
     // create an array of shows
     var all_shows = [];
-    for(var single_show of shows) {
+    for(var single_show of store.shows) {
         all_shows.push(single_show.getJsonData());
     }
     localStorage.setItem(SHOW_DATA, JSON.stringify(all_shows));
     // repeat for all songs
-    localStorage.setItem(SONG_DATA, JSON.stringify(songs));
+    localStorage.setItem(SONG_DATA, JSON.stringify(store.songs));
     // and venues
-    localStorage.setItem(VENUE_DATA, JSON.stringify(venues));
+    localStorage.setItem(VENUE_DATA, JSON.stringify(store.venues));
     // finally, weather
-    localStorage.setItem(WEATHER_DATA, JSON.stringify(weather));
+    localStorage.setItem(WEATHER_DATA, JSON.stringify(store.weather));
     // now we need store the current date
     var current_date = new Date();
     localStorage.setItem(LAST_UPDATE, JSON.stringify(current_date));
@@ -556,7 +535,7 @@ function fetchBinaryData() {
 
 function updateRequired() {
     // last_update contains valid data
-    var update_date = new Date(JSON.parse(last_update));
+    var update_date = new Date(JSON.parse(store.last_update));
     var today = new Date();
     // calculate day difference between the 2 dates
     // yes, this code ignore timezones and so on, but it's good enough
@@ -570,16 +549,15 @@ function updateRequired() {
 
 function convertLocalData(loaded_songs, loaded_shows, loaded_venues, loaded_weather) {
     try {
-        songs = JSON.parse(loaded_songs);
-        venues = JSON.parse(loaded_venues);
-        weather = JSON.parse(loaded_weather);
+        store.songs = JSON.parse(loaded_songs);
+        store.venues = JSON.parse(loaded_venues);
+        store.weather = JSON.parse(loaded_weather);
         // convert back to shows
         var json_shows = JSON.parse(loaded_shows);
-        shows = [];
+        store.shows = [];
         for(var i of json_shows) {
-            shows.push(Show.fromJsonData(i));
+            store.shows.push(Show.fromJsonData(i));
         }
-        venues = JSON.parse(loaded_venues);
     } catch(error) {
         log(`Error: ${error}`);
         log('Malformed data in local storage');
@@ -596,8 +574,8 @@ function getFromLocalStorage() {
     var loaded_songs = localStorage.getItem(SONG_DATA);
     var loaded_venues = localStorage.getItem(VENUE_DATA);
     var loaded_weather = localStorage.getItem(WEATHER_DATA);
-    last_update = localStorage.getItem(LAST_UPDATE);
-    if(loaded_shows == null || loaded_songs == null || loaded_venues == null || last_update == null || loaded_weather == null) {
+    store.last_update = localStorage.getItem(LAST_UPDATE);
+    if(loaded_shows == null || loaded_songs == null || loaded_venues == null || store.last_update == null || loaded_weather == null) {
         log('No local data found');
         // we need to reload
         return false;
@@ -611,10 +589,10 @@ function getFromLocalStorage() {
     if(convertLocalData(loaded_songs, loaded_shows, loaded_venues, loaded_weather) == false) {
         return false;
     }
-    log(`Got ${songs.length} songs`);
-    log(`Got ${shows.length} shows`);
-    log(`Got ${venues.length} venues`);
-    log(`Got ${weather.length} days of weather`);
+    log(`Got ${store.songs.length} songs`);
+    log(`Got ${store.shows.length} shows`);
+    log(`Got ${store.venues.length} venues`);
+    log(`Got ${store.weather.length} days of weather`);
     return true;
 };
 
@@ -624,15 +602,15 @@ function getSongData() {
     // this is why they have a date and a time
     // we often search by song, this makes things a lot quicker
     log('Getting song data from database');
-    song_data = {}
-    for(var show of shows) {
+    store.song_data = {}
+    for(var show of store.shows) {
         for(var i of show.getAllSongs()) {
-            var song_title = songs[i.song];
+            var song_title = store.songs[i.song];
             var new_song_data = new SongData(show.date, i.seconds);
-            if(song_title in song_data) {
-                song_data[song_title].push(new_song_data);
+            if(song_title in store.song_data) {
+                store.song_data[song_title].push(new_song_data);
             } else {
-                song_data[song_title] = [new_song_data];
+                store.song_data[song_title] = [new_song_data];
             }
         }
     }
@@ -654,6 +632,7 @@ function checkLocalStorage() {
 
 function updateTabs() {
 	// data has been loaded by this point
+	setSongDropdown();
 	updateVisualData(DEFAULT_SONG);
     displayShow('31/21/78');
 };
@@ -665,7 +644,7 @@ function getData() {
     else {
         if(checkLocalStorage() == true) {
             getSongData();
-            data_loaded = true;
+            store.loaded = true;
             updateTabs();
             return;
         }

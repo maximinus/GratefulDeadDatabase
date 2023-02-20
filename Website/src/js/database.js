@@ -18,7 +18,7 @@ function checkNewSong(event) {
 		var song_name = document.getElementById('song-input').value;
 		song_name = song_name.toLowerCase();
 		// check this exists
-		for(var s of songs) {
+		for(var s of store.songs) {
 			if(s.toLowerCase() == song_name) {
 				// update the song selection
 				log(`Displaying ${s}`);
@@ -41,14 +41,11 @@ function addCallbacks() {
 };
 
 function setSongDropdown() {
-	updateSongInputOptions(songs);
+	updateSongInputOptions(store.songs);
 };
 
 document.addEventListener("DOMContentLoaded", function(){
-	// TODO: Confirm this waits until all JSON files are loaded
-	// this function blocks until the data has been loaded
 	getData();
-	setSongDropdown();
 	// add events
 	addCallbacks();
 });

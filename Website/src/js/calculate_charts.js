@@ -1,10 +1,17 @@
-var sorted_by_length = [];
-var played_before = [];
-var played_after = [];
-var current_song_title = '';
+// these need to be namespaced
+
+class ChartsStorage {
+    constructor() {
+        var sorted_by_length = [];
+        var played_before = [];
+        var played_after = [];
+        var current_song_title = '';
+    };
+};
+
+var charts_store = new ChartsStorage();
 
 
-// first I extract the code in here that should be in the API / helpers
 // only code to render, update and display the song charts should be here
 // that DOES include data collection specific to the charts.
 // getAllTimesPlayed() is a good example of this
@@ -16,7 +23,7 @@ function getAllTimesPlayed(song_title) {
     years.fill(0);
     percent.fill(0);
     var index = getIndexOfSong(song_title);
-    for(var show of shows) {
+    for(var show of store.shows) {
         // how many matches
         var matches = show.getAllSongs().filter(x => x.song == index).length;
         var year_index = getYear(show.date) - YEAR_OFFSET;
@@ -133,7 +140,7 @@ function getAverageLength(song_title) {
     var times_played = 0;
     var total_time = 0;
     // add together the sum and total for all years
-    for(var show of shows) {
+    for(var show of store.shows) {
         var year_index = getYear(show.date) - YEAR_OFFSET;
         for(var song of show.getAllSongs()) {
             if(song.song == index) {
@@ -264,7 +271,7 @@ function getAveragePosition(song_title) {
         years[i] = [];
     }
     var index = getIndexOfSong(song_title);
-    for(var show of shows) {
+    for(var show of store.shows) {
         var year_index = getYear(show.date) - YEAR_OFFSET;
         var set_index = 1;
         for(var single_set of show.sets) {
@@ -384,7 +391,7 @@ function buildLengthVersions(song_title) {
     // get the versions first
     // get the songs, and sort by length
     // create a new list with the 65535 stripped out
-    var data = song_data[song_title].filter(x => x.seconds != 65535);
+    var data = store.song_data[song_title].filter(x => x.seconds != 65535);
     data.sort((a, b) => (a.seconds < b.seconds) ? 1 : -1);
     // get the first 5
     var table_data = data.slice(0, TABLE_ENTRIES);
@@ -401,7 +408,7 @@ function buildLengthVersions(song_title) {
         }
         index += 1;
     }
-    sorted_by_length = data;
+    charts_store.sorted_by_length = data;
 
     // invert the list and go again
     data.reverse()
@@ -419,11 +426,11 @@ function buildLengthVersions(song_title) {
         index += 1;   
     }
     // make sure default data is the right order
-    sorted_by_length.reverse()
+    charts_store.sorted_by_length.reverse()
 };
 
 function buildFirstLastVersions(song_title) {
-    var data = song_data[song_title];
+    var data = store.song_data[song_title];
     var table_data = data.slice(0, TABLE_ENTRIES);
     // TODO: fill up the empties if they don't exist
     // scroll through the children of the table and visit them all
@@ -474,7 +481,7 @@ function buildBeforeAfterSongs(song_title) {
     // we need to cycle over all the shows
     var songs_before = {};
     var songs_after = {};
-    for(var show of shows) {
+    for(var show of store.shows) {
         var set_number = 0;
         for(var single_set of show.sets) {
             var index = 0;
@@ -487,10 +494,10 @@ function buildBeforeAfterSongs(song_title) {
                     if(index == 0) {
                         song_before = `${getSetName(set_number)} set opener`;
                     } else {
-                        song_before = songs[single_set.songs[index - 1].song];
+                        song_before = store.songs[single_set.songs[index - 1].song];
                     }
                     if(index < (single_set.songs.length - 1)) {
-                        song_after = songs[single_set.songs[index + 1].song];
+                        song_after = store.songs[single_set.songs[index + 1].song];
                     } else {
                         song_after = `${getSetName(set_number)} set closer`;
                     }
@@ -524,7 +531,7 @@ function buildBeforeAfterSongs(song_title) {
     });
 
     // save the data
-    played_before = sbefore;
+    charts_store.played_before = sbefore;
 
     // Create a new array with only the first 5 items
     sbefore = sbefore.slice(0, TABLE_ENTRIES);
@@ -542,7 +549,7 @@ function buildBeforeAfterSongs(song_title) {
         return second[1] - first[1];
     });
 
-    played_after = safter;
+    charts_store.played_after = safter;
 
     // Create a new array with only the first 5 items
     safter = safter.slice(0, TABLE_ENTRIES);
@@ -598,22 +605,22 @@ function popOutLongest() {
     var table = document.getElementById('table-entry');
     // clear any children of this element
     table.replaceChildren();
-    setLengthTablePopupList(sorted_by_length, table);
-    document.getElementById('dialog-table-title').innerHTML = `${current_song_title}: Longest Versions`;
+    setLengthTablePopupList(charts_store.sorted_by_length, table);
+    document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: Longest Versions`;
     // display the modal
     $('#table-dialog').modal();
 };
 
 function popOutShortest() {
     // same as above function, just in reverse
-    sorted_by_length.reverse();
+    charts_store.sorted_by_length.reverse();
     var table = document.getElementById('table-entry');
     // clear any children of this element
     table.replaceChildren();
-    setLengthTablePopupList(sorted_by_length, table);
-    document.getElementById('dialog-table-title').innerHTML = `${current_song_title}: Shortest Versions`;
+    setLengthTablePopupList(charts_store.sorted_by_length, table);
+    document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: Shortest Versions`;
     // restore data
-    sorted_by_length.reverse();
+    charts_store.sorted_by_length.reverse();
     $('#table-dialog').modal();
 };
 
@@ -652,21 +659,21 @@ function setOrderTablePopupList(table_data, element, message) {
 };
 
 function popOutFirst() {
-    var data = song_data[current_song_title];
+    var data = store.song_data[charts_store.current_song_title];
     var table = document.getElementById('table-entry');
     table.replaceChildren();
     setOrderTablePopupList(data, table, 'after previous');
-    document.getElementById('dialog-table-title').innerHTML = `${current_song_title}: First Versions`;
+    document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: First Versions`;
     $('#table-dialog').modal();
 };
 
 function popOutLast() {
-    var data = song_data[current_song_title];
+    var data = store.song_data[charts_store.current_song_title];
     data.reverse();
     var table = document.getElementById('table-entry');
     table.replaceChildren();
     setOrderTablePopupList(data, table, 'before next');
-    document.getElementById('dialog-table-title').innerHTML = `${current_song_title}: Last Versions`;
+    document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: Last Versions`;
     data.reverse();
     $('#table-dialog').modal();
 };
@@ -697,20 +704,20 @@ function setBeforeAfterPopupList(table_data, element) {
 };
 
 function popOutBefore() {
-    var data = played_before;
+    var data = charts_store.played_before;
     var table = document.getElementById('table-entry');
     table.replaceChildren();
     setBeforeAfterPopupList(data, table);
-    document.getElementById('dialog-table-title').innerHTML = `${current_song_title}: Songs Before`;
+    document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: Songs Before`;
     $('#table-dialog').modal();
 };
 
 function popOutAfter() {
-    var data = played_after;
+    var data = charts_store.played_after;
     var table = document.getElementById('table-entry');
     table.replaceChildren();
     setBeforeAfterPopupList(data, table);
-    document.getElementById('dialog-table-title').innerHTML = `${current_song_title}: Songs After`;
+    document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: Songs After`;
     $('#table-dialog').modal();
 };
 
@@ -722,7 +729,7 @@ function popOutPlayed() {
     // set title
     document.getElementById('dialog-chart-title').innerHTML = 'Played Per Year';
     // set chart
-    buildPlayed(current_song_title, 'pop-up-charts');
+    buildPlayed(charts_store.current_song_title, 'pop-up-charts');
     // display
     $('#chart-dialog').modal();
 };
@@ -734,7 +741,7 @@ function popOutAverage() {
     // set title
     document.getElementById('dialog-chart-title').innerHTML = 'Average Length';
     // set chart
-    buildLength(current_song_title, 'pop-up-charts');
+    buildLength(charts_store.current_song_title, 'pop-up-charts');
     // display
     $('#chart-dialog').modal();
 };
@@ -744,7 +751,7 @@ function popOutPosition() {
     table.replaceChildren();
     // set title
     document.getElementById('dialog-chart-title').innerHTML = 'Average Length';
-    buildPosition(current_song_title, 'pop-up-charts');
+    buildPosition(charts_store.current_song_title, 'pop-up-charts');
     $('#chart-dialog').modal();
 };
 
@@ -760,7 +767,7 @@ function buildSongText(song_title) {
     // what song # it is, what show # played at
     // Example: Played 352 times, from 14th Apr 71 to 6th July 95 (24 years 204 days).<br />
     //          It was the 49th different song played and first played at the 672nd recorded show.
-    var data = song_data[song_title];
+    var data = store.song_data[song_title];
     var total_times_played = data.length;
     var first_played = data[0];
     var last_played = data[data.length - 1];
@@ -777,7 +784,7 @@ function buildSongText(song_title) {
     var last = null;
     var show_count = 0;
     var uniques = [];
-    for(var show of shows) {
+    for(var show of store.shows) {
         if(first == null) {
             show_count += 1;
         }
@@ -816,7 +823,7 @@ function buildSongText(song_title) {
 function updateVisualData(song_title) {
     // this needs to wait until data is loaded
     // TODO: this function should be somewhere else
-    current_song_title = song_title;
+    charts_store.current_song_title = song_title;
     log(`Updating charts and tables: ${song_title}`)
     buildTables(song_title);
     buildCharts(song_title);

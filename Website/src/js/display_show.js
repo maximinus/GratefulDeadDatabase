@@ -1,5 +1,14 @@
 // display a show
-current_shown_show = shows[1000];
+
+class ShowStorage {
+    constructor() {
+        var current_shown_show = null;
+    };
+};
+
+// can't call this now as store may or may not be setup
+var show_store = new ShowStorage();
+
 
 function getRealTemps(temps) {
     // convert the temps from the actual values to the real data
@@ -32,7 +41,7 @@ function getRealTemps(temps) {
 //            * rarest combos this year
 //            * rarest combos ever
 //            most similar shows
-//            weather for the show
+//            store.weather for the show
 //            encore nearest in total
 //            Venue information
 //              Next time played / last time played / total played
@@ -40,11 +49,11 @@ function getRealTemps(temps) {
 //            shortest songs
 
 function getRarestSongs() {
-    year_of_show = current_shown_show.year
+    year_of_show = show_store.current_shown_show.year
     // first we need get all songs and remove duplicates
     // then get the total times played for each song
     // then sort and take the first X
-    var all_songs = current_shown_show.getAllUniqueSongs();
+    var all_songs = show_store.current_shown_show.getAllUniqueSongs();
     results = {};
     for(var song of all_songs) {
         results.append([song, song_map[song].length]);
@@ -58,7 +67,7 @@ function getRarestSongs() {
 
 
 function getRarestCombos() {
-    year_of_show = current_shown_show.year
+    year_of_show = show_store.current_shown_show.year
     // so for this, first we get all songs and remove dups
     // then we merge ones next to each other in pairs
     // so if we have A-B-C-D we get A-B, B-C, C-D. We split totally over set-breaks
@@ -79,7 +88,7 @@ function getRarestCombos() {
     }
     // now we have a list of all combos
     // Iterate over all shows
-    for(var single_show of shows) {
+    for(var single_show of store.shows) {
         // get all songs
         var all_songs = single_show.get_all_songs();
         if(all_songs.length < 2) {
@@ -113,10 +122,10 @@ function getRarestCombosYear() {
 };
 
 
-function renderWeatherChart(farenheit) {
-    var temps = getRealTemps(weather[1000].temps);
-    var feels = getRealTemps(weather[1000].feels);
-    var chart = Highcharts.chart('show-weather-chart', {
+function renderWeatherChart() {
+    var temps = getRealTemps(store.weather[1000].temps);
+    var feels = getRealTemps(store.weather[1000].feels);
+    var chart = Highcharts.chart('weather-chart', {
         chart: {
             type: 'line'
         },
@@ -182,5 +191,5 @@ function displayShow(show_date) {
     // clear out show-render and place the template
     var new_html = Mustache.render(template, example_data);
     document.getElementById('show-render').innerHTML = new_html;
-    renderWeatherChart(true);
+    renderWeatherChart();
 };

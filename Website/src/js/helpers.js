@@ -6,18 +6,18 @@
 function getShowFromDate(show_date) {
     // TODO: convert into what the date should be
     // remove by adding real date to show
+    console.log('TODO');
 };
 
 function getAllShowsInYear(year) {
-    // TODO: test the year function in the show. Fix the date
-    var all_shows_in_year = []
-    for(var show of store.shows) {
-        if(show.js_date.getFullYear() == year) {
-            all_shows_in_year.push[show];
+    var all_shows_in_year = [];
+    for(var single_show of store.shows) {
+        if(single_show.js_date.getFullYear() == year) {
+            all_shows_in_year.push(single_show);
         }
     }
     return all_shows_in_year;
-}
+};
 
 function getIndexOfSong(song_title) {
     // what's the index of song text x in the array songs?
@@ -114,6 +114,18 @@ function getSongName(index) {
     }
     return store.songs[index];
 };
+
+function getVenue(venue_id) {
+    // the venues are not sorted, so get this way
+    for(var venue of store.venues) {
+        if(venue_id = venue.id) {
+            // return this
+            return venue;
+        }
+    }
+    // venue not found
+    return null;
+}
 
 function dateDifference(startingDate, endingDate) {
     var startDate = new Date(new Date(startingDate).toISOString().substr(0, 10));

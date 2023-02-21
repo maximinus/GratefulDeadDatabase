@@ -5,20 +5,15 @@ After analysis, this order:
 
 1: Download all the GD (ongoing - note not every recording, just every show)
     Es ?  Pr 8
-2: Tidy up existing code
 3: Add tabs, other tables and Graphs
     Es 14 Pr 8
 4: Look at hosting
     Es 2  Pr 10
-5: Add weather info and special graph
-    Es 7  Pr 5
 
 Future Work:
 
 Start taking timings properly and add to the DB
     Es 12 Pr 7
-Sort out the mess that is the repo, and remove propriatary data
-    Es 2  Pr 6
 Start taking BPM timings and add the to the DB
     Es 5  Pr 6
 Split shows up into tours
@@ -27,7 +22,7 @@ Generate tour maps to show the tours
     Es 20 Pr 5
 Match sources to shows, i.e. each show should have a link to sources
     Es 20 Pr 4
-Write code to measure accuratly pitch shift due to sped up setOrderTablePopupList
+Write code to measure accuratly pitch shift due to speed up
     Es 20 Pr 3
 
 
@@ -41,8 +36,23 @@ Done work in 2023:
     * Extract the timings we have, and add them the to real DB
     * Use the real DB to build the binary data. Update the data
     * Add venues and weather to the binary files, load in javascript
+    * Have a storage object,
+    * an API
+    * seperate files for all display tabs
+    * Extract the current binary data and add the timings
+    * Bring in new data
+    * Fill the rarest songs columns
+
 
 Changes to the current website:
+
+Current:
+    Make sure times of 0 are ignored
+    Add the venue information
+    Add the day to the date information
+    Sort out bad header in set information
+    Add Celcius to the weather y axis
+    Add pop-outs for all charts
 
     Songs should show how common they are ("7th most commonly played")
         Split all songs into bands of equal size: Common, Uncommon, Rare, Very Rare, Unique (why?)
@@ -58,15 +68,6 @@ Changes to the current website:
         Where there are 3 sets, ignore the whole show
 
 
-Tidy Up Code:
-    Have a storage object, an API and seperate files for all display tabs
-
-
-Binary data:
-    Extract the current binary data and add the timings
-    Bring in new data
-
-
 Other calculations:
     Must start collecting BPM and add it to the DB.
     This means grabbing ALL the GD. I have a NAS just for this.
@@ -75,9 +76,12 @@ Other calculations:
 
 
 For the show data:
-    List the setlist
+    * List the setlist
+    * Show rarest combos all time / this year
+    * Show rarest songs all time / this year
+    * Show long / short for the year
     Show the times underneath the songs
-    Show the weather of the show as some kind of graph
+    * Show the weather of the show as some kind of graph
     Show the venue information
     All songs have hyperlinks to the song info
     Have a "next / previous" show
@@ -120,7 +124,6 @@ For the song data
 For the about page:
     A page about means
     Be brave and show a photo
-
 
 For the download page:
     Point to repo, which should have a decent setup by this point

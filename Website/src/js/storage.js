@@ -16,7 +16,7 @@ class Storage {
         this.songs = [];
         this.venues = [];
         this.weather = [];
-        // {song_title: [date, length]} for all songs
+        // {song_title: [[date, length]...]} for all songs
         this.song_data = {};
         this.last_update = '';
         this.load_counter = 0;
@@ -386,7 +386,6 @@ function parseShows(binary_data) {
         // save the show
         store.shows.push(new Show(new_sets_data[0], date, venue_id, show_id));
     }
-    log(`Got ${store.shows.length} shows`);
     log(`Got ${store.shows.length} shows`);
     store.load_counter += 1;
     checkFinish();

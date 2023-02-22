@@ -69,7 +69,7 @@ function getRarestSongs() {
     }
     // put buckets into a list, add names and sort
     var year_list = []
-    for (var key in buckets) {
+    for(var key in buckets) {
         year_list.push([getSongName(key), buckets[key]]);
     }
     year_list.sort((a, b) => (a[1] > b[1]) ? 1 : -1);

@@ -170,7 +170,7 @@ class Show {
 
     getAllUniqueSongs() {
         var all_songs = this.getAllSongs();
-        // turn to set and then back to lisr
+        // turn to set and then back to list
         return [...new Set(all_songs)];
     }
 
@@ -639,6 +639,7 @@ function updateTabs() {
 	setSongDropdown();
 	updateVisualData(DEFAULT_SONG);
     displayShow(DEFAULT_SHOW);
+    displayYear(DEFAULT_YEAR);
 };
 
 function getData() {

@@ -390,8 +390,8 @@ function buildCharts(song_title) {
 function buildLengthVersions(song_title) {
     // get the versions first
     // get the songs, and sort by length
-    // create a new list with the 65535 stripped out
-    var data = store.song_data[song_title].filter(x => x.seconds != 65535);
+    // create a new list with the 65535 and zero times stripped out
+    var data = store.song_data[song_title].filter(x => (x.seconds != 65535 && x.seconds != 0));
     data.sort((a, b) => (a.seconds < b.seconds) ? 1 : -1);
     // get the first 5
     var table_data = data.slice(0, TABLE_ENTRIES);

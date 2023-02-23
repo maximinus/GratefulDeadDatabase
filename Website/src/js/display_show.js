@@ -132,10 +132,10 @@ function getRarestCombos() {
 };
 
 
-function renderWeatherChart() {
+function renderWeatherChart(chart_id) {
     var temps = getRealTemps(store.weather[1000].temps);
     var feels = getRealTemps(store.weather[1000].feels);
-    var chart = Highcharts.chart('weather-chart', {
+    var chart = Highcharts.chart(chart_id, {
         chart: {
             type: 'line'
         },
@@ -347,11 +347,24 @@ function  popOutShowRarestSongsYear() {
     displayPopOut('Rarest Songs This Year', show_store.rarest_songs_year);
 };
 
+function popOutWeather() {
+    // clear current chart data
+    var table = document.getElementById('pop-up-charts');
+    table.replaceChildren();
+    // set title
+    document.getElementById('dialog-chart-title').innerHTML = 'Weather For the Day';
+    // set chart
+    renderWeatherChart('pop-up-charts');
+    // display
+    $('#chart-dialog').modal();
+};
+
 function addShowPopouts() {
     document.getElementById('pop-show-rarest-combos').addEventListener('click', popOutShowRarestCombos);
     document.getElementById('pop-show-rarest-combos-year').addEventListener('click', popOutShowRarestCombosYear);
     document.getElementById('pop-show-rarest-songs').addEventListener('click', popOutShowRarestSongs);
     document.getElementById('pop-show-rarest-songs-year').addEventListener('click', popOutShowRarestSongsYear);
+    document.getElementById('pop-show-weather').addEventListener('click', popOutWeather);
 };
 
 function displayShow(show_index) {
@@ -364,7 +377,7 @@ function displayShow(show_index) {
     // clear out show-render and place the template
     var new_html = Mustache.render(template, getShowRenderData());
     document.getElementById('show-render').innerHTML = new_html;
-    renderWeatherChart();
+    renderWeatherChart('weather-chart');
     buildCombos();
     buildRarestSongs();
     displayVenueInformation();

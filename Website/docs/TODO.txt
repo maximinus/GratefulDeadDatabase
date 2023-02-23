@@ -43,16 +43,15 @@ Done work in 2023:
     * Extract the current binary data and add the timings
     * Bring in new data
     * Fill the rarest songs columns
-    * Finish uniques / first / last played to year
-    * Make sure times of 0 are ignored
-    * Add the venue information
-    * Add the day to the date information
+    * Finished uniques / first / last played to year
+    * Made sure times of 0 are ignored
+    * Added the venue information
+    * Added the day to the date information
+    * Fixed bad header in set information
 
 Changes to the current website:
 
 Current:
-
-    Sort out bad header in set information
     Move to Visual Studio code
     Add ES6 modules
     Add Celcius to the weather y axis

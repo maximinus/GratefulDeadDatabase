@@ -1,15 +1,13 @@
 <!-- Template for single sets -->
 <!-- This template is rendered from javascript code -->
-<div class="card h-100">
-    <div class="card-header" style="display:flex; justify-content:space-between;">
-        <h5 class="my-auto"><b>{{show-day }}, {{ show-date }}, {{ show-venue }}</b></h5>
+<div class="card-header" style="display:flex; justify-content:space-between;">
+    <h5 class="my-auto"><b>{{show-day }}, {{ show-date }}, {{ show-venue }}</b></h5>
+</div>
+<div class="container my-2">
+    {{#sets}}
+    <div class="row my-1">
+        <div class="col-1 set-name"><i>{{ set-name }}</i></div>
+        <div class="col">{{ songs }}</div>
     </div>
-    <div class="container my-2">
-        {{#sets}}
-        <div class="row my-1">
-            <div class="col-1 set-name"><i>{{ set-name }}</i></div>
-            <div class="col">{{ songs }}</div>
-        </div>
-        {{/sets}}
-    </div>
+    {{/sets}}
 </div>

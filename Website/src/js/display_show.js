@@ -273,7 +273,7 @@ function getShowRenderData() {
         sets_all_data.push({'set-name': `Set ${index}`, 'songs': single_set});
         index += 1;
     }
-    this_venue = getVenue(store.venues[show_store.current_show.venue])
+    this_venue = getVenue(show_store.current_show.venue)
     return {'show-day': getActualDay(getRealDate(show_store.current_show.date)),
             'show-date': convertDateLong(show_store.current_show.date),
             'show-venue': this_venue.getVenueName(),
@@ -313,22 +313,10 @@ function displayVenueInformation() {
                       'location': `Lat: ${this_venue.latitude}, Long: ${this_venue.longitude}`,
                       'link': getGoogleMapsLink(this_venue),
                       'total': total_text};
-    console.log(venue_data);
     var template = document.getElementById('venue-template').innerHTML;
     // clear out show-render and place the template
     var new_html = Mustache.render(template, venue_data);
     document.getElementById('show-venue-information').innerHTML = new_html;
-};
-
-
-function displayPopOut(title, data) {
-    var table = document.getElementById('table-entry');
-    // clear any children of this element
-    table.replaceChildren();
-    setSimpleTablePopupList(data, table);
-    document.getElementById('dialog-table-title').innerHTML = title;
-    // display the modal
-    $('#table-dialog').modal();
 };
 
 function  popOutShowRarestCombos() {

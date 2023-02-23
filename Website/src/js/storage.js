@@ -1,12 +1,6 @@
 // functions for local data storage
 // i.e, here is where we have all database functions, the functions being loading and parsing
 
-// TODO: get date of file from web and compare with ours
-//       Handle case where not enough data for tables
-//       Update header text and info
-//       Make text song input work
-
-
 // this should be a class just to not pollute the environment
 class Storage {
     constructor() {

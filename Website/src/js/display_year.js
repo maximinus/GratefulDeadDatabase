@@ -2,7 +2,10 @@
 
 class YearStorage {
     constructor() {
-        var current_year = null;
+        this.current_year = null;
+        this.all_venues = [];
+        this.common_songs = [];
+        this.common_combos = [];
     };
 };
 
@@ -77,7 +80,6 @@ function getUniqueStartEnd(year) {
     return [uniques, first_played, never_again];
 };
 
-
 function getMostCommonYearSongs(year) {
     var shows = getAllShowsInYear(year);
     // build the most common and the most common combos
@@ -118,15 +120,37 @@ function getMostCommonYearSongs(year) {
     common_songs.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     common_combos.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     // add the names
-    common_songs = common_songs.slice(0, TABLE_ENTRIES);
-    common_combos = common_combos.slice(0, TABLE_ENTRIES)
-    for(var i=0; i<TABLE_ENTRIES; i++) {
+    for(var i=0; i<common_songs.length; i++) {
         common_songs[i][0] = getSongName(common_songs[i][0]);
+    }
+    for(var i=0; i<common_combos.length; i++) {
         // combo names a bit harder
         var two_songs = common_combos[i][0].split("-");
         common_combos[i][0] = `${getSongName(parseInt(two_songs[0]))} / ${getSongName(parseInt(two_songs[1]))}`;
     }
-    return [common_songs, common_combos];
+
+    // store and slice
+    year_store.common_songs = common_songs;
+    year_store.common_combos = common_combos;
+    return [common_songs.slice(0, TABLE_ENTRIES), common_combos.slice(0, TABLE_ENTRIES)];
+};
+
+function getCommonVenues(year) {
+    var venue_ids = {};
+    for(single_show of getAllShowsInYear(year)) {
+        if(single_show.venue in venue_ids) {
+            venue_ids[single_show.venue] += 1;
+        } else {
+            venue_ids[single_show.venue] = 1;
+        }
+    }
+    var venue_details = [];
+    for(var single_venue in venue_ids) {
+        venue_details.push([getVenue(single_venue).venue, venue_ids[single_venue]]);
+    }
+    venue_details.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
+    year_store.all_venues = venue_details;
+    return venue_details.slice(0, TABLE_ENTRIES);
 };
 
 function buildYearCommon(year) {
@@ -219,8 +243,45 @@ function buildYearUniques(year) {
     }
 };
 
+function buildCommonVenues(year) {
+    var year_venues = getCommonVenues(year);
+    var index = 0;
+    var table = document.getElementById('year-common-venues');
+    // data is in format [venue name, total]
+    for(var row of table.children) {
+        if(index >= year_venues.length) {
+            row.children[1].innerHTML = '';
+            row.children[2].innerHTML = '';
+        } else {
+            row.children[1].innerHTML = year_venues[index][0];
+            row.children[2].innerHTML = year_venues[index][1].toString();
+        }
+        index += 1;
+    }
+};
+
+function popOutYearVenues() {
+    displayPopOut('Most Common Venues', year_store.all_venues);
+};
+
+function popOutYearCommonSongs() {
+    displayPopOut('Most Common Songs', year_store.common_songs);
+};
+
+function popOutYearCommoncCombos() {
+    displayPopOut('Most Common Combos', year_store.common_combos);
+};
+
+function addYearPopouts() {
+    document.getElementById('pop-common-venues').addEventListener('click', popOutYearVenues);
+    document.getElementById('pop-year-common-songs').addEventListener('click', popOutYearCommonSongs);
+    document.getElementById('pop-year-common-combos').addEventListener('click', popOutYearCommoncCombos);
+};
+
 function displayYear(year) {
     year_store.current_year = year;
     buildYearCommon(year);
     buildYearUniques(year);
+    buildCommonVenues(year);
+    addYearPopouts();
 };

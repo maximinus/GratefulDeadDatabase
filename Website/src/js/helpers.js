@@ -118,14 +118,14 @@ function getSongName(index) {
 function getVenue(venue_id) {
     // the venues are not sorted, so get this way
     for(var venue of store.venues) {
-        if(venue_id = venue.id) {
+        if(venue_id == venue.id) {
             // return this
             return venue;
         }
     }
     // venue not found
-    return null;
-}
+    return "Unknown Venue";
+};
 
 function dateDifference(startingDate, endingDate) {
     var startDate = new Date(new Date(startingDate).toISOString().substr(0, 10));
@@ -183,4 +183,14 @@ function findAllSongsStartingWith(text) {
         }
     }
     return matches;
+};
+
+function displayPopOut(title, data) {
+    var table = document.getElementById('table-entry');
+    // clear any children of this element
+    table.replaceChildren();
+    setSimpleTablePopupList(data, table);
+    document.getElementById('dialog-table-title').innerHTML = title;
+    // display the modal
+    $('#table-dialog').modal();
 };

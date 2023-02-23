@@ -274,7 +274,8 @@ function getShowRenderData() {
         index += 1;
     }
     this_venue = getVenue(store.venues[show_store.current_show.venue])
-    return {'show-date': convertDateLong(show_store.current_show.date),
+    return {'show-day': getActualDay(getRealDate(show_store.current_show.date)),
+            'show-date': convertDateLong(show_store.current_show.date),
             'show-venue': this_venue.getVenueName(),
             'sets': sets_all_data};
 };

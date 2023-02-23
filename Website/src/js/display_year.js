@@ -164,7 +164,6 @@ function buildYearCommon(year) {
 
 function buildYearUniques(year) {
     var data = getUniqueStartEnd(year);
-    console.log(data);
     // already sliced to correct size
     var uniques = data[0];
     var first_played = data[1];
@@ -214,7 +213,7 @@ function buildYearUniques(year) {
             row.children[2].innerHTML = '';
         } else {
             row.children[1].innerHTML = never_played[index][0];
-            row.children[2].innerHTML = never_played_played[index][1].toString();
+            row.children[2].innerHTML = never_played[index][1].toString();
         }
         index += 1;
     }

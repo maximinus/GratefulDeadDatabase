@@ -279,6 +279,46 @@ function getShowRenderData() {
             'sets': sets_all_data};
 };
 
+function getGoogleMapsLink(venue) {
+    return `https://www.google.com/maps/search/?api=1&query=${venue.latitude},${venue.longitude}`;
+};
+
+function displayVenueInformation() {
+    this_show_date = show_store.current_show.date;
+    this_venue = getVenue(store.venues[show_store.current_show.venue]);
+    venue_id = show_store.current_show.venue;
+    // work through shows. These ARE in order
+    var total_shows = 0;
+    var total_before = 0;
+    for(var single_show of store.shows) {
+        // look for the venue
+        if(single_show.venue == venue_id) {
+            total_shows += 1;
+            if(single_show.date == this_show_date) {
+                total_before = total_shows - 1;
+            }
+        }
+    }
+    var total_text = '';
+    if(total_shows == 1) {
+        total_text = 'Only show played here';
+    } else {
+        total_text = `${total_shows} shows played here. This was the ${total_before}${nth(total_before)} time.`;
+    }
+    // Now we can get all the data
+    var venue_data = {'venue': this_venue.venue,
+                      'city': this_venue.city,
+                      'state': `${this_venue.state}, ${this_venue.country}`,
+                      'location': `Lat: ${this_venue.latitude}, Long: ${this_venue.longitude}`,
+                      'link': getGoogleMapsLink(this_venue),
+                      'total': total_text};
+    console.log(venue_data);
+    var template = document.getElementById('venue-template').innerHTML;
+    // clear out show-render and place the template
+    var new_html = Mustache.render(template, venue_data);
+    document.getElementById('show-venue-information').innerHTML = new_html;
+};
+
 function displayShow(show_index) {
     show_store.current_show = store.shows[show_index];
     // in the div id of show-render
@@ -292,4 +332,5 @@ function displayShow(show_index) {
     renderWeatherChart();
     buildCombos();
     buildRarestSongs();
+    displayVenueInformation();
 };

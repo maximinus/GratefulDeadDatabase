@@ -144,8 +144,8 @@ class Show {
     constructor(show_sets, date, venue_id, show_id) {
         this.id = show_id;
         this.sets = show_sets;
-        // date is a number of days since 1950, so convert this
         this.date = date
+        // date is a number of days since 1950, so convert this
         this.js_date = getRealDate(date);
         this.venue = venue_id;
     };

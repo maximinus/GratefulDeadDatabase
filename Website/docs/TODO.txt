@@ -44,12 +44,12 @@ Done work in 2023:
     * Bring in new data
     * Fill the rarest songs columns
     * Finish uniques / first / last played to year
+    * Make sure times of 0 are ignored
+    * Add the venue information
 
 Changes to the current website:
 
 Current:
-    Make sure times of 0 are ignored
-    Add the venue information
     Add the day to the date information
     Sort out bad header in set information
     Move to Visual Studio code

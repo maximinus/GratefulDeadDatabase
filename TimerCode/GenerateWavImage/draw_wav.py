@@ -8,9 +8,6 @@ import pygame.gfxdraw
 X_SCALE = 500
 Y_SCALE = 300
 HEIGHT_OFFSET = Y_SCALE // 2
-
-
-QUARTERS = 4
 SOUNDS_PER_PIXEL = 11000
 
 
@@ -48,5 +45,5 @@ def render(audio):
 if __name__ == '__main__':
     filename = '../audio/peggy_o_example.wav'
     sound = sf.read(filename)
-    # It's an array of 2 items, pass the 2 items  and not the full array
+    # It's an array of 2 items, just 1 item and not the full array
     render(sound[0])

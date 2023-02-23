@@ -1,6 +1,7 @@
 Path of Work / Priorities
 -------------------------
 
+
 After analysis, this order:
 
 1: Download all the GD (ongoing - note not every recording, just every show)
@@ -42,7 +43,7 @@ Done work in 2023:
     * Extract the current binary data and add the timings
     * Bring in new data
     * Fill the rarest songs columns
-
+    * Finish uniques / first / last played to year
 
 Changes to the current website:
 
@@ -51,12 +52,13 @@ Current:
     Add the venue information
     Add the day to the date information
     Sort out bad header in set information
+    Move to Visual Studio code
+    Add ES6 modules
     Add Celcius to the weather y axis
-    Add pop-outs for all charts
-
+    Add pop-outs for all charts on new pages
+    Move search to upper right, shared on tabs
+    Allow for searching on all tabs
     Songs should show how common they are ("7th most commonly played")
-        Split all songs into bands of equal size: Common, Uncommon, Rare, Very Rare, Unique (why?)
-        Add a tooltip for the meaning of this
     Add "total played" to the "played per year" chart
     "St. Stephen" should get you St Stephen, so allow searches on alternate names
         I.e. add levenstein distance
@@ -64,8 +66,11 @@ Current:
         (also when enter is pressed)
     The scrollbar on list pop-ups needs to reset on a new pop-up
     Make all dates hyperlinks
+    Make all links open up the other tabs with the correct information
+    Make the system remember where you were last time
     For average position in show, formulate it as a % position along the show. Place the average set marker as a bar under the position average
         Where there are 3 sets, ignore the whole show
+    Add unit tests based on modules
 
 
 Other calculations:

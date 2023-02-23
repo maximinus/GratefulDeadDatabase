@@ -658,6 +658,32 @@ function setOrderTablePopupList(table_data, element, message) {
     }
 };
 
+function setSimpleTablePopupList(table_data, element) {
+    // just do the list with data[0] and data[1].toString() raw
+    var row_index = 1;
+    for(data of table_data) {
+        // simple (!), just add this as a child of the table
+        // <tr>
+        //   <th scope="row">1</th>
+        //   <td>Date</td>
+        //   <td>Length</td>
+        // </tr>
+        var row = document.createElement('tr');
+        var header = document.createElement('th');
+        header.setAttribute('scope', 'row');
+        header.innerHTML = row_index.toString();
+        var column1 = document.createElement('td');
+        var column2 = document.createElement('td');
+        column1.innerHTML = data[0];
+        column2.innerHTML = data[1].toString();
+        row.appendChild(header);
+        row.appendChild(column1);
+        row.appendChild(column2);
+        element.appendChild(row);
+        row_index += 1;
+    }
+};
+
 function popOutFirst() {
     var data = store.song_data[charts_store.current_song_title];
     var table = document.getElementById('table-entry');

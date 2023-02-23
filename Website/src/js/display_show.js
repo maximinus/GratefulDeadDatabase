@@ -2,7 +2,11 @@
 
 class ShowStorage {
     constructor() {
-        var current_show = null;
+        this.current_show = null;
+        this.rarest_combos = [];
+        this.rarest_combos_year = [];
+        this.rarest_songs = [];
+        this.rarest_songs_year = [];
     };
 };
 
@@ -36,17 +40,6 @@ function getRealTemps(temps) {
     return new_data;
 };
 
-// functions: * rarest this year
-//            * rarest combos this year
-//            * rarest combos ever
-//            most similar shows
-//            store.weather for the show
-//            encore nearest in total
-//            Venue information
-//              Next time played / last time played / total played
-//            longest songs
-//            shortest songs
-
 function getRarestSongs() {
     year_of_show = show_store.current_show.js_date.getFullYear()
     // first we need get all songs and remove duplicates
@@ -74,6 +67,9 @@ function getRarestSongs() {
     }
     year_list.sort((a, b) => (a[1] > b[1]) ? 1 : -1);
     results.sort((a, b) => (a[1] > b[1]) ? 1 : -1);
+
+    show_store.rarest_songs = results;
+    show_store.rarest_songs_year = year_list;
     return [results.slice(0, TABLE_ENTRIES), year_list.slice(0, TABLE_ENTRIES)];
 };
 
@@ -122,11 +118,17 @@ function getRarestCombos() {
         }
     }
 
+    // sort, build lists for popouts and return sliced data
     combos.sort((a, b) => (a[2] > b[2]) ? 1 : -1);
-    var all_time_combos = combos.slice(0, TABLE_ENTRIES);
+    for(var single_combo of combos) {
+        show_store.rarest_combos.push([`${getSongName(single_combo[0])} / ${getSongName(single_combo[1])}`, single_combo[2]]);
+    }
+
     combos.sort((a, b) => (a[3] > b[3]) ? 1 : -1);
-    var this_year_combos = combos.slice(0, TABLE_ENTRIES);
-    return [all_time_combos, this_year_combos]
+    for(var single_combo of combos) {
+        show_store.rarest_combos_year.push([`${getSongName(single_combo[0])} / ${getSongName(single_combo[1])}`, single_combo[3]]);
+    }
+    return [show_store.rarest_combos.slice(0, TABLE_ENTRIES), show_store.rarest_combos_year.slice(0, TABLE_ENTRIES)]
 };
 
 
@@ -186,7 +188,7 @@ function buildCombos() {
     // already sliced to correct size
     var table_all_data = data[0];
     var table_year_data = data[1];
-    // these entries are of the form [cb1, cb2, total, year_total]
+    // these entries are of the form [name,total]
     // scroll through the children of the table and vist them all
     var index = 0;
     var table = document.getElementById('show-rarest-combos');
@@ -195,9 +197,8 @@ function buildCombos() {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            var cname = `${getSongName(table_all_data[index][0])} / ${getSongName(table_all_data[index][1])}`
-            row.children[1].innerHTML = cname;
-            row.children[2].innerHTML = table_all_data[index][2].toString();
+            row.children[1].innerHTML = table_all_data[index][0];
+            row.children[2].innerHTML = table_all_data[index][1].toString();
         }
         index += 1;
     }
@@ -209,9 +210,8 @@ function buildCombos() {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            var cname = `${getSongName(table_year_data[index][0])} / ${getSongName(table_year_data[index][1])}`
-            row.children[1].innerHTML = cname;
-            row.children[2].innerHTML = table_year_data[index][3].toString();
+            row.children[1].innerHTML = table_year_data[index][0];
+            row.children[2].innerHTML = table_year_data[index][1].toString();
         }
         index += 1;
     }
@@ -320,6 +320,40 @@ function displayVenueInformation() {
     document.getElementById('show-venue-information').innerHTML = new_html;
 };
 
+
+function displayPopOut(title, data) {
+    var table = document.getElementById('table-entry');
+    // clear any children of this element
+    table.replaceChildren();
+    setSimpleTablePopupList(data, table);
+    document.getElementById('dialog-table-title').innerHTML = title;
+    // display the modal
+    $('#table-dialog').modal();
+};
+
+function  popOutShowRarestCombos() {
+    displayPopOut('Rarest Combos', show_store.rarest_combos);
+};
+
+function  popOutShowRarestCombosYear() {
+    displayPopOut('Rarest Combos This Year', show_store.rarest_combos_year);
+};
+
+function  popOutShowRarestSongs() {
+    displayPopOut('Rarest Songs', show_store.rarest_songs);
+};
+
+function  popOutShowRarestSongsYear() {
+    displayPopOut('Rarest Songs This Year', show_store.rarest_songs_year);
+};
+
+function addShowPopouts() {
+    document.getElementById('pop-show-rarest-combos').addEventListener('click', popOutShowRarestCombos);
+    document.getElementById('pop-show-rarest-combos-year').addEventListener('click', popOutShowRarestCombosYear);
+    document.getElementById('pop-show-rarest-songs').addEventListener('click', popOutShowRarestSongs);
+    document.getElementById('pop-show-rarest-songs-year').addEventListener('click', popOutShowRarestSongsYear);
+};
+
 function displayShow(show_index) {
     show_store.current_show = store.shows[show_index];
     // in the div id of show-render
@@ -334,4 +368,5 @@ function displayShow(show_index) {
     buildCombos();
     buildRarestSongs();
     displayVenueInformation();
+    addShowPopouts();
 };

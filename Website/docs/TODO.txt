@@ -48,15 +48,15 @@ Done work in 2023:
     * Added the venue information
     * Added the day to the date information
     * Fixed bad header in set information
+    * Moved to Visual Studio code
 
 Changes to the current website:
 
 Current:
-    Move to Visual Studio code
-    Add ES6 modules
-    Add Celcius to the weather y axis
     Add pop-outs for all charts on new pages
+    Add Celcius to the weather y axis
     Move search to upper right, shared on tabs
+    Add ES6 modules
     Allow for searching on all tabs
     Songs should show how common they are ("7th most commonly played")
     Add "total played" to the "played per year" chart

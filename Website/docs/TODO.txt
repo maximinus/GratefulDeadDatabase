@@ -50,11 +50,10 @@ Done work in 2023:
     * Fixed bad header in set information
     * Moved to Visual Studio code
     * Fix the venue information
+    * Add Celcius to the weather y axis
 
 Changes to the current website:
 
-    Add pop-outs for all charts on new pages
-    Add Celcius to the weather y axis
     Show the times underneath the songs
     Move search to upper right, shared on tabs
     Show some details on the year tab in the same manner as the song tab

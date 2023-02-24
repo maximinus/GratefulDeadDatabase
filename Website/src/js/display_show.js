@@ -156,15 +156,45 @@ function renderWeatherChart(chart_id) {
             borderWidth: 1
         },
         xAxis: {
+            title: {
+                text: 'Time'
+            },
+            labels: {
+                formatter: function() {
+                    var label = this.axis.defaultLabelFormatter.call(this);
+                    if (parseInt(label) > 12) {
+                        return `${label}pm`;
+                    } else {
+                        return `${label}am`;
+                    }
+                }
+            }
         },
         yAxis: {
+            title: {
+                text: 'Fahrenheit'
+            },
+            labels: {
+                formatter: function() {
+                    var label = this.axis.defaultLabelFormatter.call(this);
+                    return `${label}°`
+                }
+            }
         },
         credits: {
             enabled: false
         },
         tooltip: {
             // only show 2 decimal places on tooltip
-            valueDecimals: 2
+            valueDecimals: 2,
+            formatter: function () {
+                var time_text = `${this.x}am`;
+                if(this.x > 12) {
+                    time_text = `${this.x}pm`;
+                }
+                var celcius = (this.y - 32.0) * (5.0/9.0);
+                return `At ${time_text}, it was ${this.y.toFixed(1)}°F / ${celcius.toFixed(1)}°C`;
+            },
         },
         series: [{
             name: 'Real Temp',

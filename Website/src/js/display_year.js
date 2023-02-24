@@ -6,6 +6,9 @@ class YearStorage {
         this.all_venues = [];
         this.common_songs = [];
         this.common_combos = [];
+        this.uniques = [];
+        this.first_played = [];
+        this.never_again = [];
     };
 };
 
@@ -73,11 +76,19 @@ function getUniqueStartEnd(year) {
     first_played.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     never_again.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
 
-    uniques = uniques.slice(0, TABLE_ENTRIES);
-    first_played = first_played.slice(0, TABLE_ENTRIES)
-    never_again = never_again.slice(0, TABLE_ENTRIES)
-
-    return [uniques, first_played, never_again];
+    // remove the values, they are not needed
+    for(var i of uniques) {
+        year_store.uniques.push([i[0], '']);
+    }
+    for(var i of first_played) {
+        year_store.first_played.push([i[0], '']);
+    }
+    for(var i of never_again) {
+        year_store.never_again.push([i[0], '']);
+    }
+    return [year_store.uniques.slice(0, TABLE_ENTRIES),
+            year_store.first_played.slice(0, TABLE_ENTRIES),
+            year_store.never_again.slice(0, TABLE_ENTRIES)];
 };
 
 function getMostCommonYearSongs(year) {
@@ -195,6 +206,9 @@ function buildYearUniques(year) {
 
     if(uniques.length == 0) {
         uniques = [['No unique songs', '']]
+        document.getElementById('pop-year-unique').removeEventListener('click', popOutYearUnique);
+    } else {
+        document.getElementById('pop-year-unique').addEventListener('click', popOutYearUnique);
     }
     var index = 0;
     var table = document.getElementById('year-unique-songs');
@@ -209,10 +223,13 @@ function buildYearUniques(year) {
         }
         index += 1;
     }
-    index = 0;
     if(first_played.length == 0) {
         first_played = [['No new songs', '']]
+        document.getElementById('pop-year-new-songs').removeEventListener('click', popOutYearNewSongs);
+    } else {
+        document.getElementById('pop-year-new-songs').addEventListener('click', popOutYearNewSongs);
     }
+    index = 0;
     var table = document.getElementById('year-new-songs');
     // data is in format [song-name, total]
     for(var row of table.children) {
@@ -227,6 +244,9 @@ function buildYearUniques(year) {
     }
     if(never_played.length == 0) {
         never_played = [['No dropped songs', '']]
+        document.getElementById('pop-year-never-played').removeEventListener('click', popOutYearNeverPlayed);
+    } else {
+        document.getElementById('pop-year-never-played').addEventListener('click', popOutYearNeverPlayed);
     }
     index = 0;
     var table = document.getElementById('year-never-played');
@@ -268,14 +288,26 @@ function popOutYearCommonSongs() {
     displayPopOut('Most Common Songs', year_store.common_songs);
 };
 
-function popOutYearCommoncCombos() {
+function popOutYearCommonCombos() {
     displayPopOut('Most Common Combos', year_store.common_combos);
+};
+
+function popOutYearUnique() {
+    displayPopOut('Unique Songs', year_store.uniques);
+};
+
+function popOutYearNewSongs() {
+    displayPopOut('First Played', year_store.first_played);
+};
+
+function popOutYearNeverPlayed() {
+    displayPopOut('Never Played After', year_store.never_again);
 };
 
 function addYearPopouts() {
     document.getElementById('pop-common-venues').addEventListener('click', popOutYearVenues);
     document.getElementById('pop-year-common-songs').addEventListener('click', popOutYearCommonSongs);
-    document.getElementById('pop-year-common-combos').addEventListener('click', popOutYearCommoncCombos);
+    document.getElementById('pop-year-common-combos').addEventListener('click', popOutYearCommonCombos);
 };
 
 function displayYear(year) {

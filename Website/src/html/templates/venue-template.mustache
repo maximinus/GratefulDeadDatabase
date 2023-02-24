@@ -1,9 +1,27 @@
 <!-- Template for single sets -->
 <!-- This template is rendered from javascript code -->
-<p>Venue: {{ venue }}</p>
-<p>City: {{ city }}</p>
-<p>State: {{ state }}</p>
-<p>{{ total }}</p>
-<p>Location: {{ location }}</p>
-<!-- target="blank" opens in new tab -->
+<table class="table table-sm">
+  <tbody>
+    <tr>
+      <td>Venue:</td>
+      <td>{{ venue }}</td>
+    </tr>
+    <tr>
+      <td>City:</td>
+      <td>{{ city }}</td>
+    </tr>
+    <tr>
+      <td>State:</td>
+      <td>{{ state }}
+    </tr>
+    <tr>
+      <td></td>
+      <td>{{ total }}</td>
+    </tr>
+    <tr>
+      <td>Location:</td>
+      <td>{{ location }}</td>
+    </tr>
+  </tbody>
+</table>
 <a href="{{ link }}" target="_blank"><i>View on google maps</i></a>

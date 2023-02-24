@@ -49,13 +49,22 @@ Done work in 2023:
     * Added the day to the date information
     * Fixed bad header in set information
     * Moved to Visual Studio code
+    * Fix the venue information
 
 Changes to the current website:
 
-Current:
     Add pop-outs for all charts on new pages
     Add Celcius to the weather y axis
+    Show the times underneath the songs
     Move search to upper right, shared on tabs
+    Show some details on the year tab in the same manner as the song tab
+    Finish adding the following to the year page:
+        Hottest shows
+        Coldest shows
+        Wettest shows
+        Longest songs
+        Longest shows
+        Shortest shows
     Add ES6 modules
     Allow for searching on all tabs
     Songs should show how common they are ("7th most commonly played")
@@ -72,59 +81,21 @@ Current:
         Where there are 3 sets, ignore the whole show
     Add unit tests based on modules
 
-
 Other calculations:
     Must start collecting BPM and add it to the DB.
     This means grabbing ALL the GD. I have a NAS just for this.
     Try and start timing some songs. Just a tour (like spring 78).
         Work out the exact workflow to the point of estimating how long this will take.
 
-
 For the show data:
     * List the setlist
     * Show rarest combos all time / this year
     * Show rarest songs all time / this year
     * Show long / short for the year
-    Show the times underneath the songs
     * Show the weather of the show as some kind of graph
-    Show the venue information
-    All songs have hyperlinks to the song info
     Have a "next / previous" show
     Have a "next / previous" for the venue
-    Show the day of the show
 
-
-For the year data:
-    Show the year, total shows
-    Show:
-        most common songs
-        most common pairings (minus drums > space)
-        longest shows
-        shortest shows
-        longest songs
-        shortest songs
-        my picks for the year
-        most common venues
-        hottest shows
-        coldest shows
-        unique songs
-        songs introduced
-        songs stopped playing (except uniques)
-            (i.e. played this year and never after)
-        longest since last played
-        Most similar sets
-        Most dissimilar sets
-        Average show to represent the year
-
-For the song data
-    First played
-    Last played
-    Common into
-    Common out of
-    Longest
-    Shortest
-    Average per year
-    Average set position
 
 For the about page:
     A page about means

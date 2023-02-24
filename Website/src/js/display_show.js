@@ -285,9 +285,9 @@ function getGoogleMapsLink(venue) {
 };
 
 function displayVenueInformation() {
-    this_show_date = show_store.current_show.date;
-    this_venue = getVenue(store.venues[show_store.current_show.venue]);
-    venue_id = show_store.current_show.venue;
+    var this_show_date = show_store.current_show.date;
+    var this_venue = getVenue(show_store.current_show.venue)
+    var venue_id = show_store.current_show.venue;
     // work through shows. These ARE in order
     var total_shows = 0;
     var total_before = 0;

@@ -161,6 +161,17 @@ class Show {
         return all_songs;
     };
 
+    getLength() {
+        // length of all songs, in seconds
+        var total_time = 0;
+        for(var i of this.sets) {
+            for(var j of i.songs) {
+                total_time += j.seconds;
+            }
+        }
+        return total_time;
+    };
+
     getAllUniqueSongs() {
         var all_songs = this.getAllSongs();
         // turn to set and then back to list

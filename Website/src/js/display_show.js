@@ -157,7 +157,7 @@ function renderWeatherChart(chart_id) {
                 formatter: function() {
                     var label = this.axis.defaultLabelFormatter.call(this);
                     if (parseInt(label) > 12) {
-                        return `${label}pm`;
+                        return `${label - 12}pm`;
                     } else {
                         return `${label}am`;
                     }
@@ -278,23 +278,38 @@ function getShowRenderData() {
     var show_data = {};
     var show_sets = [];
     for(var single_set of show_store.current_show.sets) {
-        var new_set = '';
+        var new_set = [];
         for(var single_song of single_set.songs) {
-            new_set = new_set.concat(getSongName(single_song.song));
-            if(single_song.sequed == true) {
-                new_set = new_set.concat(' > ');
+            var song_data = {};
+            song_data['name'] = getSongName(single_song.song);
+            if(single_song.seconds == 0) {
+                song_data['time'] = '???';
             } else {
-                new_set = new_set.concat(' / ');
+                song_data['time'] = convertTime(single_song.seconds);
             }
+            if(single_song.sequed == true) {
+                song_data['trans'] = '>';
+            } else {
+                song_data['trans'] = '/';
+            }
+            new_set.push(song_data);
         }
-        // remove last sequed result
-        new_set = new_set.substring(0, new_set.length - 3);
         show_sets.push(new_set);
     }
     sets_all_data = [];
     index = 1;
+    // a bit complicated, hopefully not too crazy
     for(var single_set of show_sets) {
-        sets_all_data.push({'set-name': `Set ${index}`, 'songs': single_set});
+        var set_data = {'set-name': `Set ${index}`};
+        var final_song = single_set.pop();
+        if(single_set.length == 0) {
+            set_data['songs'] = [];
+        } else {
+            set_data['songs'] = single_set;
+        }
+        set_data['final_song'] = final_song['name'];
+        set_data['final_time'] = final_song['time'];
+        sets_all_data.push(set_data);
         index += 1;
     }
     this_venue = getVenue(show_store.current_show.venue)

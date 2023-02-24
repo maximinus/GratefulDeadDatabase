@@ -51,21 +51,15 @@ Done work in 2023:
     * Moved to Visual Studio code
     * Fix the venue information
     * Add Celcius to the weather y axis
+    * Put weather in a hash map
+    * Added hottest, coldest and wettest shows to year
+    * Show the times underneath the songs
+    * Added longest songs, longest and shortest shows
 
 Changes to the current website:
-
-    Put weather in a hash map
-    Show the times underneath the songs
+    Add date to longest songs
     Move search to upper right, shared on tabs
     Show some details on the year tab in the same manner as the song tab
-    Finish adding the following to the year page:
-        Hottest shows
-        Coldest shows
-        Wettest shows
-        Longest songs
-        Longest shows
-        Shortest shows
-    Add ES6 modules
     Allow for searching on all tabs
     Songs should show how common they are ("7th most commonly played")
     Add "total played" to the "played per year" chart

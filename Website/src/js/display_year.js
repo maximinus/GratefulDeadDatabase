@@ -12,6 +12,9 @@ class YearStorage {
         this.wettest = [];
         this.hottest = [];
         this.coldest = [];
+        this.longest_songs = [];
+        this.longest_shows = [];
+        this.shortest_shows = [];
     };
 };
 
@@ -198,6 +201,30 @@ function getYearWeatherData(year) {
             year_store.coldest.slice(0, TABLE_ENTRIES)];
 };
 
+function getYearLongestShortest(year) {
+    var song_lengths = [];
+    var show_lengths = [];
+    for(var single_show of getAllShowsInYear(year)) {
+        show_lengths.push([convertDate(single_show.date), single_show.getLength()]);
+        for(var single_song of single_show.getAllSongs()) {
+            song_lengths.push([getSongName(single_song.song), single_song.seconds]);
+        }
+    }
+    // now sort as per usual
+    song_lengths.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
+    show_lengths.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
+    // only top 100 longest, otherwise list will be crazy
+    for(var i of song_lengths.slice(0, 100)) {
+        year_store.longest_songs.push([i[0], convertTime(i[1])]);
+    }
+    for(var i of show_lengths) {
+        year_store.longest_shows.push([i[0], convertTime(i[1])]);
+    }
+    return [year_store.longest_songs.slice(0, TABLE_ENTRIES),
+            year_store.longest_shows.slice(0, TABLE_ENTRIES),
+            [...year_store.longest_shows].reverse().slice(0, TABLE_ENTRIES)];
+};
+
 function buildYearCommon(year) {
     var data = getMostCommonYearSongs(year);
     // already sliced to correct size
@@ -314,7 +341,7 @@ function buildCommonVenues(year) {
     }
 };
 
-function updateWeatherTable(table_id, data) {
+function updateBasicTable(table_id, data) {
     var index = 0;
     var table = document.getElementById(table_id);
     for(var row of table.children) {
@@ -329,11 +356,18 @@ function updateWeatherTable(table_id, data) {
     }
 };
 
+function buildYearLongestShortest(year) {
+    data = getYearLongestShortest(year);
+    updateBasicTable('year-longest-songs', data[0]);
+    updateBasicTable('year-longest-shows', data[1]);
+    updateBasicTable('year-shortest-shows', data[2]);
+};
+
 function buildWeatherData(year) {
     var weather_data = getYearWeatherData(year);
-    updateWeatherTable('year-weather-wettest', weather_data[0]);
-    updateWeatherTable('year-weather-hottest', weather_data[1]);
-    updateWeatherTable('year-weather-coldest', weather_data[2]);
+    updateBasicTable('year-weather-wettest', weather_data[0]);
+    updateBasicTable('year-weather-hottest', weather_data[1]);
+    updateBasicTable('year-weather-coldest', weather_data[2]);
 };
 
 function popOutYearVenues() {
@@ -372,6 +406,18 @@ function popOutYearColdest() {
     displayPopOut('Coldest Shows', year_store.coldest);
 };
 
+function popOutYearLongestSongs() {
+    displayPopOut('100 Longest Songs', year_store.longest_songs);
+};
+
+function popOutYearLongestShows() {
+    displayPopOut('Longest Shows', year_store.longest_shows);
+};
+
+function popOutYearShortestShows() {
+    displayPopOut('Shortest Shows', [...year_store.longest_shows].reverse());
+};
+
 function addYearPopouts() {
     document.getElementById('pop-common-venues').addEventListener('click', popOutYearVenues);
     document.getElementById('pop-year-common-songs').addEventListener('click', popOutYearCommonSongs);
@@ -379,6 +425,9 @@ function addYearPopouts() {
     document.getElementById('pop-year-wettest').addEventListener('click', popOutYearWettest);
     document.getElementById('pop-year-hottest').addEventListener('click', popOutYearHottest);
     document.getElementById('pop-year-coldest').addEventListener('click', popOutYearColdest);
+    document.getElementById('pop-year-longest-songs').addEventListener('click', popOutYearLongestSongs);
+    document.getElementById('pop-year-longest-shows').addEventListener('click', popOutYearLongestShows);
+    document.getElementById('pop-year-shortest-shows').addEventListener('click', popOutYearShortestShows);
 };
 
 function displayYear(year) {
@@ -386,6 +435,7 @@ function displayYear(year) {
     buildYearCommon(year);
     buildYearUniques(year);
     buildCommonVenues(year);
+    buildYearLongestShortest(year);
     buildWeatherData(year);
     addYearPopouts();
 };

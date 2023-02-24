@@ -87,8 +87,18 @@ function getActualDay(show_date) {
 function convertTime(total_time) {
     // convert to some time in format "4m 17s"
     // argument is an integer in seconds
+    // return hours is they exist - this is for show length
+    if(total_time > 3600) {
+        var hours = Math.floor(total_time / 3600);
+        total_time -= hours * 3600;
+    } else {
+        hours = 0;
+    }
     var minutes = Math.floor(total_time / 60);
     var seconds = total_time - (minutes * 60);
+    if(hours != 0) {
+        return `${hours}h ${minutes}m ${seconds}s`;
+    }
     if(minutes == 0) {
         return `${seconds}s`
     }

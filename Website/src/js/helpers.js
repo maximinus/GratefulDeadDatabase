@@ -185,6 +185,17 @@ function findAllSongsStartingWith(text) {
     return matches;
 };
 
+function convertTemp(t) {
+    // convert from the format in the binary
+    // subtract 1
+    var real_t = t - 1.0;
+    // divide by 10
+    real_t = real_t / 10.0;
+    // subtract 50
+    real_t -= 50.0;
+    return real_t;
+};
+
 function displayPopOut(title, data) {
     var table = document.getElementById('table-entry');
     // clear any children of this element

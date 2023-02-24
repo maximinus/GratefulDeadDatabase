@@ -9,7 +9,7 @@ class Storage {
         this.shows = [];
         this.songs = [];
         this.venues = [];
-        this.weather = [];
+        this.weather = {};
         // {song_title: [[date, length]...]} for all songs
         this.song_data = {};
         this.last_update = '';
@@ -21,12 +21,11 @@ class Storage {
 var store = new Storage();
 
 class Weather {
-    // data is an array of # array of: [weather_id, [temp, feels_like] * 24] for all weather data
-    // TODO: should be a date, so we can match with the show, not a weather id
-    constructor(weather_date, temps, feels) {
+    constructor(weather_date, temps, feels, precip) {
         this.date = weather_date;
         this.temps = temps;
         this.feels = feels;
+        this.precip = precip;
     };
 
     getJsonData() {
@@ -386,7 +385,7 @@ function parseShows(binary_data) {
 };
 
 function parseWeather(binary_data) {
-    store.weather = [];
+    store.weather = {};
     // all 16 bit data
     // [show_id, [temp, feels_like] * 24], i.e. 49 * 2 = 98 bytes each
     // precipitation true/false is held as the high bit in feels_like
@@ -410,7 +409,7 @@ function parseWeather(binary_data) {
             }
             feels.push(feels_tmp);
         }
-        store.weather.push(new Weather(show_id, temps, feels, precip));
+        store.weather[show_id] =new Weather(show_id, temps, feels, precip);
         // should be a zero to verify the end
         if(getWord(binary_data, index) != 0) {
             log('Error parsing weather');

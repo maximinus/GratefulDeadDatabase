@@ -54,6 +54,7 @@ Done work in 2023:
 
 Changes to the current website:
 
+    Put weather in a hash map
     Show the times underneath the songs
     Move search to upper right, shared on tabs
     Show some details on the year tab in the same manner as the song tab

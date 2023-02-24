@@ -13,7 +13,6 @@ class ShowStorage {
 // can't call this now as store may or may not be setup
 var show_store = new ShowStorage();
 
-
 function getRealTemps(temps) {
     // convert the temps from the actual values to the real data
     // from the original Python code to write the data:
@@ -28,13 +27,7 @@ function getRealTemps(temps) {
         if(t == 0) {
             new_data.push(null);
         } else {
-            // subtract 1
-            var real_t = t - 1.0;
-            // divide by 10
-            real_t = real_t / 10.0;
-            // subtract 50
-            real_t -= 50.0;
-            new_data.push(real_t);
+            new_data.push(convertTemp(t));
         }
     }
     return new_data;
@@ -133,8 +126,9 @@ function getRarestCombos() {
 
 
 function renderWeatherChart(chart_id) {
-    var temps = getRealTemps(store.weather[1000].temps);
-    var feels = getRealTemps(store.weather[1000].feels);
+    var show_id = show_store.current_show.id;
+    var temps = getRealTemps(store.weather[show_id].temps);
+    var feels = getRealTemps(store.weather[show_id].feels);
     var chart = Highcharts.chart(chart_id, {
         chart: {
             type: 'line'

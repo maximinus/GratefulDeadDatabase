@@ -9,6 +9,9 @@ class YearStorage {
         this.uniques = [];
         this.first_played = [];
         this.never_again = [];
+        this.wettest = [];
+        this.hottest = [];
+        this.coldest = [];
     };
 };
 
@@ -164,6 +167,37 @@ function getCommonVenues(year) {
     return venue_details.slice(0, TABLE_ENTRIES);
 };
 
+function getYearWeatherData(year) {
+    // for each of these, get the weather
+    var show_weather = [];
+    for(var single_show of getAllShowsInYear(year)) {
+        var weather = store.weather[single_show.id];
+        var max_temp = Math.max(...weather.temps);
+        var min_temp = Math.min(...weather.temps.filter(x => x > 6));
+        var rain = weather.precip.filter(x => x === true).length;
+        var date = convertDate(single_show.date);
+        show_weather.push([date, max_temp, min_temp, rain]);
+    }
+    // sort all of these and store for later
+    show_weather.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
+    for(var i of show_weather) {
+        year_store.hottest.push([i[0], `${convertTemp(i[1]).toFixed(1)}°F`]);
+    }
+    show_weather.sort((a, b) => (a[2] > b[2]) ? 1 : -1);
+    for(var i of show_weather) {
+        year_store.coldest.push([i[0], `${convertTemp(i[2]).toFixed(1)}°F`]);
+    }
+    show_weather.sort((a, b) => (a[3] < b[3]) ? 1 : -1);
+    for(var i of show_weather) {
+        year_store.wettest.push([i[0], `${i[3]}hrs rain`]);
+    }
+
+    // slice and return
+    return [year_store.wettest.slice(0, TABLE_ENTRIES),
+            year_store.hottest.slice(0, TABLE_ENTRIES),
+            year_store.coldest.slice(0, TABLE_ENTRIES)];
+};
+
 function buildYearCommon(year) {
     var data = getMostCommonYearSongs(year);
     // already sliced to correct size
@@ -280,6 +314,28 @@ function buildCommonVenues(year) {
     }
 };
 
+function updateWeatherTable(table_id, data) {
+    var index = 0;
+    var table = document.getElementById(table_id);
+    for(var row of table.children) {
+        if(index >= data.length) {
+            row.children[1].innerHTML = '';
+            row.children[2].innerHTML = '';
+        } else {
+            row.children[1].innerHTML = data[index][0];
+            row.children[2].innerHTML = data[index][1];
+        }
+        index += 1;
+    }
+};
+
+function buildWeatherData(year) {
+    var weather_data = getYearWeatherData(year);
+    updateWeatherTable('year-weather-wettest', weather_data[0]);
+    updateWeatherTable('year-weather-hottest', weather_data[1]);
+    updateWeatherTable('year-weather-coldest', weather_data[2]);
+};
+
 function popOutYearVenues() {
     displayPopOut('Most Common Venues', year_store.all_venues);
 };
@@ -304,10 +360,25 @@ function popOutYearNeverPlayed() {
     displayPopOut('Never Played After', year_store.never_again);
 };
 
+function popOutYearWettest() {
+    displayPopOut('Wettest Shows', year_store.wettest);
+};
+
+function popOutYearHottest() {
+    displayPopOut('Hottest Shows', year_store.hottest);
+};
+
+function popOutYearColdest() {
+    displayPopOut('Coldest Shows', year_store.coldest);
+};
+
 function addYearPopouts() {
     document.getElementById('pop-common-venues').addEventListener('click', popOutYearVenues);
     document.getElementById('pop-year-common-songs').addEventListener('click', popOutYearCommonSongs);
     document.getElementById('pop-year-common-combos').addEventListener('click', popOutYearCommonCombos);
+    document.getElementById('pop-year-wettest').addEventListener('click', popOutYearWettest);
+    document.getElementById('pop-year-hottest').addEventListener('click', popOutYearHottest);
+    document.getElementById('pop-year-coldest').addEventListener('click', popOutYearColdest);
 };
 
 function displayYear(year) {
@@ -315,5 +386,6 @@ function displayYear(year) {
     buildYearCommon(year);
     buildYearUniques(year);
     buildCommonVenues(year);
+    buildWeatherData(year);
     addYearPopouts();
 };

@@ -371,6 +371,14 @@ function buildWeatherData(year) {
     updateBasicTable('year-weather-coldest', weather_data[2]);
 };
 
+function buildRecommendedShows(year) {
+    var recs = [];
+    for(var single_date of BEST_SHOWS[year]) {
+        recs.push([single_date, '']);
+    }
+    updateBasicTable('year-recommended-shows', recs);
+};
+
 function buildYearTitle(year) {
     var total_time = 0;
     var total_songs = 0;
@@ -469,6 +477,7 @@ function displayYear(year) {
     buildCommonVenues(year);
     buildYearLongestShortest(year);
     buildWeatherData(year);
+    buildRecommendedShows(year);
     addYearPopouts();
     buildYearTitle(year);
 };

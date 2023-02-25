@@ -55,12 +55,12 @@ Done work in 2023:
     * Added longest songs, longest and shortest shows
     * Sort out uniques
     * Added year tab details
+    * Added recommended shows - a curated list with no comments
 
 Changes to the current website:
     Years graphs:
         Timeline map of show dates
         Graph of average length of songs over time
-        Reccomended shows - a curated list with no comments. In date sequential order
     Add date to longest songs
     Move search to upper right, shared on tabs
     Allow for searching on all tabs

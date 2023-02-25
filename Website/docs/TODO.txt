@@ -26,9 +26,7 @@ Match sources to shows, i.e. each show should have a link to sources
 Write code to measure accuratly pitch shift due to speed up
     Es 20 Pr 3
 
-
 Done work in 2023:
-
     * Graphs should also show "average" as a dotted line
     * List rows should be coloured
     * Numbers on charts should only be to 2 d.p.
@@ -37,9 +35,9 @@ Done work in 2023:
     * Extract the timings we have, and add them the to real DB
     * Use the real DB to build the binary data. Update the data
     * Add venues and weather to the binary files, load in javascript
-    * Have a storage object,
-    * an API
-    * seperate files for all display tabs
+    * Have a storage object
+    * An API
+    * Seperate files for all display tabs
     * Extract the current binary data and add the timings
     * Bring in new data
     * Fill the rarest songs columns
@@ -57,10 +55,17 @@ Done work in 2023:
     * Added longest songs, longest and shortest shows
 
 Changes to the current website:
+    Sort out uniques
+    Years graphs:
+        Timeline map of show dates
+        Graph of average length of song over time
+        Reccomended shows - a curated list with no comments. In date sequential order
     Add date to longest songs
     Move search to upper right, shared on tabs
     Show some details on the year tab in the same manner as the song tab
     Allow for searching on all tabs
+    Add venue tab
+    Add about tab
     Songs should show how common they are ("7th most commonly played")
     Add "total played" to the "played per year" chart
     "St. Stephen" should get you St Stephen, so allow searches on alternate names
@@ -82,14 +87,8 @@ Other calculations:
         Work out the exact workflow to the point of estimating how long this will take.
 
 For the show data:
-    * List the setlist
-    * Show rarest combos all time / this year
-    * Show rarest songs all time / this year
-    * Show long / short for the year
-    * Show the weather of the show as some kind of graph
     Have a "next / previous" show
     Have a "next / previous" for the venue
-
 
 For the about page:
     A page about means

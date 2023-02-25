@@ -24,7 +24,7 @@ var year_store = new YearStorage();
 
 function getUniqueSongsStartEndYear(year_start, year_end) {
     var played_songs = [];
-    for(var single_year=START_YEAR; single_year<year_end; single_year++) {
+    for(var single_year=year_start; single_year <= year_end; single_year++) {
         // go over all years UP to this year
         for(var year_show of getAllShowsInYear(single_year)) {
             for(var single_song of year_show.getAllUniqueSongs()) {
@@ -39,17 +39,17 @@ function getUniqueSongsStartEndYear(year_start, year_end) {
 
 function getUniqueStartEnd(year) {
     // get all songs from the year
-    var all_songs = [];
+    var all_songs_in_year = [];
     for(var single_show of getAllShowsInYear(year)) {
         for(var single_song of single_show.getAllUniqueSongs()) {
-            if(all_songs.includes(single_song.song) == false) {
-                all_songs.push(single_song.song);
+            if(all_songs_in_year.includes(single_song.song) == false) {
+                all_songs_in_year.push(single_song.song);
             }
         }
     }
     // now we simply iterate over the rest of the years
     var played_before = [];
-    if(year != 1965) {
+    if(year != START_YEAR) {
         played_before = getUniqueSongsStartEndYear(START_YEAR, year - 1);
     }
     var played_after = [];
@@ -63,17 +63,18 @@ function getUniqueStartEnd(year) {
     var uniques = [];
     var first_played = [];
     var never_again = [];
-    for(var single_song of all_songs) {
+    for(var single_song of all_songs_in_year) {
         var song_name = getSongName(single_song);
         var played_after_this_year = played_after.includes(single_song);
         if(played_before.includes(single_song) == false) {
-            first_played.push([song_name, store.song_data[song_name].length]);
+            first_played.push([song_name, '']);
             if(played_after_this_year == false) {
-                uniques.push([song_name, store.song_data[song_name].length]);
+                uniques.push([song_name, '']);
             }
         } else {
+            // i.e., played before is true
             if(played_after_this_year == false) {
-                never_again.push([song_name, store.song_data[song_name].length]);
+                never_again.push([song_name, '']);
             }
         }
     }

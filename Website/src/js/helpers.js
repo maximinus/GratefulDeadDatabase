@@ -105,6 +105,16 @@ function convertTime(total_time) {
     return `${minutes}m ${seconds}s`;
 };
 
+function makePrettyNumber(value) {
+    // return as a string, and of the form 1,000 if needed
+    if(value > 999) {
+        var txt = value.toString();
+        return `${txt.slice(0, -3)},${txt.slice(-3)}`; 
+    }
+    // just as normal
+    return value.toString();
+};
+
 function dayDays(delta) {
     if(delta < 2) {
         return `${delta} day`;

@@ -371,6 +371,36 @@ function buildWeatherData(year) {
     updateBasicTable('year-weather-coldest', weather_data[2]);
 };
 
+function buildYearTitle(year) {
+    var total_time = 0;
+    var total_songs = 0;
+    var countable_songs = 0;
+    var venues = [];
+    var all_shows_in_year = getAllShowsInYear(year);
+    for(var single_show of all_shows_in_year) {
+        if(venues.includes(single_show.venue) == false) {
+            venues.push(single_show.venue);
+        }
+        for(var single_song of single_show.getAllSongs()) {
+            total_songs += 1;
+            if(single_song.seconds != 0) {
+                countable_songs += 1;
+                total_time += single_song.seconds;
+            }
+        }
+    }
+    data = {'year': year.toString(),
+            'total-shows': all_shows_in_year.length,
+            'total-venues': venues.length,
+            'total-songs': makePrettyNumber(total_songs),
+            'average-total-songs': (total_songs / all_shows_in_year.length).toFixed(2),
+            'average-song-length': convertTime(Math.round(total_time / countable_songs))
+    };
+    var template = document.getElementById('year-title-template').innerHTML;
+    var new_html = Mustache.render(template, data);
+    document.getElementById('year-title-render').innerHTML = new_html;
+};
+
 function popOutYearVenues() {
     displayPopOut('Most Common Venues', year_store.all_venues);
 };
@@ -433,10 +463,12 @@ function addYearPopouts() {
 
 function displayYear(year) {
     year_store.current_year = year;
+    log(`Rendering year ${year}`);
     buildYearCommon(year);
     buildYearUniques(year);
     buildCommonVenues(year);
     buildYearLongestShortest(year);
     buildWeatherData(year);
     addYearPopouts();
+    buildYearTitle(year);
 };

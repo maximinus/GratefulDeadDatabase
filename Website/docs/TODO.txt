@@ -53,16 +53,16 @@ Done work in 2023:
     * Added hottest, coldest and wettest shows to year
     * Show the times underneath the songs
     * Added longest songs, longest and shortest shows
+    * Sort out uniques
+    * Added year tab details
 
 Changes to the current website:
-    Sort out uniques
     Years graphs:
         Timeline map of show dates
-        Graph of average length of song over time
+        Graph of average length of songs over time
         Reccomended shows - a curated list with no comments. In date sequential order
     Add date to longest songs
     Move search to upper right, shared on tabs
-    Show some details on the year tab in the same manner as the song tab
     Allow for searching on all tabs
     Add venue tab
     Add about tab

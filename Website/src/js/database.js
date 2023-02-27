@@ -34,10 +34,30 @@ function checkNewSong(event) {
 	return true;
 };
 
+function setDateFormat(something) {
+	console.log(something);
+};
+
 function addCallbacks() {
 	var song_element = document.getElementById('search-input');
 	// prevent enter key when song selection is not complete
 	song_element.onkeydown = checkNewSong;
+	// not a fan of the jquerym but it works
+	$('.dropdown-menu a.dropdown-item').on('click', function(){
+		var selected = $(this).text();
+		document.getElementById('data-format-dropdown').textContent = selected;
+		if(selected == 'MM-DD-YY') {
+			store.options.date_format = DATE_FORMAT_MMDDYY;
+			return;
+		}
+		if(selected == 'DD-MM-YY') {
+			store.options.date_format = DATE_FORMAT_DDMMYY;
+			return;
+		}
+		if(selected == 'YY-MM-DD') {
+			store.options.date_format = DATE_FORMAT_YYMMDD;
+		}
+	});
 };
 
 function setSongDropdown() {

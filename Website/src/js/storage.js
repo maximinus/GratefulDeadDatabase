@@ -1,6 +1,16 @@
 // functions for local data storage
 // i.e, here is where we have all database functions, the functions being loading and parsing
 
+const DATE_FORMAT_MMDDYY = 0;
+const DATE_FORMAT_DDMMYY = 1;
+const DATE_FORMAT_YYMMDD = 2;
+
+class Options {
+    constructor() {
+        this.date_format = DATE_FORMAT_MMDDYY;
+    }
+};
+
 // this should be a class just to not pollute the environment
 class Storage {
     constructor() {
@@ -14,8 +24,9 @@ class Storage {
         this.song_data = {};
         this.last_update = '';
         this.load_counter = 0;
+        this.options = new Options();
     }
-}
+};
 
 // the singleton for others to use
 var store = new Storage();
@@ -36,7 +47,7 @@ class Weather {
         data = JSON.parse(data);
         return new Weather(data['date'], data['temps'], data['feels']);
     };
-}
+};
 
 class Venue {
     constructor(venue_data) {
@@ -78,7 +89,7 @@ class Venue {
         data = JSON.parse(data);
         return new Venue([data.id.toString(), data.venue, data.college, data.city, data.state, data.country, data.latitude, data.longitude]);
     }
-}
+};
 
 class Song {
     // a Song is stored in a ShowSet

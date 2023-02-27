@@ -304,7 +304,7 @@ function parseSongs(binary_data) {
             }
         }
     }
-    var total_songs = songs.length;
+    var total_songs = store.songs.length;
     log(`Got ${store.songs.length} songs`);
     store.load_counter += 1;
     checkFinish();

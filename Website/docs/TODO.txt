@@ -58,12 +58,13 @@ Done work in 2023:
     * Added recommended shows - a curated list with no comments
 
 Changes to the current website:
+    Move search to upper right, shared on tabs
+    Allow for searching on all tabs
+    Vertically center text in the middle of card headers
     Years graphs:
         Timeline map of show dates
         Graph of average length of songs over time
     Add date to longest songs
-    Move search to upper right, shared on tabs
-    Allow for searching on all tabs
     Add venue tab
     Add about tab
     Songs should show how common they are ("7th most commonly played")

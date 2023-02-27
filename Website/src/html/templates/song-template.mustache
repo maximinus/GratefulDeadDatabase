@@ -1,0 +1,23 @@
+<!-- Template for single sets -->
+<!-- This template is rendered from javascript code -->
+<div class="card-header" style="display:flex; justify-content:space-between;">
+    <h5 class="my-auto"><b>{{ show-day }}, {{ show-date }}, {{ show-venue }}</b></h5>
+</div>
+<div class="container my-2">
+    {{#sets}}
+    <div class="row my-3">
+        <div class="col-1 set-name"><i>{{ set-name }}</i></div>
+        <!-- This needs to be a collection of small items: Song title on top, time below (if we have) -->
+        <!-- <div class="col">{{ songs }}</div> -->
+        <div class="col">
+            <div class="d-flex">
+                {{#songs}}
+                <div class="align-self-start">{{ name }}<p class="" style="margin: -4px 0px 0px 0px; font-size:70%;"><i>{{ time }}</i></p></div>
+                <div class="align-self-start px-2"> {{ trans }} </div>
+                {{/songs}}
+                <div class="align-self-start">{{ final_song }}<p class="" style="margin: -4px 0px 0px 0px; font-size:70%;""><i>{{ final_time }}</i></p></div>
+            </div>
+        </div>
+    </div>
+    {{/sets}}
+</div>

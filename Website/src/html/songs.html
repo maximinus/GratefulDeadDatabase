@@ -1,24 +1,10 @@
 <!-- This is the songs tab page -->
 <div class="container">
     <!-- Row for header and explanation -->
-    <div class="row pt-2">
-        <!-- Header on the left, form on the right -->
-        <div class="col">
-            <h2 id="song-title"></h2>
-        </div>
-        <div class="col-auto">
-            <form autocomplete="off">
-                <input id="song-input" style="width:350px;" type="text" placeholder="Enter song" list="choose-song">
-                <datalist id="choose-song">
-                </datalist>
-            </form>
-        </div>
-    </div>
-    <div id="song-details" class="row pt-1 pb-4">
-        <h5 id="song-detail-text"></h5>
+    <div class="card h-100 mt-4" id="single-song-render">
     </div>
     <!-- 1st Row -->
-    <div class="row">
+    <div class="row pt-4">
         <div class="col-sm">
             <div class="card h-100">
                 <div class="card-header" style="display:flex; justify-content:space-between;">

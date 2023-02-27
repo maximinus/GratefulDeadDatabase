@@ -2,9 +2,9 @@
 
 function updateSongInputOptions(options) {
 	// clear any current list
-	document.getElementById('choose-song').innerHTML = '';
+	document.getElementById('choose-search').innerHTML = '';
 	// add the new options
-	var list = document.getElementById('choose-song');
+	var list = document.getElementById('choose-search');
 	for (var i of options) {
 		var new_option = document.createElement('option');
    		new_option.value = i;
@@ -15,7 +15,7 @@ function updateSongInputOptions(options) {
 function checkNewSong(event) {
 	if(event.keyCode == 13) {
 		// check if song is valid, else do nothing
-		var song_name = document.getElementById('song-input').value;
+		var song_name = document.getElementById('search-input').value;
 		song_name = song_name.toLowerCase();
 		// check this exists
 		for(var s of store.songs) {
@@ -35,7 +35,7 @@ function checkNewSong(event) {
 };
 
 function addCallbacks() {
-	var song_element = document.getElementById('song-input');
+	var song_element = document.getElementById('search-input');
 	// prevent enter key when song selection is not complete
 	song_element.onkeydown = checkNewSong;
 };

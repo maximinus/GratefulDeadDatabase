@@ -829,21 +829,25 @@ function buildSongText(song_title) {
     }
 
     // now we have all the data
-    var final_text = '';
+    data = {'song-title': song_title}
     if(total_times_played == 1) {
-        var show_text1 = `Played once on ${convertDate(first)}.<br />`
+        var show_text1 = `Played once on ${convertDate(first)}.`
         var sn = uniques.length;
         var show_text2 = `It was the ${sn}${nth(sn)} different song played and first played at the ${show_count}${nth(show_count)} recorded show.`;
-        final_text = `${show_text1}${show_text2}`;
+        data['first-text'] = show_text1;
+        data['second-text'] = show_text2;
     } else {
-        var show_text1 = `Played ${total_times_played} times, from ${convertDate(first)} to ${convertDate(last)} (${time_delta}).<br />`;
+        var show_text1 = `Played ${total_times_played} times, from ${convertDate(first)} to ${convertDate(last)} (${time_delta}).`;
         var sn = uniques.length;
         var show_text2 = `It was the ${sn}${nth(sn)} different song played and first played at the ${show_count}${nth(show_count)} recorded show.`;
-        final_text = `${show_text1}${show_text2}`;
+        data['first-text'] = show_text1;
+        data['second-text'] = show_text2;
     }
     // set the text
-    document.getElementById('song-title').innerHTML = song_title;
-    document.getElementById('song-detail-text').innerHTML = final_text;
+    var template = document.getElementById('single-song-template').innerHTML;
+    // clear out show-render and place the template
+    var new_html = Mustache.render(template, data);
+    document.getElementById('single-song-render').innerHTML = new_html;
 };
 
 function updateVisualData(song_title) {

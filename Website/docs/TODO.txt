@@ -58,10 +58,9 @@ Done work in 2023:
     * Added recommended shows - a curated list with no comments
     * Moved search to upper right, shared on tabs
     * Vertically center text in the middle of card headers
+    * Clicking on found name in drop-down automatically updates song
 
 Changes to the current website:
-    Clicking on found name in drop-down automatically updates song
-        (also when enter is pressed)
     Allow for searching on all tabs
     Make all dates, venues and songs hyperlinks
     Years graphs:

@@ -15,18 +15,63 @@ function updateSongInputOptions(options) {
 	}
 };
 
+function updateAndGoShow(show) {
+	// passed a show, update the tab and go to it
+	updateShowTab(show);
+	$('#shows-tab').tab('show');
+};
+
+function checkShowInput(text_input) {
+	// return true / false if it was a date
+	var actual_date = convertDateOptionFormat(text_input);
+	if(actual_date == null) {
+		log('No show match')
+		return false;
+	}
+	// we have a date, the next thing is to decide if there's a show on this date
+	var show_day = convertFromDate(actual_date);
+	// iterate over all dates and store as a list the difference
+	var date_diffs = [];
+	for(var single_show of store.shows) {
+		date_diffs.push([single_show, Math.abs(single_show.date - show_day)]);
+	}
+	date_diffs.sort((a, b) => (a[1] > b[1]) ? 1 : -1);
+	// Find all shows with same date
+	var date_matches = [];
+	for(var single_diff of date_diffs) {
+		if(single_diff[1] == 0) {
+			date_matches.push(single_diff[0]);
+		} else {
+			break;
+		}
+	}
+	if(date_matches.length == 1) {
+		// easy, one single match, display it
+		updateAndGoShow(date_matches[0]);
+		return true;
+	}
+	if(date_matches.length > 1) {
+		log('TODO: Allow user to choose between 2 shows');
+		return true;
+	}
+	// otherwise, error
+	return false;
+};
+
 function checkSearchInput(text_input) {
 	text_input = text_input.toLowerCase();
 	// is this a year?
 	var int_value = parseInt(text_input);
-	if(int_value != NaN) {
+	if(isNaN(int_value) == false) {
 		// could be a year
 		if((int_value >= START_YEAR) && (int_value <= END_YEAR)) {
 			log(`Displaying year ${int_value}`);
 			return;
 		}
 	}
-	// TODO: Is this a show?
+	if(checkShowInput(text_input) == true) {
+		return;
+	};
 	// is this a song?
 	for(var s of store.songs) {
 		if(s.toLowerCase() == text_input) {

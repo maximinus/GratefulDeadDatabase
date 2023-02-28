@@ -216,6 +216,54 @@ function convertTemp(t) {
     return real_t;
 };
 
+function convertDateOptionFormat(date_text) {
+    // given this text input, does it match with a real date?
+    // If so, return the date, else return null
+    // check it also exists within the years
+    var date_split = date_text.split('-');
+    if(date_split.length != 3) {
+        return null;
+    };
+    // check we can parse the ints
+    if(!date_split.some(x => !Number.isInteger(x))) {
+        // something wasn't an integer
+        return null;
+    }
+    var date_array = date_split.map(x => parseInt(x));
+    // assume DATE_FORMAT_DDMMYY
+    var day = date_array[0];
+    var month = date_array[1];
+    var year = date_array[2];
+    if(store.options.date_format == DATE_FORMAT_MMDDYY) {
+        day = date_array[1];
+        month = date_array[0];
+    }
+    if(store.options.date_format == DATE_FORMAT_YYMMDD) {
+        year = date_array[0];
+        day = date_array[2];
+    }
+    // now try and get a date - default format is "MM/DD/YYYY"
+    // we'll need to try with adding the "19" part ourself
+    var this_extended_date = new Date(`${month}/${day}/19${year}`);
+    if(this_extended_date.toString() != "Invalid Date") {
+        // check in range
+        var year_value = this_extended_date.getFullYear();
+        if((year_value >= START_YEAR) && (year_value <= END_YEAR)) {
+            return this_extended_date;
+        }
+    }
+    // try the same, but don't add the 18
+    var this_date = new Date(`${month}/${day}/${year}`);
+    if(this_date.toString() != "Invalid Date") {
+        var year_value = this_date.getFullYear();
+        if((year_value >= START_YEAR) && (year_value <= END_YEAR)) {
+            return this_date;
+        }
+    }
+    // no dates matched
+    return null;
+};
+
 function resetTableScroll() {
     // TODO: for some reason this does not work
     //document.getElementById('table-entry-scroll').scrollTop = 0;

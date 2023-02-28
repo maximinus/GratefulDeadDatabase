@@ -267,7 +267,6 @@ function convertDateOptionFormat(date_text) {
 function resetTableScroll() {
     // TODO: for some reason this does not work
     //document.getElementById('table-entry-scroll').scrollTop = 0;
-    $('#qwerty').bootstrapTable('scrollTo', 0);
 };
 
 function displayPopOut(title, data) {

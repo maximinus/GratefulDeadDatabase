@@ -216,7 +216,14 @@ function convertTemp(t) {
     return real_t;
 };
 
+function resetTableScroll() {
+    // TODO: for some reason this does not work
+    //document.getElementById('table-entry-scroll').scrollTop = 0;
+    $('#qwerty').bootstrapTable('scrollTo', 0);
+};
+
 function displayPopOut(title, data) {
+    resetTableScroll();
     var table = document.getElementById('table-entry');
     // clear any children of this element
     table.replaceChildren();

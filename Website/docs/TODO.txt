@@ -59,27 +59,30 @@ Done work in 2023:
     * Moved search to upper right, shared on tabs
 
 Changes to the current website:
-    Allow for searching on all tabs
     Vertically center text in the middle of card headers
+    Clicking on found name in drop-down automatically updates song
+        (also when enter is pressed)
+    Allow for searching on all tabs
+    Make all dates, venues and songs hyperlinks
     Years graphs:
         Timeline map of show dates
         Graph of average length of songs over time
     Add date to longest songs
     Add venue tab
     Add about tab
+    Add an options tab
     Songs should show how common they are ("7th most commonly played")
     Add "total played" to the "played per year" chart
     "St. Stephen" should get you St Stephen, so allow searches on alternate names
         I.e. add levenstein distance
-    Clicking on found name in drop-down automatically updates song
-        (also when enter is pressed)
-    The scrollbar on list pop-ups needs to reset on a new pop-up
-    Make all dates hyperlinks
     Make all links open up the other tabs with the correct information
     Make the system remember where you were last time
     For average position in show, formulate it as a % position along the show. Place the average set marker as a bar under the position average
         Where there are 3 sets, ignore the whole show
     Add unit tests based on modules
+
+Hard things:
+    The scrollbar on list pop-ups needs to reset on a new pop-up
 
 Other calculations:
     Must start collecting BPM and add it to the DB.

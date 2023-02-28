@@ -602,6 +602,7 @@ function setLengthTablePopupList(table_data, element) {
 };
 
 function popOutLongest() {
+    resetTableScroll();
     var table = document.getElementById('table-entry');
     // clear any children of this element
     table.replaceChildren();
@@ -612,6 +613,7 @@ function popOutLongest() {
 };
 
 function popOutShortest() {
+    resetTableScroll();
     // same as above function, just in reverse
     charts_store.sorted_by_length.reverse();
     var table = document.getElementById('table-entry');
@@ -685,6 +687,7 @@ function setSimpleTablePopupList(table_data, element) {
 };
 
 function popOutFirst() {
+    resetTableScroll();
     var data = store.song_data[charts_store.current_song_title];
     var table = document.getElementById('table-entry');
     table.replaceChildren();
@@ -694,6 +697,7 @@ function popOutFirst() {
 };
 
 function popOutLast() {
+    resetTableScroll();
     var data = store.song_data[charts_store.current_song_title];
     data.reverse();
     var table = document.getElementById('table-entry');
@@ -730,6 +734,7 @@ function setBeforeAfterPopupList(table_data, element) {
 };
 
 function popOutBefore() {
+    resetTableScroll();
     var data = charts_store.played_before;
     var table = document.getElementById('table-entry');
     table.replaceChildren();
@@ -739,6 +744,7 @@ function popOutBefore() {
 };
 
 function popOutAfter() {
+    resetTableScroll();
     var data = charts_store.played_after;
     var table = document.getElementById('table-entry');
     table.replaceChildren();
@@ -749,6 +755,7 @@ function popOutAfter() {
 
 // Code to draw the pop-out charts
 function popOutPlayed() {
+    resetTableScroll();
     // clear current chart data
     var table = document.getElementById('pop-up-charts');
     table.replaceChildren();
@@ -761,6 +768,7 @@ function popOutPlayed() {
 };
 
 function popOutAverage() {
+    resetTableScroll();
     // clear current chart data
     var table = document.getElementById('pop-up-charts');
     table.replaceChildren();
@@ -773,6 +781,7 @@ function popOutAverage() {
 };
 
 function popOutPosition() {
+    resetTableScroll();
     var table = document.getElementById('pop-up-charts');
     table.replaceChildren();
     // set title

@@ -34,10 +34,6 @@ function checkNewSong(event) {
 	return true;
 };
 
-function setDateFormat(something) {
-	console.log(something);
-};
-
 function addCallbacks() {
 	var song_element = document.getElementById('search-input');
 	// prevent enter key when song selection is not complete

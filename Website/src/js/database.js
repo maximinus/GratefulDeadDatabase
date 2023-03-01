@@ -21,6 +21,16 @@ function updateAndGoShow(show) {
 	$('#shows-tab').tab('show');
 };
 
+function updateAndGoYear(year) {
+	updateYear(year);
+	$('#years-tab').tab('show');
+};
+
+function updateAndGoSong(song) {
+	updateVisualData(song);
+	$('#songs-tab').tab('show');
+};
+
 function checkShowInput(text_input) {
 	// return true / false if it was a date
 	var actual_date = convertDateOptionFormat(text_input);
@@ -54,7 +64,7 @@ function checkShowInput(text_input) {
 		log('TODO: Allow user to choose between 2 shows');
 		return true;
 	}
-	// otherwise, error
+	// otherwise, no match
 	return false;
 };
 
@@ -65,7 +75,7 @@ function checkSearchInput(text_input) {
 	if(isNaN(int_value) == false) {
 		// could be a year
 		if((int_value >= START_YEAR) && (int_value <= END_YEAR)) {
-			log(`Displaying year ${int_value}`);
+			updateAndGoYear(int_value);
 			return;
 		}
 	}
@@ -75,9 +85,7 @@ function checkSearchInput(text_input) {
 	// is this a song?
 	for(var s of store.songs) {
 		if(s.toLowerCase() == text_input) {
-			// update the song selection
-			log(`Displaying song ${s}`);
-			updateVisualData(s);
+			updateAndGoSong(s);
 			return;
 		}
 	}

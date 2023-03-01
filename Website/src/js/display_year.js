@@ -172,6 +172,7 @@ function getCommonVenues(year) {
 };
 
 function getYearWeatherData(year) {
+    // TODO: No weather before 1970!
     // for each of these, get the weather
     var show_weather = [];
     for(var single_show of getAllShowsInYear(year)) {
@@ -469,7 +470,9 @@ function addYearPopouts() {
     document.getElementById('pop-year-shortest-shows').addEventListener('click', popOutYearShortestShows);
 };
 
-function displayYear(year) {
+function updateYear(year) {
+    // reset at start
+    year_store = new YearStorage();
     year_store.current_year = year;
     log(`Rendering year ${year}`);
     buildYearCommon(year);
@@ -478,6 +481,10 @@ function displayYear(year) {
     buildYearLongestShortest(year);
     buildWeatherData(year);
     buildRecommendedShows(year);
-    addYearPopouts();
     buildYearTitle(year);
+};
+
+function displayYear(year) {
+    updateYear(year);
+    addYearPopouts();
 };

@@ -375,7 +375,11 @@ function buildWeatherData(year) {
 function buildRecommendedShows(year) {
     var recs = [];
     for(var single_date of BEST_SHOWS[year]) {
-        recs.push([single_date, '']);
+        console.log(single_date);
+        // it's in format DD-MM, convert to a date
+        var date_split = single_date.split('-');
+        var link_txt = convertDateStringFromDate(new Date(year, parseInt(date_split[1]) - 1, parseInt(date_split[0])));
+        recs.push([convertToLink(link_txt), '']);
     }
     updateBasicTable('year-recommended-shows', recs);
 };

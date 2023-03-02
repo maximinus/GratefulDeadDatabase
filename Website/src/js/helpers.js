@@ -64,7 +64,21 @@ function convertDateLong(days) {
     // calculate st/nd/rd/th
     var day_ending = nth(day);
     return `${day}${day_ending} ${month} ${year}`;
-}
+};
+
+function convertDateStringFromDate(single_date) {
+    var day = single_date.getDate();
+    var month = single_date.toLocaleString('default', { month: 'long' });
+    var year = single_date.getFullYear().toString();
+    // calculate st/nd/rd/th
+    var day_ending = nth(day);
+    return `${day}${day_ending} ${month} ${year}`;
+};
+
+function convertToLink(string, url) {
+    // convert given string to a link
+    return `<a href="#${url}">${string}</a>`;
+};
 
 function getRealDate(days) {
     var new_date = new Date(1950, 0, 1);
@@ -244,7 +258,7 @@ function convertDateOptionFormat(date_text) {
     }
     // now try and get a date - default format is "MM/DD/YYYY"
     // we'll need to try with adding the "19" part ourself
-    var this_extended_date = new Date(`${month}/${day}/19${year}`);
+    var this_extended_date = new Date(year + 1900, month - 1, day);
     if(this_extended_date.toString() != "Invalid Date") {
         // check in range
         var year_value = this_extended_date.getFullYear();
@@ -253,7 +267,7 @@ function convertDateOptionFormat(date_text) {
         }
     }
     // try the same, but don't add the 18
-    var this_date = new Date(`${month}/${day}/${year}`);
+    var this_date = new Date(year, month - 1, day);
     if(this_date.toString() != "Invalid Date") {
         var year_value = this_date.getFullYear();
         if((year_value >= START_YEAR) && (year_value <= END_YEAR)) {

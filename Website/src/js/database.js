@@ -119,6 +119,20 @@ function checkInput(event) {
 	}
 };
 
+function interceptClickEvent(event) {
+	var href;
+    var target = event.target || event.srcElement;
+    if (target.tagName === 'A') {
+        href = target.getAttribute('href');
+		if(href.startsWith('#gdd')) {
+			var real_link = href.slice(5);
+			log('Caught a link!')
+			// tell the browser not to act on this
+           	event.preventDefault();
+        }
+    }
+};
+
 function addCallbacks() {
 	var song_element = document.getElementById('search-input');
 	// prevent enter key when song selection is not complete
@@ -140,6 +154,13 @@ function addCallbacks() {
 			store.options.date_format = DATE_FORMAT_YYMMDD;
 		}
 	});
+	// intercept all clicks, to catch link clicks
+	//listen for link click events at the document level
+	if (document.addEventListener) {
+    	document.addEventListener('click', interceptClickEvent);
+	} else if (document.attachEvent) {
+    	document.attachEvent('onclick', interceptClickEvent);
+	}
 };
 
 function setSongDropdown() {

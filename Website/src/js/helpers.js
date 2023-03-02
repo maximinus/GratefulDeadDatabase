@@ -77,7 +77,7 @@ function convertDateStringFromDate(single_date) {
 
 function convertToLink(string, url) {
     // convert given string to a link
-    return `<a href="#${url}">${string}</a>`;
+    return `<a href="#gdd-${url}">${string}</a>`;
 };
 
 function getRealDate(days) {

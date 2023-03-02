@@ -4,9 +4,15 @@
 // helper functions for pulling data from the db
 
 function getShowFromDate(show_date) {
-    // TODO: convert into what the date should be
-    // remove by adding real date to show
-    console.log('TODO');
+    var show_time = show_date.getTime();
+    for(var single_show of store.shows) {
+        if(show_time === single_show.js_date.getTime()) {
+            return single_show;
+        }
+    }
+    // no such date
+    log(`Error: No such date ${show_date}`);
+    return store.shows[0];
 };
 
 function getAllShowsInYear(year) {

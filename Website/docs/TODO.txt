@@ -59,9 +59,9 @@ Done work in 2023:
     * Moved search to upper right, shared on tabs
     * Vertically center text in the middle of card headers
     * Clicking on found name in drop-down automatically updates song
+    * Allow for searching on all tabs
 
 Changes to the current website:
-    Allow for searching on all tabs
     Make all dates, venues and songs hyperlinks
     Years graphs:
         Timeline map of show dates

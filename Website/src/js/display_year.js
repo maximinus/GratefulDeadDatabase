@@ -378,7 +378,7 @@ function buildRecommendedShows(year) {
         // it's in format DD-MM, convert to a date
         var date_split = single_date.split('-');
         var link_txt = convertDateStringFromDate(new Date(year, parseInt(date_split[1]) - 1, parseInt(date_split[0])));
-        recs.push([convertToLink(link_txt), '']);
+        recs.push([convertToLink(link_txt, `show-${year}/${date_split[1]}/${date_split[0]}`), '']);
     }
     updateBasicTable('year-recommended-shows', recs);
 };

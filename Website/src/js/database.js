@@ -119,13 +119,32 @@ function checkInput(event) {
 	}
 };
 
+function handleLink(link_txt) {
+	// also check the link is valid
+	var link_data = link_txt.split('-');
+	var link_tab = link_data[0];
+	var link_data = link_data[1];
+	if(link_tab == 'show') {
+		// it's either a date in the format YYYY/MM/DD, or a single value
+		show_id = link_data.split('/');
+		if(show_id.length == 1) {
+			updateAndGoShow(store.shows[parseInt(show_id)]);
+			return;
+		}
+		// must be in a date format
+		var show_date = new Date(parseInt(show_id[0]), parseInt(show_id[1]) - 1, parseInt(show_id[2]));
+		updateAndGoShow(getShowFromDate(show_date));
+		return;
+	}
+};
+
 function interceptClickEvent(event) {
 	var href;
     var target = event.target || event.srcElement;
     if (target.tagName === 'A') {
         href = target.getAttribute('href');
 		if(href.startsWith('#gdd')) {
-			var real_link = href.slice(5);
+			handleLink(href.slice(5));
 			log('Caught a link!')
 			// tell the browser not to act on this
            	event.preventDefault();

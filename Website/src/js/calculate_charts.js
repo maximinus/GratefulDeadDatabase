@@ -566,7 +566,7 @@ function buildBeforeAfterSongs(song_title) {
     var index = 0;
     var table = document.getElementById('songs-before');
     for(var row of table.children) {
-        row.children[1].innerHTML = sbefore[index][0];
+        row.children[1].innerHTML = convertToLink(sbefore[index][0], `song-${sbefore[index][0]}`);
         row.children[2].innerHTML = sbefore[index][1];
         index += 1;   
     }
@@ -574,7 +574,7 @@ function buildBeforeAfterSongs(song_title) {
     var index = 0;
     var table = document.getElementById('songs-after');
     for(var row of table.children) {
-        row.children[1].innerHTML = safter[index][0];
+        row.children[1].innerHTML = convertToLink(safter[index][0], `song-${safter[index][0]}`);
         row.children[2].innerHTML = safter[index][1];
         index += 1;   
     }

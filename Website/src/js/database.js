@@ -144,6 +144,10 @@ function handleLink(link_txt) {
 		changeTabView(SHOWS_TAB, getShowFromDate(show_date));
 		return;
 	}
+	if(link_tab == 'song') {
+		changeTabView(SONGS_TAB, link_data);
+		return;
+	}
 };
 
 function interceptClickEvent(event) {

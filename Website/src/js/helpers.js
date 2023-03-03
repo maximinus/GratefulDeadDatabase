@@ -15,6 +15,16 @@ function getShowFromDate(show_date) {
     return store.shows[0];
 };
 
+function getShowFromId(show_id) {
+    for(var single_show of store.shows) {
+        if(single_show.id == show_id) {
+            return single_show;
+        }
+    }
+    log(`Error: No such show ID ${show_id}`);
+    return store.shows[0];
+};
+
 function getAllShowsInYear(year) {
     var all_shows_in_year = [];
     for(var single_show of store.shows) {

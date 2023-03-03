@@ -11,7 +11,6 @@ class ChartsStorage {
 
 var charts_store = new ChartsStorage();
 
-
 // only code to render, update and display the song charts should be here
 // that DOES include data collection specific to the charts.
 // getAllTimesPlayed() is a good example of this
@@ -403,7 +402,9 @@ function buildLengthVersions(song_title) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            row.children[1].innerHTML = convertDate(table_data[index].date);
+            var date_int = getShowFromId(table_data[index].show_id).date
+            var date_text = convertDate(date_int);
+            row.children[1].innerHTML = convertToLink(date_text, `show-${table_data[index].show_id}`);
             row.children[2].innerHTML = convertTime(table_data[index].seconds);
         }
         index += 1;
@@ -420,7 +421,9 @@ function buildLengthVersions(song_title) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            row.children[1].innerHTML = convertDate(table_data[index].date);
+            var date_int = getShowFromId(table_data[index].show_id).date
+            var date_text = convertDate(date_int);
+            row.children[1].innerHTML = convertToLink(date_text, `show-${table_data[index].show_id}`);
             row.children[2].innerHTML = convertTime(table_data[index].seconds);
         }
         index += 1;   
@@ -432,19 +435,19 @@ function buildLengthVersions(song_title) {
 function buildFirstLastVersions(song_title) {
     var data = store.song_data[song_title];
     var table_data = data.slice(0, TABLE_ENTRIES);
-    // TODO: fill up the empties if they don't exist
     // scroll through the children of the table and visit them all
     var index = 0;
-    var last = table_data[0].date;;
+    var last = getShowFromId(table_data[0].show_id).date;
     var table = document.getElementById('first-played');
     for(var row of table.children) {
         if(index >= table_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            row.children[1].innerHTML = convertDate(table_data[index].date);
+            var row_date = getShowFromId(table_data[index].show_id).date;
+            row.children[1].innerHTML = convertToLink(convertDate(row_date), `show-${table_data[index].show_id}`);
             if(index != 0) {
-                var delta = table_data[index].date - last;
+                var delta = row_date - last;
                 row.children[2].innerHTML = `<i>${dayDays(delta)} after first</i>`;
             }
         }
@@ -454,22 +457,23 @@ function buildFirstLastVersions(song_title) {
     data.reverse()
     var table_data = data.slice(0, TABLE_ENTRIES);
     var index = 0;
-    var last = table_data[0].date;
+    var last = getShowFromId(table_data[0].show_id).date;
     var table = document.getElementById('last-played');
     for(var row of table.children) {
         if(index >= table_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            row.children[1].innerHTML = convertDate(table_data[index].date);
+            var row_date = getShowFromId(table_data[index].show_id).date;
+            row.children[1].innerHTML = convertToLink(convertDate(row_date), `show-${table_data[index].show_id}`);
             if(index != 0) {
-                var delta = last - table_data[index].date;
+                var delta = last - row_date;
                 row.children[2].innerHTML = `<i>${dayDays(delta)} before last</i>`;
             }
         }
         index += 1;
     }
-    // keep
+    // preserve correct order
     data.reverse();
 };
 
@@ -804,8 +808,9 @@ function buildSongText(song_title) {
     //          It was the 49th different song played and first played at the 672nd recorded show.
     var data = store.song_data[song_title];
     var total_times_played = data.length;
-    var first_played = data[0];
-    var last_played = data[data.length - 1];
+    var first_played = getShowFromId(data[0].show_id);
+    var last_played = getShowFromId(data[data.length - 1].show_id);
+
     // get the time delta
     var start_date = new Date(1950, 0, 1);
     start_date.setDate(start_date.getDate() + first_played.date);
@@ -859,14 +864,16 @@ function buildSongText(song_title) {
     document.getElementById('single-song-render').innerHTML = new_html;
 };
 
-function updateVisualData(song_title) {
-    // this needs to wait until data is loaded
-    // TODO: this function should be somewhere else
+function updateSongTab(song_title) {
     charts_store.current_song_title = song_title;
     log(`Updating charts and tables: ${song_title}`)
     buildTables(song_title);
     buildCharts(song_title);
     buildSongText(song_title);
+};
+
+function updateVisualData(song_title) {
+    updateSongTab(song_title);
     // add the callbacks; first tables
     document.getElementById('pop-longest').addEventListener('click', popOutLongest);
     document.getElementById('pop-shortest').addEventListener('click', popOutShortest);

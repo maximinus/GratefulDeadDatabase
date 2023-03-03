@@ -19,7 +19,7 @@ function updateSongInputOptions(options) {
 function changeTabView(data_type, data) {
 	switch(data_type) {
 		case SONGS_TAB:
-			updateVisualData(data);
+			updateSongTab(data);
 			break;
 		case SHOWS_TAB:
 			updateShowTab(data);
@@ -133,15 +133,15 @@ function handleLink(link_txt) {
 	var link_tab = link_data[0];
 	var link_data = link_data[1];
 	if(link_tab == 'show') {
-		// it's either a date in the format YYYY/MM/DD, or a single value
+		// it's either a date in the format YYYY/MM/DD, or a single value, the show id
 		show_id = link_data.split('/');
 		if(show_id.length == 1) {
-			changeTabView(SHOWS_TAB, store.shows[parseInt(show_id)]);
+			changeTabView(SHOWS_TAB, getShowFromId(show_id));
 			return;
 		}
 		// must be in a date format
 		var show_date = new Date(parseInt(show_id[0]), parseInt(show_id[1]) - 1, parseInt(show_id[2]));
-		changeTabView(getShowFromDate(show_date));
+		changeTabView(SHOWS_TAB, getShowFromDate(show_date));
 		return;
 	}
 };
@@ -153,7 +153,6 @@ function interceptClickEvent(event) {
         href = target.getAttribute('href');
 		if(href.startsWith('#gdd')) {
 			handleLink(href.slice(5));
-			log('Caught a link!')
 			// tell the browser not to act on this
            	event.preventDefault();
         }

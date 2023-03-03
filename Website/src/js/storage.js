@@ -20,7 +20,7 @@ class Storage {
         this.songs = [];
         this.venues = [];
         this.weather = {};
-        // {song_title: [[date, length]...]} for all songs
+        // {song_title: [[show_id, length]...]} for all songs
         this.song_data = {};
         this.last_update = '';
         this.load_counter = 0;
@@ -114,8 +114,9 @@ class Song {
 
 class SongData {
     // SongData is stored in a map of songs -> [SongData]
-    constructor(date, seconds) {
-        this.date = date;
+    // we need to store the ID of the show, not the date
+    constructor(id, seconds) {
+        this.show_id = id;
         this.seconds = seconds;
     };
 };
@@ -401,6 +402,7 @@ function parseShows(binary_data) {
         // save the show
         store.shows.push(new Show(new_sets_data[0], date, venue_id, show_id));
     }
+    // we cannot sort shows by ID as there may be missing values
     log(`Got ${store.shows.length} shows`);
     store.load_counter += 1;
     checkFinish();
@@ -625,7 +627,7 @@ function getSongData() {
     for(var show of store.shows) {
         for(var i of show.getAllSongs()) {
             var song_title = store.songs[i.song];
-            var new_song_data = new SongData(show.date, i.seconds);
+            var new_song_data = new SongData(show.id, i.seconds);
             if(song_title in store.song_data) {
                 store.song_data[song_title].push(new_song_data);
             } else {

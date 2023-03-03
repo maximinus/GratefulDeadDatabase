@@ -185,8 +185,9 @@ function getYearWeatherData(year) {
         var max_temp = Math.max(...weather.temps);
         var min_temp = Math.min(...weather.temps.filter(x => x > 6));
         var rain = weather.precip.filter(x => x === true).length;
-        var date = convertDate(single_show.date);
-        show_weather.push([date, max_temp, min_temp, rain]);
+        var date_text = convertDate(single_show.date);
+        var date_link = convertToLink(date_text, `show-${single_show.id}`);
+        show_weather.push([date_link, max_temp, min_temp, rain]);
     }
     // sort all of these and store for later
     show_weather.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
@@ -212,7 +213,11 @@ function getYearLongestShortest(year) {
     var song_lengths = [];
     var show_lengths = [];
     for(var single_show of getAllShowsInYear(year)) {
-        show_lengths.push([convertDate(single_show.date), single_show.getLength()]);
+        var total_length = single_show.getLength();
+        if(total_length != 0) {
+            var show_link = convertToLink(convertDate(single_show.date), `show-${single_show.id}`);
+            show_lengths.push([show_link, single_show.getLength()]);
+        }
         for(var single_song of single_show.getAllSongs()) {
             song_lengths.push([getSongName(single_song.song), single_song.seconds]);
         }

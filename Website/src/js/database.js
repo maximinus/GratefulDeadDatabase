@@ -34,6 +34,7 @@ function changeTabView(data_type, data) {
 			log(`Invalid tab to go to: ${data_type} with data ${data}`);
 			return;
 	}
+	log(`Changing tab to ${data_type}`);
 	$(data_type).tab('show');
 };
 

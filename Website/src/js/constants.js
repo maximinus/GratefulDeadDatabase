@@ -6,11 +6,11 @@ const FILES_TO_LOAD = 4;
 
 const LOGGING_ON = true;
 
-const SONGS_TAB = 'songs-tab';
-const SHOWS_TAB = 'shows-tab';
-const YEARS_TAB = 'years-tab';
-const VENUES_TAB = 'venues-tab';
-const ABOUT_TAB = 'about-tab';
+const SONGS_TAB = '#songs-tab';
+const SHOWS_TAB = '#shows-tab';
+const YEARS_TAB = '#years-tab';
+const VENUES_TAB = '#venues-tab';
+const ABOUT_TAB = '#about-tab';
 
 const SONG_DATA = 'songs';
 const SHOW_DATA = 'shows';

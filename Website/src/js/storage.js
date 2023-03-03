@@ -440,7 +440,7 @@ function parseWeather(binary_data) {
         index +=2;
         // really at the end?
         if(getWord(binary_data, index) == 0) {
-            log(`Got ${store.weather.length} days of weather`);
+            log(`Got ${store.weather.size} days of weather`);
             store.load_counter += 1;
             checkFinish();
             return;
@@ -611,7 +611,7 @@ function getFromLocalStorage() {
     log(`Got ${store.songs.length} songs`);
     log(`Got ${store.shows.length} shows`);
     log(`Got ${store.venues.length} venues`);
-    log(`Got ${store.weather.length} days of weather`);
+    log(`Got ${store.weather.size} days of weather`);
     return true;
 };
 

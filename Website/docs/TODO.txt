@@ -60,9 +60,10 @@ Done work in 2023:
     * Vertically center text in the middle of card headers
     * Clicking on found name in drop-down automatically updates song
     * Allow for searching on all tabs
+    * Made all dates and songs hyperlinks
 
 Changes to the current website:
-    Make all dates, venues and songs hyperlinks
+    Add venues page and make all venues links
     Thus, make the "back" button work as well
     Align tables so left is left and right column is on the right
     Years graphs:

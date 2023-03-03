@@ -64,6 +64,7 @@ Done work in 2023:
 Changes to the current website:
     Make all dates, venues and songs hyperlinks
     Thus, make the "back" button work as well
+    Align tables so left is left and right column is on the right
     Years graphs:
         Timeline map of show dates
         Graph of average length of songs over time

@@ -77,7 +77,6 @@ function getRarestCombos() {
     // sort by this count and then take the first X
     var all_sets = show_store.current_show.getAllUniqueSongsBySet();
     var combos = []
-    var year_combos = []
     for(var single_set of all_sets) {
         if(single_set.length < 2) {
             continue;
@@ -115,13 +114,22 @@ function getRarestCombos() {
     combos.sort((a, b) => (a[2] > b[2]) ? 1 : -1);
     show_store.rarest_combos = [];
     for(var single_combo of combos) {
-        show_store.rarest_combos.push([`${getSongName(single_combo[0])} / ${getSongName(single_combo[1])}`, single_combo[2]]);
+        // build links here as well
+        var name1 = getSongName(single_combo[0]);
+        var name2 = getSongName(single_combo[1]);
+        var text1 = convertToLink(name1, `song-${name1}`);
+        var text2 = convertToLink(name2, `song-${name2}`);
+        show_store.rarest_combos.push([`${text1} / ${text2}`, single_combo[2]]);
     }
 
     combos.sort((a, b) => (a[3] > b[3]) ? 1 : -1);
     show_store.rarest_combos_year = [];
     for(var single_combo of combos) {
-        show_store.rarest_combos_year.push([`${getSongName(single_combo[0])} / ${getSongName(single_combo[1])}`, single_combo[3]]);
+        var name1 = getSongName(single_combo[0]);
+        var name2 = getSongName(single_combo[1]);
+        var text1 = convertToLink(name1, `song-${name1}`);
+        var text2 = convertToLink(name2, `song-${name2}`);
+        show_store.rarest_combos_year.push([`${text1} / ${text2}`, single_combo[3]]);
     }
     return [show_store.rarest_combos.slice(0, TABLE_ENTRIES), show_store.rarest_combos_year.slice(0, TABLE_ENTRIES)]
 };
@@ -244,7 +252,7 @@ function buildCombos() {
 };
 
 function buildRarestSongs() {
-    var data = getRarestSongs();;
+    var data = getRarestSongs();
     // already sliced to correct size
     var table_all_data = data[0];
     var table_year_data = data[1];
@@ -256,7 +264,7 @@ function buildRarestSongs() {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            row.children[1].innerHTML = table_all_data[index][0];
+            row.children[1].innerHTML = convertToLink(table_all_data[index][0], `song-${table_all_data[index][0]}`);
             row.children[2].innerHTML = table_all_data[index][1].toString();
         }
         index += 1;
@@ -269,7 +277,7 @@ function buildRarestSongs() {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            row.children[1].innerHTML = table_year_data[index][0];
+            row.children[1].innerHTML = convertToLink(table_year_data[index][0], `song-${table_year_data[index][0]}`);
             row.children[2].innerHTML = table_year_data[index][1].toString();
         }
         index += 1;

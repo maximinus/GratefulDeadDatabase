@@ -85,13 +85,13 @@ function getUniqueStartEnd(year) {
 
     // remove the values, they are not needed
     for(var i of uniques) {
-        year_store.uniques.push([i[0], '']);
+        year_store.uniques.push([convertToLink(i[0], `song-${i[0]}`), '']);
     }
     for(var i of first_played) {
-        year_store.first_played.push([i[0], '']);
+        year_store.first_played.push([convertToLink(i[0], `song-${i[0]}`), '']);
     }
     for(var i of never_again) {
-        year_store.never_again.push([i[0], '']);
+        year_store.never_again.push([convertToLink(i[0], `song-${i[0]}`), '']);
     }
     return [year_store.uniques.slice(0, TABLE_ENTRIES),
             year_store.first_played.slice(0, TABLE_ENTRIES),
@@ -137,14 +137,19 @@ function getMostCommonYearSongs(year) {
     }
     common_songs.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     common_combos.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
-    // add the names
+    // add the names and links here
     for(var i=0; i<common_songs.length; i++) {
-        common_songs[i][0] = getSongName(common_songs[i][0]);
+        var name1 = getSongName(common_songs[i][0]);
+        common_songs[i][0] = convertToLink(name1, `song-${name1}`);
     }
     for(var i=0; i<common_combos.length; i++) {
         // combo names a bit harder
         var two_songs = common_combos[i][0].split("-");
-        common_combos[i][0] = `${getSongName(parseInt(two_songs[0]))} / ${getSongName(parseInt(two_songs[1]))}`;
+        var name1 = getSongName(parseInt(two_songs[0]));
+        var name2 = getSongName(parseInt(two_songs[1]));
+        var link1 = convertToLink(name1, `song-${name1}`);
+        var link2 = convertToLink(name2, `song-${name2}`);
+        common_combos[i][0] = `${link1} / ${link2}`;
     }
 
     // store and slice
@@ -172,7 +177,7 @@ function getCommonVenues(year) {
 };
 
 function getYearWeatherData(year) {
-    // TODO: No weather before 1970!
+    // TODO: No weather before 1970: check weather exists before displaying this
     // for each of these, get the weather
     var show_weather = [];
     for(var single_show of getAllShowsInYear(year)) {
@@ -217,7 +222,7 @@ function getYearLongestShortest(year) {
     show_lengths.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     // only top 100 longest, otherwise list will be crazy
     for(var i of song_lengths.slice(0, 100)) {
-        year_store.longest_songs.push([i[0], convertTime(i[1])]);
+        year_store.longest_songs.push([convertToLink(i[0], `song-${i[0]}`), convertTime(i[1])]);
     }
     for(var i of show_lengths) {
         year_store.longest_shows.push([i[0], convertTime(i[1])]);

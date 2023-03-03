@@ -2,6 +2,7 @@
 
 const INVISIBLE_SPACE = '\u200b';
 
+
 function updateSongInputOptions(options) {
 	// clear any current list
 	document.getElementById('choose-search').innerHTML = '';
@@ -15,20 +16,25 @@ function updateSongInputOptions(options) {
 	}
 };
 
-function updateAndGoShow(show) {
-	// passed a show, update the tab and go to it
-	updateShowTab(show);
-	$('#shows-tab').tab('show');
-};
-
-function updateAndGoYear(year) {
-	updateYear(year);
-	$('#years-tab').tab('show');
-};
-
-function updateAndGoSong(song) {
-	updateVisualData(song);
-	$('#songs-tab').tab('show');
+function changeTabView(data_type, data) {
+	switch(data_type) {
+		case SONGS_TAB:
+			updateVisualData(data);
+			break;
+		case SHOWS_TAB:
+			updateShowTab(data);
+			break;
+		case YEARS_TAB:
+			updateYear(data);
+			break;
+		case VENUES_TAB:
+			// todo
+			break;
+		default:
+			log(`Invalid tab to go to: ${data_type} with data ${data}`);
+			return;
+	}
+	$(data_type).tab('show');
 };
 
 function checkShowInput(text_input) {
@@ -56,8 +62,8 @@ function checkShowInput(text_input) {
 		}
 	}
 	if(date_matches.length == 1) {
-		// easy, one single match, display it
-		updateAndGoShow(date_matches[0]);
+		// easy, one single match
+		changeTabView(SHOWS_TAB, date_matches[0]);
 		return true;
 	}
 	if(date_matches.length > 1) {
@@ -75,17 +81,18 @@ function checkSearchInput(text_input) {
 	if(isNaN(int_value) == false) {
 		// could be a year
 		if((int_value >= START_YEAR) && (int_value <= END_YEAR)) {
-			updateAndGoYear(int_value);
+			changeTabView(YEARS_TAB, int_value);
 			return;
 		}
 	}
 	if(checkShowInput(text_input) == true) {
+		// tab is updated in above function
 		return;
 	};
 	// is this a song?
 	for(var s of store.songs) {
 		if(s.toLowerCase() == text_input) {
-			updateAndGoSong(s);
+			changeTabView(SONGS_TAB, s);
 			return;
 		}
 	}
@@ -128,12 +135,12 @@ function handleLink(link_txt) {
 		// it's either a date in the format YYYY/MM/DD, or a single value
 		show_id = link_data.split('/');
 		if(show_id.length == 1) {
-			updateAndGoShow(store.shows[parseInt(show_id)]);
+			changeTabView(SHOWS_TAB, store.shows[parseInt(show_id)]);
 			return;
 		}
 		// must be in a date format
 		var show_date = new Date(parseInt(show_id[0]), parseInt(show_id[1]) - 1, parseInt(show_id[2]));
-		updateAndGoShow(getShowFromDate(show_date));
+		changeTabView(getShowFromDate(show_date));
 		return;
 	}
 };

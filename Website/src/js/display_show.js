@@ -329,10 +329,6 @@ function getShowRenderData() {
             'sets': sets_all_data};
 };
 
-function getGoogleMapsLink(venue) {
-    return `https://www.google.com/maps/search/?api=1&query=${venue.latitude},${venue.longitude}`;
-};
-
 function displayVenueInformation() {
     var this_show_date = show_store.current_show.date;
     var this_venue = getVenue(show_store.current_show.venue)

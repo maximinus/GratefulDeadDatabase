@@ -65,6 +65,7 @@ Done work in 2023:
 
 Changes to the current website:
     Add venues page and make all venues links
+    Centre text properly in top cards for all tabs
     Thus, make the "back" button work as well
     Years graphs:
         Timeline map of show dates
@@ -72,6 +73,8 @@ Changes to the current website:
     Add date to longest songs
     Add about tab
     Add an options tab
+    Fix the precipitation data
+    Grab the pre 1970 weather data
     Add "total played" to the "played per year" chart
     Make the system remember where you were last time
     For average position in show, formulate it as a % position along the show. Place the average set marker as a bar under the position average

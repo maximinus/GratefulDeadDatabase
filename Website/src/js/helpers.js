@@ -35,6 +35,16 @@ function getAllShowsInYear(year) {
     return all_shows_in_year;
 };
 
+function getAllShowsInVenue(venue_id) {
+    var all_shows_in_venue = [];
+    for(var single_show of store.shows) {
+        if( single_show.venue == venue_id) {
+            all_shows_in_venue.push(single_show);
+        }
+    }
+    return all_shows_in_venue;
+};
+
 function getIndexOfSong(song_title) {
     // what's the index of song text x in the array songs?
     return store.songs.indexOf(song_title);
@@ -292,6 +302,10 @@ function convertDateOptionFormat(date_text) {
     }
     // no dates matched
     return null;
+};
+
+function getGoogleMapsLink(venue) {
+    return `https://www.google.com/maps/search/?api=1&query=${venue.latitude},${venue.longitude}`;
 };
 
 function resetTableScroll() {

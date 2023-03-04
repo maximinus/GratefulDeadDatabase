@@ -30,5 +30,7 @@ const NEXT_UPDATE = 365;
 const DEFAULT_SONG = 'Playing In The Band';
 const DEFAULT_SHOW = 1000;
 const DEFAULT_YEAR = 1978;
+const DEFAULT_VENUE = 1;
+
 const START_YEAR = 1965;
 const END_YEAR = 1995;

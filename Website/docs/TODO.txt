@@ -61,9 +61,9 @@ Done work in 2023:
     * Clicking on found name in drop-down automatically updates song
     * Allow for searching on all tabs
     * Made all dates and songs hyperlinks
+    * Aligned tables so left is left and right column is on the right
 
 Changes to the current website:
-    Align tables so left is left and right column is on the right
     Add venues page and make all venues links
     Thus, make the "back" button work as well
     Years graphs:

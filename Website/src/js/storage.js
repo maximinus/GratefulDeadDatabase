@@ -657,6 +657,7 @@ function updateTabs() {
 	updateVisualData(DEFAULT_SONG);
     displayShow(DEFAULT_SHOW);
     displayYear(DEFAULT_YEAR);
+    displayVenue(DEFAULT_VENUE);
 };
 
 function getData() {

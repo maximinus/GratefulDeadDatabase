@@ -63,10 +63,10 @@ Done work in 2023:
     * Made all dates and songs hyperlinks
     * Aligned tables so left is left and right column is on the right
     * Added venue page
+    * Made all venues links
+    * Centred text properly in top cards for all tabs
 
 Changes to the current website:
-    Make all venues links
-    Centre text properly in top cards for all tabs
     Thus, make the "back" button work as well
     Years graphs:
         Timeline map of show dates

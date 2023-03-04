@@ -352,7 +352,7 @@ function displayVenueInformation() {
         total_text = `${total_shows} shows played here. This was the ${total_before}${nth(total_before)} time.`;
     }
     // Now we can get all the data
-    var venue_data = {'venue': this_venue.venue,
+    var venue_data = {'venue': convertToLink(this_venue.venue, `venue-${venue_id}`),
                       'city': this_venue.city,
                       'state': `${this_venue.state}, ${this_venue.country}`,
                       'location': `Lat: ${this_venue.latitude}, Long: ${this_venue.longitude}`,

@@ -28,7 +28,7 @@ function changeTabView(data_type, data) {
 			updateYear(data);
 			break;
 		case VENUES_TAB:
-			// todo
+			updateVenueTab(data);
 			break;
 		default:
 			log(`Invalid tab to go to: ${data_type} with data ${data}`);
@@ -147,6 +147,9 @@ function handleLink(link_txt) {
 	if(link_tab == 'song') {
 		changeTabView(SONGS_TAB, link_data);
 		return;
+	}
+	if(link_tab = 'venue') {
+		changeTabView(VENUES_TAB, link_data);
 	}
 };
 

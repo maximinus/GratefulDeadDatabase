@@ -169,7 +169,8 @@ function getCommonVenues(year) {
     }
     var venue_details = [];
     for(var single_venue in venue_ids) {
-        venue_details.push([getVenue(single_venue).venue, venue_ids[single_venue]]);
+        var v = getVenue(single_venue);
+        venue_details.push([convertToLink(v.venue, `venue-${v.id}`), venue_ids[single_venue]]);
     }
     venue_details.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     year_store.all_venues = venue_details;
@@ -224,7 +225,6 @@ function getYearLongestShortest(year) {
     }
     // now sort as per usual
     song_lengths.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
-    show_lengths.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     // only top 100 longest, otherwise list will be crazy
     for(var i of song_lengths.slice(0, 100)) {
         year_store.longest_songs.push([convertToLink(i[0], `song-${i[0]}`), convertTime(i[1])]);

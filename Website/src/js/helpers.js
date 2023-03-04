@@ -25,16 +25,6 @@ function getShowFromId(show_id) {
     return store.shows[0];
 };
 
-function getVenueFromId(venue_id) {
-    for(var single_venue of store.venues) {
-        if(single_venue.id == venue_id) {
-            return single_venue;
-        }
-    }
-    log(`Error: No such venue ID ${show_id}`);
-    return store.venues[0];
-};
-
 function getAllShowsInYear(year) {
     var all_shows_in_year = [];
     for(var single_show of store.shows) {
@@ -194,7 +184,8 @@ function getVenue(venue_id) {
         }
     }
     // venue not found
-    return "Unknown Venue";
+    log(`Error: no such venue ${venue_id}`);
+    return store.venues[0];
 };
 
 function dateDifference(startingDate, endingDate) {

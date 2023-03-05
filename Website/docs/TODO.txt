@@ -68,16 +68,13 @@ Done work in 2023:
     * Made the "back" button work as well
     * Allowed searching for venues
     * Added date link to longest songs
+    * Added 2 new graphs in years tab
 
 Changes to the current website:
-    Years graphs:
-        Timeline map of show dates
-        Graph of average length of songs over time
     Add about tab
     Fix the precipitation data
     Grab the pre 1970 weather data
     Add "total played" to the "played per year" chart
-    Make the system remember where you were last time
     For average position in show, formulate it as a % position along the show. Place the average set marker as a bar under the position average
         Where there are 3 sets, ignore the whole show
 

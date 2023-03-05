@@ -226,6 +226,7 @@ function getYearLongestShortest(year) {
     }
     // now sort as per usual
     song_lengths.sort((a, b) => (a[2] < b[2]) ? 1 : -1);
+    show_lengths.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     // only top 100 longest, otherwise list will be crazy
     for(var i of song_lengths.slice(0, 100)) {
         // we need to show the double link: song / date

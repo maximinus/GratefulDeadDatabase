@@ -69,9 +69,9 @@ Done work in 2023:
     * Allowed searching for venues
     * Added date link to longest songs
     * Added 2 new graphs in years tab
+    * Add about tab
 
 Changes to the current website:
-    Add about tab
     Fix the precipitation data
     Grab the pre 1970 weather data
     Add "total played" to the "played per year" chart

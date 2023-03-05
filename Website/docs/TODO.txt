@@ -74,7 +74,6 @@ Changes to the current website:
         Timeline map of show dates
         Graph of average length of songs over time
     Add about tab
-    Add an options tab
     Fix the precipitation data
     Grab the pre 1970 weather data
     Add "total played" to the "played per year" chart

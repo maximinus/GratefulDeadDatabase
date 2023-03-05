@@ -274,6 +274,140 @@ function buildYearCommon(year) {
     }
 };
 
+function buildYearAverageLength(year) {
+    // for all shows, get average song length for songs that are timed
+    var avg_lengths = [];
+    for(var single_show of getAllShowsInYear(year)) {
+        var total_time = 0;
+        var total_songs = 0;
+        for(var single_song of single_show.getAllSongs()) {
+            if(single_song.seconds != 0) {
+                total_time += single_song.seconds;
+                total_songs += 1;
+            }
+        }
+        if(total_time == 0) {
+            avg_lengths.push(0);
+        } else {
+            // to the nearest second
+            avg_lengths.push(Math.round(total_time / total_songs));
+        }
+    }
+    Highcharts.chart('year-total-length-chart', {
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: null
+        },
+        legend: {
+            enabled: true,
+            layout: "horizontal",
+            align: "right",
+            verticalAlign: "top",
+            floating: true,
+            itemStyle: {
+                color: '#000000',
+                fontWeight: 'bold',
+                fontSize: 8,
+            },
+            borderWidth: 1
+        },
+        xAxis: {
+            title: {
+                text: 'Shows in year'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Average song length'
+            }
+        },
+        credits: {
+            enabled: false
+        },
+        tooltip: {
+            // only show 2 decimal places on tooltip
+            valueDecimals: 2
+        },
+        series: [{
+            name: 'Average Song Length',
+            showInLegend: true,
+            pointStart: 0,
+            color: '#88cc88',
+            data: avg_lengths
+        }]
+    });
+};
+
+function buildYearLengthBuckets(year) {
+    var longest = 0;
+    var length_buckets = {};
+    for(var single_show of getAllShowsInYear(year)) {
+        for(var single_song of single_show.getAllSongs()) {
+            if(single_song.seconds != 0) {
+                // round to nearest minute
+                var bucket = Math.round(single_song.seconds / 60.0);
+                if(longest < bucket) {
+                    longest = bucket;
+                }
+                if(bucket in length_buckets) {
+                    length_buckets[bucket] += 1;
+                } else {
+                    length_buckets[bucket] = 1;
+                }
+            }
+        }
+    }
+    // start at 0, since 0 = 0s -> 60s long
+    var length_values = [];
+    for(var i=0; i<=longest; i++) {
+        if(i in length_buckets) {
+            length_values.push(length_buckets[i]);
+        } else {
+            // none of that value
+            length_values.push(0);
+        }
+    }
+    // great, we now have an array with the number of songs in that time bucket
+    var chart = Highcharts.chart('year-length-songs-chart', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: null
+        },
+        xAxis: {
+            title: {
+                text: 'Length / minutes'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Total songs'
+            }
+        },
+        tooltip: {
+            formatter: function () {
+                return `${this.y} songs that were ${this.x}-${this.x+1} minutes long`;
+            },
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.0,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Total songs by length',
+            showInLegend: true,
+            pointStart: 0,
+            color: '#88cc88',
+            data: length_values
+        }]
+    });
+};
+
 function buildYearUniques(year) {
     var data = getUniqueStartEnd(year);
     // already sliced to correct size
@@ -492,6 +626,8 @@ function updateYear(year) {
     year_store = new YearStorage();
     year_store.current_year = year;
     log(`Rendering year ${year}`);
+    buildYearAverageLength(year);
+    buildYearLengthBuckets(year);
     buildYearCommon(year);
     buildYearUniques(year);
     buildCommonVenues(year);

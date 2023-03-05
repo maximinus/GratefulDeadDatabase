@@ -220,14 +220,18 @@ function getYearLongestShortest(year) {
             show_lengths.push([show_link, single_show.getLength()]);
         }
         for(var single_song of single_show.getAllSongs()) {
-            song_lengths.push([getSongName(single_song.song), single_song.seconds]);
+            // store the song and the date
+            song_lengths.push([getSongName(single_song.song), single_show, single_song.seconds]);
         }
     }
     // now sort as per usual
-    song_lengths.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
+    song_lengths.sort((a, b) => (a[2] < b[2]) ? 1 : -1);
     // only top 100 longest, otherwise list will be crazy
     for(var i of song_lengths.slice(0, 100)) {
-        year_store.longest_songs.push([convertToLink(i[0], `song-${i[0]}`), convertTime(i[1])]);
+        // we need to show the double link: song / date
+        var song_link = convertToLink(i[0], `song-${i[0]}`);
+        var show_link = convertToLink(convertDate(i[1].date), `show-${i[1].id}`);
+        year_store.longest_songs.push([`${song_link}, ${show_link}`, convertTime(i[2])]);
     }
     for(var i of show_lengths) {
         year_store.longest_shows.push([i[0], convertTime(i[1])]);

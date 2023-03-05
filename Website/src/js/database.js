@@ -105,7 +105,6 @@ function checkSearchInput(text_input) {
 			return;
 		}
 	}
-	// TODO: Is this a venue?
 	for(var s of store.venues) {
 		if(s.venue.toLowerCase() == text_input) {
 			changeTabView(VENUES_TAB, s.id);

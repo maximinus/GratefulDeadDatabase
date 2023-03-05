@@ -66,13 +66,13 @@ Done work in 2023:
     * Made all venues links
     * Centered text properly in top cards for all tabs
     * Made the "back" button work as well
+    * Allowed searching for venues
+    * Added date link to longest songs
 
 Changes to the current website:
-    Allow searching for venues
     Years graphs:
         Timeline map of show dates
         Graph of average length of songs over time
-    Add date to longest songs
     Add about tab
     Add an options tab
     Fix the precipitation data

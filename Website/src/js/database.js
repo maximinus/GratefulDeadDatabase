@@ -3,16 +3,22 @@
 const INVISIBLE_SPACE = '\u200b';
 
 
-function updateSongInputOptions(options) {
+function updateSearchInputOptions() {
 	// clear any current list
 	document.getElementById('choose-search').innerHTML = '';
-	// add the new options
 	var list = document.getElementById('choose-search');
-	for (var i of options) {
-		var new_option = document.createElement('option');
+	// add all songs
+	for(var i of store.songs) {
+		var song_option = document.createElement('option');
 		// add a non-visible space at the end:
-   		new_option.value = i.concat(INVISIBLE_SPACE);
-   		list.appendChild(new_option);
+   		song_option.value = i.concat(INVISIBLE_SPACE);
+   		list.appendChild(song_option);
+	}
+	for(var i of store.venues) {
+		// as above
+		var venue_option = document.createElement('option');
+		venue_option.value = i.venue.concat(INVISIBLE_SPACE);
+		list.appendChild(venue_option);
 	}
 };
 
@@ -100,6 +106,12 @@ function checkSearchInput(text_input) {
 		}
 	}
 	// TODO: Is this a venue?
+	for(var s of store.venues) {
+		if(s.venue.toLowerCase() == text_input) {
+			changeTabView(VENUES_TAB, s.id);
+			return;
+		}
+	}
 	log(`Could not find reference ${text_input}`);
 };
 
@@ -174,6 +186,7 @@ function addCallbacks() {
 	song_element.onkeydown = checkNewSong;
 	song_element.addEventListener('input', checkInput);
 	// not a fan of the jquery but it works
+	// this is to update the data format on the search bar
 	$('.dropdown-menu a.dropdown-item').on('click', function(){
 		var selected = $(this).text();
 		document.getElementById('data-format-dropdown').textContent = selected;
@@ -206,7 +219,7 @@ function addCallbacks() {
 };
 
 function setSongDropdown() {
-	updateSongInputOptions(store.songs);
+	updateSearchInputOptions();
 };
 
 document.addEventListener('DOMContentLoaded', function(){

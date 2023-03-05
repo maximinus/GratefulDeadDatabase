@@ -1,0 +1,11 @@
+<!-- Template for shows in a year -->
+<!-- This template is rendered from javascript code -->
+<div class="card-header" style="display:flex; justify-content:space-between;">
+    <h5 class="my-auto"><b>Every Show Played</b></h5>
+</div>
+<div class="container mt-3">
+    {{#years}}
+        <h5>{{ year }}</h5>
+        {{{ shows }}}
+    {{/years}}
+</div>

@@ -35,6 +35,8 @@ function changeTabView(data_type, data) {
 			return;
 	}
 	log(`Changing tab to ${data_type}`);
+	// set state for history back button
+	window.history.pushState(`${data_type}-${data}`, null, '');
 	$(data_type).tab('show');
 };
 
@@ -188,20 +190,29 @@ function addCallbacks() {
 		}
 	});
 	// intercept all clicks, to catch link clicks
-	//listen for link click events at the document level
 	if (document.addEventListener) {
     	document.addEventListener('click', interceptClickEvent);
 	} else if (document.attachEvent) {
     	document.attachEvent('onclick', interceptClickEvent);
 	}
+	// intercept all browser back events
+	window.onpopstate = function (event) {
+		if(event.state) {
+			var state = event.state;
+			log(`Navigating back to ${state}`);
+			handleLink(state);
+		}
+	};
 };
 
 function setSongDropdown() {
 	updateSongInputOptions(store.songs);
 };
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener('DOMContentLoaded', function(){
 	getData();
 	// add events
 	addCallbacks();
+	// add our first state, which is here
+	window.history.pushState(`song-${DEFAULT_SONG}`, null, '');
 });

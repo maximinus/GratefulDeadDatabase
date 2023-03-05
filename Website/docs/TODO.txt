@@ -68,6 +68,7 @@ Done work in 2023:
 
 Changes to the current website:
     Thus, make the "back" button work as well
+    Allow searching for venues
     Years graphs:
         Timeline map of show dates
         Graph of average length of songs over time

@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grateful Dead Database</title>
+    <!-- Hide favicon request -->
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./css/flatly.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+  </head>
+  <body>
+    <!-- The top image bar, should likely have search somewhere -->
+    <div class="container py-3">
+      <img src="./gfx/logo.png" alt="Logo" id="logo">
+      <h1 class="px-4 align-middle" style="display:inline"><b>Grateful Dead Database</b></h1>
+      <div class="float-end" style="padding-top:26px;">
+        <input id="search-input" style="width:350px;" type="text" placeholder="Enter song, date, venue or year" list="choose-search">
+        <datalist id="choose-search"></datalist>
+      </div>
+      <div class="dropdown float-end"style="padding-top:25px; padding-right: 8px;">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="data-format-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MM-DD-YY
+        </button>
+        <div class="dropdown-menu" aria-labelledby="data-format-dropdown">
+          <a class="dropdown-item" href="#">MM-DD-YY</a>
+          <a class="dropdown-item" href="#">DD-MM-YY</a>
+          <a class="dropdown-item" href="#">YY-MM-DD</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="songs-tab" data-toggle="tab" href="#songs" role="tab" aria-controls="songs" aria-selected="true">Songs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="shows-tab" data-toggle="tab" href="#shows" role="tab" aria-controls="shows" aria-selected="false">Shows</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="years-tab" data-toggle="tab" href="#years" role="tab" aria-controls="years" aria-selected="false">Years</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="venues-tab" data-toggle="tab" href="#venues" role="tab" aria-controls="venues" aria-selected="false">Venues</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">About</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="songs" role="tabpanel" aria-labelledby="home-tab">
+          <!-- This is the songs tab page -->
+          <div class="container">
+              <!-- Row for header and explanation -->
+              <div class="card h-100 mt-4" id="single-song-render">
+              </div>
+              <!-- 1st Row -->
+              <div class="row pt-4">
+                  <div class="col-sm">
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Played Per Year</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-played">
+                          </div>
+                          <div id="played-chart" style="width:100%; height:100%;"></div>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Longest Versions</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-longest">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="longest-versions">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start">date</td>
+                                      <td class="text-end">time</td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Shortest Versions</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-shortest">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="shortest-versions">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start">Date</td>
+                                      <td class="text-end">Time</td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"</td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <!-- 1st row -->
+              <!-- 2nd Row -->
+              <div class="row pt-4">
+                  <div class="col-sm">
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Average Length Per Year</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-average">
+                          </div>
+                          <div id="length-chart" style="width:100%; height:100%;"></div>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">First time played</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-first">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="first-played">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start">Date</td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Last time played</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-last">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="last-played">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start">Date</td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <!-- 2nd row -->
+              <!-- 3rd Row -->
+              <div class="row pt-4">
+                  <div class="col-sm">
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Average Set Position</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-position">
+                          </div>
+                          <div id="position-chart" style="width:100%; height:100%;"></div>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Songs Before</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-before">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="songs-before">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start">Name</td>
+                                      <td class="text-end">Total</td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Songs After</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-after">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="songs-after">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start">Name</td>
+                                      <td class="text-end">Total</td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <!-- 3rd row -->
+          </div>
+        </div>
+        <div class="tab-pane fade" id="shows" role="tabpanel" aria-labelledby="profile-tab">
+          <!-- Show stuff goes here -->
+          <div class="container" >
+              <div class="card h-100 mt-4" id="show-render">
+              </div>
+              <!-- Top row, contains weather graph and top combos -->
+              <div class="row pt-4">
+                  <div class="col-sm">
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto" id="weather-results-title">Weather</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-show-weather">
+                          </div>
+                          <div id="weather-chart" style="width:100%; height:100%;"></div>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Rarest Combos</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-show-rarest-combos">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="show-rarest-combos">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Rarest Combos This Year</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-show-rarest-combos-year">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="show-rarest-combos-year">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div><!-- second row, contains venue info, rarest songs, rarest songs this year -->
+              <div class="row pt-4">
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Venue Information</h5>
+                          </div>
+                          <div class="card-body" id="show-venue-information">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Rarest Songs</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-show-rarest-songs">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="show-rarest-songs">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Rarest Songs This Year</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-show-rarest-songs-year">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="show-rarest-songs-year">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="years" role="tabpanel" aria-labelledby="contact-tab">
+          <div class="container" >
+              <div class="card h-100 mt-4" id="year-title-render">
+              </div>
+              <!-- First row: length of show, Venues, Reccomended shows  -->
+              <div class="row pt-4">
+                  <div class="col-sm">
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Song Length Over Year</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-year-song-length">
+                          </div>
+                          <div id="year-total-length-chart" style="width:100%; height:100%;"></div>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Most Common Venues</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-common-venues">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-common-venues">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Recommended Shows</h5>
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-recommended-shows">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <!-- second row, most common venues, most common songs and combos -->
+              <div class="row pt-4">
+                  <div class="col-sm">
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Songs By Length</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-year-total-songs">
+                          </div>
+                          <div id="year-length-songs-chart" style="width:100%; height:100%;"></div>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Most Common Songs</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-common-songs">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-common-songs">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Most Common Combos</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-common-combos">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-common-combos">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div><!-- Unique songs, songs added, songs never played after -->
+              <div class="row pt-4">
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Only Played This year</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-unique">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-unique-songs">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">New Songs</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-new-songs">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-new-songs">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Never Played Again</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-never-played">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-never-played">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <div class="row pt-4">
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Wettest Shows</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-wettest">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-weather-wettest">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Hottest Shows</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-hottest">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-weather-hottest">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Coldest Shows</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-coldest">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-weather-coldest">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              <div class="row pt-4">
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Longest Songs</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-longest-songs">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-longest-songs">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Longest Shows</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-longest-shows">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-longest-shows">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+                  <div class="col-sm">
+                      <!-- Simple table -->
+                      <div class="card h-100">
+                          <div class="card-header" style="display:flex; justify-content:space-between;">
+                              <h5 class="my-auto">Shortest Shows</h5>
+                              <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-year-shortest-shows">
+                          </div>
+                          <table class="table table-striped">
+                              <tbody id="year-shortest-shows">
+                                  <tr>
+                                      <th scope="row">1</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">2</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">3</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">4</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">5</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">6</th>
+                                      <td class="text-start"></td>
+                                      <td class="text-end"></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="venues" role="tabpanel" aria-labelledby="contact-tab">
+          <div class="container" >
+              <div class="card h-100 mt-4" id="venue-title-render">
+              </div>
+              <div class="card h-100 mt-4" id="venue-shows-render">
+              </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="contact-tab">
+          <div class="container" >
+              <div class="card h-100 mt-4" id="year-title-render">
+                  <div class="card-header" style="display:flex; justify-content:space-between;">
+                      <h5 class="my-auto"><b>About the GDD</b></h5>
+                  </div>
+                  <div class="container mt-3">
+                      <p>GDD is yet another attempt to create a database of Grateful Dead shows and sets.
+                      The data was taken from a number of sources; primarily the tapes themselves, but I also cross-checked against <a href="https://www.gdao.org/items/show/100802">Deadbase</a>, <a href="https://www.setlists.net/">setlists.net</a>, <a href="https://jerrybase.com/">jerrybase.com</a>, and the <a href="https://github.com/jefmsmit/gdshowsdb">jefmsmit database</a>.
+                      Timings were data-mined from archive.org.
+          
+                      All data here is public domain, and the complete database itself can be found on the <b>Downloads</b> tab.</p>
+          
+                      <h5>What's Missing</h5>
+                      <ul>
+                          <li>Shows with no setlists are currently not in the database.</li>
+                          <li>Some timings are missing.</li>
+                          <li>The segues are mostly missing.</li>
+                        </ul> 
+                      <h5>What's To Come</h5>
+                      <ul>
+                          <li>The timings will be completed.</li>
+                          <li>The segue information will be added.</li>
+                          <li>Beats Per Minute (BPM) as a running average will be added.</li>
+                          <li>List of musical guests will be added.</li>
+                          <li>Maps of all tours.</li>
+                          <li>A page allowing you to search for shows with extreme fine-tuning.</li>
+                          <li>The weather data will include wind speed, snow, sunrise and sunset times.</li>
+                        </ul> 
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="card my-3">
+        <div class="card-body">
+          <p class="card-text"><i>Copr. 2022-2023 Chris Handy</i></p>
+        </div>
+      </div>
+    </div>
+    <!-- End of container -->
+    <!-- Dump the modal dialogs here  -->
+    <!-- First the table pop-up       -->
+    <div class="modal" tabindex="-1" role="dialog" id="table-dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="dialog-table-title"></h4>
+                </div>
+                <div class="modal-body" id="table-entry-scroll">
+                    <table class="table">
+                        <tbody id="table-entry">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of table dialog -->
+    <!-- then the chart pop-up -->
+    <div class="modal" tabindex="-1" role="dialog" id="chart-dialog">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="dialog-chart-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <div id="pop-up-charts"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="single-song-template" type="x-tmpl-mustache">
+    <!-- Template for single sets -->
+    <!-- This template is rendered from javascript code -->
+    <div class="card-header" style="display:flex; justify-content:space-between;">
+        <h5 class="my-auto"><b>{{ song-title }}</b></h5>
+    </div>
+    <div class="container mt-3">
+        <p>{{ first-text }}</p>
+        <p>{{ second-text }}</p>
+    </div>
+  </script>
+<script id="song-template" type="x-tmpl-mustache">
+    <!-- Template for single sets -->
+    <!-- This template is rendered from javascript code -->
+    <div class="card-header" style="display:flex; justify-content:space-between;">
+        <h5 class="my-auto"><b>{{ show-day }}, {{ show-date }}, {{ show-venue }}</b></h5>
+    </div>
+    <div class="container mt-3">
+        {{#sets}}
+        <div class="row my-3">
+            <div class="col-1 set-name"><i>{{ set-name }}</i></div>
+            <!-- This needs to be a collection of small items: Song title on top, time below (if we have) -->
+            <!-- <div class="col">{{ songs }}</div> -->
+            <div class="col">
+                <div class="d-flex">
+                    {{#songs}}
+                    <div class="align-self-start">{{ name }}<p class="" style="margin: -4px 0px 0px 0px; font-size:70%;"><i>{{ time }}</i></p></div>
+                    <div class="align-self-start px-2"> {{ trans }} </div>
+                    {{/songs}}
+                    <div class="align-self-start">{{ final_song }}<p class="" style="margin: -4px 0px 0px 0px; font-size:70%;""><i>{{ final_time }}</i></p></div>
+                </div>
+            </div>
+        </div>
+        {{/sets}}
+    </div>
+  </script>
+<script id="venue-template" type="x-tmpl-mustache">
+    <!-- Template for single sets -->
+    <!-- This template is rendered from javascript code -->
+    <table class="table table-sm">
+      <tbody>
+        <tr>
+          <td>Venue:</td>
+          <td>{{{ venue }}}</td>
+        </tr>
+        <tr>
+          <td>City:</td>
+          <td>{{ city }}</td>
+        </tr>
+        <tr>
+          <td>State:</td>
+          <td>{{ state }}
+        </tr>
+        <tr>
+          <td></td>
+          <td>{{ total }}</td>
+        </tr>
+        <tr>
+          <td>Location:</td>
+          <td>{{ location }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="{{ link }}" target="_blank"><i>View on google maps</i></a>
+  </script>
+<script id="show-template" type="x-tmpl-mustache">
+    <!-- Template for single sets -->
+    <!-- This template is rendered from javascript code -->
+    <div class="card-header" style="display:flex; justify-content:space-between;">
+        <h5 class="my-auto"><b>{{ show-day }}, {{ show-date }}, {{ show-venue }}</b></h5>
+    </div>
+    <div class="container my-2">
+        {{#sets}}
+        <div class="row my-3">
+            <div class="col-1 set-name"><i>{{ set-name }}</i></div>
+            <!-- This needs to be a collection of small items: Song title on top, time below (if we have) -->
+            <!-- <div class="col">{{ songs }}</div> -->
+            <div class="col">
+                <div class="d-flex">
+                    {{#songs}}
+                    <div class="align-self-start">{{ name }}<p class="" style="margin: -4px 0px 0px 0px; font-size:70%;"><i>{{ time }}</i></p></div>
+                    <div class="align-self-start px-2"> {{ trans }} </div>
+                    {{/songs}}
+                    <div class="align-self-start">{{ final_song }}<p class="" style="margin: -4px 0px 0px 0px; font-size:70%;""><i>{{ final_time }}</i></p></div>
+                </div>
+            </div>
+        </div>
+        {{/sets}}
+    </div>
+  </script>
+<script id="venue-shows-template" type="x-tmpl-mustache">
+    <!-- Template for shows in a year -->
+    <!-- This template is rendered from javascript code -->
+    <div class="card-header" style="display:flex; justify-content:space-between;">
+        <h5 class="my-auto"><b>Every Show Played</b></h5>
+    </div>
+    <div class="container mt-3">
+        {{#years}}
+            <h5>{{ year }}</h5>
+            {{{ shows }}}
+        {{/years}}
+    </div>
+  </script>
+<script id="venue-info-template" type="x-tmpl-mustache">
+    <!-- Template for single sets -->
+    <!-- This template is rendered from javascript code -->
+    <div class="card-header" style="display:flex; justify-content:space-between;">
+        <h5 class="my-auto"><b>{{ venue-name }}</b></h5>
+    </div>
+    <div class="container mt-3">
+        <p>{{ venue-title }} is located at latitide {{latitude}}° and longitude {{longitude}}° (click <a href={{link}}>here</a> to open Google maps).<p>
+        <p>{{ total }}</p>
+    </div>
+  </script>
+<script id="year-title-template" type="x-tmpl-mustache">
+    <!-- Template for year header -->
+    <!-- This template is rendered from javascript code -->
+    <div class="card-header" style="display:flex; justify-content:space-between;">
+        <h5 class="my-auto"><b>{{ year }}</b></h5>
+    </div>
+    <div class="container mt-3">
+    <p>In {{ year }}, the Grateful Dead played {{ total-songs }} total songs over {{ total-shows }} shows in {{ total-venues }} different venues.</p>
+    <p>They played an average of {{ average-total-songs }} songs per show, and the average length of a song was {{ average-song-length }}.</p>
+    </div>
+  </script>
+
+    <script type="text/javascript" src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/highcharts.js"></script>
+    <script type="text/javascript" src="./js/mustache.min.js"></script>
+    <script type="text/javascript" src="./js/best_shows.js"></script>
+    <script type="text/javascript" src="./js/constants.js"></script>
+    <script type="text/javascript" src="./js/storage.js"></script>
+    <script type="text/javascript" src="./js/helpers.js"></script>
+    <script type="text/javascript" src="./js/calculate_charts.js"></script>
+    <script type="text/javascript" src="./js/display_show.js"></script>
+    <script type="text/javascript" src="./js/display_year.js"></script>
+    <script type="text/javascript" src="./js/display_venue.js"></script>
+    <script type="text/javascript" src="./js/database.js"></script>
+  </body>
+</html>

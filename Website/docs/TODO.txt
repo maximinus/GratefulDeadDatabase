@@ -74,10 +74,11 @@ Done work in 2023:
     * Made all modal links work
     * All graphs work
     * Fixed tooltip on average song length
+    * If the weather data does not exist, informs the user
 
 Changes to the current website:
     Fix the precipitation data
-    If the weather does not exist, let the user know
+    Delete all charts properly
 
 Hard things:
     The scrollbar on list pop-ups needs to reset on a new pop-up

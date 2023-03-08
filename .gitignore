@@ -25,6 +25,3 @@ __pycache__/
 # don't add raw csv
 jerrybase.csv
 
-# don't add website build folder
-dist/
-

@@ -402,7 +402,6 @@ function buildLengthVersions(song_title) {
     }
     // get the first 5
     var table_data = length_versions.slice(0, TABLE_ENTRIES);
-    console.log(table_data);
     // scroll through the children of the table and vist them all
     var index = 0;
     var table = document.getElementById('longest-versions');
@@ -452,6 +451,7 @@ function buildFirstLastVersions(song_title) {
         } else {
             var row_date = getShowFromId(table_data[index].show_id).date;
             row.children[1].innerHTML = convertToLink(convertDate(row_date), `show-${table_data[index].show_id}`);
+            // if 0, will be first version
             if(index != 0) {
                 var delta = row_date - last;
                 row.children[2].innerHTML = `<i>${dayDays(delta)} after first</i>`;
@@ -652,16 +652,17 @@ function setOrderTablePopupList(table_data, element, message) {
         header.innerHTML = row_index.toString();
         var column1 = document.createElement('td');
         var column2 = document.createElement('td');
-        column1.innerHTML = convertDate(song.date);
+        var song_date = getShowFromId(song.show_id).date;
+        column1.innerHTML = convertToLink(convertDate(song_date), `show-${song.show_id}`);
         if(last < 0) {
             column2.innerHTML = '';
             
         } else {
             // calculate time difference
-            var time_delta = Math.abs(song.date - last);
+            var time_delta = Math.abs(song_date - last);
             column2.innerHTML = `${dayDays(time_delta)} ${message}`;
         }
-        last = song.date;
+        last = song_date;
         row.appendChild(header);
         row.appendChild(column1);
         row.appendChild(column2);

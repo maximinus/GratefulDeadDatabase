@@ -734,7 +734,7 @@ function setBeforeAfterPopupList(table_data, element) {
         header.innerHTML = row_index.toString();
         var column1 = document.createElement('td');
         var column2 = document.createElement('td');
-        column1.innerHTML = song[0];
+        column1.innerHTML = convertToLink(song[0], `song-${song[0]}`);
         column2.innerHTML = song[1];
         row.appendChild(header);
         row.appendChild(column1);

@@ -43,6 +43,10 @@ function changeTabView(data_type, data) {
 	log(`Changing tab to ${data_type}`);
 	// set state for history back button
 	window.history.pushState(`${data_type}-${data}`, null, '');
+	// might be a link from a popout; no harm in hiding if already hidden
+	hidePopOut();
+	// also need to go to the top of the page
+	window.scrollTo(0,0);
 	$(data_type).tab('show');
 };
 

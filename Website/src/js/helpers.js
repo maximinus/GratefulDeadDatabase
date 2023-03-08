@@ -324,3 +324,7 @@ function displayPopOut(title, data) {
     // display the modal
     $('#table-dialog').modal();
 };
+
+function hidePopOut() {
+    $('#table-dialog').modal('hide');
+};

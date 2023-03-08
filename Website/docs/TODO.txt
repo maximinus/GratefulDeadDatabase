@@ -70,9 +70,9 @@ Done work in 2023:
     * Added date link to longest songs
     * Added 2 new graphs in years tab
     * Add about tab
+    * Tested all modal links
 
 Changes to the current website:
-    Test all modals
     Make modal links work
     Fix the precipitation data
     Grab the pre 1970 weather data

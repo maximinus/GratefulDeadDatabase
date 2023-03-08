@@ -72,6 +72,8 @@ Done work in 2023:
     * Add about tab
 
 Changes to the current website:
+    Test all modals
+    Make modal links work
     Fix the precipitation data
     Grab the pre 1970 weather data
     Add "total played" to the "played per year" chart

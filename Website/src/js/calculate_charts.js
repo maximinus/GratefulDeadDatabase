@@ -392,8 +392,17 @@ function buildLengthVersions(song_title) {
     // create a new list with the 65535 and zero times stripped out
     var data = store.song_data[song_title].filter(x => (x.seconds != 65535 && x.seconds != 0));
     data.sort((a, b) => (a.seconds < b.seconds) ? 1 : -1);
+    var length_versions = [];
+    for(var single_song of data) {
+        var date_int = getShowFromId(single_song.show_id).date
+        var date_text = convertDate(date_int);
+        var link = convertToLink(date_text, `show-${single_song.show_id}`)
+        var time_length = convertTime(single_song.seconds);
+        length_versions.push([link, time_length]);
+    }
     // get the first 5
-    var table_data = data.slice(0, TABLE_ENTRIES);
+    var table_data = length_versions.slice(0, TABLE_ENTRIES);
+    console.log(table_data);
     // scroll through the children of the table and vist them all
     var index = 0;
     var table = document.getElementById('longest-versions');
@@ -402,18 +411,16 @@ function buildLengthVersions(song_title) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            var date_int = getShowFromId(table_data[index].show_id).date
-            var date_text = convertDate(date_int);
-            row.children[1].innerHTML = convertToLink(date_text, `show-${table_data[index].show_id}`);
-            row.children[2].innerHTML = convertTime(table_data[index].seconds);
+            
+            row.children[1].innerHTML = table_data[index][0];
+            row.children[2].innerHTML = table_data[index][1];
         }
         index += 1;
     }
-    charts_store.sorted_by_length = data;
-
+    
     // invert the list and go again
-    data.reverse()
-    var table_data = data.slice(0, TABLE_ENTRIES);
+    length_versions.reverse();
+    var table_data = length_versions.slice(0, TABLE_ENTRIES);
     var index = 0;
     var table = document.getElementById('shortest-versions');
     for(var row of table.children) {
@@ -421,15 +428,14 @@ function buildLengthVersions(song_title) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            var date_int = getShowFromId(table_data[index].show_id).date
-            var date_text = convertDate(date_int);
-            row.children[1].innerHTML = convertToLink(date_text, `show-${table_data[index].show_id}`);
-            row.children[2].innerHTML = convertTime(table_data[index].seconds);
+            row.children[1].innerHTML = table_data[index][0];
+            row.children[2].innerHTML = table_data[index][1];
         }
         index += 1;   
     }
     // make sure default data is the right order
-    charts_store.sorted_by_length.reverse()
+    length_versions.reverse();
+    charts_store.sorted_by_length = length_versions;
 };
 
 function buildFirstLastVersions(song_title) {
@@ -595,8 +601,8 @@ function setLengthTablePopupList(table_data, element) {
         header.innerHTML = row_index.toString();
         var column1 = document.createElement('td');
         var column2 = document.createElement('td');
-        column1.innerHTML = convertDate(song.date);
-        column2.innerHTML = convertTime(song.seconds);
+        column1.innerHTML = song[0];
+        column2.innerHTML = song[1];
         row.appendChild(header);
         row.appendChild(column1);
         row.appendChild(column2);

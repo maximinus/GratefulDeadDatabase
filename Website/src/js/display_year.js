@@ -329,7 +329,15 @@ function buildYearAverageLength(year, chart_id) {
         },
         tooltip: {
             // only show 2 decimal places on tooltip
-            valueDecimals: 2
+            valueDecimals: 2,
+            formatter: function () {
+                var show_number = `${this.x + 1}${nth(this.x + 1)} show of the year:<br >`;
+                if(this.y == 0) {
+                    return `${show_number}Data not avaliable`;
+                }
+                var avg_length = `Average song length was ${convertTime(this.y)}`;
+                return `${show_number}${avg_length}`;
+            },
         },
         series: [{
             name: 'Average Song Length',

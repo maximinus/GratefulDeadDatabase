@@ -275,7 +275,7 @@ function buildYearCommon(year) {
     }
 };
 
-function buildYearAverageLength(year) {
+function buildYearAverageLength(year, chart_id) {
     // for all shows, get average song length for songs that are timed
     var avg_lengths = [];
     for(var single_show of getAllShowsInYear(year)) {
@@ -294,7 +294,7 @@ function buildYearAverageLength(year) {
             avg_lengths.push(Math.round(total_time / total_songs));
         }
     }
-    Highcharts.chart('year-total-length-chart', {
+    Highcharts.chart(chart_id, {
         chart: {
             type: 'line'
         },
@@ -341,7 +341,7 @@ function buildYearAverageLength(year) {
     });
 };
 
-function buildYearLengthBuckets(year) {
+function buildYearLengthBuckets(year, chart_id) {
     var longest = 0;
     var length_buckets = {};
     for(var single_show of getAllShowsInYear(year)) {
@@ -371,7 +371,7 @@ function buildYearLengthBuckets(year) {
         }
     }
     // great, we now have an array with the number of songs in that time bucket
-    var chart = Highcharts.chart('year-length-songs-chart', {
+    var chart = Highcharts.chart(chart_id, {
         chart: {
             type: 'column'
         },
@@ -610,6 +610,30 @@ function popOutYearShortestShows() {
     displayPopOut('Shortest Shows', [...year_store.longest_shows].reverse());
 };
 
+function popOutSongLength() {
+    // clear current chart data
+    var table = document.getElementById('pop-up-charts');
+    table.replaceChildren();
+    // set title
+    document.getElementById('dialog-chart-title').innerHTML = 'Average Song Length Over Year';
+    // set chart
+    buildYearAverageLength(year_store.current_year, 'pop-up-charts')
+    // display
+    $('#chart-dialog').modal();
+};
+
+function popOutTotalSongs() {
+    // clear current chart data
+    var table = document.getElementById('pop-up-charts');
+    table.replaceChildren();
+    // set title
+    document.getElementById('dialog-chart-title').innerHTML = 'Average Song Length Over Year';
+    // set chart
+    buildYearLengthBuckets(year_store.current_year, 'pop-up-charts');
+    // display
+    $('#chart-dialog').modal();
+};
+
 function addYearPopouts() {
     document.getElementById('pop-common-venues').addEventListener('click', popOutYearVenues);
     document.getElementById('pop-year-common-songs').addEventListener('click', popOutYearCommonSongs);
@@ -620,6 +644,9 @@ function addYearPopouts() {
     document.getElementById('pop-year-longest-songs').addEventListener('click', popOutYearLongestSongs);
     document.getElementById('pop-year-longest-shows').addEventListener('click', popOutYearLongestShows);
     document.getElementById('pop-year-shortest-shows').addEventListener('click', popOutYearShortestShows);
+    // and graphs
+    document.getElementById('pop-year-song-length').addEventListener('click', popOutSongLength);
+    document.getElementById('pop-year-total-songs').addEventListener('click', popOutTotalSongs);
 };
 
 function updateYear(year) {
@@ -627,8 +654,8 @@ function updateYear(year) {
     year_store = new YearStorage();
     year_store.current_year = year;
     log(`Rendering year ${year}`);
-    buildYearAverageLength(year);
-    buildYearLengthBuckets(year);
+    buildYearAverageLength(year, 'year-total-length-chart');
+    buildYearLengthBuckets(year, 'year-length-songs-chart');
     buildYearCommon(year);
     buildYearUniques(year);
     buildCommonVenues(year);

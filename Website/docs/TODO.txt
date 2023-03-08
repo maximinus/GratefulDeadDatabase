@@ -71,9 +71,11 @@ Done work in 2023:
     * Added 2 new graphs in years tab
     * Add about tab
     * Tested all modal links
+    * Made all modal links work
 
 Changes to the current website:
-    Make modal links work
+    Check all graphs work
+    Fix tooltip on average song length
     Fix the precipitation data
     Grab the pre 1970 weather data
     Add "total played" to the "played per year" chart

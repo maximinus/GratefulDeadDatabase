@@ -73,14 +73,11 @@ Done work in 2023:
     * Tested all modal links
     * Made all modal links work
     * All graphs work
+    * Fixed tooltip on average song length
 
 Changes to the current website:
-    Fix tooltip on average song length
     Fix the precipitation data
-    Grab the pre 1970 weather data
-    Add "total played" to the "played per year" chart
-    For average position in show, formulate it as a % position along the show. Place the average set marker as a bar under the position average
-        Where there are 3 sets, ignore the whole show
+    If the weather does not exist, let the user know
 
 Hard things:
     The scrollbar on list pop-ups needs to reset on a new pop-up

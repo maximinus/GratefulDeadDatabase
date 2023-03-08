@@ -7,6 +7,7 @@ class ShowStorage {
         this.rarest_combos_year = [];
         this.rarest_songs = [];
         this.rarest_songs_year = [];
+        this.weather_chart = null;
     };
 };
 
@@ -138,6 +139,17 @@ function getRarestCombos() {
 
 function renderWeatherChart(chart_id) {
     var show_id = show_store.current_show.id;
+    if((show_id in store.weather) == false) {
+        document.getElementById('weather-results-title').innerHTML = 'No Weather Data';
+        // clear any chart if it exists
+        if(show_store.weather_chart != null) {
+            show_store.weather_chart.destroy();
+        }
+        // and exit early
+        return;
+    } else {
+        document.getElementById('weather-results-title').innerHTML = 'Weather';
+    }
     var temps = getRealTemps(store.weather[show_id].temps);
     var feels = getRealTemps(store.weather[show_id].feels);
     var chart = Highcharts.chart(chart_id, {
@@ -216,6 +228,7 @@ function renderWeatherChart(chart_id) {
             data: feels
         }],
     });
+    show_store.weather_chart = chart;
 };
 
 function buildCombos() {

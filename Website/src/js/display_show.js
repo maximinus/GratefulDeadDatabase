@@ -43,7 +43,7 @@ function getRarestSongs() {
     var buckets = {}
     for(var song of all_songs) {
         var name = getSongName(song.song);
-        results.push([name, store.song_data[name].length]);
+        results.push([convertToLink(name, `song-${name}`), store.song_data[name].length]);
         buckets[song.song] = 0;
     }
     for(show of getAllShowsInYear(year_of_show)) {
@@ -56,7 +56,8 @@ function getRarestSongs() {
     // put buckets into a list, add names and sort
     var year_list = []
     for(var key in buckets) {
-        year_list.push([getSongName(key), buckets[key]]);
+        var song_name = getSongName(key);
+        year_list.push([convertToLink(song_name, `song-${song_name}`), buckets[key]]);
     }
     year_list.sort((a, b) => (a[1] > b[1]) ? 1 : -1);
     results.sort((a, b) => (a[1] > b[1]) ? 1 : -1);
@@ -264,8 +265,8 @@ function buildRarestSongs() {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            row.children[1].innerHTML = convertToLink(table_all_data[index][0], `song-${table_all_data[index][0]}`);
-            row.children[2].innerHTML = table_all_data[index][1].toString();
+            row.children[1].innerHTML = table_all_data[index][0];
+            row.children[2].innerHTML = table_all_data[index][1];
         }
         index += 1;
     }
@@ -277,8 +278,8 @@ function buildRarestSongs() {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            row.children[1].innerHTML = convertToLink(table_year_data[index][0], `song-${table_year_data[index][0]}`);
-            row.children[2].innerHTML = table_year_data[index][1].toString();
+            row.children[1].innerHTML = table_year_data[index][0];
+            row.children[2].innerHTML = table_year_data[index][1];
         }
         index += 1;
     }

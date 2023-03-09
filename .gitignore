@@ -25,3 +25,5 @@ __pycache__/
 # don't add raw csv
 jerrybase.csv
 
+# don't allow web builds
+dist/

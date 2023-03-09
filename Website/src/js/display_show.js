@@ -431,18 +431,6 @@ function updateShowTab(single_show) {
 
 function displayShow(show_index) {
     show_store.current_show = store.shows[show_index];
-    //updateShowTab();
-    // in the div id of show-render
-    // using the mustache div of show-template
-    log(`Rendering show ${show_store.current_show.js_date.toDateString()}`);
-    // get the template and render
-    var template = document.getElementById('show-template').innerHTML;
-    // clear out show-render and place the template
-    var new_html = Mustache.render(template, getShowRenderData());
-    document.getElementById('show-render').innerHTML = new_html;
-    renderWeatherChart('weather-chart');
-    buildCombos();
-    buildRarestSongs();
-    displayVenueInformation();
+    updateShowTab(show_store.current_show);
     addShowPopouts();
 };

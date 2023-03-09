@@ -75,8 +75,11 @@ Done work in 2023:
     * All graphs work
     * Fixed tooltip on average song length
     * If the weather data does not exist, informs the user
+    * Allowed sets to overflow to more than one line
 
 Changes to the current website:
+    
+    Fix weather for Newcastle '72
     Fix the precipitation data
     Delete all charts properly
 

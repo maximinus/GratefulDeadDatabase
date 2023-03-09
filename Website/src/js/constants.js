@@ -28,7 +28,7 @@ const FORCE_UPDATE = true;
 // how often to check the update, in number of days
 const NEXT_UPDATE = 365;
 const DEFAULT_SONG = 'Playing In The Band';
-const DEFAULT_SHOW = 1000;
+const DEFAULT_SHOW = 478;
 const DEFAULT_YEAR = 1978;
 const DEFAULT_VENUE = 1;
 

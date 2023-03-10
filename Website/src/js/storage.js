@@ -658,6 +658,7 @@ function updateTabs() {
     displayShow(DEFAULT_SHOW);
     displayYear(DEFAULT_YEAR);
     displayVenue(DEFAULT_VENUE);
+    initComboTab();
 };
 
 function getData() {

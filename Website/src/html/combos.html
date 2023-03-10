@@ -5,23 +5,46 @@
         <div class="card-header" style="display:flex; justify-content:space-between;">
             <h5 class="my-auto"><b>Combo Selector</b></h5>
         </div>
-        <div class="container mt-3">
-            Choose from the options below. Either a single song to get a sandwich (i.e. choosing "Playing In The Band") will get all examples of Playing In the Band > someting else > Playing In The Band, or choose up to 3 songs that run in a sequence.
-            <form>
-                <div class="form-group">
-                    <label for="combo-form-defaults">Choose a default</label>
-                    <select class="custom-select my-1 mr-sm-2" id="combo-form-defaults">
-                        <option selected>Scarlet > Fire</option>
-                        <option value="1">China Cat > Rider</option>
-                        <option value="2">Help > Slip > Franklins</option>
-                        <option value="3">Playin' Sandwich</option>
-                        <option value="3">Dark Star Sandwich</option>
-                      </select>
-                  </div>
-            </form>
+        <div class="container my-3">
+            <p>Choose from the options below. Either a single song to get a sandwich (i.e. choosing "Playing In The Band") will get all examples of Playing In the Band > <i>anything else</i> > Playing In The Band, or choose up to 3 songs that run in a sequence.</p>
+            <div class="row">
+                <div class="col-sm">
+                    <label for="combo-default" class="align-top"><i>Select a default</i></label>
+                    <select id="combo-default" class="form-control align-top">
+                        <option selected value="1">Custom...</option>
+                        <option value="2">Scarlet > Fire</option>
+                        <option value="3">China > Rider</option>
+                        <option value="4">Help > Slip > Franklins</option>
+                        <option value="5">Playin' Sandwich</option>
+                        <option value="6">Dark Star Sandwich</option>
+                        <option value="7">Other One Sandwich</option>
+                    </select>
+                </div>
+                <div class="col-sm">
+                    <label for="combo-default"><i>Or enter between 1 and 3 songs</i></label>
+                    <input type="text" class="form-control mb-2" id="combo-input1" placeholder="First Song" list="choose-song-search">
+                    <input type="text" class="form-control mb-2" id="combo-input2" placeholder="Second Song" list="choose-song-search">
+                    <input type="text" class="form-control mb-2" id="combo-input3" placeholder="Third Song" list="choose-song-search">
+                    <datalist id="choose-song-search"></datalist>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 align-self-center">
+                    <label class="form-check-labelcenter" for="combo-between-songs-check">Allow songs in-between</label>
+                    <input class="form-check-input" type="checkbox" id="combo-between-songs-check">
+                </div>
+                <div class="col-sm-3 align-self-center">
+                    <label class="form-check-label" for="combo-allow-over-sets">Allow split over sets</label>
+                    <input class="form-check-input" type="checkbox" id="combo-allow-over-sets">
+                </div>
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-primary my-1" id="combo-submit">Search</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="card h-100 mt-4" id="combo-render">
+        Hello, World!
     </div>
     <!-- 1st Row -->
     <div class="row pt-4">
@@ -226,7 +249,7 @@
             <div class="card h-100">
                 <div class="card-header" style="display:flex; justify-content:space-between;">
                     <h5 class="my-auto">Hottest Versions</h5>
-                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-combo-before">
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-combo-hottest">
                 </div>
                 <table class="table table-striped">
                     <tbody id="combo-songs-before">

@@ -1,0 +1,354 @@
+<!-- This is the songs tab page -->
+<div class="container">
+    <!-- Row for header and explanation -->
+    <div class="card h-100 mt-4">
+        <div class="card-header" style="display:flex; justify-content:space-between;">
+            <h5 class="my-auto"><b>Combo Selector</b></h5>
+        </div>
+        <div class="container mt-3">
+            Choose from the options below. Either a single song to get a sandwich (i.e. choosing "Playing In The Band") will get all examples of Playing In the Band > someting else > Playing In The Band, or choose up to 3 songs that run in a sequence.
+            <form>
+                <div class="form-group">
+                    <label for="combo-form-defaults">Choose a default</label>
+                    <select class="custom-select my-1 mr-sm-2" id="combo-form-defaults">
+                        <option selected>Scarlet > Fire</option>
+                        <option value="1">China Cat > Rider</option>
+                        <option value="2">Help > Slip > Franklins</option>
+                        <option value="3">Playin' Sandwich</option>
+                        <option value="3">Dark Star Sandwich</option>
+                      </select>
+                  </div>
+            </form>
+        </div>
+    </div>
+    <div class="card h-100 mt-4" id="combo-render">
+    </div>
+    <!-- 1st Row -->
+    <div class="row pt-4">
+        <div class="col-sm">
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5 class="my-auto">Played Per Year</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-combo-played">
+                </div>
+                <div id="combo-played-chart" style="width:100%; height:100%;"></div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5 class="my-auto">Longest Versions</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-combo-longest">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="combo-longest-versions">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5 class="my-auto">Shortest Versions</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-combo-shortest">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="combo-shortest-versions">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td class="text-start"</td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 1st row -->
+    <!-- 2nd Row -->
+    <div class="row pt-4">
+        <div class="col-sm">
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5 class="my-auto">Average Length Per Year</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="Pop-out in larger scale" id="pop-combo-average">
+                </div>
+                <div id="combo-length-chart" style="width:100%; height:100%;"></div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5 class="my-auto">First time played</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-combo-first">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="combo-first-played">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5 class="my-auto">Last time played</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-combo-last">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="combo-last-played">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 3rd Row -->
+    <div class="row pt-4">
+        <div class="col-sm">
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5 class="my-auto">Hottest Versions</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-combo-before">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="combo-songs-before">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5 class="my-auto">Songs Before</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-combo-before">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="combo-songs-before">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm">
+            <!-- Simple table -->
+            <div class="card h-100">
+                <div class="card-header" style="display:flex; justify-content:space-between;">
+                    <h5 class="my-auto">Songs After</h5>
+                    <img src="./gfx/expand_icon.svg" class="popup" alt="Expand list" title="View full list" id="pop-combo-after">
+                </div>
+                <table class="table table-striped">
+                    <tbody id="combo-songs-after">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td class="text-start"></td>
+                            <td class="text-end"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

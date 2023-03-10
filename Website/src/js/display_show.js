@@ -136,22 +136,32 @@ function getRarestCombos() {
     return [show_store.rarest_combos.slice(0, TABLE_ENTRIES), show_store.rarest_combos_year.slice(0, TABLE_ENTRIES)]
 };
 
+function showNoWeather() {
+    document.getElementById('weather-results-title').innerHTML = 'No Weather Data';
+    // clear any chart if it exists
+    if(show_store.weather_chart != null) {
+        show_store.weather_chart.destroy();
+    }
+};
 
 function renderWeatherChart(chart_id) {
     var show_id = show_store.current_show.id;
     if((show_id in store.weather) == false) {
-        document.getElementById('weather-results-title').innerHTML = 'No Weather Data';
-        // clear any chart if it exists
-        if(show_store.weather_chart != null) {
-            show_store.weather_chart.destroy();
-        }
-        // and exit early
+        showNoWeather();
         return;
     } else {
         document.getElementById('weather-results-title').innerHTML = 'Weather';
     }
     var temps = getRealTemps(store.weather[show_id].temps);
     var feels = getRealTemps(store.weather[show_id].feels);
+
+    // if the sum of the temps is zero, we also have no weather
+    if(temps.reduce((a, b) => a + b, 0) == 0) {
+        // also no weather
+        showNoWeather();
+        return;
+    }
+
     var chart = Highcharts.chart(chart_id, {
         chart: {
             type: 'line'

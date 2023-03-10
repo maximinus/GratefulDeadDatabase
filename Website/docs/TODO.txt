@@ -76,10 +76,10 @@ Done work in 2023:
     * Fixed tooltip on average song length
     * If the weather data does not exist, informs the user
     * Allowed sets to overflow to more than one line
+    * Fix for no weather when weather data exists but shows 0 in all temps
 
 Changes to the current website:
-    
-    Fix weather for Newcastle '72
+    Add a "combos" page
     Fix the precipitation data
     Delete all charts properly
 

@@ -19,19 +19,39 @@ function updateAllowSongsBetween(song_ids, allow_set_split) {
 
 };
 
-function updateNoSongsBetween(song_ids, allow_set_split) {
+function updateNoSongsBetween(song_ids) {
+    var matches = [];
     for(var single_show of store.shows) {
-        var test_songs = [];
-        if(allow_set_split == false) {
-            test_songs.push(single_show.getAllSongs());
-        } else {
-            test_songs = single_show.sets;
-        }
-        // look for the match in these
-        for(var single_group of test_songs) {
-
+        var song_index = 0;
+        var match_index = 0;
+        for(var single_song of single_show.getAllSongs()) {
+            // looking for the first song?
+            if(song_index == 0) {
+                // found a match? Move to next songs
+                if(single_song.song == song_ids[0]) {
+                    song_index += 1;
+                }
+            } else {
+                // no song between allowed, so we must have a match
+                if(single_song.song != song_ids[song_index]) {
+                    // this means we have failed, so break this loop
+                    break;
+                } else {
+                    // otherwise, onto next song
+                    song_index += 1;
+                    // have we done all songs?
+                    if(song_index == song_ids.length) {
+                        // yes, add this show - and the index, and break the loop
+                        matches.push([single_show, match_index - song_ids.length]);
+                        // move on to next show
+                        break;
+                    }
+                }
+            }
+            match_index += 1;
         }
     }
+    console.log(matches);
 };
 
 function updateComboTab() {
@@ -51,14 +71,13 @@ function updateComboTab() {
     }
 
     var allow_songs_inbetween = document.getElementById('combo-between-songs-check').checked;
-    var allow_set_split = document.getElementById('combo-allow-over-sets').checked;
     if(songs.length == 1) {
-        updateWithSandwich(song_ids[0], allow_set_split);
+        updateWithSandwich(song_ids[0]);
     }
     if(allow_songs_inbetween == true) {
-        updateAllowSongsBetween(song_ids, allow_set_split);
+        updateAllowSongsBetween(song_ids);
     } else {
-        updateNoSongsBetween(song_ids, allow_set_split);
+        updateNoSongsBetween(song_ids);
     }
 };
 

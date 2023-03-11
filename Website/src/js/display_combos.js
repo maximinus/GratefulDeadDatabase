@@ -10,23 +10,45 @@ class ComboStorage {
 
 var combo_store = new ChartsStorage();
 
+function updateComboTable(table_id, table_data) {
+    var index = 0;
+    var table = document.getElementById(table_id);
+    for(var row of table.children) {
+        if(index >= table_data.length) {
+            row.children[1].innerHTML = '';
+            row.children[2].innerHTML = '';
+        } else {
+            row.children[1].innerHTML = table_data[index][0];
+            row.children[2].innerHTML = table_data[index][1];
+        }
+        index += 1;
+    }
+};
+
 function updateAllData(songs, matches) {
     // matches is an array of [show, length]
     combo_store.current_songs = songs;
     // sort by length and store
-    matches.sort((a, b) => (a.date[0] < b.date[0]) ? 1 : -1);
+    matches.sort((a, b) => (a[0].date > b[0].date ? 1 : -1));
     combo_store.sorted_by_date = [];
     for(var single_match of matches) {
         var link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
-        combo_store.push([link, 'TBD']);
+        combo_store.sorted_by_date.push([link, 'TBD']);
     }
     
     matches.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     combo_store.sorted_by_length = [];
     for(var single_match of matches) {
-        var link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
-        combo_store.push([link, convertTime(single_match[1]));
+        if(single_match[1] != 0) {
+            var link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
+            combo_store.sorted_by_length.push([link, convertTime(single_match[1])]);
+        }
     }
+    // update all tables
+    updateComboTable('combo-longest-versions', combo_store.sorted_by_length.slice(0, TABLE_ENTRIES));
+    updateComboTable('combo-shortest-versions', combo_store.sorted_by_length.slice(-TABLE_ENTRIES).reverse());
+    updateComboTable('combo-first-played', combo_store.sorted_by_date.slice(0, TABLE_ENTRIES));
+    updateComboTable('combo-last-played', combo_store.sorted_by_date.slice(-TABLE_ENTRIES).reverse());
 };
 
 function updateWithSandwich(song_id, allow_set_split) {

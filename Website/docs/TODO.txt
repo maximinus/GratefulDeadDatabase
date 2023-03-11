@@ -81,6 +81,8 @@ Done work in 2023:
 Changes to the current website:
     Add a "combos" page
     Add box to allow choices when 2 shows are searched for
+    Add a front page with details
+    Compress the outputted javascript
     Fix the precipitation data
     Delete all charts properly
 

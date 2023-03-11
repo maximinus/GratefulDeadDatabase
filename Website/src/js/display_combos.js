@@ -2,34 +2,55 @@
 
 class ComboStorage {
     constructor() {
+        this.sorted_by_date = [];
         this.sorted_by_length = [];
-        this.played_before = [];
-        this.played_after = [];
-        this.current_song_title = '';
+        this.current_songs = [];
     };
 };
 
 var combo_store = new ChartsStorage();
 
-function updateWithSandwich(song_id, allow_set_split) {
+function updateAllData(songs, matches) {
+    // matches is an array of [show, length]
+    combo_store.current_songs = songs;
+    // sort by length and store
+    matches.sort((a, b) => (a.date[0] < b.date[0]) ? 1 : -1);
+    combo_store.sorted_by_date = [];
+    for(var single_match of matches) {
+        var link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
+        combo_store.push([link, 'TBD']);
+    }
+    
+    matches.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
+    combo_store.sorted_by_length = [];
+    for(var single_match of matches) {
+        var link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
+        combo_store.push([link, convertTime(single_match[1]));
+    }
+};
 
+function updateWithSandwich(song_id, allow_set_split) {
 };
 
 function updateAllowSongsBetween(song_ids, allow_set_split) {
-
 };
 
 function updateNoSongsBetween(song_ids) {
     var matches = [];
     for(var single_show of store.shows) {
         var song_index = 0;
-        var match_index = 0;
+        var total_length = 0;
         for(var single_song of single_show.getAllSongs()) {
             // looking for the first song?
             if(song_index == 0) {
                 // found a match? Move to next songs
                 if(single_song.song == song_ids[0]) {
                     song_index += 1;
+                    if(single_song.seconds != 0) {
+                        total_length += single_song.seconds;
+                    } else {
+                        total_length = -5000;
+                    }
                 }
             } else {
                 // no song between allowed, so we must have a match
@@ -37,21 +58,29 @@ function updateNoSongsBetween(song_ids) {
                     // this means we have failed, so break this loop
                     break;
                 } else {
+                    // grab length
+                    if(single_song.seconds != 0) {
+                        total_length += single_song.seconds;
+                    } else {
+                        total_length = -5000;
+                    }
                     // otherwise, onto next song
                     song_index += 1;
                     // have we done all songs?
                     if(song_index == song_ids.length) {
                         // yes, add this show - and the index, and break the loop
-                        matches.push([single_show, match_index - song_ids.length]);
+                        if(total_length < 0) {
+                            total_length = 0;
+                        }
+                        matches.push([single_show, total_length]);
                         // move on to next show
                         break;
                     }
                 }
             }
-            match_index += 1;
         }
     }
-    console.log(matches);
+    updateAllData(songs, matches);
 };
 
 function updateComboTab() {
@@ -143,15 +172,6 @@ function popOutComboFirst() {
 function popOutComboLast() {
 };
 
-function popOutComboBefore() {
-};
-
-function popOutComboAfter() {
-};
-
-function popOutComboPosition() {
-};
-
 function popOutComboPlayed() {
 };
 
@@ -164,9 +184,6 @@ function initComboTab(song_title) {
     document.getElementById('pop-combo-shortest').addEventListener('click', popOutComboShortest);
     document.getElementById('pop-combo-first').addEventListener('click', popOutComboFirst);
     document.getElementById('pop-combo-last').addEventListener('click', popOutComboLast);
-    document.getElementById('pop-combo-before').addEventListener('click', popOutComboBefore);
-    document.getElementById('pop-combo-after').addEventListener('click', popOutComboAfter);
-    document.getElementById('pop-combo-hottest').addEventListener('click', popOutComboPosition);
     // then charts
     document.getElementById('pop-combo-played').addEventListener('click', popOutComboPlayed);
     document.getElementById('pop-combo-average').addEventListener('click', popOutComboAverage);

@@ -78,10 +78,12 @@ Done work in 2023:
     * Allowed sets to overflow to more than one line
     * Fix for no weather when weather data exists but shows 0 in all temps
     * Added played % per year for combos
+    * Added average length graph on combos
 
 Changes to the current website:
     Add a "combos" page
-    Add length graph
+    Fix TBD on first / last played charts
+    Add all pop-outs for combos
     Add box to allow choices when 2 shows are searched for
     Add a front page with details
     Compress the outputted javascript

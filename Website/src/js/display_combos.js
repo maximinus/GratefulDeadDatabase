@@ -5,6 +5,7 @@ class ComboStorage {
         this.sorted_by_date = [];
         this.sorted_by_length = [];
         this.current_songs = [];
+        this.matches = [];
         this.played_chart = null;
         this.average_chart = null;
     };
@@ -27,12 +28,7 @@ function updateComboTable(table_id, table_data) {
     }
 };
 
-function updateComboPlayed(matches) {
-    if(combo_store.played_chart != null) {
-        // delete old chart if needed
-        combo_store.played_chart.destroy();
-    }
-
+function updateComboPlayed(matches, chart_id) {
     // we need to calculate how many times played per year
     // this means for each year: (total_played / total_shows) * 100
     var years = new Array(YEARS_PLAYED);
@@ -76,7 +72,7 @@ function updateComboPlayed(matches) {
     var min_y_value = Math.floor(Math.min.apply(Math, percent));
     var max_y_value = Math.ceil(Math.max.apply(Math, percent));
 
-    combo_store.played_chart = Highcharts.chart('combo-played-chart', {
+    var chart = Highcharts.chart(chart_id, {
         chart: {
             type: 'line'
         },
@@ -140,9 +136,10 @@ function updateComboPlayed(matches) {
             data: averages
         }],
     });
+    return chart;
 };
 
-function updateComboAverage(matches) {
+function updateComboAverage(matches, chart_id) {
     if(combo_store.average_chart != null) {
         // delete old chart if needed
         combo_store.average_chart.destroy();
@@ -185,7 +182,7 @@ function updateComboAverage(matches) {
 
     var min_y_value = Math.floor(Math.min.apply(Math, averages));
     var max_y_value = Math.ceil(Math.max.apply(Math, averages));
-    var chart = Highcharts.chart('combo-length-chart', {
+    var chart = Highcharts.chart(chart_id, {
         chart: {
             type: 'line'
         },
@@ -251,6 +248,7 @@ function updateComboAverage(matches) {
             data: average_global
         }],
     });
+    return chart;
 };
 
 function updateAllData(songs, matches) {
@@ -261,7 +259,7 @@ function updateAllData(songs, matches) {
     combo_store.sorted_by_date = [];
     for(var single_match of matches) {
         var link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
-        combo_store.sorted_by_date.push([link, 'TBD']);
+        combo_store.sorted_by_date.push([link, '']);
     }
     
     matches.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
@@ -273,8 +271,16 @@ function updateAllData(songs, matches) {
         }
     }
     // update charts
-    updateComboPlayed(matches);
-    updateComboAverage(matches);
+    if(combo_store.played_chart != null) {
+        // delete old chart if needed
+        combo_store.played_chart.destroy();
+    }
+    updateComboPlayed(matches, 'combo-played-chart');
+    if(combo_store.average_chart != null) {
+        // delete old chart if needed
+        combo_store.average_chart.destroy();
+    }
+    updateComboAverage(matches, 'combo-length-chart');
     // update all tables
     updateComboTable('combo-longest-versions', combo_store.sorted_by_length.slice(0, TABLE_ENTRIES));
     updateComboTable('combo-shortest-versions', combo_store.sorted_by_length.slice(-TABLE_ENTRIES).reverse());
@@ -413,16 +419,31 @@ function comboDefaultChanged() {
     updateComboTab();
 };
 
+function setComboPopOutTable(data, title) {
+    resetTableScroll();
+    var table = document.getElementById('table-entry');
+    // clear any children of this element
+    table.replaceChildren();
+    setLengthTablePopupList(data, table);
+    document.getElementById('dialog-table-title').innerHTML = title;
+    // display the modal
+    $('#table-dialog').modal();
+};
+
 function popOutComboLongest() {
+    setComboPopOutTable(combo_store.sorted_by_length, 'Longest Versions');
 };
 
 function popOutComboShortest() {
+    setComboPopOutTable(combo_store.sorted_by_length.reverse(), 'Shortest Versions');
 };
 
 function popOutComboFirst() {
+    setComboPopOutTable(combo_store.sorted_by_date, 'First Versions');
 };
 
 function popOutComboLast() {
+    setComboPopOutTable(combo_store.sorted_by_date.reverse(), 'Last Versions');
 };
 
 function popOutComboPlayed() {

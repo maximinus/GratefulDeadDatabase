@@ -6,6 +6,7 @@ class ComboStorage {
         this.sorted_by_length = [];
         this.current_songs = [];
         this.played_chart = null;
+        this.average_chart = null;
     };
 };
 
@@ -50,8 +51,6 @@ function updateComboPlayed(matches) {
         total_shows[year_index] += 1;
     }
 
-    console.log(total_shows);
-
     var total = 0;
     var total_years = 0;
     for(var i = 0; i < percent.length; i++) {
@@ -63,8 +62,6 @@ function updateComboPlayed(matches) {
             total_years += 1;
         }
     }
-
-    console.log(percent);
 
     // calculate global average: sum of average / divided by years
     var averages = new Array(YEARS_PLAYED);
@@ -145,6 +142,117 @@ function updateComboPlayed(matches) {
     });
 };
 
+function updateComboAverage(matches) {
+    if(combo_store.average_chart != null) {
+        // delete old chart if needed
+        combo_store.average_chart.destroy();
+    }
+
+    var total_played = new Array(YEARS_PLAYED);
+    var total_lengths = new Array(YEARS_PLAYED);
+    var averages = new Array(YEARS_PLAYED);
+    total_played.fill(0);
+    total_lengths.fill(0);
+    averages.fill(0);
+    var global_total = 0;
+    var global_time = 0;
+    for(var single_match of matches) {
+        var year_index = getYear(single_match[0].date) - YEAR_OFFSET;
+        total_played[year_index] += 1;
+        total_lengths[year_index] += single_match[1];
+        global_total += 1;
+        global_time += single_match[1];
+    }
+
+    for(var i = 0; i < total_played.length; i++) {
+        if (total_played[i] == 0) {
+            averages[i] = null;
+        } else {
+            averages[i] = (total_lengths[i] / total_played[i]) / 60.0;
+        }
+    }
+
+    // we need a set of data the same length as lengths
+    var average_global = new Array(YEARS_PLAYED);
+    var average_global_text = 'No matches found';
+    if(global_total == 0) {
+        average_global.fill(0);
+    } else {
+        var global_average = global_time / global_total;
+        average_global.fill(global_average);
+        average_global_text = convertTime(Math.round(global_average));
+    }
+
+    var min_y_value = Math.floor(Math.min.apply(Math, averages));
+    var max_y_value = Math.ceil(Math.max.apply(Math, averages));
+    var chart = Highcharts.chart('combo-length-chart', {
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: null
+        },
+        legend: {
+            enabled: true,
+            layout: "horizontal",
+            align: "right",
+            verticalAlign: "top",
+            floating: true,
+            labelFormatter: function() {
+              return `Avg: ${average_global_text}`;
+            },
+            itemStyle: {
+              color: '#000000',
+              fontWeight: 'bold',
+              fontSize: 8,
+            },
+            borderWidth: 1
+        },
+        xAxis: {
+        },
+        yAxis: {
+            title: {text: 'Average Length / mins'},
+            min: min_y_value,
+            max: max_y_value,
+            plotLines: [{
+                color: '#666666aa',
+                width: 2,
+                value: averages
+            }]
+        },
+        credits: {
+            enabled: false
+        },
+        tooltip: {
+            // only show 2 decimal places on tooltip
+            valueDecimals: 2,
+            formatter: function () {
+                var time_length = convertTime(Math.round(this.y * 60.0));
+                return `${this.x}: ${time_length}`;
+            }
+        },
+        series: [{
+            name: 'Average Length',
+            showInLegend: false,
+            pointStart: 1965,
+            color: '#88cc88',
+            data: averages
+        },
+        {
+            name: 'Global Average',
+            showInLegend: true,
+            pointStart: 1965,
+            color: '#66666688',
+            allowPointSelect: false,
+            enableMouseTracking: false,
+            marker: {
+                enabled: false
+            },
+            data: average_global
+        }],
+    });
+};
+
 function updateAllData(songs, matches) {
     // matches is an array of [show, length]
     combo_store.current_songs = songs;
@@ -166,6 +274,7 @@ function updateAllData(songs, matches) {
     }
     // update charts
     updateComboPlayed(matches);
+    updateComboAverage(matches);
     // update all tables
     updateComboTable('combo-longest-versions', combo_store.sorted_by_length.slice(0, TABLE_ENTRIES));
     updateComboTable('combo-shortest-versions', combo_store.sorted_by_length.slice(-TABLE_ENTRIES).reverse());

@@ -77,9 +77,11 @@ Done work in 2023:
     * If the weather data does not exist, informs the user
     * Allowed sets to overflow to more than one line
     * Fix for no weather when weather data exists but shows 0 in all temps
+    * Added played % per year for combos
 
 Changes to the current website:
     Add a "combos" page
+    Add length graph
     Add box to allow choices when 2 shows are searched for
     Add a front page with details
     Compress the outputted javascript

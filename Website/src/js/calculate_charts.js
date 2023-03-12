@@ -129,7 +129,7 @@ function buildPlayed(song_title, element_name) {
 };
 
 function getAverageLength(song_title) {
-    // return an arrayy of [results, global_time]
+    // return an array of [results, global_time]
     var averages = new Array(YEARS_PLAYED);
     for(var i = 0; i < averages.length; i++) {
         averages[i] = [0,0];

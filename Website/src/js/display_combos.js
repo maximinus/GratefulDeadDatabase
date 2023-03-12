@@ -86,7 +86,7 @@ function updateComboPlayed(matches, chart_id) {
             verticalAlign: "top",
             floating: true,
             labelFormatter: function() {
-              return `Avg when played: ${data[1]} %`;
+              return `Avg when played: ${total_average} %`;
             },
             itemStyle: {
               color: '#000000',
@@ -270,6 +270,9 @@ function updateAllData(songs, matches) {
             combo_store.sorted_by_length.push([link, convertTime(single_match[1])]);
         }
     }
+
+    combo_store.matches = matches;
+
     // update charts
     if(combo_store.played_chart != null) {
         // delete old chart if needed
@@ -447,9 +450,27 @@ function popOutComboLast() {
 };
 
 function popOutComboPlayed() {
+    // clear current chart data
+    var table = document.getElementById('pop-up-charts');
+    table.replaceChildren();
+    // set title
+    document.getElementById('dialog-chart-title').innerHTML = 'Played Per Year';
+    // set chart
+    updateComboPlayed(combo_store.matches, 'pop-up-charts');
+    // display
+    $('#chart-dialog').modal();
 };
 
 function popOutComboAverage() {
+    // clear current chart data
+    var table = document.getElementById('pop-up-charts');
+    table.replaceChildren();
+    // set title
+    document.getElementById('dialog-chart-title').innerHTML = 'Average Length Per Year';
+    // set chart
+    updateComboAverage(combo_store.matches, 'pop-up-charts');
+    // display
+    $('#chart-dialog').modal();
 };
 
 function initComboTab(song_title) {

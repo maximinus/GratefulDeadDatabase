@@ -5,6 +5,7 @@ class ComboStorage {
         this.sorted_by_date = [];
         this.sorted_by_length = [];
         this.current_songs = [];
+        this.played_chart = null;
     };
 };
 
@@ -23,6 +24,125 @@ function updateComboTable(table_id, table_data) {
         }
         index += 1;
     }
+};
+
+function updateComboPlayed(matches) {
+    if(combo_store.played_chart != null) {
+        // delete old chart if needed
+        combo_store.played_chart.destroy();
+    }
+
+    // we need to calculate how many times played per year
+    // this means for each year: (total_played / total_shows) * 100
+    var years = new Array(YEARS_PLAYED);
+    var percent = new Array(YEARS_PLAYED);
+    var total_shows = new Array(YEARS_PLAYED);
+    years.fill(0);
+    percent.fill(0);
+    total_shows.fill(0);
+
+    for(var single_match of matches) {
+        var year_index = getYear(single_match[0].date) - YEAR_OFFSET;
+        years[year_index] += 1;
+    }
+    for(var single_show of store.shows) {
+        var year_index = getYear(single_show.date) - YEAR_OFFSET;
+        total_shows[year_index] += 1;
+    }
+
+    console.log(total_shows);
+
+    var total = 0;
+    var total_years = 0;
+    for(var i = 0; i < percent.length; i++) {
+        if (years[i] == 0) {
+            percent[i] = null;
+        } else {
+            percent[i] = (years[i] / total_shows[i]) * 100;
+            total += years[i];
+            total_years += 1;
+        }
+    }
+
+    console.log(percent);
+
+    // calculate global average: sum of average / divided by years
+    var averages = new Array(YEARS_PLAYED);
+    var total_average = 0;
+    if(total_years != 0) {
+        total_average = Math.round((total / total_years) * 100.0) / 100.0;
+    } else {
+        total_average = 0;
+    }
+    averages.fill(total_average);
+
+    var min_y_value = Math.floor(Math.min.apply(Math, percent));
+    var max_y_value = Math.ceil(Math.max.apply(Math, percent));
+
+    combo_store.played_chart = Highcharts.chart('combo-played-chart', {
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: null
+        },
+        legend: {
+            enabled: true,
+            layout: "horizontal",
+            align: "right",
+            verticalAlign: "top",
+            floating: true,
+            labelFormatter: function() {
+              return `Avg when played: ${data[1]} %`;
+            },
+            itemStyle: {
+              color: '#000000',
+              fontWeight: 'bold',
+              fontSize: 8,
+            },
+            borderWidth: 1
+        },
+        xAxis: {
+        },
+        yAxis: {
+            title: {text: '% Shows Played At'},
+            min: min_y_value,
+            max: max_y_value,
+        },
+        credits: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                marker: {
+                    radius: 3
+                }
+            }
+        },
+        tooltip: {
+            // only show 2 decimal places on tooltip
+            valueDecimals: 2
+        },
+        series: [{
+            name: '% shows played',
+            showInLegend: false,
+            pointStart: 1965,
+            color: '#8888cc',
+            data: percent,
+        },
+        {
+            name: 'Average',
+            showInLegend: true,
+            pointStart: 1965,
+            color: '#66666688',
+            allowPointSelect: false,
+            enableMouseTracking: false,
+            marker: {
+                enabled: false
+            },
+            data: averages
+        }],
+    });
 };
 
 function updateAllData(songs, matches) {
@@ -44,6 +164,8 @@ function updateAllData(songs, matches) {
             combo_store.sorted_by_length.push([link, convertTime(single_match[1])]);
         }
     }
+    // update charts
+    updateComboPlayed(matches);
     // update all tables
     updateComboTable('combo-longest-versions', combo_store.sorted_by_length.slice(0, TABLE_ENTRIES));
     updateComboTable('combo-shortest-versions', combo_store.sorted_by_length.slice(-TABLE_ENTRIES).reverse());

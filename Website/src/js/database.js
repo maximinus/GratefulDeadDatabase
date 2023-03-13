@@ -79,9 +79,10 @@ function chooseShowOne() {
 		return;
 	}
 	// goto this show
-	var show_id = db_store.show_choices[0];
+	var show = db_store.show_choices[0];
 	db_store.show_choices = [];
-	console.log(show_id);
+	updateShowTab(show);
+	$(SHOWS_TAB).tab('show');
 };
 
 function chooseShowTwo() {
@@ -90,9 +91,10 @@ function chooseShowTwo() {
 		log('Error: Choose show called with no shows');
 		return;
 	}
-	var show_id = db_store.show_choices[1];
+	var show = db_store.show_choices[1];
 	db_store.show_choices = [];
-	console.log(show_id);
+	updateShowTab(show);
+	$(SHOWS_TAB).tab('show');
 };
 
 function checkShowInput(text_input) {

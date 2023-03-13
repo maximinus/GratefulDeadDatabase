@@ -1,4 +1,11 @@
 // this code should handle displaying and updating the input box
+class DatabaseStorage {
+    constructor() {
+        this.show_choices = [];
+    };
+};
+
+var db_store = new DatabaseStorage();
 
 const INVISIBLE_SPACE = '\u200b';
 
@@ -50,6 +57,44 @@ function changeTabView(data_type, data) {
 	$(data_type).tab('show');
 };
 
+function selectMultipleShow(multiple_shows) {
+	// we want date and number, i.e. 13th Feb 1970 Show 1
+	db_store.show_choices = multiple_shows;
+	var date_text = convertDate(multiple_shows[0].date);
+	var data = {'show-info-1': `${date_text} Show #1`,
+				'show-info-2': `${date_text} Show #2`};
+	var template = document.getElementById('choose-show-template').innerHTML;
+	var new_html = Mustache.render(template, data);
+    document.getElementById('select-song-choice').innerHTML = new_html;
+	// modal "choose a show" buttons
+	document.getElementById('choose-show-one').addEventListener("click", chooseShowOne);
+	document.getElementById('choose-show-two').addEventListener("click", chooseShowTwo);
+	$('#select-song-dialog').modal();
+};
+
+function chooseShowOne() {
+	$('#select-song-dialog').modal('hide');
+	if(db_store.show_choices.length == 0) {
+		log('Error: Choose show called with no shows');
+		return;
+	}
+	// goto this show
+	var show_id = db_store.show_choices[0];
+	db_store.show_choices = [];
+	console.log(show_id);
+};
+
+function chooseShowTwo() {
+	$('#select-song-dialog').modal('hide');
+	if(db_store.show_choices.length == 0) {
+		log('Error: Choose show called with no shows');
+		return;
+	}
+	var show_id = db_store.show_choices[1];
+	db_store.show_choices = [];
+	console.log(show_id);
+};
+
 function checkShowInput(text_input) {
 	// return true / false if it was a date
 	var actual_date = convertDateOptionFormat(text_input);
@@ -80,7 +125,7 @@ function checkShowInput(text_input) {
 		return true;
 	}
 	if(date_matches.length > 1) {
-		log('TODO: Allow user to choose between 2 shows');
+		selectMultipleShow(date_matches);
 		return true;
 	}
 	// otherwise, no match

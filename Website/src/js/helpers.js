@@ -310,8 +310,10 @@ function getGoogleMapsLink(venue) {
 };
 
 function resetTableScroll() {
-    // TODO: for some reason this does not work
-    //document.getElementById('table-entry-scroll').scrollTop = 0;
+    // for some reason we need to set a timer. a known issue in many browsers
+    window.setTimeout(function() {
+        document.getElementById('table-entry-scroll').scrollTop = 0;
+    }, 0);
 };
 
 function displayPopOut(title, data) {

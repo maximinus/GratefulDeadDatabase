@@ -310,11 +310,7 @@ function buildPosition(song_title, element_name) {
     var positions = data[0];
     var average_pos = new Array(positions.length);
     for(var i = 0; i < positions.length; i++) {
-        if (positions[i] == null) {
-            average_pos[i] = null;
-        } else {
-            average_pos[i] = data[1];
-        }
+        average_pos[i] = data[1];
     }
     var chart = Highcharts.chart(element_name, {
         chart: {
@@ -455,6 +451,8 @@ function buildFirstLastVersions(song_title) {
             if(index != 0) {
                 var delta = row_date - last;
                 row.children[2].innerHTML = `<i>${dayDays(delta)} after first</i>`;
+            } else {
+                row.children[2].innerHTML = '<i>First time played</i>';
             }
         }
         index += 1;
@@ -474,7 +472,9 @@ function buildFirstLastVersions(song_title) {
             row.children[1].innerHTML = convertToLink(convertDate(row_date), `show-${table_data[index].show_id}`);
             if(index != 0) {
                 var delta = last - row_date;
-                row.children[2].innerHTML = `<i>${dayDays(delta)} before last</i>`;
+                row.children[2].innerHTML = `<i>${dayDays(delta)} until next</i>`;
+            } else {
+                row.children[2].innerHTML = '<i>Last time played</i>';
             }
         }
         index += 1;
@@ -636,7 +636,7 @@ function popOutShortest() {
     $('#table-dialog').modal();
 };
 
-function setOrderTablePopupList(table_data, element, message) {
+function setOrderTablePopupList(table_data, element, message, header_text) {
     var row_index = 1;
     var last = -1;
     for(song of table_data) {
@@ -655,8 +655,7 @@ function setOrderTablePopupList(table_data, element, message) {
         var song_date = getShowFromId(song.show_id).date;
         column1.innerHTML = convertToLink(convertDate(song_date), `show-${song.show_id}`);
         if(last < 0) {
-            column2.innerHTML = '';
-            
+            column2.innerHTML = header_text;
         } else {
             // calculate time difference
             var time_delta = Math.abs(song_date - last);
@@ -702,7 +701,7 @@ function popOutFirst() {
     var data = store.song_data[charts_store.current_song_title];
     var table = document.getElementById('table-entry');
     table.replaceChildren();
-    setOrderTablePopupList(data, table, 'after previous');
+    setOrderTablePopupList(data, table, 'after previous', 'First time played');
     document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: First Versions`;
     $('#table-dialog').modal();
 };
@@ -713,7 +712,7 @@ function popOutLast() {
     data.reverse();
     var table = document.getElementById('table-entry');
     table.replaceChildren();
-    setOrderTablePopupList(data, table, 'before next');
+    setOrderTablePopupList(data, table, 'until next', 'Last time played');
     document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: Last Versions`;
     data.reverse();
     $('#table-dialog').modal();
@@ -784,7 +783,7 @@ function popOutAverage() {
     var table = document.getElementById('pop-up-charts');
     table.replaceChildren();
     // set title
-    document.getElementById('dialog-chart-title').innerHTML = 'Average Length';
+    document.getElementById('dialog-chart-title').innerHTML = 'Average Length Per Year';
     // set chart
     buildLength(charts_store.current_song_title, 'pop-up-charts');
     // display
@@ -796,7 +795,7 @@ function popOutPosition() {
     var table = document.getElementById('pop-up-charts');
     table.replaceChildren();
     // set title
-    document.getElementById('dialog-chart-title').innerHTML = 'Average Length';
+    document.getElementById('dialog-chart-title').innerHTML = 'Average Set Position';
     buildPosition(charts_store.current_song_title, 'pop-up-charts');
     $('#chart-dialog').modal();
 };

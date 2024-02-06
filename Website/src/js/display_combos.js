@@ -473,6 +473,19 @@ function popOutComboAverage() {
     $('#chart-dialog').modal();
 };
 
+function checkComboSongInput(event) {
+    var target = event.target;
+    // get the value, check it's a song
+    var song_name = target.value.toLowerCase();
+
+	for(var s of store.songs) {
+		if(s.toLowerCase() == song_name) {
+            // it's valid, set border and we are done
+        }
+    }
+    // input was not valid, set border
+};
+
 function initComboTab(song_title) {
     // setup callbacks
     document.getElementById('pop-combo-longest').addEventListener('click', popOutComboLongest);
@@ -484,4 +497,8 @@ function initComboTab(song_title) {
     document.getElementById('pop-combo-average').addEventListener('click', popOutComboAverage);
     // and then the form callbacks
     document.getElementById('combo-default').addEventListener('change', comboDefaultChanged)
+    // when a song has been entered, check it exists
+    document.getElementById('combo-input1').input.addEventListener('input', checkComboSongInput);
+    document.getElementById('combo-input1').input.addEventListener('input', checkComboSongInput);
+    document.getElementById('combo-input1').input.addEventListener('input', checkComboSongInput);
 };

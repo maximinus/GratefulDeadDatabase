@@ -61,8 +61,8 @@ function selectMultipleShow(multiple_shows) {
 	// we want date and number, i.e. 13th Feb 1970 Show 1
 	db_store.show_choices = multiple_shows;
 	var date_text = convertDate(multiple_shows[0].date);
-	var data = {'show-info-1': `${date_text} Show #1`,
-				'show-info-2': `${date_text} Show #2`};
+	var data = {'show-info-1': `${date_text} Early Show`,
+				'show-info-2': `${date_text} Late Show`};
 	var template = document.getElementById('choose-show-template').innerHTML;
 	var new_html = Mustache.render(template, data);
     document.getElementById('select-song-choice').innerHTML = new_html;
@@ -270,6 +270,12 @@ function addCallbacks() {
 
 function setSongDropdown() {
 	updateSearchInputOptions();
+	// the other datalist is in the combos tab
+	var list = document.getElementById('choose-song-search');
+	for(var i of store.songs) {
+		var song_option = document.createElement('option');
+   		list.appendChild(song_option);
+	}
 };
 
 document.addEventListener('DOMContentLoaded', function(){

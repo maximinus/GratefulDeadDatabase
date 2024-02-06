@@ -5,26 +5,62 @@ Path of Work / Priorities
 After analysis, this order:
 
 1: Download all the GD (ongoing - note not every recording, just every show)
-    Es ?  Pr 8
 3: Add tabs, other tables and Graphs
-    Es 14 Pr 8
 4: Look at hosting
-    Es 2  Pr 10
 
 Future Work:
 
 Start taking timings properly and add to the DB
-    Es 12 Pr 7
 Start taking BPM timings and add the to the DB
-    Es 5  Pr 6
 Split shows up into tours
-    Es 7  Pr 6
 Generate tour maps to show the tours
-    Es 20 Pr 5
 Match sources to shows, i.e. each show should have a link to sources
-    Es 20 Pr 4
 Write code to measure accuratly pitch shift due to speed up
-    Es 20 Pr 3
+
+
+2024 TODO start list:
+
+Comment the code so it's a bit easier to understand
+
+Songs:
+    On "Played per year" graph, change "Avg when played" to "Avg from when first played" and add "Average for every show"
+    Start a list of shows that have no recordings and add to the database
+    Add a smoothed line on average length of song
+    In "Last versions" the text should maybe be "X days UNTIL next"
+    In "First versions" and "last versions" the ends should say "last version" and "first version"
+    When the table popup is displayed, unless it is the same as the last one, it should reset the scrollbar
+    In "Average Set Position", the title is "Average Length", so fix
+    In "Average set position", the average line should not have a break in it
+    The footer shouldn't be a box, just a horizontal line
+    Average song length per year should skip data points where there is no data
+    ?? Add "Most common other songs in same set" and "Most common songs in same show"
+
+Shows:
+    "Only played this year" should show total times played
+    "Never played again" shoud show last time played
+    "Only played this year" songs should be in "never played again"??
+    "New songs" should show first time played
+    "Wettest shows" shows no data
+    Hottest and coldest shows should show C with a F switch, or both temperatures
+    Have a button for next / previous show
+
+Venues
+    There should be a map of the location, obtained from public domain records
+    Every show played box should be bigger on the bottom
+    Should be a "most common songs" table.
+    Should be a "hottest shows"
+    Should be a "coldest shows"
+    Should be a "wettest shows"
+    Should be a timeline showing shows per year
+    Should a timeline showing shows in each month
+
+Other stuff:
+    Add shows with no setlists (use the original Jerrybase)
+    Check with Pauls timings
+    Add seque information
+    Add tour maps
+    Finish Combos page
+
 
 Done work in 2023:
     * Graphs should also show "average" as a dotted line
@@ -79,19 +115,7 @@ Done work in 2023:
     * Fix for no weather when weather data exists but shows 0 in all temps
     * Added played % per year for combos
     * Added average length graph on combos
-
-Changes to the current website:
-    Add a "combos" page
-    Fix TBD on first / last played charts
-    Add all pop-outs for combos
-    Add box to allow choices when 2 shows are searched for
-    Add a front page with details
-    Compress the outputted javascript
-    Fix the precipitation data
-    Delete all charts properly
-
-Hard things:
-    The scrollbar on list pop-ups needs to reset on a new pop-up
+    * Added box to allow choices when 2 shows are searched for
 
 Other calculations:
     Must start collecting BPM and add it to the DB.

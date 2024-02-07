@@ -1,12 +1,13 @@
 import os
 import sys
 import json
+import time
 import shutil
 import chevron
-import threading
 import webbrowser
 import http.server
 import socketserver
+import multiprocessing
 
 from pathlib import Path
 
@@ -21,6 +22,8 @@ TEMPLATE_FOLDER = Path('./src/html/templates')
 SOURCE_FOLDER = Path('./src')
 FOLDER_NAMES = ['css', 'data', 'gfx', 'js']
 
+SLEEP_TIME = 2
+
 
 def error(message):
     print(f'* Error: {message}')
@@ -29,7 +32,6 @@ def error(message):
 
 def clean_dist():
     try:
-        print(DIST_FOLDER)
         shutil.rmtree(DIST_FOLDER)
         os.makedirs(DIST_FOLDER)
         print('* Cleaned dist folder')
@@ -102,19 +104,69 @@ def server_thread(name):
     httpd.serve_forever()
 
 
-def serve_page():
-    x = threading.Thread(target=server_thread, args=(1,))
-    x.start()
-    # serve the file and open up in the browser
-    print(f'* Serving {OUTPUT_HTML}')
-    webbrowser.open_new_tab('0.0.0.0:8000')
-    # wait for thread to die
-    x.join()
+class FileCheckResult:
+    def __init__(self, last_check, total_files):
+        self.time = last_check
+        self.files = total_files
 
 
-if __name__ == '__main__':
+def get_all_files():
+    files = []
+    for i in FOLDER_NAMES:
+        for j in os.listdir(SOURCE_FOLDER / i):
+            files.append(f'{str(SOURCE_FOLDER)}/{i}/{j}')
+    return files
+
+
+def check_all_files(last_check):
+    # return None if the test failed
+    all_files = get_all_files()
+    if len(all_files) != last_check.files:
+        return None
+    for i in all_files:
+        if os.path.getmtime(i) > last_check.time:
+            return None
+    return FileCheckResult(time.time(), len(all_files))
+
+
+def check_updates():
+    # get a null result
+    print('* Waiting for file change')
+    result = FileCheckResult(time.time() + 1000, len(get_all_files()))
+    while True:
+        # examine all the files
+        result = check_all_files(result)
+        if result is None:
+            return
+        time.sleep(SLEEP_TIME)
+
+
+def setup():
     clean_dist()
     page_data = get_data()
     build_html(page_data)
     copy_files()
+
+
+def serve_page():
+    first = True
+    while True:
+        setup()
+        process = multiprocessing.Process(target=server_thread, args=(1,))
+        process.start()
+        # serve the file and open up in the browser
+        print(f'* Serving {OUTPUT_HTML}')
+        if first is True:
+            webbrowser.open_new_tab('0.0.0.0:8000')
+            first = False
+        else:
+            webbrowser.open('0.0.0.0:8000', new=0)
+        check_updates()
+        print('* Stopping process')
+        process.terminate()
+        # After this we cycle round and will run the build again
+        print('* Updating')
+
+
+if __name__ == '__main__':
     serve_page()

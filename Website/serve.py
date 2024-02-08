@@ -141,6 +141,10 @@ def check_updates():
         time.sleep(SLEEP_TIME)
 
 
+def wait_for_keypress():
+    input('Press return to update')
+
+
 def setup():
     clean_dist()
     page_data = get_data()
@@ -161,7 +165,7 @@ def serve_page():
             first = False
         else:
             webbrowser.open('0.0.0.0:8000', new=0)
-        check_updates()
+        wait_for_keypress()
         print('* Stopping process')
         process.terminate()
         # After this we cycle round and will run the build again

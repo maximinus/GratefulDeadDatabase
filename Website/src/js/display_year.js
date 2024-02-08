@@ -37,6 +37,19 @@ function getUniqueSongsStartEndYear(year_start, year_end) {
     return played_songs;
 };
 
+function getTotalPlayed(song) {
+    return store.song_data[song].length;
+};
+
+function getFirstTimePlayed(song) {
+    return store.song_data[song][0];
+}
+
+function getLastTimePlayed(song) {
+    var array_length = store.song_data[song].length;
+    return store.song_data[song][array_length - 1];
+};
+
 function getUniqueStartEnd(year) {
     // get all songs from the year
     var all_songs_in_year = [];
@@ -78,20 +91,46 @@ function getUniqueStartEnd(year) {
             }
         }
     }
+
+    // we don't have the total played
+    // "never played again" should last date played
+    // "new songs" should be sorted by the date first played
+    // "only played this year" sorted by total times played
+    // currently this sorting does nothing
+    // we'll need to do this manually
+    for(var i=0; i<uniques.length; i++) {
+        uniques[i][1] = getTotalPlayed(uniques[i][0]);
+    }
+    for(var i=0; i<first_played.length; i++) {
+        var first_show = getShowFromId(getFirstTimePlayed(first_played[i][0]).show_id);
+        first_played[i][1] = first_show;
+    }
+    for(var i=0; i<never_again.length; i++) {
+        var last_show = getShowFromId(getLastTimePlayed(never_again[i][0]).show_id);
+        never_again[i][1] = last_show;
+    }
+
     // sort by total played
     uniques.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     first_played.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
-    never_again.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
+    never_again.sort((a, b) => (a[1].id < b[1].id) ? 1 : -1);
 
     // remove the values, they are not needed
     for(var i of uniques) {
-        year_store.uniques.push([convertToLink(i[0], `song-${i[0]}`), '']);
+        // we need the total of uniques for this year
+        if(i[1] > 1) {
+            year_store.uniques.push([convertToLink(i[0], `song-${i[0]}`), `Played ${i[1]} times`]);
+        } else {
+            year_store.uniques.push([convertToLink(i[0], `song-${i[0]}`), 'Played once']);
+        }   
     }
     for(var i of first_played) {
-        year_store.first_played.push([convertToLink(i[0], `song-${i[0]}`), '']);
+        var show_link = convertToLink(convertDate(i[1].date), `show-${i[1].id}`);
+        year_store.first_played.push([convertToLink(i[0], `song-${i[0]}`), show_link]);
     }
     for(var i of never_again) {
-        year_store.never_again.push([convertToLink(i[0], `song-${i[0]}`), '']);
+        var show_link = convertToLink(convertDate(i[1].date), `show-${i[1].id}`);
+        year_store.never_again.push([convertToLink(i[0], `song-${i[0]}`), show_link]);
     }
     return [year_store.uniques.slice(0, TABLE_ENTRIES),
             year_store.first_played.slice(0, TABLE_ENTRIES),

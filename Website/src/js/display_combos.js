@@ -498,7 +498,5 @@ function initComboTab(song_title) {
     // and then the form callbacks
     document.getElementById('combo-default').addEventListener('change', comboDefaultChanged)
     // when a song has been entered, check it exists
-    document.getElementById('combo-input1').input.addEventListener('input', checkComboSongInput);
-    document.getElementById('combo-input1').input.addEventListener('input', checkComboSongInput);
-    document.getElementById('combo-input1').input.addEventListener('input', checkComboSongInput);
+    //document.getElementById('combo-input1').input.addEventListener('input', checkComboSongInput);
 };

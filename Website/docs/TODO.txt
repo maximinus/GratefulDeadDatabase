@@ -1,7 +1,6 @@
 Path of Work / Priorities
 -------------------------
 
-
 After analysis, this order:
 
 1: Download all the GD (ongoing - note not every recording, just every show)
@@ -23,28 +22,21 @@ Write code to measure accuratly pitch shift due to speed up
 Comment the code so it's a bit easier to understand
 
 Songs:
-    * On "Played per year" graph, change "Avg when played" to "Avg from when first played"
-    * Add a smoothed line on average length of song (not done, bad choice)
-    * In "Last versions" the text should maybe be "X days UNTIL next"
-    * In "First versions" and "last versions" the ends should say "last version" and "first version"
-    * When the table popup is displayed, unless it is the same as the last one, it should reset the scrollbar
-    * In "Average Set Position", the title is "Average Length", so fix
-    * In "Average set position", the average line should not have a break in it
-    * The footer shouldn't be a box, just a horizontal line
-    Average song length per year should skip data points where there is no data
     ?? Add "Most common other songs in same set" and "Most common songs in same show"
     Start a list of shows that have no recordings and add to the database
 
-Shows:
-    "Only played this year" should show total times played
-    "Never played again" shoud show last time played
+Shows
+    Change colours of timimgs to make it easier to see
+    If there is no weather data, mention it in the box
+
+Years:
     "Only played this year" songs should be in "never played again"??
-    "New songs" should show first time played
     "Wettest shows" shows no data
     Hottest and coldest shows should show C with a F switch, or both temperatures
     Have a button for next / previous show
 
 Venues
+    "This was the nth time played here" is off by 1
     There should be a map of the location, obtained from public domain records
     Every show played box should be bigger on the bottom
     Should be a "most common songs" table.
@@ -61,6 +53,21 @@ Other stuff:
     Add tour maps
     Finish Combos page
 
+
+Done work in 2024:
+    * Server should update automatically if there have been file changes
+    * On "Played per year" graph, change "Avg when played" to "Avg from when first played"
+    * In "Last versions" the text should maybe be "X days UNTIL next"
+    * In "First versions" and "last versions" the ends should say "last version" and "first version"
+    * When the table popup is displayed, unless it is the same as the last one, it should reset the scrollbar
+    * In "Average Set Position", the title is "Average Length", so fix
+    * In "Average set position", the average line should not have a break in it
+    * The footer shouldn't be a box, just a horizontal line
+    * Make set numbers in show list bold
+    * Only played this year change to "Unique to this year"
+    * "Only played this year" should show total times played
+    * "Never played again" shoud show last time played
+    * "New songs" should show first time played
 
 Done work in 2023:
     * Graphs should also show "average" as a dotted line

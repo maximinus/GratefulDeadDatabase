@@ -5,7 +5,7 @@ class DatabaseStorage {
     };
 };
 
-var db_store = new DatabaseStorage();
+let db_store = new DatabaseStorage();
 
 const INVISIBLE_SPACE = '\u200b';
 
@@ -13,17 +13,17 @@ const INVISIBLE_SPACE = '\u200b';
 function updateSearchInputOptions() {
 	// clear any current list
 	document.getElementById('choose-search').innerHTML = '';
-	var list = document.getElementById('choose-search');
+	let list = document.getElementById('choose-search');
 	// add all songs
-	for(var i of store.songs) {
-		var song_option = document.createElement('option');
+	for(let i of store.songs) {
+		let song_option = document.createElement('option');
 		// add a non-visible space at the end:
    		song_option.value = i.concat(INVISIBLE_SPACE);
    		list.appendChild(song_option);
 	}
-	for(var i of store.venues) {
+	for(let i of store.venues) {
 		// as above
-		var venue_option = document.createElement('option');
+		let venue_option = document.createElement('option');
 		venue_option.value = i.venue.concat(INVISIBLE_SPACE);
 		list.appendChild(venue_option);
 	}
@@ -67,11 +67,11 @@ function changeTabView(data_type, data) {
 function selectMultipleShow(multiple_shows) {
 	// we want date and number, i.e. 13th Feb 1970 Show 1
 	db_store.show_choices = multiple_shows;
-	var date_text = convertDate(multiple_shows[0].date);
-	var data = {'show-info-1': `${date_text} Early Show`,
+	let date_text = convertDate(multiple_shows[0].date);
+	let data = {'show-info-1': `${date_text} Early Show`,
 				'show-info-2': `${date_text} Late Show`};
-	var template = document.getElementById('choose-show-template').innerHTML;
-	var new_html = Mustache.render(template, data);
+	let template = document.getElementById('choose-show-template').innerHTML;
+	let new_html = Mustache.render(template, data);
     document.getElementById('select-song-choice').innerHTML = new_html;
 	// modal "choose a show" buttons
 	document.getElementById('choose-show-one').addEventListener("click", chooseShowOne);
@@ -86,7 +86,7 @@ function chooseShowOne() {
 		return;
 	}
 	// goto this show
-	var show = db_store.show_choices[0];
+	let show = db_store.show_choices[0];
 	db_store.show_choices = [];
 	updateShowTab(show);
 	$(SHOWS_TAB).tab('show');
@@ -98,7 +98,7 @@ function chooseShowTwo() {
 		log('Error: Choose show called with no shows');
 		return;
 	}
-	var show = db_store.show_choices[1];
+	let show = db_store.show_choices[1];
 	db_store.show_choices = [];
 	updateShowTab(show);
 	$(SHOWS_TAB).tab('show');
@@ -106,22 +106,22 @@ function chooseShowTwo() {
 
 function checkShowInput(text_input) {
 	// return true / false if it was a date
-	var actual_date = convertDateOptionFormat(text_input);
+	let actual_date = convertDateOptionFormat(text_input);
 	if(actual_date == null) {
 		log('No show match')
 		return false;
 	}
 	// we have a date, the next thing is to decide if there's a show on this date
-	var show_day = convertFromDate(actual_date);
+	let show_day = convertFromDate(actual_date);
 	// iterate over all dates and store as a list the difference
-	var date_diffs = [];
-	for(var single_show of store.shows) {
+	let date_diffs = [];
+	for(let single_show of store.shows) {
 		date_diffs.push([single_show, Math.abs(single_show.date - show_day)]);
 	}
 	date_diffs.sort((a, b) => (a[1] > b[1]) ? 1 : -1);
 	// Find all shows with same date
-	var date_matches = [];
-	for(var single_diff of date_diffs) {
+	let date_matches = [];
+	for(let single_diff of date_diffs) {
 		if(single_diff[1] == 0) {
 			date_matches.push(single_diff[0]);
 		} else {
@@ -144,26 +144,26 @@ function checkShowInput(text_input) {
 function checkSearchInput(text_input) {
 	text_input = text_input.toLowerCase();
 	// is this a year?
-	var int_value = parseInt(text_input);
-	if(isNaN(int_value) == false) {
+	let int_value = parseInt(text_input);
+	if(isNaN(int_value) === false) {
 		// could be a year
 		if((int_value >= START_YEAR) && (int_value <= END_YEAR)) {
 			changeTabView(YEARS_TAB, int_value);
 			return;
 		}
 	}
-	if(checkShowInput(text_input) == true) {
+	if(checkShowInput(text_input) === true) {
 		// tab is updated in above function
 		return;
 	};
 	// is this a song?
-	for(var s of store.songs) {
+	for(let s of store.songs) {
 		if(s.toLowerCase() == text_input) {
 			changeTabView(SONGS_TAB, s);
 			return;
 		}
 	}
-	for(var s of store.venues) {
+	for(let s of store.venues) {
 		if(s.venue.toLowerCase() == text_input) {
 			changeTabView(VENUES_TAB, s.id);
 			return;
@@ -176,7 +176,7 @@ function checkNewSong(event) {
 	if(event.keyCode == 13) {
 		// enter key has been pressed
 		// check if song is valid, else do nothing
-		var text_input = document.getElementById('search-input').value;
+		let text_input = document.getElementById('search-input').value;
 		checkSearchInput(text_input);
 		// do not process the form
 		return false;
@@ -186,11 +186,11 @@ function checkNewSong(event) {
 
 function checkInput(event) {
 	// get last character. Is it the space? Then update and remove
-	var input_text = document.getElementById('search-input').value;
-	var last_char = input_text.charAt(input_text.length-1);
+	let input_text = document.getElementById('search-input').value;
+	let last_char = input_text.charAt(input_text.length-1);
 	if(last_char == INVISIBLE_SPACE) {
 		// update the input
-		var real_input = input_text.slice(0,-1);
+		let real_input = input_text.slice(0,-1);
 		checkSearchInput(real_input);
 		// this will cause this function to fire again, but since there
 		// is no space, nothing should happen
@@ -201,18 +201,18 @@ function checkInput(event) {
 function handleLink(link_txt) {
 	console.log(`Going to ${link_txt}`);
 	// also check the link is valid
-	var link_data = link_txt.split('-');
-	var link_tab = link_data[0];
-	var link_data = link_data[1];
+	let link_data = link_txt.split('-');
+	let link_tab = link_data[0];
+	link_data = link_data[1];
 	if(link_tab == 'show') {
 		// it's either a date in the format YYYY/MM/DD, or a single value, the show id
-		show_id = link_data.split('/');
+		let show_id = link_data.split('/');
 		if(show_id.length == 1) {
 			changeTabView(SHOWS_TAB, getShowFromId(show_id));
 			return;
 		}
 		// must be in a date format
-		var show_date = new Date(parseInt(show_id[0]), parseInt(show_id[1]) - 1, parseInt(show_id[2]));
+		let show_date = new Date(parseInt(show_id[0]), parseInt(show_id[1]) - 1, parseInt(show_id[2]));
 		changeTabView(SHOWS_TAB, getShowFromDate(show_date));
 		return;
 	}
@@ -230,13 +230,12 @@ function handleLink(link_txt) {
 	}
 	if(link_tab == 'about') {
 		changeTabView(ABOUT_TAB, '');
-		return;
 	}
 };
 
 function interceptClickEvent(event) {
-	var href;
-    var target = event.target || event.srcElement;
+	let href;
+    let target = event.target || event.srcElement;
     if (target.tagName === 'A') {
         href = target.getAttribute('href');
 		if(href.startsWith('#gdd')) {
@@ -248,14 +247,14 @@ function interceptClickEvent(event) {
 };
 
 function addCallbacks() {
-	var song_element = document.getElementById('search-input');
+	let song_element = document.getElementById('search-input');
 	// prevent enter key when song selection is not complete
 	song_element.onkeydown = checkNewSong;
 	song_element.addEventListener('input', checkInput);
 	// not a fan of the jquery but it works
 	// this is to update the data format on the search bar
 	$('.dropdown-menu a.dropdown-item').on('click', function(){
-		var selected = $(this).text();
+		let selected = $(this).text();
 		document.getElementById('data-format-dropdown').textContent = selected;
 		if(selected == 'MM-DD-YY') {
 			store.options.date_format = DATE_FORMAT_MMDDYY;
@@ -279,7 +278,7 @@ function addCallbacks() {
 	window.onpopstate = function (event) {
 		console.log(event);
 		if(event.state) {
-			var state = event.state;
+			let state = event.state;
 			log(`Navigating back to ${state}`);
 			handleLink(state);
 		}
@@ -289,9 +288,9 @@ function addCallbacks() {
 function setSongDropdown() {
 	updateSearchInputOptions();
 	// the other datalist is in the combos tab
-	var list = document.getElementById('choose-song-search');
-	for(var i of store.songs) {
-		var song_option = document.createElement('option');
+	let list = document.getElementById('choose-song-search');
+	for(let i of store.songs) {
+		let song_option = document.createElement('option');
    		list.appendChild(song_option);
 	}
 };

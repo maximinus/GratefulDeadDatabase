@@ -4,8 +4,8 @@
 // helper functions for pulling data from the db
 
 function getShowFromDate(show_date) {
-    var show_time = show_date.getTime();
-    for(var single_show of store.shows) {
+    let show_time = show_date.getTime();
+    for(let single_show of store.shows) {
         if(show_time === single_show.js_date.getTime()) {
             return single_show;
         }
@@ -16,7 +16,7 @@ function getShowFromDate(show_date) {
 };
 
 function getShowFromId(show_id) {
-    for(var single_show of store.shows) {
+    for(let single_show of store.shows) {
         if(single_show.id == show_id) {
             return single_show;
         }
@@ -26,8 +26,8 @@ function getShowFromId(show_id) {
 };
 
 function getAllShowsInYear(year) {
-    var all_shows_in_year = [];
-    for(var single_show of store.shows) {
+    let all_shows_in_year = [];
+    for(let single_show of store.shows) {
         if(single_show.js_date.getFullYear() == year) {
             all_shows_in_year.push(single_show);
         }
@@ -36,8 +36,8 @@ function getAllShowsInYear(year) {
 };
 
 function getAllShowsInVenue(venue_id) {
-    var all_shows_in_venue = [];
-    for(var single_show of store.shows) {
+    let all_shows_in_venue = [];
+    for(let single_show of store.shows) {
         if( single_show.venue == venue_id) {
             all_shows_in_venue.push(single_show);
         }
@@ -53,10 +53,10 @@ function getIndexOfSong(song_title) {
 function getYear(days) {
     // get the year of a show date as an integer
     // the value sent is an int: number of days since 1st Jan 1950
-    var new_date = new Date(1950, 0, 1);
+    let new_date = new Date(1950, 0, 1);
     new_date.setDate(new_date.getDate() + days);
     // now convert to string and return
-    var year = new_date.getFullYear().toString().slice(2,4);
+    let year = new_date.getFullYear().toString().slice(2,4);
     return parseInt(year);
 };
 
@@ -67,37 +67,37 @@ function nth(n) {
 function convertDate(days) {
     // convert to date format "13th Oct 73" or similar
     // the value sent is an int: number of days since 1st Jan 1950
-    var new_date = new Date(1950, 0, 1);
+    let new_date = new Date(1950, 0, 1);
     new_date.setDate(new_date.getDate() + days);
     // now convert to string and return
-    var day = new_date.getDate();
-    var month = new_date.toLocaleString('default', { month: 'short' });
-    var year = new_date.getFullYear().toString().slice(2,4);
+    let day = new_date.getDate();
+    let month = new_date.toLocaleString('default', { month: 'short' });
+    let year = new_date.getFullYear().toString().slice(2,4);
     // calculate st/nd/rd/th
-    var day_ending = nth(day);
+    let day_ending = nth(day);
     return `${day}${day_ending} ${month} ${year}`;
 };
 
 function convertDateLong(days) {
     // convert to date format "13th October 1973" or similar
     // the value sent is an int: number of days since 1st Jan 1950
-    var new_date = new Date(1950, 0, 1);
+    let new_date = new Date(1950, 0, 1);
     new_date.setDate(new_date.getDate() + days);
     // now convert to string and return
-    var day = new_date.getDate();
-    var month = new_date.toLocaleString('default', { month: 'long' });
-    var year = new_date.getFullYear().toString();
+    let day = new_date.getDate();
+    let month = new_date.toLocaleString('default', { month: 'long' });
+    let year = new_date.getFullYear().toString();
     // calculate st/nd/rd/th
-    var day_ending = nth(day);
+    let day_ending = nth(day);
     return `${day}${day_ending} ${month} ${year}`;
 };
 
 function convertDateStringFromDate(single_date) {
-    var day = single_date.getDate();
-    var month = single_date.toLocaleString('default', { month: 'long' });
-    var year = single_date.getFullYear().toString();
+    let day = single_date.getDate();
+    let month = single_date.toLocaleString('default', { month: 'long' });
+    let year = single_date.getFullYear().toString();
     // calculate st/nd/rd/th
-    var day_ending = nth(day);
+    let day_ending = nth(day);
     return `${day}${day_ending} ${month} ${year}`;
 };
 
@@ -107,15 +107,15 @@ function convertToLink(string, url) {
 };
 
 function getRealDate(days) {
-    var new_date = new Date(1950, 0, 1);
+    let new_date = new Date(1950, 0, 1);
     new_date.setDate(new_date.getDate() + days);
     return new_date;
 };
 
 function convertFromDate(show_date) {
     // do the opposite of above
-    var new_date = new Date(1950, 0 ,1);
-    var diff = show_date.getTime() - new_date.getTime();
+    let new_date = new Date(1950, 0 ,1);
+    let diff = show_date.getTime() - new_date.getTime();
     return Math.ceil(diff / (1000 * 3600 * 24));
 };
 
@@ -128,14 +128,13 @@ function convertTime(total_time) {
     // convert to some time in format "4m 17s"
     // argument is an integer in seconds
     // return hours if they exist - this is for show length
+    let hours = 0;
     if(total_time > 3600) {
-        var hours = Math.floor(total_time / 3600);
+        hours = Math.floor(total_time / 3600);
         total_time -= hours * 3600;
-    } else {
-        hours = 0;
     }
-    var minutes = Math.floor(total_time / 60);
-    var seconds = total_time - (minutes * 60);
+    let minutes = Math.floor(total_time / 60);
+    let seconds = total_time - (minutes * 60);
     if(hours != 0) {
         return `${hours}h ${minutes}m ${seconds}s`;
     }
@@ -148,7 +147,7 @@ function convertTime(total_time) {
 function makePrettyNumber(value) {
     // return as a string, and of the form 1,000 if needed
     if(value > 999) {
-        var txt = value.toString();
+        let txt = value.toString();
         return `${txt.slice(0, -3)},${txt.slice(-3)}`; 
     }
     // just as normal
@@ -163,7 +162,7 @@ function dayDays(delta) {
 };
 
 function getSetName(index) {
-    var names = ['1st', '2nd', '3rd', '4th', '5th', '6th'];
+    let names = ['1st', '2nd', '3rd', '4th', '5th', '6th'];
     return names[index];
 };
 
@@ -194,7 +193,7 @@ function venueToSlug(venue_id) {
 
 function getVenue(venue_id) {
     // the venues are not sorted, so get this way
-    for(var venue of store.venues) {
+    for(let venue of store.venues) {
         if(venue_id == venue.id) {
             // return this
             return venue;
@@ -206,27 +205,27 @@ function getVenue(venue_id) {
 };
 
 function dateDifference(startingDate, endingDate) {
-    var startDate = new Date(new Date(startingDate).toISOString().substr(0, 10));
+    let startDate = new Date(new Date(startingDate).toISOString().substr(0, 10));
     if (!endingDate) {
         endingDate = new Date().toISOString().substr(0, 10);
     }
-    var endDate = new Date(endingDate);
+    let endDate = new Date(endingDate);
     if (startDate > endDate) {
-        var swap = startDate;
+        let swap = startDate;
         startDate = endDate;
         endDate = swap;
     }
-    var startYear = startDate.getFullYear();
-    var february = (startYear % 4 === 0 && startYear % 100 !== 0) || startYear % 400 === 0 ? 29 : 28;
-    var daysInMonth = [31, february, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let startYear = startDate.getFullYear();
+    let february = (startYear % 4 === 0 && startYear % 100 !== 0) || startYear % 400 === 0 ? 29 : 28;
+    let daysInMonth = [31, february, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-    var yearDiff = endDate.getFullYear() - startYear;
-    var monthDiff = endDate.getMonth() - startDate.getMonth();
+    let yearDiff = endDate.getFullYear() - startYear;
+    let monthDiff = endDate.getMonth() - startDate.getMonth();
     if (monthDiff < 0) {
         yearDiff--;
         monthDiff += 12;
     }
-    var dayDiff = endDate.getDate() - startDate.getDate();
+    let dayDiff = endDate.getDate() - startDate.getDate();
     if (dayDiff < 0) {
         if (monthDiff > 0) {
             monthDiff--;
@@ -241,20 +240,20 @@ function dateDifference(startingDate, endingDate) {
 
 function log(message) {
     // log error messages etc to console
-    if(LOGGING_ON == false) {
+    if(LOGGING_ON === false) {
         return;
     }
     // get local time
-    var local_time = new Date();
-    var minutes = local_time.getMinutes().toString().padStart(2, '0');
-    var time_string = `${local_time.getHours()}:${minutes}.${local_time.getSeconds()}`;
+    let local_time = new Date();
+    let minutes = local_time.getMinutes().toString().padStart(2, '0');
+    let time_string = `${local_time.getHours()}:${minutes}.${local_time.getSeconds()}`;
     console.log(`${time_string}: ${message}`);
 };
 
 function findAllSongsStartingWith(text) {
     // compare all as lowercase
     text = text.toLowerCase()
-    var matches = [];
+    let matches = [];
     for(const [key, value] of Object.entries(song_counts)) {
         if(key.toLowerCase().startsWith(text)) {
             matches.push([key, value]);
@@ -266,7 +265,7 @@ function findAllSongsStartingWith(text) {
 function convertTemp(t) {
     // convert from the format in the binary
     // subtract 1
-    var real_t = t - 1.0;
+    let real_t = t - 1.0;
     // divide by 10
     real_t = real_t / 10.0;
     // subtract 50
@@ -275,7 +274,7 @@ function convertTemp(t) {
 };
 
 function convertPrecip(p) {
-    var float_precip = (p - 1.0) / 10000.0;
+    let float_precip = (p - 1.0) / 10000.0;
     return float_precip;
 };
 
@@ -283,7 +282,7 @@ function convertDateOptionFormat(date_text) {
     // given this text input, does it match with a real date?
     // If so, return the date, else return null
     // check it also exists within the years
-    var date_split = date_text.split('-');
+    let date_split = date_text.split('-');
     if(date_split.length != 3) {
         return null;
     };
@@ -292,11 +291,11 @@ function convertDateOptionFormat(date_text) {
         // something wasn't an integer
         return null;
     }
-    var date_array = date_split.map(x => parseInt(x));
+    let date_array = date_split.map(x => parseInt(x));
     // assume DATE_FORMAT_DDMMYY
-    var day = date_array[0];
-    var month = date_array[1];
-    var year = date_array[2];
+    let day = date_array[0];
+    let month = date_array[1];
+    let year = date_array[2];
     if(store.options.date_format == DATE_FORMAT_MMDDYY) {
         day = date_array[1];
         month = date_array[0];
@@ -307,18 +306,18 @@ function convertDateOptionFormat(date_text) {
     }
     // now try and get a date - default format is "MM/DD/YYYY"
     // we'll need to try with adding the "19" part ourself
-    var this_extended_date = new Date(year + 1900, month - 1, day);
+    let this_extended_date = new Date(year + 1900, month - 1, day);
     if(this_extended_date.toString() != "Invalid Date") {
         // check in range
-        var year_value = this_extended_date.getFullYear();
+        let year_value = this_extended_date.getFullYear();
         if((year_value >= START_YEAR) && (year_value <= END_YEAR)) {
             return this_extended_date;
         }
     }
     // try the same, but don't add the 18
-    var this_date = new Date(year, month - 1, day);
+    let this_date = new Date(year, month - 1, day);
     if(this_date.toString() != "Invalid Date") {
-        var year_value = this_date.getFullYear();
+        let year_value = this_date.getFullYear();
         if((year_value >= START_YEAR) && (year_value <= END_YEAR)) {
             return this_date;
         }
@@ -340,7 +339,7 @@ function resetTableScroll() {
 
 function displayPopOut(title, data) {
     resetTableScroll();
-    var table = document.getElementById('table-entry');
+    let table = document.getElementById('table-entry');
     // clear any children of this element
     table.replaceChildren();
     setSimpleTablePopupList(data, table);

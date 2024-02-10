@@ -11,12 +11,12 @@ class ComboStorage {
     };
 };
 
-var combo_store = new ChartsStorage();
+let combo_store = new ChartsStorage();
 
 function updateComboTable(table_id, table_data) {
-    var index = 0;
-    var table = document.getElementById(table_id);
-    for(var row of table.children) {
+    let index = 0;
+    let table = document.getElementById(table_id);
+    for(let row of table.children) {
         if(index >= table_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
@@ -31,25 +31,25 @@ function updateComboTable(table_id, table_data) {
 function updateComboPlayed(matches, chart_id) {
     // we need to calculate how many times played per year
     // this means for each year: (total_played / total_shows) * 100
-    var years = new Array(YEARS_PLAYED);
-    var percent = new Array(YEARS_PLAYED);
-    var total_shows = new Array(YEARS_PLAYED);
+    let years = new Array(YEARS_PLAYED);
+    let percent = new Array(YEARS_PLAYED);
+    let total_shows = new Array(YEARS_PLAYED);
     years.fill(0);
     percent.fill(0);
     total_shows.fill(0);
 
-    for(var single_match of matches) {
-        var year_index = getYear(single_match[0].date) - YEAR_OFFSET;
+    for(let single_match of matches) {
+        let year_index = getYear(single_match[0].date) - YEAR_OFFSET;
         years[year_index] += 1;
     }
-    for(var single_show of store.shows) {
-        var year_index = getYear(single_show.date) - YEAR_OFFSET;
+    for(let single_show of store.shows) {
+        let year_index = getYear(single_show.date) - YEAR_OFFSET;
         total_shows[year_index] += 1;
     }
 
-    var total = 0;
-    var total_years = 0;
-    for(var i = 0; i < percent.length; i++) {
+    let total = 0;
+    let total_years = 0;
+    for(let i = 0; i < percent.length; i++) {
         if (years[i] == 0) {
             percent[i] = null;
         } else {
@@ -60,8 +60,8 @@ function updateComboPlayed(matches, chart_id) {
     }
 
     // calculate global average: sum of average / divided by years
-    var averages = new Array(YEARS_PLAYED);
-    var total_average = 0;
+    let averages = new Array(YEARS_PLAYED);
+    let total_average = 0;
     if(total_years != 0) {
         total_average = Math.round((total / total_years) * 100.0) / 100.0;
     } else {
@@ -69,10 +69,10 @@ function updateComboPlayed(matches, chart_id) {
     }
     averages.fill(total_average);
 
-    var min_y_value = Math.floor(Math.min.apply(Math, percent));
-    var max_y_value = Math.ceil(Math.max.apply(Math, percent));
+    let min_y_value = Math.floor(Math.min(...percent));
+    let max_y_value = Math.ceil(Math.max(...percent));
 
-    var chart = Highcharts.chart(chart_id, {
+    let chart = Highcharts.chart(chart_id, {
         chart: {
             type: 'line'
         },
@@ -145,23 +145,23 @@ function updateComboAverage(matches, chart_id) {
         combo_store.average_chart.destroy();
     }
 
-    var total_played = new Array(YEARS_PLAYED);
-    var total_lengths = new Array(YEARS_PLAYED);
-    var averages = new Array(YEARS_PLAYED);
+    let total_played = new Array(YEARS_PLAYED);
+    let total_lengths = new Array(YEARS_PLAYED);
+    let averages = new Array(YEARS_PLAYED);
     total_played.fill(0);
     total_lengths.fill(0);
     averages.fill(0);
-    var global_total = 0;
-    var global_time = 0;
-    for(var single_match of matches) {
-        var year_index = getYear(single_match[0].date) - YEAR_OFFSET;
+    let global_total = 0;
+    let global_time = 0;
+    for(let single_match of matches) {
+        let year_index = getYear(single_match[0].date) - YEAR_OFFSET;
         total_played[year_index] += 1;
         total_lengths[year_index] += single_match[1];
         global_total += 1;
         global_time += single_match[1];
     }
 
-    for(var i = 0; i < total_played.length; i++) {
+    for(let i = 0; i < total_played.length; i++) {
         if (total_played[i] == 0) {
             averages[i] = null;
         } else {
@@ -170,19 +170,19 @@ function updateComboAverage(matches, chart_id) {
     }
 
     // we need a set of data the same length as lengths
-    var average_global = new Array(YEARS_PLAYED);
-    var average_global_text = 'No matches found';
+    let average_global = new Array(YEARS_PLAYED);
+    let average_global_text = 'No matches found';
     if(global_total == 0) {
         average_global.fill(0);
     } else {
-        var global_average = global_time / global_total;
+        let global_average = global_time / global_total;
         average_global.fill(global_average);
         average_global_text = convertTime(Math.round(global_average));
     }
 
-    var min_y_value = Math.floor(Math.min.apply(Math, averages));
-    var max_y_value = Math.ceil(Math.max.apply(Math, averages));
-    var chart = Highcharts.chart(chart_id, {
+    let min_y_value = Math.floor(Math.min(...averages));
+    let max_y_value = Math.ceil(Math.max(...averages));
+    let chart = Highcharts.chart(chart_id, {
         chart: {
             type: 'line'
         },
@@ -224,7 +224,7 @@ function updateComboAverage(matches, chart_id) {
             // only show 2 decimal places on tooltip
             valueDecimals: 2,
             formatter: function () {
-                var time_length = convertTime(Math.round(this.y * 60.0));
+                let time_length = convertTime(Math.round(this.y * 60.0));
                 return `${this.x}: ${time_length}`;
             }
         },
@@ -257,16 +257,16 @@ function updateAllData(songs, matches) {
     // sort by length and store
     matches.sort((a, b) => (a[0].date > b[0].date ? 1 : -1));
     combo_store.sorted_by_date = [];
-    for(var single_match of matches) {
-        var link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
+    for(let single_match of matches) {
+        let link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
         combo_store.sorted_by_date.push([link, '']);
     }
     
     matches.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     combo_store.sorted_by_length = [];
-    for(var single_match of matches) {
+    for(let single_match of matches) {
         if(single_match[1] != 0) {
-            var link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
+            let link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
             combo_store.sorted_by_length.push([link, convertTime(single_match[1])]);
         }
     }
@@ -298,11 +298,11 @@ function updateAllowSongsBetween(song_ids, allow_set_split) {
 };
 
 function updateNoSongsBetween(song_ids) {
-    var matches = [];
-    for(var single_show of store.shows) {
-        var song_index = 0;
-        var total_length = 0;
-        for(var single_song of single_show.getAllSongs()) {
+    let matches = [];
+    for(let single_show of store.shows) {
+        let song_index = 0;
+        let total_length = 0;
+        for(let single_song of single_show.getAllSongs()) {
             // looking for the first song?
             if(song_index == 0) {
                 // found a match? Move to next songs
@@ -347,7 +347,7 @@ function updateNoSongsBetween(song_ids) {
 
 function updateComboTab() {
     // actually perform the search
-    var songs = [document.getElementById('combo-input1').value,
+    let songs = [document.getElementById('combo-input1').value,
                  document.getElementById('combo-input2').value,
                  document.getElementById('combo-input3').value];
     // remove all empty strings
@@ -356,12 +356,12 @@ function updateComboTab() {
     // TODO: validate these songs or show an error
 
     // turn songs into indexes
-    var song_ids = [];
-    for(var single_song of songs) {
+    let song_ids = [];
+    for(let single_song of songs) {
         song_ids.push(getIndexOfSong(single_song));
     }
 
-    var allow_songs_inbetween = document.getElementById('combo-between-songs-check').checked;
+    let allow_songs_inbetween = document.getElementById('combo-between-songs-check').checked;
     if(songs.length == 1) {
         updateWithSandwich(song_ids[0]);
     }
@@ -373,8 +373,8 @@ function updateComboTab() {
 };
 
 function comboDefaultChanged() {
-    var selected = parseInt(document.getElementById('combo-default').value);
-    var songs_selected = [];
+    let selected = parseInt(document.getElementById('combo-default').value);
+    let songs_selected = [];
     switch(selected) {
         case 1:
             // User switched back to "custom", probably do nothing?
@@ -424,7 +424,7 @@ function comboDefaultChanged() {
 
 function setComboPopOutTable(data, title) {
     resetTableScroll();
-    var table = document.getElementById('table-entry');
+    let table = document.getElementById('table-entry');
     // clear any children of this element
     table.replaceChildren();
     setLengthTablePopupList(data, table);
@@ -438,7 +438,7 @@ function popOutComboLongest() {
 };
 
 function popOutComboShortest() {
-    setComboPopOutTable(combo_store.sorted_by_length.reverse(), 'Shortest Versions');
+    setComboPopOutTable(combo_store.sorted_by_length.toReversed(), 'Shortest Versions');
 };
 
 function popOutComboFirst() {
@@ -451,7 +451,7 @@ function popOutComboLast() {
 
 function popOutComboPlayed() {
     // clear current chart data
-    var table = document.getElementById('pop-up-charts');
+    let table = document.getElementById('pop-up-charts');
     table.replaceChildren();
     // set title
     document.getElementById('dialog-chart-title').innerHTML = 'Played Per Year';
@@ -463,7 +463,7 @@ function popOutComboPlayed() {
 
 function popOutComboAverage() {
     // clear current chart data
-    var table = document.getElementById('pop-up-charts');
+    let table = document.getElementById('pop-up-charts');
     table.replaceChildren();
     // set title
     document.getElementById('dialog-chart-title').innerHTML = 'Average Length Per Year';
@@ -474,11 +474,11 @@ function popOutComboAverage() {
 };
 
 function checkComboSongInput(event) {
-    var target = event.target;
+    let target = event.target;
     // get the value, check it's a song
-    var song_name = target.value.toLowerCase();
+    let song_name = target.value.toLowerCase();
 
-	for(var s of store.songs) {
+	for(let s of store.songs) {
 		if(s.toLowerCase() == song_name) {
             // it's valid, set border and we are done
         }

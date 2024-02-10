@@ -257,6 +257,11 @@ function convertTemp(t) {
     return real_t;
 };
 
+function convertPrecip(p) {
+    var float_precip = (p - 1.0) / 10000.0;
+    return float_precip;
+};
+
 function convertDateOptionFormat(date_text) {
     // given this text input, does it match with a real date?
     // If so, return the date, else return null

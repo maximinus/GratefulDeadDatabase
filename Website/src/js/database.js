@@ -192,6 +192,7 @@ function checkInput(event) {
 };
 
 function handleLink(link_txt) {
+	log(`Going to ${link_txt}`);
 	// also check the link is valid
 	var link_data = link_txt.split('-');
 	var link_tab = link_data[0];

@@ -1,42 +1,36 @@
 Path of Work / Priorities
 -------------------------
 
-After analysis, this order:
-
-1: Download all the GD (ongoing - note not every recording, just every show)
-3: Add tabs, other tables and Graphs
-4: Look at hosting
-
 Future Work:
+    Start taking timings properly and add to the DB
+    Start taking BPM timings and add the to the DB
+    Split shows up into tours
+    Generate tour maps to show the tours
+    Match sources to shows, i.e. each show should have a link to sources
+    Write code to measure accuratly pitch shift due to speed up
 
-Start taking timings properly and add to the DB
-Start taking BPM timings and add the to the DB
-Split shows up into tours
-Generate tour maps to show the tours
-Match sources to shows, i.e. each show should have a link to sources
-Write code to measure accuratly pitch shift due to speed up
 
+2024 TODO list:
 
-2024 TODO start list:
+Overall:
+    Test the data is not being pulled all the time
+    Look at hosting
 
-Comment the code so it's a bit easier to understand
+Known important bugs that must be fixed:
+    Back button seems spotty at times
+    URL should be shown and a bookmark should be able to be set
 
 Songs:
-    ?? Add "Most common other songs in same set" and "Most common songs in same show"
     Start a list of shows that have no recordings and add to the database
 
 Shows
-    Change colours of timimgs to make it easier to see
     If there is no weather data, mention it in the box
 
 Years:
-    "Only played this year" songs should be in "never played again"??
-    "Wettest shows" shows no data
     Hottest and coldest shows should show C with a F switch, or both temperatures
     Have a button for next / previous show
 
 Venues
-    "This was the nth time played here" is off by 1
     There should be a map of the location, obtained from public domain records
     Every show played box should be bigger on the bottom
     Should be a "most common songs" table.
@@ -44,14 +38,19 @@ Venues
     Should be a "coldest shows"
     Should be a "wettest shows"
     Should be a timeline showing shows per year
-    Should a timeline showing shows in each month
+    Should ba timeline showing shows in each month
 
-Other stuff:
+Other stuff after the above is done:
+    Comment the code so it's a bit easier to understand
+        Better: Move to using typescript
+                Build up the storage class with the methods needed
+                The sub-classes will do most work
+                The landing page needs to be it's own file
     Add shows with no setlists (use the original Jerrybase)
     Check with Pauls timings
     Add seque information
-    Add tour maps
     Finish Combos page
+    Download all the GD (ongoing - note not every recording, just every show)
 
 
 Done work in 2024:
@@ -66,8 +65,18 @@ Done work in 2024:
     * Make set numbers in show list bold
     * Only played this year change to "Unique to this year"
     * "Only played this year" should show total times played
-    * "Never played again" shoud show last time played
+    * "Never played again" should show last time played
     * "New songs" should show first time played
+    * "Only played this year" songs should be in "never played again"
+    * "Wettest shows" shows no data
+    * "Wettest shows" has no space between number and "hrs rain"
+    * "Wettest shows" should not include dry shows
+    * "This was the nth time played here" is off by 1
+    * Capitalised AM and PM on weather chart
+    * Hourly precipitation data is imported correctly
+    * Weather chart displays rainfall for the period
+    * The tooptip for the rain line in weather works correctly
+    * The weather data is imported correctly, in Python and Javascript
 
 Done work in 2023:
     * Graphs should also show "average" as a dotted line

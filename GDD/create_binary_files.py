@@ -218,6 +218,7 @@ def write_weather_data():
     weather_data = []
     all_temps = []
     all_feels = []
+    all_precip = []
     none_count = 0
     none_feels = 0
     for weather in tqdm(get_all_weather()):
@@ -235,34 +236,47 @@ def write_weather_data():
         weather_data.append([hdata, show_id])
         all_temps.extend([x[0] for x in hdata])
         all_feels.extend([x[1] for x in hdata])
+        all_precip.extend(x[2] for x in hdata)
 
     # remove those Nones
     all_temps = list(filter(lambda item: item is not None, all_temps))
     all_feels = list(filter(lambda item: item is not None, all_feels))
+    all_precip = list(filter(lambda item: item is not None, all_precip))
+    # we print these out to manually check the ranges seem fine
+    # the actual stuff we will save is in weather data
     print(f'  Temps range: {min(all_temps)} -> {max(all_temps)}')
     print(f'  Feels range: {min(all_feels)} -> {max(all_feels)}')
+    print(f'  Precips range: {min(all_precip)} -> {max(all_precip)}')
     # Finally we can build the data
     # Temp is done as:
     #   Take the temp and add 50.0              73.4  -> 113.4
     #   Multiply by 10 and drop the fraction:   113.4 -> 1134
     #   Add 1                                   1134  -> 1135
     # Same for feels
+
+    # precipitation is a float, but usually has 3 digits. The max value is just under 6
+    # so to do this we'll multiply by 10,000, add 1 and return the int of this - again a 16 bit value
+    # add 1 to avoid adding a zero
+
     calculated_data = []
     for tdata in weather_data:
+        # giving us tdata = [hdata, show_id]
         calculated_hour = []
         for thour in tdata[0]:
+            # giving us 3 values, temp, feels_like, precipitation
             temp_final = 0
             if thour[0] is not None:
                 temp_final = int((thour[0] + 50.0) * 10.0) + 1
             feel_final = 0
             if thour[1] is not None:
                 feel_final = int((thour[1] + 50.0) * 10.0) + 1
-            if thour[2] is True:
-                feel_final += 32768
-            calculated_hour.append([temp_final, feel_final])
+            precip_final = 0
+            if thour[2] is not None:
+                precip_final = int(thour[2] * 10000) + 1
+            calculated_hour.append([temp_final, feel_final, precip_final])
         calculated_data.append([calculated_hour, tdata[1]])
 
-    #   array of: [weather_date, [temp, feels_like] * 24] for all weather data
+    # array of: [weather_date, [temp, feels_like, precipitation] * 24] for all weather data
     byte_data = []
     for i in calculated_data:
         byte_data.append(i[1])
@@ -271,6 +285,7 @@ def write_weather_data():
         for w_hour in i[0]:
             byte_data.append(w_hour[0])
             byte_data.append(w_hour[1])
+            byte_data.append(w_hour[2])
         # end 0 marker
         byte_data.append(0)
     # end all data
@@ -309,8 +324,8 @@ def check_empty_sets():
 
 if __name__ == '__main__':
     #check_empty_sets()
-    write_song_data()
-    write_venue_data()
-    write_show_data()
+    #write_song_data()
+    #write_venue_data()
+    #write_show_data()
     write_weather_data()
     print(f'All binary files complete and save to {BINARY_FOLDER}')

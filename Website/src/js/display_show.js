@@ -34,6 +34,16 @@ function getRealTemps(temps) {
     return new_data;
 };
 
+function getRealPrecipitation(precips) {
+    // convert precipitation
+    // take the value, subtract 1 and divide by 10000
+    new_data = []
+    for(var p of precips) {
+        new_data.push(convertPrecip(p));
+    }
+    return new_data;
+};
+
 function getRarestSongs() {
     year_of_show = show_store.current_show.js_date.getFullYear()
     // first we need get all songs and remove duplicates
@@ -144,6 +154,17 @@ function showNoWeather() {
     }
 };
 
+function getWeatherTimeString(value) {
+    if(value == 24) {
+        value = 0;
+    }
+    var time_text = `${value} AM`;
+    if(value > 12) {
+        time_text = `${value - 12} PM`;
+    }
+    return time_text;
+};
+
 function renderWeatherChart(chart_id) {
     var show_id = show_store.current_show.id;
     if((show_id in store.weather) == false) {
@@ -154,6 +175,7 @@ function renderWeatherChart(chart_id) {
     }
     var temps = getRealTemps(store.weather[show_id].temps);
     var feels = getRealTemps(store.weather[show_id].feels);
+    var rain = getRealPrecipitation(store.weather[show_id].precip);
 
     // if the sum of the temps is zero, we also have no weather
     if(temps.reduce((a, b) => a + b, 0) == 0) {
@@ -197,17 +219,31 @@ function renderWeatherChart(chart_id) {
                 }
             }
         },
-        yAxis: {
-            title: {
-                text: 'Fahrenheit'
-            },
-            labels: {
-                formatter: function() {
-                    var label = this.axis.defaultLabelFormatter.call(this);
-                    return `${label}°`
+        yAxis: [
+            {
+                title: {
+                    text: 'Fahrenheit'
+                },
+                labels: {
+                    formatter: function() {
+                        var label = this.axis.defaultLabelFormatter.call(this);
+                        return `${label}°`
+                    }
                 }
+            },
+            {
+                title: {
+                    text: 'Inchs of rainfall'
+                },
+                labels: {
+                    formatter: function() {
+                        var label = this.axis.defaultLabelFormatter.call(this);
+                        return `${label}`
+                    }
+                },
+                opposite: true
             }
-        },
+        ],
         credits: {
             enabled: false
         },
@@ -215,9 +251,19 @@ function renderWeatherChart(chart_id) {
             // only show 2 decimal places on tooltip
             valueDecimals: 2,
             formatter: function () {
-                var time_text = `${this.x}am`;
+                // different for rain, as there are 2 lines
+                console.log(this);
+                if(this.series.name == 'Rain') {
+                    start_time = getWeatherTimeString(this.x);
+                    end_time = getWeatherTimeString(this.x + 1);
+                    if(this.y <= 0) {
+                        return `From ${start_time}-${end_time}, there was no rain`;
+                    }
+                    return `From ${start_time}-${end_time}, ${this.y} inches of rain`;
+                }
+                var time_text = `${this.x} AM`;
                 if(this.x > 12) {
-                    time_text = `${this.x}pm`;
+                    time_text = `${this.x} PM`;
                 }
                 var celcius = (this.y - 32.0) * (5.0/9.0);
                 return `At ${time_text}, it was ${this.y.toFixed(1)}°F / ${celcius.toFixed(1)}°C`;
@@ -228,14 +274,24 @@ function renderWeatherChart(chart_id) {
             showInLegend: true,
             pointStart: 0,
             color: '#88cc88',
-            data: temps
+            data: temps,
+            yAxis: 0
         },
         {
             name: 'Feels Like',
             showInLegend: true,
             pointStart: 0,
             color: '#66666688',
-            data: feels
+            data: feels,
+            yAxis: 0
+        },
+        {
+            name: 'Rain',
+            showInLegend: true,
+            pointStart: 0,
+            color: '#8888cc',
+            data: rain,
+            yAxis: 1
         }],
     });
     show_store.weather_chart = chart;
@@ -365,7 +421,7 @@ function displayVenueInformation() {
         if(single_show.venue == venue_id) {
             total_shows += 1;
             if(single_show.date == this_show_date) {
-                total_before = total_shows - 1;
+                total_before = total_shows;
             }
         }
     }

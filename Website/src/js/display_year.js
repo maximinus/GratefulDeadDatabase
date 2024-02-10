@@ -83,6 +83,8 @@ function getUniqueStartEnd(year) {
             first_played.push([song_name, '']);
             if(played_after_this_year == false) {
                 uniques.push([song_name, '']);
+                // also need to add to never again, because it fails in the logic otherwise
+                never_again.push([song_name, '']);
             }
         } else {
             // i.e., played before is true
@@ -224,10 +226,15 @@ function getYearWeatherData(year) {
         var weather = store.weather[single_show.id];
         var max_temp = Math.max(...weather.temps);
         var min_temp = Math.min(...weather.temps.filter(x => x > 6));
-        var rain = weather.precip.filter(x => x === true).length;
+        // for rain, get the total precipitation over the 24 hrs
+        var total_rain = 0
+        for(var i of weather.precip) {
+            total_rain += i;
+        }
+        total_rain = convertPrecip(total_rain);
         var date_text = convertDate(single_show.date);
         var date_link = convertToLink(date_text, `show-${single_show.id}`);
-        show_weather.push([date_link, max_temp, min_temp, rain]);
+        show_weather.push([date_link, max_temp, min_temp, total_rain]);
     }
     // sort all of these and store for later
     show_weather.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
@@ -239,8 +246,12 @@ function getYearWeatherData(year) {
         year_store.coldest.push([i[0], `${convertTemp(i[2]).toFixed(1)}°F`]);
     }
     show_weather.sort((a, b) => (a[3] < b[3]) ? 1 : -1);
+    // remove all days with no rain
     for(var i of show_weather) {
-        year_store.wettest.push([i[0], `${i[3]}hrs rain`]);
+        if(i[3] <= 0) {
+            break;
+        }
+        year_store.wettest.push([i[0], `${i[3]} inches`]);
     }
 
     // slice and return

@@ -423,17 +423,12 @@ function parseWeather(binary_data) {
         for(var i = 0; i < 24; i++) {
             temps.push(getWord(binary_data, index));
             index += 2;
-            feels_tmp = getWord(binary_data, index);
+            feels.push(getWord(binary_data, index));
             index += 2;
-            if(feels_tmp > 32768) {
-                feels_temp -= 32768;
-                precip.push(true);
-            } else {
-                precip.push(false);
-            }
-            feels.push(feels_tmp);
+            precip.push(getWord(binary_data, index));
+            index += 2;
         }
-        store.weather[show_id] =new Weather(show_id, temps, feels, precip);
+        store.weather[show_id] = new Weather(show_id, temps, feels, precip);
         // should be a zero to verify the end
         if(getWord(binary_data, index) != 0) {
             log('Error parsing weather');

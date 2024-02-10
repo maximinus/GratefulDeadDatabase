@@ -19,6 +19,7 @@ const WEATHER_DATA = 'weather';
 const LAST_UPDATE = 'update-data';
 
 const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const TABLE_ENTRIES = 6;
 const YEAR_OFFSET = 65;
 const YEARS_PLAYED = 31;

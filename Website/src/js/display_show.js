@@ -12,7 +12,7 @@ class ShowStorage {
 };
 
 // can't call this now as store may or may not be setup
-var show_store = new ShowStorage();
+let show_store = new ShowStorage();
 
 function getRealTemps(temps) {
     // convert the temps from the actual values to the real data
@@ -22,8 +22,8 @@ function getRealTemps(temps) {
     //   Multiply by 10 and drop the fraction:   113.4 -> 1134
     //   Add 1
     // so the reverse:
-    new_data = []
-    for(var t of temps) {
+    let new_data = []
+    for(let t of temps) {
         // if zero, then null
         if(t == 0) {
             new_data.push(null);
@@ -37,37 +37,37 @@ function getRealTemps(temps) {
 function getRealPrecipitation(precips) {
     // convert precipitation
     // take the value, subtract 1 and divide by 10000
-    new_data = []
-    for(var p of precips) {
+    let new_data = []
+    for(let p of precips) {
         new_data.push(convertPrecip(p));
     }
     return new_data;
 };
 
 function getRarestSongs() {
-    year_of_show = show_store.current_show.js_date.getFullYear()
+    let year_of_show = show_store.current_show.js_date.getFullYear()
     // first we need get all songs and remove duplicates
     // then get the total times played for each song
     // then sort and take the first X
-    var all_songs = show_store.current_show.getAllUniqueSongs();
-    var results = [];
-    var buckets = {}
-    for(var song of all_songs) {
-        var name = getSongName(song.song);
+    let all_songs = show_store.current_show.getAllUniqueSongs();
+    let results = [];
+    let buckets = {}
+    for(let song of all_songs) {
+        let name = getSongName(song.song);
         results.push([convertToLink(name, `song-${name}`), store.song_data[name].length]);
         buckets[song.song] = 0;
     }
-    for(show of getAllShowsInYear(year_of_show)) {
-        for(played_song of show.getAllSongs()) {
+    for(let show of getAllShowsInYear(year_of_show)) {
+        for(let played_song of show.getAllSongs()) {
             if(buckets.hasOwnProperty(played_song.song)) {
                 buckets[played_song.song] += 1;
             }
         }
     }
     // put buckets into a list, add names and sort
-    var year_list = []
-    for(var key in buckets) {
-        var song_name = getSongName(key);
+    let year_list = []
+    for(let key in buckets) {
+        let song_name = getSongName(key);
         year_list.push([convertToLink(song_name, `song-${song_name}`), buckets[key]]);
     }
     year_list.sort((a, b) => (a[1] > b[1]) ? 1 : -1);
@@ -80,36 +80,36 @@ function getRarestSongs() {
 
 
 function getRarestCombos() {
-    year_of_show = show_store.current_show.js_date.getFullYear();
+    let year_of_show = show_store.current_show.js_date.getFullYear();
     // so for this, first we get all songs and remove dups
     // then we merge ones next to each other in pairs
     // so if we have A-B-C-D we get A-B, B-C, C-D. We split totally over set-breaks
     // then we go along each one and find instances of the first of the pair
     // we count these instances
     // sort by this count and then take the first X
-    var all_sets = show_store.current_show.getAllUniqueSongsBySet();
-    var combos = []
-    for(var single_set of all_sets) {
+    let all_sets = show_store.current_show.getAllUniqueSongsBySet();
+    let combos = []
+    for(let single_set of all_sets) {
         if(single_set.length < 2) {
             continue;
         }
-        for(var i=0; i < single_set.length - 1; i++) {
+        for(let i=0; i < single_set.length - 1; i++) {
             // holds scores for all time and this year
             combos.push([single_set[i].song, single_set[i+1].song, 0, 0]);
         }
     }
     // now we have a list of all combos
     // Iterate over all shows
-    for(var single_show of store.shows) {
+    for(let single_show of store.shows) {
         // get all songs
-        var all_songs = single_show.getAllSongs();
+        let all_songs = single_show.getAllSongs();
         if(all_songs.length < 2) {
             continue;
         }
         // iterate over from up to penultimate
-        for(var i=0; i < all_songs.length - 1; i++) {
+        for(let i=0; i < all_songs.length - 1; i++) {
             // over all combos
-            for(var test_combo of combos) {
+            for(let test_combo of combos) {
                 if((test_combo[0] == all_songs[i].song) && (test_combo[1] == all_songs[i+1].song)) {
                     // a match, count
                     test_combo[2] += 1;
@@ -125,22 +125,22 @@ function getRarestCombos() {
     // sort, build lists for popouts and return sliced data
     combos.sort((a, b) => (a[2] > b[2]) ? 1 : -1);
     show_store.rarest_combos = [];
-    for(var single_combo of combos) {
+    for(let single_combo of combos) {
         // build links here as well
-        var name1 = getSongName(single_combo[0]);
-        var name2 = getSongName(single_combo[1]);
-        var text1 = convertToLink(name1, `song-${name1}`);
-        var text2 = convertToLink(name2, `song-${name2}`);
+        let name1 = getSongName(single_combo[0]);
+        let name2 = getSongName(single_combo[1]);
+        let text1 = convertToLink(name1, `song-${name1}`);
+        let text2 = convertToLink(name2, `song-${name2}`);
         show_store.rarest_combos.push([`${text1} / ${text2}`, single_combo[2]]);
     }
 
     combos.sort((a, b) => (a[3] > b[3]) ? 1 : -1);
     show_store.rarest_combos_year = [];
-    for(var single_combo of combos) {
-        var name1 = getSongName(single_combo[0]);
-        var name2 = getSongName(single_combo[1]);
-        var text1 = convertToLink(name1, `song-${name1}`);
-        var text2 = convertToLink(name2, `song-${name2}`);
+    for(let single_combo of combos) {
+        let name1 = getSongName(single_combo[0]);
+        let name2 = getSongName(single_combo[1]);
+        let text1 = convertToLink(name1, `song-${name1}`);
+        let text2 = convertToLink(name2, `song-${name2}`);
         show_store.rarest_combos_year.push([`${text1} / ${text2}`, single_combo[3]]);
     }
     return [show_store.rarest_combos.slice(0, TABLE_ENTRIES), show_store.rarest_combos_year.slice(0, TABLE_ENTRIES)]
@@ -158,7 +158,7 @@ function getWeatherTimeString(value) {
     if(value == 24) {
         value = 0;
     }
-    var time_text = `${value} AM`;
+    let time_text = `${value} AM`;
     if(value > 12) {
         time_text = `${value - 12} PM`;
     }
@@ -166,16 +166,16 @@ function getWeatherTimeString(value) {
 };
 
 function renderWeatherChart(chart_id) {
-    var show_id = show_store.current_show.id;
-    if((show_id in store.weather) == false) {
+    let show_id = show_store.current_show.id;
+    if((show_id in store.weather) === false) {
         showNoWeather();
         return;
     } else {
         document.getElementById('weather-results-title').innerHTML = 'Weather';
     }
-    var temps = getRealTemps(store.weather[show_id].temps);
-    var feels = getRealTemps(store.weather[show_id].feels);
-    var rain = getRealPrecipitation(store.weather[show_id].precip);
+    let temps = getRealTemps(store.weather[show_id].temps);
+    let feels = getRealTemps(store.weather[show_id].feels);
+    let rain = getRealPrecipitation(store.weather[show_id].precip);
 
     // if the sum of the temps is zero, we also have no weather
     if(temps.reduce((a, b) => a + b, 0) == 0) {
@@ -184,7 +184,7 @@ function renderWeatherChart(chart_id) {
         return;
     }
 
-    var chart = Highcharts.chart(chart_id, {
+    let chart = Highcharts.chart(chart_id, {
         chart: {
             type: 'line'
         },
@@ -210,7 +210,7 @@ function renderWeatherChart(chart_id) {
             },
             labels: {
                 formatter: function() {
-                    var label = this.axis.defaultLabelFormatter.call(this);
+                    let label = this.axis.defaultLabelFormatter.call(this);
                     if (parseInt(label) > 12) {
                         return `${label - 12}pm`;
                     } else {
@@ -226,7 +226,7 @@ function renderWeatherChart(chart_id) {
                 },
                 labels: {
                     formatter: function() {
-                        var label = this.axis.defaultLabelFormatter.call(this);
+                        let label = this.axis.defaultLabelFormatter.call(this);
                         return `${label}°`
                     }
                 }
@@ -237,7 +237,7 @@ function renderWeatherChart(chart_id) {
                 },
                 labels: {
                     formatter: function() {
-                        var label = this.axis.defaultLabelFormatter.call(this);
+                        let label = this.axis.defaultLabelFormatter.call(this);
                         return `${label}`
                     }
                 },
@@ -252,20 +252,19 @@ function renderWeatherChart(chart_id) {
             valueDecimals: 2,
             formatter: function () {
                 // different for rain, as there are 2 lines
-                console.log(this);
                 if(this.series.name == 'Rain') {
-                    start_time = getWeatherTimeString(this.x);
-                    end_time = getWeatherTimeString(this.x + 1);
+                    let start_time = getWeatherTimeString(this.x);
+                    let end_time = getWeatherTimeString(this.x + 1);
                     if(this.y <= 0) {
                         return `From ${start_time}-${end_time}, there was no rain`;
                     }
                     return `From ${start_time}-${end_time}, ${this.y} inches of rain`;
                 }
-                var time_text = `${this.x} AM`;
+                let time_text = `${this.x} AM`;
                 if(this.x > 12) {
                     time_text = `${this.x} PM`;
                 }
-                var celcius = (this.y - 32.0) * (5.0/9.0);
+                let celcius = (this.y - 32.0) * (5.0/9.0);
                 return `At ${time_text}, it was ${this.y.toFixed(1)}°F / ${celcius.toFixed(1)}°C`;
             },
         },
@@ -298,15 +297,15 @@ function renderWeatherChart(chart_id) {
 };
 
 function buildCombos() {
-    var data = getRarestCombos();
+    let data = getRarestCombos();
     // already sliced to correct size
-    var table_all_data = data[0];
-    var table_year_data = data[1];
+    let table_all_data = data[0];
+    let table_year_data = data[1];
     // these entries are of the form [name,total]
     // scroll through the children of the table and vist them all
-    var index = 0;
-    var table = document.getElementById('show-rarest-combos');
-    for(var row of table.children) {
+    let index = 0;
+    let table = document.getElementById('show-rarest-combos');
+    for(let row of table.children) {
         if(index >= table_all_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
@@ -317,9 +316,9 @@ function buildCombos() {
         index += 1;
     }
     // scroll through the children of the table and vist them all
-    var index = 0;
-    var table = document.getElementById('show-rarest-combos-year');
-    for(var row of table.children) {
+    index = 0;
+    table = document.getElementById('show-rarest-combos-year');
+    for(let row of table.children) {
         if(index >= table_year_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
@@ -332,14 +331,14 @@ function buildCombos() {
 };
 
 function buildRarestSongs() {
-    var data = getRarestSongs();
+    let data = getRarestSongs();
     // already sliced to correct size
-    var table_all_data = data[0];
-    var table_year_data = data[1];
-    var index = 0;
-    var table = document.getElementById('show-rarest-songs');
+    let table_all_data = data[0];
+    let table_year_data = data[1];
+    let index = 0;
+    let table = document.getElementById('show-rarest-songs');
     // data is in format [song-name, total]
-    for(var row of table.children) {
+    for(let row of table.children) {
         if(index >= table_all_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
@@ -350,9 +349,9 @@ function buildRarestSongs() {
         index += 1;
     }
     index = 0;
-    var table = document.getElementById('show-rarest-songs-year');
+    table = document.getElementById('show-rarest-songs-year');
     // data is in format [song-name, total]
-    for(var row of table.children) {
+    for(let row of table.children) {
         if(index >= table_year_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
@@ -365,19 +364,18 @@ function buildRarestSongs() {
 };
 
 function getShowRenderData() {
-    var show_data = {};
-    var show_sets = [];
-    for(var single_set of show_store.current_show.sets) {
-        var new_set = [];
-        for(var single_song of single_set.songs) {
-            var song_data = {};
+    let show_sets = [];
+    for(let single_set of show_store.current_show.sets) {
+        let new_set = [];
+        for(let single_song of single_set.songs) {
+            let song_data = {};
             song_data['name'] = getSongName(single_song.song);
             if(single_song.seconds == 0) {
                 song_data['time'] = '???';
             } else {
                 song_data['time'] = convertTime(single_song.seconds);
             }
-            if(single_song.sequed == true) {
+            if(single_song.sequed === true) {
                 song_data['trans'] = '>';
             } else {
                 song_data['trans'] = '/';
@@ -386,12 +384,12 @@ function getShowRenderData() {
         }
         show_sets.push(new_set);
     }
-    sets_all_data = [];
-    index = 1;
+    let sets_all_data = [];
+    let index = 1;
     // a bit complicated, hopefully not too crazy
-    for(var single_set of show_sets) {
-        var set_data = {'set-name': `Set ${index}`};
-        var final_song = single_set.pop();
+    for(let single_set of show_sets) {
+        let set_data = {'set-name': `Set ${index}`};
+        let final_song = single_set.pop();
         if(single_set.length == 0) {
             set_data['songs'] = [];
         } else {
@@ -402,7 +400,7 @@ function getShowRenderData() {
         sets_all_data.push(set_data);
         index += 1;
     }
-    this_venue = getVenue(show_store.current_show.venue)
+    let this_venue = getVenue(show_store.current_show.venue)
     return {'show-day': getActualDay(getRealDate(show_store.current_show.date)),
             'show-date': convertDateLong(show_store.current_show.date),
             'show-venue': this_venue.getVenueName(),
@@ -410,13 +408,13 @@ function getShowRenderData() {
 };
 
 function displayVenueInformation() {
-    var this_show_date = show_store.current_show.date;
-    var this_venue = getVenue(show_store.current_show.venue)
-    var venue_id = show_store.current_show.venue;
+    let this_show_date = show_store.current_show.date;
+    let this_venue = getVenue(show_store.current_show.venue)
+    let venue_id = show_store.current_show.venue;
     // work through shows. These ARE in order
-    var total_shows = 0;
-    var total_before = 0;
-    for(var single_show of store.shows) {
+    let total_shows = 0;
+    let total_before = 0;
+    for(let single_show of store.shows) {
         // look for the venue
         if(single_show.venue == venue_id) {
             total_shows += 1;
@@ -425,22 +423,22 @@ function displayVenueInformation() {
             }
         }
     }
-    var total_text = '';
+    let total_text = '';
     if(total_shows == 1) {
         total_text = 'Only show played here';
     } else {
         total_text = `${total_shows} shows played here. This was the ${total_before}${nth(total_before)} time.`;
     }
     // Now we can get all the data
-    var venue_data = {'venue': convertToLink(this_venue.venue, `venue-${venue_id}`),
+    let venue_data = {'venue': convertToLink(this_venue.venue, `venue-${venue_id}`),
                       'city': this_venue.city,
                       'state': `${this_venue.state}, ${this_venue.country}`,
                       'location': `Lat: ${this_venue.latitude}, Long: ${this_venue.longitude}`,
                       'link': getGoogleMapsLink(this_venue),
                       'total': total_text};
-    var template = document.getElementById('venue-template').innerHTML;
+    let template = document.getElementById('venue-template').innerHTML;
     // clear out show-render and place the template
-    var new_html = Mustache.render(template, venue_data);
+    let new_html = Mustache.render(template, venue_data);
     document.getElementById('show-venue-information').innerHTML = new_html;
 };
 
@@ -462,7 +460,7 @@ function  popOutShowRarestSongsYear() {
 
 function popOutWeather() {
     // clear current chart data
-    var table = document.getElementById('pop-up-charts');
+    let table = document.getElementById('pop-up-charts');
     table.replaceChildren();
     // set title
     document.getElementById('dialog-chart-title').innerHTML = 'Weather For the Day';
@@ -485,9 +483,9 @@ function updateShowTab(single_show) {
     show_store.current_show = single_show;
     log(`Rendering show ${show_store.current_show.js_date.toDateString()}`);
     // get the template and render
-    var template = document.getElementById('show-template').innerHTML;
+    let template = document.getElementById('show-template').innerHTML;
     // clear out show-render and place the template
-    var new_html = Mustache.render(template, getShowRenderData());
+    let new_html = Mustache.render(template, getShowRenderData());
     document.getElementById('show-render').innerHTML = new_html;
     renderWeatherChart('weather-chart');
     buildCombos();

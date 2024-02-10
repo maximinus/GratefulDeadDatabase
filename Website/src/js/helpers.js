@@ -175,6 +175,23 @@ function getSongName(index) {
     return store.songs[index];
 };
 
+function songNametoSlug(song_name) {
+    // song_name is a string, adjust
+    return song_name.replaceAll(' ', '-');
+};
+
+function dateToSlug(date) {
+    let day = date.getDate();
+    let month = MONTHS[date.getMonth()];
+    let year = date.getYear() + 1900;
+    return `${day}-${month}-${year}`;
+};
+
+function venueToSlug(venue_id) {
+    let venue = getVenue(venue_id);
+    return venue.venue.replaceAll(' ', '-'); 
+};
+
 function getVenue(venue_id) {
     // the venues are not sorted, so get this way
     for(var venue of store.venues) {

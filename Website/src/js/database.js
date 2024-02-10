@@ -30,26 +30,33 @@ function updateSearchInputOptions() {
 };
 
 function changeTabView(data_type, data) {
+	let url_string = '';
 	switch(data_type) {
 		case SONGS_TAB:
 			updateSongTab(data);
+			url_string = `#song-${songNametoSlug(data)}`;
 			break;
 		case SHOWS_TAB:
 			updateShowTab(data);
+			url_string = `#show-${dateToSlug(data.js_date)}`;
 			break;
 		case YEARS_TAB:
 			updateYear(data);
+			url_string = `#year-${data}`;
 			break;
 		case VENUES_TAB:
 			updateVenueTab(data);
+			url_string = `#venue-${venueToSlug(data)}`;
+			break;
+		case ABOUT_TAB:
+			url_string = '#about'
 			break;
 		default:
 			log(`Invalid tab to go to: ${data_type} with data ${data}`);
 			return;
 	}
-	log(`Changing tab to ${data_type}`);
 	// set state for history back button
-	window.history.pushState(`${data_type}-${data}`, null, '');
+	window.history.pushState(url_string, null, url_string);
 	// might be a link from a popout; no harm in hiding if already hidden
 	hidePopOut();
 	// also need to go to the top of the page
@@ -192,7 +199,7 @@ function checkInput(event) {
 };
 
 function handleLink(link_txt) {
-	log(`Going to ${link_txt}`);
+	console.log(`Going to ${link_txt}`);
 	// also check the link is valid
 	var link_data = link_txt.split('-');
 	var link_tab = link_data[0];
@@ -213,8 +220,17 @@ function handleLink(link_txt) {
 		changeTabView(SONGS_TAB, link_data);
 		return;
 	}
-	if(link_tab = 'venue') {
+	if(link_tab == 'venue') {
 		changeTabView(VENUES_TAB, link_data);
+		return;
+	}
+	if(link_tab == 'year') {
+		changeTabView(YEARS_TAB, link_data);
+		return;
+	}
+	if(link_tab == 'about') {
+		changeTabView(ABOUT_TAB, '');
+		return;
 	}
 };
 
@@ -261,6 +277,7 @@ function addCallbacks() {
 	}
 	// intercept all browser back events
 	window.onpopstate = function (event) {
+		console.log(event);
 		if(event.state) {
 			var state = event.state;
 			log(`Navigating back to ${state}`);
@@ -283,6 +300,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	getData();
 	// add events
 	addCallbacks();
+	// we may have a state already, in which case deal with it
 	// add our first state, which is here
-	window.history.pushState(`song-${DEFAULT_SONG}`, null, '');
+	let start_url = `#songs-tab-${songNametoSlug(DEFAULT_SONG)}`
+	window.history.pushState(start_url, null, start_url);
 });

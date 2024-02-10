@@ -19,12 +19,15 @@ Overall:
 Known important bugs that must be fixed:
     Back button seems spotty at times
     URL should be shown and a bookmark should be able to be set
+    Make sure the data always use a slug format
+        - thie means converting every single "convertToLink" call
 
 Songs:
     Start a list of shows that have no recordings and add to the database
 
 Shows
     If there is no weather data, mention it in the box
+    The song names in the setlist need a link
 
 Years:
     Hottest and coldest shows should show C with a F switch, or both temperatures

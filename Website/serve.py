@@ -11,11 +11,12 @@ import multiprocessing
 
 from pathlib import Path
 
-DIST_FOLDER = Path('./dist')
+# we write from the physical disk to prevent so many writes on the SSD
+DIST_FOLDER = Path('/home/sparky/data/WebServe/dist')
 JSON_FILE = Path('./data.json')
 HTML_FILE = Path('./src/html/index.html')
 PARTIALS_FOLDER = Path('./src/html')
-OUTPUT_HTML = Path('./dist/index.html')
+OUTPUT_HTML = DIST_FOLDER / 'index.html'
 TEMPLATE_FOLDER = Path('./src/html/templates')
 
 # folders to copy

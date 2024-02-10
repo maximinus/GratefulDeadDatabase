@@ -9,7 +9,7 @@ class ChartsStorage {
     };
 };
 
-var charts_store = new ChartsStorage();
+let charts_store = new ChartsStorage();
 
 // only code to render, update and display the song charts should be here
 // that DOES include data collection specific to the charts.
@@ -17,15 +17,15 @@ var charts_store = new ChartsStorage();
 
 function getAllTimesPlayed(song_title) {
     // create new array
-    var years = new Array(YEARS_PLAYED);
-    var percent = new Array(YEARS_PLAYED);
+    let years = new Array(YEARS_PLAYED);
+    let percent = new Array(YEARS_PLAYED);
     years.fill(0);
     percent.fill(0);
-    var index = getIndexOfSong(song_title);
-    for(var show of store.shows) {
+    let index = getIndexOfSong(song_title);
+    for(let show of store.shows) {
         // how many matches
-        var matches = show.getAllSongs().filter(x => x.song == index).length;
-        var year_index = getYear(show.date) - YEAR_OFFSET;
+        let matches = show.getAllSongs().filter(x => x.song == index).length;
+        let year_index = getYear(show.date) - YEAR_OFFSET;
         if(matches != 0) {
             // get the year
             years[year_index] += 1;
@@ -35,11 +35,11 @@ function getAllTimesPlayed(song_title) {
     }
     // avg per year is applied for all years that song was played
     // this means we add nulls for the years it was not played
-    var avg_per_year = 0
-    var total = 0
-    var total_years = 0
+    let avg_per_year = 0
+    let total = 0
+    let total_years = 0
     // recalculate the %
-    for(var i = 0; i < percent.length; i++) {
+    for(let i = 0; i < percent.length; i++) {
         if (years[i] != 0) {
             // i.e. some shows that year
             total_years += 1;
@@ -56,13 +56,13 @@ function getAllTimesPlayed(song_title) {
 };
 
 function buildPlayed(song_title, element_name) {
-    var data = getAllTimesPlayed(song_title);
-    var played = data[0];
-    var averages = new Array(played.length);
+    let data = getAllTimesPlayed(song_title);
+    let played = data[0];
+    let averages = new Array(played.length);
     averages.fill(data[1]);
-    var min_y_value = Math.floor(Math.min.apply(Math, played));
-    var max_y_value = Math.ceil(Math.max.apply(Math, played));
-    var chart = Highcharts.chart(element_name, {
+    let min_y_value = Math.floor(Math.min(...played));
+    let max_y_value = Math.ceil(Math.max(...played));
+    Highcharts.chart(element_name, {
         chart: {
             type: 'line'
         },
@@ -130,18 +130,18 @@ function buildPlayed(song_title, element_name) {
 
 function getAverageLength(song_title) {
     // return an array of [results, global_time]
-    var averages = new Array(YEARS_PLAYED);
-    for(var i = 0; i < averages.length; i++) {
+    let averages = new Array(YEARS_PLAYED);
+    for(let i = 0; i < averages.length; i++) {
         averages[i] = [0,0];
     }
-    var index = getIndexOfSong(song_title);
+    let index = getIndexOfSong(song_title);
     // calculate the "global average"
-    var times_played = 0;
-    var total_time = 0;
+    let times_played = 0;
+    let total_time = 0;
     // add together the sum and total for all years
-    for(var show of store.shows) {
-        var year_index = getYear(show.date) - YEAR_OFFSET;
-        for(var song of show.getAllSongs()) {
+    for(let show of store.shows) {
+        let year_index = getYear(show.date) - YEAR_OFFSET;
+        for(let song of show.getAllSongs()) {
             if(song.song == index) {
                 // it's a match, add if we have timings
                 if(song.seconds != 65535) {
@@ -155,16 +155,16 @@ function getAverageLength(song_title) {
     }
 
     // calculate the global average
-    var global_average = 0;
+    let global_average = 0;
     if (times_played != 0 && total_time != 0) {
         // we want average in minutes
         global_average = (total_time / times_played) / 60.0;
     }
 
     // now we can calculate the averages
-    var final_results = new Array(YEARS_PLAYED);
+    let final_results = new Array(YEARS_PLAYED);
     final_results.fill(0);
-    for(var i = 0; i < averages.length; i++) {
+    for(let i = 0; i < averages.length; i++) {
         if(averages[i][0] != 0) {
             final_results[i] = averages[i][1] / averages[i][0];
             // give as minutes
@@ -177,21 +177,21 @@ function getAverageLength(song_title) {
 };
 
 function buildLength(song_title, element_name) {
-    var all_data = getAverageLength(song_title);
-    var lengths = all_data[0];
-    var average = all_data[1];
+    let all_data = getAverageLength(song_title);
+    let lengths = all_data[0];
+    let average = all_data[1];
     // we need a set of data the same length as lengths
-    var average_global = new Array(lengths.length);
+    let average_global = new Array(lengths.length);
     average_global.fill(average);
     // roll back to seconds to get as time string
     // ensure conversion to integer otherwise the times go wrong
-    var average_global_text = convertTime(Math.round(average * 60.0));
+    let average_global_text = convertTime(Math.round(average * 60.0));
     // sort out the y axis range
     // we need to take the original and remove all nulls from it
-    var values = lengths.filter(Number) 
-    var min_y_value = Math.floor(Math.min.apply(Math, values));
-    var max_y_value = Math.ceil(Math.max.apply(Math, values));
-    var chart = Highcharts.chart(element_name, {
+    let values = lengths.filter(Number) 
+    let min_y_value = Math.floor(Math.min(...values));
+    let max_y_value = Math.ceil(Math.max(...values));
+    Highcharts.chart(element_name, {
         chart: {
             type: 'line'
         },
@@ -233,7 +233,7 @@ function buildLength(song_title, element_name) {
             // only show 2 decimal places on tooltip
             valueDecimals: 2,
             formatter: function () {
-                var time_length = convertTime(Math.round(this.y * 60.0));
+                let time_length = convertTime(Math.round(this.y * 60.0));
                 return `${this.x}: ${time_length}`;
             }
         },
@@ -265,19 +265,19 @@ function getAveragePosition(song_title) {
     // we add the set number (set 1 = 0, set 2 = 1 etc)
     // we calculate all results and place in buckets
     // then calculate the average of all the buckets
-    var years = new Array(YEARS_PLAYED);
-    for(var i = 0; i < years.length; i++) {
+    let years = new Array(YEARS_PLAYED);
+    for(let i = 0; i < years.length; i++) {
         years[i] = [];
     }
-    var index = getIndexOfSong(song_title);
-    for(var show of store.shows) {
-        var year_index = getYear(show.date) - YEAR_OFFSET;
-        var set_index = 1;
-        for(var single_set of show.sets) {
+    let index = getIndexOfSong(song_title);
+    for(let show of store.shows) {
+        let year_index = getYear(show.date) - YEAR_OFFSET;
+        let set_index = 1;
+        for(let single_set of show.sets) {
             // calculate rising offset
-            var offset = 1.0 / single_set.songs.length;
-            var set_place = set_index;
-            for(var song of single_set.songs) {
+            let offset = 1.0 / single_set.songs.length;
+            let set_place = set_index;
+            for(let song of single_set.songs) {
                 if(song.song == index) {
                     years[year_index].push(set_place);
                 }
@@ -287,13 +287,13 @@ function getAveragePosition(song_title) {
         }
     }
     // now we have a list for every year, so calculate the average
-    var final_results = new Array(YEARS_PLAYED);
-    var global_total = 0;
-    var global_length = 0;
-    for(var i = 0; i < years.length; i++) {
+    let final_results = new Array(YEARS_PLAYED);
+    let global_total = 0;
+    let global_length = 0;
+    for(let i = 0; i < years.length; i++) {
         if(years[i].length != 0) {
             // we have some data. Add up set positions and divide by total
-            var year_sum = years[i].reduce((a, b) => a + b, 0)
+            let year_sum = years[i].reduce((a, b) => a + b, 0)
             final_results[i] = year_sum / years[i].length;
             global_total += year_sum
             global_length += years[i].length;
@@ -301,18 +301,18 @@ function getAveragePosition(song_title) {
             final_results[i] = null;
         }
     }
-    var global_average = Math.round((global_total / global_length) * 100) / 100;
+    let global_average = Math.round((global_total / global_length) * 100) / 100;
     return [final_results, global_average];
 }
 
 function buildPosition(song_title, element_name) {
-    var data = getAveragePosition(song_title);
-    var positions = data[0];
-    var average_pos = new Array(positions.length);
-    for(var i = 0; i < positions.length; i++) {
+    let data = getAveragePosition(song_title);
+    let positions = data[0];
+    let average_pos = new Array(positions.length);
+    for(let i = 0; i < positions.length; i++) {
         average_pos[i] = data[1];
     }
-    var chart = Highcharts.chart(element_name, {
+    Highcharts.chart(element_name, {
         chart: {
             type: 'line'
         },
@@ -386,22 +386,22 @@ function buildLengthVersions(song_title) {
     // get the versions first
     // get the songs, and sort by length
     // create a new list with the 65535 and zero times stripped out
-    var data = store.song_data[song_title].filter(x => (x.seconds != 65535 && x.seconds != 0));
+    let data = store.song_data[song_title].filter(x => (x.seconds != 65535 && x.seconds != 0));
     data.sort((a, b) => (a.seconds < b.seconds) ? 1 : -1);
-    var length_versions = [];
-    for(var single_song of data) {
-        var date_int = getShowFromId(single_song.show_id).date
-        var date_text = convertDate(date_int);
-        var link = convertToLink(date_text, `show-${single_song.show_id}`)
-        var time_length = convertTime(single_song.seconds);
+    let length_versions = [];
+    for(let single_song of data) {
+        let date_int = getShowFromId(single_song.show_id).date
+        let date_text = convertDate(date_int);
+        let link = convertToLink(date_text, `show-${single_song.show_id}`)
+        let time_length = convertTime(single_song.seconds);
         length_versions.push([link, time_length]);
     }
     // get the first 5
-    var table_data = length_versions.slice(0, TABLE_ENTRIES);
+    let table_data = length_versions.slice(0, TABLE_ENTRIES);
     // scroll through the children of the table and vist them all
-    var index = 0;
-    var table = document.getElementById('longest-versions');
-    for(var row of table.children) {
+    let index = 0;
+    let table = document.getElementById('longest-versions');
+    for(let row of table.children) {
         if(index >= table_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
@@ -415,10 +415,10 @@ function buildLengthVersions(song_title) {
     
     // invert the list and go again
     length_versions.reverse();
-    var table_data = length_versions.slice(0, TABLE_ENTRIES);
-    var index = 0;
-    var table = document.getElementById('shortest-versions');
-    for(var row of table.children) {
+    table_data = length_versions.slice(0, TABLE_ENTRIES);
+    index = 0;
+    table = document.getElementById('shortest-versions');
+    for(let row of table.children) {
         if(index >= table_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
@@ -434,22 +434,22 @@ function buildLengthVersions(song_title) {
 };
 
 function buildFirstLastVersions(song_title) {
-    var data = store.song_data[song_title];
-    var table_data = data.slice(0, TABLE_ENTRIES);
+    let data = store.song_data[song_title];
+    let table_data = data.slice(0, TABLE_ENTRIES);
     // scroll through the children of the table and visit them all
-    var index = 0;
-    var last = getShowFromId(table_data[0].show_id).date;
-    var table = document.getElementById('first-played');
-    for(var row of table.children) {
+    let index = 0;
+    let last = getShowFromId(table_data[0].show_id).date;
+    let table = document.getElementById('first-played');
+    for(let row of table.children) {
         if(index >= table_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            var row_date = getShowFromId(table_data[index].show_id).date;
+            let row_date = getShowFromId(table_data[index].show_id).date;
             row.children[1].innerHTML = convertToLink(convertDate(row_date), `show-${table_data[index].show_id}`);
             // if 0, will be first version
             if(index != 0) {
-                var delta = row_date - last;
+                let delta = row_date - last;
                 row.children[2].innerHTML = `<i>${dayDays(delta)} after first</i>`;
             } else {
                 row.children[2].innerHTML = '<i>First time played</i>';
@@ -459,19 +459,19 @@ function buildFirstLastVersions(song_title) {
     }
     // invert the list and go again
     data.reverse()
-    var table_data = data.slice(0, TABLE_ENTRIES);
-    var index = 0;
-    var last = getShowFromId(table_data[0].show_id).date;
-    var table = document.getElementById('last-played');
-    for(var row of table.children) {
+    table_data = data.slice(0, TABLE_ENTRIES);
+    index = 0;
+    last = getShowFromId(table_data[0].show_id).date;
+    table = document.getElementById('last-played');
+    for(let row of table.children) {
         if(index >= table_data.length) {
             row.children[1].innerHTML = '';
             row.children[2].innerHTML = '';
         } else {
-            var row_date = getShowFromId(table_data[index].show_id).date;
+            let row_date = getShowFromId(table_data[index].show_id).date;
             row.children[1].innerHTML = convertToLink(convertDate(row_date), `show-${table_data[index].show_id}`);
             if(index != 0) {
-                var delta = last - row_date;
+                let delta = last - row_date;
                 row.children[2].innerHTML = `<i>${dayDays(delta)} until next</i>`;
             } else {
                 row.children[2].innerHTML = '<i>Last time played</i>';
@@ -489,18 +489,18 @@ function buildBeforeAfterSongs(song_title) {
     song_title = getIndexOfSong(song_title);
 
     // we need to cycle over all the shows
-    var songs_before = {};
-    var songs_after = {};
-    for(var show of store.shows) {
-        var set_number = 0;
-        for(var single_set of show.sets) {
-            var index = 0;
-            for(var single_song of single_set.songs) {
+    let songs_before = {};
+    let songs_after = {};
+    for(let show of store.shows) {
+        let set_number = 0;
+        for(let single_set of show.sets) {
+            let index = 0;
+            for(let single_song of single_set.songs) {
                 // found a match?
                 if(single_song.song == song_title) {
                     // get the song before, and the song
-                    var song_before = '';
-                    var song_after = '';
+                    let song_before = '';
+                    let song_after = '';
                     if(index == 0) {
                         song_before = `${getSetName(set_number)} set opener`;
                     } else {
@@ -531,7 +531,7 @@ function buildBeforeAfterSongs(song_title) {
     }
 
     // all of the sets are in buckets, we need to sort them
-    var sbefore = Object.keys(songs_before).map(function(key) {
+    let sbefore = Object.keys(songs_before).map(function(key) {
         return [key, songs_before[key]];
     });
 
@@ -551,7 +551,7 @@ function buildBeforeAfterSongs(song_title) {
     }
 
     // repeat
-    var safter = Object.keys(songs_after).map(function(key) {
+    let safter = Object.keys(songs_after).map(function(key) {
         return [key, songs_after[key]];
     });
     // Sort the array based on the second element
@@ -569,17 +569,17 @@ function buildBeforeAfterSongs(song_title) {
     }
 
     // now update the page
-    var index = 0;
-    var table = document.getElementById('songs-before');
-    for(var row of table.children) {
+    let index = 0;
+    let table = document.getElementById('songs-before');
+    for(let row of table.children) {
         row.children[1].innerHTML = convertToLink(sbefore[index][0], `song-${sbefore[index][0]}`);
         row.children[2].innerHTML = sbefore[index][1];
         index += 1;   
     }
 
-    var index = 0;
-    var table = document.getElementById('songs-after');
-    for(var row of table.children) {
+    index = 0;
+    table = document.getElementById('songs-after');
+    for(let row of table.children) {
         row.children[1].innerHTML = convertToLink(safter[index][0], `song-${safter[index][0]}`);
         row.children[2].innerHTML = safter[index][1];
         index += 1;   
@@ -587,20 +587,20 @@ function buildBeforeAfterSongs(song_title) {
 };
 
 function setLengthTablePopupList(table_data, element) {
-    var row_index = 1
-    for(var song of table_data) {
+    let row_index = 1
+    for(let song of table_data) {
         // simple (!), just add this as a child of the table
         // <tr>
         //   <th scope="row">1</th>
         //   <td>Date</td>
         //   <td>Length</td>
         // </tr>
-        var row = document.createElement('tr');
-        var header = document.createElement('th');
+        let row = document.createElement('tr');
+        let header = document.createElement('th');
         header.setAttribute('scope', 'row');
         header.innerHTML = row_index.toString();
-        var column1 = document.createElement('td');
-        var column2 = document.createElement('td');
+        let column1 = document.createElement('td');
+        let column2 = document.createElement('td');
         column1.innerHTML = song[0];
         column2.innerHTML = song[1];
         row.appendChild(header);
@@ -613,7 +613,7 @@ function setLengthTablePopupList(table_data, element) {
 
 function popOutLongest() {
     resetTableScroll();
-    var table = document.getElementById('table-entry');
+    let table = document.getElementById('table-entry');
     // clear any children of this element
     table.replaceChildren();
     setLengthTablePopupList(charts_store.sorted_by_length, table);
@@ -626,7 +626,7 @@ function popOutShortest() {
     resetTableScroll();
     // same as above function, just in reverse
     charts_store.sorted_by_length.reverse();
-    var table = document.getElementById('table-entry');
+    let table = document.getElementById('table-entry');
     // clear any children of this element
     table.replaceChildren();
     setLengthTablePopupList(charts_store.sorted_by_length, table);
@@ -637,28 +637,28 @@ function popOutShortest() {
 };
 
 function setOrderTablePopupList(table_data, element, message, header_text) {
-    var row_index = 1;
-    var last = -1;
-    for(song of table_data) {
+    let row_index = 1;
+    let last = -1;
+    for(let song of table_data) {
         // simple (!), just add this as a child of the table
         // <tr>
         //   <th scope="row">1</th>
         //   <td>Date</td>
         //   <td>Length</td>
         // </tr>
-        var row = document.createElement('tr');
-        var header = document.createElement('th');
+        let row = document.createElement('tr');
+        let header = document.createElement('th');
         header.setAttribute('scope', 'row');
         header.innerHTML = row_index.toString();
-        var column1 = document.createElement('td');
-        var column2 = document.createElement('td');
-        var song_date = getShowFromId(song.show_id).date;
+        let column1 = document.createElement('td');
+        let column2 = document.createElement('td');
+        let song_date = getShowFromId(song.show_id).date;
         column1.innerHTML = convertToLink(convertDate(song_date), `show-${song.show_id}`);
         if(last < 0) {
             column2.innerHTML = header_text;
         } else {
             // calculate time difference
-            var time_delta = Math.abs(song_date - last);
+            let time_delta = Math.abs(song_date - last);
             column2.innerHTML = `${dayDays(time_delta)} ${message}`;
         }
         last = song_date;
@@ -672,20 +672,20 @@ function setOrderTablePopupList(table_data, element, message, header_text) {
 
 function setSimpleTablePopupList(table_data, element) {
     // just do the list with data[0] and data[1].toString() raw
-    var row_index = 1;
-    for(data of table_data) {
+    let row_index = 1;
+    for(let data of table_data) {
         // simple (!), just add this as a child of the table
         // <tr>
         //   <th scope="row">1</th>
         //   <td>Date</td>
         //   <td>Length</td>
         // </tr>
-        var row = document.createElement('tr');
-        var header = document.createElement('th');
+        let row = document.createElement('tr');
+        let header = document.createElement('th');
         header.setAttribute('scope', 'row');
         header.innerHTML = row_index.toString();
-        var column1 = document.createElement('td');
-        var column2 = document.createElement('td');
+        let column1 = document.createElement('td');
+        let column2 = document.createElement('td');
         column1.innerHTML = data[0];
         column2.innerHTML = data[1].toString();
         row.appendChild(header);
@@ -698,8 +698,8 @@ function setSimpleTablePopupList(table_data, element) {
 
 function popOutFirst() {
     resetTableScroll();
-    var data = store.song_data[charts_store.current_song_title];
-    var table = document.getElementById('table-entry');
+    let data = store.song_data[charts_store.current_song_title];
+    let table = document.getElementById('table-entry');
     table.replaceChildren();
     setOrderTablePopupList(data, table, 'after previous', 'First time played');
     document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: First Versions`;
@@ -708,9 +708,9 @@ function popOutFirst() {
 
 function popOutLast() {
     resetTableScroll();
-    var data = store.song_data[charts_store.current_song_title];
+    let data = store.song_data[charts_store.current_song_title];
     data.reverse();
-    var table = document.getElementById('table-entry');
+    let table = document.getElementById('table-entry');
     table.replaceChildren();
     setOrderTablePopupList(data, table, 'until next', 'Last time played');
     document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: Last Versions`;
@@ -719,20 +719,20 @@ function popOutLast() {
 };
 
 function setBeforeAfterPopupList(table_data, element) {
-    var row_index = 1
-    for(var song of table_data) {
+    let row_index = 1
+    for(let song of table_data) {
         // simple (!), just add this as a child of the table
         // <tr>
         //   <th scope="row">1</th>
         //   <td>Date</td>
         //   <td>Length</td>
         // </tr>
-        var row = document.createElement('tr');
-        var header = document.createElement('th');
+        let row = document.createElement('tr');
+        let header = document.createElement('th');
         header.setAttribute('scope', 'row');
         header.innerHTML = row_index.toString();
-        var column1 = document.createElement('td');
-        var column2 = document.createElement('td');
+        let column1 = document.createElement('td');
+        let column2 = document.createElement('td');
         column1.innerHTML = convertToLink(song[0], `song-${song[0]}`);
         column2.innerHTML = song[1];
         row.appendChild(header);
@@ -745,8 +745,8 @@ function setBeforeAfterPopupList(table_data, element) {
 
 function popOutBefore() {
     resetTableScroll();
-    var data = charts_store.played_before;
-    var table = document.getElementById('table-entry');
+    let data = charts_store.played_before;
+    let table = document.getElementById('table-entry');
     table.replaceChildren();
     setBeforeAfterPopupList(data, table);
     document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: Songs Before`;
@@ -755,8 +755,8 @@ function popOutBefore() {
 
 function popOutAfter() {
     resetTableScroll();
-    var data = charts_store.played_after;
-    var table = document.getElementById('table-entry');
+    let data = charts_store.played_after;
+    let table = document.getElementById('table-entry');
     table.replaceChildren();
     setBeforeAfterPopupList(data, table);
     document.getElementById('dialog-table-title').innerHTML = `${charts_store.current_song_title}: Songs After`;
@@ -767,7 +767,7 @@ function popOutAfter() {
 function popOutPlayed() {
     resetTableScroll();
     // clear current chart data
-    var table = document.getElementById('pop-up-charts');
+    let table = document.getElementById('pop-up-charts');
     table.replaceChildren();
     // set title
     document.getElementById('dialog-chart-title').innerHTML = 'Played Per Year';
@@ -780,7 +780,7 @@ function popOutPlayed() {
 function popOutAverage() {
     resetTableScroll();
     // clear current chart data
-    var table = document.getElementById('pop-up-charts');
+    let table = document.getElementById('pop-up-charts');
     table.replaceChildren();
     // set title
     document.getElementById('dialog-chart-title').innerHTML = 'Average Length Per Year';
@@ -792,7 +792,7 @@ function popOutAverage() {
 
 function popOutPosition() {
     resetTableScroll();
-    var table = document.getElementById('pop-up-charts');
+    let table = document.getElementById('pop-up-charts');
     table.replaceChildren();
     // set title
     document.getElementById('dialog-chart-title').innerHTML = 'Average Set Position';
@@ -812,29 +812,29 @@ function buildSongText(song_title) {
     // what song # it is, what show # played at
     // Example: Played 352 times, from 14th Apr 71 to 6th July 95 (24 years 204 days).<br />
     //          It was the 49th different song played and first played at the 672nd recorded show.
-    var data = store.song_data[song_title];
-    var total_times_played = data.length;
-    var first_played = getShowFromId(data[0].show_id);
-    var last_played = getShowFromId(data[data.length - 1].show_id);
+    let data = store.song_data[song_title];
+    let total_times_played = data.length;
+    let first_played = getShowFromId(data[0].show_id);
+    let last_played = getShowFromId(data[data.length - 1].show_id);
 
     // get the time delta
-    var start_date = new Date(1950, 0, 1);
+    let start_date = new Date(1950, 0, 1);
     start_date.setDate(start_date.getDate() + first_played.date);
-    var end_date = new Date(1950, 0, 1);
+    let end_date = new Date(1950, 0, 1);
     end_date.setDate(end_date.getDate() + last_played.date);
-    var time_delta = dateDifference(start_date, end_date);
+    let time_delta = dateDifference(start_date, end_date);
 
     // now we calculate shows
-    var song_index = getIndexOfSong(song_title);
-    var first = null;
-    var last = null;
-    var show_count = 0;
-    var uniques = [];
-    for(var show of store.shows) {
+    let song_index = getIndexOfSong(song_title);
+    let first = null;
+    let last = null;
+    let show_count = 0;
+    let uniques = [];
+    for(let show of store.shows) {
         if(first == null) {
             show_count += 1;
         }
-        for(var i of show.getAllSongs()) {
+        for(let i of show.getAllSongs()) {
             if(!uniques.includes(i.song) && (first == null)) {
                 uniques.push(i.song);
             }
@@ -851,22 +851,22 @@ function buildSongText(song_title) {
     // now we have all the data
     data = {'song-title': song_title}
     if(total_times_played == 1) {
-        var show_text1 = `Played once on ${convertDate(first)}.`
-        var sn = uniques.length;
-        var show_text2 = `It was the ${sn}${nth(sn)} different song played and first played at the ${show_count}${nth(show_count)} recorded show.`;
+        let show_text1 = `Played once on ${convertDate(first)}.`
+        let sn = uniques.length;
+        let show_text2 = `It was the ${sn}${nth(sn)} different song played and first played at the ${show_count}${nth(show_count)} recorded show.`;
         data['first-text'] = show_text1;
         data['second-text'] = show_text2;
     } else {
-        var show_text1 = `Played ${total_times_played} times, from ${convertDate(first)} to ${convertDate(last)} (${time_delta}).`;
-        var sn = uniques.length;
-        var show_text2 = `It was the ${sn}${nth(sn)} different song played and first played at the ${show_count}${nth(show_count)} recorded show.`;
+        let show_text1 = `Played ${total_times_played} times, from ${convertDate(first)} to ${convertDate(last)} (${time_delta}).`;
+        let sn = uniques.length;
+        let show_text2 = `It was the ${sn}${nth(sn)} different song played and first played at the ${show_count}${nth(show_count)} recorded show.`;
         data['first-text'] = show_text1;
         data['second-text'] = show_text2;
     }
     // set the text
-    var template = document.getElementById('single-song-template').innerHTML;
+    let template = document.getElementById('single-song-template').innerHTML;
     // clear out show-render and place the template
-    var new_html = Mustache.render(template, data);
+    let new_html = Mustache.render(template, data);
     document.getElementById('single-song-render').innerHTML = new_html;
 };
 

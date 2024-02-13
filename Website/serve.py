@@ -156,7 +156,7 @@ def setup():
 def serve_page():
     first = True
     while True:
-        setup()
+        #setup()
         process = multiprocessing.Process(target=server_thread, args=(1,))
         process.start()
         # serve the file and open up in the browser

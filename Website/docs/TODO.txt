@@ -16,6 +16,21 @@ Overall:
     Test the data is not being pulled all the time
     Look at hosting
 
+
+Converting to Typescript:
+    * Rename the files
+    * Fix errors
+        - jquery not found
+        - highcharts not found
+        - mustache not found
+        - type mismatch in calculate_charts 548
+        - Not accepting "toReversed()"
+    * Add build stage to serve script
+    * Move functions and classes to correct scripts
+    * Move some functions into classes
+    * Add tests for classes and functions
+
+
 Known important bugs that must be fixed:
     Back button seems spotty at times
     URL should be shown and a bookmark should be able to be set

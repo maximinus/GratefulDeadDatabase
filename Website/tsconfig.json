@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist",
+      "allowJs": false,
+      "target": "es2017",
+      "typeRoots": ["./src/types"]
+    },
+    "include": ["./src/typescript/**/*"]
+}

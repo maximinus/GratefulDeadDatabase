@@ -78,20 +78,47 @@
     </div>
     {{> modals}}
     {{{templates}}}
-    <script type="text/javascript" src="./js/libs/jquery-3.2.1.slim.min.js"></script>
-    <script type="text/javascript" src="./js/libs/popper.min.js"></script>
-    <script type="text/javascript" src="./js/libs/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./js/libs/highcharts.js"></script>
-    <script type="text/javascript" src="./js/libs/mustache.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/highcharts.js"></script>
+    <script type="text/javascript" src="./js/mustache.min.js"></script>
     <script type="text/javascript" src="./js/best_shows.js"></script>
-    <script type="text/javascript" src="./js/constants.js"></script>
-    <script type="text/javascript" src="./js/storage.js"></script>
-    <script type="text/javascript" src="./js/helpers.js"></script>
-    <script type="text/javascript" src="./js/calculate_charts.js"></script>
-    <script type="text/javascript" src="./js/display_show.js"></script>
-    <script type="text/javascript" src="./js/display_year.js"></script>
-    <script type="text/javascript" src="./js/display_venue.js"></script>
-    <script type="text/javascript" src="./js/display_combos.js"></script>
-    <script type="text/javascript" src="./js/database.js"></script>
+    <script type="module src="./js/constants.js"></script>
+    <script type="module" src="./js/database.js"></script>
+    <script type="module" src="./js/store_api.js"></script>
+    <script type="module" src="./js/helpers.js"></script>
+    <script type="module" src="./js/html_helpers.js"></script>
+    <script type="module" src="./js/song_page.js"></script>
+    <script type="module" src="./js/show_page.js"></script>
+    <script type="module" src="./js/venue_page.js"></script>
+    <script type="module" src="./js/year_page.js"></script>
+    <script type="module" src="./js/database.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <!--
+    <script data-main="js/main" src="js/require.js"></script>
+    <script>
+      require.config({
+        paths: {
+          "jquery": "jquery-3.2.1.slim.min",
+          "popper": "popper.min",
+          "bootstrap": "bootstrap.min",
+          "highcharts": "highcharts",
+          "mustache": "mustache.min"
+        },
+        shim: {
+          "jquery": { exports: "$"},
+          "highcharts": { exports: "Highcharts" },
+          "mustache": { exports: "Mustache" }
+        }
+      });
+      require(["main"], function(main) {
+        document.addEventListener("DOMContentLoaded", function() {
+          console.log("Testing!");
+          main.init();
+        });
+      });
+    </script>
+    -->
   </body>
 </html>

@@ -13,6 +13,7 @@ from pathlib import Path
 
 # we write from the physical disk to prevent so many writes on the SSD
 DIST_FOLDER = Path('/home/sparky/data/WebServe/dist')
+DIST_JS_FOLDER = DIST_FOLDER / 'js'
 JSON_FILE = Path('./data.json')
 HTML_FILE = Path('./src/html/index.html')
 PARTIALS_FOLDER = Path('./src/html')
@@ -21,7 +22,16 @@ TEMPLATE_FOLDER = Path('./src/html/templates')
 
 # folders to copy
 SOURCE_FOLDER = Path('./src')
-FOLDER_NAMES = ['css', 'data', 'gfx', 'js']
+FOLDER_NAMES = ['css', 'data', 'gfx']
+SOURCE_COMPILED_JS = Path('./dist')
+
+SOURCE_LIBS = [SOURCE_FOLDER / 'js' / 'jquery-3.2.1.slim.min.js',
+               SOURCE_FOLDER / 'js' / 'popper.min.js',
+               SOURCE_FOLDER / 'js' / 'bootstrap.min.js',
+               SOURCE_FOLDER / 'js' / 'highcharts.js',
+               SOURCE_FOLDER / 'js' / 'mustache.min.js',
+               SOURCE_FOLDER / 'js' / 'require.js',
+               SOURCE_FOLDER / 'js' / 'main.js']
 
 SLEEP_TIME = 2
 
@@ -90,8 +100,14 @@ def copy_files():
         # copy all files from one to the other
         try:
             shutil.copytree(source_folder, dest_folder)
-        except (FileExistsError, OSError) as ex:
+        except OSError as ex:
             error(f'Could not copy files: {ex}')
+    
+    os.mkdir(DIST_JS_FOLDER)
+    for js_file in SOURCE_LIBS:
+        shutil.copy(js_file, DIST_JS_FOLDER / js_file.name)
+    for js_file in os.listdir(SOURCE_COMPILED_JS):
+        shutil.copy(SOURCE_COMPILED_JS / js_file, DIST_JS_FOLDER / js_file)
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
@@ -156,7 +172,7 @@ def setup():
 def serve_page():
     first = True
     while True:
-        #setup()
+        setup()
         process = multiprocessing.Process(target=server_thread, args=(1,))
         process.start()
         # serve the file and open up in the browser

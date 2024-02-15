@@ -1,9 +1,10 @@
 {
     "compilerOptions": {
       "outDir": "./dist",
+      "sourceMap": true,
       "allowJs": false,
       "target": "es2017",
       "typeRoots": ["./src/types"]
     },
-    "include": ["./src/typescript/**/*"]
+    "include": ["./src/typescript/**/*", "src/types/index.d.ts"]
 }

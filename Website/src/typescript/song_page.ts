@@ -1,6 +1,6 @@
 import { $ } from 'jquery'
 import { Mustache } from 'mustache'
-import { Highcharts } from 'Highcharts'
+import { Highcharts } from 'highcharts'
 
 import * as gd from './constants'
 import * as api from './store_api'

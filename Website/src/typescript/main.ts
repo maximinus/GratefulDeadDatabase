@@ -204,11 +204,11 @@ function checkInput(event: KeyboardEvent): void {
 	if(last_char == INVISIBLE_SPACE) {
 		// update the input
 		let real_input = input_text.slice(0,-1)
-		// TODO: Understand this error
 		checkSearchInput(real_input)
 		// this will cause this function to fire again, but since there
 		// is no space, nothing should happen
-		(<HTMLInputElement>document.getElementById('search-input')).value = real_input
+		let elem = (<HTMLInputElement>document.getElementById('search-input'))
+		elem.value = real_input
 	}
 }
 
@@ -299,7 +299,7 @@ function addCallbacks(): void {
     	document.attachEvent('onclick', interceptClickEvent)
 	}
 	// intercept all browser back events
-	window.onpopstate = function (event) {
+	window.onpopstate = function (event: PopStateEvent) {
 		if(event.state) {
 			let state = event.state
 			logger(`Navigating back to ${state}`)

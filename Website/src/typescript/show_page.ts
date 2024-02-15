@@ -1,6 +1,6 @@
 import { $ } from 'jquery'
 import { Mustache } from 'mustache'
-import { Highcharts } from 'Highcharts'
+import { Highcharts } from 'highcharts'
 
 import { logger } from './logger'
 import { Show, store } from './database'

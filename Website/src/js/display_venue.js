@@ -74,5 +74,6 @@ function updateVenueTab(venue_id) {
 };
 
 function displayVenue(venue_index) {
+    logger(`Render venue ${venue_index}`);
     updateVenueTab(venue_index);
 };

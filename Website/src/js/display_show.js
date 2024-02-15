@@ -481,7 +481,7 @@ function addShowPopouts() {
 function updateShowTab(single_show) {
     // TODO: Fix the mess of 2 ways of updating
     show_store.current_show = single_show;
-    log(`Rendering show ${show_store.current_show.js_date.toDateString()}`);
+    logger(`Rendering show ${show_store.current_show.js_date.toDateString()}`);
     // get the template and render
     let template = document.getElementById('show-template').innerHTML;
     // clear out show-render and place the template

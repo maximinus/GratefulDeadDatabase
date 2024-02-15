@@ -1,54 +1,4 @@
-// common helpers to extract data from data, change data, ask questions and so
-// this is used by all display code
-
-// helper functions for pulling data from the db
-
-function getShowFromDate(show_date) {
-    let show_time = show_date.getTime();
-    for(let single_show of store.shows) {
-        if(show_time === single_show.js_date.getTime()) {
-            return single_show;
-        }
-    }
-    // no such date
-    log(`Error: No such date ${show_date}`);
-    return store.shows[0];
-};
-
-function getShowFromId(show_id) {
-    for(let single_show of store.shows) {
-        if(single_show.id == show_id) {
-            return single_show;
-        }
-    }
-    log(`Error: No such show ID ${show_id}`);
-    return store.shows[0];
-};
-
-function getAllShowsInYear(year) {
-    let all_shows_in_year = [];
-    for(let single_show of store.shows) {
-        if(single_show.js_date.getFullYear() == year) {
-            all_shows_in_year.push(single_show);
-        }
-    }
-    return all_shows_in_year;
-};
-
-function getAllShowsInVenue(venue_id) {
-    let all_shows_in_venue = [];
-    for(let single_show of store.shows) {
-        if( single_show.venue == venue_id) {
-            all_shows_in_venue.push(single_show);
-        }
-    }
-    return all_shows_in_venue;
-};
-
-function getIndexOfSong(song_title) {
-    // what's the index of song text x in the array songs?
-    return store.songs.indexOf(song_title);
-};
+// helper functions for transforming data or helping with the DOM
 
 function getYear(days) {
     // get the year of a show date as an integer
@@ -191,19 +141,6 @@ function venueToSlug(venue_id) {
     return venue.venue.replaceAll(' ', '-'); 
 };
 
-function getVenue(venue_id) {
-    // the venues are not sorted, so get this way
-    for(let venue of store.venues) {
-        if(venue_id == venue.id) {
-            // return this
-            return venue;
-        }
-    }
-    // venue not found
-    log(`Error: no such venue ${venue_id}`);
-    return store.venues[0];
-};
-
 function dateDifference(startingDate, endingDate) {
     let startDate = new Date(new Date(startingDate).toISOString().substr(0, 10));
     if (!endingDate) {
@@ -236,18 +173,6 @@ function dateDifference(startingDate, endingDate) {
         dayDiff += daysInMonth[startDate.getMonth()];
     }
     return yearDiff + ' years, ' + monthDiff + ' months ' + dayDiff + ' days';
-};
-
-function log(message) {
-    // log error messages etc to console
-    if(LOGGING_ON === false) {
-        return;
-    }
-    // get local time
-    let local_time = new Date();
-    let minutes = local_time.getMinutes().toString().padStart(2, '0');
-    let time_string = `${local_time.getHours()}:${minutes}.${local_time.getSeconds()}`;
-    console.log(`${time_string}: ${message}`);
 };
 
 function findAllSongsStartingWith(text) {
@@ -350,4 +275,16 @@ function displayPopOut(title, data) {
 
 function hidePopOut() {
     $('#table-dialog').modal('hide');
+};
+
+function logger(message) {
+    // log error messages etc to console
+    if(LOGGING_ON === false) {
+        return;
+    }
+    // get local time
+    let local_time = new Date();
+    let minutes = local_time.getMinutes().toString().padStart(2, '0');
+    let time_string = `${local_time.getHours()}:${minutes}.${local_time.getSeconds()}`;
+    console.log(`${time_string}: ${message}`);
 };

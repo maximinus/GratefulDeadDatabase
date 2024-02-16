@@ -1,3 +1,5 @@
+import * as gd from './constants'
+
 // Holds the storage type, which holds all the data, and the functions to move data to and from it
 
 class Options {
@@ -442,22 +444,22 @@ function storeData() {
     for(let single_show of store.shows) {
         all_shows.push(single_show.getJsonData());
     }
-    localStorage.setItem(SHOW_DATA, JSON.stringify(all_shows));
+    localStorage.setItem(gd.SHOW_DATA, JSON.stringify(all_shows));
     // repeat for all songs
-    localStorage.setItem(SONG_DATA, JSON.stringify(store.songs));
+    localStorage.setItem(gd.SONG_DATA, JSON.stringify(store.songs));
     // and venues
-    localStorage.setItem(VENUE_DATA, JSON.stringify(store.venues));
+    localStorage.setItem(gd.VENUE_DATA, JSON.stringify(store.venues));
     // finally, weather
-    localStorage.setItem(WEATHER_DATA, JSON.stringify(store.weather));
+    localStorage.setItem(gd.WEATHER_DATA, JSON.stringify(store.weather));
     // now we need store the current date
     let current_date = new Date();
-    localStorage.setItem(LAST_UPDATE, JSON.stringify(current_date));
+    localStorage.setItem(gd.LAST_UPDATE, JSON.stringify(current_date));
     logger('Data stored for future use');
 };
 
 function fetchBinaryData() {
     let song_request = new XMLHttpRequest();
-    song_request.open('GET', SONGS_FILE, true);
+    song_request.open('GET', gd.SONGS_FILE, true);
     song_request.responseType = 'arraybuffer';
     song_request.send();
 
@@ -470,7 +472,7 @@ function fetchBinaryData() {
     }
 
     let show_request = new XMLHttpRequest();
-    show_request.open('GET', SHOWS_FILE, true);
+    show_request.open('GET', gd.SHOWS_FILE, true);
     show_request.responseType = 'arraybuffer';
     show_request.send();
 
@@ -483,7 +485,7 @@ function fetchBinaryData() {
     }
 
     let venue_request = new XMLHttpRequest();
-    venue_request.open('GET', VENUES_FILE, true);
+    venue_request.open('GET', gd.VENUES_FILE, true);
     venue_request.responseType = 'arraybuffer';
     venue_request.send();
 
@@ -496,7 +498,7 @@ function fetchBinaryData() {
     }
 
     let weather_request = new XMLHttpRequest();
-    weather_request.open('GET', WEATHER_FILE, true);
+    weather_request.open('GET', gd.WEATHER_FILE, true);
     weather_request.responseType = 'arraybuffer';
     weather_request.send();
 
@@ -517,7 +519,7 @@ function updateRequired() {
     // yes, this code ignore timezones and so on, but it's good enough
     let delta_time = today - update_date;
     let delta_days = delta_time / (1000 * 60 * 60 * 24);
-    return delta_days >= NEXT_UPDATE;
+    return delta_days >= gd.NEXT_UPDATE;
 };
 
 function convertLocalData(loaded_songs, loaded_shows, loaded_venues, loaded_weather) {
@@ -543,11 +545,11 @@ function getFromLocalStorage() {
     // return true if this was possible
     // storage exists, we must check before this function
     // do we have our data here?
-    let loaded_shows = localStorage.getItem(SHOW_DATA);
-    let loaded_songs = localStorage.getItem(SONG_DATA);
-    let loaded_venues = localStorage.getItem(VENUE_DATA);
-    let loaded_weather = localStorage.getItem(WEATHER_DATA);
-    store.last_update = localStorage.getItem(LAST_UPDATE);
+    let loaded_shows = localStorage.getItem(gd.SHOW_DATA);
+    let loaded_songs = localStorage.getItem(gd.SONG_DATA);
+    let loaded_venues = localStorage.getItem(gd.VENUE_DATA);
+    let loaded_weather = localStorage.getItem(gd.WEATHER_DATA);
+    store.last_update = localStorage.getItem(gd.LAST_UPDATE);
     if(loaded_shows == null || loaded_songs == null || loaded_venues == null || store.last_update == null || loaded_weather == null) {
         logger('No local data found');
         // we need to reload
@@ -559,7 +561,7 @@ function getFromLocalStorage() {
         return false;
     }
     // we are not complete, we need to convert the data
-    if(convertLocalData(loaded_songs, loaded_shows, loaded_venues, loaded_weather) == false) {
+    if(convertLocalData(loaded_songs, loaded_shows, loaded_venues, loaded_weather) === false) {
         return false;
     }
     logger(`Got ${store.songs.length} songs`);
@@ -593,18 +595,17 @@ function getSongData() {
 function checkLocalStorage() {    
     if(storageAvailable() === false) {
         logger('No local storage on this browser');
+        return false;
     }
-    else {
-        if(getFromLocalStorage() === true) {
-            logger('Loaded data from local storage');
-            return true;
-        }
+    if(getFromLocalStorage() === true) {
+        logger('Loaded data from local storage');
+        return true;
     }
     return false;
 };
 
 function getData() {
-    if(FORCE_UPDATE === true) {
+    if(gd.FORCE_UPDATE === true) {
         logger('Update forced');
     }
     else if(checkLocalStorage() === true) {

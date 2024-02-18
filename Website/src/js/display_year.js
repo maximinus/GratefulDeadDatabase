@@ -708,7 +708,7 @@ function updateYear(year) {
     // reset at start
     year_store = new YearStorage();
     year_store.current_year = year;
-    logger(`Rendering year ${year}`);
+    console.log(logger(`Rendering year ${year}`));
     buildYearAverageLength(year, 'year-total-length-chart');
     buildYearLengthBuckets(year, 'year-length-songs-chart');
     buildYearCommon(year);

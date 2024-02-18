@@ -4,8 +4,6 @@ const VENUES_FILE = 'data/venues.bin';
 const WEATHER_FILE = 'data/weather.bin'
 const FILES_TO_LOAD = 4;
 
-const LOGGING_ON = true;
-
 const SONGS_TAB = '#songs-tab';
 const SHOWS_TAB = '#shows-tab';
 const YEARS_TAB = '#years-tab';
@@ -25,7 +23,7 @@ const YEAR_OFFSET = 65;
 const YEARS_PLAYED = 31;
 
 // used when debugging
-const FORCE_UPDATE = true;
+const FORCE_UPDATE = false;
 // how often to check the update, in number of days
 const NEXT_UPDATE = 365;
 const DEFAULT_SONG = 'Playing In The Band';

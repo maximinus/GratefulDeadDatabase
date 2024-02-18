@@ -1,5 +1,3 @@
-import * as gd from './constants'
-
 // Holds the storage type, which holds all the data, and the functions to move data to and from it
 
 class Options {
@@ -58,7 +56,7 @@ class Venue {
         // 7: Latitude
         // 8: Longitude
         if(venue_data.length != 8) {
-            logger('Error: Venue data missing data')
+            console.log(logger('Error: Venue data missing data'));
         }
         this.id = parseInt(venue_data[0]);
         this.venue = venue_data[1];
@@ -95,7 +93,7 @@ class Song {
         this.seconds = seconds;
         this.sequed = sequed;
         if(song_index > 1000) {
-            logger('Error: ', song_index);
+            console.log(logger('Error: ', song_index));
         }
     };
 
@@ -249,10 +247,10 @@ function dataLoaded() {
     // store for next time
     storeData();
     getSongData();
-    logger('Loading finished');
+    console.log(logger('Loading finished'));
     store.loaded = true;
     if(store.callback == null) {
-        logger('Error: No callback on loaded data');
+        console.log(logger('Error: No callback on loaded data'));
     } else {
         store.callback();
     }
@@ -277,7 +275,7 @@ function parseSongs(binary_data) {
             }
         }
     }
-    logger(`Got ${store.songs.length} songs`);
+    console.log(logger(`Got ${store.songs.length} songs`));
     store.load_counter += 1;
     checkFinish();
 };
@@ -363,7 +361,7 @@ function parseShows(binary_data) {
         store.shows.push(new Show(new_sets_data[0], date, venue_id, show_id));
     }
     // we cannot sort shows by ID as there may be missing values
-    logger(`Got ${store.shows.length} shows`);
+    console.log(logger(`Got ${store.shows.length} shows`));
     store.load_counter += 1;
     checkFinish();
 };
@@ -391,13 +389,13 @@ function parseWeather(binary_data) {
         store.weather[show_id] = new Weather(show_id, temps, feels, precip);
         // should be a zero to verify the end
         if(getWord(binary_data, index) != 0) {
-            logger('Error parsing weather');
+            console.log(('Error parsing weather'));
             return;
         }
         index +=2;
         // really at the end?
         if(getWord(binary_data, index) == 0) {
-            logger(`Got ${Object.keys(store.weather).length} days of weather`);
+            console.log(logger(`Got ${Object.keys(store.weather).length} days of weather`));
             store.load_counter += 1;
             checkFinish();
             return;
@@ -424,7 +422,7 @@ function parseVenues(binary_data) {
         store.venues.push(new Venue(details))
         // now we've collected them all, is there a zero at the end?
         if(binary_data[index] == 0) {
-            logger(`Got ${store.venues.length} venues`);
+            console.log(logger(`Got ${store.venues.length} venues`));
             store.load_counter += 1;
             checkFinish();
             return;
@@ -444,22 +442,22 @@ function storeData() {
     for(let single_show of store.shows) {
         all_shows.push(single_show.getJsonData());
     }
-    localStorage.setItem(gd.SHOW_DATA, JSON.stringify(all_shows));
+    localStorage.setItem(SHOW_DATA, JSON.stringify(all_shows));
     // repeat for all songs
-    localStorage.setItem(gd.SONG_DATA, JSON.stringify(store.songs));
+    localStorage.setItem(SONG_DATA, JSON.stringify(store.songs));
     // and venues
-    localStorage.setItem(gd.VENUE_DATA, JSON.stringify(store.venues));
+    localStorage.setItem(VENUE_DATA, JSON.stringify(store.venues));
     // finally, weather
-    localStorage.setItem(gd.WEATHER_DATA, JSON.stringify(store.weather));
+    localStorage.setItem(WEATHER_DATA, JSON.stringify(store.weather));
     // now we need store the current date
     let current_date = new Date();
-    localStorage.setItem(gd.LAST_UPDATE, JSON.stringify(current_date));
-    logger('Data stored for future use');
+    localStorage.setItem(LAST_UPDATE, JSON.stringify(current_date));
+    console.log(logger('Data stored for future use'));
 };
 
 function fetchBinaryData() {
     let song_request = new XMLHttpRequest();
-    song_request.open('GET', gd.SONGS_FILE, true);
+    song_request.open('GET', SONGS_FILE, true);
     song_request.responseType = 'arraybuffer';
     song_request.send();
 
@@ -472,7 +470,7 @@ function fetchBinaryData() {
     }
 
     let show_request = new XMLHttpRequest();
-    show_request.open('GET', gd.SHOWS_FILE, true);
+    show_request.open('GET', SHOWS_FILE, true);
     show_request.responseType = 'arraybuffer';
     show_request.send();
 
@@ -485,7 +483,7 @@ function fetchBinaryData() {
     }
 
     let venue_request = new XMLHttpRequest();
-    venue_request.open('GET', gd.VENUES_FILE, true);
+    venue_request.open('GET', VENUES_FILE, true);
     venue_request.responseType = 'arraybuffer';
     venue_request.send();
 
@@ -498,7 +496,7 @@ function fetchBinaryData() {
     }
 
     let weather_request = new XMLHttpRequest();
-    weather_request.open('GET', gd.WEATHER_FILE, true);
+    weather_request.open('GET', WEATHER_FILE, true);
     weather_request.responseType = 'arraybuffer';
     weather_request.send();
 
@@ -519,7 +517,7 @@ function updateRequired() {
     // yes, this code ignore timezones and so on, but it's good enough
     let delta_time = today - update_date;
     let delta_days = delta_time / (1000 * 60 * 60 * 24);
-    return delta_days >= gd.NEXT_UPDATE;
+    return delta_days >= NEXT_UPDATE;
 };
 
 function convertLocalData(loaded_songs, loaded_shows, loaded_venues, loaded_weather) {
@@ -534,8 +532,8 @@ function convertLocalData(loaded_songs, loaded_shows, loaded_venues, loaded_weat
             store.shows.push(Show.fromJsonData(i));
         }
     } catch(error) {
-        logger(`Error: ${error}`);
-        logger('Malformed data in local storage');
+        console.log(logger(`Error: ${error}`));
+        console.log(logger('Malformed data in local storage'));
         return false;
     }
     return true;
@@ -545,29 +543,29 @@ function getFromLocalStorage() {
     // return true if this was possible
     // storage exists, we must check before this function
     // do we have our data here?
-    let loaded_shows = localStorage.getItem(gd.SHOW_DATA);
-    let loaded_songs = localStorage.getItem(gd.SONG_DATA);
-    let loaded_venues = localStorage.getItem(gd.VENUE_DATA);
-    let loaded_weather = localStorage.getItem(gd.WEATHER_DATA);
-    store.last_update = localStorage.getItem(gd.LAST_UPDATE);
+    let loaded_shows = localStorage.getItem(SHOW_DATA);
+    let loaded_songs = localStorage.getItem(SONG_DATA);
+    let loaded_venues = localStorage.getItem(VENUE_DATA);
+    let loaded_weather = localStorage.getItem(WEATHER_DATA);
+    store.last_update = localStorage.getItem(LAST_UPDATE);
     if(loaded_shows == null || loaded_songs == null || loaded_venues == null || store.last_update == null || loaded_weather == null) {
-        logger('No local data found');
+        console.log(logger('Local data missing'));
         // we need to reload
         return false;
     }
     // check we don't need to refresh the data
     if(updateRequired() === true) {
-        logger('Local update needs refreshing')
+        console.log(logger('Local update needs refreshing'));
         return false;
     }
     // we are not complete, we need to convert the data
     if(convertLocalData(loaded_songs, loaded_shows, loaded_venues, loaded_weather) === false) {
         return false;
     }
-    logger(`Got ${store.songs.length} songs`);
-    logger(`Got ${store.shows.length} shows`);
-    logger(`Got ${store.venues.length} venues`);
-    logger(`Got ${store.weather.size} days of weather`);
+    console.log(logger(`Got ${store.songs.length} songs`));
+    console.log(logger(`Got ${store.shows.length} shows`));
+    console.log(logger(`Got ${store.venues.length} venues`));
+    console.log(logger(`Got ${store.weather.size} days of weather`));
     return true;
 };
 
@@ -576,7 +574,7 @@ function getSongData() {
     // this means we want to produce a map of song -> song instances
     // this is why they have a date and a time
     // we often search by song, this makes things a lot quicker
-    logger('Getting song data from database');
+    console.log(logger('Getting song data from database'));
     store.song_data = {}
     for(let show of store.shows) {
         for(let i of show.getAllSongs()) {
@@ -589,24 +587,24 @@ function getSongData() {
             }
         }
     }
-    logger('Calculated song data');
+    console.log(logger('Calculated song data'));
 };
 
 function checkLocalStorage() {    
     if(storageAvailable() === false) {
-        logger('No local storage on this browser');
+        console.log(logger('No local storage on this browser'));
         return false;
     }
     if(getFromLocalStorage() === true) {
-        logger('Loaded data from local storage');
+        console.log(logger('Loaded data from local storage'));
         return true;
     }
     return false;
 };
 
 function getData() {
-    if(gd.FORCE_UPDATE === true) {
-        logger('Update forced');
+    if(FORCE_UPDATE === true) {
+        console.log(logger('Update forced'));
     }
     else if(checkLocalStorage() === true) {
         getSongData();
@@ -614,6 +612,6 @@ function getData() {
         updateTabs();
         return;
     }
-    logger('Loading data from network');
+    console.log(logger('Loading data from network'));
     fetchBinaryData();
 };

@@ -21,7 +21,7 @@ Known important bugs that must be fixed:
     URL should be shown and a bookmark should be able to be set
     Make sure the data always use a slug format
         - this means converting every single "convertToLink" call
-    When the document is ready, check the parameters and go there if needed
+    When the document is ready, check the URL parameters and go there if needed; this enables bookmarks
 
 Songs:
     Start a list of shows that have no recordings and add to the database
@@ -42,14 +42,10 @@ Venues
     Should be a "coldest shows"
     Should be a "wettest shows"
     Should be a timeline showing shows per year
-    Should ba timeline showing shows in each month
+    Should be timeline showing shows in each month
 
 Other stuff after the above is done:
     Comment the code so it's a bit easier to understand
-        Better: Move to using typescript
-                Build up the storage class with the methods needed
-                The sub-classes will do most work
-                The landing page needs to be it's own file
     Add shows with no setlists (use the original Jerrybase)
     Check with Pauls timings
     Add seque information
@@ -81,6 +77,10 @@ Done work in 2024:
     * Weather chart displays rainfall for the period
     * The tooptip for the rain line in weather works correctly
     * The weather data is imported correctly, in Python and Javascript
+    * Tested a conversion to Typescript, but not actioned
+    * Tested a conversion to javascript modules, also not actioned
+    * Improved file structure of code
+    * Refreshed the "save data to local storage" code
 
 Done work in 2023:
     * Graphs should also show "average" as a dotted line

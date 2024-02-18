@@ -6,7 +6,7 @@ function getShowFromDate(show_date) {
         }
     }
     // no such date
-    logger(`Error: No such date ${show_date}`);
+    console.log(logger(`Error: No such date ${show_date}`));
     return store.shows[0];
 };
 
@@ -16,7 +16,7 @@ function getShowFromId(show_id) {
             return single_show;
         }
     }
-    logger(`Error: No such show ID ${show_id}`);
+    console.log(logger(`Error: No such show ID ${show_id}`));
     return store.shows[0];
 };
 
@@ -58,6 +58,8 @@ function findAllSongsStartingWith(text) {
 };
 
 function getVenue(venue_id) {
+    console.log(venue_id);
+    console.log(store.venues);
     // the venues are not sorted, so get this way
     for(let venue of store.venues) {
         if(venue_id == venue.id) {
@@ -66,6 +68,6 @@ function getVenue(venue_id) {
         }
     }
     // venue not found
-    logger(`Error: no such venue ${venue_id}`);
+    console.log(logger(`Error: no such venue ${venue_id}`));
     return store.venues[0];
 };

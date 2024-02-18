@@ -50,7 +50,7 @@ function changeTabView(data_type, data) {
 			url_string = '#about'
 			break;
 		default:
-			logger(`Invalid tab to go to: ${data_type} with data ${data}`);
+			console.log(logger(`Invalid tab to go to: ${data_type} with data ${data}`));
 			return;
 	}
 	// set state for history back button
@@ -71,16 +71,16 @@ function selectMultipleShow(multiple_shows) {
 	let template = document.getElementById('choose-show-template').innerHTML;
 	let new_html = Mustache.render(template, data);
     document.getElementById('select-song-choice').innerHTML = new_html;
-	// modal "choose a show" buttons
-	document.getElementById('choose-show-one').addEventListener("click", chooseShowOne);
-	document.getElementById('choose-show-two').addEventListener("click", chooseShowTwo);
+	// modal 'choose a show' buttons
+	document.getElementById('choose-show-one').addEventListener('click', chooseShowOne);
+	document.getElementById('choose-show-two').addEventListener('click', chooseShowTwo);
 	$('#select-song-dialog').modal();
 };
 
 function chooseShowOne() {
 	$('#select-song-dialog').modal('hide');
 	if(db_store.show_choices.length == 0) {
-		logger('Error: Choose show called with no shows');
+		console.log(logger('Error: Choose show called with no shows'));
 		return;
 	}
 	// goto this show
@@ -93,7 +93,7 @@ function chooseShowOne() {
 function chooseShowTwo() {
 	$('#select-song-dialog').modal('hide');
 	if(db_store.show_choices.length == 0) {
-		logger('Error: Choose show called with no shows');
+		console.log(logger('Error: Choose show called with no shows'));
 		return;
 	}
 	let show = db_store.show_choices[1];
@@ -106,7 +106,7 @@ function checkShowInput(text_input) {
 	// return true / false if it was a date
 	let actual_date = convertDateOptionFormat(text_input);
 	if(actual_date == null) {
-		logger('No show match')
+		console.log(logger('No show match'));
 		return false;
 	}
 	// we have a date, the next thing is to decide if there's a show on this date
@@ -167,7 +167,7 @@ function checkSearchInput(text_input) {
 			return;
 		}
 	}
-	logger(`Could not find reference ${text_input}`);
+	console.log(logger(`Could not find reference ${text_input}`));
 };
 
 function checkNewSong(event) {
@@ -197,7 +197,7 @@ function checkInput(event) {
 };
 
 function handleLink(link_txt) {
-	console.log(`Going to ${link_txt}`);
+	console.log(logger(`Going to ${link_txt}`));
 	// also check the link is valid
 	let link_data = link_txt.split('-');
 	let link_tab = link_data[0];
@@ -277,7 +277,7 @@ function addCallbacks() {
 		console.log(event);
 		if(event.state) {
 			let state = event.state;
-			logger(`Navigating back to ${state}`);
+			console.log(logger(`Navigating back to ${state}`));
 			handleLink(state);
 		}
 	};
@@ -295,8 +295,9 @@ function setSongDropdown() {
 
 function updateTabs() {
 	// data has been loaded by this point
+	// this just ensures the tab has something if you click on one of them
 	setSongDropdown();
-	updateVisualData(DEFAULT_SONG);
+	displaySong(DEFAULT_SONG);
     displayShow(DEFAULT_SHOW);
     displayYear(DEFAULT_YEAR);
     displayVenue(DEFAULT_VENUE);
@@ -308,13 +309,14 @@ function allDataLoaded() {
 	addCallbacks();
     updateTabs();
 	// we may have a state already, in which case deal with it
+	console.log(window.location.search);
 	// add our first state, which is here
 	let start_url = `#songs-tab-${songNametoSlug(DEFAULT_SONG)}`
 	window.history.pushState(start_url, null, start_url);
 };
 
 document.addEventListener('DOMContentLoaded', function(){
-    logger('Starting GD Database');
+    console.log(logger('Starting GD Database'));
     store.callback = allDataLoaded;
 	getData();
 });

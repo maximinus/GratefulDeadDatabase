@@ -872,13 +872,13 @@ function buildSongText(song_title) {
 
 function updateSongTab(song_title) {
     charts_store.current_song_title = song_title;
-    logger(`Updating charts and tables: ${song_title}`)
+    console.log(logger(`Updating charts and tables: ${song_title}`));
     buildTables(song_title);
     buildCharts(song_title);
     buildSongText(song_title);
 };
 
-function updateVisualData(song_title) {
+function displaySong(song_title) {
     updateSongTab(song_title);
     // add the callbacks; first tables
     document.getElementById('pop-longest').addEventListener('click', popOutLongest);

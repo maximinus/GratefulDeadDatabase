@@ -278,13 +278,10 @@ function hidePopOut() {
 };
 
 function logger(message) {
-    // log error messages etc to console
-    if(LOGGING_ON === false) {
-        return;
-    }
+    // get a text message for logging
     // get local time
     let local_time = new Date();
     let minutes = local_time.getMinutes().toString().padStart(2, '0');
     let time_string = `${local_time.getHours()}:${minutes}.${local_time.getSeconds()}`;
-    console.log(`${time_string}: ${message}`);
+    return `${time_string}: ${message}`
 };

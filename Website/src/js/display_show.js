@@ -8,6 +8,8 @@ class ShowStorage {
         this.rarest_songs = [];
         this.rarest_songs_year = [];
         this.weather_chart = null;
+        this.is_setup = false;
+        this.show_url = ''
     };
 };
 
@@ -400,10 +402,10 @@ function getShowRenderData() {
         sets_all_data.push(set_data);
         index += 1;
     }
-    let this_venue = getVenue(show_store.current_show.venue)
+    let venue_name = getVenue(show_store.current_show.venue).getVenueName();
     return {'show-day': getActualDay(getRealDate(show_store.current_show.date)),
             'show-date': convertDateLong(show_store.current_show.date),
-            'show-venue': this_venue.getVenueName(),
+            'show-venue': venue_name,
             'sets': sets_all_data};
 };
 
@@ -478,7 +480,18 @@ function addShowPopouts() {
     document.getElementById('pop-show-weather').addEventListener('click', popOutWeather);
 };
 
+function updateShowUrl(single_show) {
+    let new_url = getShowUrl(single_show);
+    show_store.show_url = new_url;
+    window.history.pushState(new_url, null, new_url);
+};
+
 function updateShowTab(single_show) {
+    // this is sent a Show object
+    if(!show_store.is_setup) {
+        addShowPopouts();
+        show_store.is_setup = true;
+    }
     show_store.current_show = single_show;
     console.log(logger(`Rendering show ${show_store.current_show.js_date.toDateString()}`));
     // get the template and render
@@ -489,11 +502,14 @@ function updateShowTab(single_show) {
     renderWeatherChart('weather-chart');
     buildCombos();
     buildRarestSongs();
-    displayVenueInformation();    
+    displayVenueInformation();
+    updateShowUrl(single_show);  
 };
 
-function displayShow(show_index) {
-    show_store.current_show = store.shows[show_index];
-    updateShowTab(show_store.current_show);
-    addShowPopouts();
+function switchToShowTab() {
+    if(!show_store.is_setup) {
+        let show = getShowFromId(DEFAULT_SHOW);
+        updateShowTab(show);
+    }
+    window.history.pushState(show_store.show_url, null, show_store.show_url);
 };

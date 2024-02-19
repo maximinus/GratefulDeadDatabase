@@ -27,41 +27,6 @@ function updateSearchInputOptions() {
 	}
 };
 
-function changeTabView(data_type, data) {
-	let url_string = '';
-	switch(data_type) {
-		case SONGS_TAB:
-			updateSongTab(data);
-			url_string = `#song-${songNametoSlug(data)}`;
-			break;
-		case SHOWS_TAB:
-			updateShowTab(data);
-			url_string = `#show-${dateToSlug(data.js_date)}`;
-			break;
-		case YEARS_TAB:
-			updateYear(data);
-			url_string = `#year-${data}`;
-			break;
-		case VENUES_TAB:
-			updateVenueTab(data);
-			url_string = `#venue-${venueToSlug(data)}`;
-			break;
-		case ABOUT_TAB:
-			url_string = '#about'
-			break;
-		default:
-			console.log(logger(`Invalid tab to go to: ${data_type} with data ${data}`));
-			return;
-	}
-	// set state for history back button
-	window.history.pushState(url_string, null, url_string);
-	// might be a link from a popout; no harm in hiding if already hidden
-	hidePopOut();
-	// also need to go to the top of the page
-	window.scrollTo(0,0);
-	$(data_type).tab('show');
-};
-
 function selectMultipleShow(multiple_shows) {
 	// we want date and number, i.e. 13th Feb 1970 Show 1
 	db_store.show_choices = multiple_shows;
@@ -197,7 +162,6 @@ function checkInput(event) {
 };
 
 function handleLink(link_txt) {
-	console.log(logger(`Going to ${link_txt}`));
 	// also check the link is valid
 	let link_data = link_txt.split('-');
 	let link_tab = link_data[0];
@@ -272,15 +236,25 @@ function addCallbacks() {
 	} else if (document.attachEvent) {
     	document.attachEvent('onclick', interceptClickEvent);
 	}
+
 	// intercept all browser back events
-	window.onpopstate = function (event) {
-		console.log(event);
+	window.onpopstate = function(event) {
 		if(event.state) {
 			let state = event.state;
 			console.log(logger(`Navigating back to ${state}`));
 			handleLink(state);
 		}
 	};
+
+	// add all tab callbacks
+	// this is to check to update them on a click if they are empty
+	$(SONGS_TAB).on('click', switchToSongTab);
+	$(SHOWS_TAB).on('click', switchToShowTab);
+	$(YEARS_TAB).on('click', switchToYearTab);
+	$(VENUES_TAB).on('click', switchToVenueTab);
+	$(ABOUT_TAB).on('click', function(event) {
+		window.history.pushState('/about', null, '/about');
+	});
 };
 
 function setSongDropdown() {
@@ -293,26 +267,176 @@ function setSongDropdown() {
 	}
 };
 
-function updateTabs() {
-	// data has been loaded by this point
-	// this just ensures the tab has something if you click on one of them
-	setSongDropdown();
-	displaySong(DEFAULT_SONG);
-    displayShow(DEFAULT_SHOW);
-    displayYear(DEFAULT_YEAR);
-    displayVenue(DEFAULT_VENUE);
-    initComboTab();
+function changeTabView(data_type, data) {
+	let url_string = '';
+	switch(data_type) {
+		case SONGS_TAB:
+			updateSongTab(data);
+			url_string = `/song/${songNametoSlug(data)}`;
+			break;
+		case SHOWS_TAB:
+			updateShowTab(data);
+			url_string = `/show/${dateToSlug(data.js_date)}`;
+			break;
+		case YEARS_TAB:
+			updateYear(data);
+			url_string = `/year/${data}`;
+			break;
+		case VENUES_TAB:
+			updateVenueTab(data);
+			url_string = `/venue/${venueToSlug(data)}`;
+			break;
+		case ABOUT_TAB:
+			url_string = '/about'
+			break;
+		default:
+			console.log(logger(`Invalid tab to go to: ${data_type} with data ${data}`));
+			return;
+	}
+	// set state for history back button
+	window.history.pushState(url_string, null, url_string);
+	// might be a link from a popout; no harm in hiding if already hidden
+	hidePopOut();
+	// also need to go to the top of the page
+	window.scrollTo(0,0);
+	$(data_type).tab('show');
+};
+
+function actionSongUrl(url_data) {
+	// the data should have 2 parts
+	if(url_data.length != 2) {
+		return false;
+	}
+	// the data should be a slugged song name
+	let song_name = slugToText(url_data[1]);
+	// find the song with that name
+	if(song_name in store.song_data) {
+		// we can now update the page
+		updateSongTab(song_name);
+		$(SONGS_TAB).tab('show');
+		return true;
+	}
+	// no key, no song, invalid url
+	return false;
+};
+
+function actionShowUrl(url_data) {
+	// the data should have 3 parts
+	if(url_data.length != 3) {
+		return false;
+	}
+	// the second part should be a valid date
+	let show_date = slugToDate(url_data[1]);
+	if(show_date === null) {
+		return false;
+	}
+	// the third part should be a valid single digit number
+	let show_number = Number(url_data[2]);
+	if(isNaN(show_number)) {
+		return false;
+	}
+	// all correct, so try and get the show
+	let real_show = showDateExists(show_date);
+	if(real_show === null) {
+		return false;
+	}
+	updateShowTab(real_show);
+	$(SHOWS_TAB).tab('show');
+	return true;
+};
+
+function actionVenueUrl(url_data) {
+	// the data should have 2 parts
+	if(url_data.length != 2) {
+		return false;
+	}
+	// the venue name must exist
+	let venue_name = slugToText(url_data[1]);
+	let venue = getVenueFromName(venue_name);
+	if(venue === null) {
+		return false;
+	}
+	updateVenueTab(venue);
+	$(VENUES_TAB).tab('show');
+	return true;
+};
+
+function actionYearUrl(url_data) {
+	// the data should have 2 parts
+	if(url_data.length != 2) {
+		return false;
+	}
+	// the year must be valid
+	let year = Number(url_data[1]);
+	if(isNaN(year)) {
+		return false;
+	}
+	if((year < START_YEAR) || (year > END_YEAR)) {
+		return false;
+	}
+	updateYearTab(year);
+	$(YEARS_TAB).tab('show');
+	return true;
+};
+
+function actionAboutUrl(url_data) {
+	// should be 2 entries
+	if(url_data.length != 2) {
+		return false;
+	}
+	$(ABOUT_TAB).tab('show');
+	return true;
+};
+
+function actOnValidUrl() {
+	// take the current URL and update the page is needed. Returns true if an update was actioned
+	// remove empty strings if we have any
+	let fragment = new URL(window.location).hash;
+	if(fragment.length == 0) {
+		return false;
+	}
+	let split_url = fragment.split(':').filter(e => e);
+
+	console.log(split_url);
+
+	if(split_url.length == 0) {
+		return false;
+	}
+	// the first value indicates what sort of data we have (and what data follows)
+	if(split_url[0] == '#song') {
+		return actionSongUrl(split_url);
+	}
+	if(split_url[0] == '#show') {
+		return actionShowUrl(split_url);
+	}
+	if(split_url[0] == '#venue') {
+		return actionVenueUrl(split_url);
+	}
+	if(split_url[0] == '#year') {
+		return actionYearUrl(split_url);
+	}
+
+	if(split_url[0] == '#about') {
+		return actionAboutUrl(split_url);
+	}
+	return false;
+};
+
+function updateURL(new_url) {
+	window.history.pushState(new_url, null, new_url);
+	actOnValidUrl();
 };
 
 function allDataLoaded() {
 	// add events
 	addCallbacks();
-    updateTabs();
+	setSongDropdown();
+	initComboTab();
 	// we may have a state already, in which case deal with it
-	console.log(window.location.search);
-	// add our first state, which is here
-	let start_url = `#songs-tab-${songNametoSlug(DEFAULT_SONG)}`
-	window.history.pushState(start_url, null, start_url);
+	if(actOnValidUrl()) {
+		return;
+	}
+	updateURL(getSongUrl(DEFAULT_SONG));
 };
 
 document.addEventListener('DOMContentLoaded', function(){

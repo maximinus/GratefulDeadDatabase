@@ -3,15 +3,16 @@
 class VenueStorage {
     constructor() {
         this.current_venue = null;
+        this.is_setup = false;
+        this.current_url = '';
     };
 };
 
 // can't call this now as store may or may not be setup
 let venue_store = new ShowStorage();
 
-function updateVenueDetails(venue_id, all_shows) {
+function updateVenueDetails(single_venue, all_shows) {
     // get the venue
-    let single_venue = getVenue(venue_id);
     let shows_total_text = '';
     if(all_shows.length == 1) {
         shows_total_text = `There was 1 show played at ${single_venue.venue}, on ${convertDate(all_shows[0].date)}.`;
@@ -64,16 +65,27 @@ function updateShowsList(all_shows) {
     document.getElementById('venue-shows-render').innerHTML = new_html;
 };
 
-function updateVenueTab(venue_id) {
-    venue_store.current_venue = venue_id;
-    let all_shows = getAllShowsInVenue(venue_id);
-    // sort shows by date
-    all_shows.sort((a, b) => (a.date < b.date) ? 1 : -1);
-    updateVenueDetails(venue_id, all_shows);
-    updateShowsList(all_shows);
+function updateVenueUrl(venue) {
+    let new_url = getVenueUrl(venue);
+    venue_store.current_url = new_url;
+    window.history.pushState(new_url, null, new_url);
 };
 
-function displayVenue(venue_index) {
-    console.log(logger(`Render venue ${venue_index}`));
-    updateVenueTab(venue_index);
+function updateVenueTab(venue) {
+    venue_store.current_venue = venue;
+    let all_shows = getAllShowsInVenue(venue);
+    // sort shows by date
+    all_shows.sort((a, b) => (a.date < b.date) ? 1 : -1);
+    updateVenueDetails(venue, all_shows);
+    updateShowsList(all_shows);
+    updateVenueUrl();
+};
+
+function switchToVenueTab() {
+    if(!charts_store.is_setup) {
+        venue_store.is_setup = true;
+        updateVenueTab(DEFAULT_VENUE);
+        return;
+    }
+    window.history.pushState(venue_store.current_url, null, venue_store.current_url);
 };

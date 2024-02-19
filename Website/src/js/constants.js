@@ -23,7 +23,7 @@ const YEAR_OFFSET = 65;
 const YEARS_PLAYED = 31;
 
 // used when debugging
-const FORCE_UPDATE = false;
+const FORCE_UPDATE = true;
 // how often to check the update, in number of days
 const NEXT_UPDATE = 365;
 const DEFAULT_SONG = 'Playing In The Band';

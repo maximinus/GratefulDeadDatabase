@@ -6,6 +6,8 @@ class ChartsStorage {
         this.played_before = [];
         this.played_after = [];
         this.current_song_title = '';
+        this.is_setup = false;
+        this.current_url = '';
     };
 };
 
@@ -870,16 +872,8 @@ function buildSongText(song_title) {
     document.getElementById('single-song-render').innerHTML = new_html;
 };
 
-function updateSongTab(song_title) {
-    charts_store.current_song_title = song_title;
-    console.log(logger(`Updating charts and tables: ${song_title}`));
-    buildTables(song_title);
-    buildCharts(song_title);
-    buildSongText(song_title);
-};
 
-function displaySong(song_title) {
-    updateSongTab(song_title);
+function setupSongListeners() {
     // add the callbacks; first tables
     document.getElementById('pop-longest').addEventListener('click', popOutLongest);
     document.getElementById('pop-shortest').addEventListener('click', popOutShortest);
@@ -891,4 +885,31 @@ function displaySong(song_title) {
     document.getElementById('pop-played').addEventListener('click', popOutPlayed);
     document.getElementById('pop-average').addEventListener('click', popOutAverage);
     document.getElementById('pop-position').addEventListener('click', popOutPosition);
+};
+
+function updateSongUrl(song_title) {
+    let new_url = getSongUrl(song_title);
+    charts_store.current_url = new_url;
+    window.history.pushState(new_url, null, new_url);
+};
+
+function updateSongTab(song_title) {
+    if(!charts_store.is_setup) {
+        setupSongListeners();
+        charts_store.is_setup = true;
+    }
+    charts_store.current_song_title = song_title;
+    console.log(logger(`Updating charts and tables: ${song_title}`));
+    buildTables(song_title);
+    buildCharts(song_title);
+    buildSongText(song_title);
+    updateSongUrl(song_title);
+};
+
+function switchToSongTab() {
+    if(!charts_store.is_setup) {
+        updateSongTab(DEFAULT_SONG);
+        return;
+    }
+    window.history.pushState(charts_store.current_url, null, charts_store.current_url);
 };

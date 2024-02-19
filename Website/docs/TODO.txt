@@ -81,6 +81,7 @@ Done work in 2024:
     * Tested a conversion to javascript modules, also not actioned
     * Improved file structure of code
     * Refreshed the "save data to local storage" code
+    * Improved console logging
 
 Done work in 2023:
     * Graphs should also show "average" as a dotted line

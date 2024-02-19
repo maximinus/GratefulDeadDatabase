@@ -126,19 +126,34 @@ function getSongName(index) {
 
 function songNametoSlug(song_name) {
     // song_name is a string, adjust
-    return song_name.replaceAll(' ', '-');
+    return song_name.replaceAll(' ', '_');
 };
 
 function dateToSlug(date) {
     let day = date.getDate();
     let month = MONTHS[date.getMonth()];
     let year = date.getYear() + 1900;
-    return `${day}-${month}-${year}`;
+    return `${year}_${month}_${day}`;
 };
 
 function venueToSlug(venue_id) {
     let venue = getVenue(venue_id);
-    return venue.venue.replaceAll(' ', '-'); 
+    return venue.venue.replaceAll(' ', '_'); 
+};
+
+function slugToText(slug) {
+    return slug.replaceAll('_', ' ');
+};
+
+function slugToDate(slug) {
+    // returns null if not possible
+    let dates = slug.replaceAll('_', '-');
+    let date_string = `${dates}T00:00:00.000Z`;
+    let final_date = Date.parse(date_string);
+    if(isNaN(final_date)) {
+        return null;
+    }
+    return final_date;
 };
 
 function dateDifference(startingDate, endingDate) {
@@ -251,6 +266,10 @@ function convertDateOptionFormat(date_text) {
     return null;
 };
 
+function replaceSpacesWithUnderscores(text) {
+    return text.split(' ').join('_');
+};
+
 function getGoogleMapsLink(venue) {
     return `https://www.google.com/maps/search/?api=1&query=${venue.latitude},${venue.longitude}`;
 };
@@ -284,4 +303,26 @@ function logger(message) {
     let minutes = local_time.getMinutes().toString().padStart(2, '0');
     let time_string = `${local_time.getHours()}:${minutes}.${local_time.getSeconds()}`;
     return `${time_string}: ${message}`
+};
+
+
+function getShowUrl(show) {
+    let show_date = show.js_date;
+    let url_show_name = `${show_date.getFullYear()}_${show_date.getMonth() + 1}_${show_date.getDate()}`;
+    // TODO: Include data to decide if show 1/2 etc
+    return `#show:${url_show_name}:1`;
+};
+
+function getVenueUrl() {
+    let url_venue = replaceSpacesWithUnderscores(this.venue);
+    return `#venue:${url_venue}`;
+};
+
+function getSongUrl(song_name) {
+    let song_url_name = replaceSpacesWithUnderscores(song_name);
+    return `#song:${song_url_name}`;
+};
+
+function getYearUrl(year) {
+    return `#year:${year}`;
 };

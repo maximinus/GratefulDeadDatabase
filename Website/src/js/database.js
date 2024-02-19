@@ -83,7 +83,7 @@ class Venue {
     static fromJsonData(data) {
         data = JSON.parse(data);
         return new Venue([data.id.toString(), data.venue, data.college, data.city, data.state, data.country, data.latitude, data.longitude]);
-    }
+    };
 };
 
 class Song {

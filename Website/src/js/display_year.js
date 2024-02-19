@@ -15,6 +15,8 @@ class YearStorage {
         this.longest_songs = [];
         this.longest_shows = [];
         this.shortest_shows = [];
+        this.is_setup = false;
+        this.current_url = '';
     };
 };
 
@@ -704,9 +706,17 @@ function addYearPopouts() {
     document.getElementById('pop-year-total-songs').addEventListener('click', popOutTotalSongs);
 };
 
-function updateYear(year) {
-    // reset at start
-    year_store = new YearStorage();
+function updateYearUrl(year) {
+    let new_url = getYearUrl(year);
+    year_store.current_url = new_url;
+    window.history.pushState(new_url, null, new_url);
+};
+
+function updateYearTab(year) {
+    if(!year_store.is_setup) {
+        addYearPopouts();
+        year_store.is_setup = true;
+    }
     year_store.current_year = year;
     console.log(logger(`Rendering year ${year}`));
     buildYearAverageLength(year, 'year-total-length-chart');
@@ -718,9 +728,13 @@ function updateYear(year) {
     buildWeatherData(year);
     buildRecommendedShows(year);
     buildYearTitle(year);
+    updateYearUrl(year);
 };
 
-function displayYear(year) {
-    updateYear(year);
-    addYearPopouts();
+function switchToYearTab() {
+    if(!year_store.is_setup) {
+        updateYearTab(DEFAULT_YEAR);
+        return;
+    }
+    window.history.pushState(year_store.current_url, null, year_store.current_url);
 };

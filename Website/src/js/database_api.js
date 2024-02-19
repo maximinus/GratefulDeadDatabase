@@ -1,3 +1,13 @@
+function showDateExists() {
+    let show_time = show_date.getTime();
+    for(let single_show of store.shows) {
+        if(show_time === single_show.js_date.getTime()) {
+            return single_show;
+        }
+    }
+    return null;    
+};
+
 function getShowFromDate(show_date) {
     let show_time = show_date.getTime();
     for(let single_show of store.shows) {
@@ -30,10 +40,10 @@ function getAllShowsInYear(year) {
     return all_shows_in_year;
 };
 
-function getAllShowsInVenue(venue_id) {
+function getAllShowsInVenue(venue) {
     let all_shows_in_venue = [];
     for(let single_show of store.shows) {
-        if( single_show.venue == venue_id) {
+        if( single_show.venue == venue.id) {
             all_shows_in_venue.push(single_show);
         }
     }
@@ -57,9 +67,16 @@ function findAllSongsStartingWith(text) {
     return matches;
 };
 
+function getVenueFromName(venue_name) {
+    for(let venue of store.venues) {
+        if(venue.venue == venue_name) {
+            return venue;
+        }
+    }
+    return null;
+};
+
 function getVenue(venue_id) {
-    console.log(venue_id);
-    console.log(store.venues);
     // the venues are not sorted, so get this way
     for(let venue of store.venues) {
         if(venue_id == venue.id) {

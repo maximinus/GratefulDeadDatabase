@@ -18,10 +18,9 @@ Overall:
 
 Known important bugs that must be fixed:
     Back button seems spotty at times
-    URL should be shown and a bookmark should be able to be set
     Make sure the data always use a slug format
         - this means converting every single "convertToLink" call
-    When the document is ready, check the URL parameters and go there if needed; this enables bookmarks
+   
 
 Songs:
     Start a list of shows that have no recordings and add to the database
@@ -82,6 +81,9 @@ Done work in 2024:
     * Improved file structure of code
     * Refreshed the "save data to local storage" code
     * Improved console logging
+    * Fixed horror bug with UTC times
+    * URL should be shown and a bookmark should be able to be set
+    * When the document is ready, the URL parameters are checked and we go there if needed, enabling bookmarks
 
 Done work in 2023:
     * Graphs should also show "average" as a dotted line

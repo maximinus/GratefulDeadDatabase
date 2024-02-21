@@ -1,10 +1,11 @@
-function showDateExists() {
+function showDateExists(show_date) {
     let show_time = show_date.getTime();
     for(let single_show of store.shows) {
         if(show_time === single_show.js_date.getTime()) {
             return single_show;
         }
     }
+    console.log('Failed');
     return null;    
 };
 

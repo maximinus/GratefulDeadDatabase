@@ -7,7 +7,6 @@ class ChartsStorage {
         this.played_after = [];
         this.current_song_title = '';
         this.is_setup = false;
-        this.current_url = '';
     };
 };
 
@@ -887,12 +886,6 @@ function setupSongListeners() {
     document.getElementById('pop-position').addEventListener('click', popOutPosition);
 };
 
-function updateSongUrl(song_title) {
-    let new_url = getSongUrl(song_title);
-    charts_store.current_url = new_url;
-    window.history.pushState(new_url, null, new_url);
-};
-
 function updateSongTab(song_title) {
     if(!charts_store.is_setup) {
         setupSongListeners();
@@ -903,13 +896,5 @@ function updateSongTab(song_title) {
     buildTables(song_title);
     buildCharts(song_title);
     buildSongText(song_title);
-    updateSongUrl(song_title);
-};
-
-function switchToSongTab() {
-    if(!charts_store.is_setup) {
-        updateSongTab(DEFAULT_SONG);
-        return;
-    }
-    window.history.pushState(charts_store.current_url, null, charts_store.current_url);
+    db_store.tab_url[SONGS_TAB] = getSongUrl(song_title);
 };

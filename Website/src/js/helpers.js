@@ -57,14 +57,17 @@ function convertToLink(string, url) {
 };
 
 function getRealDate(days) {
-    let new_date = new Date(1950, 0, 1);
+    // force to UTC
+    let new_date = new Date(Date.UTC(1950, 0, 1, 0, 0, 0, 0));
     new_date.setDate(new_date.getDate() + days);
-    return new_date;
+    // adding days screws up the UTC
+    let utc_date = new Date(Date.UTC(new_date.getYear(), new_date.getMonth(), new_date.getDate(), 0, 0, 0, 0));
+    return utc_date;
 };
 
 function convertFromDate(show_date) {
     // do the opposite of above
-    let new_date = new Date(1950, 0 ,1);
+    let new_date = new Date(Date.UTC(1950, 0, 1, 0, 0, 0, 0));
     let diff = show_date.getTime() - new_date.getTime();
     return Math.ceil(diff / (1000 * 3600 * 24));
 };
@@ -131,8 +134,14 @@ function songNametoSlug(song_name) {
 
 function dateToSlug(date) {
     let day = date.getDate();
-    let month = MONTHS[date.getMonth()];
+    let month = date.getMonth() + 1;
     let year = date.getYear() + 1900;
+    if(day < 10) {
+        day = `0${day}`;
+    }
+    if(month < 10) {
+        month = `0${month}`;
+    }
     return `${year}_${month}_${day}`;
 };
 
@@ -147,9 +156,18 @@ function slugToText(slug) {
 
 function slugToDate(slug) {
     // returns null if not possible
-    let dates = slug.replaceAll('_', '-');
-    let date_string = `${dates}T00:00:00.000Z`;
-    let final_date = Date.parse(date_string);
+    let date_values = slug.split('_');
+    if(date_values.length != 3) {
+        return null;
+    }
+    for(let i=0; i<3; i++) {
+        date_values[i] = parseInt(date_values[i]);
+        if(isNaN(date_values[i])) {
+            return null;
+        }
+    }
+    // don't use the Date constructor
+    let final_date = new Date(Date.UTC(date_values[0], date_values[1] - 1, date_values[2], 0, 0, 0, 0));
     if(isNaN(final_date)) {
         return null;
     }
@@ -308,13 +326,13 @@ function logger(message) {
 
 function getShowUrl(show) {
     let show_date = show.js_date;
-    let url_show_name = `${show_date.getFullYear()}_${show_date.getMonth() + 1}_${show_date.getDate()}`;
+    let url_show_name = dateToSlug(show_date);
     // TODO: Include data to decide if show 1/2 etc
     return `#show:${url_show_name}:1`;
 };
 
-function getVenueUrl() {
-    let url_venue = replaceSpacesWithUnderscores(this.venue);
+function getVenueUrl(venue_name) {
+    let url_venue = replaceSpacesWithUnderscores(venue_name);
     return `#venue:${url_venue}`;
 };
 

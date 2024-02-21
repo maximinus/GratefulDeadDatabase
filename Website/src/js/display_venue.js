@@ -4,7 +4,6 @@ class VenueStorage {
     constructor() {
         this.current_venue = null;
         this.is_setup = false;
-        this.current_url = '';
     };
 };
 
@@ -65,27 +64,13 @@ function updateShowsList(all_shows) {
     document.getElementById('venue-shows-render').innerHTML = new_html;
 };
 
-function updateVenueUrl(venue) {
-    let new_url = getVenueUrl(venue);
-    venue_store.current_url = new_url;
-    window.history.pushState(new_url, null, new_url);
-};
-
 function updateVenueTab(venue) {
     venue_store.current_venue = venue;
+    console.log(logger(`Updating venue: ${venue.venue}`));
     let all_shows = getAllShowsInVenue(venue);
     // sort shows by date
     all_shows.sort((a, b) => (a.date < b.date) ? 1 : -1);
     updateVenueDetails(venue, all_shows);
     updateShowsList(all_shows);
-    updateVenueUrl();
-};
-
-function switchToVenueTab() {
-    if(!charts_store.is_setup) {
-        venue_store.is_setup = true;
-        updateVenueTab(DEFAULT_VENUE);
-        return;
-    }
-    window.history.pushState(venue_store.current_url, null, venue_store.current_url);
+    db_store.tab_url[VENUES_TAB] = getVenueUrl(venue.venue);
 };

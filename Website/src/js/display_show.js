@@ -9,7 +9,6 @@ class ShowStorage {
         this.rarest_songs_year = [];
         this.weather_chart = null;
         this.is_setup = false;
-        this.show_url = ''
     };
 };
 
@@ -480,12 +479,6 @@ function addShowPopouts() {
     document.getElementById('pop-show-weather').addEventListener('click', popOutWeather);
 };
 
-function updateShowUrl(single_show) {
-    let new_url = getShowUrl(single_show);
-    show_store.show_url = new_url;
-    window.history.pushState(new_url, null, new_url);
-};
-
 function updateShowTab(single_show) {
     // this is sent a Show object
     if(!show_store.is_setup) {
@@ -503,13 +496,5 @@ function updateShowTab(single_show) {
     buildCombos();
     buildRarestSongs();
     displayVenueInformation();
-    updateShowUrl(single_show);  
-};
-
-function switchToShowTab() {
-    if(!show_store.is_setup) {
-        let show = getShowFromId(DEFAULT_SHOW);
-        updateShowTab(show);
-    }
-    window.history.pushState(show_store.show_url, null, show_store.show_url);
+    db_store.tab_url[SHOWS_TAB] = getShowUrl(single_show);
 };

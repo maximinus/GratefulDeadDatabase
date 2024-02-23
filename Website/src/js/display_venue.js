@@ -54,7 +54,7 @@ function updateShowsList(all_shows) {
         let show_data = [];
         for(let venue_show of year_data[1]) {
             let show_date = convertDate(venue_show.date);
-            show_data.push(convertToLink(show_date, `show-${venue_show.id}`));
+            show_data.push(convertToHTMLLink(show_date, getShowUrl(getShowFromId(venue_show.id))));
         }
         final.push({'year': year_data[0].toString(), 'shows': show_data.toReversed().join(', ')});
     }

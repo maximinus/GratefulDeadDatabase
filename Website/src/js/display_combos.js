@@ -258,7 +258,8 @@ function updateAllData(songs, matches) {
     matches.sort((a, b) => (a[0].date > b[0].date ? 1 : -1));
     combo_store.sorted_by_date = [];
     for(let single_match of matches) {
-        let link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
+        // the url i
+        let link = convertToHTMLLink(convertDate(single_match[0].date), getShowUrl(getShowFromId(single_match[0].id)));
         combo_store.sorted_by_date.push([link, '']);
     }
     
@@ -266,7 +267,7 @@ function updateAllData(songs, matches) {
     combo_store.sorted_by_length = [];
     for(let single_match of matches) {
         if(single_match[1] != 0) {
-            let link = convertToLink(convertDate(single_match[0].date), `show-${single_match[0].id}`);
+            let link = convertToHTMLLink(convertDate(single_match[0].date), getShowUrl(getShowFromId(single_match[0].id)));
             combo_store.sorted_by_length.push([link, convertTime(single_match[1])]);
         }
     }

@@ -55,7 +55,7 @@ function getRarestSongs() {
     let buckets = {}
     for(let song of all_songs) {
         let name = getSongName(song.song);
-        results.push([convertToLink(name, `song-${name}`), store.song_data[name].length]);
+        results.push([convertToHTMLLink(name, `song-${name}`), getSongUrl(name)]);
         buckets[song.song] = 0;
     }
     for(let show of getAllShowsInYear(year_of_show)) {
@@ -69,7 +69,7 @@ function getRarestSongs() {
     let year_list = []
     for(let key in buckets) {
         let song_name = getSongName(key);
-        year_list.push([convertToLink(song_name, `song-${song_name}`), buckets[key]]);
+        year_list.push([convertToHTMLLink(song_name, getSongUrl(song_name)), buckets[key]]);
     }
     year_list.sort((a, b) => (a[1] > b[1]) ? 1 : -1);
     results.sort((a, b) => (a[1] > b[1]) ? 1 : -1);
@@ -130,8 +130,8 @@ function getRarestCombos() {
         // build links here as well
         let name1 = getSongName(single_combo[0]);
         let name2 = getSongName(single_combo[1]);
-        let text1 = convertToLink(name1, `song-${name1}`);
-        let text2 = convertToLink(name2, `song-${name2}`);
+        let text1 = convertToHTMLLink(name1, getSongUrl(name1));
+        let text2 = convertToHTMLLink(name2, getSongUrl(name2));
         show_store.rarest_combos.push([`${text1} / ${text2}`, single_combo[2]]);
     }
 
@@ -140,8 +140,8 @@ function getRarestCombos() {
     for(let single_combo of combos) {
         let name1 = getSongName(single_combo[0]);
         let name2 = getSongName(single_combo[1]);
-        let text1 = convertToLink(name1, `song-${name1}`);
-        let text2 = convertToLink(name2, `song-${name2}`);
+        let text1 = convertToHTMLLink(name1, getSongUrl(name1));
+        let text2 = convertToHTMLLink(name2, getSongUrl(name2));
         show_store.rarest_combos_year.push([`${text1} / ${text2}`, single_combo[3]]);
     }
     return [show_store.rarest_combos.slice(0, TABLE_ENTRIES), show_store.rarest_combos_year.slice(0, TABLE_ENTRIES)]
@@ -431,7 +431,8 @@ function displayVenueInformation() {
         total_text = `${total_shows} shows played here. This was the ${total_before}${nth(total_before)} time.`;
     }
     // Now we can get all the data
-    let venue_data = {'venue': convertToLink(this_venue.venue, `venue-${venue_id}`),
+    let venue_name = store.venues[venue_id - 1].venue;
+    let venue_data = {'venue': convertToHTMLLink(this_venue.venue, getVenueUrl(venue_name)),
                       'city': this_venue.city,
                       'state': `${this_venue.state}, ${this_venue.country}`,
                       'location': `Lat: ${this_venue.latitude}, Long: ${this_venue.longitude}`,

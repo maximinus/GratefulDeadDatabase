@@ -393,7 +393,7 @@ function buildLengthVersions(song_title) {
     for(let single_song of data) {
         let date_int = getShowFromId(single_song.show_id).date
         let date_text = convertDate(date_int);
-        let link = convertToLink(date_text, `show-${single_song.show_id}`)
+        let link = convertToHTMLLink(date_text, getShowUrl(getShowFromId(single_song.show_id)))
         let time_length = convertTime(single_song.seconds);
         length_versions.push([link, time_length]);
     }
@@ -447,7 +447,7 @@ function buildFirstLastVersions(song_title) {
             row.children[2].innerHTML = '';
         } else {
             let row_date = getShowFromId(table_data[index].show_id).date;
-            row.children[1].innerHTML = convertToLink(convertDate(row_date), `show-${table_data[index].show_id}`);
+            row.children[1].innerHTML = convertToHTMLLink(convertDate(row_date), getShowUrl(getShowFromId(table_data[index].show_id)));
             // if 0, will be first version
             if(index != 0) {
                 let delta = row_date - last;
@@ -470,7 +470,7 @@ function buildFirstLastVersions(song_title) {
             row.children[2].innerHTML = '';
         } else {
             let row_date = getShowFromId(table_data[index].show_id).date;
-            row.children[1].innerHTML = convertToLink(convertDate(row_date), `show-${table_data[index].show_id}`);
+            row.children[1].innerHTML = convertToHTMLLink(convertDate(row_date), getShowUrl(getShowFromId(table_data[index].show_id)));
             if(index != 0) {
                 let delta = last - row_date;
                 row.children[2].innerHTML = `<i>${dayDays(delta)} until next</i>`;
@@ -573,7 +573,7 @@ function buildBeforeAfterSongs(song_title) {
     let index = 0;
     let table = document.getElementById('songs-before');
     for(let row of table.children) {
-        row.children[1].innerHTML = convertToLink(sbefore[index][0], `song-${sbefore[index][0]}`);
+        row.children[1].innerHTML = convertToHTMLLink(sbefore[index][0], getSongUrl(sbefore[index][0]));;
         row.children[2].innerHTML = sbefore[index][1];
         index += 1;   
     }
@@ -581,7 +581,7 @@ function buildBeforeAfterSongs(song_title) {
     index = 0;
     table = document.getElementById('songs-after');
     for(let row of table.children) {
-        row.children[1].innerHTML = convertToLink(safter[index][0], `song-${safter[index][0]}`);
+        row.children[1].innerHTML = convertToHTMLLink(safter[index][0], getSongUrl(safter[index][0]));
         row.children[2].innerHTML = safter[index][1];
         index += 1;   
     }
@@ -654,7 +654,7 @@ function setOrderTablePopupList(table_data, element, message, header_text) {
         let column1 = document.createElement('td');
         let column2 = document.createElement('td');
         let song_date = getShowFromId(song.show_id).date;
-        column1.innerHTML = convertToLink(convertDate(song_date), `show-${song.show_id}`);
+        column1.innerHTML = convertToHTMLLink(convertDate(song_date), getShowUrl(getShowFromId(song.show_id)));
         if(last < 0) {
             column2.innerHTML = header_text;
         } else {
@@ -734,7 +734,7 @@ function setBeforeAfterPopupList(table_data, element) {
         header.innerHTML = row_index.toString();
         let column1 = document.createElement('td');
         let column2 = document.createElement('td');
-        column1.innerHTML = convertToLink(song[0], `song-${song[0]}`);
+        column1.innerHTML = convertToHTMLLink(song[0], getSongUrl(song[0]));
         column2.innerHTML = song[1];
         row.appendChild(header);
         row.appendChild(column1);

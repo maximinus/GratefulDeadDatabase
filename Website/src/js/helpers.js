@@ -51,9 +51,10 @@ function convertDateStringFromDate(single_date) {
     return `${day}${day_ending} ${month} ${year}`;
 };
 
-function convertToLink(string, url) {
-    // convert given string to a link
-    return `<a href="#gdd-${url}">${string}</a>`;
+function convertToHTMLLink(text, url) {
+    // The url is the link we point to
+    // The text is the string that we display to the user
+    return `<a href="${url}">${text}</a>`;
 };
 
 function getRealDate(days) {

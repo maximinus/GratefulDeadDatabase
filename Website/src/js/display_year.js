@@ -120,18 +120,18 @@ function getUniqueStartEnd(year) {
     for(let i of uniques) {
         // we need the total of uniques for this year
         if(i[1] > 1) {
-            year_store.uniques.push([convertToLink(i[0], `song-${i[0]}`), `Played ${i[1]} times`]);
+            year_store.uniques.push([convertToHTMLLink(i[0], getSongUrl(i[0])), `Played ${i[1]} times`]);
         } else {
-            year_store.uniques.push([convertToLink(i[0], `song-${i[0]}`), 'Played once']);
+            year_store.uniques.push([convertToHTMLLink(i[0], getSongUrl(i[0])), 'Played once']);
         }   
     }
     for(let i of first_played) {
-        let show_link = convertToLink(convertDate(i[1].date), `show-${i[1].id}`);
-        year_store.first_played.push([convertToLink(i[0], `song-${i[0]}`), show_link]);
+        let show_link = convertToHTMLLink(convertDate(i[1].date), getShowUrl(getShowFromId(i[1].id)));
+        year_store.first_played.push([convertToHTMLLink(i[0], getSongUrl(i[0])), show_link]);
     }
     for(let i of never_again) {
-        let show_link = convertToLink(convertDate(i[1].date), `show-${i[1].id}`);
-        year_store.never_again.push([convertToLink(i[0], `song-${i[0]}`), show_link]);
+        let show_link = convertToHTMLLink(convertDate(i[1].date), getShowUrl(getShowFromId(i[1].id)));
+        year_store.never_again.push([convertToHTMLLink(i[0], getSongUrl(i[0])), show_link]);
     }
     return [year_store.uniques.slice(0, TABLE_ENTRIES),
             year_store.first_played.slice(0, TABLE_ENTRIES),
@@ -179,15 +179,15 @@ function getMostCommonYearSongs(year) {
     // add the names and links here
     for(const element of common_songs) {
         let name1 = getSongName(element[0]);
-        element[0] = convertToLink(name1, `song-${name1}`);
+        element[0] = convertToHTMLLink(name1, getSongUrl(name1));
     }
     for(const element of common_combos) {
         // combo names a bit harder
         let two_songs = element[0].split("-");
         let name1 = getSongName(parseInt(two_songs[0]));
         let name2 = getSongName(parseInt(two_songs[1]));
-        let link1 = convertToLink(name1, `song-${name1}`);
-        let link2 = convertToLink(name2, `song-${name2}`);
+        let link1 = convertToHTMLLink(name1, getSongUrl(name1));
+        let link2 = convertToHTMLLink(name2, getSongUrl(name2));
         element[0] = `${link1} / ${link2}`;
     }
 
@@ -209,7 +209,7 @@ function getCommonVenues(year) {
     let venue_details = [];
     for(let single_venue in venue_ids) {
         let v = getVenue(single_venue);
-        venue_details.push([convertToLink(v.venue, `venue-${v.id}`), venue_ids[single_venue]]);
+        venue_details.push([convertToHTMLLink(v.venue, getVenueUrl(store.venues[v.id - 1].venue)), venue_ids[single_venue]]);
     }
     venue_details.sort((a, b) => (a[1] < b[1]) ? 1 : -1);
     year_store.all_venues = venue_details;
@@ -231,7 +231,7 @@ function getYearWeatherData(year) {
         }
         total_rain = convertPrecip(total_rain);
         let date_text = convertDate(single_show.date);
-        let date_link = convertToLink(date_text, `show-${single_show.id}`);
+        let date_link = convertToHTMLLink(date_text, getShowUrl(getShowFromId(single_show.id)));
         show_weather.push([date_link, max_temp, min_temp, total_rain]);
     }
     // sort all of these and store for later
@@ -264,7 +264,7 @@ function getYearLongestShortest(year) {
     for(let single_show of getAllShowsInYear(year)) {
         let total_length = single_show.getLength();
         if(total_length != 0) {
-            let show_link = convertToLink(convertDate(single_show.date), `show-${single_show.id}`);
+            let show_link = convertToHTMLLink(convertDate(single_show.date), getShowUrl(getShowFromId(single_show.id)));
             show_lengths.push([show_link, single_show.getLength()]);
         }
         for(let single_song of single_show.getAllSongs()) {
@@ -278,8 +278,8 @@ function getYearLongestShortest(year) {
     // only top 100 longest, otherwise list will be crazy
     for(let i of song_lengths.slice(0, 100)) {
         // we need to show the double link: song / date
-        let song_link = convertToLink(i[0], `song-${i[0]}`);
-        let show_link = convertToLink(convertDate(i[1].date), `show-${i[1].id}`);
+        let song_link = convertToHTMLLink(i[0], getSongUrl(i[0]));
+        let show_link = convertToHTMLLink(convertDate(i[1].date), getShowUrl(getShowFromId(i[1].id)));
         year_store.longest_songs.push([`${song_link}, ${show_link}`, convertTime(i[2])]);
     }
     for(let i of show_lengths) {
@@ -582,8 +582,9 @@ function buildRecommendedShows(year) {
     for(let single_date of BEST_SHOWS[year]) {
         // it's in format DD-MM, convert to a date
         let date_split = single_date.split('-');
-        let link_txt = convertDateStringFromDate(new Date(year, parseInt(date_split[1]) - 1, parseInt(date_split[0])));
-        recs.push([convertToLink(link_txt, `show-${year}/${date_split[1]}/${date_split[0]}`), '']);
+        let show_date = new Date(Date.UTC(year, parseInt(date_split[1]) - 1, parseInt(date_split[0]), 0, 0, 0 ,0));
+        let link_txt = convertDateStringFromDate(show_date);
+        recs.push([convertToHTMLLink(link_txt, getShowUrl(getShowFromDate(show_date))), '']);
     }
     updateBasicTable('year-recommended-shows', recs);
 };

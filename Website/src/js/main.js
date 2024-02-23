@@ -166,39 +166,6 @@ function checkInput(event) {
 	}
 };
 
-function handleLink(link_txt) {
-	// also check the link is valid
-	let link_data = link_txt.split('-');
-	let link_tab = link_data[0];
-	link_data = link_data[1];
-	if(link_tab == 'show') {
-		// it's either a date in the format YYYY/MM/DD, or a single value, the show id
-		let show_id = link_data.split('/');
-		if(show_id.length == 1) {
-			changeTabView(SHOWS_TAB, getShowFromId(show_id));
-			return;
-		}
-		// must be in a date format
-		let show_date = new Date(parseInt(show_id[0]), parseInt(show_id[1]) - 1, parseInt(show_id[2]));
-		changeTabView(SHOWS_TAB, getShowFromDate(show_date));
-		return;
-	}
-	if(link_tab == 'song') {
-		changeTabView(SONGS_TAB, link_data);
-		return;
-	}
-	if(link_tab == 'venue') {
-		changeTabView(VENUES_TAB, link_data);
-		return;
-	}
-	if(link_tab == 'year') {
-		changeTabView(YEARS_TAB, link_data);
-		return;
-	}
-	if(link_tab == 'about') {
-		changeTabView(ABOUT_TAB, '');
-	}
-};
 
 function interceptClickEvent(event) {
 	// this will only handle clicks on links
@@ -207,8 +174,9 @@ function interceptClickEvent(event) {
     let target = event.target || event.srcElement;
     if (target.tagName === 'A') {
         href = target.getAttribute('href');
-		if(href.startsWith('#gdd')) {
-			handleLink(href.slice(5));
+		if(href.startsWith('#')) {
+			updateURL(href);
+			actOnValidUrl();
 			// tell the browser not to act on this
            	event.preventDefault();
         }
@@ -291,37 +259,6 @@ function setSongDropdown() {
 		let song_option = document.createElement('option');
    		list.appendChild(song_option);
 	}
-};
-
-function changeTabView(data_type, data) {
-	let url_string = '';
-	switch(data_type) {
-		case SONGS_TAB:
-			url_string = updateSongTab(data);
-			break;
-		case SHOWS_TAB:
-			url_string = updateShowTab(data);
-			break;
-		case YEARS_TAB:
-			url_string = updateYear(data);
-			break;
-		case VENUES_TAB:
-			url_string = updateVenueTab(data);
-			break;
-		case ABOUT_TAB:
-			url_string = '#about'
-			break;
-		default:
-			console.log(logger(`Invalid tab to go to: ${data_type} with data ${data}`));
-			return;
-	}
-	// set state for history back button
-	addNewUrl(url_string);
-	// might be a link from a popout; no harm in hiding if already hidden
-	hidePopOut();
-	// also need to go to the top of the page
-	window.scrollTo(0,0);
-	$(data_type).tab('show');
 };
 
 function showNewTab(named_tab) {
@@ -419,7 +356,7 @@ function actionYearUrl(url_data) {
 function actionAboutUrl(url_data) {
 	// should be 2 entries
 	if(url_data.length != 2) {
-		return false;
+		return null;
 	}
 	showNewTab(ABOUT_TAB);
 	return '#about';

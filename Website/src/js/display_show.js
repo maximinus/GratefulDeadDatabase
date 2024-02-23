@@ -370,7 +370,8 @@ function getShowRenderData() {
         let new_set = [];
         for(let single_song of single_set.songs) {
             let song_data = {};
-            song_data['name'] = getSongName(single_song.song);
+            let song_name = getSongName(single_song.song);
+            song_data['name'] = song_name;
             if(single_song.seconds == 0) {
                 song_data['time'] = '???';
             } else {
@@ -381,6 +382,7 @@ function getShowRenderData() {
             } else {
                 song_data['trans'] = '/';
             }
+            song_data['link'] = getSongUrl(song_name);
             new_set.push(song_data);
         }
         show_sets.push(new_set);
@@ -396,8 +398,9 @@ function getShowRenderData() {
         } else {
             set_data['songs'] = single_set;
         }
-        set_data['final_song'] = final_song['name'];
+        set_data['final_name'] = final_song['name'];
         set_data['final_time'] = final_song['time'];
+        set_data['final_link'] = final_song['link'];
         sets_all_data.push(set_data);
         index += 1;
     }

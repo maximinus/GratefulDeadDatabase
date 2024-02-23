@@ -11,10 +11,10 @@
         <div class="col">
             <div class="d-flex" style="flex-wrap: wrap;">
                 {{#songs}}
-                <div class="align-self-start">{{ name }}<p class="" style="margin: -4px 0px 0px 0px; font-size:70%;"><i>{{ time }}</i></p></div>
+                <div class="align-self-start"><a href="{{ link }}">{{ name }}</a><p class="" style="margin: -4px 0px 0px 0px; font-size:70%;"><i>{{ time }}</i></p></div>
                 <div class="align-self-start px-2"> {{ trans }} </div>
                 {{/songs}}
-                <div class="align-self-start">{{ final_song }}<p class="" style="margin: -4px 0px 0px 0px; font-size:70%;""><i>{{ final_time }}</i></p></div>
+                <div class="align-self-start"><a href="{{ final_name }}">{{ final_song }}</a><p class="" style="margin: -4px 0px 0px 0px; font-size:70%;""><i>{{ final_time }}</i></p></div>
             </div>
         </div>
     </div>

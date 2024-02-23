@@ -16,18 +16,11 @@ Overall:
     Test the data is not being pulled all the time
     Look at hosting
 
-Known important bugs that must be fixed:
-    Back button seems spotty at times
-    Make sure the data always use a slug format
-        - this means converting every single "convertToLink" call
-   
-
 Songs:
     Start a list of shows that have no recordings and add to the database
 
 Shows
     If there is no weather data, mention it in the box
-    The song names in the setlist need a link
 
 Years:
     Hottest and coldest shows should show C with a F switch, or both temperatures
@@ -84,6 +77,11 @@ Done work in 2024:
     * Fixed horror bug with UTC times
     * URL should be shown and a bookmark should be able to be set
     * When the document is ready, the URL parameters are checked and we go there if needed, enabling bookmarks
+    * Back button actions fixed
+    * All urls use a slug format
+    * All links use new link slug format
+    * Bookmarks working
+    * Song names in show set list now have links
 
 Done work in 2023:
     * Graphs should also show "average" as a dotted line
